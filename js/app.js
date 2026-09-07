@@ -2276,6 +2276,14 @@ const App = (() => {
     const often = near.items.filter(i => Array.isArray(i.days) && i.days.length);
     const rest  = near.items.filter(i => !(Array.isArray(i.days) && i.days.length));
 
+    /* A radius stops as soon as it has enough, which is right for "what
+       is near me" and wrong here: the cookery school on the far side of
+       the 15th is a place you would happily cross Paris for once, and
+       from the 10th it never appeared at all. Same answer Eat already
+       reached — draw the circle, then say what is just outside it. */
+    const further = Near.beyond(i => isRegular(i) && groupOf(i) === key,
+                                near.radius, { exclude: notWanted });
+
     return (often.length
         ? stripHead(`${label} — on a rhythm`, radiusNote(near.radius, often, near.widened))
           + rows(often)
@@ -2285,6 +2293,10 @@ const App = (() => {
                       often.length ? 'A few sessions rather than a standing date'
                                    : radiusNote(near.radius, rest, near.widened))
             + rows(rest)
+          : '')
+      + (further.length
+          ? stripHead('Worth the trip', `Further than ${near.radius} minutes, and still worth it`)
+            + rows(further)
           : '');
   }
 
