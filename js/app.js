@@ -866,6 +866,7 @@ const App = (() => {
     weekend: '',
     eat:     '',
     explore: '',
+    regulars:'',
     away:    'Six mainline stations, and most of them reach somewhere worth a whole day. Some of these are closer than the other side of Paris.',
     quests:  'Long games. Progress is saved in this browser.',
     saved:   'What you have marked, and what you have already done.'
@@ -942,6 +943,7 @@ const App = (() => {
     else if (VIEW === 'weekend') { lede = weekendLede(w); html = renderWeekend(w); }
     else if (VIEW === 'eat')     { lede = eatLede();      html = renderEat(); }
     else if (VIEW === 'explore') { lede = exploreLede();  html = renderExplore(); }
+    else if (VIEW === 'regulars'){ lede = regularsLede(); html = renderRegulars(); }
     else if (VIEW === 'away')    html = renderAway();
     else if (VIEW === 'quests')  html = renderQuests();
     else if (VIEW === 'saved')   html = renderSaved();
@@ -2151,22 +2153,139 @@ const App = (() => {
       : `Where you are, where to go next, and the walks within reach of ${here}.`;
   }
 
-  /* The subject a record is about, as opposed to the things it also is.
-     Every `do` record carries `learn`, and that is a mode rather than a
-     topic, so it can never be the answer here. */
-  const subjectOf = i => (i.categories || []).find(c => c !== 'learn') || 'other';
+  /* ---------- regulars ----------
+
+     The subject a record is about, as opposed to the things it also is.
+     Reading the first category that is not `learn` was close enough for
+     one strip and wrong as soon as it had to name anything: the pottery
+     workshop came out as "indoor" and the perfume one as "unusual",
+     because those words are in the list too. A record says several true
+     things about itself and only one of them is the topic.
+
+     So the vocabulary is explicit, and the groups are verbs, because
+     what these have in common is that you go and do them. */
+  const REG_GROUPS = [
+    ['read',  '📖', 'Read',  'books, writing, clubs',   ['books']],
+    ['make',  '🎨', 'Make',  'art, craft, photography', ['art', 'craft', 'design', 'photography']],
+    ['move',  '💃', 'Move',  'dance and circus',        ['dance', 'circus']],
+    ['stage', '🎭', 'Stage', 'theatre and comedy',      ['theatre', 'comedy']],
+    ['sing',  '🎤', 'Sing',  'choirs and voice',        ['music', 'singing']],
+    ['taste', '🍷', 'Taste', 'cooking and wine',        ['food']],
+    ['tech',  '🤖', 'Tech',  'AI and engineering',      ['tech']]
+  ];
+
+  /* Sing is declared and, today, empty. The city's feed has no choir in
+     it — six records mention singing and five of them are a permaculture
+     work site and two birdsong walks — so the group is wired and simply
+     never drawn. A subsection appears when something fills it and not
+     before, which is the same reason none of these is hard-coded into
+     the markup: the tab grows itself as the data does, and an empty
+     category is worse than a missing one. */
+
+  const groupOf = i => {
+    const cats = i.categories || [];
+    const hit = REG_GROUPS.find(([, , , , subjects]) => subjects.some(s => cats.includes(s)));
+    return hit ? hit[0] : 'other';
+  };
+
+  const isRegular = i => i.mode === 'do';
 
   function capPerSubject(items, per, limit) {
     const seen = {};
     const out = [];
     for (const i of items) {
-      const s = subjectOf(i);
+      const s = groupOf(i);
       if ((seen[s] || 0) >= per) continue;
       seen[s] = (seen[s] || 0) + 1;
       out.push(i);
       if (out.length >= limit) break;
     }
     return out;
+  }
+
+  let REG_MODE = 'all';
+
+  function regularsLede() {
+    const here = Loc.displayName(Loc.active());
+    return `Things you go back to, not things that are on once. What is within reach of ${here}, and how often it runs.`;
+  }
+
+  /* Only the groups that have something. Six buttons where two of them
+     say "nothing here" is a worse page than four that all lead
+     somewhere. */
+  function liveGroups(pool) {
+    return REG_GROUPS.filter(([k]) => pool.some(i => groupOf(i) === k));
+  }
+
+  function renderRegulars() {
+    const pool = ALL.filter(isRegular);
+    if (!pool.length) {
+      return `<p class="empty">Nothing collected yet. <code>scripts/practices.mjs</code> fills this.</p>`;
+    }
+
+    const groups = liveGroups(pool);
+    if (!groups.some(([k]) => k === REG_MODE)) REG_MODE = 'all';
+
+    const tabs = [['all', '🔁', 'Near you', 'a bit of everything'], ...groups];
+    const modeBar = `<div class="mode mode-wide" id="reg-mode">
+      ${tabs.map(([k, e, label, sub]) =>
+        `<button class="mode-btn ${REG_MODE === k ? 'on' : ''}" data-regmode="${k}">
+          <span class="mode-emoji">${e}</span> ${label}
+          <em>${esc(sub)}</em>
+        </button>`).join('')}
+    </div>`;
+
+    return modeBar + (REG_MODE === 'all' ? regularsAll() : regularsGroup(REG_MODE));
+  }
+
+  /* The overview keeps the per-subject cap. Without it the tech evenings
+     take every row, because they are collected from a source that skews
+     central and this flat is central — which is exactly how the first
+     version of this came out reading as a list about AI. */
+  function regularsAll() {
+    const near = Near.pick(isRegular, {
+      rings: Near.RINGS.out, want: 6, limit: 40, exclude: notWanted
+    });
+    const items = capPerSubject(near.items, 2, 10);
+    if (!items.length) return `<p class="empty">Nothing within reach right now.</p>`;
+
+    return stripHead('A bit of everything', radiusNote(near.radius, items, near.widened))
+      + rows(items);
+  }
+
+  function regularsGroup(key) {
+    const [, , label, , ] = REG_GROUPS.find(g => g[0] === key);
+    const here = Loc.displayName(Loc.active());
+
+    /* Deliberately a wide reach and no cap. Somebody who has opened
+       "Move" has already said what they want, and the honest answer to
+       "where can I dance" is every class we know of in order of
+       distance — not four of them because a rule elsewhere was trying to
+       keep a mixed list mixed. */
+    const near = Near.pick(i => isRegular(i) && groupOf(i) === key, {
+      rings: Near.RINGS.out, want: 4, limit: 24, exclude: notWanted
+    });
+
+    if (!near.items.length) {
+      return `<p class="empty">Nothing in ${esc(label.toLowerCase())} within reach of ${esc(here)} yet.</p>`;
+    }
+
+    /* Everything here repeats, so the useful split is how often — a
+       weekly class you could build a term around, against a two-session
+       workshop you could try once. */
+    const often = near.items.filter(i => Array.isArray(i.days) && i.days.length);
+    const rest  = near.items.filter(i => !(Array.isArray(i.days) && i.days.length));
+
+    return (often.length
+        ? stripHead(`${label} — on a rhythm`, radiusNote(near.radius, often, near.widened))
+          + rows(often)
+        : '')
+      + (rest.length
+          ? stripHead(often.length ? 'Shorter runs' : `${label} around ${here}`,
+                      often.length ? 'A few sessions rather than a standing date'
+                                   : radiusNote(near.radius, rest, near.widened))
+            + rows(rest)
+          : '');
   }
 
   function renderExplore() {
@@ -2234,39 +2353,12 @@ const App = (() => {
       rings: Near.RINGS.out, want: 5, limit: 8, exclude: notWanted
     });
 
-    /* Things you could take up, as opposed to things on. A weekly class
-       cannot win a ranking built for novelty — Today and Weekend are
-       asking what is new, and the honest answer about a dance class that
-       has run since September is "nothing". So it lives here, where the
-       question is what this part of Paris is for rather than what is on
-       in it tonight, and where the radius is already how everything is
-       chosen. */
-    const doing = Near.pick(i => i.mode === 'do', {
-      rings: Near.RINGS.out, want: 4, limit: 24, exclude: notWanted
-    });
-    /* Nearest-first alone hands this section to one subject. The tech
-       evenings are collected from a source that skews central, so from
-       the 10th they take the four closest slots and a reader sees a
-       section about AI with a dance class hidden under it — which is the
-       opposite of what it is for.
-
-       Two per subject, in the order the radius already chose. The same
-       instinct as PER_VENUE in both collectors: the point is not to rank
-       one thing over another but to stop any one of them owning the
-       whole list. Six rows then hold five or six different subjects
-       rather than four meetups. */
-    doing.items = capPerSubject(doing.items, 2, 6);
 
     return standing
       + dossier
       + (walk.items.length
           ? stripHead('Walks and routes', radiusNote(walk.radius, walk.items, walk.widened))
             + `<div class="routes">${walk.items.map(routeCard).join('')}</div>`
-          : '')
-      + (doing.items.length
-          ? stripHead('Things you could take up',
-                      radiusNote(doing.radius, doing.items, doing.widened))
-            + rows(doing.items)
           : '')
       + (gems.items.length
           ? stripHead('Hidden Paris', radiusNote(gems.radius, gems.items, gems.widened))
@@ -2681,6 +2773,14 @@ const App = (() => {
       const k = b.dataset.intent;
       if (SPORT_INTENT.has(k)) SPORT_INTENT.delete(k); else SPORT_INTENT.add(k);
       render();
+    });
+
+    // Regulars: subsections, same component as Eat's
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-regmode]'); if (!b) return;
+      REG_MODE = b.dataset.regmode;
+      render();
+      window.scrollTo({ top: $('#main').offsetTop - 60, behavior: 'smooth' });
     });
 
     // Eat: prominent subsections

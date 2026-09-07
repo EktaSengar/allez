@@ -307,11 +307,40 @@ placeholder tile at the same aspect ratio, so the grid stays aligned and the
 card is visibly a tile rather than a picture — the alternative, inventing a
 stock photo, would be worse than admitting there isn't one.
 
-Navigation is seven destinations — Today, Nights, Weekend, Eat, Sport, Explore,
-Away. On a phone the bar scrolls, with a fade on the right edge so that reads
-as "more this way" rather than as clipped text.
+Navigation is eight destinations — Today, Nights, Weekend, Eat, Sport,
+Regulars, Explore, Away. On a phone the bar scrolls, with a fade on the right
+edge so that reads as "more this way" rather than as clipped text.
 Free, For two and Hidden are *filters*, not places, and live in the filter row.
 Quests and Your list are utilities, kept small.
+
+### Regulars
+
+The other seven answer "what shall we do?" — once, today, this weekend.
+Regulars answers "what shall we take up?", which is a different question with
+a different unit: not an evening but a Tuesday, repeating.
+
+It earned a destination the hard way. It began as a strip inside Explore, on
+the reasoning that a weekly class cannot win a ranking built for novelty and
+so needed somewhere that was not ranked that way. True, and not enough — six
+rows at the bottom of another tab is still somewhere to get lost, and the
+first version of it read as a list about AI meetups with a dance class hidden
+underneath.
+
+Subsections are the navigation, the same component Eat uses: **Read**,
+**Make**, **Move**, **Stage**, **Sing**, **Taste**, **Tech**, behind a mixed
+"Near you" that caps each subject at two so no one of them owns the overview.
+The groups are verbs because the thing they share is that you go and do them.
+
+**A subsection is drawn only when something fills it.** Sing is declared and
+currently invisible — the city's feed has no choir in it, and six records that
+mention singing turn out to be a permaculture work site and two birdsong
+walks. An empty category is worse than a missing one, and this way the tab
+grows itself as the data does rather than needing markup per hobby.
+
+Inside a subsection the split is by cadence rather than subject: what runs on
+a rhythm, then shorter runs. Somebody who opened Move has already said what
+they want, so that list is uncapped and reaches wide — the honest answer to
+"where can I dance" is every class we know of, nearest first.
 
 ### Sport: active city exploration
 
