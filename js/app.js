@@ -2281,7 +2281,7 @@ const App = (() => {
         if (m === 'relax'    && /relax|park|outdoors|walk/.test(hay)) ok = true;
         else if (m === 'explore'  && /walk|explore|hidden|unusual/.test(hay)) ok = true;
         else if (m === 'food'     && /food|coffee|bakery|market|foodmission/.test(hay)) ok = true;
-        else if (m === 'culture'  && /culture|art|history|architecture|photography|film|music|theatre/.test(hay)) ok = true;
+        else if (m === 'culture'  && /culture|art|history|architecture|photography|film|music|theatre|dance/.test(hay)) ok = true;
         else if (m === 'outdoors' && /outdoor|park|walk/.test(hay)) ok = true;
         else if (m === 'shop'     && /shop|design|market|vintage|home/.test(hay)) ok = true;
         else if (m === 'learn'    && /learn/.test(hay)) ok = true;
