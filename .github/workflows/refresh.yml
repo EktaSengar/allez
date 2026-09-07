@@ -53,6 +53,14 @@ jobs:
         if: github.event_name == 'schedule'
         run: node scripts/events.mjs || echo "events skipped — opendata.paris.fr unavailable"
 
+      # Same window and the same best-effort contract as the events
+      # collector above, and for the same reason it runs before the
+      # prune. Two sources behind one script, and either can fail without
+      # taking the other's records with it.
+      - name: Collect practices — recurring workshops and tech evenings (daily)
+        if: github.event_name == 'schedule'
+        run: node scripts/practices.mjs || echo "practices skipped — a source was unavailable"
+
       - name: Prune expired entries and validate
         if: github.event_name != 'pull_request'
         run: node scripts/refresh.mjs
