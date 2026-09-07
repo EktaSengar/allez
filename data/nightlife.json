@@ -1244,6 +1244,96 @@
       "imageSubject": "Quartier de la Chapelle",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "opera-bastille",
+      "title": "Opéra Bastille",
+      "emoji": "🎼",
+      "type": "venue",
+      "categories": [
+        "nightlife",
+        "music",
+        "opera",
+        "culture"
+      ],
+      "arr": 12,
+      "area": "Place de la Bastille",
+      "priceNote": "€0–300 depending on the seat",
+      "durationMin": 180,
+      "transit": "M5 straight down from République — fifteen minutes",
+      "times": "Programme runs September to July; the calendar is on the site",
+      "why": "The one to start with, because it is fifteen minutes away on the 5 and the modern house is where most of the opera actually happens. Prices run from nothing to three hundred euros for the same performance, which is the part nobody tells you: the cheap seats are genuinely cheap and there are dedicated under-28 offers. Restricted view means a pillar, not a write-off. Book the moment a season opens for anything well known.",
+      "goodFor": [
+        "evening",
+        "couple",
+        "music",
+        "culture",
+        "special",
+        "romantic"
+      ],
+      "indoor": true,
+      "bookAhead": true,
+      "labels": [
+        "couple",
+        "romantic",
+        "indoor",
+        "bookahead"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "url": "https://www.operadeparis.fr/en",
+      "lastVerified": "2026-09-08",
+      "coords": [
+        48.85262,
+        2.36878
+      ],
+      "coordsFrom": "nominatim"
+    },
+    {
+      "id": "palais-garnier",
+      "title": "Palais Garnier",
+      "emoji": "🎭",
+      "type": "venue",
+      "categories": [
+        "nightlife",
+        "music",
+        "opera",
+        "culture",
+        "architecture"
+      ],
+      "arr": 9,
+      "area": "Place de l'Opéra",
+      "priceNote": "€0–300 depending on the seat",
+      "durationMin": 180,
+      "transit": "M3 or M7 to Opéra",
+      "times": "Programme runs September to July; also open for daytime visits",
+      "why": "Garnier is where the ballet mostly lives, and the building is half the reason to go — the staircase, the Chagall ceiling, the gold. Same ticketing as Bastille, same under-28 offers, and the cheap seats are worth more here than anywhere else in Paris because even a restricted view puts you inside that room. If the programme does not tempt you, it opens for daytime visits, which is the honest way in.",
+      "goodFor": [
+        "evening",
+        "couple",
+        "music",
+        "culture",
+        "special",
+        "romantic"
+      ],
+      "indoor": true,
+      "bookAhead": true,
+      "labels": [
+        "couple",
+        "romantic",
+        "indoor",
+        "bookahead",
+        "dontmiss"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://www.operadeparis.fr/en",
+      "lastVerified": "2026-09-08",
+      "coords": [
+        48.87109,
+        2.33198
+      ],
+      "coordsFrom": "nominatim"
     }
   ]
 }

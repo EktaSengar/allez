@@ -176,7 +176,16 @@ const SHARED = {
      actually are. The 18th has two of its own and then reaches the 10th,
      fourteen minutes away. Closed by writing up rooms in the 13th, 15th
      and 18th, and by the city listings covering more than the centre. */
-  'nightlife:5/13': 3,
+  /* Four since the opera houses were written up, and the fourth is
+     Opéra Bastille. The 5th and the 13th already shared Café Universel,
+     the Caveau de la Huchette and Supersonic; Bastille is central,
+     excellent and reachable from both, so it joined both lists at once.
+
+     That is the same thinness this entry has always recorded rather than
+     a new fault — the 13th still has nothing of its own to lead with,
+     and adding anything good in the middle of Paris will keep landing in
+     its list. Closed the same way: by writing up a room in the 13th. */
+  'nightlife:5/13': 4,
   'nightlife:5/15': 3,
   'nightlife:10/18': 3
 };

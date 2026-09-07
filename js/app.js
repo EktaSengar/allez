@@ -2024,6 +2024,37 @@ const App = (() => {
       + rows(items, null, true);
   }
 
+  /* Somewhere to go and read, as opposed to something to turn up to.
+     Same caption discipline as foundStrip: these are names off the map
+     and the heading says so. */
+  function placesStrip(kind, here) {
+    if (!kind || !Near.KIND[kind]) return '';
+    const { items, found } = Near.pick(Near.KIND[kind], {
+      rings: Near.RINGS.walk, want: 6, limit: 8, bare: 8, exclude: notWanted
+    });
+    /* The same library reaches this list twice — once from the city's
+       own register and once off the map — as "Médiathèque
+       Françoise-Sagan" and "Médiathèque Françoise Sagan". The dedupe
+       upstream compares names and a hyphen is enough to defeat it.
+       Folding punctuation and accents away catches that pair and its
+       kind without touching anything that is genuinely two places. */
+    const seen = new Set();
+    const key = t => (t || '').toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, ' ').trim();
+    const list = items.concat(found).filter(i => {
+      const k = key(i.title);
+      if (!k || seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    }).slice(0, 10);
+    if (!list.length) return '';
+    return stripHead(`Libraries and bookshops around ${here}`,
+                     `${list.length} nearby, nearest first — municipal libraries from the city `
+                     + `and bookshops off OpenStreetMap. Somewhere to go, rather than something to join.`)
+      + rows(list, null, true);
+  }
+
   /* Say which radius the answer came from, and how much of it is vouched
      for. A heading that claims "near you" while listing the other side of
      Paris is the bug this whole layer exists to prevent, so the number is
@@ -2165,7 +2196,7 @@ const App = (() => {
      So the vocabulary is explicit, and the groups are verbs, because
      what these have in common is that you go and do them. */
   const REG_GROUPS = [
-    ['read',  '📖', 'Read',  'books, writing, clubs',   ['books']],
+    ['read',  '📖', 'Read',  'books, writing, clubs',   ['books'], 'books'],
     ['make',  '🎨', 'Make',  'art, craft, photography', ['art', 'craft', 'design', 'photography']],
     ['move',  '💃', 'Move',  'dance and circus',        ['dance', 'circus']],
     ['stage', '🎭', 'Stage', 'theatre and comedy',      ['theatre', 'comedy']],
@@ -2187,6 +2218,20 @@ const App = (() => {
     const hit = REG_GROUPS.find(([, , , , subjects]) => subjects.some(s => cats.includes(s)));
     return hit ? hit[0] : 'other';
   };
+
+  /* Reading is the one of these that is also a place. A writing workshop
+     is something you turn up to on a Tuesday; a library is somewhere you
+     go when you feel like it, and the two answer the same wish. The
+     discovery layer already holds 148 of them — 72 municipal libraries
+     from the city and 76 bookshops off the map — under a `KIND` that has
+     existed since long before this tab, so Read borrows it rather than
+     anybody writing a record.
+
+     They stay in their own strip, below the practices and captioned as
+     what they are: names and positions, nobody has been, not a
+     recommendation. Blending them into the list above would quietly
+     restate an OpenStreetMap entry as a suggestion. */
+  const groupPlaces = key => (REG_GROUPS.find(g => g[0] === key) || [])[5] || null;
 
   const isRegular = i => i.mode === 'do';
 
@@ -2297,7 +2342,8 @@ const App = (() => {
       + (further.length
           ? stripHead('Worth the trip', `Further than ${near.radius} minutes, and still worth it`)
             + rows(further)
-          : '');
+          : '')
+      + placesStrip(groupPlaces(key), here);
   }
 
   function renderExplore() {

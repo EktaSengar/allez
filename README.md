@@ -338,9 +338,25 @@ walks. An empty category is worse than a missing one, and this way the tab
 grows itself as the data does rather than needing markup per hobby.
 
 Inside a subsection the split is by cadence rather than subject: what runs on
-a rhythm, then shorter runs. Somebody who opened Move has already said what
-they want, so that list is uncapped and reaches wide — the honest answer to
-"where can I dance" is every class we know of, nearest first.
+a rhythm, then shorter runs, then what is worth the trip. Somebody who opened
+Move has already said what they want, so those lists are uncapped and reach
+wide — the honest answer to "where can I dance" is every class we know of,
+nearest first.
+
+Read carries one thing the others do not. Reading is the one of these that is
+also a *place*: a writing workshop is something you turn up to on a Tuesday,
+a library is somewhere you go when you feel like it, and the two answer the
+same wish. The discovery layer already holds 148 of them — 72 municipal
+libraries from the city and 76 bookshops off the map — so Read borrows that
+`KIND` rather than anyone writing a record. They stay in their own strip
+below the practices, captioned as what they are: names and positions, nobody
+has been. Blending them upward would quietly restate an OpenStreetMap entry
+as a recommendation.
+
+Opera is deliberately **not** here. You do not take up an opera; you go to
+one. Garnier and Bastille are venues, so they live in `nightlife.json` with
+the jazz rooms and link to their own calendar — the same split that keeps
+anything with a date on it from going stale.
 
 ### Sport: active city exploration
 
