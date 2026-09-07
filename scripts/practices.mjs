@@ -126,7 +126,6 @@ const SUBJECT = {
   'Art contemporain': ['art',     '🖼️', 'Art workshop'],
   'Photo':            ['art',     '📷', 'Photography workshop'],
   'Cirque':           ['circus',  '🎪', 'Circus class'],
-  'Théâtre':          ['theatre', '🎭', 'Theatre workshop'],
   'Humour':           ['comedy',  '😄', 'Comedy workshop'],
   'Gourmand':         ['food',    '🍽️', 'Cooking workshop'],
   'BD':               ['books',   '📚', 'Comics workshop']
@@ -137,6 +136,36 @@ const SUBJECT = {
    because the tag and the stated audience disagree often enough that
    both are worth asking. */
 const NOT_FOR_US = new Set(['Enfants', 'Solidarité', 'Santé', 'Sciences', 'Innovation']);
+
+/* A tag that says "this is a show" — something with an audience and a
+   run, rather than a thing you join. `Atelier` alongside one of these
+   almost always means a workshop bolted onto an event: a Korean harvest
+   festival with a cooking table at it came through as "Cooking workshop
+   · most days", a Design Week exhibition as an art workshop, and a
+   film-and-philosophy evening as theatre because it happened to be held
+   in a theatre.
+
+   None of those is a practice, and the tag was there to say so all
+   along. A dance workshop inside a festival goes too, and should: it
+   runs for the length of the festival and then it is gone. */
+const A_SHOW = new Set(['Festival', 'Expo', 'Concert', 'Spectacle musical',
+  'Brocante', 'Nuit']);
+
+/* Two tags are deliberately not in that set, both because the feed uses
+   them more loosely than their names suggest.
+
+   `Salon` means a trade fair, and excluding it dropped exactly one
+   record across the whole feed: the ballroom class in the 10th, which
+   carries it for reasons of its own. A rule whose entire effect is to
+   delete a true positive is not a rule.
+
+   `Ecrans` means film, and its only honest catch was a
+   film-and-philosophy evening held in a theatre — which is now dropped
+   anyway, because `Théâtre` turned out to be worth nothing as a subject.
+   There is exactly one recurring `Théâtre` + `Atelier` record in the
+   feed and that evening was it, so the tag only ever admitted its own
+   false positive. Left in, `Ecrans` would also have taken a K-pop dance
+   workshop, and dance is the thinnest subject here. */
 
 /* Two, not four. Four was drawn to separate a practice from a short
    run, and it does — but it also took the section from twenty-three
@@ -284,6 +313,8 @@ function cityRecords(raw, log) {
     kept.filter(e => !notForAdults(e)));
   kept = step('a workshop, not a performance',
     kept.filter(e => tagsOf(e).includes('Atelier')));
+  kept = step('a thing you join, not a thing with a run',
+    kept.filter(e => !tagsOf(e).some(t => A_SHOW.has(t))));
   kept = step('about a subject worth taking up',
     kept.filter(e => tagsOf(e).some(t => SUBJECT[t])));
 
