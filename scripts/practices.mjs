@@ -125,7 +125,8 @@ const SUBJECT = {
   'Peinture':         ['art',     '🎨', 'Painting workshop'],
   'Art contemporain': ['art',     '🖼️', 'Art workshop'],
   'Photo':            ['art',     '📷', 'Photography workshop'],
-  'Cirque':           ['theatre', '🎪', 'Circus class'],
+  'Cirque':           ['circus',  '🎪', 'Circus class'],
+  'Théâtre':          ['theatre', '🎭', 'Theatre workshop'],
   'Humour':           ['comedy',  '😄', 'Comedy workshop'],
   'Gourmand':         ['food',    '🍽️', 'Cooking workshop'],
   'BD':               ['books',   '📚', 'Comics workshop']
@@ -137,9 +138,17 @@ const SUBJECT = {
    both are worth asking. */
 const NOT_FOR_US = new Set(['Enfants', 'Solidarité', 'Santé', 'Sciences', 'Innovation']);
 
-/* Four dates is the line between a short run and a practice. Three is a
-   weekend course; four is something with a rhythm you could join. */
-const REPEATS = 4;
+/* Two, not four. Four was drawn to separate a practice from a short
+   run, and it does — but it also took the section from twenty-three
+   records to fourteen, and the nine it dropped were most of the theatre
+   and half the dance. A two-session workshop is still a thing you sign
+   up for rather than an evening you attend, which is the distinction
+   this file is actually built on.
+
+   What is lost is not accuracy: the cadence in the gloss still tells a
+   reader the difference between "weekly, Sep–Jun" and "2 dates". The
+   line moved; the honesty did not. */
+const REPEATS = 2;
 
 /* One per venue. A single atelier with five listings would otherwise be
    most of a section that only shows six rows. */
