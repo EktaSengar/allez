@@ -2542,6 +2542,132 @@
         2.35265
       ],
       "coordsFrom": "osm-match"
+    },
+    {
+      "id": "le-foodist",
+      "title": "Market Visit & Cooking Class — Le Foodist",
+      "emoji": "🧑‍🍳",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "learn",
+        "food",
+        "indoor"
+      ],
+      "arr": 5,
+      "area": "59 rue Cardinal Lemoine",
+      "durationMin": 270,
+      "transit": "M10 to Cardinal Lemoine — the street is the address",
+      "why": "The one to do first, because it teaches the part you keep. The long format starts at the Latin Quarter market and Frederic walks you round it before you cook — how to pick, what to ask, which stall to trust — and only then do you go back and make a three-course lunch you sit down and eat. A recipe lasts one dinner; knowing how to shop the market at the end of your own street lasts. Everything is in English and genuinely hands-on. The shorter version skips the market, which is the half worth paying for.",
+      "goodFor": [
+        "learn",
+        "couple",
+        "indoor",
+        "food",
+        "morning"
+      ],
+      "indoor": true,
+      "rainyDayPick": true,
+      "bookAhead": true,
+      "labels": [
+        "learn",
+        "couple",
+        "indoor",
+        "bookahead"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "url": "https://www.lefoodist.com/",
+      "lastVerified": "2026-09-08",
+      "coords": [
+        48.84624,
+        2.35134
+      ],
+      "coordsFrom": "nominatim"
+    },
+    {
+      "id": "cook-n-with-class",
+      "title": "Croissants & Macarons — Cook'n With Class",
+      "emoji": "🥐",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "learn",
+        "food",
+        "indoor"
+      ],
+      "arr": 18,
+      "area": "6 rue Baudelique",
+      "durationMin": 180,
+      "transit": "M4 to Simplon — north Montmartre, not the tourist side",
+      "why": "A small kitchen in the quiet part of the 18th, professional chefs, everything taught in English. Go for the pastry rather than the cooking: croissants and macarons are the two things that are genuinely hard to teach yourself from a book, because both fail on technique you cannot see in a recipe. It is far enough north to be a proper outing, so make an afternoon of it and walk back down through Montmartre.",
+      "goodFor": [
+        "learn",
+        "couple",
+        "indoor",
+        "food",
+        "weekend"
+      ],
+      "indoor": true,
+      "rainyDayPick": true,
+      "bookAhead": true,
+      "labels": [
+        "learn",
+        "couple",
+        "indoor",
+        "bookahead"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://cooknwithclass.com/",
+      "lastVerified": "2026-09-08",
+      "coords": [
+        48.89236,
+        2.34726
+      ],
+      "coordsFrom": "nominatim"
+    },
+    {
+      "id": "cordon-bleu-workshops",
+      "title": "Public Workshops — Le Cordon Bleu",
+      "emoji": "🔪",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "learn",
+        "food",
+        "indoor"
+      ],
+      "arr": 15,
+      "area": "13–15 quai André Citroën",
+      "durationMin": 180,
+      "transit": "RER C to Javel, or M10 to Javel — on the river, west",
+      "why": "The famous one, and the part of it you can actually walk into. The diplomas take months and cost accordingly, but the school runs short public workshops in cuisine, pastry, bakery and wine that anybody can book — same kitchens, same chefs, an afternoon rather than a career. Worth it once for the room as much as the cooking. Check the schedule before you set your heart on a subject; the public sessions are a small slice of what the building does.",
+      "goodFor": [
+        "learn",
+        "couple",
+        "indoor",
+        "food",
+        "special"
+      ],
+      "indoor": true,
+      "rainyDayPick": true,
+      "bookAhead": true,
+      "labels": [
+        "learn",
+        "couple",
+        "indoor",
+        "bookahead"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.cordonbleu.edu/paris/pastry-cuisine-wine-workshops-in-paris/en",
+      "lastVerified": "2026-09-08",
+      "coords": [
+        48.84041,
+        2.27219
+      ],
+      "coordsFrom": "nominatim"
     }
   ]
 }
