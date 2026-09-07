@@ -450,12 +450,41 @@ Add an object to the right file in `data/`. The fields that matter:
 | `price`, `priceNote` | `price` is a number for ranking; `priceNote` is what gets displayed |
 | `start`, `end` | `YYYY-MM-DD`. Anything with a past `end` is deleted automatically |
 | `days` | `[0-6]`, 0 = Sunday. Omit if it is open every day |
+| `mode` | `"do"` if this is something you take up rather than attend — see below. Omit otherwise |
 | `indoor`, `weatherSensitive`, `rainyDayPick` | drives the weather-aware ranking |
 | `labels` | drives the badges — see `LABEL_TEXT` in `js/scoring.js` |
 | `quality`, `uniqueness` | 1–5, the intrinsic half of the score |
 | `url`, `source`, `lastVerified` | required on events |
 
 Then run `node scripts/refresh.mjs --check` before committing.
+
+#### Watching and doing
+
+The taxonomy already had every noun a hobby needs — `art`, `music`, `dance`,
+`books`, `film`, `theatre`, `photography`, `architecture`, `history`. What it
+could not say is whether you *watch* the thing or *do* it, and that, not the
+subject, is what separates an exhibition from a life-drawing class.
+
+So there is one field rather than a category per hobby. `mode: "do"` marks a
+record as something you take up; everything without it is `see`, which is why
+none of the eight hundred records that predate this field needed touching.
+The subject stays in `categories`, so the pair composes: `dance` + `see` is
+the ballet, `dance` + `do` is a tango class, `art` + `do` is life drawing,
+`books` + `do` is a book club. A new hobby is a data change, never a code one.
+
+The line to hold, because it will drift otherwise: **`do` means a practice you
+take up, not an activity you are active during.** A techno club is not `do` —
+you dance there, but nobody takes up Rex Club. If a record already has a home
+elsewhere in the site (a food mission, a sport, a bakery), it keeps it and
+does not get `mode` as well.
+
+Cadence is a separate question from mode, and three shapes already work: a
+one-off taster is a dated event, a weekly practice carries `days`, and a
+term you sign up for carries the `bookahead` label.
+
+One noun genuinely is new — `tech`, for the AI and startup evenings the city's
+own feed does not carry. It is reserved rather than used: nothing in `data/`
+claims it until the Luma collector lands.
 
 ### Automating collection
 
@@ -470,6 +499,29 @@ event without `url`, `source` and `lastVerified`. The one that keeps it honest
 is newer — a collected record is `sourced`, so its `why` carries the city's own
 summary and never a claim about whether the two of you would enjoy it. That
 claim is what `events.json` is for, and no script can make it.
+
+`scripts/practices.mjs` is the second collector and answers a different
+question: not what is on, but what you could take up. The city's feed already
+knows — `occurrences` holds every date a listing runs, and 736 of its 3,315
+records repeat four times or more — but paris.fr renders each as one dated row
+among three thousand. A ballroom class in the 10th with forty-two dates in it
+reads as an event next Thursday.
+
+**Reading that repetition as a rhythm is the whole point of the file.** Forty-two
+dates become "a dance class, weekly, September to June", the weekday goes into
+`days` so the ranking already knows to keep quiet on a Monday, and the record
+lands as `mode: "do"`.
+
+Its second source is Luma, whose per-calendar iCal feed is keyless, for the
+tech and AI evenings the city's feed does not carry at all. Station F is
+deliberately not a third: it has no public Luma calendar of its own, and what
+its events page links to belongs to other people. The two halves fail
+independently, and neither can empty the file — see the top of the script.
+
+The English line on a French record is assembled from that record's own fields
+— subject tag, occurrence count, date span — and never translated or invented.
+The `sourced` rule bans an opinion, not a language, and a lookup table cannot
+drift across that line the way a translation would.
 
 ---
 

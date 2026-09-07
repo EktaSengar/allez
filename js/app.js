@@ -28,7 +28,11 @@ const App = (() => {
   const CORE  = ['events', 'events-city', 'places', 'nightlife', 'sports', 'food',
                  'itineraries', 'daytrips', 'neighborhoods', 'quests', 'editorial',
                  'invaders', 'notes'];
-  const LATER = ['civic', 'notable'];
+  /* `practices` is behind the first paint on purpose. It feeds one
+     section of one tab, so nothing the reader sees first is waiting on
+     it, and putting it in CORE would take bandwidth from the files that
+     are. Same reasoning as civic and notable. */
+  const LATER = ['civic', 'notable', 'practices'];
   const FILES = [...FIRST, ...CORE, ...LATER];
   const D = {};
   let ALL = [];
@@ -2212,11 +2216,27 @@ const App = (() => {
       rings: Near.RINGS.out, want: 5, limit: 8, exclude: notWanted
     });
 
+    /* Things you could take up, as opposed to things on. A weekly class
+       cannot win a ranking built for novelty — Today and Weekend are
+       asking what is new, and the honest answer about a dance class that
+       has run since September is "nothing". So it lives here, where the
+       question is what this part of Paris is for rather than what is on
+       in it tonight, and where the radius is already how everything is
+       chosen. */
+    const doing = Near.pick(i => i.mode === 'do', {
+      rings: Near.RINGS.out, want: 4, limit: 6, exclude: notWanted
+    });
+
     return standing
       + dossier
       + (walk.items.length
           ? stripHead('Walks and routes', radiusNote(walk.radius, walk.items, walk.widened))
             + `<div class="routes">${walk.items.map(routeCard).join('')}</div>`
+          : '')
+      + (doing.items.length
+          ? stripHead('Things you could take up',
+                      radiusNote(doing.radius, doing.items, doing.widened))
+            + rows(doing.items)
           : '')
       + (gems.items.length
           ? stripHead('Hidden Paris', radiusNote(gems.radius, gems.items, gems.widened))
@@ -2284,7 +2304,7 @@ const App = (() => {
         else if (m === 'culture'  && /culture|art|history|architecture|photography|film|music|theatre|dance/.test(hay)) ok = true;
         else if (m === 'outdoors' && /outdoor|park|walk/.test(hay)) ok = true;
         else if (m === 'shop'     && /shop|design|market|vintage|home/.test(hay)) ok = true;
-        else if (m === 'learn'    && /learn/.test(hay)) ok = true;
+        else if (m === 'learn'    && (i.mode === 'do' || /learn/.test(hay))) ok = true;
         else if (m === 'romantic' && /romantic/.test(hay)) ok = true;
       });
       if (!ok) return false;

@@ -484,6 +484,7 @@ const Rec = (() => {
       .concat(D.food?.items || [])
       .concat(D.itineraries?.items || [])
       .concat(D.daytrips?.items || [])
+      .concat(D.practices?.items || [])
       .filter(i => !(i.end && todayISO && i.end < todayISO));
 
     /* Everything in the curated files was written by somebody who went.
