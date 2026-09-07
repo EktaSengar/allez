@@ -2151,6 +2151,24 @@ const App = (() => {
       : `Where you are, where to go next, and the walks within reach of ${here}.`;
   }
 
+  /* The subject a record is about, as opposed to the things it also is.
+     Every `do` record carries `learn`, and that is a mode rather than a
+     topic, so it can never be the answer here. */
+  const subjectOf = i => (i.categories || []).find(c => c !== 'learn') || 'other';
+
+  function capPerSubject(items, per, limit) {
+    const seen = {};
+    const out = [];
+    for (const i of items) {
+      const s = subjectOf(i);
+      if ((seen[s] || 0) >= per) continue;
+      seen[s] = (seen[s] || 0) + 1;
+      out.push(i);
+      if (out.length >= limit) break;
+    }
+    return out;
+  }
+
   function renderExplore() {
     const hoods = D.neighborhoods.items || [];
     const explored = Store.arrs();
@@ -2224,8 +2242,20 @@ const App = (() => {
        in it tonight, and where the radius is already how everything is
        chosen. */
     const doing = Near.pick(i => i.mode === 'do', {
-      rings: Near.RINGS.out, want: 4, limit: 6, exclude: notWanted
+      rings: Near.RINGS.out, want: 4, limit: 24, exclude: notWanted
     });
+    /* Nearest-first alone hands this section to one subject. The tech
+       evenings are collected from a source that skews central, so from
+       the 10th they take the four closest slots and a reader sees a
+       section about AI with a dance class hidden under it — which is the
+       opposite of what it is for.
+
+       Two per subject, in the order the radius already chose. The same
+       instinct as PER_VENUE in both collectors: the point is not to rank
+       one thing over another but to stop any one of them owning the
+       whole list. Six rows then hold five or six different subjects
+       rather than four meetups. */
+    doing.items = capPerSubject(doing.items, 2, 6);
 
     return standing
       + dossier
