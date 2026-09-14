@@ -442,7 +442,7 @@ const App = (() => {
        to check. */
     if (item.price == null) return '';
     if (item.price === 0) return 'Free';
-    return `€${item.price}`;
+    return City.money.format(item.price);
   }
 
   /* ---------- how much anybody knows about this place ----------
@@ -822,7 +822,7 @@ const App = (() => {
       item.arr ? `${item.arr}e` : null,
       item.startTime ? `from ${item.startTime}` : null,
       durText(item.durationMin),
-      item.priceNote || (item.price ? `€${item.price}` : 'Free')
+      item.priceNote || (item.price ? City.money.format(item.price) : 'Free')
     ].filter(Boolean).join(' · ');
 
     return `<div class="route${shot ? ' has-shot' : ''}" data-id="${esc(item.id)}">
@@ -2093,17 +2093,13 @@ const App = (() => {
      Paris spirals outward from the 1st like a snail shell and watching
      that shell fill in is a far better reward than a counter. */
 
-  /* Approximate centroids of the twenty arrondissements, normalised to a
-     100×100 box. Not survey-accurate, but the spiral is the point. */
-  const ARR_MAP = {
-    1:[47,50],  2:[46,42],  3:[54,44],  4:[54,54],  5:[50,63],
-    6:[42,59],  7:[32,55],  8:[36,40],  9:[45,34],  10:[57,34],
-    11:[65,48], 12:[72,61], 13:[56,72], 14:[42,72], 15:[28,64],
-    16:[17,50], 17:[27,30], 18:[46,22], 19:[67,25], 20:[73,40]
-  };
-  /* The middle of Paris is genuinely cramped, so push everything out from the
-     centre a little — otherwise the 1st through 4th sit on top of each other. */
-  const SPREAD = 1.3, CX = 50, CY = 52;
+  /* The quest drawing: approximate centroids normalised to a 100×100
+     box, plus the nudge that stops the middle four sitting on top of
+     each other. Both live in the city pack, because the spiral is the
+     shape of Paris and a city without one simply omits the map — see
+     cities/paris/city.js. */
+  const ARR_MAP = City.zone.map;
+  const { factor: SPREAD, cx: CX, cy: CY } = City.zone.mapSpread;
   const spread = ([x, y]) => [CX + (x - CX) * SPREAD, CY + (y - CY) * SPREAD];
 
   function progressRing(pct) {

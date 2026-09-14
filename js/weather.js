@@ -5,14 +5,14 @@
    --------------------------------------------------------- */
 
 const Weather = (() => {
-  /* Defaults to the Canal Saint-Martin area; Weather.setHome() overrides it
+  /* Defaults come from the city pack; Weather.setHome() overrides them
      from data/home.json so the forecast follows whoever lives here. */
-  let LAT = 48.87, LON = 2.36;
+  let LAT = City.weather.lat, LON = City.weather.lon;
   const url = () => `https://api.open-meteo.com/v1/forecast`
     + `?latitude=${LAT}&longitude=${LON}`
     + `&current=temperature_2m,weather_code,precipitation`
     + `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max`
-    + `&timezone=Europe%2FParis&forecast_days=8`;
+    + `&timezone=${encodeURIComponent(City.weather.tz)}&forecast_days=8`;
 
   // WMO weather interpretation codes
   const CODES = {

@@ -150,9 +150,21 @@ node scripts/check-location.mjs     # moving still changes the answers
 stamp means the browser is asked for a URL that no longer matches the file.
 
 For anything that changes rendering, compare the views before and after
-rather than trusting that it looks fine: render each of the nine views in a
-headless browser and diff the text length, card count, row count and image
-count. A performance change that alters what is on the page is a bug, not a
+rather than trusting that it looks fine — `scripts/check-views.mjs` does
+exactly that:
+
+```bash
+node scripts/check-views.mjs --save /tmp/before.json   # before the change
+node scripts/check-views.mjs --compare /tmp/before.json  # after
+```
+
+It renders all ten views in headless Chrome and hashes what each one drew,
+pinning the four things that otherwise make two runs disagree: the date,
+the forecast, `localStorage` and `Math.random`. When a hash moves it prints
+which counts moved with it — chars, cards, rows, headings, images — so
+"different" comes with a lead. Exits non-zero on any difference.
+
+A performance change that alters what is on the page is a bug, not a
 trade-off, unless the user has agreed to the trade.
 
 ## When the numbers drift on their own

@@ -28,13 +28,33 @@ import { readShards } from './shard.mjs';
    this is the one place that reassembles it. */
 export const readDiscovered = readShards;
 
-const JS = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'js');
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const JS = path.join(ROOT, 'js');
 
-export function loadModule(file, name, globals = {}) {
-  const src = fs.readFileSync(path.join(JS, file), 'utf8');
+function evaluate(src, name, globals) {
   const keys = ['console', ...Object.keys(globals)];
   const vals = [console, ...Object.values(globals)];
   return new Function(...keys, `${src}\n; return ${name};`)(...vals);
+}
+
+/* ---------- the city pack ----------
+
+   In the browser this is a script tag ahead of every other one, because
+   location.js, scoring.js, weather.js and app.js all read `City` as they
+   evaluate. Node needs it for the same reason and in the same order, so
+   it is loaded once here and handed to every module below — a script
+   that forgets to pass it would fail in a way the browser never would,
+   which is exactly the drift shim.mjs exists to prevent.
+
+   Which city: there is one today. When there are four, this takes the
+   pack name from the caller and the scripts say which city they are
+   building. */
+export const City = evaluate(
+  fs.readFileSync(path.join(ROOT, 'cities', 'paris', 'city.js'), 'utf8'), 'City', {});
+
+export function loadModule(file, name, globals = {}) {
+  const src = fs.readFileSync(path.join(JS, file), 'utf8');
+  return evaluate(src, name, { City, ...globals });
 }
 
 /* The two the record layer needs, in the order they depend on each

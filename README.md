@@ -467,6 +467,30 @@ record and fails the build rather than shipping a broken one.
 The evergreen half of the data — bakeries, parks, walks, day trips — does not
 expire, which is why the site is still useful on a quiet week.
 
+### The city pack
+
+`cities/paris/city.js` holds the things that are true of Paris and of nowhere
+else: the twenty arrondissement centroids and their names, the French public
+holidays and what they close, the euro and what counts as cheap here, the
+forecast's default coordinates, and the 100×100 spiral the quest map is drawn
+on. It loads as the first script tag, because `location.js`, `scoring.js`,
+`weather.js` and `app.js` all read `City` as they evaluate.
+
+The rule it exists to hold is that **the engine never names a city**. Anything
+that needs to know what a neighbourhood is called, how money is written or when
+the shops shut asks the pack. A second city is a second pack, not a second copy
+of `app.js`.
+
+Three things deliberately stay outside it. The **voice** — every `why`, every
+epigraph, every section blurb — is hand-written and is the point of the site.
+The **data** is already per-city by construction. And **index.html** is Paris's
+own page, down to the croissant in the favicon: a city owns its page, and the
+engine does not write it.
+
+Node gets the pack from `scripts/shim.mjs`, which loads it once and injects
+`City` into every module it evaluates, so a build script cannot forget to pass
+it and then fail in a way the browser never would.
+
 ---
 
 ## Working on it
@@ -482,6 +506,19 @@ node scripts/refresh.mjs --check    # validate, change nothing
 node scripts/refresh.mjs            # prune expired entries + validate
 node scripts/refresh.mjs --links    # also check every source URL resolves
 ```
+
+Anything that touches rendering should be held to the bar the August 2026
+optimisation was held to — the page still says exactly what it said before:
+
+```bash
+node scripts/check-views.mjs --save /tmp/before.json
+# …make the change…
+node scripts/check-views.mjs --compare /tmp/before.json
+```
+
+It renders all ten views in headless Chrome and hashes what each drew, pinning
+the date, the forecast, `localStorage` and `Math.random` so two runs of the same
+commit always agree. Needs `CHROME_PATH` and `puppeteer-core`.
 
 ### Adding something
 

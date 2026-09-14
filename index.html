@@ -141,15 +141,18 @@
      evaluates, and the header is its full height before anything is
      drawn. Nothing is delayed by the move: these scripts were always
      parser-blocking, so this changes the order, not the total. -->
-<script src="js/location.js?v=62da7970"></script>
+<!-- The city pack comes first: location.js, scoring.js, weather.js and
+     app.js all read `City` as they evaluate, not later. -->
+<script src="cities/paris/city.js?v=febc6574"></script>
+<script src="js/location.js?v=0236ae55"></script>
 <script src="js/state.js?v=c5c186fb"></script>
-<script src="js/weather.js?v=ef258e4e"></script>
+<script src="js/weather.js?v=b74b2d9e"></script>
 <script src="js/hours.js?v=f3930310"></script>
 <script src="js/record.js?v=65b2ff09"></script>
 <script src="js/invaders.js?v=00fec559"></script>
 <script src="js/nearby.js?v=a1c9f21d"></script>
-<script src="js/scoring.js?v=07f5b5ff"></script>
-<script src="js/app.js?v=f6da374b"></script>
+<script src="js/scoring.js?v=46f412de"></script>
+<script src="js/app.js?v=671b3b03"></script>
 
 <nav class="tabs" id="tabs">
   <div class="wrap tabs-inner">

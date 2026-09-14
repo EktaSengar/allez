@@ -26,6 +26,7 @@ evidence rather than taste.
 14. [Photographs are stored as a Commons path fragment, not a URL](#14)
 15. [Every fill path redraws through `repaint()`](#15)
 16. [Things deliberately not done](#16)
+17. [The city pack loads before every module that reads it](#17)
 
 ---
 
@@ -446,3 +447,34 @@ Recorded so they are not re-proposed as easy wins:
   is worse for the common case: someone editing `nearby.js` sees the
   comment, and will not go looking for a skill file they may not know
   exists. What belongs here is the compiled summary, not the only copy.
+
+<a id="17"></a>
+## 17. The city pack loads before every module that reads it
+
+`index.html` puts `cities/paris/city.js` **ahead of the other nine**
+script tags. That ordering is not stylistic: `location.js`, `scoring.js`,
+`weather.js` and `app.js` all dereference `City` while they evaluate —
+`const ARR = City.zone.centroids` runs at IIFE time, not at call time —
+so a pack that arrives second is a `ReferenceError` and a blank page.
+
+It sits with the others above `<main>` (§1) rather than in `<head>`,
+because it is subject to the same trade: parser-blocking either way, and
+the header has to be its full height before the first paint.
+
+**Why a separate file rather than inlining it into `index.html`:** the
+page is the one thing served network-first (§13), so anything inlined
+there is re-fetched on every visit. A hashed script is cache-first and
+free on the second load. The cost is one request and, measured,
+**+1,852 bytes gzipped** — most of which is prose that moved out of
+`location.js` and `app.js` rather than new weight.
+
+`scripts/version.mjs` stamps `cities/` alongside `css/` and `js/`; the
+service worker needs no change, because it routes on the presence of
+`?v=` rather than on a list of files.
+
+Node has the same ordering requirement and gets it from one place:
+`scripts/shim.mjs` loads the pack once and injects `City` into every
+module it evaluates. A build script cannot forget to pass it.
+
+**How the failure shows up:** not subtly. Every view is empty and the
+console has a single `City is not defined` before anything renders.

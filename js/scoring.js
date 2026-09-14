@@ -19,25 +19,11 @@ const Rank = (() => {
   const parse = s => new Date(s + 'T12:00:00');
   const daysBetween = (a, b) => Math.round((parse(b) - parse(a)) / DAY_MS);
 
-  /* French public holidays. Shops, bakeries and markets largely shut;
-     museums, parks and ticketed events carry on. */
-  const HOLIDAYS = {
-    '2026-08-15': 'Assumption',
-    '2026-11-01': "All Saints' Day",
-    '2026-11-11': 'Armistice Day',
-    '2026-12-25': 'Christmas Day',
-    '2027-01-01': "New Year's Day",
-    '2027-04-05': 'Easter Monday',
-    '2027-05-01': 'Labour Day',
-    '2027-05-06': 'Ascension',
-    '2027-05-08': 'VE Day',
-    '2027-05-17': 'Whit Monday',
-    '2027-07-14': 'Bastille Day',
-    '2027-08-15': 'Assumption'
-  };
-
-  /* Things that shut on a public holiday. */
-  const SHUTS_ON_HOLIDAY = ['bakery', 'cafe', 'shop', 'market'];
+  /* When the city is shut, and what that shuts. Both tables live in the
+     city pack — every country's list is different, and several of the
+     dates move from year to year. See cities/paris/city.js. */
+  const HOLIDAYS = City.holidays;
+  const SHUTS_ON_HOLIDAY = City.shutsOnHoliday;
 
   /* --- is this thing available on a given date? --- */
 

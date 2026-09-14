@@ -37,8 +37,10 @@ const CHECK = process.argv.includes('--check');
 
 const hash = buf => crypto.createHash('sha256').update(buf).digest('hex').slice(0, 8);
 
-/* Matches href/src for a local css or js file, with or without an existing ?v= */
-const ASSET = /(href|src)="((?:css|js)\/[^"?]+\.(?:css|js))(\?v=[^"]*)?"/g;
+/* Matches href/src for a local css or js file, with or without an existing
+   ?v=. `cities/` is in here because a city pack ships a script of its own —
+   the same staleness problem, so the same answer. */
+const ASSET = /(href|src)="((?:css|js|cities)\/[^"?]+\.(?:css|js))(\?v=[^"]*)?"/g;
 
 /* The one line in index.html that carries the data hashes. Rewritten
    whole each run, so the map cannot drift from what is on disk. */

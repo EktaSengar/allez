@@ -1,0 +1,128 @@
+/* ---------------------------------------------------------
+   cities/paris/city.js — what is true of Paris and of nowhere else.
+
+   The engine files next door carried these inline, which was fine with
+   one city and wrong with four. They are not settings — nobody will tune
+   them — they are the parts of the site that would differ in Delhi.
+
+   The rule: **the engine never names a city.** If a module needs to know
+   what a neighbourhood is called, how money is written or when the shops
+   shut, it asks here. A second city is a second one of these, not a fork.
+
+   Not here: the voice (every `why` and epigraph — hand-written, and the
+   point of the site), the data (already per-city), and index.html, which
+   is Paris's own page down to the croissant.
+   --------------------------------------------------------- */
+
+const City = (() => {
+
+  const id   = 'paris';
+  const name = 'Paris';
+
+  /* Nominatim's usage policy asks callers to identify themselves. */
+  const ua = 'paris-for-you (personal site)';
+
+  /* ---------- what a piece of the city is called ----------
+
+     People genuinely speak in arrondissements — "the 10th" is an
+     address, a character and a shorthand at once. Delhi has colonies and
+     Bengaluru has Main-and-Cross; neither is a number. The engine only
+     asks for `one`, `many` and `ordinal`. */
+
+  const zone = {
+    one:  'arrondissement',
+    many: 'arrondissements',
+
+    /* 1er, then 2e onward. The city writes these in superscript; the
+       interface is English, where the plain form reads better. */
+    ordinal: n => (n === 1 ? '1er' : `${n}e`),
+    fallback: name,
+
+    /* Deliberately NOT the geometric centroids the city publishes. The
+       12th and 16th each have a wood bolted on, and averaging the
+       polygon puts the 12th two kilometres into the Bois de Vincennes:
+       click "12e" and the guide finds you the nearest bakery to a
+       forest. Each point is instead the median position of the city's
+       own facilities in that postcode — schools, libraries, gyms — which
+       sit where people are. Where an arrondissement is all city the two
+       agree within a few hundred metres, which is the check that this
+       measures something real; only the two with woods move far.
+
+       The build scripts keep the geometric set on purpose: they use it
+       to decide which arrondissement a point falls in, and for that an
+       evenly spaced table approximates the boundaries better. Different
+       question, different table. */
+    centroids: {
+      1:[48.8620,2.3426],  2:[48.8668,2.3450],  3:[48.8625,2.3609],  4:[48.8549,2.3569],
+      5:[48.8436,2.3497],  6:[48.8495,2.3328],  7:[48.8569,2.3127],  8:[48.8760,2.3148],
+      9:[48.8780,2.3404],  10:[48.8755,2.3639], 11:[48.8582,2.3807], 12:[48.8412,2.3956],
+      13:[48.8275,2.3620], 14:[48.8304,2.3226], 15:[48.8403,2.2954], 16:[48.8559,2.2713],
+      17:[48.8889,2.3123], 18:[48.8918,2.3476], 19:[48.8852,2.3810], 20:[48.8660,2.4009]
+    },
+
+    /* What a local says instead of the number. */
+    names: {
+      1:'Louvre · Palais-Royal', 2:'Bourse · Sentier', 3:'Haut Marais', 4:'Marais · Île Saint-Louis',
+      5:'Latin Quarter', 6:'Saint-Germain', 7:'Invalides · Eiffel', 8:'Champs-Élysées · Monceau',
+      9:'SoPi · Pigalle', 10:'Canal Saint-Martin', 11:'Oberkampf · Bastille', 12:'Bastille · Bercy',
+      13:'Butte-aux-Cailles', 14:'Montparnasse · Denfert', 15:'Vaugirard', 16:'Passy · Trocadéro',
+      17:'Batignolles', 18:'Montmartre', 19:'Buttes-Chaumont · La Villette', 20:'Belleville · Ménilmontant'
+    },
+
+    /* A drawing, not a projection: centroids normalised to a 100×100 box,
+       because Paris spirals out from the 1st like a snail shell and
+       watching that fill in is the point of the quest. A city whose shape
+       is not worth drawing omits this and gets a list of chips. */
+    map: {
+      1:[47,50],  2:[46,42],  3:[54,44],  4:[54,54],  5:[50,63],
+      6:[42,59],  7:[32,55],  8:[36,40],  9:[45,34],  10:[57,34],
+      11:[65,48], 12:[72,61], 13:[56,72], 14:[42,72], 15:[28,64],
+      16:[17,50], 17:[27,30], 18:[46,22], 19:[67,25], 20:[73,40]
+    },
+
+    /* The middle is cramped; without this the 1st through 4th sit on top
+       of each other. */
+    mapSpread: { factor: 1.3, cx: 50, cy: 52 }
+  };
+
+  /* ---------- when the city is shut ----------
+
+     Shops, bakeries and markets largely close on a public holiday;
+     museums, parks and ticketed events carry on. Written out rather than
+     computed because Easter Monday, Ascension and Whit Monday all move,
+     and a table is easier to extend by a year than a lunar calculation
+     is to trust. */
+
+  const holidays = {
+    '2026-08-15': 'Assumption',
+    '2026-11-01': "All Saints' Day",
+    '2026-11-11': 'Armistice Day',
+    '2026-12-25': 'Christmas Day',
+    '2027-01-01': "New Year's Day",
+    '2027-04-05': 'Easter Monday',
+    '2027-05-01': 'Labour Day',
+    '2027-05-06': 'Ascension',
+    '2027-05-08': 'VE Day',
+    '2027-05-17': 'Whit Monday',
+    '2027-07-14': 'Bastille Day',
+    '2027-08-15': 'Assumption'
+  };
+
+  const shutsOnHoliday = ['bakery', 'cafe', 'shop', 'market'];
+
+  /* `cheap` is a judgement about this city, not a conversion: twenty
+     euros is a cheap evening in Paris, and Delhi's figure is whatever a
+     cheap evening costs there. */
+  const money = { symbol: '€', cheap: 20, format: n => `€${n}` };
+
+  /* Rounded to about a kilometre so no precise address reaches a third
+     party. Weather.setHome() overrides this from data/home.json; these
+     are only what to ask for before that file lands. */
+  const weather = { lat: 48.87, lon: 2.36, tz: 'Europe/Paris' };
+
+  return { id, name, ua, zone, holidays, shutsOnHoliday, money, weather };
+})();
+
+/* Node loads this through scripts/shim.mjs, which evaluates it the same
+   way the browser does. */
+if (typeof module !== 'undefined' && module.exports) module.exports = City;

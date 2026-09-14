@@ -19,44 +19,15 @@
 
 const Loc = (() => {
   const KEY = 'paris-for-you.location.v1';
-  const UA_NOTE = 'paris-for-you (personal site)';
+  const UA_NOTE = City.ua;
 
-  /* Where each arrondissement actually lives — the preset list, and the
-     fallback when a record has no coordinates of its own.
-
-     These are deliberately NOT the geometric centroids the city
-     publishes. The 12th and the 16th each have a wood bolted onto them,
-     and averaging the polygon puts the 12th two kilometres out in the
-     Bois de Vincennes: click "12e" and the guide would helpfully find
-     you the nearest bakery to a forest. So each point is the median
-     position of the city's own facilities in that postcode — schools,
-     crèches, libraries, gyms — which sit where people are rather than
-     where the boundary happens to run.
-
-     Where an arrondissement is all city, the two agree to within a few
-     hundred metres, which is the check that this is measuring something
-     real. Only the two with woods move far.
-
-     The build scripts keep the geometric centroids, on purpose: they use
-     them to work out which arrondissement a point falls in, and for that
-     job an evenly spaced set approximates the boundaries better than a
-     set pulled towards where the shops are. Different question, different
-     table. */
-  const ARR = {
-    1:[48.8620,2.3426],  2:[48.8668,2.3450],  3:[48.8625,2.3609],  4:[48.8549,2.3569],
-    5:[48.8436,2.3497],  6:[48.8495,2.3328],  7:[48.8569,2.3127],  8:[48.8760,2.3148],
-    9:[48.8780,2.3404],  10:[48.8755,2.3639], 11:[48.8582,2.3807], 12:[48.8412,2.3956],
-    13:[48.8275,2.3620], 14:[48.8304,2.3226], 15:[48.8403,2.2954], 16:[48.8559,2.2713],
-    17:[48.8889,2.3123], 18:[48.8918,2.3476], 19:[48.8852,2.3810], 20:[48.8660,2.4009]
-  };
-
-  const ARR_NAMES = {
-    1:'Louvre · Palais-Royal', 2:'Bourse · Sentier', 3:'Haut Marais', 4:'Marais · Île Saint-Louis',
-    5:'Latin Quarter', 6:'Saint-Germain', 7:'Invalides · Eiffel', 8:'Champs-Élysées · Monceau',
-    9:'SoPi · Pigalle', 10:'Canal Saint-Martin', 11:'Oberkampf · Bastille', 12:'Bastille · Bercy',
-    13:'Butte-aux-Cailles', 14:'Montparnasse · Denfert', 15:'Vaugirard', 16:'Passy · Trocadéro',
-    17:'Batignolles', 18:'Montmartre', 19:'Buttes-Chaumont · La Villette', 20:'Belleville · Ménilmontant'
-  };
+  /* The twenty arrondissements: where each one actually sits, and what
+     a local calls it. Both tables moved to the city pack — see
+     cities/paris/city.js, which also keeps the explanation of why these
+     are not the geometric centroids the city publishes. Aliased to the
+     old names because everything below reads them that way. */
+  const ARR = City.zone.centroids;
+  const ARR_NAMES = City.zone.names;
 
   let state = { home: null, exploring: null, recents: [] };
 
@@ -135,11 +106,11 @@ const Loc = (() => {
      enough to be useful and vague enough to be nobody's business. */
   function displayName(loc) {
     if (!loc) return 'Paris';
-    if (loc.arr) return `${loc.arr}${loc.arr === 1 ? 'er' : 'e'} · ${ARR_NAMES[loc.arr] || 'Paris'}`;
+    if (loc.arr) return `${City.zone.ordinal(loc.arr)} · ${ARR_NAMES[loc.arr] || City.zone.fallback}`;
     return loc.area || loc.label || 'Paris';
   }
 
-  const arrName = n => ARR_NAMES[n] || `${n}e`;
+  const arrName = n => ARR_NAMES[n] || City.zone.ordinal(n);
   const arrCoords = n => ARR[n];
   const presets = () => Object.keys(ARR).map(Number)
     .map(n => ({ arr: n, name: ARR_NAMES[n] }));
