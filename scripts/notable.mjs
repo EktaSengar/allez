@@ -81,7 +81,7 @@ SELECT ?item ?itemLabel ?desc ?cls ?coord ?article ?heritage ?inception WHERE {
 
 const CAT_OF = Object.fromEntries(CLASSES.map(([q, c]) => [q.replace('wd:', ''), c]));
 
-const ARR = {
+const ZONE = {
   1:[48.8626,2.3363],  2:[48.8683,2.3413],  3:[48.8637,2.3615],  4:[48.8546,2.3572],
   5:[48.8448,2.3501],  6:[48.8496,2.3329],  7:[48.8565,2.3120],  8:[48.8726,2.3120],
   9:[48.8768,2.3374],  10:[48.8760,2.3595], 11:[48.8578,2.3792], 12:[48.8351,2.4212],
@@ -90,7 +90,7 @@ const ARR = {
 };
 const nearestArr = (lat, lon) => {
   let best = null, bd = Infinity;
-  for (const [n, [a, b]] of Object.entries(ARR)) {
+  for (const [n, [a, b]] of Object.entries(ZONE)) {
     const d = (a - lat) ** 2 + (b - lon) ** 2;
     if (d < bd) { bd = d; best = Number(n); }
   }

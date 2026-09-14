@@ -11,7 +11,7 @@
         "sport",
         "football"
       ],
-      "arr": 16,
+      "zone": 16,
       "area": "Stade Jean-Bouin, 20 avenue du Général Sarrail",
       "price": 25,
       "priceNote": "From ~€15–35",
@@ -72,7 +72,7 @@
         "sport",
         "football"
       ],
-      "arr": 16,
+      "zone": 16,
       "area": "Parc des Princes, 24 rue du Commandant Guilbaud",
       "price": 90,
       "priceNote": "From ~€50, often far more",
@@ -133,7 +133,7 @@
         "football",
         "unusual"
       ],
-      "arr": null,
+      "zone": null,
       "area": "Stade Bauer, Saint-Ouen",
       "price": 12,
       "priceNote": "~€10–15",
@@ -196,7 +196,7 @@
         "football",
         "rugby"
       ],
-      "arr": null,
+      "zone": null,
       "area": "Saint-Denis",
       "price": 45,
       "priceNote": "From ~€30 for rugby, more for France football",
@@ -250,7 +250,7 @@
         "sport",
         "basketball"
       ],
-      "arr": 18,
+      "zone": 18,
       "area": "Adidas Arena, Porte de la Chapelle",
       "price": 25,
       "priceNote": "From ~€15",
@@ -311,7 +311,7 @@
         "sport",
         "music"
       ],
-      "arr": 12,
+      "zone": 12,
       "area": "8 boulevard de Bercy",
       "price": 40,
       "priceNote": "Varies wildly by event",
@@ -370,7 +370,7 @@
         "tennis",
         "culture"
       ],
-      "arr": 16,
+      "zone": 16,
       "area": "2 avenue Gordon Bennett, Porte d'Auteuil",
       "price": 35,
       "priceNote": "Qualifying week ~€10–25 · main draw from ~€40",
@@ -436,7 +436,7 @@
         "unusual",
         "outdoor"
       ],
-      "arr": 12,
+      "zone": 12,
       "area": "Hippodrome de Paris-Vincennes",
       "price": 5,
       "priceNote": "~€3–6 entry",
@@ -504,7 +504,7 @@
         "swim",
         "olympic"
       ],
-      "arr": null,
+      "zone": null,
       "area": "Saint-Denis, opposite the Stade de France",
       "price": 6,
       "priceNote": "Public swim from ~€5–8",
@@ -565,7 +565,7 @@
         "outdoor",
         "free"
       ],
-      "arr": 4,
+      "zone": 4,
       "area": "Bras Marie (4th), Bercy (12th), Grenelle (15th)",
       "price": 0,
       "priceNote": "Free",
@@ -635,7 +635,7 @@
         "sport",
         "swim"
       ],
-      "arr": 5,
+      "zone": 5,
       "area": "19 rue de Pontoise",
       "price": 5,
       "priceNote": "~€5 · evening sessions a little more",
@@ -700,7 +700,7 @@
         "sport",
         "learn"
       ],
-      "arr": 11,
+      "zone": 11,
       "area": "Several gyms — Nation, Montreuil, Massy",
       "price": 15,
       "priceNote": "~€13–17 including shoe hire",
@@ -766,7 +766,7 @@
         "tennis",
         "cheap"
       ],
-      "arr": null,
+      "zone": null,
       "area": "Around forty sites across the city",
       "price": 9,
       "priceNote": "~€8–13 an hour off-peak",
@@ -820,7 +820,7 @@
         "outdoor",
         "free"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "Canal Saint-Martin, then up the Ourcq",
       "price": 0,
       "priceNote": "Free",
@@ -914,7 +914,7 @@
         "outdoor",
         "free"
       ],
-      "arr": 19,
+      "zone": 19,
       "area": "Parc des Buttes-Chaumont",
       "price": 0,
       "priceNote": "Free",
@@ -979,7 +979,7 @@
         "outdoor",
         "free"
       ],
-      "arr": 12,
+      "zone": 12,
       "area": "Bois de Vincennes",
       "price": 0,
       "priceNote": "Free",
@@ -1046,7 +1046,7 @@
         "outdoor",
         "free"
       ],
-      "arr": 12,
+      "zone": 12,
       "area": "Coulée verte René-Dumont, Bastille to Vincennes",
       "price": 0,
       "priceNote": "Free",
@@ -1117,7 +1117,7 @@
         "casual"
       ],
       "difficulty": "beginner",
-      "arr": 19,
+      "zone": 19,
       "area": "Stade Jules Ladoumègue, Porte de Pantin",
       "price": 5,
       "priceNote": "~€5 per player per hour — municipal rate",
@@ -1183,7 +1183,7 @@
         "group"
       ],
       "difficulty": "beginner",
-      "arr": null,
+      "zone": null,
       "area": "Eastern Paris — five outdoor courts plus three for pickleball",
       "price": 20,
       "priceNote": "~€15–25 a discovery session · first one often free",
@@ -1241,7 +1241,7 @@
         "try"
       ],
       "difficulty": "beginner",
-      "arr": 15,
+      "zone": 15,
       "area": "Paris Expo, Porte de Versailles · also Mathis (19th) and Croix-Nivert (15th)",
       "price": 9,
       "priceNote": "From ~€8.50",
@@ -1307,7 +1307,7 @@
         "casual"
       ],
       "difficulty": "beginner",
-      "arr": null,
+      "zone": null,
       "area": "Meeting points move — central Paris",
       "price": 0,
       "priceNote": "Free",
@@ -1371,7 +1371,7 @@
         "casual"
       ],
       "difficulty": "beginner",
-      "arr": 14,
+      "zone": 14,
       "area": "Bois de Boulogne and Parc Montsouris",
       "price": 0,
       "priceNote": "Free, forever",
@@ -1442,7 +1442,7 @@
         "casual"
       ],
       "difficulty": "beginner",
-      "arr": 19,
+      "zone": 19,
       "area": "Bassin de la Villette, quai de la Loire",
       "price": 12,
       "priceNote": "~€10–15 an hour",
@@ -1515,7 +1515,7 @@
         "try"
       ],
       "difficulty": "beginner",
-      "arr": 10,
+      "zone": 10,
       "area": "Concrete tables in parks all over the city",
       "price": 0,
       "priceNote": "Free — bring bats and a ball",
@@ -1582,7 +1582,7 @@
         "try"
       ],
       "difficulty": "beginner",
-      "arr": 4,
+      "zone": 4,
       "area": "Voie Georges-Pompidou, right bank",
       "price": 3,
       "priceNote": "~€3 on a Vélib’ day pass",
@@ -1649,7 +1649,7 @@
         "casual"
       ],
       "difficulty": "beginner",
-      "arr": 10,
+      "zone": 10,
       "area": "Place de la République",
       "price": 0,
       "priceNote": "Free",
@@ -1718,7 +1718,7 @@
         "learn"
       ],
       "difficulty": "intermediate",
-      "arr": null,
+      "zone": null,
       "area": "Forest of Fontainebleau — Bas Cuvier, Trois Pignons",
       "price": 25,
       "priceNote": "~€20 return train · mats hire extra",
@@ -1785,7 +1785,7 @@
         "group"
       ],
       "difficulty": "beginner",
-      "arr": 19,
+      "zone": 19,
       "area": "Parks across the city — Buttes-Chaumont, Villette, Bercy",
       "price": 0,
       "priceNote": "Free",
@@ -1855,7 +1855,7 @@
         "casual"
       ],
       "difficulty": "beginner",
-      "arr": null,
+      "zone": null,
       "area": "Pop-up rinks — Hôtel de Ville and around the city",
       "price": 8,
       "priceNote": "~€5–10 including skate hire",
@@ -1914,7 +1914,7 @@
         "citygame"
       ],
       "game": "invaders",
-      "arr": null,
+      "zone": null,
       "area": "All over Paris — densest in the 3rd, 4th, 5th and 13th",
       "price": 0,
       "priceNote": "Free",

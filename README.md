@@ -415,7 +415,7 @@ completion state, and — for the arrondissements — a map. Paris spirals
 outward from the 1st like a snail shell, so the twenty dots are laid out on
 their real relative positions (spread 30% from the centre, or the 1st through
 4th sit on top of each other) with the Seine drawn through. Tapping a dot
-marks it, and because progress for that quest is derived from `Store.arrs()`
+marks it, and because progress for that quest is derived from `Store.zones()`
 rather than a separate list, the map, the ring and the Explore tab can never
 disagree.
 
@@ -476,6 +476,12 @@ forecast's default coordinates, and the 100×100 spiral the quest map is drawn
 on. It loads as the first script tag, because `location.js`, `scoring.js`,
 `weather.js` and `app.js` all read `City` as they evaluate.
 
+Records say `zone`, not `arr`. In Paris a zone is an arrondissement and the
+pack supplies the twenty of them; in Bengaluru it would be a ward and in Delhi
+a colony. Only the pack knows which — the engine treats a zone as an opaque
+key with a centroid, which is why the same shard index, the same nearest-first
+ordering and the same one-per-zone cap work in all four.
+
 The rule it exists to hold is that **the engine never names a city**. Anything
 that needs to know what a neighbourhood is called, how money is written or when
 the shops shut asks the pack. A second city is a second pack, not a second copy
@@ -528,7 +534,7 @@ Add an object to the right file in `data/`. The fields that matter:
 |---|---|
 | `id` | unique, kebab-case |
 | `title`, `emoji`, `why` | `why` is the important one — say why *they* would care, not what it is |
-| `arr`, `area`, `minutesFromHome` | distance is estimated from the Canal Saint-Martin area |
+| `zone`, `area`, `minutesFromHome` | distance is estimated from the Canal Saint-Martin area |
 | `price`, `priceNote` | `price` is a number for ranking; `priceNote` is what gets displayed |
 | `start`, `end` | `YYYY-MM-DD`. Anything with a past `end` is deleted automatically |
 | `days` | `[0-6]`, 0 = Sunday. Omit if it is open every day |

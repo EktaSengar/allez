@@ -9,7 +9,7 @@ const Store = (() => {
   const blank = () => ({
     ratings: {},      // id -> 'loved' | 'good' | 'meh' | 'never' | 'want'
     quests: {},       // questId -> [target strings]
-    arrs: [],         // zones explored — arrondissements here, wards elsewhere
+    zones: [],         // zones explored — arrondissements here, wards elsewhere
     seen: {}          // id -> ISO date first shown as a surprise
   });
 
@@ -17,7 +17,18 @@ const Store = (() => {
 
   try {
     const raw = localStorage.getItem(KEY);
-    if (raw) data = Object.assign(blank(), JSON.parse(raw));
+    if (raw) {
+      const saved = JSON.parse(raw);
+      /* `arrs` was the field before zones had a name that worked outside
+         Paris. Carried over here rather than in keys.js because keys.js
+         renames *keys* and this is a rename *inside* one of them; both
+         only ever run once, against a store written by an older build. */
+      if (Array.isArray(saved.arrs) && !Array.isArray(saved.zones)) {
+        saved.zones = saved.arrs;
+        delete saved.arrs;
+      }
+      data = Object.assign(blank(), saved);
+    }
   } catch (e) {
     // corrupted or unavailable storage — carry on with a blank slate
   }
@@ -74,13 +85,13 @@ const Store = (() => {
     },
 
     /* --- arrondissements --- */
-    arrs: () => data.arrs.slice(),
-    hasArr: n => data.arrs.includes(n),
-    toggleArr(n) {
-      const i = data.arrs.indexOf(n);
-      if (i === -1) data.arrs.push(n); else data.arrs.splice(i, 1);
+    zones: () => data.zones.slice(),
+    hasZone: n => data.zones.includes(n),
+    toggleZone(n) {
+      const i = data.zones.indexOf(n);
+      if (i === -1) data.zones.push(n); else data.zones.splice(i, 1);
       save();
-      return data.arrs.includes(n);
+      return data.zones.includes(n);
     },
 
     /* --- surprise memory --- */

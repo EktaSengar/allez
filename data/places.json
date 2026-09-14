@@ -11,7 +11,7 @@
         "food",
         "bakery"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "34 rue Yves Toudic",
       "price": 5,
       "priceNote": "€2–7",
@@ -55,7 +55,7 @@
         "food",
         "coffee"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "10 rue de la Grange aux Belles",
       "price": 4,
       "priceNote": "€3–6",
@@ -98,7 +98,7 @@
         "food",
         "coffee"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "14 avenue Richerand",
       "durationMin": 30,
       "minutesFromHome": 3,
@@ -135,7 +135,7 @@
         "food",
         "coffee"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "141 avenue Parmentier",
       "durationMin": 30,
       "minutesFromHome": 6,
@@ -168,7 +168,7 @@
         "coffee",
         "brunch"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "rue Lucien Sampaix",
       "price": 18,
       "priceNote": "€12–22",
@@ -210,7 +210,7 @@
         "food",
         "bakery"
       ],
-      "arr": 11,
+      "zone": 11,
       "area": "20 rue Jean-Pierre Timbaud",
       "price": 5,
       "priceNote": "€2–8",
@@ -252,7 +252,7 @@
         "food",
         "bakery"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "32 rue du Château d'Eau",
       "price": 5,
       "priceNote": "€2–8",
@@ -295,7 +295,7 @@
         "coffee",
         "brunch"
       ],
-      "arr": 11,
+      "zone": 11,
       "area": "3 rue Neuve Popincourt",
       "price": 14,
       "priceNote": "€10–18",
@@ -338,7 +338,7 @@
         "coffee",
         "learn"
       ],
-      "arr": 19,
+      "zone": 19,
       "area": "14bis rue Lally-Tollendal",
       "price": 5,
       "priceNote": "€3–6 · tastings vary",
@@ -383,7 +383,7 @@
         "food",
         "coffee"
       ],
-      "arr": 3,
+      "zone": 3,
       "area": "19 rue du Pont aux Choux",
       "price": 4,
       "priceNote": "€3–6",
@@ -427,7 +427,7 @@
         "food",
         "outdoor"
       ],
-      "arr": 12,
+      "zone": 12,
       "area": "Place d'Aligre",
       "price": 0,
       "priceNote": "Free to browse",
@@ -486,7 +486,7 @@
         "market",
         "food"
       ],
-      "arr": 3,
+      "zone": 3,
       "area": "39 rue de Bretagne",
       "price": 15,
       "priceNote": "Lunch €10–18",
@@ -538,7 +538,7 @@
         "market",
         "food"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "85bis boulevard de Magenta",
       "price": 0,
       "priceNote": "Free to browse",
@@ -592,7 +592,7 @@
         "shop",
         "outdoor"
       ],
-      "arr": 14,
+      "zone": 14,
       "area": "Avenue Georges Lafenestre / Marc Sangnier",
       "price": 0,
       "priceNote": "Free to browse",
@@ -647,7 +647,7 @@
         "design",
         "shop"
       ],
-      "arr": null,
+      "zone": null,
       "area": "Saint-Ouen, just north of the 18th",
       "price": 0,
       "priceNote": "Free to browse",
@@ -692,7 +692,7 @@
         "home",
         "shop"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "11 rue du Château d'Eau",
       "price": 0,
       "priceNote": "Free to browse",
@@ -740,7 +740,7 @@
         "shop",
         "art"
       ],
-      "arr": 3,
+      "zone": 3,
       "area": "5 rue de Picardie",
       "price": 0,
       "priceNote": "Free to browse",
@@ -785,7 +785,7 @@
         "home",
         "food"
       ],
-      "arr": 1,
+      "zone": 1,
       "area": "18–20 rue Coquillière",
       "price": 0,
       "priceNote": "Free to browse",
@@ -828,7 +828,7 @@
         "design",
         "books"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "83 quai de Valmy",
       "price": 0,
       "priceNote": "Free to browse",
@@ -871,7 +871,7 @@
         "books",
         "art"
       ],
-      "arr": 3,
+      "zone": 3,
       "area": "20 rue Dupetit-Thouars",
       "price": 0,
       "priceNote": "Free to browse",
@@ -918,7 +918,7 @@
         "plants",
         "home"
       ],
-      "arr": 3,
+      "zone": 3,
       "area": "Rue Notre-Dame de Nazareth",
       "price": 0,
       "priceNote": "Free to browse · terrariums from ~€40",
@@ -962,7 +962,7 @@
         "shop",
         "art"
       ],
-      "arr": 7,
+      "zone": 7,
       "area": "3 quai Voltaire",
       "price": 0,
       "priceNote": "Free to browse",
@@ -1007,7 +1007,7 @@
         "unusual",
         "indoor"
       ],
-      "arr": 3,
+      "zone": 3,
       "area": "62 rue des Archives",
       "price": 12,
       "priceNote": "~€12",
@@ -1056,7 +1056,7 @@
         "indoor",
         "learn"
       ],
-      "arr": 4,
+      "zone": 4,
       "area": "21 boulevard Morland",
       "price": 0,
       "priceNote": "Free, always",
@@ -1103,7 +1103,7 @@
         "free",
         "indoor"
       ],
-      "arr": 3,
+      "zone": 3,
       "area": "23 rue de Sévigné",
       "price": 0,
       "priceNote": "Permanent collection free, every day",
@@ -1150,7 +1150,7 @@
         "free",
         "indoor"
       ],
-      "arr": 8,
+      "zone": 8,
       "area": "Avenue Winston Churchill",
       "price": 0,
       "priceNote": "Permanent collection free, every day",
@@ -1200,7 +1200,7 @@
         "indoor",
         "romantic"
       ],
-      "arr": 9,
+      "zone": 9,
       "area": "16 rue Chaptal",
       "price": 0,
       "priceNote": "Permanent collection free · café paid",
@@ -1248,7 +1248,7 @@
         "unusual",
         "indoor"
       ],
-      "arr": 1,
+      "zone": 1,
       "area": "59 rue de Rivoli",
       "price": 0,
       "priceNote": "Free",
@@ -1294,7 +1294,7 @@
         "free",
         "park"
       ],
-      "arr": 19,
+      "zone": 19,
       "area": "Buttes-Chaumont",
       "price": 0,
       "priceNote": "Free",
@@ -1344,7 +1344,7 @@
         "park",
         "viewpoint"
       ],
-      "arr": 20,
+      "zone": 20,
       "area": "Belleville",
       "price": 0,
       "priceNote": "Free",
@@ -1393,7 +1393,7 @@
         "free",
         "walk"
       ],
-      "arr": 12,
+      "zone": 12,
       "area": "Bastille to Bois de Vincennes",
       "price": 0,
       "priceNote": "Free",
@@ -1446,7 +1446,7 @@
         "walk",
         "unusual"
       ],
-      "arr": 15,
+      "zone": 15,
       "area": "Open sections in the 12th, 14th, 15th, 16th, 19th and 20th",
       "price": 0,
       "priceNote": "Free",
@@ -1497,7 +1497,7 @@
         "architecture",
         "indoor"
       ],
-      "arr": 2,
+      "zone": 2,
       "area": "2nd and 9th — Panoramas, Jouffroy, Verdeau, Vivienne, Grand-Cerf",
       "price": 0,
       "priceNote": "Free",
@@ -1547,7 +1547,7 @@
         "free",
         "unusual"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "46 rue du Faubourg Saint-Denis",
       "price": 12,
       "priceNote": "Lunch menus €10–15",
@@ -1595,7 +1595,7 @@
         "walk",
         "hidden"
       ],
-      "arr": 19,
+      "zone": 19,
       "area": "North-east of Buttes-Chaumont",
       "price": 0,
       "priceNote": "Free",
@@ -1649,7 +1649,7 @@
         "hidden",
         "food"
       ],
-      "arr": 13,
+      "zone": 13,
       "area": "13th arrondissement",
       "price": 0,
       "priceNote": "Free to wander",
@@ -1699,7 +1699,7 @@
         "walk",
         "history"
       ],
-      "arr": 20,
+      "zone": 20,
       "area": "Père-Lachaise",
       "price": 0,
       "priceNote": "Free",
@@ -1745,7 +1745,7 @@
         "free",
         "park"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "14 rue des Récollets",
       "price": 0,
       "priceNote": "Free",
@@ -1792,7 +1792,7 @@
         "food",
         "indoor"
       ],
-      "arr": 4,
+      "zone": 4,
       "area": "80 quai de l'Hôtel de Ville",
       "price": 95,
       "priceNote": "~€75–130 per person",
@@ -1842,7 +1842,7 @@
         "indoor",
         "craft"
       ],
-      "arr": 4,
+      "zone": 4,
       "area": "Marais",
       "price": 100,
       "priceNote": "~€65–150 depending on format",
@@ -1892,7 +1892,7 @@
         "food",
         "indoor"
       ],
-      "arr": 1,
+      "zone": 1,
       "area": "68 rue Jean-Jacques Rousseau",
       "price": 45,
       "priceNote": "~€40–90",
@@ -1942,7 +1942,7 @@
         "design",
         "craft"
       ],
-      "arr": 11,
+      "zone": 11,
       "area": "Several studios in the 11th and 20th",
       "price": 70,
       "priceNote": "~€50–90 for a taster session",
@@ -1991,7 +1991,7 @@
         "culture",
         "indian"
       ],
-      "arr": 18,
+      "zone": 18,
       "area": "Rue Cail, rue Perdonnet, rue Louis-Blanc",
       "price": 12,
       "priceNote": "Lunch €8–15",
@@ -2039,7 +2039,7 @@
         "indoor",
         "indian"
       ],
-      "arr": 16,
+      "zone": 16,
       "area": "6 place d’Iéna",
       "price": 13,
       "priceNote": "~€13 · free on the first Sunday of the month",
@@ -2084,7 +2084,7 @@
         "restaurant",
         "french"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "16 rue du Faubourg Saint-Denis",
       "price": 22,
       "priceNote": "Mains €11–17 · starters from €5",
@@ -2145,7 +2145,7 @@
         "international",
         "cheap"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "58 rue du Faubourg Saint-Denis",
       "price": 9,
       "priceNote": "~€8–10",
@@ -2203,7 +2203,7 @@
         "restaurant",
         "international"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "20 rue Alibert, by the canal",
       "price": 18,
       "priceNote": "~€15–20",
@@ -2261,7 +2261,7 @@
         "restaurant",
         "seafood"
       ],
-      "arr": 11,
+      "zone": 11,
       "area": "80 rue de Charonne",
       "price": 45,
       "priceNote": "Plates €9–22 · no reservations",
@@ -2320,7 +2320,7 @@
         "international",
         "cheap"
       ],
-      "arr": 11,
+      "zone": 11,
       "area": "14 rue Louis Bonnet, Belleville",
       "price": 14,
       "priceNote": "~€10–15",
@@ -2378,7 +2378,7 @@
         "vegetarian",
         "french"
       ],
-      "arr": 3,
+      "zone": 3,
       "area": "24 rue Rambuteau",
       "price": 26,
       "priceNote": "Mains ~€18–24",
@@ -2437,7 +2437,7 @@
         "market",
         "cheap"
       ],
-      "arr": 3,
+      "zone": 3,
       "area": "Marché des Enfants Rouges",
       "price": 12,
       "priceNote": "~€10–13",
@@ -2494,7 +2494,7 @@
         "food",
         "bakery"
       ],
-      "arr": 10,
+      "zone": 10,
       "area": "6 rue de Belzunce",
       "price": 6,
       "priceNote": "€2–8",
@@ -2554,7 +2554,7 @@
         "food",
         "indoor"
       ],
-      "arr": 5,
+      "zone": 5,
       "area": "59 rue Cardinal Lemoine",
       "durationMin": 270,
       "transit": "M10 to Cardinal Lemoine — the street is the address",
@@ -2596,7 +2596,7 @@
         "food",
         "indoor"
       ],
-      "arr": 18,
+      "zone": 18,
       "area": "6 rue Baudelique",
       "durationMin": 180,
       "transit": "M4 to Simplon — north Montmartre, not the tourist side",
@@ -2638,7 +2638,7 @@
         "food",
         "indoor"
       ],
-      "arr": 15,
+      "zone": 15,
       "area": "13–15 quai André Citroën",
       "durationMin": 180,
       "transit": "RER C to Javel, or M10 to Javel — on the river, west",
@@ -2681,7 +2681,7 @@
         "comedy",
         "indoor"
       ],
-      "arr": 2,
+      "zone": 2,
       "area": "92 rue de Cléry",
       "durationMin": 150,
       "transit": "M3 to Sentier — ten minutes down from the canal",
@@ -2723,7 +2723,7 @@
         "theatre",
         "indoor"
       ],
-      "arr": 13,
+      "zone": 13,
       "area": "7 rue des Cordelières",
       "days": [
         2,
@@ -2772,7 +2772,7 @@
         "singing",
         "indoor"
       ],
-      "arr": 8,
+      "zone": 8,
       "area": "23 avenue George V",
       "days": [
         1

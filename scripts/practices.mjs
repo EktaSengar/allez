@@ -76,7 +76,7 @@ const UNTIL = new Date(Date.now() + DAYS * 86400000).toISOString().slice(0, 10);
 
 const strip = s => (s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 
-const ARR = {
+const ZONE = {
   1:[48.8626,2.3363],  2:[48.8683,2.3413],  3:[48.8637,2.3615],  4:[48.8546,2.3572],
   5:[48.8448,2.3501],  6:[48.8496,2.3329],  7:[48.8565,2.3120],  8:[48.8726,2.3120],
   9:[48.8768,2.3374],  10:[48.8760,2.3595], 11:[48.8578,2.3792], 12:[48.8351,2.4212],
@@ -89,7 +89,7 @@ const ARR = {
    you register but the pin is always there. */
 const nearestArr = (lat, lon) => {
   let best = null, bestD = Infinity;
-  for (const [a, [y, x]] of Object.entries(ARR)) {
+  for (const [a, [y, x]] of Object.entries(ZONE)) {
     const d = (y - lat) ** 2 + (x - lon) ** 2;
     if (d < bestD) { bestD = d; best = Number(a); }
   }
@@ -185,7 +185,7 @@ const PER_VENUE = 1;
 
 const tagsOf = e => (e.qfap_tags || '').split(';').map(s => s.trim()).filter(Boolean);
 
-const arrOf = e => {
+const zoneOf = e => {
   const z = (e.address_zipcode || '').replace(/\s/g, '');
   return /^75\d{3}$/.test(z) ? Number(z.slice(3)) || null : null;
 };
@@ -306,7 +306,7 @@ function cityRecords(raw, log) {
 
   let kept = step('has coordinates and an official link',
     raw.filter(e => e.lat_lon?.lat && e.url));
-  kept = step('inside Paris', kept.filter(e => arrOf(e)));
+  kept = step('inside Paris', kept.filter(e => zoneOf(e)));
   kept = step('not the municipal notice board',
     kept.filter(e => !tagsOf(e).some(t => NOT_FOR_US.has(t))));
   kept = step('for adults, not for families',
@@ -350,7 +350,7 @@ function cityRecords(raw, log) {
       type: 'class',
       mode: 'do',
       categories: [...new Set([category, 'learn'])],
-      arr: arrOf(e),
+      zone: zoneOf(e),
       area: strip(e.address_name).slice(0, 80) || null,
       coords: [e.lat_lon.lat, e.lat_lon.lon],
       start: (e.date_start || '').slice(0, 10),
@@ -511,7 +511,7 @@ async function lumaRecords(log) {
       const address = /luma\.com|lu\.ma/.test(e.loc || '')
         ? parts.address : (strip(e.loc) || parts.address);
       const zip = `${e.loc || ''} ${parts.address || ''}`.match(/\b75(\d{3})\b/);
-      const arr = (zip && Number(zip[1])) || nearestArr(lat, lon);
+      const zone = (zip && Number(zip[1])) || nearestArr(lat, lon);
 
       out.push({
         id,
@@ -520,7 +520,7 @@ async function lumaRecords(log) {
         type: 'event',
         mode: 'do',
         categories: ['tech', 'learn'],
-        arr,
+        zone,
         area: (address || '').slice(0, 80) || null,
         coords: [lat, lon],
         start,
@@ -563,7 +563,7 @@ async function run() {
   const luma = await lumaRecords(lumaLog);
   lumaLog.forEach(([n, label]) => console.log(`  ${String(n).padStart(5)}  ${label}`));
 
-  const items = [...city, ...luma].filter(r => r.start && r.title && r.arr);
+  const items = [...city, ...luma].filter(r => r.start && r.title && r.zone);
 
   /* Writing an empty file is the one outcome worse than writing nothing:
      the previous run's records are real and still valid, and a network
@@ -574,7 +574,7 @@ async function run() {
   }
 
   const spread = {};
-  items.forEach(r => { spread[r.arr] = (spread[r.arr] || 0) + 1; });
+  items.forEach(r => { spread[r.zone] = (spread[r.zone] || 0) + 1; });
   console.log(`\n  ${items.length} kept · ${city.length} city · ${luma.length} luma · ` +
               `${Object.keys(spread).length}/20 arrondissements`);
   console.log('  per arrondissement:', Object.entries(spread)
@@ -583,7 +583,7 @@ async function run() {
   if (DRY) {
     console.log('\n  sample:');
     items.slice(0, 12).forEach(r =>
-      console.log(`   • ${r.emoji} ${r.title.slice(0, 60)}\n     ${r.arr}e · ${r.why.slice(0, 70)}`));
+      console.log(`   • ${r.emoji} ${r.title.slice(0, 60)}\n     ${r.zone}e · ${r.why.slice(0, 70)}`));
     console.log('\n  --dry, nothing written\n');
     return;
   }

@@ -1,13 +1,13 @@
 {
   "generated": "2026-08-13",
   "home": {
-    "arr": 10,
+    "zone": 10,
     "label": "Canal Saint-Martin / République / Goncourt"
   },
   "note": "One profile per arrondissement. `minutesFromHome` is an estimate from République. Mark them explored on the site as you go.",
   "items": [
     {
-      "arr": 1,
+      "zone": 1,
       "name": "Louvre · Palais-Royal",
       "minutesFromHome": 20,
       "famousFor": "The Louvre, the Palais-Royal gardens, and the oldest part of the city",
@@ -26,7 +26,7 @@
       "hidden": "The Square du Vert-Galant at the very tip of the island — best free sunset bench in Paris"
     },
     {
-      "arr": 2,
+      "zone": 2,
       "name": "Bourse · Sentier",
       "minutesFromHome": 15,
       "famousFor": "The covered passages and the old textile district",
@@ -45,7 +45,7 @@
       "hidden": "Stamp and old-postcard dealers still trading in Passage des Panoramas"
     },
     {
-      "arr": 3,
+      "zone": 3,
       "name": "Haut Marais",
       "minutesFromHome": 15,
       "famousFor": "Design shops, small museums and the best independent retail in Paris",
@@ -64,7 +64,7 @@
       "hidden": "Passage de l'Ancre, a private flowered lane behind an unmarked door on rue de Turbigo"
     },
     {
-      "arr": 4,
+      "zone": 4,
       "name": "Marais · Île Saint-Louis",
       "minutesFromHome": 20,
       "famousFor": "Place des Vosges, the Jewish quarter, and the islands",
@@ -83,7 +83,7 @@
       "hidden": "Village Saint-Paul: five linked courtyards of antique dealers most people walk past"
     },
     {
-      "arr": 5,
+      "zone": 5,
       "name": "Latin Quarter",
       "minutesFromHome": 25,
       "famousFor": "The Sorbonne, bookshops and the oldest streets in the city",
@@ -102,7 +102,7 @@
       "hidden": "Arènes de Lutèce — a 1st-century Roman arena hidden behind flats, free, usually empty"
     },
     {
-      "arr": 6,
+      "zone": 6,
       "name": "Saint-Germain-des-Prés",
       "minutesFromHome": 28,
       "famousFor": "Literary cafés, galleries and the Luxembourg gardens",
@@ -121,7 +121,7 @@
       "hidden": "Cour du Commerce Saint-André, a covered 18th-century lane off boulevard Saint-Germain"
     },
     {
-      "arr": 7,
+      "zone": 7,
       "name": "Invalides · Eiffel",
       "minutesFromHome": 32,
       "famousFor": "The Eiffel Tower, Musée d'Orsay and Rodin",
@@ -140,7 +140,7 @@
       "hidden": "The Quai Branly garden — free to enter, a wild meadow at the foot of a Jean Nouvel building"
     },
     {
-      "arr": 8,
+      "zone": 8,
       "name": "Champs-Élysées · Monceau",
       "minutesFromHome": 28,
       "famousFor": "Grand and Petit Palais, luxury shopping, grand boulevards",
@@ -158,7 +158,7 @@
       "hidden": "Chapelle Expiatoire, a neoclassical chapel on the mass grave of the guillotined, hidden in a square"
     },
     {
-      "arr": 9,
+      "zone": 9,
       "name": "SoPi · Pigalle",
       "minutesFromHome": 18,
       "famousFor": "Nightlife, the Grands Boulevards theatres, and the romantic quarter",
@@ -177,7 +177,7 @@
       "hidden": "Cité Malesherbes and the painted-tile facade at number 11"
     },
     {
-      "arr": 10,
+      "zone": 10,
       "name": "Canal Saint-Martin · République",
       "minutesFromHome": 0,
       "isHome": true,
@@ -198,7 +198,7 @@
       "hidden": "It sits on top of the best day-trip infrastructure in France: Gare du Nord and Gare de l'Est are both inside it. Chantilly in 25 minutes, Reims and champagne in 45."
     },
     {
-      "arr": 11,
+      "zone": 11,
       "name": "Oberkampf · Bastille",
       "minutesFromHome": 12,
       "famousFor": "The best eating and drinking in Paris right now",
@@ -217,7 +217,7 @@
       "hidden": "Cour Damoye, a cobbled private courtyard opening straight off Place de la Bastille"
     },
     {
-      "arr": 12,
+      "zone": 12,
       "name": "Bastille · Bercy",
       "minutesFromHome": 22,
       "famousFor": "The Coulée verte, Aligre market and the Bois de Vincennes",
@@ -236,7 +236,7 @@
       "hidden": "Rue Crémieux, a single street of pastel houses — visit quietly, people live there"
     },
     {
-      "arr": 13,
+      "zone": 13,
       "name": "Butte-aux-Cailles · Chinatown",
       "minutesFromHome": 30,
       "famousFor": "Street art, the biggest Asian quarter in Paris, and a hilltop village",
@@ -255,7 +255,7 @@
       "hidden": "La Cité Florale, five tiny streets named after flowers, all cottages and hollyhocks"
     },
     {
-      "arr": 14,
+      "zone": 14,
       "name": "Montparnasse · Denfert",
       "minutesFromHome": 30,
       "famousFor": "The catacombs, artists' studios and the Vanves flea market",
@@ -274,7 +274,7 @@
       "hidden": "Puces de Vanves flea market, Saturday and Sunday mornings only, finished by 14:00"
     },
     {
-      "arr": 15,
+      "zone": 15,
       "name": "Vaugirard · Beaugrenelle",
       "minutesFromHome": 35,
       "famousFor": "Being the biggest arrondissement and the one visitors never see",
@@ -292,7 +292,7 @@
       "hidden": "La Ruche, a circular artists' residence where Chagall, Modigliani and Soutine worked"
     },
     {
-      "arr": 16,
+      "zone": 16,
       "name": "Passy · Trocadéro",
       "minutesFromHome": 32,
       "famousFor": "Grand residential streets, museums and modernist architecture",
@@ -311,7 +311,7 @@
       "hidden": "Villa La Roche, a Le Corbusier house you can walk through for a few euros"
     },
     {
-      "arr": 17,
+      "zone": 17,
       "name": "Batignolles",
       "minutesFromHome": 22,
       "famousFor": "A village square, a new park, and the quiet good life",
@@ -330,7 +330,7 @@
       "hidden": "Cité des Fleurs, a private lane of 19th-century houses and gardens off avenue de Clichy"
     },
     {
-      "arr": 18,
+      "zone": 18,
       "name": "Montmartre · Barbès",
       "minutesFromHome": 20,
       "famousFor": "Sacré-Cœur, the last vineyard in Paris, and a very mixed north",
@@ -349,7 +349,7 @@
       "hidden": "The north slope: rue Saint-Vincent, the vineyard and the Musée de Montmartre gardens, with a fraction of the crowd of the south side"
     },
     {
-      "arr": 19,
+      "zone": 19,
       "name": "Buttes-Chaumont · La Villette",
       "minutesFromHome": 15,
       "famousFor": "Your best neighbouring arrondissement — parks, canals and cheap culture",
@@ -368,7 +368,7 @@
       "hidden": "Rue de Mouzaïa's private villas — Villa de Bellevue, Villa des Lilas — open to walk through"
     },
     {
-      "arr": 20,
+      "zone": 20,
       "name": "Belleville · Ménilmontant",
       "minutesFromHome": 18,
       "famousFor": "Street art, immigrant food, artists' studios and the best sunset in Paris",

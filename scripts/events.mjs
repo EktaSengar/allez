@@ -123,7 +123,7 @@ const forChildrenOnly = e => {
 
 const tagsOf = e => (e.qfap_tags || '').split(';').map(s => s.trim()).filter(Boolean);
 const strip  = s => (s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
-const arrOf  = e => {
+const zoneOf  = e => {
   const z = (e.address_zipcode || '').replace(/\s/g, '');
   return /^75\d{3}$/.test(z) ? Number(z.slice(3)) || null : null;
 };
@@ -163,7 +163,7 @@ function toRecord(e) {
     emoji: pick(EMOJI) || '🎫',
     type: 'event',
     categories: [...new Set(tags.map(t => (CATEGORY.find(([x]) => x === t) || [])[1]).filter(Boolean))],
-    arr: arrOf(e),
+    zone: zoneOf(e),
     area: strip(e.address_name).slice(0, 80) || null,
     coords: [e.lat_lon.lat, e.lat_lon.lon],
     start: (e.date_start || '').slice(0, 10),
@@ -208,7 +208,7 @@ async function run() {
 
   let kept = step('has coordinates and an official link',
     raw.filter(e => e.lat_lon?.lat && e.url));
-  kept = step('inside Paris', kept.filter(e => arrOf(e)));
+  kept = step('inside Paris', kept.filter(e => zoneOf(e)));
   kept = step('filed under something', kept.filter(e => tagsOf(e).length));
   kept = step('not the municipal notice board',
     kept.filter(e => !tagsOf(e).some(t => NOT_FOR_US.has(t))));
@@ -233,7 +233,7 @@ async function run() {
   steps.forEach(([label, n]) => console.log(`  ${String(n).padStart(5)}  ${label}`));
 
   const spread = {};
-  items.forEach(r => { spread[r.arr] = (spread[r.arr] || 0) + 1; });
+  items.forEach(r => { spread[r.zone] = (spread[r.zone] || 0) + 1; });
   const free = items.filter(r => r.price === 0).length;
   console.log(`\n  ${items.length} kept · ${free} free · ${Object.keys(spread).length}/20 arrondissements`);
   console.log('  per arrondissement:', Object.entries(spread)

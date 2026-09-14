@@ -41,7 +41,7 @@ const AUDIT = has('--audit');
 
 /* Rough centroids of the twenty arrondissements. Good enough to estimate a
    journey; not a routing engine, and the script says so. */
-const ARR = {
+const ZONE = {
   1:[48.8626,2.3363],  2:[48.8683,2.3413],  3:[48.8637,2.3615],  4:[48.8546,2.3572],
   5:[48.8448,2.3501],  6:[48.8496,2.3329],  7:[48.8565,2.3120],  8:[48.8726,2.3120],
   9:[48.8768,2.3374],  10:[48.8760,2.3595], 11:[48.8578,2.3792], 12:[48.8351,2.4212],
@@ -90,12 +90,12 @@ async function geocode(q) {
   if (!res.ok) throw new Error(`geocoder returned ${res.status}`);
   const [hit] = await res.json();
   if (!hit) throw new Error(`could not find "${q}"`);
-  const arr = Number((hit.address?.postcode || '').slice(-2)) || null;
+  const zone = Number((hit.address?.postcode || '').slice(-2)) || null;
   return {
     label: (hit.display_name || q).split(',').slice(0, 2).join(',').trim(),
     lat: +(+hit.lat).toFixed(4),
     lon: +(+hit.lon).toFixed(4),
-    arr: arr && arr >= 1 && arr <= 20 ? arr : null,
+    zone: zone && zone >= 1 && zone <= 20 ? zone : null,
     city: hit.address?.city || hit.address?.town || 'Paris'
   };
 }
@@ -116,7 +116,7 @@ async function run() {
       const fields = ['why', 'transit', 'area', 'brief', 'note'];
       for (const f of fields) {
         if (typeof item[f] === 'string' && PROSE.test(item[f])) {
-          prose.push(`${file} · ${item.id || item.arr} · ${f}`);
+          prose.push(`${file} · ${item.id || item.zone} · ${f}`);
         }
       }
       for (const p of (item.pairings || [])) {
@@ -141,7 +141,7 @@ async function run() {
   console.log(`\nGeocoding "${WHERE}"…`);
   const to = await geocode(WHERE);
   const dest = [to.lat, to.lon];
-  console.log(`  → ${to.label} (${to.lat}, ${to.lon})${to.arr ? ` · ${to.arr}e` : ''}`);
+  console.log(`  → ${to.label} (${to.lat}, ${to.lon})${to.zone ? ` · ${to.zone}e` : ''}`);
   console.log(`  moved ${km(origin, dest).toFixed(1)} km from ${home.label}\n`);
 
   let changed = 0, skipped = 0;
@@ -150,9 +150,9 @@ async function run() {
   for (const file of FILES.filter(f => f !== 'neighborhoods.json')) {
     const doc = await load(file);
     for (const item of (doc.items || [])) {
-      if (!item.arr || !ARR[item.arr]) { skipped++; continue; }   // outside Paris — needs a human
+      if (!item.zone || !ZONE[item.zone]) { skipped++; continue; }   // outside Paris — needs a human
       const was = item.minutesFromHome;
-      const now = minutes(dest, ARR[item.arr]);
+      const now = minutes(dest, ZONE[item.zone]);
       if (was !== now) { deltas.push([item.id, was, now]); changed++; }
       if (!DRY) item.minutesFromHome = now;
     }
@@ -162,16 +162,16 @@ async function run() {
   /* neighbourhood profiles carry their own distance */
   const hoods = await load('neighborhoods.json');
   for (const h of hoods.items || []) {
-    if (!ARR[h.arr]) continue;
-    h.minutesFromHome = h.arr === to.arr ? 0 : minutes(dest, ARR[h.arr]);
-    h.isHome = h.arr === to.arr;
+    if (!ZONE[h.zone]) continue;
+    h.minutesFromHome = h.zone === to.zone ? 0 : minutes(dest, ZONE[h.zone]);
+    h.isHome = h.zone === to.zone;
   }
   if (!DRY) {
-    hoods.home = { arr: to.arr, label: to.label };
+    hoods.home = { zone: to.zone, label: to.label };
     await fs.writeFile(path.join(DATA, 'neighborhoods.json'), JSON.stringify(hoods, null, 2) + '\n', 'utf8');
     await fs.writeFile(path.join(DATA, 'home.json'), JSON.stringify({
-      ...home, label: to.label, city: to.city, arr: to.arr, lat: to.lat, lon: to.lon,
-      blurb: to.arr ? `${to.arr}ᵉ · ${to.label}` : to.label
+      ...home, label: to.label, city: to.city, zone: to.zone, lat: to.lat, lon: to.lon,
+      blurb: to.zone ? `${to.zone}ᵉ · ${to.label}` : to.label
     }, null, 2) + '\n', 'utf8');
   }
 

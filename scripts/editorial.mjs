@@ -7,7 +7,7 @@
    that do not exist. So the file carries neither. Each record says only
    which place it is talking about —
 
-       "match": { "name": "Ten Belles", "arr": 10, "type": "cafe" }
+       "match": { "name": "Ten Belles", "zone": 10, "type": "cafe" }
 
    — and this fills in the id, the coordinates and the official link from
    the discovery index. A record that matches nothing is reported and
@@ -44,7 +44,7 @@ const compactId = Rec.compactId;
    to match a different shop. */
 function findPlace(pool, m) {
   const want = flat(m.name);
-  const inArr = pool.filter(p => (m.arr == null || p.a === m.arr) &&
+  const inArr = pool.filter(p => (m.zone == null || p.a === m.zone) &&
                                  (m.type == null || p.c === m.type));
   const exact = inArr.find(p => flat(p.n) === want);
   if (exact) return exact;
@@ -71,7 +71,7 @@ async function run() {
   const items = doc.items.map(rec => {
     if (!rec.match) { missed.push(`${rec.title || rec.id || '?'} — no "match" block`); return rec; }
     const hit = findPlace(pool, rec.match);
-    if (!hit) { missed.push(`${rec.match.name} (${rec.match.arr}e ${rec.match.type || ''})`); return null; }
+    if (!hit) { missed.push(`${rec.match.name} (${rec.match.zone}e ${rec.match.type || ''})`); return null; }
     resolved++;
 
     /* Hand-written fields win; the machine only fills in what it knows. */
@@ -80,7 +80,7 @@ async function run() {
       id: compactId(hit),
       title: hit.n,
       type: hit.c,
-      arr: hit.a,
+      zone: hit.a,
       coords: [hit.lat, hit.lon],
       area: hit.s || null,
       url: hit.w || null,
@@ -92,7 +92,7 @@ async function run() {
   }).filter(Boolean);
 
   const byArr = {}, byType = {};
-  items.forEach(i => { byArr[i.arr] = (byArr[i.arr] || 0) + 1; byType[i.type] = (byType[i.type] || 0) + 1; });
+  items.forEach(i => { byArr[i.zone] = (byArr[i.zone] || 0) + 1; byType[i.type] = (byType[i.type] || 0) + 1; });
 
   console.log(`\n  ${resolved} of ${doc.items.length} resolved against the discovery index`);
   if (Object.keys(byType).length) console.log('  by kind:', Object.entries(byType).map(([k, n]) => `${k}:${n}`).join(' '));

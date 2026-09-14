@@ -12,7 +12,7 @@
         "walk",
         "shop"
       ],
-      "arr": 10,
+      "zone": 10,
       "price": 15,
       "priceNote": "~€15 each",
       "durationMin": 180,
@@ -84,7 +84,7 @@
         "shop",
         "indoor"
       ],
-      "arr": 2,
+      "zone": 2,
       "price": 10,
       "priceNote": "Free, plus whatever you drink",
       "durationMin": 210,
@@ -161,7 +161,7 @@
         "walk",
         "outdoors"
       ],
-      "arr": 12,
+      "zone": 12,
       "price": 20,
       "priceNote": "~€20 for a very good picnic for two",
       "durationMin": 300,
@@ -244,7 +244,7 @@
         "food",
         "evening"
       ],
-      "arr": 20,
+      "zone": 20,
       "price": 25,
       "priceNote": "A bottle from a caviste + cheap dinner",
       "durationMin": 180,
@@ -314,7 +314,7 @@
         "food",
         "explore"
       ],
-      "arr": 13,
+      "zone": 13,
       "price": 15,
       "priceNote": "~€15 including the pool",
       "durationMin": 330,
@@ -391,7 +391,7 @@
         "outdoors",
         "film"
       ],
-      "arr": 19,
+      "zone": 19,
       "price": 18,
       "priceNote": "Exhibition ~€18 · everything else free",
       "durationMin": 420,
@@ -466,7 +466,7 @@
         "outdoors",
         "hidden"
       ],
-      "arr": 19,
+      "zone": 19,
       "price": 0,
       "priceNote": "Free",
       "durationMin": 210,
@@ -538,7 +538,7 @@
         "design",
         "home"
       ],
-      "arr": 3,
+      "zone": 3,
       "price": 0,
       "priceNote": "Free to browse, dangerous to your wallet",
       "durationMin": 240,
@@ -612,7 +612,7 @@
         "shop",
         "vintage"
       ],
-      "arr": 14,
+      "zone": 14,
       "price": 30,
       "priceNote": "Bring cash — €30 goes a long way",
       "durationMin": 270,
@@ -684,7 +684,7 @@
         "music",
         "evening"
       ],
-      "arr": 10,
+      "zone": 10,
       "price": 45,
       "priceNote": "~€45 each, all in",
       "durationMin": 300,
@@ -760,7 +760,7 @@
         "jazz",
         "evening"
       ],
-      "arr": 1,
+      "zone": 1,
       "price": 45,
       "priceNote": "~€30 a set, plus drinks",
       "durationMin": 240,

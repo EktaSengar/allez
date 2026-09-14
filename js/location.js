@@ -26,8 +26,8 @@ const Loc = (() => {
      cities/paris/city.js, which also keeps the explanation of why these
      are not the geometric centroids the city publishes. Aliased to the
      old names because everything below reads them that way. */
-  const ARR = City.zone.centroids;
-  const ARR_NAMES = City.zone.names;
+  const ZONE = City.zone.centroids;
+  const ZONE_NAMES = City.zone.names;
 
   let state = { home: null, exploring: null, recents: [] };
 
@@ -37,10 +37,24 @@ const Loc = (() => {
     try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
   }
 
+  /* A saved place used to carry `arr`. Same one-time carry-over as the
+     store's, and for the same reason: what is on disk was written by a
+     build that had only ever heard of arrondissements. */
+  function renameZone(loc) {
+    if (loc && loc.arr !== undefined && loc.zone === undefined) {
+      loc.zone = loc.arr;
+      delete loc.arr;
+    }
+    return loc;
+  }
+
   function boot(defaultHome) {
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) state = Object.assign({ home: null, exploring: null, recents: [] }, JSON.parse(raw));
+      renameZone(state.home);
+      renameZone(state.exploring);
+      (state.recents || []).forEach(renameZone);
     } catch (e) {}
     if (!state.home) state.home = defaultHome;
     return active();
@@ -90,13 +104,13 @@ const Loc = (() => {
      its arrondissement, otherwise whatever was hand-written. */
   function minutesTo(item) {
     if (item.coords) return minutes(item.coords);
-    if (item.arr && ARR[item.arr]) return minutes(ARR[item.arr]);
+    if (item.zone && ZONE[item.zone]) return minutes(ZONE[item.zone]);
     return item.minutesFromHome ?? null;
   }
 
   const kmTo = item => {
     const a = active();
-    const c = item.coords || (item.arr && ARR[item.arr]);
+    const c = item.coords || (item.zone && ZONE[item.zone]);
     return (a && c) ? km([a.lat, a.lon], c) : Infinity;
   };
 
@@ -106,27 +120,27 @@ const Loc = (() => {
      enough to be useful and vague enough to be nobody's business. */
   function displayName(loc) {
     if (!loc) return 'Paris';
-    if (loc.arr) return `${City.zone.ordinal(loc.arr)} · ${ARR_NAMES[loc.arr] || City.zone.fallback}`;
+    if (loc.zone) return `${City.zone.ordinal(loc.zone)} · ${ZONE_NAMES[loc.zone] || City.zone.fallback}`;
     return loc.area || loc.label || 'Paris';
   }
 
-  const arrName = n => ARR_NAMES[n] || City.zone.ordinal(n);
-  const arrCoords = n => ARR[n];
-  const presets = () => Object.keys(ARR).map(Number)
-    .map(n => ({ arr: n, name: ARR_NAMES[n] }));
+  const zoneName = n => ZONE_NAMES[n] || City.zone.ordinal(n);
+  const zoneCoords = n => ZONE[n];
+  const presets = () => Object.keys(ZONE).map(Number)
+    .map(n => ({ zone: n, name: ZONE_NAMES[n] }));
 
   /* ---------- finding a place ---------- */
 
   function fromAddress(hit) {
     const a = hit.address || {};
     const post = String(a.postcode || '');
-    let arr = null;
-    if (/^75\d{3}$/.test(post)) arr = Number(post.slice(3));       // 75005 → 5
-    if (!(arr >= 1 && arr <= 20)) arr = null;
+    let zone = null;
+    if (/^75\d{3}$/.test(post)) zone = Number(post.slice(3));       // 75005 → 5
+    if (!(zone >= 1 && zone <= 20)) zone = null;
     return {
       lat: +(+hit.lat).toFixed(5),
       lon: +(+hit.lon).toFixed(5),
-      arr,
+      zone,
       // a quarter or suburb if OSM knows one — never the house number
       area: a.suburb || a.quarter || a.neighbourhood || a.city_district || null,
       label: (hit.display_name || '').split(',')[0],
@@ -157,14 +171,14 @@ const Loc = (() => {
       const res = await fetch(url, { headers: { 'accept-language': 'en' } });
       if (res.ok) return fromAddress(await res.json());
     } catch (e) {}
-    return { lat: +lat.toFixed(5), lon: +lon.toFixed(5), arr: null, area: 'Where you are', label: 'Current location' };
+    return { lat: +lat.toFixed(5), lon: +lon.toFixed(5), zone: null, area: 'Where you are', label: 'Current location' };
   }
 
-  const fromArr = n => ({ lat: ARR[n][0], lon: ARR[n][1], arr: n, area: ARR_NAMES[n], label: ARR_NAMES[n] });
+  const fromZone = n => ({ lat: ZONE[n][0], lon: ZONE[n][1], zone: n, area: ZONE_NAMES[n], label: ZONE_NAMES[n] });
 
   return {
     boot, save, active, home, isExploring, setHome, explore, resetToHome, recents,
-    minutes, minutesTo, kmTo, km, displayName, arrName, arrCoords, presets,
-    search, locate, fromArr, ARR_NAMES
+    minutes, minutesTo, kmTo, km, displayName, zoneName, zoneCoords, presets,
+    search, locate, fromZone, ZONE_NAMES
   };
 })();

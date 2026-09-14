@@ -491,7 +491,7 @@ const Near = (() => {
     const perArr = new Set();
     const out = [];
     for (const i of ranked) {
-      const key = i.arr ?? `x${out.length}`;      // no arrondissement — never collides
+      const key = i.zone ?? `x${out.length}`;      // no arrondissement — never collides
       if (perArr.has(key)) continue;
       perArr.add(key);
       out.push(i);
@@ -511,8 +511,8 @@ const Near = (() => {
      every curated record NaN. The dossier ordered itself arbitrarily and
      nothing said so, which is the argument for there being one ladder
      and one way to read it. */
-  function inArr(arr, match, limit = 6) {
-    const ok = i => i.arr === arr && match(i);
+  function inArr(zone, match, limit = 6) {
+    const ok = i => i.zone === zone && match(i);
     const worth = i => (i.quality || 3) * 2.2 + (i.uniqueness || 3) * 2.0
       + (AUTHORITY[tierOf(i)] ?? 0) - chainPenalty(i);
     return dedupe(CURATED.filter(ok).concat(FOUND.filter(ok))

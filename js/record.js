@@ -228,7 +228,7 @@ const Rec = (() => {
       id: compactId(p),
       title: p.n,
       type: p.c,
-      arr: p.a,
+      zone: p.a,
       coords: [p.lat, p.lon],
       area: p.s || null,
       url: p.w || null,

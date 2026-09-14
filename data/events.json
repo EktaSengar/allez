@@ -16,7 +16,7 @@
         "free",
         "unusual"
       ],
-      "arr": 1,
+      "zone": 1,
       "area": "Jardin des Tuileries",
       "price": 0,
       "priceNote": "Free",
@@ -84,7 +84,7 @@
         "culture",
         "indoor"
       ],
-      "arr": 1,
+      "zone": 1,
       "area": "Jeu de Paume, Jardin des Tuileries",
       "price": 12,
       "priceNote": "~€12",
@@ -134,7 +134,7 @@
         "culture",
         "indoor"
       ],
-      "arr": 7,
+      "zone": 7,
       "area": "Musée Maillol",
       "price": 16,
       "priceNote": "~€16",
@@ -181,7 +181,7 @@
         "culture",
         "indoor"
       ],
-      "arr": 7,
+      "zone": 7,
       "area": "Musée du Quai Branly – Jacques Chirac",
       "price": 14,
       "priceNote": "~€14",
@@ -227,7 +227,7 @@
         "outdoor",
         "culture"
       ],
-      "arr": 16,
+      "zone": 16,
       "area": "Pré Catelan, Bois de Boulogne",
       "price": 15,
       "priceNote": "Free to €25 depending on the show",
@@ -278,7 +278,7 @@
         "free",
         "unusual"
       ],
-      "arr": null,
+      "zone": null,
       "area": "All of Paris and Île-de-France",
       "price": 0,
       "priceNote": "Free — but the good sites need booking",
@@ -327,7 +327,7 @@
         "free",
         "outdoor"
       ],
-      "arr": null,
+      "zone": null,
       "area": "Through the streets of Paris",
       "price": 0,
       "priceNote": "Free",
@@ -373,7 +373,7 @@
         "nightlife",
         "music"
       ],
-      "arr": 18,
+      "zone": 18,
       "area": "La Cigale, boulevard de Rochechouart",
       "price": 40,
       "priceNote": "~€35–45",
@@ -424,7 +424,7 @@
         "music",
         "dance"
       ],
-      "arr": 18,
+      "zone": 18,
       "area": "La Cigale, boulevard de Rochechouart",
       "price": 40,
       "priceNote": "~€35–45",
@@ -475,7 +475,7 @@
         "outdoor",
         "unusual"
       ],
-      "arr": 16,
+      "zone": 16,
       "area": "Hippodrome ParisLongchamp",
       "price": 25,
       "priceNote": "From ~€12 in advance",
@@ -528,7 +528,7 @@
         "running",
         "outdoor"
       ],
-      "arr": 7,
+      "zone": 7,
       "area": "Start and finish at the Eiffel Tower",
       "price": 45,
       "priceNote": "~€40–50 entry",
@@ -582,7 +582,7 @@
         "sport",
         "tennis"
       ],
-      "arr": null,
+      "zone": null,
       "area": "Paris La Défense Arena, Nanterre",
       "price": 55,
       "priceNote": "From ~€30 early rounds",
@@ -628,7 +628,7 @@
       "intent": [
         "watch"
       ],
-      "arr": 12,
+      "zone": 12,
       "area": "Accor Arena, Bercy",
       "price": 30,
       "priceNote": "From ~€20",
@@ -694,7 +694,7 @@
         "watch",
         "compete"
       ],
-      "arr": 8,
+      "zone": 8,
       "area": "Champs-Élysées start · Avenue Foch finish",
       "price": 0,
       "priceNote": "Free to watch · ~€120 to run",
@@ -768,7 +768,7 @@
       "intent": [
         "watch"
       ],
-      "arr": 1,
+      "zone": 1,
       "area": "Champs-Élysées and the Montmartre climb",
       "price": 0,
       "priceNote": "Free",

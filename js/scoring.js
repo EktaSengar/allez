@@ -176,7 +176,7 @@ const Rank = (() => {
     if ((item.goodFor || []).includes('couple')) s += 2;
 
     // somewhere you have not been — your own arrondissement is not "new"
-    if (item.arr && !exploredArrs.includes(item.arr) && item.arr !== homeArr) s += 3;
+    if (item.zone && !exploredArrs.includes(item.zone) && item.zone !== homeArr) s += 3;
 
     // learned taste
     let tasteBump = 0;
