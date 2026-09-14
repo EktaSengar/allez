@@ -76,7 +76,11 @@ function serve() {
   return new Promise(resolve => {
     const srv = http.createServer((req, res) => {
       const url = decodeURIComponent(req.url.split('?')[0]);
-      const file = path.join(ROOT, url === '/' ? 'index.html' : url);
+      /* Pages resolves a directory to its index.html, and a city pack is
+         served from one — so a test server that only special-cases "/"
+         reports a 404 for the exact URL the site will live at. */
+      const rel = url.endsWith('/') ? url + 'index.html' : url;
+      const file = path.join(ROOT, rel);
       if (!file.startsWith(ROOT)) { res.writeHead(403).end('forbidden'); return; }
       fs.readFile(file, (err, buf) => {
         if (err) { res.writeHead(404, { 'content-type': 'text/plain' }).end('not found'); return; }

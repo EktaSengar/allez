@@ -126,7 +126,12 @@ const Loc = (() => {
 
   const zoneName = n => ZONE_NAMES[n] || City.zone.label(n);
   const zoneCoords = n => ZONE[n];
-  const presets = () => Object.keys(ZONE).map(Number)
+  /* Object.keys() is always strings. Paris's zones are numbers and its
+     records store them that way, so a numeric key is converted back and
+     anything else is left alone — coercing unconditionally rendered
+     ninety-five Bengaluru chips as "NaNe". */
+  const presets = () => Object.keys(ZONE)
+    .map(k => (/^\d+$/.test(k) ? Number(k) : k))
     .map(n => ({ zone: n, name: ZONE_NAMES[n] }));
 
   /* ---------- finding a place ---------- */

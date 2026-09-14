@@ -51,6 +51,31 @@ const City = (() => {
 
     fallback: name,
 
+    /* Headings that name the zones. Rendering a second city is what
+       found these: "All twenty" and a superscript French ordinal were
+       written into the engine's view builders, which is fine until the
+       city has ninety-five named neighbourhoods and no ordinals at all. */
+    allHeading: 'All twenty',
+    tile: n => `${n}<sup>e</sup>`,
+
+    /* A second centroid table, and on purpose. `centroids` above is
+       pulled towards where people are, which is what you want for "how
+       far is that". This one is evenly spaced, which is what you want
+       for "which zone is this point in" — scripts/discover.mjs labels
+       twenty thousand OSM nodes by nearest centroid, and an even set
+       approximates the boundaries better than a set pulled towards the
+       shops. Different question, different table.
+
+       A city with no polygons to approximate omits this and the nearest
+       of `centroids` is used instead. */
+    grid: {
+      1:[48.8626,2.3363],  2:[48.8683,2.3413],  3:[48.8637,2.3615],  4:[48.8546,2.3572],
+      5:[48.8448,2.3501],  6:[48.8496,2.3329],  7:[48.8565,2.3120],  8:[48.8726,2.3120],
+      9:[48.8768,2.3374],  10:[48.8760,2.3595], 11:[48.8578,2.3792], 12:[48.8351,2.4212],
+      13:[48.8283,2.3626], 14:[48.8331,2.3264], 15:[48.8412,2.3000], 16:[48.8637,2.2769],
+      17:[48.8872,2.3070], 18:[48.8925,2.3444], 19:[48.8871,2.3828], 20:[48.8635,2.3985]
+    },
+
     /* Which quest gets the drawing instead of a list of chips. The id is
        a record in quests.json, so it belongs to the city, not the
        engine. A city with no `map` below leaves this out. */
@@ -178,7 +203,15 @@ const City = (() => {
      are only what to ask for before that file lands. */
   const weather = { lat: 48.87, lon: 2.36, tz: 'Europe/Paris' };
 
-  return { id, name, ua, zone, views, holidays, shutsOnHoliday, money, weather };
+  /* What to ask Overpass for. Paris intra-muros, generously. */
+  const bbox = '48.812,2.246,48.908,2.422';
+
+  /* A service worker's scope is the directory its script sits in, so a
+     city can only have one if it ships its own. Paris has sw.js at the
+     root next to its index.html. */
+  const serviceWorker = true;
+
+  return { id, name, ua, bbox, serviceWorker, zone, views, holidays, shutsOnHoliday, money, weather };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same

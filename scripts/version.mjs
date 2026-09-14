@@ -32,15 +32,27 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const HTML = path.join(ROOT, 'index.html');
 const CHECK = process.argv.includes('--check');
+
+/* Which city's page to stamp. Paris is at the repo root because it is
+   the live site at a live URL; every other city lives under its pack.
+   The asymmetry is temporary and the domain move removes it. */
+const i = process.argv.indexOf('--city');
+const CITY = i === -1 ? 'paris' : process.argv[i + 1];
+const HTML = CITY === 'paris' ? path.join(ROOT, 'index.html')
+                              : path.join(ROOT, 'cities', CITY, 'index.html');
+const DATA_DIR = CITY === 'paris' ? path.join(ROOT, 'data')
+                                  : path.join(ROOT, 'cities', CITY, 'data');
+const HTML_DIR = path.dirname(HTML);
 
 const hash = buf => crypto.createHash('sha256').update(buf).digest('hex').slice(0, 8);
 
-/* Matches href/src for a local css or js file, with or without an existing
-   ?v=. `cities/` is in here because a city pack ships a script of its own —
-   the same staleness problem, so the same answer. */
-const ASSET = /(href|src)="((?:css|js|cities)\/[^"?]+\.(?:css|js))(\?v=[^"]*)?"/g;
+/* Any local css or js the page links, with or without an existing ?v=.
+   Deliberately not anchored to a directory: Paris links `js/app.js` from
+   the root, a city pack links `../../js/app.js` and its own `city.js`
+   from two levels down, and both have the same staleness problem. Paths
+   that start with a scheme or `//` are somebody else's file. */
+const ASSET = /(href|src)="(?!https?:|\/\/)([^"?]+\.(?:css|js))(\?v=[^"]*)?"/g;
 
 /* The one line in index.html that carries the data hashes. Rewritten
    whole each run, so the map cannot drift from what is on disk. */
@@ -49,7 +61,7 @@ const DV_LINE = /^(\s*)window\.__DV = .*;$/m;
 /* Every .json under data/, including the twenty shards, keyed the way the
    page asks for them: "civic", "places/index", "places/11". */
 async function dataVersions() {
-  const base = path.join(ROOT, 'data');
+  const base = DATA_DIR;
   const names = [];
   for (const e of await fs.readdir(base, { withFileTypes: true })) {
     if (e.isFile() && e.name.endsWith('.json')) names.push(e.name.slice(0, -5));
@@ -73,7 +85,8 @@ async function run() {
   const replacements = [];
   for (const m of original.matchAll(ASSET)) {
     const [full, attr, file] = m;
-    const abs = path.join(ROOT, file);
+    /* Relative to the page that links it, not to the repo root. */
+    const abs = path.resolve(HTML_DIR, file);
     try {
       const h = hash(await fs.readFile(abs));
       replacements.push([full, `${attr}="${file}?v=${h}"`]);
@@ -101,18 +114,18 @@ async function run() {
   }
 
   if (out === original) {
-    console.log(`Asset stamps already current (${stamped.length} files).`);
+    console.log(`${CITY}: asset stamps already current (${stamped.length} files).`);
     return;
   }
 
   if (CHECK) {
-    console.error('Asset stamps are out of date. Run: node scripts/version.mjs');
+    console.error(`Asset stamps are out of date. Run: node scripts/version.mjs${CITY === 'paris' ? '' : ' --city ' + CITY}`);
     stamped.forEach(s => console.error(`  · ${s}`));
     process.exit(1);
   }
 
   await fs.writeFile(HTML, out, 'utf8');
-  console.log('Stamped:');
+  console.log(`Stamped (${CITY}):`);
   stamped.forEach(s => console.log(`  ✓ ${s}`));
 }
 

@@ -2446,12 +2446,12 @@ const App = (() => {
             + `<div class="routes">${walk.items.map(routeCard).join('')}</div>`
           : '')
       + (gems.items.length
-          ? stripHead('Hidden Paris', radiusNote(gems.radius, gems.items, gems.widened))
+          ? stripHead(`Hidden ${City.name}`, radiusNote(gems.radius, gems.items, gems.widened))
             + rows(gems.items)
           : '')
-      + stripHead('All twenty')
+      + stripHead(City.zone.allHeading)
       + `<div class="zone-grid">${hoods.map(h => `<div class="zone">
-          <span class="n">${h.zone}<sup>e</sup></span>
+          <span class="n">${City.zone.tile(h.zone)}</span>
           <span class="nm">${esc(h.name)}</span>
           <button type="button" data-zone="${h.zone}" class="${Store.hasZone(h.zone) || h.isHome ? 'on' : ''}">
             ${h.isHome ? 'Home' : (Store.hasZone(h.zone) ? 'Explored' : 'Mark')}
@@ -2609,7 +2609,7 @@ const App = (() => {
     const zones = $('#loc-zones');
     if (zones && !zones.children.length) {
       zones.innerHTML = Loc.presets().map(p =>
-        `<button class="chip" data-zone-pick="${p.zone}" title="${esc(p.name)}">${p.zone}${p.zone === 1 ? 'er' : 'e'}</button>`).join('');
+        `<button class="chip" data-zone-pick="${p.zone}" title="${esc(p.name)}">${esc(City.zone.label(p.zone))}</button>`).join('');
     }
     const rec = Loc.recents();
     $('#loc-recent-wrap').hidden = !rec.length;
@@ -3128,7 +3128,12 @@ const App = (() => {
        does nothing for this load in any case, only for the next one. */
     afterPaint(() => {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js').catch(e => console.warn('sw', e));
+        /* Only where the pack ships one: a worker's scope is its own
+           directory, so a city without a copy would either get nothing
+           or, worse, another city's. */
+        if (City.serviceWorker) {
+          navigator.serviceWorker.register('sw.js').catch(e => console.warn('sw', e));
+        }
       }
     });
 

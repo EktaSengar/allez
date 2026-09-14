@@ -55,6 +55,15 @@ export const loadCity = id =>
 
 export const City = loadCity(process.env.HOMEGROUND_CITY || 'paris');
 
+/* Where a city's data sits. Paris is at the repo root because it is the
+   live site at a live URL and moving it breaks every existing link; every
+   other city lives under its own pack. That asymmetry is deliberate and
+   temporary — the domain move normalises both — and it is written down
+   here rather than spread across a dozen scripts. */
+export const dataDir = (cityId = City.id) =>
+  cityId === 'paris' ? path.join(ROOT, 'data')
+                     : path.join(ROOT, 'cities', cityId, 'data');
+
 /* Storage names. `keys.js` reads City.id and touches localStorage as it
    evaluates — carrying the old single-city keys over — so Node hands it
    somewhere harmless to write to and nothing carries over. state.js and

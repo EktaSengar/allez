@@ -59,6 +59,9 @@ const City = (() => {
 
     fallback: name,
 
+    allHeading: 'Every neighbourhood',
+    tile: k => (zone.names[k] || k),
+
     /* No quest map: Bengaluru has no shape worth drawing the way Paris
        spirals out from the 1st, and ninety-five dots on a 100x100 box is
        a rash rather than a map. The quest falls back to a list of chips. */
@@ -117,6 +120,7 @@ const City = (() => {
       'kengeri': [12.92297, 77.48429],
       'kodati': [12.88726, 77.7159],
       'konanakunte': [12.87929, 77.56975],
+      'kodihalli': [12.96147, 77.64866],
       'koramangala': [12.93574, 77.62408],
       'kothnur': [12.87425, 77.58373],
       'kr-puram': [13.00752, 77.69594],
@@ -215,6 +219,7 @@ const City = (() => {
       'kengeri': 'Kengeri',
       'kodati': 'Kodati',
       'konanakunte': 'Konanakunte',
+      'kodihalli': 'Kodihalli',
       'koramangala': 'Koramangala',
       'kothnur': 'Kothnur',
       'kr-puram': 'KR Puram',
@@ -320,7 +325,20 @@ const City = (() => {
      Weather.setHome() from data/home.json once it lands. */
   const weather = { lat: 12.96, lon: 77.65, tz: 'Asia/Kolkata' };
 
-  return { id, name, ua, zone, views, holidays, shutsOnHoliday, money, weather };
+  /* What to ask Overpass for: the city and the ring road, generously.
+     Wider than Paris's box because the city is, and because Whitefield
+     and Electronic City are places people actually go. */
+  const bbox = '12.85,77.45,13.12,77.78';
+
+  /* Not yet. A worker's scope is the directory its script sits in, so
+     this city needs its own copy of sw.js — which means splitting the
+     shared logic out of Paris's, and that file's correctness is
+     arithmetic rather than taste (invariant 13). Without one the site
+     works and simply is not available offline; with a careless one it
+     serves the wrong city's cached page. Deferred on purpose. */
+  const serviceWorker = false;
+
+  return { id, name, ua, bbox, serviceWorker, zone, views, holidays, shutsOnHoliday, money, weather };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;

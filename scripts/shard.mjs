@@ -31,6 +31,11 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+/* The default is Paris because that is what every existing caller means.
+   A caller building another city passes its own directory — this used to
+   be a module constant, and a Bengaluru discovery run therefore wrote
+   seven thousand Bengaluru places into Paris's shard directory and
+   deleted all twenty of Paris's on the way. */
 const DATA = path.join(ROOT, 'data');
 const OUT  = path.join(DATA, 'places');
 const DRY  = process.argv.includes('--dry');
@@ -39,7 +44,7 @@ const DRY  = process.argv.includes('--dry');
    go here rather than being dropped. Loaded with the first batch. */
 const ORPHANS = 'x';
 
-export async function shard(doc) {
+export async function shard(doc, outDir = OUT) {
   const by = new Map();
   for (const p of doc.items) {
     const key = p.a ? String(p.a) : ORPHANS;
@@ -60,18 +65,23 @@ export async function shard(doc) {
 
   if (DRY) return { manifest, by };
 
-  await fs.mkdir(OUT, { recursive: true });
-  /* Clear first: an arrondissement that empties out between runs must
-     not leave last week's file behind for the browser to find. */
-  for (const f of await fs.readdir(OUT).catch(() => [])) {
-    if (f.endsWith('.json')) await fs.unlink(path.join(OUT, f));
+  await fs.mkdir(outDir, { recursive: true });
+  /* Clear first: a zone that empties out between runs must not leave
+     last week's file behind for the browser to find.
+
+     Read the directory being written, not the default one. Reading OUT
+     here while writing outDir listed one city's shards and unlinked
+     those names from another's — which fails loudly in one direction
+     and deletes the wrong city's data in the other. */
+  for (const f of await fs.readdir(outDir).catch(() => [])) {
+    if (f.endsWith('.json')) await fs.unlink(path.join(outDir, f));
   }
 
   for (const [key, items] of by) {
-    await fs.writeFile(path.join(OUT, `${key}.json`),
+    await fs.writeFile(path.join(outDir, `${key}.json`),
       JSON.stringify({ a: key, items }) + '\n', 'utf8');
   }
-  await fs.writeFile(path.join(OUT, 'index.json'),
+  await fs.writeFile(path.join(outDir, 'index.json'),
     JSON.stringify(manifest, null, 2) + '\n', 'utf8');
 
   return { manifest, by };
@@ -80,10 +90,10 @@ export async function shard(doc) {
 /* Read every shard back as one document — for the Node scripts, which
    have no reason to care that the browser fetches it in pieces. */
 export async function readShards() {
-  const manifest = JSON.parse(await fs.readFile(path.join(OUT, 'index.json'), 'utf8'));
+  const manifest = JSON.parse(await fs.readFile(path.join(outDir, 'index.json'), 'utf8'));
   const items = [];
   for (const key of Object.keys(manifest.shards)) {
-    const doc = JSON.parse(await fs.readFile(path.join(OUT, `${key}.json`), 'utf8'));
+    const doc = JSON.parse(await fs.readFile(path.join(outDir, `${key}.json`), 'utf8'));
     items.push(...doc.items);
   }
   return { ...manifest, items };
@@ -99,7 +109,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     (a[0] === ORPHANS ? 99 : +a[0]) - (b[0] === ORPHANS ? 99 : +b[0]));
   console.log(`\nSplit ${doc.items.length} places into ${rows.length} shards\n`);
   for (const [key, items] of rows) {
-    const kb = DRY ? 0 : Math.round((await fs.stat(path.join(OUT, `${key}.json`))).size / 1024);
+    const kb = DRY ? 0 : Math.round((await fs.stat(path.join(outDir, `${key}.json`))).size / 1024);
     console.log(`  ${String(key).padStart(3)}  ${String(items.length).padStart(5)} places  ${String(kb).padStart(4)} KB`);
   }
   if (!DRY) {

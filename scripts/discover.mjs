@@ -33,13 +33,14 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readShards, shard } from './shard.mjs';
+import { City, dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
+const DATA = dataDir();
 const DRY  = process.argv.includes('--dry');
 const ONLY = (() => { const i = process.argv.indexOf('--only'); return i === -1 ? null : process.argv[i + 1].split(','); })();
 
-const BBOX = '48.812,2.246,48.908,2.422';          // Paris intra-muros, generously
+const BBOX = City.bbox;
 /* Full-planet mirrors only. overpass.osm.ch looks like a mirror and is a
    Switzerland-only extract — it answers 200 with zero elements, which the
    first version of this happily recorded as "Paris has no restaurants". */
@@ -47,16 +48,15 @@ const MIRRORS = ['https://overpass-api.de/api/interpreter',
                  'https://overpass.kumi.systems/api/interpreter',
                  'https://overpass.private.coffee/api/interpreter'];
 
-/* Arrondissement centroids — used to label a point, and to sanity-check
-   coverage. Nearest centroid, not point-in-polygon: good enough to say
-   "5e" next to a name, and never used for distance. */
-const ZONE = {
-  1:[48.8626,2.3363],  2:[48.8683,2.3413],  3:[48.8637,2.3615],  4:[48.8546,2.3572],
-  5:[48.8448,2.3501],  6:[48.8496,2.3329],  7:[48.8565,2.3120],  8:[48.8726,2.3120],
-  9:[48.8768,2.3374],  10:[48.8760,2.3595], 11:[48.8578,2.3792], 12:[48.8351,2.4212],
-  13:[48.8283,2.3626], 14:[48.8331,2.3264], 15:[48.8412,2.3000], 16:[48.8637,2.2769],
-  17:[48.8872,2.3070], 18:[48.8925,2.3444], 19:[48.8871,2.3828], 20:[48.8635,2.3985]
-};
+/* Zone centroids — used to label a point, and to sanity-check coverage.
+   Nearest centroid, not point-in-polygon: good enough to say "5e" next
+   to a name, and never used for distance.
+
+   The pack's `grid` where it has one, because an evenly spaced table
+   approximates real boundaries better than one pulled towards the shops;
+   its ordinary centroids otherwise, which is what a city with no
+   polygons to approximate has anyway. */
+const ZONE = City.zone.grid || City.zone.centroids;
 
 /* What to pull.
 
@@ -133,11 +133,18 @@ async function overpass(query, attempt = 0) {
   throw lastErr || new Error('every Overpass mirror failed');
 }
 
+/* Object.keys() always hands back strings. Paris's zones really are
+   numbers and its records store them as numbers, so they are converted
+   back; Bengaluru's are slugs and must not be. Coercing unconditionally
+   turned every Bengaluru zone into NaN and put all 7,268 places in one
+   shard. */
+const zoneKey = k => (/^\d+$/.test(k) ? Number(k) : k);
+
 const near = (lat, lon) => {
   let best = null, bd = Infinity;
   for (const [n, [a, b]] of Object.entries(ZONE)) {
     const d = (a - lat) ** 2 + (b - lon) ** 2;
-    if (d < bd) { bd = d; best = Number(n); }
+    if (d < bd) { bd = d; best = zoneKey(n); }
   }
   return best;
 };
@@ -267,7 +274,7 @@ async function run() {
   console.log(`\n  ${items.length} places after de-duplication`);
   const withHours = items.filter(p => p.oh != null).length;
   console.log(`  ${withHours} with opening hours (${Math.round(withHours / items.length * 100)}%)`);
-  console.log('  per arrondissement:', Object.entries(spread)
+  console.log(`  per ${City.zone.one}:`, Object.entries(spread)
     .sort((a, b) => a[0] - b[0]).map(([a, n]) => `${a}:${n}`).join(' '));
 
   if (DRY) { console.log('\n  --dry, nothing written\n'); return; }
@@ -286,10 +293,10 @@ async function run() {
   }
   /* Straight to data/places/. The index has not been one file since it
      outgrew a first paint — see scripts/shard.mjs. */
-  const { manifest } = await shard(doc);
+  const { manifest } = await shard(doc, path.join(DATA, 'places'));
   const n = Object.keys(manifest.shards).length;
   console.log(`\n  wrote data/places/ — ${doc.items.length} places across ${n} shards\n`);
 }
 
-console.log('\nDiscovering Paris from OpenStreetMap…\n');
+console.log(`\nDiscovering ${City.name} from OpenStreetMap…\n`);
 run().catch(e => { console.error('\n' + e.message + '\n'); process.exit(1); });
