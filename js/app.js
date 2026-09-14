@@ -3165,8 +3165,23 @@ const App = (() => {
   /* `defineView` is the extension point a city pack uses: load a file
      after this one, register a builder, and list the id in City.views.
      Exposed rather than kept inside because the pack is a separate
-     script — that is the whole point of it. */
-  return { init, defineView };
+     script — that is the whole point of it.
+
+     `ui` is the rest of the bargain. Registering a builder is useless
+     without something to build with, and a pack that hand-rolled its own
+     markup would drift from every other section on the page within a
+     week. `Near`, `Loc`, `Store`, `Rank` and `City` are already globals,
+     so what was missing is only the render helpers and the pool they
+     draw from. Kept deliberately small: a pack composes the same rows,
+     cards and headings every built-in view does, or it does not match. */
+  const ui = {
+    esc, rows, row, card, stripHead, img, MARK,
+    /* The two tiers, live rather than copied — a view is built after the
+       fill, and a snapshot taken at registration would be empty. */
+    records: () => ({ all: ALL, discovered: DISCOVERED, ctx: CTX })
+  };
+
+  return { init, defineView, ui };
 })();
 
 document.addEventListener('DOMContentLoaded', App.init);

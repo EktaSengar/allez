@@ -198,6 +198,21 @@ const City = (() => {
     ]
   };
 
+  /* ---------- how long a kilometre takes ----------
+
+     Short hops are walked; longer ones assume the Metro, where access
+     and waiting dominate far more than the ride does. Paris is small,
+     dense and evenly served, so the answer does not depend on when you
+     ask — `when` is ignored here and is the whole model elsewhere. */
+
+  const reach = {
+    minutes: d => {
+      const walk = d / 4.8 * 60;
+      const transit = 4 + (d / 16) * 60 + 3;
+      return Math.max(2, Math.round(Math.min(walk, transit)));
+    }
+  };
+
   /* Rounded to about a kilometre so no precise address reaches a third
      party. Weather.setHome() overrides this from data/home.json; these
      are only what to ask for before that file lands. */
@@ -211,7 +226,7 @@ const City = (() => {
      root next to its index.html. */
   const serviceWorker = true;
 
-  return { id, name, ua, bbox, serviceWorker, zone, views, holidays, shutsOnHoliday, money, weather };
+  return { id, name, ua, bbox, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same

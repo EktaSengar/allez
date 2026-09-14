@@ -501,6 +501,21 @@ id in `City.views`. Nothing in the engine needs to know it happened. A view
 that is declared with no builder says so on the page rather than drawing a
 blank one that looks like a data bug.
 
+A pack also owns **how long a kilometre takes**, which is one of the most
+city-specific facts there is. Paris walks or takes the Metro and the answer
+does not depend on when you ask. Bengaluru's does: `City.reach.minutes(km, when)`
+prices the same trip at roughly twice as much inside the weekday rush windows,
+because Indiranagar to Whitefield at 6pm is a different trip from the same one
+at 11am, and a model that cannot say so is wrong about the only thing that
+matters there.
+
+`App.ui` is the other half of `App.defineView`. Registering a builder is
+useless without something to build with, and a pack that hand-rolled its own
+markup would drift from every other section within a week — so the engine hands
+out `rows`, `card`, `stripHead`, `esc` and the live record pool, and a pack view
+composes exactly what the built-in ones do. `cities/bengaluru/views/yourside.js`
+is the worked example.
+
 A pack that has no shape worth drawing omits `zone.map` and the zone quest
 falls back to a list of chips. Paris spirals out from the 1st and is worth a
 drawing; Bengaluru is ninety-five named neighbourhoods, where a dot per zone

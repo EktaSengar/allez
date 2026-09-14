@@ -87,17 +87,22 @@ const Loc = (() => {
     return 2 * R * Math.asin(Math.sqrt(x));
   }
 
-  /* Door-to-door, roughly. Short hops are walked; longer ones assume the
-     Metro, where the access and waiting time dominates far more than the
-     ride does. An estimate, and the interface says "~" because of it. */
-  function minutes(coords) {
+  /* Door-to-door, roughly, and an estimate — the interface says "~"
+     because of it.
+
+     How long a kilometre takes is one of the most city-specific facts
+     there is, so the pack owns it. Paris walks or takes the Metro and
+     the answer does not depend on when you ask. Bengaluru's does: the
+     same trip east at 11am and at 6pm are different trips, and a model
+     that cannot say so is wrong about the only thing that matters here.
+
+     `when` is passed so a pack can care. Paris's ignores it. */
+  function minutes(coords, when) {
     const a = active();
     if (!a || !coords) return null;
     const d = km([a.lat, a.lon], coords);
     if (!isFinite(d)) return null;
-    const walk = d / 4.8 * 60;
-    const transit = 4 + (d / 16) * 60 + 3;
-    return Math.max(2, Math.round(Math.min(walk, transit)));
+    return City.reach.minutes(d, when || new Date());
   }
 
   /* Distance for a record: its own coordinates if it has them, otherwise
@@ -119,9 +124,9 @@ const Loc = (() => {
   /* Never show the street they typed. An arrondissement is specific
      enough to be useful and vague enough to be nobody's business. */
   function displayName(loc) {
-    if (!loc) return 'Paris';
+    if (!loc) return City.name;
     if (loc.zone) return City.zone.display(loc.zone, ZONE_NAMES[loc.zone]);
-    return loc.area || loc.label || 'Paris';
+    return loc.area || loc.label || City.name;
   }
 
   const zoneName = n => ZONE_NAMES[n] || City.zone.label(n);

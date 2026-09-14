@@ -159,9 +159,9 @@
      app.js all read `City` as they evaluate, not later. keys.js is
      second for the same reason — it needs City.id to name a key, and
      state.js and location.js need the name as they evaluate. -->
-<script src="city.js?v=fa6fda3b"></script>
+<script src="city.js?v=652ee3a3"></script>
 <script src="../../js/keys.js?v=d850c74b"></script>
-<script src="../../js/location.js?v=b7c7fa17"></script>
+<script src="../../js/location.js?v=b5655823"></script>
 <script src="../../js/state.js?v=381f1374"></script>
 <script src="../../js/weather.js?v=b74b2d9e"></script>
 <script src="../../js/hours.js?v=f3930310"></script>
@@ -169,7 +169,11 @@
 <script src="../../js/invaders.js?v=bc4c1aab"></script>
 <script src="../../js/nearby.js?v=3a2ab53d"></script>
 <script src="../../js/scoring.js?v=0fad9ea3"></script>
-<script src="../../js/app.js?v=40aaef3f"></script>
+<script src="../../js/app.js?v=f68c07c0"></script>
+<!-- After app.js, because it calls App.defineView. This is what a pack
+     shipping its own view looks like: one file, one registration, and
+     nothing in the engine that knows it exists. -->
+<script src="views/yourside.js?v=07be7943"></script>
 
 <nav class="tabs" id="tabs">
   <div class="wrap tabs-inner">
@@ -179,6 +183,7 @@
       <button class="tab" data-view="weekend">Weekend</button>
       <button class="tab" data-view="eat">Eat</button>
       <button class="tab" data-view="sport">Sport</button>
+      <button class="tab" data-view="yourside">Your side</button>
       <button class="tab" data-view="regulars">Regulars</button>
       <button class="tab" data-view="explore">Explore</button>
       <button class="tab" data-view="away">Away</button>

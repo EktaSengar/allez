@@ -297,12 +297,12 @@ const City = (() => {
 
   /* ---------- which views this city has ----------
 
-     The same eight as Paris, deliberately. *Your side of town* is the
-     view this city actually wants — Indiranagar to Whitefield at 6pm is
-     a different city from the same trip at 11am — but that belongs with
-     the traffic-aware reach model, not here. This pack exists to find
-     out what the engine assumed, and a like-for-like set is the cleaner
-     instrument for that. */
+     Paris's eight, plus one it has no use for. *Your side* is the view
+     this city actually wants: Indiranagar to Whitefield at 6pm is a
+     different city from the same trip at 11am, and no amount of ranking
+     by distance says so. Its builder lives in views/yourside.js and is
+     registered through App.defineView — nothing in the engine knows the
+     file exists. */
 
   const views = {
     main: [
@@ -311,6 +311,7 @@ const City = (() => {
       { id: 'weekend',  label: 'Weekend' },
       { id: 'eat',      label: 'Eat' },
       { id: 'sport',    label: 'Sport' },
+      { id: 'yourside', label: 'Your side' },
       { id: 'regulars', label: 'Regulars' },
       { id: 'explore',  label: 'Explore' },
       { id: 'away',     label: 'Away' }
@@ -320,6 +321,60 @@ const City = (() => {
       { id: 'saved',  label: 'Saved' }
     ]
   };
+
+  /* ---------- how long a kilometre takes ----------
+
+     This is the model the whole city turns on. Paris answers "how far"
+     with a distance; Bengaluru answers it with a distance, a direction
+     and a time of day, and gets three different numbers for the same
+     trip. Indiranagar to Whitefield is fourteen kilometres and it is
+     either thirty-five minutes or ninety.
+
+     Three modes, cheapest wins:
+
+       walk    under a couple of kilometres, and genuinely unpleasant
+               above that — footpaths here are a lottery, so this is
+               slightly slower than Paris's and gives up sooner.
+       metro   Namma Metro is fast where it goes and goes to very little.
+               Long access because two lines do not cover a city this
+               size, so most trips start with an auto to the station.
+       road    auto or cab, which is what people actually take. Twenty-two
+               km/h off-peak is already a low number and it is the honest
+               one; eleven is what the same road does at half past six.
+
+     The rush windows are the real ones and are weekdays only. Nothing
+     here pretends to know the state of a particular road — it knows the
+     time and the direction, which is what a local would tell you.  */
+
+  const RUSH = [[8.5, 11], [17, 21]];
+
+  const reach = {
+    rush: RUSH,
+
+    isPeak(when) {
+      const day = when.getDay();
+      if (day === 0 || day === 6) return false;
+      const h = when.getHours() + when.getMinutes() / 60;
+      return RUSH.some(([a, b]) => h >= a && h < b);
+    },
+
+    minutes(d, when) {
+      const walk  = d < 2.5 ? d / 4.5 * 60 : Infinity;
+      const metro = 10 + (d / 20) * 60 + 6;
+      const road  = 4 + (d / (this.isPeak(when) ? 11 : 22)) * 60;
+      return Math.max(2, Math.round(Math.min(walk, metro, road)));
+    },
+
+    /* Two neighbourhoods are "the same side" when their bearings from
+       the middle of the city are within this many degrees of each other.
+       Not a traffic model — a way of saying "you would not be crossing
+       town", which is the question people actually ask. */
+    sector: 70
+  };
+
+  /* The middle, for bearings. Cubbon Park and Vidhana Soudha, which is
+     where the city is measured from in every other sense too. */
+  const centre = [12.9767, 77.5905];
 
   /* Kodihalli, rounded to about a kilometre. Overridden by
      Weather.setHome() from data/home.json once it lands. */
@@ -338,7 +393,7 @@ const City = (() => {
      serves the wrong city's cached page. Deferred on purpose. */
   const serviceWorker = false;
 
-  return { id, name, ua, bbox, serviceWorker, zone, views, holidays, shutsOnHoliday, money, weather };
+  return { id, name, ua, bbox, serviceWorker, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;
