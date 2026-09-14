@@ -22,7 +22,11 @@
    guarantee, same mechanism: a changed file is unreachable from any
    cache, and an unchanged one costs no network at all.
 
-   Usage:  node scripts/version.mjs [--check]
+   Usage:  node scripts/version.mjs [--city ID] [--all] [--check]
+           --all    every city, which is almost always what you want —
+                    js/ and css/ are shared, so a change to app.js
+                    leaves every other city's page pointing at a hash
+                    that no longer exists
            --check  exit non-zero if the stamps are out of date (for CI)
    --------------------------------------------------------- */
 
@@ -30,6 +34,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { spawn } from 'node:child_process';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CHECK = process.argv.includes('--check');
@@ -38,6 +43,7 @@ const CHECK = process.argv.includes('--check');
    the live site at a live URL; every other city lives under its pack.
    The asymmetry is temporary and the domain move removes it. */
 const i = process.argv.indexOf('--city');
+const ALL = process.argv.includes('--all');
 const CITY = i === -1 ? 'paris' : process.argv[i + 1];
 const HTML = CITY === 'paris' ? path.join(ROOT, 'index.html')
                               : path.join(ROOT, 'cities', CITY, 'index.html');
@@ -129,4 +135,26 @@ async function run() {
   stamped.forEach(s => console.log(`  ✓ ${s}`));
 }
 
-run().catch(e => { console.error(e); process.exit(1); });
+/* Every city, which is almost always what you want: the js/ and css/
+   files are shared, so a change to app.js leaves three of four pages
+   pointing at a hash that no longer exists. Stamping one city and
+   forgetting the rest is the easiest mistake in this repo to make, and
+   `--check` only tells you afterwards. */
+async function everyCity() {
+  const dirs = await fs.readdir(path.join(ROOT, 'cities'), { withFileTypes: true });
+  const ids = ['paris', ...dirs.filter(d => d.isDirectory() && d.name !== 'paris').map(d => d.name)];
+  let failed = 0;
+  for (const id of ids) {
+    const r = await new Promise(res => {
+      const p = spawn(process.execPath, [fileURLToPath(import.meta.url),
+        ...(id === 'paris' ? [] : ['--city', id]), ...(CHECK ? ['--check'] : [])],
+        { stdio: 'inherit' });
+      p.on('close', res);
+    });
+    if (r) failed++;
+  }
+  if (failed) process.exit(1);
+}
+
+if (ALL) everyCity().catch(e => { console.error(e); process.exit(1); });
+else run().catch(e => { console.error(e); process.exit(1); });

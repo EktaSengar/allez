@@ -516,6 +516,19 @@ out `rows`, `card`, `stripHead`, `esc` and the live record pool, and a pack view
 composes exactly what the built-in ones do. `cities/bengaluru/views/yourside.js`
 is the worked example.
 
+A pack may declare `bases` in its `home.json` where the region has more than
+one centre. The Bay Area has two, fifty kilometres apart, and a list ranked from
+North Beach is not a slightly different list from one ranked in Palo Alto — it is
+a different city. The location panel grows a *Where from* row, hidden everywhere
+else.
+
+It may also declare `climate`, a handful of representative points fetched in one
+request, where one forecast does not describe the city. Measured in the Bay on
+14 September 2026 at the same minute: Outer Sunset 18.4° under 44% cloud, the
+Mission 23.6° and clear, Palo Alto 27.8°. Every record then ranks against its
+nearest station, which is what stops a fine Mission afternoon putting the Outer
+Sunset at the top of the page.
+
 A pack may also declare `City.air`, which loads `js/air.js` and adds air quality
 as a ranking input. **It is deliberately not a filter.** The obvious build gates
 outdoor suggestions above some AQI, and it is useless: Delhi has six to eight
@@ -561,6 +574,7 @@ Anything that touches rendering should be held to the bar the August 2026
 optimisation was held to — the page still says exactly what it said before:
 
 ```bash
+node scripts/version.mjs --all    # every city — js/ and css/ are shared
 node scripts/check-views.mjs --save /tmp/before.json
 # …make the change…
 node scripts/check-views.mjs --compare /tmp/before.json

@@ -43,6 +43,11 @@ const App = (() => {
      or set these. Everywhere else they stay null and cost nothing. */
   let AQ = null;
   let AQP = null;
+  /* The declared starting points, where a city has more than one. */
+  let BASES = [];
+  /* Per-station forecasts, where a city has more than one climate. */
+  let CLIM = null;
+  let CLIMP = null;
   let VIEW = 'today';
   let HOME = { label: 'Paris' };        // replaced by the location engine
   let DISCOVERED = [];                  // OpenStreetMap layer, positions only
@@ -397,10 +402,28 @@ const App = (() => {
     /* home.json is only the *default* — the location engine owns the
        answer from here, because it may be overridden by a saved home or
        a temporary "exploring from". */
-    const fallback = (D.home && D.home.lat)
-      ? { lat: D.home.lat, lon: D.home.lon, zone: D.home.zone, area: D.home.label, label: D.home.label }
-      : Loc.fromZone(1);
+    /* ---------- where home is, when a city has more than one ----------
+
+       Paris, Bengaluru and Delhi each have one. The Bay Area has two,
+       fifty kilometres apart, and which one you are at decides almost
+       everything — a list ranked from North Beach is not a slightly
+       different list from one ranked from Palo Alto, it is a different
+       city. So `home.json` may carry a `bases` array instead of a single
+       coordinate, and the first is the default until the reader saves
+       their own. Everything downstream still sees one home; the choice
+       happens here and nowhere else.
+
+       `Loc.fromZone(1)` was the old fallback and only ever worked for a
+       city whose zones are numbered from one. It is now the first zone
+       the pack declares, whatever it is called. */
+    const asHome = b => ({ lat: b.lat, lon: b.lon, zone: b.zone,
+                           area: b.label, label: b.label });
+    const bases = Array.isArray(D.home?.bases) ? D.home.bases : null;
+    const fallback = bases?.length ? asHome(bases[0])
+      : (D.home && D.home.lat) ? asHome(D.home)
+      : Loc.fromZone(Object.keys(City.zone.centroids)[0]);
     Loc.boot(fallback);
+    BASES = bases || [];
     HOME = Loc.active();
 
     /* The forecast, started here rather than after the data because it
@@ -414,6 +437,14 @@ const App = (() => {
        answer from somewhere else and the only thing it waits on is a
        pair of coordinates. Never awaited — the page must not be held for
        it, and it repaints when it lands. */
+    /* One request, several places. Only where the pack declares
+       `climate`; everywhere else the single forecast is the whole truth. */
+    if (City.climate && City.climate.stations) {
+      CLIMP = Weather.loadStations(City.climate.stations, City.weather.tz)
+        .then(m => { CLIM = m; return m; })
+        .catch(e => { console.warn('microclimate failed', e); return null; });
+    }
+
     if (City.air && typeof Air !== 'undefined') {
       Air.setHome(HOME.lat, HOME.lon, City.weather.tz);
       AQP = Air.load().then(a => { AQ = a; return a; })
@@ -477,6 +508,14 @@ const App = (() => {
     CTX = {
       today: TODAY_ISO,
       weatherMode: WX ? WX.mode : null,
+      /* Resolved per record, from whichever station is nearest it. A
+         record with no coordinates falls back to the city-wide mode. */
+      weatherAt: CLIM ? (item => {
+        const c = item.coords || (item.zone && City.zone.centroids[item.zone]);
+        if (!c) return null;
+        const st = Weather.modeFor(CLIM, City.climate.stations, c[0], c[1]);
+        return st ? st.mode : null;
+      }) : null,
       airMode: AQ ? AQ.mode : null,
       taste: Store.tasteWeights([...ALL, ...DISCOVERED]),
       exploredZones: Store.zones(),
@@ -2683,6 +2722,19 @@ const App = (() => {
     $('#loc-kicker').textContent = Loc.isExploring() ? 'Exploring from' : 'Home';
     $('#loc-reset').hidden = !Loc.isExploring();
 
+    /* A city with two starting points offers both. Rendered before the
+       zone list because "which side are you on" is a bigger question
+       than "which neighbourhood", and answering it first makes the zone
+       list mean something. */
+    const baseWrap = $('#loc-bases');
+    if (baseWrap) {
+      baseWrap.parentElement.hidden = BASES.length < 2;
+      if (BASES.length > 1 && !baseWrap.children.length) {
+        baseWrap.innerHTML = BASES.map((b, i) =>
+          `<button class="chip" data-base="${i}">${esc(b.label)}</button>`).join('');
+      }
+    }
+
     const zones = $('#loc-zones');
     if (zones && !zones.children.length) {
       zones.innerHTML = Loc.presets().map(p =>
@@ -2835,8 +2887,32 @@ const App = (() => {
     });
 
     document.addEventListener('click', async e => {
+      /* `dataset.arrPick` here read a property that stopped existing when
+         the attribute became data-zone-pick, so every zone chip has
+         resolved to NaN since. The view harness never caught it because
+         it renders views and never opens the location panel — worth
+         remembering about what "byte-identical" does and does not prove.
+
+         And `Number()` is wrong for two cities out of four: a zone key
+         is a number in Paris and a name everywhere else. */
       const a = e.target.closest('[data-zone-pick]');
-      if (a) { panel.hidden = true; await moveTo(Loc.fromZone(Number(a.dataset.arrPick))); return; }
+      if (a) {
+        const k = a.dataset.zonePick;
+        panel.hidden = true;
+        await moveTo(Loc.fromZone(/^\d+$/.test(k) ? Number(k) : k));
+        return;
+      }
+      /* Switching between a city's declared starting points. */
+      const b = e.target.closest('[data-base]');
+      if (b) {
+        const base = BASES[Number(b.dataset.base)];
+        if (base) {
+          panel.hidden = true;
+          await moveTo({ lat: base.lat, lon: base.lon, zone: base.zone,
+                         area: base.label, label: base.label });
+        }
+        return;
+      }
       const r = e.target.closest('[data-recent]');
       if (r) { panel.hidden = true; await moveTo(Loc.recents()[Number(r.dataset.recent)]); }
     });
@@ -3200,6 +3276,13 @@ const App = (() => {
        `repaint()` alone was not enough — it redraws #view and leaves the
        header alone, so the number was shaping the page invisibly, which
        is the one thing this feature must not do. */
+    if (CLIMP) CLIMP.then(m => {
+      if (!m) return;
+      buildContext();
+      renderHeader();
+      render();
+    });
+
     if (AQP) AQP.then(a => {
       if (!a) return;
       buildContext();

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Paris for You</title>
-<meta name="description" content="A personal Paris guide for Ekta &amp; Kartik — what's worth doing today, tonight and this weekend, from wherever you are.">
+<title>Bay Area for You</title>
+<meta name="description" content="A Bay Area guide for the people who live here — what's worth doing today, tonight and this weekend, from wherever you are.">
 <meta name="theme-color" content="#fdfaf5">
-<link rel="stylesheet" href="css/style.css?v=462d80b6">
+<link rel="stylesheet" href="../../css/style.css?v=462d80b6">
 
 <!-- Every photograph on the page comes from Commons and the forecast from
      open-meteo. Both are third parties, so the first request to each pays
@@ -47,6 +47,10 @@
      of queueing them behind it. app.js picks up the in-flight requests
      through window.__PRELOAD rather than asking twice.
 
+     Most of these are empty in this city and still have to be here:
+     a CORE file that 404s rejects the whole load, so "no curated places
+     yet" has to be an empty items array rather than a missing file.
+
      What is deliberately *not* here: civic.json and notable.json, and
      the shards. They feed the discovered layer, which repaints when it
      fills, and starting them now would only take bandwidth from the
@@ -57,7 +61,7 @@
      cached hard, so a returning reader spends no round trips at all
      being told the file has not changed. -->
 <script>
-  window.__DV = {"civic":"359643e6","daytrips":"3f31dc17","editorial":"29c85877","events":"6d786bb8","events-city":"40313d63","food":"e42c1d7e","home":"89e99596","invaders":"d7ab2053","itineraries":"003d9129","neighborhoods":"ba5c017e","nightlife":"a8ea59ac","notable":"ec814f75","notes":"27a06c14","places":"12ca9edc","places/1":"3b56f9b0","places/10":"d1113961","places/11":"1029a594","places/12":"3bdb773c","places/13":"f2710bf6","places/14":"18d33766","places/15":"79579df8","places/16":"7d6b1d63","places/17":"b78b9d0d","places/18":"37d8d40f","places/19":"3a0586c9","places/2":"fb72f0ca","places/20":"693a26eb","places/3":"534795fd","places/4":"e644473b","places/5":"098b9c49","places/6":"20500c45","places/7":"7d251e3a","places/8":"d7484157","places/9":"0038654f","places/index":"5c104473","practices":"0b4883ea","quests":"c4177174","sports":"6ffec6cc"};
+  window.__DV = {"civic":"52a9475b","daytrips":"0e2196d2","editorial":"bccbc2af","events":"c7f45b4d","events-city":"5aa3e5b4","food":"cdca552d","home":"8b72f3e3","invaders":"bc425794","itineraries":"e2d79d8d","neighborhoods":"19fd57c1","nightlife":"5670201b","notable":"1bae9219","notes":"796bfeb4","places":"0454c55a","places/g00":"63d3885a","places/g01":"3444043c","places/g02":"aa4294cc","places/g03":"bc1df52b","places/g10":"030516c2","places/g11":"3ffa7ea9","places/g12":"337f44d8","places/g13":"adf111c0","places/g20":"1e6a5511","places/g21":"cd6f0844","places/g22":"eaa72014","places/g23":"cca904c1","places/g30":"127612bf","places/g31":"9a7073f6","places/g32":"20120d08","places/g33":"b9319f27","places/index":"0ae85437","practices":"cbb1c9cf","quests":"bc844eb9","sports":"5670201b"};
   (function () {
     var core = ['home', 'places/index',
                 'events', 'events-city', 'places', 'nightlife', 'sports', 'food',
@@ -78,7 +82,7 @@
     }
   })();
 </script>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥐</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌁</text></svg>">
 </head>
 <body>
 
@@ -87,7 +91,7 @@
     <div class="head-top">
       <div>
         <p class="date" id="dateline"></p>
-        <h1 class="title">Paris <em>for you</em></h1>
+        <h1 class="title">The Bay <em>for you</em></h1>
       </div>
       <button id="theme" class="theme" type="button" title="Switch to dark" aria-label="Switch to dark">☾</button>
     </div>
@@ -111,7 +115,7 @@
 
     <div class="locpanel" id="locpanel" hidden>
       <div class="locrow">
-        <input id="loc-input" type="search" placeholder="Rue Mouffetard · 5th arrondissement · Gare du Nord · a hotel name"
+        <input id="loc-input" type="search" placeholder="Valencia St · the Mission · University Ave · a hotel name"
                autocomplete="off" aria-label="Search for a place">
         <button id="loc-go" class="ghost accent" type="button">Go</button>
       </div>
@@ -136,10 +140,10 @@
         <div class="chips" id="loc-bases"></div>
       </div>
       <div class="locgroup">
-        <span class="loclabel">Arrondissement</span>
+        <span class="loclabel">Neighbourhood</span>
         <div class="chips" id="loc-zones"></div>
       </div>
-      <p class="locnote">Your exact address is never shown or stored on the page — only the arrondissement. Coordinates stay in this browser.</p>
+      <p class="locnote">Your exact address is never shown or stored on the page — only the neighbourhood. Coordinates stay in this browser.</p>
     </div>
 
     <p class="epigraph" id="epigraph"></p>
@@ -166,17 +170,20 @@
      app.js all read `City` as they evaluate, not later. keys.js is
      second for the same reason — it needs City.id to name a key, and
      state.js and location.js need the name as they evaluate. -->
-<script src="cities/paris/city.js?v=c2a6f1ac"></script>
-<script src="js/keys.js?v=d850c74b"></script>
-<script src="js/location.js?v=b5655823"></script>
-<script src="js/state.js?v=381f1374"></script>
-<script src="js/weather.js?v=f053584c"></script>
-<script src="js/hours.js?v=f3930310"></script>
-<script src="js/record.js?v=492c838a"></script>
-<script src="js/invaders.js?v=bc4c1aab"></script>
-<script src="js/nearby.js?v=3a2ab53d"></script>
-<script src="js/scoring.js?v=16ed6bd0"></script>
-<script src="js/app.js?v=a09cbe5e"></script>
+<script src="city.js?v=b7f4afab"></script>
+<script src="../../js/keys.js?v=d850c74b"></script>
+<script src="../../js/location.js?v=b5655823"></script>
+<script src="../../js/state.js?v=381f1374"></script>
+<script src="../../js/weather.js?v=f053584c"></script>
+<script src="../../js/hours.js?v=f3930310"></script>
+<script src="../../js/record.js?v=492c838a"></script>
+<script src="../../js/invaders.js?v=bc4c1aab"></script>
+<script src="../../js/nearby.js?v=3a2ab53d"></script>
+<script src="../../js/scoring.js?v=16ed6bd0"></script>
+<script src="../../js/app.js?v=a09cbe5e"></script>
+<!-- After app.js, because it calls App.defineView. This is what a pack
+     shipping its own view looks like: one file, one registration, and
+     nothing in the engine that knows it exists. -->
 
 <nav class="tabs" id="tabs">
   <div class="wrap tabs-inner">
@@ -233,7 +240,7 @@
       <span class="flabel">Only</span>
       <div class="chips" id="flag-chips">
         <button class="chip" data-flag="free">Free</button>
-        <button class="chip" data-flag="cheap">Under €20</button>
+        <button class="chip" data-flag="cheap">Under $30</button>
         <button class="chip" data-flag="near">Under 30 min</button>
         <button class="chip" data-flag="fortwo">For two</button>
         <button class="chip" data-flag="hidden">Hidden gems</button>
@@ -253,7 +260,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <p>Made for Ekta &amp; Kartik. Travel times are estimated from <span id="home-foot">where you are exploring from</span> — your exact address is never shown here or sent anywhere.</p>
+    <p>Made for the people who live here. Travel times are estimated from <span id="home-foot">where you are exploring from</span> — straight-line, so they under-read a weekday evening badly.</p>
     <p>Events carry a source and a verified date and expire on their own. Hours change — check the link before you travel. Ratings and progress stay in this browser.</p>
     <p class="foot-links">
       <button class="tab-link" data-view="quests" type="button">Quests</button>

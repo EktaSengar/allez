@@ -199,7 +199,11 @@ const Rank = (() => {
         daysBetween(today, item.start) <= 45) s += 4;
 
     // conditions
-    s += weatherFit(item, weatherMode);
+    /* A city with one climate passes one mode. The Bay Area passes a
+       lookup instead, because the Outer Sunset's afternoon and the
+       Mission's are two different afternoons two miles apart, and
+       ranking one against the other is the mistake this exists to stop. */
+    s += weatherFit(item, (ctx.weatherAt && ctx.weatherAt(item)) || weatherMode);
     s += airFit(item, airMode);
     s += seasonFit(item, today);
 

@@ -128,6 +128,17 @@
         <span class="loclabel">Recent</span>
         <div class="chips" id="loc-recent"></div>
       </div>
+      <!-- Hidden unless the city declares more than one starting point.
+
+           Before the zone list on purpose: "which side are you on" is a
+
+           bigger question than "which neighbourhood", and answering it
+
+           first is what makes the zone list mean anything. -->
+      <div class="locgroup" hidden>
+        <span class="loclabel">Where from</span>
+        <div class="chips" id="loc-bases"></div>
+      </div>
       <div class="locgroup">
         <span class="loclabel">Neighbourhood</span>
         <div class="chips" id="loc-zones"></div>
@@ -163,13 +174,13 @@
 <script src="../../js/keys.js?v=d850c74b"></script>
 <script src="../../js/location.js?v=b5655823"></script>
 <script src="../../js/state.js?v=381f1374"></script>
-<script src="../../js/weather.js?v=b74b2d9e"></script>
+<script src="../../js/weather.js?v=f053584c"></script>
 <script src="../../js/hours.js?v=f3930310"></script>
 <script src="../../js/record.js?v=492c838a"></script>
 <script src="../../js/invaders.js?v=bc4c1aab"></script>
 <script src="../../js/nearby.js?v=3a2ab53d"></script>
-<script src="../../js/scoring.js?v=4df0a19c"></script>
-<script src="../../js/app.js?v=4350efcb"></script>
+<script src="../../js/scoring.js?v=16ed6bd0"></script>
+<script src="../../js/app.js?v=a09cbe5e"></script>
 <!-- After app.js, because it calls App.defineView. This is what a pack
      shipping its own view looks like: one file, one registration, and
      nothing in the engine that knows it exists. -->
