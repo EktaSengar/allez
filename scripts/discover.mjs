@@ -293,7 +293,8 @@ async function run() {
   }
   /* Straight to data/places/. The index has not been one file since it
      outgrew a first paint — see scripts/shard.mjs. */
-  const { manifest } = await shard(doc, path.join(DATA, 'places'));
+  const { manifest } = await shard(doc, path.join(DATA, 'places'),
+    { zones: City.zone.centroids, bbox: City.bbox });
   const n = Object.keys(manifest.shards).length;
   console.log(`\n  wrote data/places/ — ${doc.items.length} places across ${n} shards\n`);
 }

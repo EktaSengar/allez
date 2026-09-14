@@ -31,7 +31,10 @@ const City = (() => {
      administrative boundary altogether.
 
      That last one is the important one. **NCR is in the zone model, not
-     in Away.** Half of anybody's Delhi happens in Gurugram or Noida —
+     in Away.** Gurugram, Noida, Ghaziabad, Faridabad and Greater Noida
+     are all zones here, and Cyber City and Sohna Road are named
+     separately because Gurugram is really two places and people say
+     which.** Half of anybody's Delhi happens in Gurugram or Noida —
      the office, the friends, the mall somebody actually goes to — and a
      guide that files them under day trips has misunderstood the city.
      They are twenty kilometres out, which in Delhi terms is nearer than
@@ -48,6 +51,11 @@ const City = (() => {
 
     centroids: {
       'chandni-chowk': [28.65598, 77.23219],
+      'ghaziabad': [28.77500, 77.45870],
+      'faridabad': [28.40315, 77.31056],
+      'greater-noida': [28.46707, 77.51376],
+      'cyber-city': [28.49807, 77.08926],
+      'sohna-road': [28.39994, 77.04527],
       'gurugram': [28.46461, 77.02992],
       'noida': [28.57063, 77.32721],
       'alaknanda': [28.52934, 77.25163],
@@ -318,6 +326,11 @@ const City = (() => {
 
     names: {
       'chandni-chowk': 'Chandni Chowk',
+      'ghaziabad': 'Ghaziabad',
+      'faridabad': 'Faridabad',
+      'greater-noida': 'Greater Noida',
+      'cyber-city': 'Cyber City',
+      'sohna-road': 'Sohna Road',
       'gurugram': 'Gurugram',
       'noida': 'Noida',
       'alaknanda': 'Alaknanda',
@@ -725,7 +738,11 @@ const City = (() => {
   /* GK-1, rounded. Air and weather are both asked for at this point. */
   const weather = { lat: 28.55, lon: 77.24, tz: 'Asia/Kolkata' };
 
-  const bbox = '28.40,76.95,28.75,77.40';
+  /* Delhi plus NCR, which is the unit people actually live in. The
+     first box stopped at 77.40 east and 28.75 north, which cut off
+     Greater Noida, Ghaziabad and the far half of Faridabad — three
+     places a great many Delhi lives happen in. */
+  const bbox = '28.28,76.82,28.92,77.62';
 
   /* Same reasoning as Bengaluru: a worker's scope is its own directory,
      and sw.js deserves splitting rather than copying. */

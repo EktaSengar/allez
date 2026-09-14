@@ -240,15 +240,27 @@ const App = (() => {
   /* Nearest first, by arrondissement centroid. The orphan shard — a
      handful of places on the edge of the bounding box with no
      arrondissement — is tiny and comes with the first batch. */
+  /* Nearest first. Each shard carries its own centroid in the index —
+     it used to be looked up from the zone table by number, and the guard
+     for a non-numeric key returned -1, which sorts *first*. For Paris,
+     whose keys are "1".."20", that never fired. For a city whose zone
+     keys are names it fired on every shard, so every one scored -1, the
+     sort was a no-op, and the first batch of four was whatever order the
+     index happened to list. The ordering that makes the first paint
+     local was doing nothing at all in two cities out of three. */
   function shardOrder() {
-    const keys = Object.keys(D['places/index']?.shards || {});
+    const index = D['places/index']?.shards || {};
     const here = Loc.active();
     const far = k => {
-      if (!/^\d+$/.test(k)) return -1;
-      const c = Loc.zoneCoords(Number(k));
-      return (c && here) ? Loc.km(c, [here.lat, here.lon]) : 1e6;
+      const s = index[k];
+      /* The orphan bucket has no position by definition; it is tiny and
+         belongs with the first batch, so it sorts to the front. */
+      if (!s) return 1e6;
+      const c = s.c || (/^\d+$/.test(k) ? Loc.zoneCoords(Number(k)) : null);
+      if (!c) return -1;
+      return here ? Loc.km(c, [here.lat, here.lon]) : 1e6;
     };
-    return keys.sort((a, b) => far(a) - far(b));
+    return Object.keys(index).sort((a, b) => far(a) - far(b));
   }
 
   /* Fetching and rebuilding are separate because the first batch of

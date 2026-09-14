@@ -28,6 +28,7 @@ evidence rather than taste.
 16. [Things deliberately not done](#16)
 17. [The city pack loads before every module that reads it](#17)
 18. [The tabs are markup, not a render](#18)
+19. [A shard is a bucket, not a zone](#19)
 
 ---
 
@@ -507,3 +508,43 @@ one label in the pack alone and confirming the run reports it.
 after rather than assuming the reservation trick in §3 covers it — that
 reserves height for text that is about to be written into an element that
 already exists, which is a different problem from an element that does not.
+
+<a id="19"></a>
+## 19. A shard is a bucket, not a zone
+
+`scripts/shard.mjs` groups the discovery index one file per zone while a
+city has at most `MAX_SHARDS` (24) of them, and switches to a grid over
+the bounding box above that. Paris has twenty arrondissements so it never
+grids, and its files are still `1.json`–`20.json`.
+
+Delhi has 267 colonies. One file per zone gave **194 shard files holding
+99 KB between them** — nine times Paris's request count for an eighth of
+its data, and a `FIRST_BATCH` of four covering a fraction of the ground
+four arrondissements cover. Gridded: 16 files, same data. Bengaluru went
+94 → 16 the same way.
+
+A record keeps its own `a` for display. Only the grouping changes, and
+nothing downstream reads the shard key for anything but "which file".
+
+**The grid is deliberately not a clustering pass.** Clustering balances
+the buckets better and also means a record can move file because a
+*different* record moved, which turns every weekly rebuild into a much
+larger diff than it needs to be.
+
+Each shard carries its own centroid as `c` in `index.json`, and
+`shardOrder()` sorts on that. It used to look the centroid up from the
+zone table by number, guarded with `if (!/^\d+$/.test(k)) return -1`.
+
+**That guard was a live bug for two years' worth of future cities.** `-1`
+sorts *first*, so for a city whose zone keys are names every shard scored
+-1, the sort was a no-op, and "the nearest shards arrive first" — the
+thing §4 exists to make possible — was doing nothing at all in Bengaluru
+and Delhi. It never fired in Paris because `"1"`–`"20"` are numeric.
+
+Where a shard key is a zone the city knows, its centroid is written from
+`City.zone.centroids` rather than from the mean of the file, so a city
+that was already sharding by zone keeps byte-identical ordering.
+
+**How it shows up:** not as an error. As a first paint that is no more
+local than a random quarter of the city, and a request waterfall with one
+entry per neighbourhood.
