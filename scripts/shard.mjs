@@ -89,7 +89,7 @@ export async function shard(doc, outDir = OUT) {
 
 /* Read every shard back as one document — for the Node scripts, which
    have no reason to care that the browser fetches it in pieces. */
-export async function readShards() {
+export async function readShards(outDir = OUT) {
   const manifest = JSON.parse(await fs.readFile(path.join(outDir, 'index.json'), 'utf8'));
   const items = [];
   for (const key of Object.keys(manifest.shards)) {
