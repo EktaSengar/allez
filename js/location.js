@@ -18,7 +18,7 @@
    --------------------------------------------------------- */
 
 const Loc = (() => {
-  const KEY = 'paris-for-you.location.v1';
+  const KEY = Keys.location;
   const UA_NOTE = City.ua;
 
   /* The twenty arrondissements: where each one actually sits, and what

@@ -2658,7 +2658,7 @@ const App = (() => {
 
   /* ---------- theme ---------- */
 
-  const THEME_KEY = 'paris-for-you.theme';
+  const THEME_KEY = Keys.theme;
 
   function applyTheme(mode) {
     const dark = mode === 'dark';

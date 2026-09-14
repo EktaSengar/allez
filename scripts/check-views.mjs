@@ -52,6 +52,7 @@ const VERBOSE = argv.includes('--verbose');
 const SAVE    = flag('--save');
 const COMPARE = flag('--compare');
 const PORT    = Number(flag('--port', 4399));
+const SEEDED  = argv.includes('--seed');
 
 /* A Wednesday in a fully-stocked part of the year: events live, no
    public holiday, nothing seasonal collapsed. Changing this changes
@@ -112,9 +113,64 @@ function forecast() {
   };
 }
 
+/* ---------- somebody who has used the site ----------
+
+   Two of the ten views — Saved and Quests — are empty without stored
+   state, so a run that clears localStorage never exercises them. Worse,
+   the storage keys are themselves a thing that gets refactored, and a
+   test that only ever sees an empty store cannot tell a working
+   migration from a silently discarded one.
+
+   So: a fixture of real ids, real quest targets and a real explored
+   list, written before the page boots. `--seed` writes it under
+   whichever key names are passed in, which is what makes it a migration
+   test as well as a rendering one — seed the old names, run the new
+   code, and the views must come out identical.
+
+   Ratings are spread across all four verdicts because `tasteWeights()`
+   only counts loved and good, and `isDone()` counts three of them; a
+   fixture that used one verdict would leave both paths unmeasured. */
+
+const FIXTURE = {
+  store: {
+    ratings: {
+      'du-pain-et-des-idees': 'loved',
+      'ten-belles': 'good',
+      'holybelly': 'want',
+      'cafe-margo': 'meh',
+      'boulangerie-utopie': 'want',
+      'cafe-pli-parmentier': 'never'
+    },
+    quests: {
+      'quest-arrondissements': ['1st — Palais-Royal', '2nd — the passages'],
+      'quest-bakeries': ['du-pain-et-des-idees'],
+      'quest-coffee': ['ten-belles']
+    },
+    arrs: [1, 2, 10, 11],
+    seen: { 'holybelly': '2026-09-10' }
+  },
+  /* Exploring from somewhere that is not home, because that is the
+     branch where `displayName` and the reset button both matter. */
+  location: {
+    home: null,
+    exploring: { lat: 48.8436, lon: 2.3497, arr: 5, area: 'Latin Quarter', label: 'Latin Quarter' },
+    recents: [{ lat: 48.8436, lon: 2.3497, arr: 5, area: 'Latin Quarter', label: 'Latin Quarter' }]
+  },
+  theme: 'dark'
+};
+
+/* Which key each piece is written under. Overridable so a run can seed
+   the pre-refactor names and assert the post-refactor page still finds
+   them. */
+const KEYS_BEFORE = {
+  store:    'paris-for-you.v1',
+  location: 'paris-for-you.location.v1',
+  theme:    'paris-for-you.theme'
+};
+
 /* ---------- pinning the page's four sources of drift ---------- */
 
-function pin(dateISO) {
+function pin(dateISO, seed) {
   /* Runs before any page script. Everything here is deliberately plain
      ES5-ish: it is serialised into the page, not bundled. */
   const FIXED = new Date(dateISO + 'T10:30:00').getTime();
@@ -131,15 +187,22 @@ function pin(dateISO) {
   window.Date = FrozenDate;
 
   /* mulberry32 — small, seeded, and good enough that two runs agree. */
-  let seed = 0x9e3779b9;
+  let prng = 0x9e3779b9;
   Math.random = function () {
-    seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
-    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    prng |= 0; prng = (prng + 0x6D2B79F5) | 0;
+    let t = Math.imul(prng ^ (prng >>> 15), 1 | prng);
     t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 
-  try { localStorage.clear(); } catch (e) {}
+  try {
+    localStorage.clear();
+    /* The theme is stored as a bare string — index.html reads it raw,
+       before any script, to avoid a flash of the wrong one. */
+    if (seed) for (const [k, v] of Object.entries(seed)) {
+      localStorage.setItem(k, typeof v === 'string' ? v : JSON.stringify(v));
+    }
+  } catch (e) {}
 
   /* The service worker would serve a previous run's copy of anything
      hashed, which is exactly the drift this script exists to catch. */
@@ -222,18 +285,25 @@ async function run() {
     process.exit(2);
   }
 
+  process.stdout.write(`\n  ${SEEDED ? 'seeded' : 'empty'} store · ${DATE}\n`);
   const srv = await serve();
   const browser = await puppeteer.launch({
     executablePath: chrome,
     args: ['--no-sandbox', '--disable-dev-shm-usage']
   });
 
-  const out = { date: DATE, generated: new Date().toISOString(), views: {} };
+  const out = { date: DATE, state: SEEDED ? 'seeded' : 'empty',
+                generated: new Date().toISOString(), views: {} };
 
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: 412, height: 823, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
-    await page.evaluateOnNewDocument(pin, DATE);
+    const seed = SEEDED ? {
+      [KEYS_BEFORE.store]:    FIXTURE.store,
+      [KEYS_BEFORE.location]: FIXTURE.location,
+      [KEYS_BEFORE.theme]:    FIXTURE.theme
+    } : null;
+    await page.evaluateOnNewDocument(pin, DATE, seed);
 
     await page.setRequestInterception(true);
     const wx = JSON.stringify(forecast());
@@ -287,6 +357,11 @@ function compare(before, after) {
   if (before.date !== after.date) {
     console.error(`\n  baseline was taken on ${before.date}, this run on ${after.date} —`);
     console.error('  every hash depends on the date, so these are not comparable.');
+    process.exit(2);
+  }
+  if ((before.state || 'empty') !== (after.state || 'empty')) {
+    console.error(`\n  baseline is the ${before.state || 'empty'} store, this run the ${after.state} one.`);
+    console.error('  Stored state changes what Saved and Quests draw — pass --seed to match.');
     process.exit(2);
   }
 

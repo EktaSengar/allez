@@ -17,9 +17,19 @@
 <link rel="preconnect" href="https://api.open-meteo.com">
 
 <script>
-  /* Set the theme before first paint so a saved dark preference never flashes light. */
+  /* Set the theme before first paint so a saved dark preference never
+     flashes light. This runs ahead of every script tag, js/keys.js
+     included, so it spells the key out rather than asking for it — and
+     carries the old single-city name over itself, because the flash it
+     exists to prevent would otherwise happen once to every existing
+     reader. The theme is deliberately not per-city: see js/keys.js. */
   try {
-    var t = localStorage.getItem('paris-for-you.theme');
+    var TK = 'homeground.theme';
+    var t = localStorage.getItem(TK);
+    if (t === null) {
+      var was = localStorage.getItem('paris-for-you.theme');
+      if (was !== null) { localStorage.setItem(TK, was); t = was; }
+    }
     if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
   } catch (e) {}
 </script>
@@ -142,17 +152,20 @@
      drawn. Nothing is delayed by the move: these scripts were always
      parser-blocking, so this changes the order, not the total. -->
 <!-- The city pack comes first: location.js, scoring.js, weather.js and
-     app.js all read `City` as they evaluate, not later. -->
+     app.js all read `City` as they evaluate, not later. keys.js is
+     second for the same reason — it needs City.id to name a key, and
+     state.js and location.js need the name as they evaluate. -->
 <script src="cities/paris/city.js?v=febc6574"></script>
-<script src="js/location.js?v=0236ae55"></script>
-<script src="js/state.js?v=c5c186fb"></script>
+<script src="js/keys.js?v=d850c74b"></script>
+<script src="js/location.js?v=c40c79e7"></script>
+<script src="js/state.js?v=7bfc0caa"></script>
 <script src="js/weather.js?v=b74b2d9e"></script>
 <script src="js/hours.js?v=f3930310"></script>
 <script src="js/record.js?v=65b2ff09"></script>
 <script src="js/invaders.js?v=00fec559"></script>
 <script src="js/nearby.js?v=a1c9f21d"></script>
 <script src="js/scoring.js?v=46f412de"></script>
-<script src="js/app.js?v=671b3b03"></script>
+<script src="js/app.js?v=80168363"></script>
 
 <nav class="tabs" id="tabs">
   <div class="wrap tabs-inner">

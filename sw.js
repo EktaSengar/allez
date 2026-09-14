@@ -36,13 +36,19 @@
      the same page a fresh one would.
    --------------------------------------------------------- */
 
-const ASSETS = 'paris-assets-v1';
+/* One origin serves every city, so the cache names carry the city or
+   two packs share a store and trim each other's files. This worker is
+   served from the city's own directory and its scope is that directory,
+   so the name only has to agree with itself. */
+const CITY = 'paris';
+
+const ASSETS = `homeground-${CITY}-assets-v1`;
 /* v2: v1 could only ever hold opaque entries written by an earlier
    build of this file, and those cannot be checked for validity. The
    activate handler deletes any cache not named here, so bumping the
    name is how they are thrown away. */
-const PHOTOS = 'paris-photos-v2';
-const PAGES  = 'paris-pages-v1';
+const PHOTOS = `homeground-${CITY}-photos-v2`;
+const PAGES  = `homeground-${CITY}-pages-v1`;
 
 /* Roughly two deploys' worth of hashed files, and enough photographs to
    cover the views somebody actually opens. Both are trimmed oldest-first,

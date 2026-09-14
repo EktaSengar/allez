@@ -4,12 +4,12 @@
    --------------------------------------------------------- */
 
 const Store = (() => {
-  const KEY = 'paris-for-you.v1';
+  const KEY = Keys.store;
 
   const blank = () => ({
     ratings: {},      // id -> 'loved' | 'good' | 'meh' | 'never' | 'want'
     quests: {},       // questId -> [target strings]
-    arrs: [],         // arrondissement numbers explored
+    arrs: [],         // zones explored — arrondissements here, wards elsewhere
     seen: {}          // id -> ISO date first shown as a surprise
   });
 

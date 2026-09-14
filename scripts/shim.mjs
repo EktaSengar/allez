@@ -52,9 +52,19 @@ function evaluate(src, name, globals) {
 export const City = evaluate(
   fs.readFileSync(path.join(ROOT, 'cities', 'paris', 'city.js'), 'utf8'), 'City', {});
 
+/* Storage names. `keys.js` reads City.id and touches localStorage as it
+   evaluates — carrying the old single-city keys over — so Node hands it
+   somewhere harmless to write to and nothing carries over. state.js and
+   location.js both read `Keys` at evaluation time, so it is injected
+   alongside City for the same reason. */
+const noStore = { getItem: () => null, setItem: () => {}, removeItem: () => {} };
+export const Keys = evaluate(
+  fs.readFileSync(path.join(JS, 'keys.js'), 'utf8'), 'Keys',
+  { City, localStorage: noStore });
+
 export function loadModule(file, name, globals = {}) {
   const src = fs.readFileSync(path.join(JS, file), 'utf8');
-  return evaluate(src, name, { City, ...globals });
+  return evaluate(src, name, { City, Keys, ...globals });
 }
 
 /* The two the record layer needs, in the order they depend on each
