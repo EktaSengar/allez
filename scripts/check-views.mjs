@@ -344,7 +344,17 @@ async function run() {
     page.on('request', req => {
       const url = req.url();
       if (url.includes('api.open-meteo.com')) {
-        return req.respond({ status: 200, contentType: 'application/json', body: wx });
+        /* The real endpoint sends CORS headers and a stub that does not
+           is refused by the browser, so the page sees a failed fetch
+           rather than the fixed forecast. Every baseline taken before
+           this was therefore captured with NO weather at all — still
+           deterministic, which is why the comparisons held, but the
+           weather-dependent half of the ranking was never exercised. */
+        return req.respond({
+          status: 200, contentType: 'application/json',
+          headers: { 'access-control-allow-origin': '*' },
+          body: wx
+        });
       }
       /* Photographs are cross-origin and slow and never change the
          markup — the <img src> is already in the HTML either way. */

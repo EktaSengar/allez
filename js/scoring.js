@@ -72,6 +72,36 @@ const Rank = (() => {
 
   /* --- does it suit the sky? --- */
 
+  /* ---------- air ----------
+
+     Only cities whose pack declares `City.air` ever pass an `airMode`,
+     so this costs everywhere else one undefined check.
+
+     Deliberately shaped like `weatherFit`, and deliberately NOT shaped
+     like a filter. The tempting version returns -Infinity on a severe
+     day and empties the outdoor half of the site. That reads as careful
+     and is useless: Delhi has six to eight weeks of this a year, people
+     still have Sundays, and nobody is choosing between a garden and
+     clean air — they are choosing between a garden and the sofa.
+
+     So the numbers are large enough to reorder a page and never large
+     enough to clear one. An outdoor place on a hazardous day sits below
+     the indoor ones and is still on the page, with the air stated plainly
+     at the top, so the reader is deciding rather than being decided for.
+
+     How hard to push is a judgement about a city, so the pack supplies
+     the weights. This is only the shape. */
+  function airFit(item, mode) {
+    if (!mode || typeof City === 'undefined' || !City.air) return 0;
+    const outdoor = item.indoor === false || item.weatherSensitive;
+    const indoor  = item.indoor === true;
+    const w = City.air.weight[mode];
+    if (!w) return 0;
+    if (indoor)  return w.indoor  || 0;
+    if (outdoor) return w.outdoor || 0;
+    return 0;
+  }
+
   function weatherFit(item, mode) {
     if (!mode) return 0;
     const outdoor = item.indoor === false || item.weatherSensitive;
@@ -116,7 +146,7 @@ const Rank = (() => {
   /* --- the main event --- */
 
   function score(item, ctx) {
-    const { today, weatherMode, taste = {}, exploredArrs = [], homeArr = null } = ctx;
+    const { today, weatherMode, airMode, taste = {}, exploredZones = [], homeZone = null } = ctx;
 
     const rating = Store.rating(item.id);
     if (rating === 'never') return -Infinity;          // hard exclude
@@ -170,13 +200,14 @@ const Rank = (() => {
 
     // conditions
     s += weatherFit(item, weatherMode);
+    s += airFit(item, airMode);
     s += seasonFit(item, today);
 
     // suits a couple
     if ((item.goodFor || []).includes('couple')) s += 2;
 
     // somewhere you have not been — your own arrondissement is not "new"
-    if (item.zone && !exploredArrs.includes(item.zone) && item.zone !== homeArr) s += 3;
+    if (item.zone && !exploredZones.includes(item.zone) && item.zone !== homeZone) s += 3;
 
     // learned taste
     let tasteBump = 0;

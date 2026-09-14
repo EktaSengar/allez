@@ -516,6 +516,16 @@ out `rows`, `card`, `stripHead`, `esc` and the live record pool, and a pack view
 composes exactly what the built-in ones do. `cities/bengaluru/views/yourside.js`
 is the worked example.
 
+A pack may also declare `City.air`, which loads `js/air.js` and adds air quality
+as a ranking input. **It is deliberately not a filter.** The obvious build gates
+outdoor suggestions above some AQI, and it is useless: Delhi has six to eight
+weeks a year like that, life does not pause for them, and nobody is choosing
+between Lodhi Garden and clean air — they are choosing between Lodhi Garden and
+the sofa. So the number is stated plainly at the top, indoor things rise, outdoor
+things fall a long way and never fall off, and the hourly forecast is used for
+the genuinely useful part: *"Better around 5am, at about 174."* Paris declares no
+`air`, never loads the file, and pays nothing.
+
 A pack that has no shape worth drawing omits `zone.map` and the zone quest
 falls back to a list of chips. Paris spirals out from the 1st and is worth a
 drawing; Bengaluru is ninety-five named neighbourhoods, where a dot per zone

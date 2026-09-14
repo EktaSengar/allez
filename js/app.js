@@ -39,6 +39,10 @@ const App = (() => {
   let CTX = {};
   let WX = null;
   let WXP = null;                       // the forecast, in flight
+  /* Only the cities whose pack declares `City.air` ever load js/air.js
+     or set these. Everywhere else they stay null and cost nothing. */
+  let AQ = null;
+  let AQP = null;
   let VIEW = 'today';
   let HOME = { label: 'Paris' };        // replaced by the location engine
   let DISCOVERED = [];                  // OpenStreetMap layer, positions only
@@ -351,6 +355,16 @@ const App = (() => {
     Weather.setHome(HOME.lat, HOME.lon);
     WXP = Weather.load().catch(e => { console.warn('weather failed', e); return null; });
 
+    /* Started here for the same reason the forecast is: it is a small
+       answer from somewhere else and the only thing it waits on is a
+       pair of coordinates. Never awaited — the page must not be held for
+       it, and it repaints when it lands. */
+    if (City.air && typeof Air !== 'undefined') {
+      Air.setHome(HOME.lat, HOME.lon, City.weather.tz);
+      AQP = Air.load().then(a => { AQ = a; return a; })
+                      .catch(e => { console.warn('air failed', e); return null; });
+    }
+
     /* The near shards and the core files race each other. They used to
        queue: every core file, then the index, then the shards, then the
        first pixel — three round trips deep for no reason but the order
@@ -408,9 +422,10 @@ const App = (() => {
     CTX = {
       today: TODAY_ISO,
       weatherMode: WX ? WX.mode : null,
+      airMode: AQ ? AQ.mode : null,
       taste: Store.tasteWeights([...ALL, ...DISCOVERED]),
-      exploredArrs: Store.zones(),
-      homeArr: Loc.active()?.zone ?? null
+      exploredZones: Store.zones(),
+      homeZone: Loc.active()?.zone ?? null
     };
   }
 
@@ -1334,8 +1349,8 @@ const App = (() => {
        from a mis-tap on a phone held at arm's length under a wall. */
     const near = Invaders.nearby({ limit: 5, within: 25, includeFound: true });
     const missions = Invaders.missions({
-      exploredArrs: Store.zones(),
-      homeArr: Loc.active()?.zone ?? null
+      exploredZones: Store.zones(),
+      homeZone: Loc.active()?.zone ?? null
     });
 
     /* Never a percentage. The denominator is what OpenStreetMap knows,
@@ -2571,6 +2586,13 @@ const App = (() => {
       bits.push(`${WX.now.icon} ${WX.now.temp}°, ${WX.now.label.toLowerCase()}`);
       bits.push(WX.advice);
     }
+    /* Stated rather than implied. The air is already reordering
+       everything below it, and a number that shapes a page invisibly is
+       worse than no number at all. */
+    if (AQ) {
+      bits.push(AQ.line);
+      bits.push(AQ.advice);
+    }
     $('#conditions').textContent = bits.join(' · ');
 
     const notes = [];
@@ -3114,6 +3136,22 @@ const App = (() => {
        in, which is what render() has always done. */
 
     /* Only if the deadline above expired before it answered. */
+    /* Same shape as the forecast's late path below, and for the same
+       three reasons: the air changes what the ranking prefers, so the
+       context has to be rebuilt; it is stated in the header, so the
+       header has to be rewritten; and the view has to be redrawn rather
+       than waiting for the reader to change tab.
+
+       `repaint()` alone was not enough — it redraws #view and leaves the
+       header alone, so the number was shaping the page invisibly, which
+       is the one thing this feature must not do. */
+    if (AQP) AQP.then(a => {
+      if (!a) return;
+      buildContext();
+      renderHeader();
+      render();
+    });
+
     if (!WX) WXP.then(wx => {
       if (!wx) return;
       WX = wx;
