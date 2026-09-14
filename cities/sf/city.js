@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   cities/bay-area/city.js — what is true of the Bay Area.
+   cities/sf/city.js — what is true of the Bay Area, called SF.
 
    The fourth pack, and the one the plan expected to break the model.
    It did not, because two things turned out to be true:
@@ -18,10 +18,25 @@
 
 const City = (() => {
 
-  const id   = 'bay-area';
-  const name = 'the Bay Area';
+  const id   = 'sf';
 
-  const ua = 'homeground-bay-area (personal site)';
+  /* Called SF rather than "the Bay Area", and the reason is the
+     wordmark: you can say "Allez SF" and you cannot say "Allez the
+     Bay". The article breaks the line, which is a small thing until it
+     is the name of the product.
+
+     It is a slight overclaim and worth being honest about — the pack
+     covers Palo Alto and Mountain View, which are emphatically not San
+     Francisco, and somebody in Mountain View is not going to describe
+     where they live as SF. What stops that being a problem is that the
+     region is the only unit anyone actually moves around in, `zone.side`
+     already knows which half of it you are on, and the location bar
+     always shows the neighbourhood rather than the city name. `SF` is
+     the label on the tin, not a claim about where you are standing —
+     which is why `zone.fallback` below still says the Bay Area. */
+  const name = 'SF';
+
+  const ua = 'allez-sf (personal site)';
 
   /* ---------- what a piece of it is called ----------
 
