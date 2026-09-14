@@ -1,7 +1,599 @@
 {
   "generated": "2026-09-14",
   "source": "OpenStreetMap via Overpass · ODbL",
-  "note": "Empty placeholder. scripts/discover.mjs has not been run for this city — the real index replaces this wholesale.",
-  "counts": {},
-  "shards": {}
+  "note": "Names, categories, positions and the practical facts OSM records — opening hours, contact, access, and when anybody last checked. No opinions: the curated files carry the judgement, this carries the coverage, so that changing location changes what exists nearby rather than only how far away the old list is.",
+  "counts": {
+    "bakery": 187,
+    "cafe": 524,
+    "restaurant": 1053,
+    "market": 130,
+    "deli": 351,
+    "park": 1134,
+    "museum": 55,
+    "sport": 244,
+    "nightlife": 117,
+    "culture": 136,
+    "books": 73
+  },
+  "shards": {
+    "kaushambi": {
+      "n": 4
+    },
+    "vivek-vihar": {
+      "n": 37
+    },
+    "central-vista": {
+      "n": 26
+    },
+    "sector-56": {
+      "n": 4
+    },
+    "noida": {
+      "n": 57
+    },
+    "shahpur-jat": {
+      "n": 35
+    },
+    "chittaranjan-park": {
+      "n": 49
+    },
+    "indraprastha-extension": {
+      "n": 28
+    },
+    "lodhi-colony": {
+      "n": 60
+    },
+    "samalkha": {
+      "n": 13
+    },
+    "defence-colony": {
+      "n": 43
+    },
+    "connaught-place": {
+      "n": 223
+    },
+    "greater-kailash": {
+      "n": 88
+    },
+    "nizamuddin": {
+      "n": 31
+    },
+    "karol-bagh": {
+      "n": 29
+    },
+    "chandni-chowk": {
+      "n": 64
+    },
+    "ramakrishna-puram": {
+      "n": 17
+    },
+    "hauz-khas": {
+      "n": 60
+    },
+    "paharganj": {
+      "n": 91
+    },
+    "hari-nagar": {
+      "n": 28
+    },
+    "neb-sarai": {
+      "n": 20
+    },
+    "surya-nagar": {
+      "n": 21
+    },
+    "malviya-nagar": {
+      "n": 77
+    },
+    "moti-bagh": {
+      "n": 72
+    },
+    "lajpat-nagar": {
+      "n": 57
+    },
+    "saket": {
+      "n": 57
+    },
+    "chhattarpur": {
+      "n": 17
+    },
+    "green-park": {
+      "n": 29
+    },
+    "vasant-kunj": {
+      "n": 39
+    },
+    "mayur-vihar": {
+      "n": 65
+    },
+    "vasant-vihar": {
+      "n": 38
+    },
+    "chirag-delhi": {
+      "n": 27
+    },
+    "wazirabad": {
+      "n": 16
+    },
+    "pitampura": {
+      "n": 51
+    },
+    "rohini": {
+      "n": 60
+    },
+    "shivaji-nagar": {
+      "n": 1
+    },
+    "ashok-vihar": {
+      "n": 38
+    },
+    "preet-vihar": {
+      "n": 70
+    },
+    "shakarpur": {
+      "n": 55
+    },
+    "babarpur": {
+      "n": 26
+    },
+    "jahangir-puri": {
+      "n": 32
+    },
+    "sector-26a": {
+      "n": 13
+    },
+    "old-delhi": {
+      "n": 28
+    },
+    "noida-city-centre": {
+      "n": 46
+    },
+    "badarpur": {
+      "n": 40
+    },
+    "majnu-ka-tila": {
+      "n": 33
+    },
+    "sector-20": {
+      "n": 7
+    },
+    "sector-24": {
+      "n": 26
+    },
+    "nand-nagari": {
+      "n": 16
+    },
+    "vasundhara": {
+      "n": 36
+    },
+    "badli": {
+      "n": 29
+    },
+    "mayapuri": {
+      "n": 29
+    },
+    "sector-43": {
+      "n": 22
+    },
+    "nawada": {
+      "n": 26
+    },
+    "gandhi-nagar": {
+      "n": 7
+    },
+    "sector-41": {
+      "n": 1
+    },
+    "sector-27": {
+      "n": 33
+    },
+    "sector-51": {
+      "n": 36
+    },
+    "palam": {
+      "n": 45
+    },
+    "pasonda": {
+      "n": 25
+    },
+    "shahdara": {
+      "n": 31
+    },
+    "dwarka": {
+      "n": 92
+    },
+    "vaishali": {
+      "n": 18
+    },
+    "kamla-nagar": {
+      "n": 83
+    },
+    "sector-53": {
+      "n": 27
+    },
+    "trilok-puri": {
+      "n": 6
+    },
+    "sector-25": {
+      "n": 27
+    },
+    "model-town": {
+      "n": 43
+    },
+    "geeta-colony": {
+      "n": 3
+    },
+    "paschim-vihar": {
+      "n": 27
+    },
+    "janakpuri": {
+      "n": 18
+    },
+    "south-extension": {
+      "n": 25
+    },
+    "north-campus": {
+      "n": 62
+    },
+    "karkarduma": {
+      "n": 27
+    },
+    "rajendra-nagar": {
+      "n": 24
+    },
+    "sector-30": {
+      "n": 1
+    },
+    "andrews-ganj": {
+      "n": 24
+    },
+    "alaknanda": {
+      "n": 32
+    },
+    "chanakyapuri": {
+      "n": 28
+    },
+    "sector-29": {
+      "n": 18
+    },
+    "sector-1": {
+      "n": 6
+    },
+    "vikaspuri": {
+      "n": 12
+    },
+    "seelampur": {
+      "n": 7
+    },
+    "lado-sarai": {
+      "n": 43
+    },
+    "kalkaji": {
+      "n": 40
+    },
+    "khora": {
+      "n": 30
+    },
+    "tilak-nagar": {
+      "n": 8
+    },
+    "rajouri-garden": {
+      "n": 24
+    },
+    "asola": {
+      "n": 1
+    },
+    "sector-48": {
+      "n": 10
+    },
+    "patel-nagar": {
+      "n": 14
+    },
+    "safdarjung-enclave": {
+      "n": 43
+    },
+    "shalimar-bagh": {
+      "n": 18
+    },
+    "govindpuri": {
+      "n": 11
+    },
+    "sector-50": {
+      "n": 15
+    },
+    "kidwai-nagar": {
+      "n": 33
+    },
+    "satbari": {
+      "n": 2
+    },
+    "sector-14": {
+      "n": 4
+    },
+    "shaheen-bagh": {
+      "n": 6
+    },
+    "begampur": {
+      "n": 11
+    },
+    "jamia-nagar": {
+      "n": 4
+    },
+    "kishangarh": {
+      "n": 23
+    },
+    "new-friends-colony": {
+      "n": 18
+    },
+    "dilshad-garden": {
+      "n": 25
+    },
+    "raj-nagar-ii": {
+      "n": 19
+    },
+    "sector-38": {
+      "n": 5
+    },
+    "surajkund": {
+      "n": 16
+    },
+    "dhaula-kuan": {
+      "n": 9
+    },
+    "naraina-village": {
+      "n": 20
+    },
+    "sector-44": {
+      "n": 4
+    },
+    "goyla-khurd": {
+      "n": 5
+    },
+    "sarojini-nagar": {
+      "n": 7
+    },
+    "anangpur": {
+      "n": 3
+    },
+    "sector-65": {
+      "n": 1
+    },
+    "harola": {
+      "n": 16
+    },
+    "sector-58": {
+      "n": 1
+    },
+    "netaji-nagar": {
+      "n": 6
+    },
+    "jasola-vihar": {
+      "n": 9
+    },
+    "okhla": {
+      "n": 8
+    },
+    "sector-25a": {
+      "n": 48
+    },
+    "sadar-bazar": {
+      "n": 7
+    },
+    "mamura": {
+      "n": 19
+    },
+    "sector-40": {
+      "n": 2
+    },
+    "sector-75a": {
+      "n": 1
+    },
+    "nithari": {
+      "n": 23
+    },
+    "gopal-nagar": {
+      "n": 10
+    },
+    "sector-28": {
+      "n": 9
+    },
+    "punjabi-bagh": {
+      "n": 9
+    },
+    "sangam-vihar": {
+      "n": 5
+    },
+    "gharoli": {
+      "n": 17
+    },
+    "sector-23": {
+      "n": 4
+    },
+    "sector-4": {
+      "n": 2
+    },
+    "sainik-farms": {
+      "n": 1
+    },
+    "sector-55": {
+      "n": 2
+    },
+    "mehrauli": {
+      "n": 4
+    },
+    "kirti-nagar": {
+      "n": 3
+    },
+    "laxmi-nagar": {
+      "n": 13
+    },
+    "old-faridabad": {
+      "n": 22
+    },
+    "iffco-chowk": {
+      "n": 3
+    },
+    "sarita-vihar": {
+      "n": 10
+    },
+    "sahibabad-industrial-area": {
+      "n": 4
+    },
+    "naraina": {
+      "n": 1
+    },
+    "azadpur": {
+      "n": 19
+    },
+    "bhalswa": {
+      "n": 7
+    },
+    "sector-15-ii": {
+      "n": 3
+    },
+    "badkhal": {
+      "n": 2
+    },
+    "tughlakabad": {
+      "n": 8
+    },
+    "sector-54": {
+      "n": 3
+    },
+    "sector-17": {
+      "n": 1
+    },
+    "sector-37c": {
+      "n": 4
+    },
+    "raisina-hill": {
+      "n": 16
+    },
+    "nangloi": {
+      "n": 1
+    },
+    "sector-47": {
+      "n": 10
+    },
+    "sector-2": {
+      "n": 3
+    },
+    "palam-vihar-extension": {
+      "n": 1
+    },
+    "sector-49": {
+      "n": 7
+    },
+    "sector-26": {
+      "n": 3
+    },
+    "sector-9a": {
+      "n": 1
+    },
+    "mahavir-enclave": {
+      "n": 21
+    },
+    "yamuna-vihar": {
+      "n": 26
+    },
+    "sultanpuri": {
+      "n": 1
+    },
+    "sector-45": {
+      "n": 7
+    },
+    "noble-enclave": {
+      "n": 1
+    },
+    "sector-46": {
+      "n": 2
+    },
+    "sector-52a": {
+      "n": 5
+    },
+    "sector-23a": {
+      "n": 1
+    },
+    "sahibabad": {
+      "n": 20
+    },
+    "qutub-vihar": {
+      "n": 13
+    },
+    "moti-nagar": {
+      "n": 7
+    },
+    "new-ashok-nagar": {
+      "n": 2
+    },
+    "sarai-rohilla": {
+      "n": 10
+    },
+    "uttam-nagar": {
+      "n": 4
+    },
+    "chilla": {
+      "n": 5
+    },
+    "sector-21": {
+      "n": 1
+    },
+    "sector-31": {
+      "n": 3
+    },
+    "new-colony": {
+      "n": 2
+    },
+    "bhajanpura": {
+      "n": 4
+    },
+    "sector-61": {
+      "n": 4
+    },
+    "paprawat": {
+      "n": 1
+    },
+    "sector-42": {
+      "n": 8
+    },
+    "lok-nayak-puram": {
+      "n": 4
+    },
+    "sector-110a": {
+      "n": 4
+    },
+    "begum-pur": {
+      "n": 1
+    },
+    "sector-57": {
+      "n": 1
+    },
+    "sector-52": {
+      "n": 1
+    },
+    "chattarpur-farms": {
+      "n": 2
+    },
+    "civil-lines": {
+      "n": 1
+    },
+    "maidan-garhi": {
+      "n": 2
+    },
+    "ghazipur": {
+      "n": 2
+    },
+    "sector-11a": {
+      "n": 1
+    },
+    "anand-vihar": {
+      "n": 1
+    },
+    "sector-12a": {
+      "n": 1
+    },
+    "sector-9": {
+      "n": 1
+    }
+  }
 }
