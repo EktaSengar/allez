@@ -233,6 +233,36 @@ async function settle(page, { quiet = 900, floor = 2500, cap = 40000 } = {}) {
   }
 }
 
+/* ---------- the declaration and the markup must agree ----------
+
+   The city pack says which views exist and in what order; index.html
+   carries the nav that shows them. Two lists, deliberately — writing the
+   tabs from JavaScript would mean writing them after the first paint and
+   shoving the page down, which invariant 1 exists to prevent. The cost of
+   keeping them apart is that they can drift, and drift here is silent: a
+   tab with no declaration renders an empty view, and a declaration with
+   no tab is simply unreachable. So check, rather than trust. */
+
+async function checkTabs(page) {
+  const r = await page.evaluate(() => {
+    const declared = [...City.views.main, ...City.views.utility];
+    const dom = [...document.querySelectorAll('.tab')].map(t => ({
+      id: t.dataset.view, label: t.textContent.trim()
+    }));
+    return { declared: declared.map(v => ({ id: v.id, label: v.label })), dom };
+  });
+  const problems = [];
+  const ids = a => a.map(v => v.id).join(',');
+  if (ids(r.declared) !== ids(r.dom)) {
+    problems.push(`  order or membership differs\n     pack: ${ids(r.declared)}\n     nav : ${ids(r.dom)}`);
+  }
+  for (const d of r.declared) {
+    const m = r.dom.find(x => x.id === d.id);
+    if (m && m.label !== d.label) problems.push(`  "${d.id}" reads "${m.label}" in the nav, "${d.label}" in the pack`);
+  }
+  return problems;
+}
+
 /* ---------- what a view is, for comparison purposes ---------- */
 
 async function capture(page, view) {
@@ -320,6 +350,16 @@ async function run() {
 
     await page.goto(`http://localhost:${PORT}/`, { waitUntil: 'domcontentloaded', timeout: 60000 });
 
+    const drift = await checkTabs(page);
+    out.tabsAgree = drift.length === 0;
+    if (drift.length) {
+      process.stdout.write('\n  TABS DRIFTED from the city pack\n');
+      drift.forEach(d => process.stdout.write(d + '\n'));
+      process.stdout.write('\n');
+    } else {
+      process.stdout.write('  tabs match the pack\n');
+    }
+
     for (const view of VIEWS) {
       await page.evaluate(v => {
         const t = document.querySelector(`.tab[data-view="${v}"]`);
@@ -381,6 +421,11 @@ function compare(before, after) {
     }
     if (b.textHash === a.textHash) console.log('             text identical — markup changed, wording did not');
     if (b.headerHash !== a.headerHash) console.log('             header lines also changed');
+  }
+
+  if (after.tabsAgree === false) {
+    console.log('\n  the nav no longer matches City.views — see above');
+    bad++;
   }
 
   console.log('');

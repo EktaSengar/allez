@@ -493,6 +493,20 @@ The **data** is already per-city by construction. And **index.html** is Paris's
 own page, down to the croissant in the favicon: a city owns its page, and the
 engine does not write it.
 
+The pack also declares **which views exist**, in what order, what each tab
+reads and what the line under it says. The engine supplies a builder for every
+id it knows; a city that wants a view the engine has never heard of ships a
+file after `app.js` and calls `App.defineView(id, build, lede)`, then lists the
+id in `City.views`. Nothing in the engine needs to know it happened. A view
+that is declared with no builder says so on the page rather than drawing a
+blank one that looks like a data bug.
+
+The tabs themselves stay as markup in `index.html` rather than being written
+from JavaScript, because the nav is parsed after the scripts and filling it at
+`DOMContentLoaded` would move the page after the first paint. That means two
+lists that can drift, so `check-views.mjs` asserts they agree — membership,
+order and labels — and fails if they do not.
+
 Node gets the pack from `scripts/shim.mjs`, which loads it once and injects
 `City` into every module it evaluates, so a build script cannot forget to pass
 it and then fail in a way the browser never would.

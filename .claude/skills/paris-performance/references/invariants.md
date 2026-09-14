@@ -27,6 +27,7 @@ evidence rather than taste.
 15. [Every fill path redraws through `repaint()`](#15)
 16. [Things deliberately not done](#16)
 17. [The city pack loads before every module that reads it](#17)
+18. [The tabs are markup, not a render](#18)
 
 ---
 
@@ -478,3 +479,31 @@ module it evaluates. A build script cannot forget to pass it.
 
 **How the failure shows up:** not subtly. Every view is empty and the
 console has a single `City is not defined` before anything renders.
+
+<a id="18"></a>
+## 18. The tabs are markup, not a render
+
+`City.views` declares which views exist and in what order, and `index.html`
+separately carries the nav that shows them. Two lists of the same thing
+looks like an oversight. It is not.
+
+The nav sits below the script tags (§1), so at the moment `app.js`
+evaluates it has not been parsed yet and cannot be filled. The only other
+place to write it is `init()`, which runs on `DOMContentLoaded` — after the
+first paint. Generating ten tabs there inserts a ~44 px band above `#main`
+and shoves the whole page down, which is precisely the shift §1 and §3
+exist to remove.
+
+So the page keeps its own markup, and the cost is that the two lists can
+drift — silently, because a tab with no declaration renders an empty view
+and a declaration with no tab is simply unreachable.
+
+`scripts/check-views.mjs` closes that: it reads `City.views` out of the
+running page, compares membership, order and labels against the `.tab`
+elements, and fails the comparison if they disagree. Verified by renaming
+one label in the pack alone and confirming the run reports it.
+
+**If you ever do move the tabs into JavaScript,** measure CLS before and
+after rather than assuming the reservation trick in §3 covers it — that
+reserves height for text that is about to be written into an element that
+already exists, which is a different problem from an element that does not.

@@ -859,18 +859,41 @@ const App = (() => {
 
   /* ---------- views ---------- */
 
-  const LEDE = {
-    today:   'What is open, close, and worth leaving the flat for.',
-    nights:  'Concerts, jazz rooms, dancing and a drink first. Doors, prices and how far each one is from where you are.',
-    sport:   'Two halves: things we can play, and things we can go and watch.',
-    weekend: '',
-    eat:     '',
-    explore: '',
-    regulars:'',
-    away:    'Six mainline stations, and most of them reach somewhere worth a whole day. Some of these are closer than the other side of Paris.',
-    quests:  'Long games. Progress is saved in this browser.',
-    saved:   'What you have marked, and what you have already done.'
-  };
+  /* ---------- the view registry ----------
+
+     A view is two halves with two different owners. The **builder** is
+     the engine's: it knows how to rank, how to group, how to draw a
+     card. The **declaration** is the city's: which views exist, in what
+     order, what the tab reads and what the line under it says. Those
+     used to be the same thing — a fixed row of eight tabs and an
+     if/else chain — which is fine with one city and wrong with four.
+
+     Bengaluru will want a *Your side of town* view that Paris has no
+     use for. `defineView` is how a pack adds one: ship a file after
+     this one, call it, and list the id in `City.views`. Nothing here
+     needs to know it happened.
+
+     The static line comes from the pack. Four views compute theirs
+     from what they just drew, and pass a function instead. */
+
+  const VIEWS = Object.create(null);
+  const defineView = (id, build, lede) => { VIEWS[id] = { build, lede: lede || null }; };
+
+  defineView('today',    () => renderToday());
+  defineView('nights',   () => renderNights());
+  defineView('sport',    () => renderSport());
+  defineView('weekend',  c  => renderWeekend(c.weekend), c => weekendLede(c.weekend));
+  defineView('eat',      () => renderEat(),      () => eatLede());
+  defineView('explore',  () => renderExplore(),  () => exploreLede());
+  defineView('regulars', () => renderRegulars(), () => regularsLede());
+  defineView('away',     () => renderAway());
+  defineView('quests',   () => renderQuests());
+  defineView('saved',    () => renderSaved());
+
+  /* Flattened once: the tabs are one list to the engine, and only
+     index.html cares that some of them sit in a smaller group. */
+  const DECLARED = [...City.views.main, ...City.views.utility];
+  const LEDE = Object.fromEntries(DECLARED.filter(v => v.lede).map(v => [v.id, v.lede]));
 
   /* ---------- drawing the same answer twice ----------
 
@@ -934,19 +957,21 @@ const App = (() => {
     const box = $('#view');
     const w = weekend();
 
+    const view = VIEWS[VIEW];
+    const ctx = { weekend: w };
     let lede = LEDE[VIEW] || '';
     let html = '';
 
-    if      (VIEW === 'today')   html = renderToday();
-    else if (VIEW === 'nights')  html = renderNights();
-    else if (VIEW === 'sport')   html = renderSport();
-    else if (VIEW === 'weekend') { lede = weekendLede(w); html = renderWeekend(w); }
-    else if (VIEW === 'eat')     { lede = eatLede();      html = renderEat(); }
-    else if (VIEW === 'explore') { lede = exploreLede();  html = renderExplore(); }
-    else if (VIEW === 'regulars'){ lede = regularsLede(); html = renderRegulars(); }
-    else if (VIEW === 'away')    html = renderAway();
-    else if (VIEW === 'quests')  html = renderQuests();
-    else if (VIEW === 'saved')   html = renderSaved();
+    if (view) {
+      /* Lede before markup, because the four that compute one do it from
+         state the builder is about to change. */
+      if (view.lede) lede = view.lede(ctx);
+      html = view.build(ctx);
+    } else {
+      /* A pack listed a view and shipped no builder for it. Say so
+         rather than drawing an empty page that looks like a data bug. */
+      html = `<p class="empty">No builder is registered for the “${esc(VIEW)}” view.</p>`;
+    }
 
     $('#lede').textContent = lede;
 
@@ -3126,7 +3151,11 @@ const App = (() => {
      exist yet, and to stay correct if this ever moves again. */
   renderStatics();
 
-  return { init };
+  /* `defineView` is the extension point a city pack uses: load a file
+     after this one, register a builder, and list the id in City.views.
+     Exposed rather than kept inside because the pack is a separate
+     script — that is the whole point of it. */
+  return { init, defineView };
 })();
 
 document.addEventListener('DOMContentLoaded', App.init);

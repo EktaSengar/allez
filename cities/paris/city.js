@@ -115,12 +115,52 @@ const City = (() => {
      cheap evening costs there. */
   const money = { symbol: '€', cheap: 20, format: n => `€${n}` };
 
+  /* ---------- which views this city has ----------
+
+     A fixed row of eight tabs was the last place the engine still
+     assumed Paris. Bengaluru wants a *Your side of town* view that
+     Paris has no use for; the Bay Area will want something about fog.
+     So the pack says which views exist, in what order, what the tab
+     reads and what the line under it says — and the engine supplies a
+     builder for each id it knows, or a pack ships its own.
+
+     `main` is the row of tabs; `utility` is the smaller pair at the
+     end. The order here is the order on screen, and it has to agree
+     with the nav in index.html — the page owns its own markup, because
+     writing the tabs from JavaScript would mean writing them after the
+     first paint and shoving the page down. `check-views.mjs` asserts
+     the two agree rather than trusting them to.
+
+     A view with no `lede` gets one from its builder, which is the case
+     for the four whose opening line depends on what they drew. */
+
+  const views = {
+    main: [
+      { id: 'today',    label: 'Today',
+        lede: 'What is open, close, and worth leaving the flat for.' },
+      { id: 'nights',   label: 'Nights',
+        lede: 'Concerts, jazz rooms, dancing and a drink first. Doors, prices and how far each one is from where you are.' },
+      { id: 'weekend',  label: 'Weekend' },
+      { id: 'eat',      label: 'Eat' },
+      { id: 'sport',    label: 'Sport',
+        lede: 'Two halves: things we can play, and things we can go and watch.' },
+      { id: 'regulars', label: 'Regulars' },
+      { id: 'explore',  label: 'Explore' },
+      { id: 'away',     label: 'Away',
+        lede: 'Six mainline stations, and most of them reach somewhere worth a whole day. Some of these are closer than the other side of Paris.' }
+    ],
+    utility: [
+      { id: 'quests', label: 'Quests', lede: 'Long games. Progress is saved in this browser.' },
+      { id: 'saved',  label: 'Saved',  lede: 'What you have marked, and what you have already done.' }
+    ]
+  };
+
   /* Rounded to about a kilometre so no precise address reaches a third
      party. Weather.setHome() overrides this from data/home.json; these
      are only what to ask for before that file lands. */
   const weather = { lat: 48.87, lon: 2.36, tz: 'Europe/Paris' };
 
-  return { id, name, ua, zone, holidays, shutsOnHoliday, money, weather };
+  return { id, name, ua, zone, views, holidays, shutsOnHoliday, money, weather };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same
