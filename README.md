@@ -501,6 +501,11 @@ id in `City.views`. Nothing in the engine needs to know it happened. A view
 that is declared with no builder says so on the page rather than drawing a
 blank one that looks like a data bug.
 
+A pack that has no shape worth drawing omits `zone.map` and the zone quest
+falls back to a list of chips. Paris spirals out from the 1st and is worth a
+drawing; Bengaluru is ninety-five named neighbourhoods, where a dot per zone
+would be a rash rather than a map.
+
 The tabs themselves stay as markup in `index.html` rather than being written
 from JavaScript, because the nav is parsed after the scripts and filling it at
 `DOMContentLoaded` would move the page after the first paint. That means two

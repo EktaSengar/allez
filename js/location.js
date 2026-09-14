@@ -120,11 +120,11 @@ const Loc = (() => {
      enough to be useful and vague enough to be nobody's business. */
   function displayName(loc) {
     if (!loc) return 'Paris';
-    if (loc.zone) return `${City.zone.ordinal(loc.zone)} · ${ZONE_NAMES[loc.zone] || City.zone.fallback}`;
+    if (loc.zone) return City.zone.display(loc.zone, ZONE_NAMES[loc.zone]);
     return loc.area || loc.label || 'Paris';
   }
 
-  const zoneName = n => ZONE_NAMES[n] || City.zone.ordinal(n);
+  const zoneName = n => ZONE_NAMES[n] || City.zone.label(n);
   const zoneCoords = n => ZONE[n];
   const presets = () => Object.keys(ZONE).map(Number)
     .map(n => ({ zone: n, name: ZONE_NAMES[n] }));

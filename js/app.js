@@ -2123,8 +2123,14 @@ const App = (() => {
      each other. Both live in the city pack, because the spiral is the
      shape of Paris and a city without one simply omits the map — see
      cities/paris/city.js. */
-  const ZONE_MAP = City.zone.map;
-  const { factor: SPREAD, cx: CX, cy: CY } = City.zone.mapSpread;
+  /* Optional. Paris spirals and is worth drawing; Bengaluru is ninety-five
+     named neighbourhoods and a dot per zone would be a rash rather than a
+     map, so it ships no `map` and the quest falls back to chips. Reading
+     `mapSpread` unguarded used to throw before the second pack could draw
+     anything at all. */
+  const ZONE_MAP = City.zone.map || null;
+  const { factor: SPREAD, cx: CX, cy: CY } =
+    City.zone.mapSpread || { factor: 1, cx: 50, cy: 50 };
   const spread = ([x, y]) => [CX + (x - CX) * SPREAD, CY + (y - CY) * SPREAD];
 
   function progressRing(pct) {
@@ -2169,7 +2175,7 @@ const App = (() => {
   }
 
   function questCard(q) {
-    const isMap = q.id === 'quest-arrondissements';
+    const isMap = !!ZONE_MAP && q.id === City.zone.mapQuest;
     const done = Store.questDone(q.id);
     const total = q.targets.length;
     const count = isMap ? zoneCount() : done.length;

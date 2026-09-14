@@ -34,9 +34,27 @@ const City = (() => {
     many: 'arrondissements',
 
     /* 1er, then 2e onward. The city writes these in superscript; the
-       interface is English, where the plain form reads better. */
-    ordinal: n => (n === 1 ? '1er' : `${n}e`),
+       interface is English, where the plain form reads better.
+
+       Called `label` rather than `ordinal` because ordinals are a Paris
+       answer to a more general question — what to write when you have a
+       zone key and nothing else. Bengaluru's keys are already names and
+       its label() is the identity. */
+    label: n => (n === 1 ? '1er' : `${n}e`),
+
+    /* How a saved place reads in the location bar. The number and the
+       name are two separate facts here, so both are shown; a city where
+       the key IS the name shows it once. The engine used to hardcode
+       this format, which is how "Indiranagar · Indiranagar" nearly
+       shipped. */
+    display: (k, nm) => `${zone.label(k)} · ${nm || zone.names[k] || name}`,
+
     fallback: name,
+
+    /* Which quest gets the drawing instead of a list of chips. The id is
+       a record in quests.json, so it belongs to the city, not the
+       engine. A city with no `map` below leaves this out. */
+    mapQuest: 'quest-arrondissements',
 
     /* Deliberately NOT the geometric centroids the city publishes. The
        12th and 16th each have a wood bolted on, and averaging the

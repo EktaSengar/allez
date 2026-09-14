@@ -46,11 +46,14 @@ function evaluate(src, name, globals) {
    that forgets to pass it would fail in a way the browser never would,
    which is exactly the drift shim.mjs exists to prevent.
 
-   Which city: there is one today. When there are four, this takes the
-   pack name from the caller and the scripts say which city they are
-   building. */
-export const City = evaluate(
-  fs.readFileSync(path.join(ROOT, 'cities', 'paris', 'city.js'), 'utf8'), 'City', {});
+   Which city: `HOMEGROUND_CITY` if it is set, Paris otherwise, because
+   Paris is what every existing script builds and none of them should
+   have to say so. A script that works on one city reads `City.id`; a
+   script that works on several calls `loadCity()` per pack. */
+export const loadCity = id =>
+  evaluate(fs.readFileSync(path.join(ROOT, 'cities', id, 'city.js'), 'utf8'), 'City', {});
+
+export const City = loadCity(process.env.HOMEGROUND_CITY || 'paris');
 
 /* Storage names. `keys.js` reads City.id and touches localStorage as it
    evaluates — carrying the old single-city keys over — so Node hands it
@@ -65,6 +68,17 @@ export const Keys = evaluate(
 export function loadModule(file, name, globals = {}) {
   const src = fs.readFileSync(path.join(JS, file), 'utf8');
   return evaluate(src, name, { City, Keys, ...globals });
+}
+
+/* The same module against a different pack, which is the only way to
+   find out whether the engine is actually city-blind or merely has not
+   been asked yet. */
+export function loadModuleFor(cityId, file, name, globals = {}) {
+  const c = loadCity(cityId);
+  const k = evaluate(fs.readFileSync(path.join(JS, 'keys.js'), 'utf8'), 'Keys',
+                     { City: c, localStorage: noStore });
+  return evaluate(fs.readFileSync(path.join(JS, file), 'utf8'), name,
+                  { City: c, Keys: k, ...globals });
 }
 
 /* The two the record layer needs, in the order they depend on each
