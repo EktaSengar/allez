@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   cities/sf/city.js — what is true of the Bay Area, called SF.
+   cities/bay-area/city.js — what is true of the Bay Area.
 
    The fourth pack, and the one the plan expected to break the model.
    It did not, because two things turned out to be true:
@@ -18,25 +18,23 @@
 
 const City = (() => {
 
-  const id   = 'sf';
+  const id   = 'bay-area';
 
-  /* Called SF rather than "the Bay Area", and the reason is the
-     wordmark: you can say "Allez SF" and you cannot say "Allez the
-     Bay". The article breaks the line, which is a small thing until it
-     is the name of the product.
-
-     It is a slight overclaim and worth being honest about — the pack
+  /* Briefly called SF, because "Allez SF" chants and "Allez the Bay"
+     does not. Reverted, and the reason is worth keeping: the pack
      covers Palo Alto and Mountain View, which are emphatically not San
-     Francisco, and somebody in Mountain View is not going to describe
-     where they live as SF. What stops that being a problem is that the
-     region is the only unit anyone actually moves around in, `zone.side`
-     already knows which half of it you are on, and the location bar
-     always shows the neighbourhood rather than the city name. `SF` is
-     the label on the tin, not a claim about where you are standing —
-     which is why `zone.fallback` below still says the Bay Area. */
-  const name = 'SF';
+     Francisco, and a guide whose entire principle is not being wrong
+     about a place cannot open by being wrong about which place it is.
+     A name that chants is not worth an overclaim on the front door.
 
-  const ua = 'allez-sf (personal site)';
+     Carries its article, because it is one of those names that always
+     does — nobody says "I live in Bay Area". That costs one thing: any
+     heading built as "Hidden ${name}" reads as "Hidden the Bay Area",
+     so headings of that shape are supplied by the pack rather than
+     assembled by the engine. See `hiddenHeading`. */
+  const name = 'the Bay Area';
+
+  const ua = 'allez-bay-area (personal site)';
 
   /* ---------- what a piece of it is called ----------
 
@@ -420,6 +418,10 @@ const City = (() => {
 
   const shutsOnHoliday = ['bakery', 'cafe', 'shop', 'market'];
 
+  /* "Hidden the Bay Area" is what the engine would otherwise assemble.
+     A city whose name takes an article says what it wants instead. */
+  const hiddenHeading = 'Hidden corners';
+
   const money = { symbol: '$', cheap: 30, format: n => `$${n}` };
 
   const views = {
@@ -450,7 +452,7 @@ const City = (() => {
   const serviceWorker = false;
 
   return { id, name, ua, bbox, serviceWorker, zone, bases, climate, reach,
-           centre, views, holidays, shutsOnHoliday, money, weather };
+           centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;

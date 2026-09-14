@@ -2555,7 +2555,7 @@ const App = (() => {
             + `<div class="routes">${walk.items.map(routeCard).join('')}</div>`
           : '')
       + (gems.items.length
-          ? stripHead(`Hidden ${City.name}`, radiusNote(gems.radius, gems.items, gems.widened))
+          ? stripHead(City.hiddenHeading || `Hidden ${City.name}`, radiusNote(gems.radius, gems.items, gems.widened))
             + rows(gems.items)
           : '')
       + stripHead(City.zone.allHeading)
