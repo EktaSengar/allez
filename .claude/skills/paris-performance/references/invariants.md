@@ -419,9 +419,11 @@ Recorded so they are not re-proposed as easy wins:
   them. This is an honesty limit rather than a budget one, but it is also
   the single largest page-weight decision on the site, so it is recorded
   here too.
-- **Reducing `FIRST_BATCH` below 4 shards.** Saves ~70 KB and directly
-  weakens the location-aware sections on the first paint, which is the
-  thing the site is for.
+- **Reducing the first batch below what four arrondissements cost.**
+  Saves ~70 KB and directly weakens the location-aware sections on the
+  first paint, which is the thing the site is for. `FIRST_BATCH` is no
+  longer a count of shards — see §19 — but the budget is calibrated at
+  exactly that figure and the reasoning is unchanged.
 - **Minification, or stripping comments at deploy.** Asked and answered
   on 27 August 2026, so it does not need reopening without new
   information.
@@ -548,3 +550,25 @@ that was already sharding by zone keeps byte-identical ordering.
 **How it shows up:** not as an error. As a first paint that is no more
 local than a random quarter of the city, and a request waterfall with one
 entry per neighbourhood.
+
+**The first batch is a byte budget, not a count of shards.** A count only
+means anything while shards are a uniform size, and bucketing made them
+anything but: four of Paris's twenty arrondissements is 665 KB raw, four
+of Delhi's sixteen grid cells is 444 KB, and four of a city sharded some
+other way could be nearly all of it or nearly none.
+
+Records were the obvious stand-in and are a bad one — Paris averages 36
+bytes a record gzipped and Delhi 25, so a record budget over-fetches by
+nearly half in one city to be right in the other. So each shard records
+its own size as `b` in `index.json` and `firstBatch()` fills a budget of
+680 KB raw, which is what four arrondissements cost, about 152 KB over
+the wire.
+
+What this produces: Paris 4 of 20 shards at 152 KB, Bengaluru 6 of 16 at
+139 KB, Delhi 16 of 16 at 112 KB. Delhi takes its whole index because
+its whole index is smaller than Paris's first batch — the progressive
+fill is a no-op there, which is the correct answer rather than a bug.
+
+An index written before shards carried `b` falls back to a quarter of the
+budget per shard, which reproduces the old count-of-four rather than
+fetching the city.

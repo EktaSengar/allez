@@ -223,7 +223,50 @@ const App = (() => {
     return r.json();
   }
 
-  const FIRST_BATCH = 4;
+  /* ---------- how much of the city to fetch before the first paint ----
+
+     This was a count of four shards, which is only meaningful while
+     every shard is roughly the same size. Sharding by bucket made them
+     wildly uneven: four of Paris's twenty arrondissements is 4,297
+     records and 152 KB, four of Delhi's sixteen grid cells is 3,974
+     records and 97 KB — but four of a city sharded some other way could
+     be either the whole thing or almost none of it.
+
+     So the budget is bytes, which each shard now records as `b`, and it
+     is calibrated at what four arrondissements cost — 665 KB raw, about
+     152 KB over the wire, the figure §16 says was measured and says not
+     to go below.
+
+     Bytes rather than records because records are a poor stand-in across
+     cities: Paris averages 36 bytes a record gzipped and Delhi 25, so a
+     record budget over-fetches by nearly half in one to be right in the
+     other.
+
+     Note what this does NOT do: it does not make Delhi fetch less.
+     Delhi's entire discovery index is 112 KB, which is smaller than
+     Paris's first batch alone, so taking nearly all of it up front is
+     the right answer and the alarming-looking "89% of the city" is 89%
+     of a small city. What the budget fixes is the case the count gets
+     wrong in the other direction — a city whose nearest bucket happens
+     to be enormous, where four of them would put the whole thing on the
+     critical path. */
+  const FIRST_BUDGET = 680 * 1024;
+  const FIRST_MIN = 2;
+
+  function firstBatch(order) {
+    const index = D['places/index']?.shards || {};
+    const out = [];
+    let bytes = 0;
+    for (const k of order) {
+      /* An index written before shards carried their size falls back to
+         the old behaviour rather than fetching the whole city. */
+      const add = index[k]?.b ?? (FIRST_BUDGET / 4);
+      if (out.length >= FIRST_MIN && bytes + add > FIRST_BUDGET) break;
+      out.push(k);
+      bytes += add;
+    }
+    return out;
+  }
   let PLACES = [];
   let loadedShards = new Set();
   let fillingIn = null;
@@ -383,7 +426,7 @@ const App = (() => {
        the code happened to be written in. */
     await Promise.all([
       Promise.all(CORE.map(pull)),
-      pullShards(shardOrder().slice(0, FIRST_BATCH))
+      pullShards(firstBatch(shardOrder()))
     ]);
     rebuild();
 

@@ -90,7 +90,15 @@ export async function shard(doc, outDir = OUT, opts = {}) {
        so a city that was already sharding by zone keeps the exact
        ordering it had. Otherwise the mean of what is in the file. */
     const own = zones && zones[key];
-    shards[key] = { n: items.length, c: own || centroidOf(items) };
+    /* `b` is the file's own size. The first batch used to be a count of
+       four shards, which only means anything while shards are a uniform
+       size — and bucketing made them anything but. Records are a poor
+       stand-in too: Paris averages 36 bytes a record gzipped and Delhi
+       25, so a record budget over-fetches by nearly half in one city to
+       be right in the other. Bytes are what actually cost, so bytes are
+       what the budget counts. */
+    const body = JSON.stringify({ a: key, items }) + '\n';
+    shards[key] = { n: items.length, b: Buffer.byteLength(body), c: own || centroidOf(items) };
   }
 
   const manifest = {
