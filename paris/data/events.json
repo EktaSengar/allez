@@ -1,78 +1,11 @@
 {
-  "generated": "2026-09-07",
+  "generated": "2026-09-15",
   "window": {
     "from": "2026-08-13",
     "to": "2026-10-31"
   },
   "note": "Time-sensitive entries. Anything past its `end` date is pruned automatically by scripts/refresh.mjs. Verify prices and times at the official URL before travelling.",
   "items": [
-    {
-      "id": "olympic-cauldron-2026",
-      "title": "The Olympic Cauldron Rises at Sunset",
-      "emoji": "🎈",
-      "type": "event",
-      "categories": [
-        "outdoor",
-        "free",
-        "unusual"
-      ],
-      "zone": 1,
-      "area": "Jardin des Tuileries",
-      "price": 0,
-      "priceNote": "Free",
-      "start": "2026-06-21",
-      "end": "2026-09-14",
-      "times": "Rises at sunset, stays up until 02:00 · visible on the ground from 10:00",
-      "durationMin": 45,
-      "minutesFromHome": 22,
-      "transit": "M8 to Concorde, or M1 to Tuileries",
-      "why": "The balloon-and-flame cauldron from the 2024 Games comes back every summer and floats over the Tuileries after dark. It is free, it is genuinely beautiful, and almost nobody plans for it. Pair it with a walk along the Seine — sunset in mid-August is around 21:00, so aim to be there by 20:45.",
-      "goodFor": [
-        "couple",
-        "evening",
-        "outdoor",
-        "free",
-        "romantic",
-        "spontaneous"
-      ],
-      "indoor": false,
-      "weatherSensitive": true,
-      "labels": [
-        "free",
-        "romantic",
-        "afterwork",
-        "outdoor",
-        "hiddengem"
-      ],
-      "uniqueness": 5,
-      "quality": 5,
-      "nearby": [
-        {
-          "emoji": "🎨",
-          "text": "Jeu de Paume photography → 3 min"
-        },
-        {
-          "emoji": "🌉",
-          "text": "Pont des Arts + Seine walk → 10 min"
-        },
-        {
-          "emoji": "🎡",
-          "text": "Fête des Tuileries funfair → on site"
-        }
-      ],
-      "source": "Paris.fr",
-      "url": "https://www.paris.fr/",
-      "lastVerified": "2026-08-13",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Jardin_des_Tuileries_-_panoramio_-_Javier_B.jpg/500px-Jardin_des_Tuileries_-_panoramio_-_Javier_B.jpg",
-      "imageSubject": "Jardin des Tuileries",
-      "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject",
-      "coords": [
-        48.8626,
-        2.3363
-      ],
-      "coordsFrom": "arr-centroid"
-    },
     {
       "id": "jeu-de-paume-photo-2026",
       "title": "Two Photography Retrospectives — Jeu de Paume",
@@ -363,56 +296,6 @@
       "source": "Technopol",
       "url": "https://www.technoparade.fr/",
       "lastVerified": "2026-08-15"
-    },
-    {
-      "id": "ayo-cigale-2026",
-      "title": "Ayo — La Cigale",
-      "emoji": "🎸",
-      "type": "event",
-      "categories": [
-        "nightlife",
-        "music"
-      ],
-      "zone": 18,
-      "area": "La Cigale, boulevard de Rochechouart",
-      "price": 40,
-      "priceNote": "~€35–45",
-      "start": "2026-09-14",
-      "end": "2026-09-14",
-      "times": "Doors 19:30",
-      "durationMin": 150,
-      "minutesFromHome": 20,
-      "transit": "M2 to Pigalle or Anvers",
-      "why": "Soul and folk in the loveliest mid-size hall in Paris — La Cigale is an 1887 theatre with a balcony, and it is small enough that the balcony is worth having. The sort of evening where you walk down through Pigalle for a drink afterwards.",
-      "goodFor": [
-        "evening",
-        "couple",
-        "music",
-        "romantic"
-      ],
-      "indoor": true,
-      "bookAhead": true,
-      "labels": [
-        "afterwork",
-        "couple",
-        "romantic",
-        "bookahead",
-        "indoor"
-      ],
-      "uniqueness": 3,
-      "quality": 4,
-      "source": "Sortiraparis / La Cigale",
-      "url": "https://www.lacigale.fr/",
-      "lastVerified": "2026-08-15",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/La_Cigale_Paris.jpg/500px-La_Cigale_Paris.jpg",
-      "imageSubject": "La Cigale",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons",
-      "coords": [
-        48.88248,
-        2.34013
-      ],
-      "coordsFrom": "nominatim"
     },
     {
       "id": "yemi-alade-cigale-2026",
