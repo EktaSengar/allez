@@ -591,6 +591,7 @@ Anything that touches rendering should be held to the bar the August 2026
 optimisation was held to — the page still says exactly what it said before:
 
 ```bash
+node scripts/check-packs.mjs      # every pack holds up its end of the contract
 node scripts/version.mjs --all    # every city — js/ and css/ are shared
 node scripts/check-views.mjs --save /tmp/before.json
 # …make the change…
