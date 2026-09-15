@@ -63,7 +63,7 @@ async function overpass(query) {
       const res = await fetch(host, {
         method: 'POST',
         headers: { 'content-type': 'text/plain',
-                   'user-agent': 'paris-for-you/1.0 (https://github.com/EktaSengar/paris)' },
+                   'user-agent': 'allez/1.0 (https://github.com/EktaSengar/allez)' },
         body: query,
         signal: AbortSignal.timeout(180000)
       });

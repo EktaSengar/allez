@@ -32,7 +32,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
 const DRY  = process.argv.includes('--dry');
 const API  = 'https://opendata.paris.fr/api/explore/v2.1/catalog/datasets';
-const UA   = 'paris-for-you/1.0 (https://github.com/EktaSengar/paris)';
+const UA   = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 
 /* Which municipal categories are worth putting in front of somebody, and
    what the site calls them. Everything not listed here — crèches, town

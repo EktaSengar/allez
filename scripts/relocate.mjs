@@ -31,7 +31,7 @@ import { dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
-const UA = 'paris-for-you/1.0 (personal site; https://github.com/EktaSengar/paris)';
+const UA = 'allez/1.0 (personal site; https://github.com/EktaSengar/allez)';
 
 const args = process.argv.slice(2);
 const flag = n => { const i = args.indexOf(n); return i === -1 ? null : args[i + 1]; };
