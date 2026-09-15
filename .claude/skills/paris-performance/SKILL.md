@@ -2,7 +2,7 @@
 name: paris-performance
 description: >-
   Measure and protect the loading performance of the Paris discovery site
-  (ektasengar.github.io/paris). Use this whenever work touches how the page
+  (allez.city). Use this whenever work touches how the page
   loads or how much it ships — index.html, css/style.css, anything in js/,
   the shape or size of anything in data/, scripts/version.mjs, or sw.js —
   and whenever the user asks about speed, Lighthouse, Core Web Vitals, LCP,

@@ -20,6 +20,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
@@ -271,7 +272,7 @@ const strip = s => s ? String(s).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').tr
 
 /* Wikimedia asks for an identifying User-Agent and a modest request rate.
    We batch heavily, pause between calls, and back off on 429. */
-const UA = 'paris-for-you/1.0 (personal site; https://github.com/EktaSengar/paris)';
+const UA = 'allez/1.0 (personal site; https://github.com/EktaSengar/allez)';
 
 async function api(url, attempt = 0) {
   const res = await fetch(url, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(30000) });

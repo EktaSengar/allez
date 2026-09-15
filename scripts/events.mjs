@@ -35,7 +35,7 @@ const DRY  = process.argv.includes('--dry');
 const DAYS = (() => { const i = process.argv.indexOf('--days'); return i === -1 ? 60 : Number(process.argv[i + 1]); })();
 
 const API = 'https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records';
-const UA  = 'paris-for-you/1.0 (https://github.com/EktaSengar/paris)';
+const UA  = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const UNTIL = new Date(Date.now() + DAYS * 86400000).toISOString().slice(0, 10);

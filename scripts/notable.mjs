@@ -9,7 +9,7 @@
 
    Three keyless sources, in order:
 
-     Wikidata SPARQL   which Paris places have an entry at all
+     Wikidata SPARQL   which of the city's places have an entry at all
      Wikipedia REST    a factual sentence about each one
      Pageviews API     how famous — which is not the same as how good
 
@@ -30,13 +30,13 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { dataDir } from './shim.mjs';
+import { dataDir, City } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
 const DRY  = process.argv.includes('--dry');
 const LIMIT = (() => { const i = process.argv.indexOf('--limit'); return i === -1 ? 0 : Number(process.argv[i + 1]); })();
-const UA = 'paris-for-you/1.0 (https://github.com/EktaSengar/paris)';
+const UA = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 
 /* Wikidata classes worth having, mapped onto the site's own categories.
    Kept deliberately short: this is the layer that risks turning a
@@ -50,7 +50,7 @@ const CLASSES = [
   ['wd:Q1367454', 'books'],       // bookshop
   ['wd:Q33506',   'museum'],      // museum
   ['wd:Q207694',  'museum'],      // art museum
-  ['wd:Q22687',   'nightlife'],   // bar
+  ['wd:Q187456',  'nightlife'],   // bar — Q22687, which sat here, is `bank`
   ['wd:Q41253',   'culture'],     // movie theatre
   ['wd:Q24354',   'culture'],     // theatre
   ['wd:Q22698',   'park'],        // park
@@ -62,10 +62,32 @@ const CLASSES = [
 /* P576 is the date a thing stopped existing. Without this filter the
    query cheerfully returns a hippodrome demolished in 1900, and the site
    recommends an empty plot of land. */
+/* This asked `wdt:P131* wd:Q90` until the packs arrived — everything
+   administratively inside Paris. That shape cannot express every pack we
+   have: `P131*` descends from one authority, and the Bay Area pack is two
+   of them, San Francisco and Palo Alto, forty miles apart. A box has no
+   such trouble, it is what photos.mjs already asks, and the boundary it
+   draws — where a resident would say the city stops — is arguably the
+   better one for a guide anyway.
+
+   Unpadded, unlike photos.mjs. A photograph landing slightly outside the
+   line costs nothing, because matching there is by exact coordinate and a
+   stray row simply never matches. These rows become recommendations, and
+   recommending somewhere well outside the city is a worse failure than
+   missing it. */
+const [BOX_S, BOX_W, BOX_N, BOX_E] = String(City.bbox).split(',').map(Number);
+const corner = (lon, lat) => `"Point(${lon.toFixed(3)} ${lat.toFixed(3)})"^^geo:wktLiteral`;
+
+/* English first, then whatever the city actually labels things in. */
+const LABEL_LANG = ['en', City.notable?.lang].filter(Boolean).join(',');
+
 const SPARQL = `
 SELECT ?item ?itemLabel ?desc ?cls ?coord ?article ?heritage ?inception WHERE {
-  ?item wdt:P131* wd:Q90 .
-  ?item wdt:P625 ?coord .
+  SERVICE wikibase:box {
+    ?item wdt:P625 ?coord .
+    bd:serviceParam wikibase:cornerWest ${corner(BOX_W, BOX_S)} .
+    bd:serviceParam wikibase:cornerEast ${corner(BOX_E, BOX_N)} .
+  }
   ?item wdt:P31/wdt:P279* ?cls .
   VALUES ?cls { ${[...new Set(CLASSES.map(c => c[0]))].join(' ')} }
   FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }
@@ -77,23 +99,32 @@ SELECT ?item ?itemLabel ?desc ?cls ?coord ?article ?heritage ?inception WHERE {
     ?article schema:about ?item ;
              schema:isPartOf <https://en.wikipedia.org/> .
   }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "${LABEL_LANG}". }
 }`;
 
 const CAT_OF = Object.fromEntries(CLASSES.map(([q, c]) => [q.replace('wd:', ''), c]));
 
-const ZONE = {
-  1:[48.8626,2.3363],  2:[48.8683,2.3413],  3:[48.8637,2.3615],  4:[48.8546,2.3572],
-  5:[48.8448,2.3501],  6:[48.8496,2.3329],  7:[48.8565,2.3120],  8:[48.8726,2.3120],
-  9:[48.8768,2.3374],  10:[48.8760,2.3595], 11:[48.8578,2.3792], 12:[48.8351,2.4212],
-  13:[48.8283,2.3626], 14:[48.8331,2.3264], 15:[48.8412,2.3000], 16:[48.8637,2.2769],
-  17:[48.8872,2.3070], 18:[48.8925,2.3444], 19:[48.8871,2.3828], 20:[48.8635,2.3985]
-};
+/* Nearest centroid, not point-in-polygon: good enough to print next to a
+   name, never used for distance. Same source and same rule as
+   discover.mjs, so a notable record and a discovered one on the same
+   street agree about where they are.
+
+   This table used to be written out here, and it was the twenty Paris
+   arrondissements — identical, key for key, to what `paris/city.js`
+   already declared as `zone.grid`. Reading the pack instead changes
+   nothing for Paris and stops the other three cities being told they are
+   in the 12th. */
+const ZONE = City.zone.grid || City.zone.centroids;
+
+/* Paris numbers its zones and the other packs name them, so a key stays
+   whatever kind of thing it already was. */
+const zoneKey = k => (/^\d+$/.test(k) ? Number(k) : k);
+
 const nearestArr = (lat, lon) => {
   let best = null, bd = Infinity;
   for (const [n, [a, b]] of Object.entries(ZONE)) {
     const d = (a - lat) ** 2 + (b - lon) ** 2;
-    if (d < bd) { bd = d; best = Number(n); }
+    if (d < bd) { bd = d; best = zoneKey(n); }
   }
   return best;
 };
@@ -106,12 +137,25 @@ async function get(url, opts = {}, attempt = 0) {
       headers: { 'user-agent': UA, ...(opts.headers || {}) },
       signal: AbortSignal.timeout(opts.timeout || 60000)
     });
-    if (res.status === 429 || res.status >= 500) throw new Error(String(res.status));
+    if (res.status === 429 || res.status >= 500) {
+      /* Wikipedia says how long to wait when it is being throttled, and
+         guessing instead is how a run gets itself banned rather than
+         merely delayed. */
+      const after = Number(res.headers.get('retry-after'));
+      const e = new Error(String(res.status));
+      e.retryAfter = Number.isFinite(after) && after > 0 ? after * 1000 : null;
+      throw e;
+    }
     if (res.status === 404) return null;
     if (!res.ok) throw new Error(String(res.status));
     return await res.json();
   } catch (e) {
-    if (attempt < 3) { await sleep(2000 * (attempt + 1)); return get(url, opts, attempt + 1); }
+    /* Was 2s/4s/6s, which is not a backoff so much as three more ways to
+       be told 429. Exponential, and honour the header when there is one. */
+    if (attempt < 4) {
+      await sleep(e.retryAfter ?? 1500 * 2 ** attempt);
+      return get(url, opts, attempt + 1);
+    }
     throw e;
   }
 }
@@ -151,21 +195,50 @@ async function fromWikidata() {
 
 async function summaries(list) {
   process.stdout.write('  Wikipedia summaries… ');
-  let done = 0;
+  let done = 0, tried = 0, failed = 0;
   for (const p of list) {
     if (!p.article) continue;
-    const d = await get(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(p.article)}`);
+    tried++;
+    let d = null;
+    try {
+      d = await get(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(p.article)}`);
+    } catch {
+      /* One article that will not load is not a reason to throw away the
+         other fourteen hundred — the record still has its Wikidata
+         description to fall back on. A *lot* of them failing is different,
+         and the check after this loop is where that becomes fatal. */
+      failed++;
+    }
     if (d && d.extract) {
       /* The first sentence or two — enough to say what the place is and
          why anybody wrote it down, and no more. */
-      const sentences = d.extract.replace(/\s+/g, ' ').match(/[^.!?]+[.!?]+/g) || [d.extract];
-      p.extract = sentences.slice(0, 2).join(' ').trim().slice(0, 300);
+      /* Splitting on every full stop turned "a 2.6-acre square" into
+         "a 2." and "former U.S. Army post" into "former U. S.". Both
+         shipped, and both read as a broken site rather than a terse one.
+
+         A sentence ends when the stop follows a word or a closing bracket
+         and the next thing is a capital: that leaves the decimal alone,
+         because nothing there is a space, and leaves "U.S." alone,
+         because the character before the stop is itself a capital. */
+      const flat = d.extract.replace(/\s+/g, ' ').trim();
+      const sentences = flat.split(/(?<=[a-z0-9)\]'"])[.!?]+\s+(?=[A-Z("'])/)
+                            .filter(Boolean);
+      const two = sentences.slice(0, 2).join('. ').trim();
+      p.extract = (/[.!?]$/.test(two) ? two : two + '.').slice(0, 300);
       p.thumb = d.thumbnail?.source || null;
     }
     if (++done % 40 === 0) process.stdout.write('.');
-    await sleep(60);
+    /* 60ms was ~16 requests a second, which was survivable when the query
+       was Paris-only and is not now the box returns half again as many
+       candidates per city. */
+    await sleep(150);
   }
-  console.log(` ${list.filter(p => p.extract).length} with text`);
+  /* Degrading quietly to "no city has any descriptions this week" is the
+     one outcome worse than stopping, because the site would render it. */
+  if (failed > 20 && failed > tried * 0.1)
+    throw new Error(`Wikipedia refused ${failed} of ${tried} summaries — stopping rather than shipping a thin file`);
+  console.log(` ${list.filter(p => p.extract).length} with text` +
+              (failed ? ` (${failed} of ${tried} failed)` : ''));
 }
 
 /* ---------- 3. famous, or good? ---------- */
@@ -207,24 +280,40 @@ async function fame(list) {
    street address tells the reader nothing and makes the whole list look
    automated, which is exactly what it must not look like. */
 
-const STREET = 'rue|avenue|boulevard|bd|place|quai|impasse|passage|cour|allée|allee|villa|square';
+/* The vocabulary is the city's, not the script's.
 
-/* A name that is only a trade — with or without hyphens or ampersands. */
-const GENERIC = new Set([
-  'boulangerie', 'patisserie', 'boulangerie patisserie', 'boulangerie patisserie confiserie',
-  'cafe', 'restaurant', 'bar', 'brasserie', 'bistrot', 'bistro', 'librairie', 'hotel',
-  'confiserie', 'chocolaterie', 'salon de the', 'cinema', 'theatre', 'musee',
-  'boucherie', 'epicerie', 'commerce', 'magasin', 'immeuble', 'maison'
-]);
+   These lists were written out here when there was one city, and they are
+   French: `rue`, `boulangerie`. Handing them to Delhi would filter nothing
+   while appearing to filter something, which is the worse failure of the
+   two. So a pack that has not declared its own gets no vocabulary test
+   rather than somebody else's — the leading-digit and "…, <city>" tests
+   below still do real work on every city, and a pack with no list is a gap
+   somebody can fill rather than a wrong answer already shipped. */
+const esc = s => String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const STREET  = City.notable?.street || '';
+const GENERIC = new Set(City.notable?.generic || []);
+
+const RE_ADDRESS  = STREET ? new RegExp(`^(${STREET})\\s`, 'i') : null;
+const RE_HOUSE_NO = STREET ? new RegExp(`,\\s*\\d+\\s*(${STREET})\\b`, 'i') : null;
+const RE_IN_CITY  = new RegExp(`,\\s*${esc(City.name)}\\b`, 'i');
+
+/* Wikidata's one-line description is often just category plus location,
+   which reads as a fact and carries nothing. The trailing group used to be
+   `,\s*france`; any region works now, so Ile-de-France and Karnataka are
+   caught by the rule that caught France. */
+const PLACES = [City.name, ...(City.notable?.places || [])].filter(Boolean).map(esc).join('|');
+const RE_BARE_LOCATION = new RegExp(
+  `^(a |an )?[\\w\\s'’-]{0,34}\\s+in\\s+(${PLACES})(,\\s*[\\w\\s'’-]+)?\\.?$`, 'i');
 
 function unusableName(raw) {
   const n = (raw || '').trim();
   if (!n || n.length < 3) return true;
   if (/^\d/.test(n)) return true;                                  // "34 avenue de Choisy"
-  if (/,\s*Paris\b/i.test(n)) return true;                         // "…, Paris"
-  if (new RegExp(`^(${STREET})\\s`, 'i').test(n)) return true;       // "rue de …"
-  if (new RegExp(`,\\s*\\d+\\s*(${STREET})\\b`, 'i').test(n)) return true; // "Boulangerie, 16 rue …"
-  const flat = n.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  if (RE_IN_CITY.test(n)) return true;                             // "…, Paris"
+  if (RE_ADDRESS && RE_ADDRESS.test(n)) return true;               // "rue de …"
+  if (RE_HOUSE_NO && RE_HOUSE_NO.test(n)) return true;             // "Boulangerie, 16 rue …"
+  const flat = n.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[-–—&]/g, ' ').replace(/\s+/g, ' ').trim();
   return GENERIC.has(flat);
 }
@@ -251,7 +340,7 @@ function toRecord(p) {
      recommendation's clothes. If the only thing we can say about a place
      is its own category, it has no distinction — so it is not in this
      tier. It stays in the map layer, where a bare name is honest. */
-  if (/^(a |an )?[\w\s'’-]{0,34}\s+in\s+paris(,\s*france)?\.?$/i.test(why.trim())) return null;
+  if (RE_BARE_LOCATION.test(why.trim())) return null;
 
   return {
     n: p.name.slice(0, 70),
@@ -287,13 +376,13 @@ async function run() {
 
   console.log(`\n  ${items.length} records with something to say`);
   console.log('  by kind:', Object.entries(byCat).map(([k, n]) => `${k}:${n}`).join(' '));
-  console.log('  per arrondissement:', Object.entries(byArr)
+  console.log('  per zone:', Object.entries(byArr)
     .sort((a, b) => a[0] - b[0]).map(([a, n]) => `${a}:${n}`).join(' '));
   console.log('  landmarks (demoted in everyday sections):', items.filter(i => i.landmark).length);
 
   if (DRY) {
     console.log('\n  --dry, nothing written. A sample:\n');
-    items.slice(0, 6).forEach(i => console.log(`   • ${i.n} (${i.a}e, ${i.c})${i.landmark ? ' [landmark]' : ''}\n     ${i.why.slice(0, 150)}\n`));
+    items.slice(0, 6).forEach(i => console.log(`   • ${i.n} (${typeof i.a === 'number' ? i.a + 'e' : i.a}, ${i.c})${i.landmark ? ' [landmark]' : ''}\n     ${i.why.slice(0, 150)}\n`));
     return;
   }
 

@@ -31,7 +31,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
 const DRY   = process.argv.includes('--dry');
 const FORCE = process.argv.includes('--force');
-const UA = 'paris-for-you/1.0 (personal site; https://github.com/EktaSengar/paris)';
+const UA = 'allez/1.0 (personal site; https://github.com/EktaSengar/allez)';
 
 const ZONE = {
   1:[48.8626,2.3363],  2:[48.8683,2.3413],  3:[48.8637,2.3615],  4:[48.8546,2.3572],

@@ -46,7 +46,7 @@ const DRY  = process.argv.includes('--dry');
 const DAYS = (() => { const i = process.argv.indexOf('--days'); return i === -1 ? 90 : Number(process.argv[i + 1]); })();
 
 const QFAP = 'https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records';
-const UA   = 'paris-for-you/1.0 (https://github.com/EktaSengar/paris)';
+const UA   = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 
 /* Luma publishes an iCal feed per calendar with no key and no account.
    `discover` is a whole city — every approved public event in Paris,

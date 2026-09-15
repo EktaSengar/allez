@@ -180,7 +180,7 @@ const City = (() => {
   const views = {
     main: [
       { id: 'today',    label: 'Today',
-        lede: 'What is open, close, and worth leaving the flat for.' },
+        lede: 'What is open, close, and worth leaving home for.' },
       { id: 'nights',   label: 'Nights',
         lede: 'Concerts, jazz rooms, dancing and a drink first. Doors, prices and how far each one is from where you are.' },
       { id: 'weekend',  label: 'Weekend' },
@@ -221,12 +221,38 @@ const City = (() => {
   /* What to ask Overpass for. Paris intra-muros, generously. */
   const bbox = '48.812,2.246,48.908,2.422';
 
+  /* What notable.mjs needs to tell a name from an address.
+
+     Wikidata labels listed buildings by whatever the heritage register
+     recorded, which is often a street address or a trade: "34 avenue de
+     Choisy, Paris", "boulangerie-patisserie-confiserie". Both are decent
+     database keys and useless things to send somebody to for breakfast.
+
+     This lived in notable.mjs until the fourth city arrived, where it was
+     silently doing nothing — `rue` and `boulangerie` filter no Delhi
+     names at all. It is the city's vocabulary, so it belongs to the city.
+     A pack without one gets no vocabulary test rather than this one.
+
+     `lang` is the label language after English. `places` is for names
+     Wikidata's descriptions use that `name` does not cover. */
+  const notable = {
+    lang: 'fr',
+    places: ['France'],
+    street: 'rue|avenue|boulevard|bd|place|quai|impasse|passage|cour|allée|allee|villa|square',
+    generic: [
+      'boulangerie', 'patisserie', 'boulangerie patisserie', 'boulangerie patisserie confiserie',
+      'cafe', 'restaurant', 'bar', 'brasserie', 'bistrot', 'bistro', 'librairie', 'hotel',
+      'confiserie', 'chocolaterie', 'salon de the', 'cinema', 'theatre', 'musee',
+      'boucherie', 'epicerie', 'commerce', 'magasin', 'immeuble', 'maison'
+    ]
+  };
+
   /* A service worker's scope is the directory its script sits in, so a
      city can only have one if it ships its own. Paris has sw.js at the
      root next to its index.html. */
   const serviceWorker = true;
 
-  return { id, name, ua, bbox, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather };
+  return { id, name, ua, bbox, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same
