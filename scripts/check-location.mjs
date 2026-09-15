@@ -169,8 +169,20 @@ const SHARED = {
   /* Three cafés are known within reach of the 13th and all three sit on
      the 5th's side of the boundary. The 13th's own list leads with them
      honestly labelled at 13–18 minutes; it has nothing nearer to lead
-     with. Closed by writing up a café in the 13th. */
-  'cafe:5/13': 3,
+     with. Closed by writing up a café in the 13th.
+
+     Five since notable.mjs started resolving the summaries it had been
+     losing to rate limits — Paris went from 19 known cafés to 33, and
+     Café Voltaire and Aux Tours de Notre-Dame are both central, both
+     genuinely good, and both now fill the fourth and fifth slot of the
+     5th and the 13th at once.
+
+     Same shape as the nightlife entry below, and the same reading: this
+     records the 13th having nothing of its own to lead with, not the
+     ranking failing. Every café added in the middle of Paris will keep
+     landing in this list until something in the 13th is written up. That
+     is still what closes it. */
+  'cafe:5/13': 5,
   /* The 15th and the 13th have almost no nightlife the guide can vouch
      for, so both reach into the 1st, 5th and 12th — where the rooms
      actually are. The 18th has two of its own and then reaches the 10th,
