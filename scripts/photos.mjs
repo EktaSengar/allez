@@ -36,10 +36,11 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { dataDir } from './shim.mjs';
 import { pageImages } from './images.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
+const DATA = dataDir();
 const CACHE = path.join(ROOT, 'scripts', 'photo-cache.json');
 const FORCE = process.argv.includes('--force');
 const DRY   = process.argv.includes('--dry');

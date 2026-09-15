@@ -52,6 +52,8 @@ const VERBOSE = argv.includes('--verbose');
 const SAVE    = flag('--save');
 const COMPARE = flag('--compare');
 const PORT    = Number(flag('--port', 4399));
+/* Every city is a directory now, Paris included. */
+const CITY    = String(flag('--city', 'paris'));
 const SEEDED  = argv.includes('--seed');
 
 /* A Wednesday in a fully-stocked part of the year: events live, no
@@ -326,7 +328,7 @@ async function run() {
     args: ['--no-sandbox', '--disable-dev-shm-usage']
   });
 
-  const out = { date: DATE, state: SEEDED ? 'seeded' : 'empty',
+  const out = { date: DATE, city: CITY, state: SEEDED ? 'seeded' : 'empty',
                 generated: new Date().toISOString(), views: {} };
 
   try {
@@ -362,7 +364,7 @@ async function run() {
       return req.continue();
     });
 
-    await page.goto(`http://localhost:${PORT}/`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.goto(`http://localhost:${PORT}/${CITY}/`, { waitUntil: 'domcontentloaded', timeout: 60000 });
 
     const drift = await checkTabs(page);
     out.tabsAgree = drift.length === 0;

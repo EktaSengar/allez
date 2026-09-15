@@ -20,12 +20,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadRecord, readDiscovered } from './shim.mjs';
+import { loadRecord, readDiscovered, dataDir } from './shim.mjs';
 
 const { Rec } = loadRecord();
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
+const DATA = dataDir();
 const WRITE = process.argv.includes('--write');
 const terms = process.argv.slice(2).filter(a => !a.startsWith('--')).join(' ').trim();
 

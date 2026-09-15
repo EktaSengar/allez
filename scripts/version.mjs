@@ -39,16 +39,13 @@ import { spawn } from 'node:child_process';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CHECK = process.argv.includes('--check');
 
-/* Which city's page to stamp. Paris is at the repo root because it is
-   the live site at a live URL; every other city lives under its pack.
-   The asymmetry is temporary and the domain move removes it. */
+/* Which city's page to stamp. Every city is a directory at the repo
+   root, which is what the domain serves as allez.city/<city>. */
 const i = process.argv.indexOf('--city');
 const ALL = process.argv.includes('--all');
 const CITY = i === -1 ? 'paris' : process.argv[i + 1];
-const HTML = CITY === 'paris' ? path.join(ROOT, 'index.html')
-                              : path.join(ROOT, 'cities', CITY, 'index.html');
-const DATA_DIR = CITY === 'paris' ? path.join(ROOT, 'data')
-                                  : path.join(ROOT, 'cities', CITY, 'data');
+const HTML = path.join(ROOT, CITY, 'index.html');
+const DATA_DIR = path.join(ROOT, CITY, 'data');
 const HTML_DIR = path.dirname(HTML);
 
 const hash = buf => crypto.createHash('sha256').update(buf).digest('hex').slice(0, 8);
@@ -141,13 +138,18 @@ async function run() {
    forgetting the rest is the easiest mistake in this repo to make, and
    `--check` only tells you afterwards. */
 async function everyCity() {
-  const dirs = await fs.readdir(path.join(ROOT, 'cities'), { withFileTypes: true });
-  const ids = ['paris', ...dirs.filter(d => d.isDirectory() && d.name !== 'paris').map(d => d.name)];
+  const dirs = await fs.readdir(ROOT, { withFileTypes: true });
+  const found = [];
+  for (const d of dirs) {
+    if (!d.isDirectory()) continue;
+    try { await fs.access(path.join(ROOT, d.name, 'city.js')); found.push(d.name); } catch {}
+  }
+  const ids = ['paris', ...found.filter(n => n !== 'paris').sort()];
   let failed = 0;
   for (const id of ids) {
     const r = await new Promise(res => {
       const p = spawn(process.execPath, [fileURLToPath(import.meta.url),
-        ...(id === 'paris' ? [] : ['--city', id]), ...(CHECK ? ['--check'] : [])],
+        '--city', id, ...(CHECK ? ['--check'] : [])],
         { stdio: 'inherit' });
       p.on('close', res);
     });

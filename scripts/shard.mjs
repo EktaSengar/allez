@@ -36,7 +36,9 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
    be a module constant, and a Bengaluru discovery run therefore wrote
    seven thousand Bengaluru places into Paris's shard directory and
    deleted all twenty of Paris's on the way. */
-const DATA = path.join(ROOT, 'data');
+/* Only the default, for a caller that does not say. Every caller that
+   builds a specific city passes its own directory — see `shard(doc, outDir)`. */
+const DATA = path.join(ROOT, 'paris', 'data');
 const OUT  = path.join(DATA, 'places');
 const DRY  = process.argv.includes('--dry');
 

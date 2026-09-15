@@ -51,18 +51,23 @@ function evaluate(src, name, globals) {
    have to say so. A script that works on one city reads `City.id`; a
    script that works on several calls `loadCity()` per pack. */
 export const loadCity = id =>
-  evaluate(fs.readFileSync(path.join(ROOT, 'cities', id, 'city.js'), 'utf8'), 'City', {});
+  evaluate(fs.readFileSync(path.join(ROOT, id, 'city.js'), 'utf8'), 'City', {});
 
 export const City = loadCity(process.env.HOMEGROUND_CITY || 'paris');
 
-/* Where a city's data sits. Paris is at the repo root because it is the
-   live site at a live URL and moving it breaks every existing link; every
-   other city lives under its own pack. That asymmetry is deliberate and
-   temporary — the domain move normalises both — and it is written down
-   here rather than spread across a dozen scripts. */
-export const dataDir = (cityId = City.id) =>
-  cityId === 'paris' ? path.join(ROOT, 'data')
-                     : path.join(ROOT, 'cities', cityId, 'data');
+/* Where a city's data sits. Every city is a directory at the repo root
+   now — `/paris`, `/delhi`, `/bengaluru`, `/bay-area` — which is what the
+   custom domain serves as allez.city/paris and the rest. Paris used to be
+   the exception, living at the root because it was the live site at a live
+   URL; the domain move is what let that go. */
+export const dataDir = (cityId = City.id) => path.join(ROOT, cityId, 'data');
+
+/* Every pack, for the scripts that work across all of them. */
+export const cityIds = () =>
+  fs.readdirSync(ROOT, { withFileTypes: true })
+    .filter(d => d.isDirectory() && fs.existsSync(path.join(ROOT, d.name, 'city.js')))
+    .map(d => d.name)
+    .sort((a, b) => (a === 'paris' ? -1 : b === 'paris' ? 1 : a.localeCompare(b)));
 
 /* Storage names. `keys.js` reads City.id and touches localStorage as it
    evaluates — carrying the old single-city keys over — so Node hands it

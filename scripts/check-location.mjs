@@ -23,11 +23,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadModule, readDiscovered } from './shim.mjs';
+import { loadModule, readDiscovered, dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const VERBOSE = process.argv.includes('--verbose');
-const read = f => JSON.parse(fs.readFileSync(path.join(ROOT, 'data', f + '.json'), 'utf8'));
+const read = f => JSON.parse(fs.readFileSync(path.join(dataDir(), f + '.json'), 'utf8'));
 
 /* ---------- enough of a browser to load the modules ---------- */
 

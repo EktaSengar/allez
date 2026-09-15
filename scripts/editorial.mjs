@@ -24,10 +24,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadRecord, readDiscovered } from './shim.mjs';
+import { loadRecord, readDiscovered, dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
+const DATA = dataDir();
 const CHECK = process.argv.includes('--check');
 
 const read = async f => JSON.parse(await fs.readFile(path.join(DATA, f + '.json'), 'utf8'));

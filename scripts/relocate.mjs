@@ -27,9 +27,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
+const DATA = dataDir();
 const UA = 'paris-for-you/1.0 (personal site; https://github.com/EktaSengar/paris)';
 
 const args = process.argv.slice(2);

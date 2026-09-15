@@ -1,6 +1,6 @@
-# Paris for You
+# Allez
 
-A personal Paris exploration guide for Ekta & Kartik.
+A city guide for the people who live in one. Paris, Delhi, Bengaluru and the Bay Area, at **[allez.city](https://allez.city)**.
 
 **Live at → https://ektasengar.github.io/paris/**
 
@@ -467,9 +467,26 @@ record and fails the build rather than shipping a broken one.
 The evergreen half of the data — bakeries, parks, walks, day trips — does not
 expire, which is why the site is still useful on a quiet week.
 
+### The layout
+
+One directory per city at the repo root, which is what the domain serves:
+
+```
+allez.city/            index.html      the chooser
+allez.city/paris/      paris/          index.html · city.js · data/ · sw.js
+allez.city/delhi/      delhi/
+allez.city/bengaluru/  bengaluru/      + views/yourside.js
+allez.city/bay-area/   bay-area/
+                       css/ js/        shared by all four
+                       scripts/        shared build and check tools
+```
+
+Paris lived at the repo root until the domain move, because it was the live
+site at a live URL. `CNAME` is what let that go.
+
 ### The city pack
 
-`cities/paris/city.js` holds the things that are true of Paris and of nowhere
+`<city>/city.js` holds the things that are true of Paris and of nowhere
 else: the twenty arrondissement centroids and their names, the French public
 holidays and what they close, the euro and what counts as cheap here, the
 forecast's default coordinates, and the 100×100 spiral the quest map is drawn
@@ -513,7 +530,7 @@ matters there.
 useless without something to build with, and a pack that hand-rolled its own
 markup would drift from every other section within a week — so the engine hands
 out `rows`, `card`, `stripHead`, `esc` and the live record pool, and a pack view
-composes exactly what the built-in ones do. `cities/bengaluru/views/yourside.js`
+composes exactly what the built-in ones do. `bengaluru/views/yourside.js`
 is the worked example.
 
 A pack may declare `bases` in its `home.json` where the region has more than

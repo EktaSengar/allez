@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bengaluru for You</title>
-<meta name="description" content="A Bengaluru guide for the people who live here — what's worth doing today, tonight and this weekend, from wherever you are.">
+<title>Allez · Delhi</title>
+<meta name="description" content="A Delhi guide for the people who live here — what's worth doing today, tonight and this weekend, from wherever you are.">
 <meta name="theme-color" content="#fdfaf5">
-<link rel="stylesheet" href="../../css/style.css?v=462d80b6">
+<link rel="stylesheet" href="../css/style.css?v=462d80b6">
 
 <!-- Every photograph on the page comes from Commons and the forecast from
      open-meteo. Both are third parties, so the first request to each pays
@@ -61,7 +61,7 @@
      cached hard, so a returning reader spends no round trips at all
      being told the file has not changed. -->
 <script>
-  window.__DV = {"civic":"c23df368","daytrips":"3c15f7bb","editorial":"e2e014ac","events":"16fc8aef","events-city":"36a0556f","food":"d0c731fd","home":"b541c726","invaders":"ad7f739e","itineraries":"6f33d13e","neighborhoods":"3ba16044","nightlife":"283da68c","notable":"146cd930","notes":"c5842853","places":"f89cc3f0","places/g00":"d719b4be","places/g01":"7bc25522","places/g02":"984778a7","places/g03":"c857353d","places/g10":"873cc937","places/g11":"647139ee","places/g12":"5c422568","places/g13":"ca0e160b","places/g20":"139f0aea","places/g21":"d5672650","places/g22":"05eec174","places/g23":"1564ad7e","places/g30":"4fc23c46","places/g31":"d00c7675","places/g32":"a594c154","places/g33":"18c58d8b","places/index":"723321f5","practices":"f5714f34","quests":"1eefefd6","sports":"283da68c"};
+  window.__DV = {"civic":"a884acc6","daytrips":"d8f5b29a","editorial":"bccbc2af","events":"c7f45b4d","events-city":"d6b752e5","food":"aaf89155","home":"25e2260f","invaders":"aef06896","itineraries":"e2d79d8d","neighborhoods":"d060da31","nightlife":"5670201b","notable":"1bae9219","notes":"796bfeb4","places":"0454c55a","places/g00":"6b3afa12","places/g01":"e59e5739","places/g02":"e052fed6","places/g03":"a31d00b8","places/g10":"7b8c7809","places/g11":"4f51f048","places/g12":"7a09506b","places/g13":"cf970937","places/g20":"b4470d73","places/g21":"9971f49e","places/g22":"4ee714cd","places/g23":"a93a8f0e","places/g30":"8b8ea361","places/g31":"b2db7589","places/g32":"973f0894","places/g33":"d4cfca5f","places/index":"83afe0d7","practices":"8dda768f","quests":"1c921e88","sports":"5670201b"};
   (function () {
     var core = ['home', 'places/index',
                 'events', 'events-city', 'places', 'nightlife', 'sports', 'food',
@@ -82,7 +82,8 @@
     }
   })();
 </script>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛺</text></svg>">
 </head>
 <body>
 
@@ -91,7 +92,7 @@
     <div class="head-top">
       <div>
         <p class="date" id="dateline"></p>
-        <h1 class="title">Bengaluru <em>for you</em></h1>
+        <h1 class="title">Allez, <em>Delhi</em></h1>
       </div>
       <button id="theme" class="theme" type="button" title="Switch to dark" aria-label="Switch to dark">☾</button>
     </div>
@@ -115,7 +116,7 @@
 
     <div class="locpanel" id="locpanel" hidden>
       <div class="locrow">
-        <input id="loc-input" type="search" placeholder="100 Feet Road · Indiranagar · Cubbon Park · a hotel name"
+        <input id="loc-input" type="search" placeholder="M Block Market · Hauz Khas · Lodhi Garden · a hotel name"
                autocomplete="off" aria-label="Search for a place">
         <button id="loc-go" class="ghost accent" type="button">Go</button>
       </div>
@@ -140,10 +141,10 @@
         <div class="chips" id="loc-bases"></div>
       </div>
       <div class="locgroup">
-        <span class="loclabel">Neighbourhood</span>
+        <span class="loclabel">Colony</span>
         <div class="chips" id="loc-zones"></div>
       </div>
-      <p class="locnote">Your exact address is never shown or stored on the page — only the neighbourhood. Coordinates stay in this browser.</p>
+      <p class="locnote">Your exact address is never shown or stored on the page — only the colony. Coordinates stay in this browser.</p>
     </div>
 
     <p class="epigraph" id="epigraph"></p>
@@ -170,21 +171,23 @@
      app.js all read `City` as they evaluate, not later. keys.js is
      second for the same reason — it needs City.id to name a key, and
      state.js and location.js need the name as they evaluate. -->
-<script src="city.js?v=652ee3a3"></script>
-<script src="../../js/keys.js?v=d850c74b"></script>
-<script src="../../js/location.js?v=b5655823"></script>
-<script src="../../js/state.js?v=381f1374"></script>
-<script src="../../js/weather.js?v=f053584c"></script>
-<script src="../../js/hours.js?v=f3930310"></script>
-<script src="../../js/record.js?v=492c838a"></script>
-<script src="../../js/invaders.js?v=bc4c1aab"></script>
-<script src="../../js/nearby.js?v=3a2ab53d"></script>
-<script src="../../js/scoring.js?v=16ed6bd0"></script>
-<script src="../../js/app.js?v=ef70a9a5"></script>
+<script src="city.js?v=9810f1df"></script>
+<script src="../js/keys.js?v=d850c74b"></script>
+<script src="../js/location.js?v=b5655823"></script>
+<script src="../js/state.js?v=381f1374"></script>
+<script src="../js/weather.js?v=f053584c"></script>
+<!-- Only where the pack declares City.air. Paris does not, and does
+     not pay for this file existing. -->
+<script src="../js/air.js?v=b6c0d881"></script>
+<script src="../js/hours.js?v=f3930310"></script>
+<script src="../js/record.js?v=492c838a"></script>
+<script src="../js/invaders.js?v=bc4c1aab"></script>
+<script src="../js/nearby.js?v=3a2ab53d"></script>
+<script src="../js/scoring.js?v=16ed6bd0"></script>
+<script src="../js/app.js?v=ef70a9a5"></script>
 <!-- After app.js, because it calls App.defineView. This is what a pack
      shipping its own view looks like: one file, one registration, and
      nothing in the engine that knows it exists. -->
-<script src="views/yourside.js?v=07be7943"></script>
 
 <nav class="tabs" id="tabs">
   <div class="wrap tabs-inner">
@@ -194,7 +197,6 @@
       <button class="tab" data-view="weekend">Weekend</button>
       <button class="tab" data-view="eat">Eat</button>
       <button class="tab" data-view="sport">Sport</button>
-      <button class="tab" data-view="yourside">Your side</button>
       <button class="tab" data-view="regulars">Regulars</button>
       <button class="tab" data-view="explore">Explore</button>
       <button class="tab" data-view="away">Away</button>
@@ -242,7 +244,7 @@
       <span class="flabel">Only</span>
       <div class="chips" id="flag-chips">
         <button class="chip" data-flag="free">Free</button>
-        <button class="chip" data-flag="cheap">Under ₹500</button>
+        <button class="chip" data-flag="cheap">Under ₹600</button>
         <button class="chip" data-flag="near">Under 30 min</button>
         <button class="chip" data-flag="fortwo">For two</button>
         <button class="chip" data-flag="hidden">Hidden gems</button>

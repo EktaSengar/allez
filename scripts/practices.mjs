@@ -33,9 +33,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
+const DATA = dataDir();
 const DRY  = process.argv.includes('--dry');
 
 /* Ninety rather than the sixty `events.mjs` uses. A term-length practice

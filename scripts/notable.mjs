@@ -30,9 +30,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
+const DATA = dataDir();
 const DRY  = process.argv.includes('--dry');
 const LIMIT = (() => { const i = process.argv.indexOf('--limit'); return i === -1 ? 0 : Number(process.argv[i + 1]); })();
 const UA = 'paris-for-you/1.0 (https://github.com/EktaSengar/paris)';
