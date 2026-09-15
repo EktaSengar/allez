@@ -36,7 +36,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { dataDir } from './shim.mjs';
+import { dataDir, City } from './shim.mjs';
 import { pageImages } from './images.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -44,7 +44,7 @@ const DATA = dataDir();
 const CACHE = path.join(ROOT, 'scripts', 'photo-cache.json');
 const FORCE = process.argv.includes('--force');
 const DRY   = process.argv.includes('--dry');
-const UA = 'paris-for-you/1.0 (personal site; https://github.com/EktaSengar/paris)';
+const UA = 'allez/1.0 (personal site; https://github.com/EktaSengar/allez)';
 
 /* ---------- where a Commons file lives ----------
 
@@ -100,17 +100,35 @@ const isPhoto = file => !!file && !NOT_A_PHOTO.some(re => re.test(file));
    nearest photographed thing to a municipal tennis court is not a picture
    of the tennis court, and attaching it would be inventing a claim. */
 
+/* The corners used to be written out, and they were Paris. They come
+   from the pack now — but not verbatim.
+
+   A pack's `bbox` is drawn for Overpass, which wants the built-up city
+   and nothing past it. Photographs are not so tidy: the thing worth a
+   picture sits just outside that line often enough to matter, and the
+   box this query carried before the packs existed was wider than Paris's
+   own bbox on all four sides. Handing `City.bbox` straight to the
+   endpoint would therefore have *lost* Paris photographs — a quiet
+   regression on the one city that already works. The pad is that
+   difference, rounded up. Degrees rather than metres because corners are
+   what the endpoint asks for. */
+const PAD_LAT = 0.02;
+const PAD_LON = 0.06;
+
+const [BOX_S, BOX_W, BOX_N, BOX_E] = String(City.bbox).split(',').map(Number);
+const corner = (lon, lat) => `"Point(${lon.toFixed(3)} ${lat.toFixed(3)})"^^geo:wktLiteral`;
+
 const BOX_QUERY = `SELECT ?coord ?img WHERE {
   SERVICE wikibase:box {
     ?item wdt:P625 ?coord .
-    bd:serviceParam wikibase:cornerWest "Point(2.20 48.80)"^^geo:wktLiteral .
-    bd:serviceParam wikibase:cornerEast "Point(2.48 48.92)"^^geo:wktLiteral .
+    bd:serviceParam wikibase:cornerWest ${corner(BOX_W - PAD_LON, BOX_S - PAD_LAT)} .
+    bd:serviceParam wikibase:cornerEast ${corner(BOX_E + PAD_LON, BOX_N + PAD_LAT)} .
   }
   ?item wdt:P18 ?img .
 }`;
 
 async function wikidataImages() {
-  process.stdout.write('  Wikidata P18 across Paris… ');
+  process.stdout.write(`  Wikidata P18 across ${City.name}… `);
   const res = await fetch(
     'https://query.wikidata.org/sparql?query=' + encodeURIComponent(BOX_QUERY),
     { headers: { 'user-agent': UA, Accept: 'application/sparql-results+json' },
