@@ -10,10 +10,13 @@ on:
   workflow_dispatch:           # lets you run it by hand from the Actions tab
   push:
     paths:
-      - 'data/**'
+      # Paris's data and page, which is what this workflow refreshes.
+      # The other three cities have no automated sources wired up yet.
+      - 'paris/data/**'
+      - 'paris/index.html'
+      - 'paris/city.js'
       - 'css/**'
       - 'js/**'
-      - 'index.html'
       - 'scripts/**'
       - '.github/workflows/refresh.yml'
 
@@ -115,17 +118,19 @@ jobs:
       # Pages serves assets with max-age=600, so without content-hashed URLs a
       # returning browser can pair new HTML with ten-minute-old CSS and JS.
       - name: Stamp asset URLs
-        run: node scripts/version.mjs
+        # --all: js/ and css/ are shared, so refreshing Paris restamps
+        # every city's page or three of them point at a hash that is gone.
+        run: node scripts/version.mjs --all
 
       - name: Commit any changes
         if: github.event_name != 'pull_request'
         run: |
-          if [ -z "$(git status --porcelain data index.html scripts/photo-cache.json)" ]; then
+          if [ -z "$(git status --porcelain paris delhi bengaluru bay-area scripts/photo-cache.json)" ]; then
             echo "Nothing changed — no events expired and assets already stamped."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data index.html scripts/photo-cache.json
+          git add paris delhi bengaluru bay-area scripts/photo-cache.json
           git commit -m "chore: prune expired events and restamp assets ($(date -u +%Y-%m-%d))"
           git push

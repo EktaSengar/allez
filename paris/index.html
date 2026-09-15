@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Allez · Paris</title>
+<meta name="description" content="A personal Paris guide for Ekta &amp; Kartik — what's worth doing today, tonight and this weekend, from wherever you are.">
+<meta name="theme-color" content="#fdfaf5">
+<link rel="stylesheet" href="../css/style.css?v=462d80b6">
+
+<!-- Every photograph on the page comes from Commons and the forecast from
+     open-meteo. Both are third parties, so the first request to each pays
+     for a DNS lookup, a TCP handshake and a TLS negotiation before a byte
+     of anything moves — about a third of a second on a phone. Start them
+     while the stylesheet is still downloading. -->
+<link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
+<link rel="preconnect" href="https://api.open-meteo.com">
+
+<script>
+  /* Set the theme before first paint so a saved dark preference never
+     flashes light. This runs ahead of every script tag, js/keys.js
+     included, so it spells the key out rather than asking for it — and
+     carries the old single-city name over itself, because the flash it
+     exists to prevent would otherwise happen once to every existing
+     reader. The theme is deliberately not per-city: see js/keys.js. */
+  try {
+    var TK = 'homeground.theme';
+    var t = localStorage.getItem(TK);
+    if (t === null) {
+      var was = localStorage.getItem('paris-for-you.theme');
+      if (was !== null) { localStorage.setItem(TK, was); t = was; }
+    }
+    if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  } catch (e) {}
+</script>
+
+<!-- ---------- start the data before the code that wants it ----------
+
+     The page used to discover its own data last. The browser parsed the
+     HTML, downloaded nine scripts, executed them, fired DOMContentLoaded,
+     and only then did app.js issue its first fetch. Everything the page
+     is made of sat behind a chain that had nothing to do with it.
+
+     These are exactly the files the first render cannot draw without —
+     FIRST and CORE in app.js, and nothing else. Kicking them off here
+     overlaps them with the download and parse of the JavaScript instead
+     of queueing them behind it. app.js picks up the in-flight requests
+     through window.__PRELOAD rather than asking twice.
+
+     What is deliberately *not* here: civic.json and notable.json, and
+     the shards. They feed the discovered layer, which repaints when it
+     fills, and starting them now would only take bandwidth from the
+     files the first paint is actually waiting for.
+
+     window.__DV is the content-hash map that scripts/version.mjs writes,
+     the same idea as the ?v= on the stylesheet above: a hashed URL can be
+     cached hard, so a returning reader spends no round trips at all
+     being told the file has not changed. -->
+<script>
+  window.__DV = {"civic":"0f024d4c","daytrips":"3f31dc17","editorial":"29c85877","events":"b7ec8e63","events-city":"e61e0ff0","food":"e42c1d7e","home":"89e99596","invaders":"dc2b4add","itineraries":"003d9129","neighborhoods":"ba5c017e","nightlife":"a8ea59ac","notable":"ec814f75","notes":"27a06c14","places":"12ca9edc","places/1":"0cb665bd","places/10":"4ede6574","places/11":"8f7128f4","places/12":"7823d680","places/13":"f0bf369b","places/14":"f663b401","places/15":"0e0c91e7","places/16":"ef4b6917","places/17":"1327693b","places/18":"85a85427","places/19":"7ebe79cc","places/2":"5e9c65db","places/20":"8f417096","places/3":"6cf32e71","places/4":"9785b013","places/5":"2928aa4a","places/6":"1b1d391f","places/7":"cef02c04","places/8":"fd6ccfba","places/9":"ed7bf37e","places/index":"e2b02e6d","practices":"93cfd286","quests":"c4177174","sports":"6ffec6cc"};
+  (function () {
+    var core = ['home', 'places/index',
+                'events', 'events-city', 'places', 'nightlife', 'sports', 'food',
+                'itineraries', 'daytrips', 'neighborhoods', 'quests', 'editorial',
+                'invaders', 'notes'];
+    var pre = window.__PRELOAD = {};
+    var dv = window.__DV;
+    for (var i = 0; i < core.length; i++) {
+      var n = core[i];
+      var v = dv[n];
+      try {
+        pre[n] = fetch('data/' + n + '.json' + (v ? '?v=' + v : ''),
+                       v ? undefined : { cache: 'no-cache' });
+        /* A rejection nobody is listening to yet is an unhandled rejection.
+           app.js attaches the real handler a moment from now. */
+        pre[n].catch(function () {});
+      } catch (e) {}
+    }
+  })();
+</script>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥐</text></svg>">
+</head>
+<body>
+
+<header class="head">
+  <div class="wrap">
+    <div class="head-top">
+      <div>
+        <p class="date" id="dateline"></p>
+        <h1 class="title">Allez, <em>Paris</em></h1>
+      </div>
+      <button id="theme" class="theme" type="button" title="Switch to dark" aria-label="Switch to dark">☾</button>
+    </div>
+    <hr class="rule">
+
+    <div class="locbar">
+      <button id="loc-open" class="locbtn" type="button" aria-expanded="false">
+        <span class="loc-pin">📍</span>
+        <span class="loc-text">
+          <!-- "Home" rather than "Exploring from": on a fresh load there is
+               no saved elsewhere, so this is the label the location engine
+               is about to write, and starting on the other one made the
+               button change width a second in. -->
+          <span class="loc-kicker" id="loc-kicker">Home</span>
+          <span class="loc-name" id="loc-name">…</span>
+        </span>
+        <span class="loc-change">Change</span>
+      </button>
+      <button id="loc-reset" class="locreset" type="button" hidden>Reset to home</button>
+    </div>
+
+    <div class="locpanel" id="locpanel" hidden>
+      <div class="locrow">
+        <input id="loc-input" type="search" placeholder="Rue Mouffetard · 5th arrondissement · Gare du Nord · a hotel name"
+               autocomplete="off" aria-label="Search for a place">
+        <button id="loc-go" class="ghost accent" type="button">Go</button>
+      </div>
+      <div class="locactions">
+        <button id="loc-here" class="chip" type="button">📍 Use my current location</button>
+        <button id="loc-sethome" class="chip" type="button">🏠 Save this as home</button>
+      </div>
+      <p class="locerr" id="loc-err" hidden></p>
+      <div class="locgroup" id="loc-recent-wrap" hidden>
+        <span class="loclabel">Recent</span>
+        <div class="chips" id="loc-recent"></div>
+      </div>
+      <!-- Hidden unless the city declares more than one starting point.
+
+           Before the zone list on purpose: "which side are you on" is a
+
+           bigger question than "which neighbourhood", and answering it
+
+           first is what makes the zone list mean anything. -->
+      <div class="locgroup" hidden>
+        <span class="loclabel">Where from</span>
+        <div class="chips" id="loc-bases"></div>
+      </div>
+      <div class="locgroup">
+        <span class="loclabel">Arrondissement</span>
+        <div class="chips" id="loc-zones"></div>
+      </div>
+      <p class="locnote">Your exact address is never shown or stored on the page — only the arrondissement. Coordinates stay in this browser.</p>
+    </div>
+
+    <p class="epigraph" id="epigraph"></p>
+    <p class="meta-line" id="conditions"></p>
+    <div id="notice"></div>
+  </div>
+</header>
+
+<!-- ---------- why the scripts are here and not at the end of <body> ----
+
+     Three lines of the header — the dateline, the epigraph and the lede
+     — are written by JavaScript and need no data to write. At the end of
+     <body> that still happened after the first paint: the stylesheet is
+     what unblocks painting and it arrives before nine script files do,
+     so the browser drew a header three lines short and then grew it,
+     shoving the page down by fifty-eight pixels.
+
+     Here, the parser stops at these tags with the header parsed and
+     nothing below it parsed yet, app.js fills those three lines as it
+     evaluates, and the header is its full height before anything is
+     drawn. Nothing is delayed by the move: these scripts were always
+     parser-blocking, so this changes the order, not the total. -->
+<!-- The city pack comes first: location.js, scoring.js, weather.js and
+     app.js all read `City` as they evaluate, not later. keys.js is
+     second for the same reason — it needs City.id to name a key, and
+     state.js and location.js need the name as they evaluate. -->
+<script src="city.js?v=c2a6f1ac"></script>
+<script src="../js/keys.js?v=d850c74b"></script>
+<script src="../js/location.js?v=b5655823"></script>
+<script src="../js/state.js?v=381f1374"></script>
+<script src="../js/weather.js?v=f053584c"></script>
+<script src="../js/hours.js?v=f3930310"></script>
+<script src="../js/record.js?v=492c838a"></script>
+<script src="../js/invaders.js?v=bc4c1aab"></script>
+<script src="../js/nearby.js?v=3a2ab53d"></script>
+<script src="../js/scoring.js?v=16ed6bd0"></script>
+<script src="../js/app.js?v=ef70a9a5"></script>
+
+<nav class="tabs" id="tabs">
+  <div class="wrap tabs-inner">
+    <div class="tabs-main">
+      <button class="tab" data-view="today">Today</button>
+      <button class="tab" data-view="nights">Nights</button>
+      <button class="tab" data-view="weekend">Weekend</button>
+      <button class="tab" data-view="eat">Eat</button>
+      <button class="tab" data-view="sport">Sport</button>
+      <button class="tab" data-view="regulars">Regulars</button>
+      <button class="tab" data-view="explore">Explore</button>
+      <button class="tab" data-view="away">Away</button>
+    </div>
+    <div class="tabs-util">
+      <button class="tab tab-sm" data-view="quests">Quests</button>
+      <button class="tab tab-sm" data-view="saved">Saved</button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="main">
+  <div class="bar">
+    <p class="lede" id="lede"></p>
+    <div class="bar-actions">
+      <button id="filters-toggle" class="ghost" type="button" aria-expanded="false">Filter</button>
+      <button id="surprise" class="ghost accent" type="button">Surprise us</button>
+    </div>
+  </div>
+
+  <div class="filters" id="filters" hidden>
+    <div class="frow">
+      <span class="flabel">Time</span>
+      <div class="chips" id="time-chips">
+        <button class="chip" data-time="60">1 hour</button>
+        <button class="chip" data-time="120">2 hours</button>
+        <button class="chip" data-time="300">Half a day</button>
+        <button class="chip" data-time="600">Full day</button>
+      </div>
+    </div>
+    <div class="frow">
+      <span class="flabel">Mood</span>
+      <div class="chips" id="mood-chips">
+        <button class="chip" data-mood="relax">Relax</button>
+        <button class="chip" data-mood="explore">Explore</button>
+        <button class="chip" data-mood="food">Eat</button>
+        <button class="chip" data-mood="culture">Culture</button>
+        <button class="chip" data-mood="outdoors">Outdoors</button>
+        <button class="chip" data-mood="shop">Shop</button>
+        <button class="chip" data-mood="learn">Learn</button>
+        <button class="chip" data-mood="romantic">Romantic</button>
+      </div>
+    </div>
+    <div class="frow">
+      <span class="flabel">Only</span>
+      <div class="chips" id="flag-chips">
+        <button class="chip" data-flag="free">Free</button>
+        <button class="chip" data-flag="cheap">Under €20</button>
+        <button class="chip" data-flag="near">Under 30 min</button>
+        <button class="chip" data-flag="fortwo">For two</button>
+        <button class="chip" data-flag="hidden">Hidden gems</button>
+        <button class="chip" data-flag="indoor">Indoor</button>
+        <button class="chip" data-flag="outdoor">Outdoor</button>
+        <button class="chip" data-flag="new">Not done yet</button>
+      </div>
+    </div>
+    <div class="frow frow-end">
+      <button id="clear" class="link" type="button">Clear</button>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+
+  <div id="view"></div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Made for Ekta &amp; Kartik. Travel times are estimated from <span id="home-foot">where you are exploring from</span> — your exact address is never shown here or sent anywhere.</p>
+    <p>Events carry a source and a verified date and expire on their own. Hours change — check the link before you travel. Ratings and progress stay in this browser.</p>
+    <p class="foot-links">
+      <button class="tab-link" data-view="quests" type="button">Quests</button>
+      <button class="tab-link" data-view="saved" type="button">Your list</button>
+    </p>
+    <p id="stamp"></p>
+    <p>Photographs from Wikimedia Commons under their respective licences, credited on each card.</p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>

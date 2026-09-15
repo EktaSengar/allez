@@ -5,14 +5,14 @@
    --------------------------------------------------------- */
 
 const Weather = (() => {
-  /* Defaults to the Canal Saint-Martin area; Weather.setHome() overrides it
+  /* Defaults come from the city pack; Weather.setHome() overrides them
      from data/home.json so the forecast follows whoever lives here. */
-  let LAT = 48.87, LON = 2.36;
+  let LAT = City.weather.lat, LON = City.weather.lon;
   const url = () => `https://api.open-meteo.com/v1/forecast`
     + `?latitude=${LAT}&longitude=${LON}`
     + `&current=temperature_2m,weather_code,precipitation`
     + `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max`
-    + `&timezone=Europe%2FParis&forecast_days=8`;
+    + `&timezone=${encodeURIComponent(City.weather.tz)}&forecast_days=8`;
 
   // WMO weather interpretation codes
   const CODES = {
@@ -76,6 +76,58 @@ const Weather = (() => {
 
   /* Round to two decimals — roughly a kilometre — so no exact address
      is ever sent to the weather service. */
+  /* ---------- more than one climate ----------
+
+     Everywhere so far, one forecast describes the city. The Bay Area it
+     does not: measured on 14 September 2026 at the same minute, Outer
+     Sunset was 18.4 degrees under 44% cloud, the Mission 23.6 and clear,
+     Palo Alto 27.8. Ranking the Outer Sunset against the Mission's
+     afternoon is the mistake every guide written by a visitor makes.
+
+     Open-Meteo takes a list of coordinates and answers with a list, so
+     this is one request either way. Each station gets its own mode, and
+     `modeFor` hands back the nearest one — which is all the ranking
+     needs to stop recommending the fog. */
+
+  async function loadStations(stations, tz) {
+    const lat = stations.map(s => s.lat).join(',');
+    const lon = stations.map(s => s.lon).join(',');
+    const res = await fetch('https://api.open-meteo.com/v1/forecast'
+      + `?latitude=${lat}&longitude=${lon}`
+      + '&current=temperature_2m,weather_code,precipitation'
+      + '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max'
+      + `&timezone=${encodeURIComponent(tz)}&forecast_days=2`, { cache: 'no-store' });
+    if (!res.ok) throw new Error('weather ' + res.status);
+    const body = await res.json();
+    const list = Array.isArray(body) ? body : [body];
+
+    const out = {};
+    list.forEach((d, i) => {
+      const st = stations[i];
+      if (!st) return;
+      const tmax = Math.round(d.daily?.temperature_2m_max?.[0] ?? 0);
+      const code = d.daily?.weather_code?.[0] ?? 0;
+      const rain = d.daily?.precipitation_probability_max?.[0] ?? 0;
+      const [label, icon] = describe(code);
+      out[st.id] = { id: st.id, lat: st.lat, lon: st.lon, tmax, code, rain,
+                     label, icon, mode: mode(tmax, code, rain),
+                     now: { temp: Math.round(d.current?.temperature_2m ?? tmax),
+                            label, icon } };
+    });
+    return out;
+  }
+
+  /* Nearest station, by the same flat-earth arithmetic the rest of the
+     site uses at this scale. */
+  function modeFor(byStation, stations, lat, lon) {
+    let best = null, bd = Infinity;
+    for (const s of stations) {
+      const d = (s.lat - lat) ** 2 + (s.lon - lon) ** 2;
+      if (d < bd) { bd = d; best = s.id; }
+    }
+    return byStation[best] || null;
+  }
+
   function setHome(lat, lon) {
     if (typeof lat === 'number' && typeof lon === 'number') {
       LAT = Math.round(lat * 100) / 100;
@@ -83,5 +135,5 @@ const Weather = (() => {
     }
   }
 
-  return { load, setHome, ADVICE };
+  return { load, setHome, ADVICE, loadStations, modeFor, mode, describe };
 })();

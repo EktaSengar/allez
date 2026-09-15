@@ -1,0 +1,70 @@
+name: Checks
+
+# What has to be true before anything merges.
+#
+# Everything here is cheap, offline and deterministic: no browser, no
+# network, no Overpass. It runs in well under a minute, which is the
+# point — a check that takes ten minutes is a check people merge past.
+#
+# The heavier things deliberately stay out. `check-views.mjs` needs
+# Chrome and a baseline, and a baseline committed to the repo goes stale
+# against a date-dependent page. The performance report has real
+# run-to-run variance and lives on its own weekly schedule, reporting
+# rather than failing, for the reason written up in the paris-performance
+# skill: a red check that is sometimes just noise is one people learn to
+# scroll past.
+#
+# Unlike that one, this workflow DOES fail. Everything in it is exact.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Nothing below can run if something does not parse, and a syntax
+      # error in a browser file would otherwise only surface as a blank
+      # page in one city.
+      - name: Everything parses
+        run: |
+          fail=0
+          for f in js/*.js */city.js */views/*.js scripts/*.mjs; do
+            [ -e "$f" ] || continue
+            node --check "$f" || { echo "::error file=$f::does not parse"; fail=1; }
+          done
+          exit $fail
+
+      # The contract every city pack owes the engine. Each phase of the
+      # multi-city work found another thing a pack had to supply, always
+      # by rendering a second city and noticing. This is that, up front.
+      - name: City packs hold up their end
+        run: node scripts/check-packs.mjs
+
+      # css/ and js/ are shared, so a change to app.js leaves every other
+      # city's page pointing at a hash that no longer exists. --all is the
+      # difference between catching that here and catching it in a browser.
+      - name: Asset stamps are current
+        run: node scripts/version.mjs --all --check
+
+      # Every record still valid, and nothing expired still shipping.
+      - name: Data is valid
+        run: node scripts/refresh.mjs --check
+
+      # The one that exists because the site once passed every eyeball
+      # test while being completely broken: distance reached the ranking
+      # but not the retrieval, and nothing on screen said so.
+      - name: Moving still changes the answers
+        run: node scripts/check-location.mjs

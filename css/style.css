@@ -485,22 +485,22 @@ picture { display: contents; }
 }
 .f dd { margin: 0; font-size: .89rem; color: var(--soft); }
 
-.arr-grid { display: grid; gap: .35rem; grid-template-columns: 1fr; margin-top: 2rem; }
-@media (min-width: 640px) { .arr-grid { grid-template-columns: 1fr 1fr; } }
-.arr {
+.zone-grid { display: grid; gap: .35rem; grid-template-columns: 1fr; margin-top: 2rem; }
+@media (min-width: 640px) { .zone-grid { grid-template-columns: 1fr 1fr; } }
+.zone {
   display: flex; align-items: center; gap: .85rem;
   padding: .6rem 0; border-top: 1px solid var(--line);
   font-size: .88rem;
 }
-.arr .n { font-family: var(--serif); color: var(--accent); flex: 0 0 1.9rem; }
-.arr .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--soft); }
-.arr button {
+.zone .n { font-family: var(--serif); color: var(--accent); flex: 0 0 1.9rem; }
+.zone .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--soft); }
+.zone button {
   background: none; border: 1px solid var(--line); border-radius: 999px;
   padding: .16rem .6rem; font-size: .72rem; font-family: inherit;
   color: var(--faint); cursor: pointer; white-space: nowrap;
 }
-.arr button:hover { border-color: var(--soft); color: var(--ink); }
-.arr button.on { border-color: var(--accent); color: var(--accent); }
+.zone button:hover { border-color: var(--soft); color: var(--ink); }
+.zone button.on { border-color: var(--accent); color: var(--accent); }
 
 /* ---------- quests ---------- */
 
@@ -1123,8 +1123,8 @@ body[data-view="away"]    { --accent: #3f5e7a; --blush: #93add0; }
 /* ---------- the arrondissement map ---------- */
 
 .quest.is-map { grid-column: 1 / -1; }
-.arr-map-wrap { margin-top: .4rem; }
-.arr-map {
+.zone-map-wrap { margin-top: .4rem; }
+.zone-map {
   width: 100%; max-width: 30rem; height: auto; display: block; margin: 0 auto;
   overflow: visible;
 }
@@ -1134,22 +1134,22 @@ body[data-view="away"]    { --accent: #3f5e7a; --blush: #93add0; }
   stroke-width: 2.4; stroke-linecap: round;
   opacity: .5;
 }
-.arr-dot { cursor: pointer; }
-.arr-dot circle {
+.zone-dot { cursor: pointer; }
+.zone-dot circle {
   fill: var(--card); stroke: var(--line); stroke-width: .9;
   transition: fill .25s, stroke .25s, transform .25s;
 }
-.arr-dot text {
+.zone-dot text {
   font-family: var(--sans); font-size: 4.4px; font-weight: 600;
   text-anchor: middle; fill: var(--faint);
   transition: fill .25s; pointer-events: none;
 }
-.arr-dot:hover circle { stroke: var(--accent); }
-.arr-dot.on circle { fill: var(--accent); stroke: var(--accent); }
-.arr-dot.on text { fill: var(--bg); }
-.arr-dot.home circle { fill: var(--gold); stroke: var(--gold); }
-.arr-dot.home text { fill: var(--bg); }
-.arr-map-note {
+.zone-dot:hover circle { stroke: var(--accent); }
+.zone-dot.on circle { fill: var(--accent); stroke: var(--accent); }
+.zone-dot.on text { fill: var(--bg); }
+.zone-dot.home circle { fill: var(--gold); stroke: var(--gold); }
+.zone-dot.home text { fill: var(--bg); }
+.zone-map-note {
   text-align: center; margin: .9rem 0 0;
   font-size: .76rem; color: var(--faint);
 }

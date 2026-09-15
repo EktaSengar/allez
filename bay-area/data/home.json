@@ -1,0 +1,33 @@
+{
+  "city": "Bay Area",
+  "note": "Two starting points, because the region has two centres fifty kilometres apart and which one you are at decides almost everything. The first is the default until a reader saves their own. Green Tortoise is a public address and exact; Downtown North is a home and rounded to the neighbourhood.",
+  "bases": [
+    {
+      "id": "city",
+      "label": "North Beach",
+      "zone": "north-beach",
+      "lat": 37.79827,
+      "lon": -122.40531,
+      "exact": true,
+      "note": "Green Tortoise, 494 Broadway."
+    },
+    {
+      "id": "peninsula",
+      "label": "Downtown North",
+      "zone": "palo-alto",
+      "lat": 37.4479,
+      "lon": -122.1601,
+      "exact": false,
+      "note": "Rounded to the neighbourhood, not the door."
+    }
+  ],
+  "lat": 37.79827,
+  "lon": -122.40531,
+  "zone": "north-beach",
+  "label": "North Beach",
+  "stations": [
+    "Powell St BART",
+    "Montgomery BART",
+    "Caltrain 4th & King"
+  ]
+}

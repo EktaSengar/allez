@@ -1,6 +1,6 @@
-# Paris for You
+# Allez
 
-A personal Paris exploration guide for Ekta & Kartik.
+A city guide for the people who live in one. Paris, Delhi, Bengaluru and the Bay Area, at **[allez.city](https://allez.city)**.
 
 **Live at → https://ektasengar.github.io/paris/**
 
@@ -415,7 +415,7 @@ completion state, and — for the arrondissements — a map. Paris spirals
 outward from the 1st like a snail shell, so the twenty dots are laid out on
 their real relative positions (spread 30% from the centre, or the 1st through
 4th sit on top of each other) with the Seine drawn through. Tapping a dot
-marks it, and because progress for that quest is derived from `Store.arrs()`
+marks it, and because progress for that quest is derived from `Store.zones()`
 rather than a separate list, the map, the ring and the Explore tab can never
 disagree.
 
@@ -467,6 +467,110 @@ record and fails the build rather than shipping a broken one.
 The evergreen half of the data — bakeries, parks, walks, day trips — does not
 expire, which is why the site is still useful on a quiet week.
 
+### The layout
+
+One directory per city at the repo root, which is what the domain serves:
+
+```
+allez.city/            index.html      the chooser
+allez.city/paris/      paris/          index.html · city.js · data/ · sw.js
+allez.city/delhi/      delhi/
+allez.city/bengaluru/  bengaluru/      + views/yourside.js
+allez.city/bay-area/   bay-area/
+                       css/ js/        shared by all four
+                       scripts/        shared build and check tools
+```
+
+Paris lived at the repo root until the domain move, because it was the live
+site at a live URL. `CNAME` is what let that go.
+
+### The city pack
+
+`<city>/city.js` holds the things that are true of Paris and of nowhere
+else: the twenty arrondissement centroids and their names, the French public
+holidays and what they close, the euro and what counts as cheap here, the
+forecast's default coordinates, and the 100×100 spiral the quest map is drawn
+on. It loads as the first script tag, because `location.js`, `scoring.js`,
+`weather.js` and `app.js` all read `City` as they evaluate.
+
+Records say `zone`, not `arr`. In Paris a zone is an arrondissement and the
+pack supplies the twenty of them; in Bengaluru it would be a ward and in Delhi
+a colony. Only the pack knows which — the engine treats a zone as an opaque
+key with a centroid, which is why the same shard index, the same nearest-first
+ordering and the same one-per-zone cap work in all four.
+
+The rule it exists to hold is that **the engine never names a city**. Anything
+that needs to know what a neighbourhood is called, how money is written or when
+the shops shut asks the pack. A second city is a second pack, not a second copy
+of `app.js`.
+
+Three things deliberately stay outside it. The **voice** — every `why`, every
+epigraph, every section blurb — is hand-written and is the point of the site.
+The **data** is already per-city by construction. And **index.html** is Paris's
+own page, down to the croissant in the favicon: a city owns its page, and the
+engine does not write it.
+
+The pack also declares **which views exist**, in what order, what each tab
+reads and what the line under it says. The engine supplies a builder for every
+id it knows; a city that wants a view the engine has never heard of ships a
+file after `app.js` and calls `App.defineView(id, build, lede)`, then lists the
+id in `City.views`. Nothing in the engine needs to know it happened. A view
+that is declared with no builder says so on the page rather than drawing a
+blank one that looks like a data bug.
+
+A pack also owns **how long a kilometre takes**, which is one of the most
+city-specific facts there is. Paris walks or takes the Metro and the answer
+does not depend on when you ask. Bengaluru's does: `City.reach.minutes(km, when)`
+prices the same trip at roughly twice as much inside the weekday rush windows,
+because Indiranagar to Whitefield at 6pm is a different trip from the same one
+at 11am, and a model that cannot say so is wrong about the only thing that
+matters there.
+
+`App.ui` is the other half of `App.defineView`. Registering a builder is
+useless without something to build with, and a pack that hand-rolled its own
+markup would drift from every other section within a week — so the engine hands
+out `rows`, `card`, `stripHead`, `esc` and the live record pool, and a pack view
+composes exactly what the built-in ones do. `bengaluru/views/yourside.js`
+is the worked example.
+
+A pack may declare `bases` in its `home.json` where the region has more than
+one centre. The Bay Area has two, fifty kilometres apart, and a list ranked from
+North Beach is not a slightly different list from one ranked in Palo Alto — it is
+a different city. The location panel grows a *Where from* row, hidden everywhere
+else.
+
+It may also declare `climate`, a handful of representative points fetched in one
+request, where one forecast does not describe the city. Measured in the Bay on
+14 September 2026 at the same minute: Outer Sunset 18.4° under 44% cloud, the
+Mission 23.6° and clear, Palo Alto 27.8°. Every record then ranks against its
+nearest station, which is what stops a fine Mission afternoon putting the Outer
+Sunset at the top of the page.
+
+A pack may also declare `City.air`, which loads `js/air.js` and adds air quality
+as a ranking input. **It is deliberately not a filter.** The obvious build gates
+outdoor suggestions above some AQI, and it is useless: Delhi has six to eight
+weeks a year like that, life does not pause for them, and nobody is choosing
+between Lodhi Garden and clean air — they are choosing between Lodhi Garden and
+the sofa. So the number is stated plainly at the top, indoor things rise, outdoor
+things fall a long way and never fall off, and the hourly forecast is used for
+the genuinely useful part: *"Better around 5am, at about 174."* Paris declares no
+`air`, never loads the file, and pays nothing.
+
+A pack that has no shape worth drawing omits `zone.map` and the zone quest
+falls back to a list of chips. Paris spirals out from the 1st and is worth a
+drawing; Bengaluru is ninety-five named neighbourhoods, where a dot per zone
+would be a rash rather than a map.
+
+The tabs themselves stay as markup in `index.html` rather than being written
+from JavaScript, because the nav is parsed after the scripts and filling it at
+`DOMContentLoaded` would move the page after the first paint. That means two
+lists that can drift, so `check-views.mjs` asserts they agree — membership,
+order and labels — and fails if they do not.
+
+Node gets the pack from `scripts/shim.mjs`, which loads it once and injects
+`City` into every module it evaluates, so a build script cannot forget to pass
+it and then fail in a way the browser never would.
+
 ---
 
 ## Working on it
@@ -483,6 +587,21 @@ node scripts/refresh.mjs            # prune expired entries + validate
 node scripts/refresh.mjs --links    # also check every source URL resolves
 ```
 
+Anything that touches rendering should be held to the bar the August 2026
+optimisation was held to — the page still says exactly what it said before:
+
+```bash
+node scripts/check-packs.mjs      # every pack holds up its end of the contract
+node scripts/version.mjs --all    # every city — js/ and css/ are shared
+node scripts/check-views.mjs --save /tmp/before.json
+# …make the change…
+node scripts/check-views.mjs --compare /tmp/before.json
+```
+
+It renders all ten views in headless Chrome and hashes what each drew, pinning
+the date, the forecast, `localStorage` and `Math.random` so two runs of the same
+commit always agree. Needs `CHROME_PATH` and `puppeteer-core`.
+
 ### Adding something
 
 Add an object to the right file in `data/`. The fields that matter:
@@ -491,7 +610,7 @@ Add an object to the right file in `data/`. The fields that matter:
 |---|---|
 | `id` | unique, kebab-case |
 | `title`, `emoji`, `why` | `why` is the important one — say why *they* would care, not what it is |
-| `arr`, `area`, `minutesFromHome` | distance is estimated from the Canal Saint-Martin area |
+| `zone`, `area`, `minutesFromHome` | distance is estimated from the Canal Saint-Martin area |
 | `price`, `priceNote` | `price` is a number for ranking; `priceNote` is what gets displayed |
 | `start`, `end` | `YYYY-MM-DD`. Anything with a past `end` is deleted automatically |
 | `days` | `[0-6]`, 0 = Sunday. Omit if it is open every day |

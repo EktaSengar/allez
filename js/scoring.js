@@ -19,25 +19,11 @@ const Rank = (() => {
   const parse = s => new Date(s + 'T12:00:00');
   const daysBetween = (a, b) => Math.round((parse(b) - parse(a)) / DAY_MS);
 
-  /* French public holidays. Shops, bakeries and markets largely shut;
-     museums, parks and ticketed events carry on. */
-  const HOLIDAYS = {
-    '2026-08-15': 'Assumption',
-    '2026-11-01': "All Saints' Day",
-    '2026-11-11': 'Armistice Day',
-    '2026-12-25': 'Christmas Day',
-    '2027-01-01': "New Year's Day",
-    '2027-04-05': 'Easter Monday',
-    '2027-05-01': 'Labour Day',
-    '2027-05-06': 'Ascension',
-    '2027-05-08': 'VE Day',
-    '2027-05-17': 'Whit Monday',
-    '2027-07-14': 'Bastille Day',
-    '2027-08-15': 'Assumption'
-  };
-
-  /* Things that shut on a public holiday. */
-  const SHUTS_ON_HOLIDAY = ['bakery', 'cafe', 'shop', 'market'];
+  /* When the city is shut, and what that shuts. Both tables live in the
+     city pack — every country's list is different, and several of the
+     dates move from year to year. See cities/paris/city.js. */
+  const HOLIDAYS = City.holidays;
+  const SHUTS_ON_HOLIDAY = City.shutsOnHoliday;
 
   /* --- is this thing available on a given date? --- */
 
@@ -86,6 +72,36 @@ const Rank = (() => {
 
   /* --- does it suit the sky? --- */
 
+  /* ---------- air ----------
+
+     Only cities whose pack declares `City.air` ever pass an `airMode`,
+     so this costs everywhere else one undefined check.
+
+     Deliberately shaped like `weatherFit`, and deliberately NOT shaped
+     like a filter. The tempting version returns -Infinity on a severe
+     day and empties the outdoor half of the site. That reads as careful
+     and is useless: Delhi has six to eight weeks of this a year, people
+     still have Sundays, and nobody is choosing between a garden and
+     clean air — they are choosing between a garden and the sofa.
+
+     So the numbers are large enough to reorder a page and never large
+     enough to clear one. An outdoor place on a hazardous day sits below
+     the indoor ones and is still on the page, with the air stated plainly
+     at the top, so the reader is deciding rather than being decided for.
+
+     How hard to push is a judgement about a city, so the pack supplies
+     the weights. This is only the shape. */
+  function airFit(item, mode) {
+    if (!mode || typeof City === 'undefined' || !City.air) return 0;
+    const outdoor = item.indoor === false || item.weatherSensitive;
+    const indoor  = item.indoor === true;
+    const w = City.air.weight[mode];
+    if (!w) return 0;
+    if (indoor)  return w.indoor  || 0;
+    if (outdoor) return w.outdoor || 0;
+    return 0;
+  }
+
   function weatherFit(item, mode) {
     if (!mode) return 0;
     const outdoor = item.indoor === false || item.weatherSensitive;
@@ -130,7 +146,7 @@ const Rank = (() => {
   /* --- the main event --- */
 
   function score(item, ctx) {
-    const { today, weatherMode, taste = {}, exploredArrs = [], homeArr = null } = ctx;
+    const { today, weatherMode, airMode, taste = {}, exploredZones = [], homeZone = null } = ctx;
 
     const rating = Store.rating(item.id);
     if (rating === 'never') return -Infinity;          // hard exclude
@@ -183,14 +199,19 @@ const Rank = (() => {
         daysBetween(today, item.start) <= 45) s += 4;
 
     // conditions
-    s += weatherFit(item, weatherMode);
+    /* A city with one climate passes one mode. The Bay Area passes a
+       lookup instead, because the Outer Sunset's afternoon and the
+       Mission's are two different afternoons two miles apart, and
+       ranking one against the other is the mistake this exists to stop. */
+    s += weatherFit(item, (ctx.weatherAt && ctx.weatherAt(item)) || weatherMode);
+    s += airFit(item, airMode);
     s += seasonFit(item, today);
 
     // suits a couple
     if ((item.goodFor || []).includes('couple')) s += 2;
 
     // somewhere you have not been — your own arrondissement is not "new"
-    if (item.arr && !exploredArrs.includes(item.arr) && item.arr !== homeArr) s += 3;
+    if (item.zone && !exploredZones.includes(item.zone) && item.zone !== homeZone) s += 3;
 
     // learned taste
     let tasteBump = 0;

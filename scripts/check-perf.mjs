@@ -58,6 +58,12 @@ const AS_JSON = flag('json');
 const MARKDOWN = opt('markdown', null);
 const PORT = Number(opt('port', 4399));
 
+/* Which city to measure. The root is the chooser now — a few hundred
+   bytes of static HTML — so a harness still pointed at "/" would score
+   beautifully and quietly stop measuring the site. That is worse than
+   failing, because it reads as an improvement. */
+const CITY = String(opt('city', 'paris'));
+
 /* ---------- a server that behaves like the one this ships to ----------
 
    Pages gzips text, serves `cache-control: max-age=600`, and answers a
@@ -77,7 +83,9 @@ function serve() {
   const gzipped = new Map();
   const server = http.createServer((req, res) => {
     const url = decodeURIComponent(req.url.split('?')[0]);
-    const file = path.join(ROOT, url === '/' ? 'index.html' : url);
+    /* Pages resolves a directory to its index.html, and every city is
+       served from one. */
+    const file = path.join(ROOT, url.endsWith('/') ? url + 'index.html' : url);
     if (!file.startsWith(ROOT)) { res.writeHead(403).end('forbidden'); return; }
 
     let buf;
@@ -341,7 +349,7 @@ function markdown(rows, meta) {
 /* ---------- run ---------- */
 
 async function main() {
-  const url = `http://localhost:${PORT}/`;
+  const url = `http://localhost:${PORT}/${CITY}/`;
   const server = await serve();
 
   try {

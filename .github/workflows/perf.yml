@@ -57,7 +57,7 @@ jobs:
       # The stamps have to be current or the page asks for data URLs that
       # no longer match the files, which would measure a broken site.
       - name: Check asset stamps are current
-        run: node scripts/version.mjs --check
+        run: node scripts/version.mjs --all --check
 
       - name: Measure
         run: |

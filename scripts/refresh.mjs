@@ -22,9 +22,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
+const DATA = dataDir();
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const args = new Set(process.argv.slice(2));
@@ -52,7 +53,7 @@ const FILES = {
   'food.json':          { timeSensitive: false, required: ['id', 'title', 'why', 'url'] },
   'itineraries.json':   { timeSensitive: false, required: ['id', 'title', 'why', 'stops'] },
   'daytrips.json':      { timeSensitive: false, required: ['id', 'title', 'why', 'url', 'transit'] },
-  'neighborhoods.json': { timeSensitive: false, required: ['arr', 'name', 'famousFor'] },
+  'neighborhoods.json': { timeSensitive: false, required: ['zone', 'name', 'famousFor'] },
   'quests.json':        { timeSensitive: false, required: ['id', 'title', 'targets'] }
 };
 
@@ -69,7 +70,7 @@ async function readJSON(file) {
 }
 
 function validateItem(file, item, required, i) {
-  const where = `${file}[${i}] ${item.id || item.title || item.arr || '?'}`;
+  const where = `${file}[${i}] ${item.id || item.title || item.zone || '?'}`;
 
   required.forEach(f => {
     if (item[f] === undefined || item[f] === null || item[f] === '') {

@@ -23,19 +23,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadModule, readDiscovered } from './shim.mjs';
+import { loadModule, readDiscovered, dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const VERBOSE = process.argv.includes('--verbose');
-const read = f => JSON.parse(fs.readFileSync(path.join(ROOT, 'data', f + '.json'), 'utf8'));
+const read = f => JSON.parse(fs.readFileSync(path.join(dataDir(), f + '.json'), 'utf8'));
 
 /* ---------- enough of a browser to load the modules ---------- */
 
 const Store = {
   rating: () => null, isDone: () => false, tasteWeights: () => ({}),
-  arrs: () => [], hasArr: () => false, seenRecently: () => false,
+  zones: () => [], hasZone: () => false, seenRecently: () => false,
   questDone: () => [], seedQuest: () => {}, setRating: () => null,
-  wants: () => [], doneIds: () => [], toggleQuest: () => [], toggleArr: () => false,
+  wants: () => [], doneIds: () => [], toggleQuest: () => [], toggleZone: () => false,
   markSeen: () => {}
 };
 const localStorage = { getItem: () => null, setItem: () => {}, removeItem: () => {} };
@@ -73,11 +73,11 @@ for (const n of ['civic', 'notable', 'editorial', 'notes', 'events-city']) D[n] 
 const TODAY = new Date().toISOString().slice(0, 10);
 const { all: ALL, discovered: DISCOVERED } = Rec.build(D, TODAY);
 
-Loc.boot(Loc.fromArr(1));
+Loc.boot(Loc.fromZone(1));
 Near.use(ALL, DISCOVERED);
 
-function at(arr) {
-  Loc.explore(Loc.fromArr(arr));
+function at(zone) {
+  Loc.explore(Loc.fromZone(zone));
   [...ALL, ...DISCOVERED].forEach(i => {
     const m = Loc.minutesTo(i);
     if (m != null) i.minutesFromHome = m;
@@ -127,11 +127,11 @@ const KINDS = [
 const PLACES = [10, 5, 15, 18, 13];
 
 const top = {};
-for (const arr of PLACES) {
-  at(arr);
-  top[arr] = {};
+for (const zone of PLACES) {
+  at(zone);
+  top[zone] = {};
   for (const [kind, ringSet] of KINDS) {
-    top[arr][kind] = Near
+    top[zone][kind] = Near
       .pick(Near.KIND[kind], { rings: Near.RINGS[ringSet], want: 6, limit: 5 })
       .items.map(i => i.title);
   }
@@ -208,9 +208,9 @@ for (const [kind, , allowed] of KINDS) {
 }
 
 if (VERBOSE) {
-  for (const arr of PLACES) {
-    console.log(`\n${arr}e`);
-    for (const [kind] of KINDS) console.log(`  ${kind.padEnd(11)} ${top[arr][kind].join(', ')}`);
+  for (const zone of PLACES) {
+    console.log(`\n${zone}e`);
+    for (const [kind] of KINDS) console.log(`  ${kind.padEnd(11)} ${top[zone][kind].join(', ')}`);
   }
 }
 
@@ -260,13 +260,13 @@ const ALL_ARRS = Array.from({ length: 20 }, (_, i) => i + 1);
 
 console.log('\nHow much is known about the top 5, per arrondissement');
 console.log('(★ visited · ◆ researched · ◇ on record · · on the map)\n');
-console.log('arr    ' + EVERYDAY.map(([k]) => k.slice(0, 6).padStart(7)).join('') + '     worst');
+console.log('zone    ' + EVERYDAY.map(([k]) => k.slice(0, 6).padStart(7)).join('') + '     worst');
 
 const MARK = { personal: '★', editorial: '◆', sourced: '◇', found: '·' };
 const beyondByArr = {};
 
-for (const arr of ALL_ARRS) {
-  at(arr);
+for (const zone of ALL_ARRS) {
+  at(zone);
   const cells = [];
   let worst = 9;
   for (const [kind, ringSet] of EVERYDAY) {
@@ -274,7 +274,7 @@ for (const arr of ALL_ARRS) {
     const known = top.filter(i => Near.tierOf(i) !== 'found').length;
     worst = Math.min(worst, known);
     cells.push(top.map(i => MARK[Near.tierOf(i)]).join('').padStart(7));
-    const cell = `${arr}e ${kind}`;
+    const cell = `${zone}e ${kind}`;
     if (known < NEED_KNOWN) {
       if (THIN.has(cell)) thin.push(`${cell}: ${known} of 5 known`);
       else failures.push(`${cell}: only ${known} of the top 5 is more than a name on a map (need ${NEED_KNOWN})`);
@@ -282,8 +282,8 @@ for (const arr of ALL_ARRS) {
       fixed.push(cell);
     }
   }
-  beyondByArr[arr] = Near.beyond(Near.KIND.cafe, 10).map(i => ({ title: i.title, arr: i.arr }));
-  console.log(String(arr).padStart(3) + 'e   ' + cells.join('') + '   ' + String(worst).padStart(5));
+  beyondByArr[zone] = Near.beyond(Near.KIND.cafe, 10).map(i => ({ title: i.title, zone: i.zone }));
+  console.log(String(zone).padStart(3) + 'e   ' + cells.join('') + '   ' + String(worst).padStart(5));
 }
 
 /* "Worth the trip" is allowed to repeat itself between locations — the
@@ -291,10 +291,10 @@ for (const arr of ALL_ARRS) {
    demanding otherwise would be demanding a lie. What it must not do is
    what it used to: return three places from one arrondissement, which is
    how "the 10th again" survived the first fix. */
-for (const arr of ALL_ARRS) {
-  const spread = beyondByArr[arr];
-  if (spread.length >= 2 && new Set(spread.map(x => x.arr)).size < 2)
-    failures.push(`${arr}e worth-the-trip: all ${spread.length} suggestions are in the same arrondissement`);
+for (const zone of ALL_ARRS) {
+  const spread = beyondByArr[zone];
+  if (spread.length >= 2 && new Set(spread.map(x => x.zone)).size < 2)
+    failures.push(`${zone}e worth-the-trip: all ${spread.length} suggestions are in the same arrondissement`);
 }
 
 /* The specific regression: the names from the original report must not be

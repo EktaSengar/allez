@@ -26,6 +26,9 @@ evidence rather than taste.
 14. [Photographs are stored as a Commons path fragment, not a URL](#14)
 15. [Every fill path redraws through `repaint()`](#15)
 16. [Things deliberately not done](#16)
+17. [The city pack loads before every module that reads it](#17)
+18. [The tabs are markup, not a render](#18)
+19. [A shard is a bucket, not a zone](#19)
 
 ---
 
@@ -416,9 +419,11 @@ Recorded so they are not re-proposed as easy wins:
   them. This is an honesty limit rather than a budget one, but it is also
   the single largest page-weight decision on the site, so it is recorded
   here too.
-- **Reducing `FIRST_BATCH` below 4 shards.** Saves ~70 KB and directly
-  weakens the location-aware sections on the first paint, which is the
-  thing the site is for.
+- **Reducing the first batch below what four arrondissements cost.**
+  Saves ~70 KB and directly weakens the location-aware sections on the
+  first paint, which is the thing the site is for. `FIRST_BATCH` is no
+  longer a count of shards — see §19 — but the budget is calibrated at
+  exactly that figure and the reasoning is unchanged.
 - **Minification, or stripping comments at deploy.** Asked and answered
   on 27 August 2026, so it does not need reopening without new
   information.
@@ -446,3 +451,124 @@ Recorded so they are not re-proposed as easy wins:
   is worse for the common case: someone editing `nearby.js` sees the
   comment, and will not go looking for a skill file they may not know
   exists. What belongs here is the compiled summary, not the only copy.
+
+<a id="17"></a>
+## 17. The city pack loads before every module that reads it
+
+`index.html` puts `cities/paris/city.js` **ahead of the other nine**
+script tags. That ordering is not stylistic: `location.js`, `scoring.js`,
+`weather.js` and `app.js` all dereference `City` while they evaluate —
+`const ARR = City.zone.centroids` runs at IIFE time, not at call time —
+so a pack that arrives second is a `ReferenceError` and a blank page.
+
+It sits with the others above `<main>` (§1) rather than in `<head>`,
+because it is subject to the same trade: parser-blocking either way, and
+the header has to be its full height before the first paint.
+
+**Why a separate file rather than inlining it into `index.html`:** the
+page is the one thing served network-first (§13), so anything inlined
+there is re-fetched on every visit. A hashed script is cache-first and
+free on the second load. The cost is one request and, measured,
+**+1,852 bytes gzipped** — most of which is prose that moved out of
+`location.js` and `app.js` rather than new weight.
+
+`scripts/version.mjs` stamps `cities/` alongside `css/` and `js/`; the
+service worker needs no change, because it routes on the presence of
+`?v=` rather than on a list of files.
+
+Node has the same ordering requirement and gets it from one place:
+`scripts/shim.mjs` loads the pack once and injects `City` into every
+module it evaluates. A build script cannot forget to pass it.
+
+**How the failure shows up:** not subtly. Every view is empty and the
+console has a single `City is not defined` before anything renders.
+
+<a id="18"></a>
+## 18. The tabs are markup, not a render
+
+`City.views` declares which views exist and in what order, and `index.html`
+separately carries the nav that shows them. Two lists of the same thing
+looks like an oversight. It is not.
+
+The nav sits below the script tags (§1), so at the moment `app.js`
+evaluates it has not been parsed yet and cannot be filled. The only other
+place to write it is `init()`, which runs on `DOMContentLoaded` — after the
+first paint. Generating ten tabs there inserts a ~44 px band above `#main`
+and shoves the whole page down, which is precisely the shift §1 and §3
+exist to remove.
+
+So the page keeps its own markup, and the cost is that the two lists can
+drift — silently, because a tab with no declaration renders an empty view
+and a declaration with no tab is simply unreachable.
+
+`scripts/check-views.mjs` closes that: it reads `City.views` out of the
+running page, compares membership, order and labels against the `.tab`
+elements, and fails the comparison if they disagree. Verified by renaming
+one label in the pack alone and confirming the run reports it.
+
+**If you ever do move the tabs into JavaScript,** measure CLS before and
+after rather than assuming the reservation trick in §3 covers it — that
+reserves height for text that is about to be written into an element that
+already exists, which is a different problem from an element that does not.
+
+<a id="19"></a>
+## 19. A shard is a bucket, not a zone
+
+`scripts/shard.mjs` groups the discovery index one file per zone while a
+city has at most `MAX_SHARDS` (24) of them, and switches to a grid over
+the bounding box above that. Paris has twenty arrondissements so it never
+grids, and its files are still `1.json`–`20.json`.
+
+Delhi has 267 colonies. One file per zone gave **194 shard files holding
+99 KB between them** — nine times Paris's request count for an eighth of
+its data, and a `FIRST_BATCH` of four covering a fraction of the ground
+four arrondissements cover. Gridded: 16 files, same data. Bengaluru went
+94 → 16 the same way.
+
+A record keeps its own `a` for display. Only the grouping changes, and
+nothing downstream reads the shard key for anything but "which file".
+
+**The grid is deliberately not a clustering pass.** Clustering balances
+the buckets better and also means a record can move file because a
+*different* record moved, which turns every weekly rebuild into a much
+larger diff than it needs to be.
+
+Each shard carries its own centroid as `c` in `index.json`, and
+`shardOrder()` sorts on that. It used to look the centroid up from the
+zone table by number, guarded with `if (!/^\d+$/.test(k)) return -1`.
+
+**That guard was a live bug for two years' worth of future cities.** `-1`
+sorts *first*, so for a city whose zone keys are names every shard scored
+-1, the sort was a no-op, and "the nearest shards arrive first" — the
+thing §4 exists to make possible — was doing nothing at all in Bengaluru
+and Delhi. It never fired in Paris because `"1"`–`"20"` are numeric.
+
+Where a shard key is a zone the city knows, its centroid is written from
+`City.zone.centroids` rather than from the mean of the file, so a city
+that was already sharding by zone keeps byte-identical ordering.
+
+**How it shows up:** not as an error. As a first paint that is no more
+local than a random quarter of the city, and a request waterfall with one
+entry per neighbourhood.
+
+**The first batch is a byte budget, not a count of shards.** A count only
+means anything while shards are a uniform size, and bucketing made them
+anything but: four of Paris's twenty arrondissements is 665 KB raw, four
+of Delhi's sixteen grid cells is 444 KB, and four of a city sharded some
+other way could be nearly all of it or nearly none.
+
+Records were the obvious stand-in and are a bad one — Paris averages 36
+bytes a record gzipped and Delhi 25, so a record budget over-fetches by
+nearly half in one city to be right in the other. So each shard records
+its own size as `b` in `index.json` and `firstBatch()` fills a budget of
+680 KB raw, which is what four arrondissements cost, about 152 KB over
+the wire.
+
+What this produces: Paris 4 of 20 shards at 152 KB, Bengaluru 6 of 16 at
+139 KB, Delhi 16 of 16 at 112 KB. Delhi takes its whole index because
+its whole index is smaller than Paris's first batch — the progressive
+fill is a no-op there, which is the correct answer rather than a bug.
+
+An index written before shards carried `b` falls back to a quarter of the
+budget per shard, which reproduces the old count-of-four rather than
+fetching the city.

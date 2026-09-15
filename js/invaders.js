@@ -31,7 +31,7 @@ const Invaders = (() => {
     ALL = (items || []).map(p => ({
       code: p.c,
       coords: [p.lat, p.lon],
-      arr: p.a,
+      zone: p.a,
       street: p.s || null,
       note: p.x || null,
       floor: p.l || null,
@@ -53,12 +53,12 @@ const Invaders = (() => {
     const byArr = {};
     ALL.forEach(i => {
       if (!done.includes(i.code)) return;
-      byArr[i.arr] = (byArr[i.arr] || 0) + 1;
+      byArr[i.zone] = (byArr[i.zone] || 0) + 1;
     });
     return {
       found: done.length,
       total: ALL.length,
-      arrs: Object.keys(byArr).length,
+      zones: Object.keys(byArr).length,
       byArr
     };
   }
@@ -91,10 +91,10 @@ const Invaders = (() => {
       .slice(0, limit);
   }
 
-  function inArr(arr, { includeFound = false } = {}) {
+  function inArr(zone, { includeFound = false } = {}) {
     const done = found();
     return stamped()
-      .filter(i => i.arr === arr && (includeFound || !done.includes(i.code)))
+      .filter(i => i.zone === zone && (includeFound || !done.includes(i.code)))
       .sort((a, b) => a.minutes - b.minutes);
   }
 
@@ -162,7 +162,7 @@ const Invaders = (() => {
       title: '30-minute mission',
       line: 'Three of them, and back before the kettle cools.',
       stops: quick.stops, km: quick.km, minutes: quick.minutes,
-      arr: quick.stops[0].arr
+      zone: quick.stops[0].zone
     });
 
     const long = route(pool, 10);
@@ -172,7 +172,7 @@ const Invaders = (() => {
       title: 'Weekend mission',
       line: 'Ten of them, on foot, through whatever the walk goes through.',
       stops: long.stops, km: long.km, minutes: long.minutes,
-      arr: long.stops[0].arr
+      zone: long.stops[0].zone
     });
 
     /* The one that is really about the arrondissement. Pick the quarter
@@ -180,10 +180,10 @@ const Invaders = (() => {
        preferring somewhere you have not ticked off at all. */
     const counts = {};
     stamped().filter(i => !found().includes(i.code))
-      .forEach(i => { if (i.arr) (counts[i.arr] = counts[i.arr] || []).push(i); });
+      .forEach(i => { if (i.zone) (counts[i.zone] = counts[i.zone] || []).push(i); });
 
     const candidates = Object.entries(counts)
-      .filter(([arr, list]) => list.length >= 5 && Number(arr) !== homeArr)
+      .filter(([zone, list]) => list.length >= 5 && Number(zone) !== homeArr)
       .sort((a, b) => {
         const seenA = exploredArrs.includes(Number(a[0])) ? 1 : 0;
         const seenB = exploredArrs.includes(Number(b[0])) ? 1 : 0;
@@ -192,18 +192,18 @@ const Invaders = (() => {
       });
 
     if (candidates.length) {
-      const [arr, list] = candidates[0];
+      const [zone, list] = candidates[0];
       const r = route(list, 5);
       out.push({
         id: 'invaders-newarr',
         emoji: '🗺️',
-        title: `Explore the ${arr}${arr === '1' ? 'st' : 'e'}`,
-        line: exploredArrs.includes(Number(arr))
+        title: `Explore the ${zone}${zone === '1' ? 'st' : 'e'}`,
+        line: exploredArrs.includes(Number(zone))
           ? 'You have been, barely. Five of them are a reason to go back properly.'
           : 'Somewhere you have not been. Five mosaics are as good a reason as any.',
         stops: r.stops, km: r.km, minutes: r.minutes,
-        arr: Number(arr),
-        newArr: !exploredArrs.includes(Number(arr))
+        zone: Number(zone),
+        newArr: !exploredArrs.includes(Number(zone))
       });
     }
 

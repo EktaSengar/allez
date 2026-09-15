@@ -18,45 +18,16 @@
    --------------------------------------------------------- */
 
 const Loc = (() => {
-  const KEY = 'paris-for-you.location.v1';
-  const UA_NOTE = 'paris-for-you (personal site)';
+  const KEY = Keys.location;
+  const UA_NOTE = City.ua;
 
-  /* Where each arrondissement actually lives — the preset list, and the
-     fallback when a record has no coordinates of its own.
-
-     These are deliberately NOT the geometric centroids the city
-     publishes. The 12th and the 16th each have a wood bolted onto them,
-     and averaging the polygon puts the 12th two kilometres out in the
-     Bois de Vincennes: click "12e" and the guide would helpfully find
-     you the nearest bakery to a forest. So each point is the median
-     position of the city's own facilities in that postcode — schools,
-     crèches, libraries, gyms — which sit where people are rather than
-     where the boundary happens to run.
-
-     Where an arrondissement is all city, the two agree to within a few
-     hundred metres, which is the check that this is measuring something
-     real. Only the two with woods move far.
-
-     The build scripts keep the geometric centroids, on purpose: they use
-     them to work out which arrondissement a point falls in, and for that
-     job an evenly spaced set approximates the boundaries better than a
-     set pulled towards where the shops are. Different question, different
-     table. */
-  const ARR = {
-    1:[48.8620,2.3426],  2:[48.8668,2.3450],  3:[48.8625,2.3609],  4:[48.8549,2.3569],
-    5:[48.8436,2.3497],  6:[48.8495,2.3328],  7:[48.8569,2.3127],  8:[48.8760,2.3148],
-    9:[48.8780,2.3404],  10:[48.8755,2.3639], 11:[48.8582,2.3807], 12:[48.8412,2.3956],
-    13:[48.8275,2.3620], 14:[48.8304,2.3226], 15:[48.8403,2.2954], 16:[48.8559,2.2713],
-    17:[48.8889,2.3123], 18:[48.8918,2.3476], 19:[48.8852,2.3810], 20:[48.8660,2.4009]
-  };
-
-  const ARR_NAMES = {
-    1:'Louvre · Palais-Royal', 2:'Bourse · Sentier', 3:'Haut Marais', 4:'Marais · Île Saint-Louis',
-    5:'Latin Quarter', 6:'Saint-Germain', 7:'Invalides · Eiffel', 8:'Champs-Élysées · Monceau',
-    9:'SoPi · Pigalle', 10:'Canal Saint-Martin', 11:'Oberkampf · Bastille', 12:'Bastille · Bercy',
-    13:'Butte-aux-Cailles', 14:'Montparnasse · Denfert', 15:'Vaugirard', 16:'Passy · Trocadéro',
-    17:'Batignolles', 18:'Montmartre', 19:'Buttes-Chaumont · La Villette', 20:'Belleville · Ménilmontant'
-  };
+  /* The twenty arrondissements: where each one actually sits, and what
+     a local calls it. Both tables moved to the city pack — see
+     cities/paris/city.js, which also keeps the explanation of why these
+     are not the geometric centroids the city publishes. Aliased to the
+     old names because everything below reads them that way. */
+  const ZONE = City.zone.centroids;
+  const ZONE_NAMES = City.zone.names;
 
   let state = { home: null, exploring: null, recents: [] };
 
@@ -66,10 +37,24 @@ const Loc = (() => {
     try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
   }
 
+  /* A saved place used to carry `arr`. Same one-time carry-over as the
+     store's, and for the same reason: what is on disk was written by a
+     build that had only ever heard of arrondissements. */
+  function renameZone(loc) {
+    if (loc && loc.arr !== undefined && loc.zone === undefined) {
+      loc.zone = loc.arr;
+      delete loc.arr;
+    }
+    return loc;
+  }
+
   function boot(defaultHome) {
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) state = Object.assign({ home: null, exploring: null, recents: [] }, JSON.parse(raw));
+      renameZone(state.home);
+      renameZone(state.exploring);
+      (state.recents || []).forEach(renameZone);
     } catch (e) {}
     if (!state.home) state.home = defaultHome;
     return active();
@@ -102,30 +87,35 @@ const Loc = (() => {
     return 2 * R * Math.asin(Math.sqrt(x));
   }
 
-  /* Door-to-door, roughly. Short hops are walked; longer ones assume the
-     Metro, where the access and waiting time dominates far more than the
-     ride does. An estimate, and the interface says "~" because of it. */
-  function minutes(coords) {
+  /* Door-to-door, roughly, and an estimate — the interface says "~"
+     because of it.
+
+     How long a kilometre takes is one of the most city-specific facts
+     there is, so the pack owns it. Paris walks or takes the Metro and
+     the answer does not depend on when you ask. Bengaluru's does: the
+     same trip east at 11am and at 6pm are different trips, and a model
+     that cannot say so is wrong about the only thing that matters here.
+
+     `when` is passed so a pack can care. Paris's ignores it. */
+  function minutes(coords, when) {
     const a = active();
     if (!a || !coords) return null;
     const d = km([a.lat, a.lon], coords);
     if (!isFinite(d)) return null;
-    const walk = d / 4.8 * 60;
-    const transit = 4 + (d / 16) * 60 + 3;
-    return Math.max(2, Math.round(Math.min(walk, transit)));
+    return City.reach.minutes(d, when || new Date());
   }
 
   /* Distance for a record: its own coordinates if it has them, otherwise
      its arrondissement, otherwise whatever was hand-written. */
   function minutesTo(item) {
     if (item.coords) return minutes(item.coords);
-    if (item.arr && ARR[item.arr]) return minutes(ARR[item.arr]);
+    if (item.zone && ZONE[item.zone]) return minutes(ZONE[item.zone]);
     return item.minutesFromHome ?? null;
   }
 
   const kmTo = item => {
     const a = active();
-    const c = item.coords || (item.arr && ARR[item.arr]);
+    const c = item.coords || (item.zone && ZONE[item.zone]);
     return (a && c) ? km([a.lat, a.lon], c) : Infinity;
   };
 
@@ -134,28 +124,33 @@ const Loc = (() => {
   /* Never show the street they typed. An arrondissement is specific
      enough to be useful and vague enough to be nobody's business. */
   function displayName(loc) {
-    if (!loc) return 'Paris';
-    if (loc.arr) return `${loc.arr}${loc.arr === 1 ? 'er' : 'e'} · ${ARR_NAMES[loc.arr] || 'Paris'}`;
-    return loc.area || loc.label || 'Paris';
+    if (!loc) return City.name;
+    if (loc.zone) return City.zone.display(loc.zone, ZONE_NAMES[loc.zone]);
+    return loc.area || loc.label || City.name;
   }
 
-  const arrName = n => ARR_NAMES[n] || `${n}e`;
-  const arrCoords = n => ARR[n];
-  const presets = () => Object.keys(ARR).map(Number)
-    .map(n => ({ arr: n, name: ARR_NAMES[n] }));
+  const zoneName = n => ZONE_NAMES[n] || City.zone.label(n);
+  const zoneCoords = n => ZONE[n];
+  /* Object.keys() is always strings. Paris's zones are numbers and its
+     records store them that way, so a numeric key is converted back and
+     anything else is left alone — coercing unconditionally rendered
+     ninety-five Bengaluru chips as "NaNe". */
+  const presets = () => Object.keys(ZONE)
+    .map(k => (/^\d+$/.test(k) ? Number(k) : k))
+    .map(n => ({ zone: n, name: ZONE_NAMES[n] }));
 
   /* ---------- finding a place ---------- */
 
   function fromAddress(hit) {
     const a = hit.address || {};
     const post = String(a.postcode || '');
-    let arr = null;
-    if (/^75\d{3}$/.test(post)) arr = Number(post.slice(3));       // 75005 → 5
-    if (!(arr >= 1 && arr <= 20)) arr = null;
+    let zone = null;
+    if (/^75\d{3}$/.test(post)) zone = Number(post.slice(3));       // 75005 → 5
+    if (!(zone >= 1 && zone <= 20)) zone = null;
     return {
       lat: +(+hit.lat).toFixed(5),
       lon: +(+hit.lon).toFixed(5),
-      arr,
+      zone,
       // a quarter or suburb if OSM knows one — never the house number
       area: a.suburb || a.quarter || a.neighbourhood || a.city_district || null,
       label: (hit.display_name || '').split(',')[0],
@@ -186,14 +181,14 @@ const Loc = (() => {
       const res = await fetch(url, { headers: { 'accept-language': 'en' } });
       if (res.ok) return fromAddress(await res.json());
     } catch (e) {}
-    return { lat: +lat.toFixed(5), lon: +lon.toFixed(5), arr: null, area: 'Where you are', label: 'Current location' };
+    return { lat: +lat.toFixed(5), lon: +lon.toFixed(5), zone: null, area: 'Where you are', label: 'Current location' };
   }
 
-  const fromArr = n => ({ lat: ARR[n][0], lon: ARR[n][1], arr: n, area: ARR_NAMES[n], label: ARR_NAMES[n] });
+  const fromZone = n => ({ lat: ZONE[n][0], lon: ZONE[n][1], zone: n, area: ZONE_NAMES[n], label: ZONE_NAMES[n] });
 
   return {
     boot, save, active, home, isExploring, setHome, explore, resetToHome, recents,
-    minutes, minutesTo, kmTo, km, displayName, arrName, arrCoords, presets,
-    search, locate, fromArr, ARR_NAMES
+    minutes, minutesTo, kmTo, km, displayName, zoneName, zoneCoords, presets,
+    search, locate, fromZone, ZONE_NAMES
   };
 })();

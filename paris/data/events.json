@@ -1,0 +1,712 @@
+{
+  "generated": "2026-09-15",
+  "window": {
+    "from": "2026-08-13",
+    "to": "2026-10-31"
+  },
+  "note": "Time-sensitive entries. Anything past its `end` date is pruned automatically by scripts/refresh.mjs. Verify prices and times at the official URL before travelling.",
+  "items": [
+    {
+      "id": "jeu-de-paume-photo-2026",
+      "title": "Two Photography Retrospectives — Jeu de Paume",
+      "emoji": "📷",
+      "type": "exhibition",
+      "categories": [
+        "photography",
+        "art",
+        "culture",
+        "indoor"
+      ],
+      "zone": 1,
+      "area": "Jeu de Paume, Jardin des Tuileries",
+      "price": 12,
+      "priceNote": "~€12",
+      "start": "2026-06-01",
+      "end": "2026-09-27",
+      "durationMin": 90,
+      "minutesFromHome": 22,
+      "transit": "M8 to Concorde",
+      "why": "Jeu de Paume is the serious photography house in Paris and it is small enough to do properly in 90 minutes without museum fatigue. Two retrospectives running at once until late September. Then walk out into the Tuileries and stay for the cauldron at sunset.",
+      "goodFor": [
+        "couple",
+        "culture",
+        "indoor",
+        "weekend"
+      ],
+      "indoor": true,
+      "labels": [
+        "couple",
+        "indoor"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "pairsWith": [
+        "olympic-cauldron-2026"
+      ],
+      "source": "Jeu de Paume",
+      "url": "https://jeudepaume.org/",
+      "lastVerified": "2026-08-13",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Le_Jeu_de_Paume%2C_1_place_de_la_Concorde_%C3%A0_Paris%2C_juillet_2021.jpg/500px-Le_Jeu_de_Paume%2C_1_place_de_la_Concorde_%C3%A0_Paris%2C_juillet_2021.jpg",
+      "imageSubject": "Galerie nationale du Jeu de Paume",
+      "imageCredit": "Wikimedia Commons",
+      "imageKind": "subject",
+      "coords": [
+        48.8626,
+        2.3363
+      ],
+      "coordsFrom": "arr-centroid"
+    },
+    {
+      "id": "musee-maillol-versace-2026",
+      "title": "Gianni Versace Retrospective — Musée Maillol",
+      "emoji": "👗",
+      "type": "exhibition",
+      "categories": [
+        "fashion",
+        "design",
+        "culture",
+        "indoor"
+      ],
+      "zone": 7,
+      "area": "Musée Maillol",
+      "price": 16,
+      "priceNote": "~€16",
+      "start": "2026-04-01",
+      "end": "2026-10-31",
+      "durationMin": 90,
+      "minutesFromHome": 30,
+      "transit": "M8 to Invalides / M12 to Rue du Bac",
+      "why": "A full Versace retrospective in a small, manageable museum — the archive pieces are extraordinary up close, and Maillol never gets the crush that the big houses do. Runs until the end of October, so this is one to keep in your back pocket for a grey autumn Sunday rather than a sunny August one.",
+      "goodFor": [
+        "couple",
+        "culture",
+        "indoor",
+        "weekend"
+      ],
+      "indoor": true,
+      "labels": [
+        "couple",
+        "indoor"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "source": "Musée Maillol",
+      "url": "https://www.museemaillol.com/",
+      "lastVerified": "2026-08-13",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mus%C3%A9e_Maillol_Paris_7e_001.jpg/500px-Mus%C3%A9e_Maillol_Paris_7e_001.jpg",
+      "imageSubject": "Musée Maillol",
+      "imageCredit": "Wikimedia Commons",
+      "imageKind": "subject",
+      "coords": [
+        48.8565,
+        2.312
+      ],
+      "coordsFrom": "arr-centroid"
+    },
+    {
+      "id": "quai-branly-esprit-du-temps-2026",
+      "title": "1913–1923: L'esprit du temps — Quai Branly",
+      "emoji": "🗿",
+      "type": "exhibition",
+      "categories": [
+        "history",
+        "art",
+        "culture",
+        "indoor"
+      ],
+      "zone": 7,
+      "area": "Musée du Quai Branly – Jacques Chirac",
+      "price": 14,
+      "priceNote": "~€14",
+      "start": "2026-04-01",
+      "end": "2026-09-20",
+      "durationMin": 120,
+      "minutesFromHome": 35,
+      "transit": "M9 to Alma–Marceau, then walk",
+      "why": "The decade that broke and remade European culture, told through the objects that arrived in Paris from elsewhere during it. Quai Branly is also one of the best buildings in Paris — the Jean Nouvel green wall and the garden are worth the trip on their own, and the garden is free.",
+      "goodFor": [
+        "couple",
+        "culture",
+        "indoor",
+        "learn"
+      ],
+      "indoor": true,
+      "labels": [
+        "indoor",
+        "couple"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "source": "Musée du Quai Branly",
+      "url": "https://www.quaibranly.fr/",
+      "lastVerified": "2026-08-13",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Mus%C3%A9e_du_quai_Branly_-_20150801_16h07_%2810629%29.jpg/500px-Mus%C3%A9e_du_quai_Branly_-_20150801_16h07_%2810629%29.jpg",
+      "imageSubject": "Musée du quai Branly - Jacques-Chirac",
+      "imageCredit": "Wikimedia Commons",
+      "imageKind": "subject",
+      "coords": [
+        48.86099,
+        2.29797
+      ],
+      "coordsFrom": "nominatim"
+    },
+    {
+      "id": "theatre-verdure-shakespeare-2026",
+      "title": "Open-Air Theatre — Jardin Shakespeare",
+      "emoji": "🎭",
+      "type": "event",
+      "categories": [
+        "theatre",
+        "outdoor",
+        "culture"
+      ],
+      "zone": 16,
+      "area": "Pré Catelan, Bois de Boulogne",
+      "price": 15,
+      "priceNote": "Free to €25 depending on the show",
+      "start": "2026-05-01",
+      "end": "2026-09-27",
+      "durationMin": 150,
+      "minutesFromHome": 45,
+      "transit": "M1 to Les Sablons, then a walk through the Bois",
+      "why": "A green amphitheatre hidden inside the Bois de Boulogne, planted with every species Shakespeare mentions, staging open-air theatre all summer. Very few Parisians have been. It is far, so treat it as a whole afternoon: walk in the Bois, then the show.",
+      "goodFor": [
+        "couple",
+        "weekend",
+        "outdoor",
+        "culture",
+        "romantic"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "hiddengem",
+        "romantic",
+        "outdoor",
+        "couple"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "source": "Secrets of Paris",
+      "url": "https://www.paris.fr/lieux/jardin-shakespeare-2358",
+      "lastVerified": "2026-08-13",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/GOUDEAU%26VIDAL_-_Vacherie_du_Pr%C3%A9-Catelan.jpg/500px-GOUDEAU%26VIDAL_-_Vacherie_du_Pr%C3%A9-Catelan.jpg",
+      "imageSubject": "Pré Catelan",
+      "imageCredit": "Wikimedia Commons",
+      "imageKind": "subject",
+      "coords": [
+        48.8637,
+        2.2769
+      ],
+      "coordsFrom": "arr-centroid"
+    },
+    {
+      "id": "journees-du-patrimoine-2026",
+      "title": "Journées Européennes du Patrimoine",
+      "emoji": "🏛️",
+      "type": "event",
+      "categories": [
+        "culture",
+        "architecture",
+        "free",
+        "unusual"
+      ],
+      "zone": null,
+      "area": "All of Paris and Île-de-France",
+      "price": 0,
+      "priceNote": "Free — but the good sites need booking",
+      "start": "2026-09-19",
+      "end": "2026-09-20",
+      "durationMin": 300,
+      "minutesFromHome": 15,
+      "transit": "Everywhere — pick sites near home first",
+      "why": "The single best weekend of the Paris year and it is worth planning for now. Thousands of buildings normally shut to the public open their doors for free: ministries, private hôtels particuliers, the Élysée, Freemason lodges, working ateliers. The 2026 theme is architectural heritage in danger. The catch is that the desirable sites open bookings in late August and are gone within hours — set a reminder for the last week of August.",
+      "goodFor": [
+        "couple",
+        "weekend",
+        "free",
+        "culture",
+        "unusual",
+        "learn"
+      ],
+      "indoor": true,
+      "bookAhead": true,
+      "labels": [
+        "free",
+        "dontmiss",
+        "bookahead",
+        "unusual",
+        "couple"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "source": "Ville de Paris",
+      "url": "https://www.paris.fr/evenements/les-journees-europeennes-du-patrimoine-2026-decouvrez-le-programme-113133",
+      "lastVerified": "2026-08-13",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Secretary_Pompeo_Arrives_to_Meet_with_French_Foreign_Minister_Le_Drian_in_Paris_%2850610423656%29_%28cropped%29.jpg/500px-Secretary_Pompeo_Arrives_to_Meet_with_French_Foreign_Minister_Le_Drian_in_Paris_%2850610423656%29_%28cropped%29.jpg",
+      "imageSubject": "Palais de l'Élysée",
+      "imageCredit": "Wikimedia Commons",
+      "imageKind": "context"
+    },
+    {
+      "id": "techno-parade-2026",
+      "title": "Techno Parade",
+      "emoji": "🔊",
+      "type": "event",
+      "categories": [
+        "nightlife",
+        "music",
+        "dance",
+        "free",
+        "outdoor"
+      ],
+      "zone": null,
+      "area": "Through the streets of Paris",
+      "price": 0,
+      "priceNote": "Free",
+      "start": "2026-09-19",
+      "end": "2026-09-19",
+      "days": [
+        6
+      ],
+      "times": "Floats leave around midday, finishes ~19:00–20:00",
+      "durationMin": 300,
+      "minutesFromHome": 15,
+      "transit": "Join the route anywhere along it — it usually passes République",
+      "why": "A dozen sound systems on lorries and several hundred thousand people dancing through the middle of Paris on a Saturday afternoon, for free. It is not subtle and it is not for everyone, but it is one of the few days the city gives its streets over completely. The route generally comes near République, so you can join for an hour and walk home. Note it clashes with the heritage weekend.",
+      "goodFor": [
+        "weekend",
+        "music",
+        "dance",
+        "free",
+        "outdoor",
+        "unusual",
+        "socialize"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "free",
+        "outdoor",
+        "unusual",
+        "weekend"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "source": "Technopol",
+      "url": "https://www.technoparade.fr/",
+      "lastVerified": "2026-08-15"
+    },
+    {
+      "id": "yemi-alade-cigale-2026",
+      "title": "Yemi Alade — La Cigale",
+      "emoji": "🪘",
+      "type": "event",
+      "categories": [
+        "nightlife",
+        "music",
+        "dance"
+      ],
+      "zone": 18,
+      "area": "La Cigale, boulevard de Rochechouart",
+      "price": 40,
+      "priceNote": "~€35–45",
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "times": "Doors 19:30",
+      "durationMin": 150,
+      "minutesFromHome": 20,
+      "transit": "M2 to Pigalle or Anvers",
+      "why": "One of the biggest Afrobeats voices in the world, in a room that holds barely a thousand. Nobody sits down. If you want a night that is pure dancing without going to a club at midnight, this is it.",
+      "goodFor": [
+        "evening",
+        "couple",
+        "music",
+        "dance",
+        "socialize"
+      ],
+      "indoor": true,
+      "bookAhead": true,
+      "labels": [
+        "afterwork",
+        "couple",
+        "bookahead",
+        "indoor"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "source": "Sortiraparis / La Cigale",
+      "url": "https://www.lacigale.fr/",
+      "lastVerified": "2026-08-15",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/La_Cigale_Paris.jpg/500px-La_Cigale_Paris.jpg",
+      "imageSubject": "La Cigale",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "coords": [
+        48.88248,
+        2.34013
+      ],
+      "coordsFrom": "nominatim"
+    },
+    {
+      "id": "prix-arc-triomphe-2026",
+      "title": "Qatar Prix de l'Arc de Triomphe",
+      "emoji": "🏇",
+      "type": "event",
+      "categories": [
+        "sport",
+        "outdoor",
+        "unusual"
+      ],
+      "zone": 16,
+      "area": "Hippodrome ParisLongchamp",
+      "price": 25,
+      "priceNote": "From ~€12 in advance",
+      "start": "2026-10-03",
+      "end": "2026-10-04",
+      "times": "Two days, the main race Sunday afternoon",
+      "durationMin": 300,
+      "minutesFromHome": 50,
+      "transit": "M1 to Porte Maillot, then the free racecourse shuttle",
+      "why": "The biggest flat race in Europe, on the first weekend of October, in a park at the edge of the Bois de Boulogne. It is a proper day out: hats, picnics, sixty thousand people, and about two minutes of actual racing that everyone loses their mind over. Buy general admission in advance, take a picnic, and do not bother with the expensive stands.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "sport",
+        "outdoor",
+        "unusual"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "bookAhead": true,
+      "labels": [
+        "dontmiss",
+        "couple",
+        "weekend",
+        "outdoor",
+        "bookahead"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "source": "France Galop / Sortiraparis",
+      "url": "https://www.parislongchamp.com/",
+      "lastVerified": "2026-08-15",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Paris_Longchamp%C2%A9Dominique_Perrault_architecte_Adagp_%282%29.jpg/500px-Paris_Longchamp%C2%A9Dominique_Perrault_architecte_Adagp_%282%29.jpg",
+      "imageSubject": "Hippodrome de Longchamp",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coords": [
+        48.8637,
+        2.2769
+      ],
+      "coordsFrom": "arr-centroid"
+    },
+    {
+      "id": "20km-de-paris-2026",
+      "title": "20 km de Paris",
+      "emoji": "🏃‍♀️",
+      "type": "event",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor"
+      ],
+      "zone": 7,
+      "area": "Start and finish at the Eiffel Tower",
+      "price": 45,
+      "priceNote": "~€40–50 entry",
+      "start": "2026-10-11",
+      "end": "2026-10-11",
+      "days": [
+        0
+      ],
+      "times": "Sunday morning",
+      "durationMin": 240,
+      "minutesFromHome": 35,
+      "transit": "M6 to Bir-Hakeim",
+      "why": "The 48th edition, and the best mass-participation race in the city: it starts on the Pont d’Iéna under the Eiffel Tower, runs past the Trocadéro and the Arc de Triomphe, loops through the Bois de Boulogne and Roland-Garros, and finishes back at the tower. Twenty kilometres is a real but reachable target from a standing start in mid-August — eight weeks is enough if you start now. Entries close when it fills.",
+      "goodFor": [
+        "weekend",
+        "sport",
+        "morning",
+        "outdoor",
+        "couple"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "bookAhead": true,
+      "labels": [
+        "dontmiss",
+        "bookahead",
+        "outdoor",
+        "weekend"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "source": "20 km de Paris",
+      "url": "https://www.20kmparis.com/",
+      "lastVerified": "2026-08-15",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/500px-Tour_Eiffel_Wikimedia_Commons.jpg",
+      "imageSubject": "Tour Eiffel",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "coords": [
+        48.8565,
+        2.312
+      ],
+      "coordsFrom": "arr-centroid"
+    },
+    {
+      "id": "rolex-paris-masters-2026",
+      "title": "Rolex Paris Masters",
+      "emoji": "🎾",
+      "type": "event",
+      "categories": [
+        "sport",
+        "tennis"
+      ],
+      "zone": null,
+      "area": "Paris La Défense Arena, Nanterre",
+      "price": 55,
+      "priceNote": "From ~€30 early rounds",
+      "start": "2026-10-31",
+      "end": "2026-11-08",
+      "times": "Nine days, day and night sessions",
+      "durationMin": 300,
+      "minutesFromHome": 45,
+      "transit": "RER A to Nanterre-Préfecture",
+      "why": "The last Masters 1000 of the season, and its 40th edition — effectively every top-ten player in one indoor arena before the season ends. The trick is the first three days: cheap tickets, and a ground pass gets you several matches on the same day instead of one. The finals weekend costs four times as much for less tennis.",
+      "goodFor": [
+        "couple",
+        "sport",
+        "weekend"
+      ],
+      "indoor": true,
+      "bookAhead": true,
+      "labels": [
+        "dontmiss",
+        "couple",
+        "bookahead",
+        "indoor"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "source": "FFT / Paris La Défense",
+      "url": "https://www.rolexparismasters.com/",
+      "lastVerified": "2026-08-15",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/La_D%C3%A9fense_Juin_2025.jpg/500px-La_D%C3%A9fense_Juin_2025.jpg",
+      "imageSubject": "La Défense",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "gymnastics-championships-2026",
+      "title": "French International Gymnastics Championships",
+      "emoji": "🤸",
+      "type": "event",
+      "categories": [
+        "sport",
+        "gymnastics"
+      ],
+      "intent": [
+        "watch"
+      ],
+      "zone": 12,
+      "area": "Accor Arena, Bercy",
+      "price": 30,
+      "priceNote": "From ~€20",
+      "start": "2026-09-24",
+      "end": "2026-09-27",
+      "times": "Late September — confirm the exact days on the venue site",
+      "durationMin": 180,
+      "minutesFromHome": 30,
+      "transit": "M5 or M14 to Bercy",
+      "why": "Gymnastics is the best live sport nobody thinks to buy tickets for: six things happen at once, the crowd gasps in unison, and a €20 seat at Bercy is closer to the floor than a €90 football ticket is to the pitch. Bercy is on line 5 and line 14. Sit high rather than ringside — you want to see all the apparatus at the same time, which is the whole pleasure of it.",
+      "spectator": "Go for a qualification session rather than the final: half the price, twice the length, and all four apparatus running simultaneously.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "sport",
+        "evening"
+      ],
+      "indoor": true,
+      "bookAhead": true,
+      "labels": [
+        "trynew",
+        "couple",
+        "bookahead",
+        "indoor"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "pairings": [
+        {
+          "emoji": "🌳",
+          "text": "Parc de Bercy before, 5 min",
+          "id": null
+        },
+        {
+          "emoji": "🍷",
+          "text": "Bercy Village for a drink after",
+          "id": null
+        }
+      ],
+      "source": "Ville de Paris sporting calendar",
+      "url": "https://www.accorarena.com/",
+      "lastVerified": "2026-08-15",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Gymnastics_%28artistic%29_pictogram.svg/500px-Gymnastics_%28artistic%29_pictogram.svg.png",
+      "imageSubject": "Gymnastique artistique",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "coords": [
+        48.8351,
+        2.4212
+      ],
+      "coordsFrom": "arr-centroid"
+    },
+    {
+      "id": "paris-marathon-2027",
+      "title": "Paris Marathon — 50th Edition",
+      "emoji": "🏅",
+      "type": "event",
+      "categories": [
+        "sport",
+        "running"
+      ],
+      "intent": [
+        "watch",
+        "compete"
+      ],
+      "zone": 8,
+      "area": "Champs-Élysées start · Avenue Foch finish",
+      "price": 0,
+      "priceNote": "Free to watch · ~€120 to run",
+      "start": "2027-04-11",
+      "end": "2027-04-11",
+      "days": [
+        0
+      ],
+      "times": "Sunday morning, first wave ~08:00",
+      "durationMin": 240,
+      "minutesFromHome": 25,
+      "transit": "M1 along most of the route",
+      "why": "The 50th edition, and 60,000 people run it. Two ways in: enter it, in which case sign up the moment registration opens because it fills months ahead, or watch it, which is free and criminally underrated. The route runs down rue de Rivoli, along the Seine and through both Bois — so you can see the leaders at 10 km, walk twenty minutes, and catch the same runners again at 30 km.",
+      "spectator": "Stand near Châtelet around 09:00 for the elite runners, then cut south to the quais to see them again. The last 5 km on Avenue Foch is where it gets emotional.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "sport",
+        "free",
+        "morning",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "bookAhead": true,
+      "labels": [
+        "free",
+        "dontmiss",
+        "bookahead",
+        "outdoor",
+        "couple"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "pairings": [
+        {
+          "emoji": "🥐",
+          "text": "Bakeries open early along rue de Rivoli",
+          "id": null
+        },
+        {
+          "emoji": "☕",
+          "text": "Coffee at Châtelet while you wait for the leaders",
+          "id": null
+        }
+      ],
+      "source": "Ville de Paris sporting calendar",
+      "url": "https://www.schneiderelectricparismarathon.com/",
+      "lastVerified": "2026-08-15",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Paris_Marathon_Logo_2013.png/500px-Paris_Marathon_Logo_2013.png",
+      "imageSubject": "Marathon de Paris",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coords": [
+        48.8726,
+        2.312
+      ],
+      "coordsFrom": "arr-centroid"
+    },
+    {
+      "id": "tour-de-france-paris-2027",
+      "title": "Tour de France — Paris Finish",
+      "emoji": "🚴",
+      "type": "event",
+      "categories": [
+        "sport",
+        "cycling",
+        "free",
+        "outdoor"
+      ],
+      "intent": [
+        "watch"
+      ],
+      "zone": 1,
+      "area": "Champs-Élysées and the Montmartre climb",
+      "price": 0,
+      "priceNote": "Free",
+      "start": "2027-07-25",
+      "end": "2027-07-25",
+      "days": [
+        0
+      ],
+      "times": "Riders arrive late afternoon, finish early evening",
+      "durationMin": 300,
+      "minutesFromHome": 25,
+      "transit": "M1 to Concorde — go early, the Metro fills",
+      "why": "The one everyone means to see and then watches on television. It is free, it is a Sunday, and the peloton does several laps of a closed circuit, so you get eight or nine chances to see them rather than one blurred second. Since 2025 the finale climbs Montmartre, which is the best free vantage point in the race — steep enough that the riders slow down and you can actually see faces.",
+      "spectator": "Do not stand on the Champs-Élysées barriers from noon. Take a spot on the Montmartre climb instead: the riders are slower, the crowd is better, and you can leave for a drink between laps.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "sport",
+        "free",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "free",
+        "dontmiss",
+        "outdoor",
+        "couple"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "pairings": [
+        {
+          "emoji": "☕",
+          "text": "Coffee on rue des Abbesses before the crowds",
+          "id": null
+        },
+        {
+          "emoji": "🍷",
+          "text": "Wine bars on rue Lepic once the caravan has passed",
+          "id": null
+        }
+      ],
+      "source": "Ville de Paris sporting calendar",
+      "url": "https://www.letour.fr/",
+      "lastVerified": "2026-08-15",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Avenue_des_Champs-%C3%89lys%C3%A9es%2C_Paris_3_October_2010.jpg/500px-Avenue_des_Champs-%C3%89lys%C3%A9es%2C_Paris_3_October_2010.jpg",
+      "imageSubject": "Avenue des Champs-Élysées",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "coords": [
+        48.8626,
+        2.3363
+      ],
+      "coordsFrom": "arr-centroid"
+    }
+  ]
+}

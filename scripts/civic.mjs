@@ -26,9 +26,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { dataDir } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATA = path.join(ROOT, 'data');
+const DATA = dataDir();
 const DRY  = process.argv.includes('--dry');
 const API  = 'https://opendata.paris.fr/api/explore/v2.1/catalog/datasets';
 const UA   = 'paris-for-you/1.0 (https://github.com/EktaSengar/paris)';
@@ -54,7 +55,7 @@ const CIVIC = {
   'Musées municipaux':                   ['museum', '🏛️', 'City of Paris museum']
 };
 
-const ARR = {
+const ZONE = {
   1:[48.8626,2.3363],  2:[48.8683,2.3413],  3:[48.8637,2.3615],  4:[48.8546,2.3572],
   5:[48.8448,2.3501],  6:[48.8496,2.3329],  7:[48.8565,2.3120],  8:[48.8726,2.3120],
   9:[48.8768,2.3374],  10:[48.8760,2.3595], 11:[48.8578,2.3792], 12:[48.8351,2.4212],
@@ -64,7 +65,7 @@ const ARR = {
 
 const nearestArr = (lat, lon) => {
   let best = null, bd = Infinity;
-  for (const [n, [a, b]] of Object.entries(ARR)) {
+  for (const [n, [a, b]] of Object.entries(ZONE)) {
     const d = (a - lat) ** 2 + (b - lon) ** 2;
     if (d < bd) { bd = d; best = Number(n); }
   }
@@ -284,7 +285,7 @@ async function run() {
   console.log('  per arrondissement:', Object.entries(byArr)
     .sort((a, b) => a[0] - b[0]).map(([a, n]) => `${a}:${n}`).join(' '));
 
-  const thin = Object.keys(ARR).map(Number).filter(a => !byArr[a]);
+  const thin = Object.keys(ZONE).map(Number).filter(a => !byArr[a]);
   if (thin.length) console.log('  no civic records at all in:', thin.join(', '));
 
   if (DRY) { console.log('\n  --dry, nothing written\n'); return; }

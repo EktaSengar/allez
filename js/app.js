@@ -39,6 +39,15 @@ const App = (() => {
   let CTX = {};
   let WX = null;
   let WXP = null;                       // the forecast, in flight
+  /* Only the cities whose pack declares `City.air` ever load js/air.js
+     or set these. Everywhere else they stay null and cost nothing. */
+  let AQ = null;
+  let AQP = null;
+  /* The declared starting points, where a city has more than one. */
+  let BASES = [];
+  /* Per-station forecasts, where a city has more than one climate. */
+  let CLIM = null;
+  let CLIMP = null;
   let VIEW = 'today';
   let HOME = { label: 'Paris' };        // replaced by the location engine
   let DISCOVERED = [];                  // OpenStreetMap layer, positions only
@@ -219,7 +228,50 @@ const App = (() => {
     return r.json();
   }
 
-  const FIRST_BATCH = 4;
+  /* ---------- how much of the city to fetch before the first paint ----
+
+     This was a count of four shards, which is only meaningful while
+     every shard is roughly the same size. Sharding by bucket made them
+     wildly uneven: four of Paris's twenty arrondissements is 4,297
+     records and 152 KB, four of Delhi's sixteen grid cells is 3,974
+     records and 97 KB — but four of a city sharded some other way could
+     be either the whole thing or almost none of it.
+
+     So the budget is bytes, which each shard now records as `b`, and it
+     is calibrated at what four arrondissements cost — 665 KB raw, about
+     152 KB over the wire, the figure §16 says was measured and says not
+     to go below.
+
+     Bytes rather than records because records are a poor stand-in across
+     cities: Paris averages 36 bytes a record gzipped and Delhi 25, so a
+     record budget over-fetches by nearly half in one to be right in the
+     other.
+
+     Note what this does NOT do: it does not make Delhi fetch less.
+     Delhi's entire discovery index is 112 KB, which is smaller than
+     Paris's first batch alone, so taking nearly all of it up front is
+     the right answer and the alarming-looking "89% of the city" is 89%
+     of a small city. What the budget fixes is the case the count gets
+     wrong in the other direction — a city whose nearest bucket happens
+     to be enormous, where four of them would put the whole thing on the
+     critical path. */
+  const FIRST_BUDGET = 680 * 1024;
+  const FIRST_MIN = 2;
+
+  function firstBatch(order) {
+    const index = D['places/index']?.shards || {};
+    const out = [];
+    let bytes = 0;
+    for (const k of order) {
+      /* An index written before shards carried their size falls back to
+         the old behaviour rather than fetching the whole city. */
+      const add = index[k]?.b ?? (FIRST_BUDGET / 4);
+      if (out.length >= FIRST_MIN && bytes + add > FIRST_BUDGET) break;
+      out.push(k);
+      bytes += add;
+    }
+    return out;
+  }
   let PLACES = [];
   let loadedShards = new Set();
   let fillingIn = null;
@@ -236,15 +288,27 @@ const App = (() => {
   /* Nearest first, by arrondissement centroid. The orphan shard — a
      handful of places on the edge of the bounding box with no
      arrondissement — is tiny and comes with the first batch. */
+  /* Nearest first. Each shard carries its own centroid in the index —
+     it used to be looked up from the zone table by number, and the guard
+     for a non-numeric key returned -1, which sorts *first*. For Paris,
+     whose keys are "1".."20", that never fired. For a city whose zone
+     keys are names it fired on every shard, so every one scored -1, the
+     sort was a no-op, and the first batch of four was whatever order the
+     index happened to list. The ordering that makes the first paint
+     local was doing nothing at all in two cities out of three. */
   function shardOrder() {
-    const keys = Object.keys(D['places/index']?.shards || {});
+    const index = D['places/index']?.shards || {};
     const here = Loc.active();
     const far = k => {
-      if (!/^\d+$/.test(k)) return -1;
-      const c = Loc.arrCoords(Number(k));
-      return (c && here) ? Loc.km(c, [here.lat, here.lon]) : 1e6;
+      const s = index[k];
+      /* The orphan bucket has no position by definition; it is tiny and
+         belongs with the first batch, so it sorts to the front. */
+      if (!s) return 1e6;
+      const c = s.c || (/^\d+$/.test(k) ? Loc.zoneCoords(Number(k)) : null);
+      if (!c) return -1;
+      return here ? Loc.km(c, [here.lat, here.lon]) : 1e6;
     };
-    return keys.sort((a, b) => far(a) - far(b));
+    return Object.keys(index).sort((a, b) => far(a) - far(b));
   }
 
   /* Fetching and rebuilding are separate because the first batch of
@@ -338,10 +402,28 @@ const App = (() => {
     /* home.json is only the *default* — the location engine owns the
        answer from here, because it may be overridden by a saved home or
        a temporary "exploring from". */
-    const fallback = (D.home && D.home.lat)
-      ? { lat: D.home.lat, lon: D.home.lon, arr: D.home.arr, area: D.home.label, label: D.home.label }
-      : Loc.fromArr(1);
+    /* ---------- where home is, when a city has more than one ----------
+
+       Paris, Bengaluru and Delhi each have one. The Bay Area has two,
+       fifty kilometres apart, and which one you are at decides almost
+       everything — a list ranked from North Beach is not a slightly
+       different list from one ranked from Palo Alto, it is a different
+       city. So `home.json` may carry a `bases` array instead of a single
+       coordinate, and the first is the default until the reader saves
+       their own. Everything downstream still sees one home; the choice
+       happens here and nowhere else.
+
+       `Loc.fromZone(1)` was the old fallback and only ever worked for a
+       city whose zones are numbered from one. It is now the first zone
+       the pack declares, whatever it is called. */
+    const asHome = b => ({ lat: b.lat, lon: b.lon, zone: b.zone,
+                           area: b.label, label: b.label });
+    const bases = Array.isArray(D.home?.bases) ? D.home.bases : null;
+    const fallback = bases?.length ? asHome(bases[0])
+      : (D.home && D.home.lat) ? asHome(D.home)
+      : Loc.fromZone(Object.keys(City.zone.centroids)[0]);
     Loc.boot(fallback);
+    BASES = bases || [];
     HOME = Loc.active();
 
     /* The forecast, started here rather than after the data because it
@@ -351,13 +433,31 @@ const App = (() => {
     Weather.setHome(HOME.lat, HOME.lon);
     WXP = Weather.load().catch(e => { console.warn('weather failed', e); return null; });
 
+    /* Started here for the same reason the forecast is: it is a small
+       answer from somewhere else and the only thing it waits on is a
+       pair of coordinates. Never awaited — the page must not be held for
+       it, and it repaints when it lands. */
+    /* One request, several places. Only where the pack declares
+       `climate`; everywhere else the single forecast is the whole truth. */
+    if (City.climate && City.climate.stations) {
+      CLIMP = Weather.loadStations(City.climate.stations, City.weather.tz)
+        .then(m => { CLIM = m; return m; })
+        .catch(e => { console.warn('microclimate failed', e); return null; });
+    }
+
+    if (City.air && typeof Air !== 'undefined') {
+      Air.setHome(HOME.lat, HOME.lon, City.weather.tz);
+      AQP = Air.load().then(a => { AQ = a; return a; })
+                      .catch(e => { console.warn('air failed', e); return null; });
+    }
+
     /* The near shards and the core files race each other. They used to
        queue: every core file, then the index, then the shards, then the
        first pixel — three round trips deep for no reason but the order
        the code happened to be written in. */
     await Promise.all([
       Promise.all(CORE.map(pull)),
-      pullShards(shardOrder().slice(0, FIRST_BATCH))
+      pullShards(firstBatch(shardOrder()))
     ]);
     rebuild();
 
@@ -396,11 +496,11 @@ const App = (() => {
     // Neighbourhood profiles carry their own distance, and "which
     // arrondissement should we do next" is meaningless if it is measured
     // from somewhere you no longer are.
-    const here = Loc.active()?.arr ?? null;
+    const here = Loc.active()?.zone ?? null;
     (D.neighborhoods?.items || []).forEach(h => {
-      const c = Loc.arrCoords(h.arr);
-      if (c) h.minutesFromHome = (h.arr === here) ? 0 : Loc.minutes(c);
-      h.isHome = h.arr === here;
+      const c = Loc.zoneCoords(h.zone);
+      if (c) h.minutesFromHome = (h.zone === here) ? 0 : Loc.minutes(c);
+      h.isHome = h.zone === here;
     });
   }
 
@@ -408,9 +508,18 @@ const App = (() => {
     CTX = {
       today: TODAY_ISO,
       weatherMode: WX ? WX.mode : null,
+      /* Resolved per record, from whichever station is nearest it. A
+         record with no coordinates falls back to the city-wide mode. */
+      weatherAt: CLIM ? (item => {
+        const c = item.coords || (item.zone && City.zone.centroids[item.zone]);
+        if (!c) return null;
+        const st = Weather.modeFor(CLIM, City.climate.stations, c[0], c[1]);
+        return st ? st.mode : null;
+      }) : null,
+      airMode: AQ ? AQ.mode : null,
       taste: Store.tasteWeights([...ALL, ...DISCOVERED]),
-      exploredArrs: Store.arrs(),
-      homeArr: Loc.active()?.arr ?? null
+      exploredZones: Store.zones(),
+      homeZone: Loc.active()?.zone ?? null
     };
   }
 
@@ -442,7 +551,7 @@ const App = (() => {
        to check. */
     if (item.price == null) return '';
     if (item.price === 0) return 'Free';
-    return `€${item.price}`;
+    return City.money.format(item.price);
   }
 
   /* ---------- how much anybody knows about this place ----------
@@ -534,7 +643,7 @@ const App = (() => {
 
   function kicker(item) {
     const bits = [];
-    if (item.arr) bits.push(`${item.arr}<sup>e</sup>`);
+    if (item.zone) bits.push(`${item.zone}<sup>e</sup>`);
     else if (item.type === 'daytrip') bits.push('Out of town');
     if (item.minutesFromHome != null) bits.push(`${item.minutesFromHome} min`);
     bits.push(priceText(item));
@@ -769,7 +878,7 @@ const App = (() => {
 
   function row(item, thumb = false) {
     const bits = [];
-    if (item.arr) bits.push(`${item.arr}<sup>e</sup>`);
+    if (item.zone) bits.push(`${item.zone}<sup>e</sup>`);
     if (item.area) bits.push(esc(item.area));
     if (item.priceNote) bits.push(esc(item.priceNote));
     else bits.push(priceText(item));
@@ -819,10 +928,10 @@ const App = (() => {
       ? `<div class="route-shot">${img(item, 'route')}</div>`
       : '';
     const meta = [
-      item.arr ? `${item.arr}e` : null,
+      item.zone ? `${item.zone}e` : null,
       item.startTime ? `from ${item.startTime}` : null,
       durText(item.durationMin),
-      item.priceNote || (item.price ? `€${item.price}` : 'Free')
+      item.priceNote || (item.price ? City.money.format(item.price) : 'Free')
     ].filter(Boolean).join(' · ');
 
     return `<div class="route${shot ? ' has-shot' : ''}" data-id="${esc(item.id)}">
@@ -859,18 +968,41 @@ const App = (() => {
 
   /* ---------- views ---------- */
 
-  const LEDE = {
-    today:   'What is open, close, and worth leaving the flat for.',
-    nights:  'Concerts, jazz rooms, dancing and a drink first. Doors, prices and how far each one is from where you are.',
-    sport:   'Two halves: things we can play, and things we can go and watch.',
-    weekend: '',
-    eat:     '',
-    explore: '',
-    regulars:'',
-    away:    'Six mainline stations, and most of them reach somewhere worth a whole day. Some of these are closer than the other side of Paris.',
-    quests:  'Long games. Progress is saved in this browser.',
-    saved:   'What you have marked, and what you have already done.'
-  };
+  /* ---------- the view registry ----------
+
+     A view is two halves with two different owners. The **builder** is
+     the engine's: it knows how to rank, how to group, how to draw a
+     card. The **declaration** is the city's: which views exist, in what
+     order, what the tab reads and what the line under it says. Those
+     used to be the same thing — a fixed row of eight tabs and an
+     if/else chain — which is fine with one city and wrong with four.
+
+     Bengaluru will want a *Your side of town* view that Paris has no
+     use for. `defineView` is how a pack adds one: ship a file after
+     this one, call it, and list the id in `City.views`. Nothing here
+     needs to know it happened.
+
+     The static line comes from the pack. Four views compute theirs
+     from what they just drew, and pass a function instead. */
+
+  const VIEWS = Object.create(null);
+  const defineView = (id, build, lede) => { VIEWS[id] = { build, lede: lede || null }; };
+
+  defineView('today',    () => renderToday());
+  defineView('nights',   () => renderNights());
+  defineView('sport',    () => renderSport());
+  defineView('weekend',  c  => renderWeekend(c.weekend), c => weekendLede(c.weekend));
+  defineView('eat',      () => renderEat(),      () => eatLede());
+  defineView('explore',  () => renderExplore(),  () => exploreLede());
+  defineView('regulars', () => renderRegulars(), () => regularsLede());
+  defineView('away',     () => renderAway());
+  defineView('quests',   () => renderQuests());
+  defineView('saved',    () => renderSaved());
+
+  /* Flattened once: the tabs are one list to the engine, and only
+     index.html cares that some of them sit in a smaller group. */
+  const DECLARED = [...City.views.main, ...City.views.utility];
+  const LEDE = Object.fromEntries(DECLARED.filter(v => v.lede).map(v => [v.id, v.lede]));
 
   /* ---------- drawing the same answer twice ----------
 
@@ -934,19 +1066,21 @@ const App = (() => {
     const box = $('#view');
     const w = weekend();
 
+    const view = VIEWS[VIEW];
+    const ctx = { weekend: w };
     let lede = LEDE[VIEW] || '';
     let html = '';
 
-    if      (VIEW === 'today')   html = renderToday();
-    else if (VIEW === 'nights')  html = renderNights();
-    else if (VIEW === 'sport')   html = renderSport();
-    else if (VIEW === 'weekend') { lede = weekendLede(w); html = renderWeekend(w); }
-    else if (VIEW === 'eat')     { lede = eatLede();      html = renderEat(); }
-    else if (VIEW === 'explore') { lede = exploreLede();  html = renderExplore(); }
-    else if (VIEW === 'regulars'){ lede = regularsLede(); html = renderRegulars(); }
-    else if (VIEW === 'away')    html = renderAway();
-    else if (VIEW === 'quests')  html = renderQuests();
-    else if (VIEW === 'saved')   html = renderSaved();
+    if (view) {
+      /* Lede before markup, because the four that compute one do it from
+         state the builder is about to change. */
+      if (view.lede) lede = view.lede(ctx);
+      html = view.build(ctx);
+    } else {
+      /* A pack listed a view and shipped no builder for it. Say so
+         rather than drawing an empty page that looks like a data bug. */
+      html = `<p class="empty">No builder is registered for the “${esc(VIEW)}” view.</p>`;
+    }
 
     $('#lede').textContent = lede;
 
@@ -1020,7 +1154,7 @@ const App = (() => {
     return `<div class="near-card ${tierCls(item)}" data-id="${esc(item.id)}">
       <p class="near-label"><span class="e">${emoji}</span>${esc(label)}</p>
       <h4 class="near-name">${esc(item.title)}</h4>
-      <p class="near-meta">~${mins} min${item.arr ? ` · ${item.arr}<sup>e</sup>` : ''}${tier(item).note ? ` · ${esc(tier(item).note.toLowerCase())}` : ''}</p>
+      <p class="near-meta">~${mins} min${item.zone ? ` · ${item.zone}<sup>e</sup>` : ''}${tier(item).note ? ` · ${esc(tier(item).note.toLowerCase())}` : ''}</p>
       <p class="near-why">${esc(line)}</p>
       <a class="near-link" href="${item.url ? esc(item.url) : mapsLink(item)}" target="_blank" rel="noopener">
         ${item.url ? 'Look it up' : 'Directions'}</a>
@@ -1309,8 +1443,8 @@ const App = (() => {
        from a mis-tap on a phone held at arm's length under a wall. */
     const near = Invaders.nearby({ limit: 5, within: 25, includeFound: true });
     const missions = Invaders.missions({
-      exploredArrs: Store.arrs(),
-      homeArr: Loc.active()?.arr ?? null
+      exploredZones: Store.zones(),
+      homeZone: Loc.active()?.zone ?? null
     });
 
     /* Never a percentage. The denominator is what OpenStreetMap knows,
@@ -1321,7 +1455,7 @@ const App = (() => {
       <div class="inv-score">
         <div class="inv-stat"><b>${p.found}</b><span>found</span></div>
         <div class="inv-stat"><b>${p.total}</b><span>on the map</span></div>
-        ${p.arrs ? `<div class="inv-stat"><b>${p.arrs}</b><span>${p.arrs === 1 ? 'arrondissement' : 'arrondissements'}</span></div>` : ''}
+        ${p.zones ? `<div class="inv-stat"><b>${p.zones}</b><span>${p.zones === 1 ? 'arrondissement' : 'arrondissements'}</span></div>` : ''}
       </div>`;
 
     const list = near.length ? `
@@ -1333,7 +1467,7 @@ const App = (() => {
                     aria-pressed="${Invaders.isFound(i.code)}"
                     title="Mark as found">${Invaders.isFound(i.code) ? '✓' : '○'}</button>
             <span class="inv-code">${esc(i.official ? i.code : 'unnumbered')}</span>
-            <span class="inv-where">${esc(i.street || `${i.arr}e`)}${i.note ? ` · ${esc(i.note)}` : ''}</span>
+            <span class="inv-where">${esc(i.street || `${i.zone}e`)}${i.note ? ` · ${esc(i.note)}` : ''}</span>
             <span class="inv-dist">${i.minutes} min walk</span>
             <a class="inv-map" href="https://www.google.com/maps/search/?api=1&query=${i.coords[0]},${i.coords[1]}"
                target="_blank" rel="noopener">Map</a>
@@ -1348,7 +1482,7 @@ const App = (() => {
             <h5>${m.emoji} ${esc(m.title)}</h5>
             <p class="inv-mission-line">${esc(m.line)}</p>
             <p class="inv-mission-meta">${m.stops.length} to find · ${m.km} km · about ${m.minutes} min${m.newArr ? ' · somewhere new' : ''}</p>
-            <p class="inv-mission-stops">${m.stops.map(x => esc(x.official ? x.code : `${x.arr}e`)).join(' → ')}</p>
+            <p class="inv-mission-stops">${m.stops.map(x => esc(x.official ? x.code : `${x.zone}e`)).join(' → ')}</p>
             ${pairedWith(m)}
           </div>`).join('')}
       </div>` : '';
@@ -1636,7 +1770,7 @@ const App = (() => {
     const out = [];
     for (let n = 0; n < contenders.length && out.length < 4; n++) {
       const i = contenders[(turn + n) % contenders.length];
-      const key = i.arr ?? `x${n}`;
+      const key = i.zone ?? `x${n}`;
       if (seen.has(key) || out.includes(i)) continue;
       seen.add(key);
       out.push(i);
@@ -1738,11 +1872,11 @@ const App = (() => {
      reads as eight minutes from your door. */
   function missionWhere(m) {
     const mins = m.minutesFromHome;
-    const here = Loc.active()?.arr ?? null;
+    const here = Loc.active()?.zone ?? null;
     if (m.generated) return 'right where you are';
-    if (m.arr && m.arr === here) return `in the ${ordinal(m.arr)}, where you are`;
+    if (m.zone && m.zone === here) return `in the ${ordinal(m.zone)}, where you are`;
     if (mins == null) return '';
-    const place = m.arr ? `in the ${ordinal(m.arr)}` : 'across town';
+    const place = m.zone ? `in the ${ordinal(m.zone)}` : 'across town';
     return mins <= 12 ? `${place} · ~${mins} min to the first stop`
                       : `${place} · ~${mins} min to get there`;
   }
@@ -1914,7 +2048,7 @@ const App = (() => {
       emoji: '🗺️',
       durationMin: 90,
       priceNote: 'Whatever you spend',
-      arr: Loc.active()?.arr ?? null,
+      zone: Loc.active()?.zone ?? null,
       minutesFromHome: 0,
       /* Scored as a found thing rather than a written one — it is on your
          doorstep, which is its whole claim, and nobody vouched for it. */
@@ -2093,17 +2227,19 @@ const App = (() => {
      Paris spirals outward from the 1st like a snail shell and watching
      that shell fill in is a far better reward than a counter. */
 
-  /* Approximate centroids of the twenty arrondissements, normalised to a
-     100×100 box. Not survey-accurate, but the spiral is the point. */
-  const ARR_MAP = {
-    1:[47,50],  2:[46,42],  3:[54,44],  4:[54,54],  5:[50,63],
-    6:[42,59],  7:[32,55],  8:[36,40],  9:[45,34],  10:[57,34],
-    11:[65,48], 12:[72,61], 13:[56,72], 14:[42,72], 15:[28,64],
-    16:[17,50], 17:[27,30], 18:[46,22], 19:[67,25], 20:[73,40]
-  };
-  /* The middle of Paris is genuinely cramped, so push everything out from the
-     centre a little — otherwise the 1st through 4th sit on top of each other. */
-  const SPREAD = 1.3, CX = 50, CY = 52;
+  /* The quest drawing: approximate centroids normalised to a 100×100
+     box, plus the nudge that stops the middle four sitting on top of
+     each other. Both live in the city pack, because the spiral is the
+     shape of Paris and a city without one simply omits the map — see
+     cities/paris/city.js. */
+  /* Optional. Paris spirals and is worth drawing; Bengaluru is ninety-five
+     named neighbourhoods and a dot per zone would be a rash rather than a
+     map, so it ships no `map` and the quest falls back to chips. Reading
+     `mapSpread` unguarded used to throw before the second pack could draw
+     anything at all. */
+  const ZONE_MAP = City.zone.map || null;
+  const { factor: SPREAD, cx: CX, cy: CY } =
+    City.zone.mapSpread || { factor: 1, cx: 50, cy: 50 };
   const spread = ([x, y]) => [CX + (x - CX) * SPREAD, CY + (y - CY) * SPREAD];
 
   function progressRing(pct) {
@@ -2116,42 +2252,42 @@ const App = (() => {
   }
 
   /* The arrondissement quest gets a map instead of a list of chips. */
-  const arrLabel = (q, num) =>
+  const zoneLabel = (q, num) =>
     (q.targets || []).find(t => new RegExp('^' + num + '(st|nd|rd|th)\\b').test(t)) || String(num);
 
-  /* One source of truth: an arrondissement is done if it is in Store.arrs().
+  /* One source of truth: an arrondissement is done if it is in Store.zones().
      Home counts. */
-  const arrDone = num => num === Loc.active()?.arr || Store.hasArr(num);
-  const arrCount = () => new Set([Loc.active()?.arr, ...Store.arrs()].filter(n => n != null)).size;
+  const zoneDone = num => num === Loc.active()?.zone || Store.hasZone(num);
+  const zoneCount = () => new Set([Loc.active()?.zone, ...Store.zones()].filter(n => n != null)).size;
 
-  function arrMap(q) {
-    const dots = Object.entries(ARR_MAP).map(([n, xy]) => {
+  function zoneMap(q) {
+    const dots = Object.entries(ZONE_MAP).map(([n, xy]) => {
       const num = Number(n);
       const [x, y] = spread(xy);
-      const isHome = num === Loc.active()?.arr;
-      return `<g class="arr-dot ${arrDone(num) ? 'on' : ''} ${isHome ? 'home' : ''}"
-                 data-target="${esc(arrLabel(q, num))}" data-arrnum="${num}"
+      const isHome = num === Loc.active()?.zone;
+      return `<g class="zone-dot ${zoneDone(num) ? 'on' : ''} ${isHome ? 'home' : ''}"
+                 data-target="${esc(zoneLabel(q, num))}" data-zonenum="${num}"
                  transform="translate(${x.toFixed(1)} ${y.toFixed(1)})">
         <circle r="5"></circle>
         <text y="1.7">${num}</text>
-        <title>${esc(arrLabel(q, num))}</title>
+        <title>${esc(zoneLabel(q, num))}</title>
       </g>`;
     }).join('');
 
-    return `<div class="arr-map-wrap">
-      <svg class="arr-map" viewBox="2 6 84 78" role="group" aria-label="Arrondissements explored">
+    return `<div class="zone-map-wrap">
+      <svg class="zone-map" viewBox="2 6 84 78" role="group" aria-label="Arrondissements explored">
         <path class="seine" d="M4,58 C26,50 36,63 50,58 C64,53 76,63 92,52" />
         ${dots}
       </svg>
-      <p class="arr-map-note">Tap one as you do it. You are in the ${Loc.active()?.arr ?? '—'}<sup>e</sup>, so that one is free.</p>
+      <p class="zone-map-note">Tap one as you do it. You are in the ${Loc.active()?.zone ?? '—'}<sup>e</sup>, so that one is free.</p>
     </div>`;
   }
 
   function questCard(q) {
-    const isMap = q.id === 'quest-arrondissements';
+    const isMap = !!ZONE_MAP && q.id === City.zone.mapQuest;
     const done = Store.questDone(q.id);
     const total = q.targets.length;
-    const count = isMap ? arrCount() : done.length;
+    const count = isMap ? zoneCount() : done.length;
     const pct = Math.round(count / total * 100);
     const complete = count >= total;
 
@@ -2168,7 +2304,7 @@ const App = (() => {
       </div>
       ${complete ? `<p class="qdone">✦ Finished. Pick another one.</p>` : ''}
       ${isMap
-        ? arrMap(q)
+        ? zoneMap(q)
         : `<div class="targets">${q.targets.map(t =>
             `<button type="button" class="target ${done.includes(t) ? 'on' : ''}" data-target="${esc(t)}">${esc(t)}</button>`).join('')}</div>`}
     </div>`;
@@ -2177,7 +2313,7 @@ const App = (() => {
   /* ---------- explore ---------- */
 
   function exploreLede() {
-    const n = Store.arrs().length;
+    const n = Store.zones().length;
     const here = Loc.displayName(Loc.active());
     return n
       ? `${n} of 20 marked explored. Here is where you are, and the nearest one you have not done.`
@@ -2348,14 +2484,14 @@ const App = (() => {
 
   function renderExplore() {
     const hoods = D.neighborhoods.items || [];
-    const explored = Store.arrs();
-    const pool = hoods.filter(h => !h.isHome && !explored.includes(h.arr));
+    const explored = Store.zones();
+    const pool = hoods.filter(h => !h.isHome && !explored.includes(h.zone));
     const f = (pool.length ? pool : hoods.filter(h => !h.isHome))
       .slice().sort((a, b) => a.minutesFromHome - b.minutesFromHome)[0];
 
     let dossier = '', standing = '';
     if (f) {
-      const local = ALL.find(i => i.arr === f.arr && hasRealPhoto(i)) || ALL.find(i => i.arr === f.arr && i.image);
+      const local = ALL.find(i => i.zone === f.zone && hasRealPhoto(i)) || ALL.find(i => i.zone === f.zone && i.image);
       const facts = [
         ['Known for', f.famousFor], ['Streets', (f.streets || []).join(' · ')],
         ['Coffee', f.cafe], ['Bakery', f.bakery], ['Culture', f.culture],
@@ -2367,15 +2503,15 @@ const App = (() => {
          from the map every load, so the dossier for an arrondissement
          nobody has written much about still names real places in it. */
       const found = [
-        [MARK.bakery, 'Bakeries', Near.inArr(f.arr, Near.KIND.bakery, 3)],
-        [MARK.cafe,   'Coffee',   Near.inArr(f.arr, Near.KIND.cafe, 3)],
-        [MARK.market, 'Markets',  Near.inArr(f.arr, Near.KIND.market, 2)],
-        [MARK.park,   'Green',    Near.inArr(f.arr, Near.KIND.park, 2)]
+        [MARK.bakery, 'Bakeries', Near.inArr(f.zone, Near.KIND.bakery, 3)],
+        [MARK.cafe,   'Coffee',   Near.inArr(f.zone, Near.KIND.cafe, 3)],
+        [MARK.market, 'Markets',  Near.inArr(f.zone, Near.KIND.market, 2)],
+        [MARK.park,   'Green',    Near.inArr(f.zone, Near.KIND.park, 2)]
       ].filter(([, , list]) => list.length);
 
       dossier = `<div class="hood">
         ${local ? `<div class="hood-shot">${img(local, '(min-width: 1040px) 1000px, 96vw', 'loaded')}</div>` : ''}
-        <h3>${f.arr}<sup>e</sup> — ${esc(f.name)}</h3>
+        <h3>${f.zone}<sup>e</sup> — ${esc(f.name)}</h3>
         <p class="sub">About ${f.minutesFromHome} minutes from you${local ? ` · photo: ${esc(local.imageSubject)}` : ''}</p>
         <div class="facts-grid">
           ${facts.map(([k, v]) => `<dl class="f"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></dl>`).join('')}
@@ -2387,8 +2523,8 @@ const App = (() => {
 
     /* Where you are right now, as opposed to where to go next. Without
        this the Explore tab is entirely about somewhere else. */
-    const hereArr = Loc.active()?.arr ?? null;
-    const mine = hoods.find(h => h.arr === hereArr);
+    const hereArr = Loc.active()?.zone ?? null;
+    const mine = hoods.find(h => h.zone === hereArr);
     if (mine) {
       const bits = [
         [MARK.bakery, Near.inArr(hereArr, Near.KIND.bakery, 2)],
@@ -2419,15 +2555,15 @@ const App = (() => {
             + `<div class="routes">${walk.items.map(routeCard).join('')}</div>`
           : '')
       + (gems.items.length
-          ? stripHead('Hidden Paris', radiusNote(gems.radius, gems.items, gems.widened))
+          ? stripHead(City.hiddenHeading || `Hidden ${City.name}`, radiusNote(gems.radius, gems.items, gems.widened))
             + rows(gems.items)
           : '')
-      + stripHead('All twenty')
-      + `<div class="arr-grid">${hoods.map(h => `<div class="arr">
-          <span class="n">${h.arr}<sup>e</sup></span>
+      + stripHead(City.zone.allHeading)
+      + `<div class="zone-grid">${hoods.map(h => `<div class="zone">
+          <span class="n">${City.zone.tile(h.zone)}</span>
           <span class="nm">${esc(h.name)}</span>
-          <button type="button" data-arr="${h.arr}" class="${Store.hasArr(h.arr) || h.isHome ? 'on' : ''}">
-            ${h.isHome ? 'Home' : (Store.hasArr(h.arr) ? 'Explored' : 'Mark')}
+          <button type="button" data-zone="${h.zone}" class="${Store.hasZone(h.zone) || h.isHome ? 'on' : ''}">
+            ${h.isHome ? 'Home' : (Store.hasZone(h.zone) ? 'Explored' : 'Mark')}
           </button>
         </div>`).join('')}</div>`;
   }
@@ -2544,6 +2680,13 @@ const App = (() => {
       bits.push(`${WX.now.icon} ${WX.now.temp}°, ${WX.now.label.toLowerCase()}`);
       bits.push(WX.advice);
     }
+    /* Stated rather than implied. The air is already reordering
+       everything below it, and a number that shapes a page invisibly is
+       worse than no number at all. */
+    if (AQ) {
+      bits.push(AQ.line);
+      bits.push(AQ.advice);
+    }
     $('#conditions').textContent = bits.join(' · ');
 
     const notes = [];
@@ -2579,10 +2722,23 @@ const App = (() => {
     $('#loc-kicker').textContent = Loc.isExploring() ? 'Exploring from' : 'Home';
     $('#loc-reset').hidden = !Loc.isExploring();
 
-    const arrs = $('#loc-arrs');
-    if (arrs && !arrs.children.length) {
-      arrs.innerHTML = Loc.presets().map(p =>
-        `<button class="chip" data-arr-pick="${p.arr}" title="${esc(p.name)}">${p.arr}${p.arr === 1 ? 'er' : 'e'}</button>`).join('');
+    /* A city with two starting points offers both. Rendered before the
+       zone list because "which side are you on" is a bigger question
+       than "which neighbourhood", and answering it first makes the zone
+       list mean something. */
+    const baseWrap = $('#loc-bases');
+    if (baseWrap) {
+      baseWrap.parentElement.hidden = BASES.length < 2;
+      if (BASES.length > 1 && !baseWrap.children.length) {
+        baseWrap.innerHTML = BASES.map((b, i) =>
+          `<button class="chip" data-base="${i}">${esc(b.label)}</button>`).join('');
+      }
+    }
+
+    const zones = $('#loc-zones');
+    if (zones && !zones.children.length) {
+      zones.innerHTML = Loc.presets().map(p =>
+        `<button class="chip" data-zone-pick="${p.zone}" title="${esc(p.name)}">${esc(City.zone.label(p.zone))}</button>`).join('');
     }
     const rec = Loc.recents();
     $('#loc-recent-wrap').hidden = !rec.length;
@@ -2662,7 +2818,7 @@ const App = (() => {
 
   /* ---------- theme ---------- */
 
-  const THEME_KEY = 'paris-for-you.theme';
+  const THEME_KEY = Keys.theme;
 
   function applyTheme(mode) {
     const dark = mode === 'dark';
@@ -2731,8 +2887,32 @@ const App = (() => {
     });
 
     document.addEventListener('click', async e => {
-      const a = e.target.closest('[data-arr-pick]');
-      if (a) { panel.hidden = true; await moveTo(Loc.fromArr(Number(a.dataset.arrPick))); return; }
+      /* `dataset.arrPick` here read a property that stopped existing when
+         the attribute became data-zone-pick, so every zone chip has
+         resolved to NaN since. The view harness never caught it because
+         it renders views and never opens the location panel — worth
+         remembering about what "byte-identical" does and does not prove.
+
+         And `Number()` is wrong for two cities out of four: a zone key
+         is a number in Paris and a name everywhere else. */
+      const a = e.target.closest('[data-zone-pick]');
+      if (a) {
+        const k = a.dataset.zonePick;
+        panel.hidden = true;
+        await moveTo(Loc.fromZone(/^\d+$/.test(k) ? Number(k) : k));
+        return;
+      }
+      /* Switching between a city's declared starting points. */
+      const b = e.target.closest('[data-base]');
+      if (b) {
+        const base = BASES[Number(b.dataset.base)];
+        if (base) {
+          panel.hidden = true;
+          await moveTo({ lat: base.lat, lon: base.lon, zone: base.zone,
+                         area: base.label, label: base.label });
+        }
+        return;
+      }
       const r = e.target.closest('[data-recent]');
       if (r) { panel.hidden = true; await moveTo(Loc.recents()[Number(r.dataset.recent)]); }
     });
@@ -2890,12 +3070,12 @@ const App = (() => {
 
     // the arrondissement map — one tap marks it in the quest and in Explore
     document.addEventListener('click', e => {
-      const g = e.target.closest('.arr-dot'); if (!g) return;
-      const n = Number(g.dataset.arrnum);
-      if (n === Loc.active()?.arr) { toast(`You are in the ${n}${n===1?'er':'e'} — that one is free.`); return; }
-      const before = arrCount();
-      Store.toggleArr(n);
-      const after = arrCount();
+      const g = e.target.closest('.zone-dot'); if (!g) return;
+      const n = Number(g.dataset.zonenum);
+      if (n === Loc.active()?.zone) { toast(`You are in the ${n}${n===1?'er':'e'} — that one is free.`); return; }
+      const before = zoneCount();
+      Store.toggleZone(n);
+      const after = zoneCount();
       celebrate(g.closest('[data-quest]').dataset.quest, before, after);
       buildContext();
       render();
@@ -2903,13 +3083,13 @@ const App = (() => {
 
     // arrondissements
     document.addEventListener('click', e => {
-      const b = e.target.closest('[data-arr]'); if (!b) return;
-      const n = Number(b.dataset.arr);
-      if (n === Loc.active()?.arr) return;
-      Store.toggleArr(n);
+      const b = e.target.closest('[data-zone]'); if (!b) return;
+      const n = Number(b.dataset.zone);
+      if (n === Loc.active()?.zone) return;
+      Store.toggleZone(n);
       buildContext();
       render();
-      toast(Store.hasArr(n) ? `${n}e marked explored.` : `${n}e unmarked.`);
+      toast(Store.hasZone(n) ? `${n}e marked explored.` : `${n}e unmarked.`);
     });
   }
 
@@ -2948,7 +3128,7 @@ const App = (() => {
       `location    ${Loc.displayName(a)}${Loc.isExploring() ? '  (exploring)' : '  (home)'}`,
       `raw label   ${a.label || '—'}`,
       `lat / lon   ${a.lat}, ${a.lon}`,
-      `arr         ${a.arr ?? 'unknown'}`,
+      `zone         ${a.zone ?? 'unknown'}`,
       `home        ${Loc.displayName(Loc.home())}`,
       ``,
       `curated     ${ALL.length}      discovered  ${DISCOVERED.length}`,
@@ -3087,6 +3267,29 @@ const App = (() => {
        in, which is what render() has always done. */
 
     /* Only if the deadline above expired before it answered. */
+    /* Same shape as the forecast's late path below, and for the same
+       three reasons: the air changes what the ranking prefers, so the
+       context has to be rebuilt; it is stated in the header, so the
+       header has to be rewritten; and the view has to be redrawn rather
+       than waiting for the reader to change tab.
+
+       `repaint()` alone was not enough — it redraws #view and leaves the
+       header alone, so the number was shaping the page invisibly, which
+       is the one thing this feature must not do. */
+    if (CLIMP) CLIMP.then(m => {
+      if (!m) return;
+      buildContext();
+      renderHeader();
+      render();
+    });
+
+    if (AQP) AQP.then(a => {
+      if (!a) return;
+      buildContext();
+      renderHeader();
+      render();
+    });
+
     if (!WX) WXP.then(wx => {
       if (!wx) return;
       WX = wx;
@@ -3101,7 +3304,12 @@ const App = (() => {
        does nothing for this load in any case, only for the next one. */
     afterPaint(() => {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js').catch(e => console.warn('sw', e));
+        /* Only where the pack ships one: a worker's scope is its own
+           directory, so a city without a copy would either get nothing
+           or, worse, another city's. */
+        if (City.serviceWorker) {
+          navigator.serviceWorker.register('sw.js').catch(e => console.warn('sw', e));
+        }
       }
     });
 
@@ -3130,7 +3338,26 @@ const App = (() => {
      exist yet, and to stay correct if this ever moves again. */
   renderStatics();
 
-  return { init };
+  /* `defineView` is the extension point a city pack uses: load a file
+     after this one, register a builder, and list the id in City.views.
+     Exposed rather than kept inside because the pack is a separate
+     script — that is the whole point of it.
+
+     `ui` is the rest of the bargain. Registering a builder is useless
+     without something to build with, and a pack that hand-rolled its own
+     markup would drift from every other section on the page within a
+     week. `Near`, `Loc`, `Store`, `Rank` and `City` are already globals,
+     so what was missing is only the render helpers and the pool they
+     draw from. Kept deliberately small: a pack composes the same rows,
+     cards and headings every built-in view does, or it does not match. */
+  const ui = {
+    esc, rows, row, card, stripHead, img, MARK,
+    /* The two tiers, live rather than copied — a view is built after the
+       fill, and a snapshot taken at registration would be empty. */
+    records: () => ({ all: ALL, discovered: DISCOVERED, ctx: CTX })
+  };
+
+  return { init, defineView, ui };
 })();
 
 document.addEventListener('DOMContentLoaded', App.init);
