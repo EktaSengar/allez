@@ -2,11 +2,89 @@
 
 A city guide for the people who live in one. Paris, Delhi, Bengaluru and the Bay Area, at **[allez.city](https://allez.city)**.
 
-**Live at → https://ektasengar.github.io/paris/**
+**Live at → [allez.city](https://allez.city)**
 
 It answers one question every time you open it: *what is something interesting
 we could do next?* Not an events listing — a ranked, weather-aware, date-aware
 set of suggestions built around wherever you happen to be standing.
+
+The old `ektasengar.github.io/paris` address redirects here and will keep
+doing so.
+
+---
+
+## If you have just arrived
+
+Four things worth knowing before you change anything.
+
+**It is one engine and four city packs.** `js/` holds the engine — ranking,
+distance, expiry, photographs, the render path. Each of `paris/`, `delhi/`,
+`bengaluru/` and `bay-area/` holds a pack: the vocabulary, the zones, the
+transit grammar, the money, the calendar, which views exist and which sources
+feed them. **The engine never names a city.** If you find yourself writing
+`Paris` or `₹` or `arrondissement` in `js/`, it belongs in a pack instead — see
+[The city pack](#the-city-pack).
+
+**The `why` fields are the whole product.** Every curated record says why *you*
+would care, in a human sentence somebody wrote. That is the difference between
+this and a listings site, and it does not scale, which is fine. Three of the
+four cities have an empty curated tier right now because nobody has written
+theirs yet. Adding rows is not progress; adding judgement is.
+
+**Some of the code looks wrong and is not.** Script tags above `<main>`, a
+`:empty` CSS reservation, `<picture>` where an `<img>` would do, a 200 ms
+deadline on the weather fetch, tabs as markup rather than rendered. Each is
+load-bearing and each has a measured cost if tidied. They are written up in
+`.claude/skills/paris-performance/references/invariants.md` — **read that before
+touching the boot sequence, the critical path, image slots or the render path.**
+
+**Run the checks.** They are fast, and between them they have caught every
+real regression this codebase has had:
+
+```bash
+node scripts/check-packs.mjs        # every city pack holds up its end
+node scripts/version.mjs --all      # restamp after touching css/, js/ or data/
+node scripts/refresh.mjs --check    # every record still valid
+node scripts/check-location.mjs     # moving still changes the answers
+```
+
+All four run on every pull request. The heavier one, `check-views.mjs`, renders
+every view in a headless browser and hashes the result — run it by hand around
+anything that touches rendering:
+
+```bash
+export CHROME_PATH="/path/to/Chrome"
+node scripts/check-views.mjs --save /tmp/before.json
+# …make the change…
+node scripts/check-views.mjs --compare /tmp/before.json
+```
+
+### Running it locally
+
+```bash
+node scripts/serve.mjs      # http://localhost:4321
+```
+
+`http://localhost:4321/` is the city chooser; `/paris/`, `/delhi/`,
+`/bengaluru/` and `/bay-area/` are the cities.
+
+### Adding a fifth city
+
+Copy the nearest existing pack, not Paris — Paris is the one with a municipal
+data feed and twenty numbered zones, and almost nothing about that transfers.
+`check-packs.mjs` will tell you what the engine still expects that you have not
+supplied. The short version:
+
+1. `<city>/city.js` — the pack. Zones with centroids, vocabulary, reach model,
+   money, holidays, views.
+2. `<city>/index.html` — copy a neighbour's and change the wordmark, the
+   placeholder text, the zone label and the price chip. **A city owns its own
+   page**; the engine does not write it.
+3. `<city>/data/` — `home.json` plus structurally valid empty files. A CORE
+   file that 404s rejects the whole load, so "nothing here yet" has to be an
+   empty `items` array rather than a missing file.
+4. `HOMEGROUND_CITY=<city> node scripts/discover.mjs` — the OpenStreetMap layer.
+5. Write the `why` fields. This is the part that cannot be generated.
 
 ---
 
