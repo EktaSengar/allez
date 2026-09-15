@@ -24,7 +24,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadRecord, readDiscovered, dataDir } from './shim.mjs';
+import { loadRecord, readDiscovered, dataDir, City } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
@@ -71,7 +71,16 @@ async function run() {
   const items = doc.items.map(rec => {
     if (!rec.match) { missed.push(`${rec.title || rec.id || '?'} — no "match" block`); return rec; }
     const hit = findPlace(pool, rec.match);
-    if (!hit) { missed.push(`${rec.match.name} (${rec.match.zone}e ${rec.match.type || ''})`); return null; }
+    /* `${zone}e` is an arrondissement and reads as "10e" in Paris and as
+       "undefinede" in a city whose zones have names and whose records
+       often do not name one at all. The zone is a hint for narrowing the
+       search, not part of the record, so it is printed only when given. */
+    if (!hit) {
+      const where = [rec.match.zone == null ? null : City.zone.label(rec.match.zone),
+                     rec.match.type].filter(Boolean).join(' ');
+      missed.push(where ? `${rec.match.name} (${where})` : rec.match.name);
+      return null;
+    }
     resolved++;
 
     /* Hand-written fields win; the machine only fills in what it knows. */
@@ -96,7 +105,7 @@ async function run() {
 
   console.log(`\n  ${resolved} of ${doc.items.length} resolved against the discovery index`);
   if (Object.keys(byType).length) console.log('  by kind:', Object.entries(byType).map(([k, n]) => `${k}:${n}`).join(' '));
-  if (Object.keys(byArr).length) console.log('  per arrondissement:', Object.entries(byArr)
+  if (Object.keys(byArr).length) console.log(`  per ${City.zone.one}:`, Object.entries(byArr)
     .sort((a, b) => a[0] - b[0]).map(([a, n]) => `${a}:${n}`).join(' '));
 
   if (missed.length) {

@@ -634,6 +634,38 @@ things fall a long way and never fall off, and the hourly forecast is used for
 the genuinely useful part: *"Better around 5am, at about 174."* Paris declares no
 `air`, never loads the file, and pays nothing.
 
+A pack whose zones do not tile its bounding box declares `zone.limitKm`, and a
+point further than that from every zone is not in the city at all. Only the Bay
+Area needs one so far, and the reason is its shape: `bbox` is a rectangle and
+the bay runs diagonally through it, so a box reaching Mountain View in the
+south necessarily reaches Oakland in the north. There is no rectangle that says
+*SF down to Mountain View and nothing east of the water* — but the zones can say
+it, because there are none over there.
+
+Left unsaid, this was not a cosmetic problem. 2,766 of 9,170 discovered places
+were east of the bay and each was labelled with the nearest San Francisco zone
+across it: Montclair Branch Library, in Oakland, came back as Rincon Hill, 16.5
+km and a bridge away. `castro-valley` had quietly become the second-largest
+zone in the index on 542 places, most of them in Oakland. Eight Alameda County
+zones have been removed from the pack along with it.
+
+Ten kilometres was chosen from the data rather than picked: it drops 2,325
+places and not one of them is in scope, the nearest in-scope records to the line
+being the hill places above Woodside at 8–9 km. What it does not fix, because a
+distance cannot tell water from road: 441 East Bay places sit within 10 km of a
+San Francisco centroid, the Oakland and Alameda waterfronts genuinely being that
+close to Hunters Point as the crow flies. Those want a boundary, not a radius.
+
+**Selection and the limit use different measures, deliberately.** Which centroid
+is nearest is the squared-degree comparison every pack has always used, so no
+city's existing labels move; the limit is real kilometres, because a threshold
+written in kilometres has to be measured in them. Switching selection to true
+distance is defensible — it is geometrically the better rule and scores
+identically against sixteen Paris landmarks whose arrondissement is a matter of
+record — but it relabels 2,997 Paris places, 197 in Delhi and 268 in Bengaluru,
+and it would move 16 of the Bay Area's 9,170. That is a change to make on its
+own evidence, not as a side effect of a bounding box.
+
 A pack that has no shape worth drawing omits `zone.map` and the zone quest
 falls back to a list of chips. Paris spirals out from the 1st and is worth a
 drawing; Bengaluru is ninety-five named neighbourhoods, where a dot per zone

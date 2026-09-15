@@ -33,7 +33,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readShards, shard } from './shard.mjs';
-import { City, dataDir } from './shim.mjs';
+import { City, dataDir, zoneFinder } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
@@ -48,15 +48,14 @@ const MIRRORS = ['https://overpass-api.de/api/interpreter',
                  'https://overpass.kumi.systems/api/interpreter',
                  'https://overpass.private.coffee/api/interpreter'];
 
-/* Zone centroids — used to label a point, and to sanity-check coverage.
-   Nearest centroid, not point-in-polygon: good enough to say "5e" next
-   to a name, and never used for distance.
+/* Which zone a point is in — nearest centroid, not point-in-polygon:
+   good enough to say "5e" next to a name, and never used for distance.
 
-   The pack's `grid` where it has one, because an evenly spaced table
-   approximates real boundaries better than one pulled towards the shops;
-   its ordinary centroids otherwise, which is what a city with no
-   polygons to approximate has anyway. */
-const ZONE = City.zone.grid || City.zone.centroids;
+   Lives in shim.mjs now, because notable.mjs had the same function
+   spelled slightly differently and the two could drift. It also answers
+   `null` for a point further from every centroid than the pack allows —
+   see `zone.limitKm`, which only the Bay Area declares. */
+const near = zoneFinder(City);
 
 /* What to pull.
 
@@ -133,28 +132,13 @@ async function overpass(query, attempt = 0) {
   throw lastErr || new Error('every Overpass mirror failed');
 }
 
-/* Object.keys() always hands back strings. Paris's zones really are
-   numbers and its records store them as numbers, so they are converted
-   back; Bengaluru's are slugs and must not be. Coercing unconditionally
-   turned every Bengaluru zone into NaN and put all 7,268 places in one
-   shard. */
-const zoneKey = k => (/^\d+$/.test(k) ? Number(k) : k);
-
-const near = (lat, lon) => {
-  let best = null, bd = Infinity;
-  for (const [n, [a, b]] of Object.entries(ZONE)) {
-    const d = (a - lat) ** 2 + (b - lon) ** 2;
-    if (d < bd) { bd = d; best = zoneKey(n); }
-  }
-  return best;
-};
-
 /* Some names are shouty or duplicated across a chain; keep it tidy. */
 const clean = s => s.replace(/\s+/g, ' ').trim().slice(0, 60);
 
 async function run() {
   const out = [];
   const counts = {};
+  let outside = 0;
 
   for (const layer of LAYERS.filter(l => !ONLY || ONLY.includes(l.cat))) {
     /* `meta` for the element timestamp — how long since anybody touched
@@ -175,6 +159,13 @@ async function run() {
       const lon = el.lon ?? el.center?.lon;
       if (lat == null || lon == null) continue;
 
+      /* Outside every zone by more than the pack allows is outside the
+         city, and the record is dropped rather than orphaned. `x` exists
+         for the handful of points that fall between zones on the edge of
+         the box; it is not somewhere to file a different county. */
+      const a = near(lat, lon);
+      if (a == null && City.zone.limitKm != null) { outside++; continue; }
+
       const hours = (t.opening_hours || '').trim();
       const year = v => { const m = /^(\d{4})/.exec(String(v || '')); return m ? Number(m[1]) : null; };
 
@@ -183,7 +174,7 @@ async function run() {
         c: layer.cat,
         lat: +lat.toFixed(5),
         lon: +lon.toFixed(5),
-        a: near(lat, lon),
+        a,
         ...(t['addr:street'] ? { s: clean(t['addr:street']) } : {}),
         ...(t.website || t['contact:website'] ? { w: (t.website || t['contact:website']).slice(0, 120) } : {}),
         ...(t.cuisine ? { k: t.cuisine.split(';')[0].slice(0, 24) } : {}),
@@ -263,6 +254,9 @@ async function run() {
   const spread = {};
   items.forEach(p => { spread[p.a] = (spread[p.a] || 0) + 1; });
 
+  if (outside) console.log(`\n  ${outside} dropped as outside the city — ` +
+    `further than ${City.zone.limitKm} km from every ${City.zone.one}`);
+
   const doc = {
     generated: new Date().toISOString().slice(0, 10),
     source: 'OpenStreetMap via Overpass · ODbL',
@@ -285,7 +279,7 @@ async function run() {
        there now, and the empty fallback this used to have would silently
        drop every category the run did not crawl. */
     let prev;
-    try { prev = await readShards(); }
+    try { prev = await readShards(path.join(DATA, 'places')); }
     catch { throw new Error('no index at data/places/ to merge into — run without --only first'); }
     doc.items = prev.items.filter(p => !ONLY.includes(p.c)).concat(doc.items);
     doc.counts = { ...prev.counts, ...doc.counts };

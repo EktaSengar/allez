@@ -23,11 +23,6 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readShards } from './shard.mjs';
 
-/* The discovery index ships as twenty files so the browser can paint
-   before it has all of them. Nothing in Node has any reason to care, so
-   this is the one place that reassembles it. */
-export const readDiscovered = readShards;
-
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const JS = path.join(ROOT, 'js');
 
@@ -62,6 +57,20 @@ export const City = loadCity(process.env.HOMEGROUND_CITY || 'paris');
    URL; the domain move is what let that go. */
 export const dataDir = (cityId = City.id) => path.join(ROOT, cityId, 'data');
 
+/* The discovery index ships as twenty files so the browser can paint
+   before it has all of them. Nothing in Node has any reason to care, so
+   this is the one place that reassembles it.
+
+   It reads the city this process was told to build, which it did not
+   used to: this was `export const readDiscovered = readShards`, and
+   `readShards` defaulted to Paris. Every caller relies on the default —
+   `editorial.mjs`, `draft.mjs`, `check-hours.mjs`, `check-location.mjs` —
+   so all four read Paris however `HOMEGROUND_CITY` was set. That is why
+   a Bay Area editorial record could not resolve: `editorial.mjs` was
+   matching "Tartine" against the Paris index and correctly finding
+   nothing. The default is the city, not a city. */
+export const readDiscovered = (dir = path.join(dataDir(), 'places')) => readShards(dir);
+
 /* Every pack, for the scripts that work across all of them. */
 export const cityIds = () =>
   fs.readdirSync(ROOT, { withFileTypes: true })
@@ -93,6 +102,81 @@ export function loadModuleFor(cityId, file, name, globals = {}) {
                      { City: c, localStorage: noStore });
   return evaluate(fs.readFileSync(path.join(JS, file), 'utf8'), name,
                   { City: c, Keys: k, ...globals });
+}
+
+/* ---------- which zone a point is in, and whether it is in the city ----------
+
+   `discover.mjs` and `notable.mjs` both had their own copy of this, both
+   spelled "nearest centroid wins", and both unconditional — every point
+   inside the bounding box came back with the name of the nearest zone
+   however far away that zone was.
+
+   For Paris that is harmless: the box is tight around a city that fills
+   it. For the Bay Area it is not. The pack says in its own words that it
+   is "SF down to Mountain View, deliberately not the whole nine
+   counties" — and a rectangle cannot say that, because the bay runs
+   diagonally through it. So 2,766 East Bay places arrived inside the box
+   and were each labelled with the nearest San Francisco zone across the
+   water: Montclair Branch Library, in Oakland, came back as Rincon Hill,
+   16.5 km and a bridge away.
+
+   A pack that knows its zones do not tile its bounding box says so with
+   `zone.limitKm`, and a point further than that from its zone is not in
+   the city at all. Measured on the Bay index, 10 km drops 2,325 records
+   and not one of them is in scope; the nearest in-scope records to the
+   line are the hill places above Woodside at 8–9 km, genuinely that far
+   from anywhere with a name, and they stay. A pack that omits it behaves
+   exactly as before, which is why Paris, Delhi and Bengaluru are
+   untouched by this.
+
+   **Two different measures, deliberately.** Selection is the squared
+   degrees both copies already used, so no city's existing labels move.
+   The limit is `Loc.km`, the browser's own, because a threshold written
+   in kilometres has to be measured in kilometres — at this latitude a
+   degree of longitude is 88 km against 111 for latitude, so squared
+   degrees stretch the east-west axis by a quarter and "10" would quietly
+   mean two different distances depending on which way you went.
+
+   Switching selection to true distance as well is defensible and is not
+   done here: it is geometrically the better rule, it scores identically
+   against sixteen Paris landmarks whose arrondissement is a matter of
+   record (15/16 either way), and it would relabel 2,997 Paris places,
+   197 in Delhi and 268 in Bengaluru. That is a change worth making on
+   its own evidence, not as a side effect of a bounding box. It would
+   move 16 of the Bay Area's 9,170 records, which is the measure of how
+   little the distinction matters here.
+
+   The cost of the split, stated rather than hidden: for those few
+   records near the line the limit is measured against the centroid
+   squared degrees picked, which is not always the truly nearest one. */
+let _loc = null;
+const locale = () => (_loc ??= loadModule('location.js', 'Loc',
+  { localStorage: noStore, navigator: {}, Store: {} }));
+
+export function zoneFinder(city = City) {
+  /* The pack's `grid` where it has one, because an evenly spaced table
+     approximates real boundaries better than one pulled towards the
+     shops; its ordinary centroids otherwise, which is what a city with
+     no polygons to approximate has anyway. */
+  const table = city.zone.grid || city.zone.centroids;
+  const limit = city.zone.limitKm ?? null;
+  const km = limit == null ? null : locale().km;
+  /* Object.keys() always hands back strings. Paris's zones really are
+     numbers and its records store them as numbers, so they are converted
+     back; Bengaluru's are slugs and must not be. Coercing
+     unconditionally turned every Bengaluru zone into NaN and put all
+     7,268 places in one shard. */
+  const key = k => (/^\d+$/.test(k) ? Number(k) : k);
+
+  return (lat, lon) => {
+    let best = null, coords = null, bd = Infinity;
+    for (const [n, c] of Object.entries(table)) {
+      const d = (c[0] - lat) ** 2 + (c[1] - lon) ** 2;
+      if (d < bd) { bd = d; best = key(n); coords = c; }
+    }
+    if (limit != null && coords && km([lat, lon], coords) > limit) return null;
+    return best;
+  };
 }
 
 /* The two the record layer needs, in the order they depend on each

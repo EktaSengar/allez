@@ -31,16 +31,31 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-/* The default is Paris because that is what every existing caller means.
-   A caller building another city passes its own directory — this used to
-   be a module constant, and a Bengaluru discovery run therefore wrote
-   seven thousand Bengaluru places into Paris's shard directory and
-   deleted all twenty of Paris's on the way. */
-/* Only the default, for a caller that does not say. Every caller that
-   builds a specific city passes its own directory — see `shard(doc, outDir)`. */
-const DATA = path.join(ROOT, 'paris', 'data');
-const OUT  = path.join(DATA, 'places');
 const DRY  = process.argv.includes('--dry');
+
+/* There is no default directory, and that is the whole point.
+
+   Writing used to default to Paris, and a Bengaluru discovery run
+   therefore wrote seven thousand Bengaluru places into Paris's shard
+   directory and deleted all twenty of Paris's on the way. `shard()` was
+   given a required directory; `readShards()` was not, and kept the same
+   default — so reading was still wrong in exactly the way writing had
+   been, only silently.
+
+   What that cost: `editorial.mjs`, `draft.mjs`, `check-hours.mjs` and
+   `check-location.mjs` all call it with no argument. Every one of them
+   read Paris no matter which city it had been told to build, which is
+   why a Bay Area editorial record could never resolve — it was being
+   matched against the Paris index — and `discover.mjs --only` would have
+   spliced Paris places into another city's shards.
+
+   A missing directory is now an error rather than a guess. */
+const needDir = dir => {
+  if (!dir) throw new Error(
+    'shard.mjs: a directory is required — pass <city>/data/places. ' +
+    'There is no default; see the note at the top of this file.');
+  return dir;
+};
 
 /* Places with no zone — a handful, on the edge of the bbox — go here
    rather than being dropped. Loaded with the first batch. */
@@ -71,7 +86,8 @@ function centroidOf(items) {
   return n ? [+(la / n).toFixed(5), +(lo / n).toFixed(5)] : null;
 }
 
-export async function shard(doc, outDir = OUT, opts = {}) {
+export async function shard(doc, outDir, opts = {}) {
+  needDir(outDir);
   const { zones = null, bbox = null, max = MAX_SHARDS } = opts;
 
   /* Passed in rather than imported, because shim.mjs already imports
@@ -154,7 +170,8 @@ function gridder(bbox, max) {
   };
 }
 
-export async function readShards(outDir = OUT) {
+export async function readShards(outDir) {
+  needDir(outDir);
   const manifest = JSON.parse(await fs.readFile(path.join(outDir, 'index.json'), 'utf8'));
   const items = [];
   for (const key of Object.keys(manifest.shards)) {
@@ -164,23 +181,11 @@ export async function readShards(outDir = OUT) {
   return { ...manifest, items };
 }
 
-/* Run directly: split whatever data/discovered.json holds, then retire it. */
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const src = path.join(DATA, 'discovered.json');
-  const doc = JSON.parse(await fs.readFile(src, 'utf8'));
-  const { by } = await shard(doc);
+/* This file used to be runnable on its own, to split a city's
+   `data/discovered.json` into shards and then delete it. That migration
+   has happened in all four cities and none of them has the file any
+   more, so the block read a path that cannot exist, passed no directory
+   to `shard()`, and referred to an `outDir` that was never in scope.
 
-  const rows = [...by.entries()].sort((a, b) =>
-    (a[0] === ORPHANS ? 99 : +a[0]) - (b[0] === ORPHANS ? 99 : +b[0]));
-  console.log(`\nSplit ${doc.items.length} places into ${rows.length} shards\n`);
-  for (const [key, items] of rows) {
-    const kb = DRY ? 0 : Math.round((await fs.stat(path.join(outDir, `${key}.json`))).size / 1024);
-    console.log(`  ${String(key).padStart(3)}  ${String(items.length).padStart(5)} places  ${String(kb).padStart(4)} KB`);
-  }
-  if (!DRY) {
-    await fs.unlink(src).catch(() => {});
-    console.log(`\n  wrote data/places/ and retired data/discovered.json\n`);
-  } else {
-    console.log('\n  --dry, nothing written\n');
-  }
-}
+   `discover.mjs` writes the shards now, and it is the only thing that
+   should. Nothing here runs by itself. */

@@ -118,6 +118,57 @@ function checkPack(id) {
   want(id, badCoord.length === 0,
     `every centroid is a [lat, lon]${badCoord.length ? ` — ${badCoord.slice(0, 4).join(', ')}` : ''}`);
 
+  /* ---------- the centroids have to be inside the box ----------
+
+     A zone outside the pack's own bbox is never reached by a discovery
+     run, so it can sit in the table for months looking like coverage
+     while holding nothing. Cheap to assert and impossible to notice
+     otherwise. */
+  if (City.bbox) {
+    const [s, w, n, e] = String(City.bbox).split(',').map(Number);
+    const outside = cent.filter(k => {
+      const [la, lo] = City.zone.centroids[k];
+      return la < s || la > n || lo < w || lo > e;
+    });
+    want(id, outside.length === 0,
+      `every centroid is inside bbox${outside.length ? ` — ${outside.slice(0, 4).join(', ')}` : ''}`);
+  }
+
+  /* ---------- the limit, where a pack declares one ----------
+
+     `zone.limitKm` is how a pack says its zones do not tile its bounding
+     box — see the note in shim.mjs. Optional, so this only fires for a
+     pack that has opted in, but a limit that is zero, negative or a
+     string would silently drop the entire city. */
+  if (City.zone.limitKm !== undefined) {
+    want(id, Number.isFinite(City.zone.limitKm) && City.zone.limitKm > 0,
+      `zone.limitKm is a positive number of kilometres (${City.zone.limitKm})`);
+    /* A limit too small for the pack's own spacing would throw away
+       places in the middle of the city. The floor is *half* the widest
+       gap between neighbouring centroids, not the gap: a point midway
+       between two zones 12 km apart is 6 km from both, so 6 is what the
+       limit has to clear for that ground to belong to either of them.
+       Testing the whole gap fails Half Moon Bay, which is 11.9 km from
+       its nearest neighbour up the coast and perfectly well covered. */
+    const R = 6371, rad = d => d * Math.PI / 180;
+    const km = (a, b) => {
+      const dLat = rad(b[0] - a[0]), dLon = rad(b[1] - a[1]);
+      const x = Math.sin(dLat / 2) ** 2 +
+                Math.cos(rad(a[0])) * Math.cos(rad(b[0])) * Math.sin(dLon / 2) ** 2;
+      return 2 * R * Math.asin(Math.sqrt(x));
+    };
+    let widest = 0, lonely = null;
+    for (const k of cent) {
+      let nearest = Infinity;
+      for (const j of cent) if (j !== k)
+        nearest = Math.min(nearest, km(City.zone.centroids[k], City.zone.centroids[j]));
+      if (nearest > widest) { widest = nearest; lonely = k; }
+    }
+    want(id, City.zone.limitKm >= widest / 2,
+      `zone.limitKm covers the ground between zones — needs ${(widest / 2).toFixed(1)} km ` +
+      `for the gap at ${lonely}, has ${City.zone.limitKm}`);
+  }
+
   /* ---------- the functions have to actually work ----------
 
      Declared-but-broken is the failure mode a presence check misses, so
