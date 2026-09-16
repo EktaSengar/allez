@@ -643,7 +643,7 @@ const App = (() => {
 
   function kicker(item) {
     const bits = [];
-    if (item.zone) bits.push(`${item.zone}<sup>e</sup>`);
+    if (item.zone) bits.push(City.zone.tile(item.zone));
     else if (item.type === 'daytrip') bits.push('Out of town');
     if (item.minutesFromHome != null) bits.push(`${item.minutesFromHome} min`);
     bits.push(priceText(item));
@@ -864,10 +864,33 @@ const App = (() => {
      those never take the hero slot. */
   const hasRealPhoto = i => i.image && i.imageKind === 'subject';
 
+  /* A record without a photograph gets the same tinted tile `shot()`
+     draws, at the hero's own aspect ratio so nothing moves. This used to
+     call img() unconditionally, which built `<img src="undefined">` and
+     threw out of `srcset` before the first render — taking the whole
+     page with it, not just the card.
+
+     Paris never hit it because photos.mjs gives every generated record
+     an `i`, so the hero always had one. The Bay Area's first collected
+     events arrived without photographs and the site rendered nothing at
+     all. An engine that assumes a photograph exists is wrong about the
+     city that has not been photographed yet, which is every new one. */
+  /* Paris numbers its zones, so a dossier reads "10e — Le Marais" and
+     both halves earn their place. Everywhere else the zone *is* the
+     name, and the same template reads "Telegraph Hill — Telegraph
+     Hill". The pack already knows which it is. */
+  const zoneHeading = f => {
+    const head = City.zone.tile(f.zone);
+    return head === f.name ? esc(f.name) : `${head} — ${esc(f.name)}`;
+  };
+
   function hero(item) {
+    const picture = item.image
+      ? `<div class="hero-img">${img(item, 'hero', 'loaded', true)}</div>`
+      : `<div class="hero-img ph" data-kind="${esc(item.type || '')}"><span class="ph-mark">${markFor(item)}</span></div>`;
     return `<a class="hero" data-id="${esc(item.id)}" href="${item.url ? esc(item.url) : mapsLink(item)}"
         target="_blank" rel="noopener">
-      <div class="hero-img">${img(item, 'hero', 'loaded', true)}</div>
+      ${picture}
       <div class="hero-body">
         <p class="hero-kicker">${kicker(item)}</p>
         <h2 class="hero-title">${esc(item.title)}</h2>
@@ -878,7 +901,7 @@ const App = (() => {
 
   function row(item, thumb = false) {
     const bits = [];
-    if (item.zone) bits.push(`${item.zone}<sup>e</sup>`);
+    if (item.zone) bits.push(City.zone.tile(item.zone));
     if (item.area) bits.push(esc(item.area));
     if (item.priceNote) bits.push(esc(item.priceNote));
     else bits.push(priceText(item));
@@ -1154,7 +1177,7 @@ const App = (() => {
     return `<div class="near-card ${tierCls(item)}" data-id="${esc(item.id)}">
       <p class="near-label"><span class="e">${emoji}</span>${esc(label)}</p>
       <h4 class="near-name">${esc(item.title)}</h4>
-      <p class="near-meta">~${mins} min${item.zone ? ` · ${item.zone}<sup>e</sup>` : ''}${tier(item).note ? ` · ${esc(tier(item).note.toLowerCase())}` : ''}</p>
+      <p class="near-meta">~${mins} min${item.zone ? ` · ${City.zone.tile(item.zone)}` : ''}${tier(item).note ? ` · ${esc(tier(item).note.toLowerCase())}` : ''}</p>
       <p class="near-why">${esc(line)}</p>
       <a class="near-link" href="${item.url ? esc(item.url) : mapsLink(item)}" target="_blank" rel="noopener">
         ${item.url ? 'Look it up' : 'Directions'}</a>
@@ -2274,12 +2297,15 @@ const App = (() => {
       </g>`;
     }).join('');
 
+    /* Only a pack declaring zone.map reaches this, which today is Paris
+       alone — but the ordinal still comes from the pack, so the next one
+       to draw a map does not inherit an arrondissement suffix. */
     return `<div class="zone-map-wrap">
       <svg class="zone-map" viewBox="2 6 84 78" role="group" aria-label="Arrondissements explored">
         <path class="seine" d="M4,58 C26,50 36,63 50,58 C64,53 76,63 92,52" />
         ${dots}
       </svg>
-      <p class="zone-map-note">Tap one as you do it. You are in the ${Loc.active()?.zone ?? '—'}<sup>e</sup>, so that one is free.</p>
+      <p class="zone-map-note">Tap one as you do it. You are in the ${Loc.active()?.zone != null ? City.zone.tile(Loc.active().zone) : '—'}, so that one is free.</p>
     </div>`;
   }
 
@@ -2511,7 +2537,7 @@ const App = (() => {
 
       dossier = `<div class="hood">
         ${local ? `<div class="hood-shot">${img(local, '(min-width: 1040px) 1000px, 96vw', 'loaded')}</div>` : ''}
-        <h3>${f.zone}<sup>e</sup> — ${esc(f.name)}</h3>
+        <h3>${zoneHeading(f)}</h3>
         <p class="sub">About ${f.minutesFromHome} minutes from you${local ? ` · photo: ${esc(local.imageSubject)}` : ''}</p>
         <div class="facts-grid">
           ${facts.map(([k, v]) => `<dl class="f"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></dl>`).join('')}

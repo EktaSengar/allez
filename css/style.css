@@ -847,7 +847,8 @@ picture { display: contents; }
 /* Placeholder tile for the handful of things with no freely licensed
    photograph. Same aspect ratio as a real one so the grid stays aligned,
    but visibly a tile rather than a picture — no pretending. */
-.shot.ph {
+.shot.ph,
+.hero-img.ph {
   display: grid;
   place-items: center;
   background:

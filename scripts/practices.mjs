@@ -34,6 +34,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { dataDir } from './shim.mjs';
+import { parseICS, icsDate, lumaParts, lumaUrl } from './ics.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
@@ -68,7 +69,6 @@ const UA   = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 const LUMA = [
   ['discover', 'discplace-NdLrh1xJfeotJZC', 'Luma — What‘s Happening in Paris']
 ];
-const lumaUrl = ([entity, id]) => `https://api.lu.ma/ics/get?entity=${entity}&id=${id}`;
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const UNTIL = new Date(Date.now() + DAYS * 86400000).toISOString().slice(0, 10);
@@ -382,62 +382,9 @@ function cityRecords(raw, log) {
    the Luma half
    ====================================================================== */
 
-/* iCal folds long lines by starting the continuation with a space, so
-   nothing can be read until the folding is undone. Everything after that
-   is one field per line.
-
-   DESCRIPTION is deliberately left escaped. Luma structures it as three
-   blocks separated by a literal `\n\n`, and unescaping first would
-   flatten the separators into ordinary spaces and lose the structure —
-   which is where the canonical URL and the street address live. */
-function parseICS(text) {
-  const body = text.replace(/\r\n/g, '\n').replace(/\n[ \t]/g, '');
-  return body.split('BEGIN:VEVENT').slice(1).map(block => {
-    const get = key => {
-      const m = block.match(new RegExp(`^${key}[^:\\n]*:(.*)$`, 'm'));
-      return m ? m[1].trim() : null;
-    };
-    return {
-      uid:   get('UID'),
-      title: unescapeICS(get('SUMMARY')),
-      start: get('DTSTART'),
-      end:   get('DTEND'),
-      loc:   unescapeICS(get('LOCATION')),
-      geo:   get('GEO'),
-      desc:  get('DESCRIPTION')      /* still escaped — see lumaParts() */
-    };
-  });
-}
-
-const unescapeICS = s => (s || '')
-  .replace(/\\n/g, ' ').replace(/\\,/g, ',').replace(/\\;/g, ';').replace(/\\\\/g, '\\')
-  .replace(/\s+/g, ' ').trim();
-
-/* "20260907T170000Z" → "2026-09-07" */
-const icsDate = s => {
-  const m = String(s || '').match(/^(\d{4})(\d{2})(\d{2})/);
-  return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
-};
-
-/* Luma writes the description in a fixed shape:
-
-     Get up-to-date information at: https://luma.com/<slug>
-     Address:
-     <the street address, or "Check event page for more details.">
-     <the organiser's own text, however many blocks of it>
-
-   Which makes the first two blocks worth more than the boilerplate they
-   look like. Block 0 carries the canonical short link — better than
-   rebuilding one from the UID and guessing at Luma's URL shape. Block 1
-   carries a street address for events whose LOCATION field is only a
-   luma.com link, which is fifteen of the forty in the Paris feed. */
-function lumaParts(desc) {
-  const blocks = String(desc || '').split('\\n\\n');
-  const url = (blocks[0] || '').match(/https?:\/\/\S+/)?.[0]?.replace(/[.,]$/, '') || null;
-  const addrRaw = unescapeICS((blocks[1] || '').replace(/^Address:\s*/i, ''));
-  const address = /check event page/i.test(addrRaw) ? null : addrRaw || null;
-  return { url, address, why: unescapeICS(blocks.slice(2).join(' ')) };
-}
+/* The iCal reader, the date shape and Luma's description layout now
+   live in ics.mjs — the Bay Area collector needs the same three and two
+   parsers for one feed format is how they drift apart. */
 
 /* A keyword gate, and a crude one — an iCal feed has no tags to read
    instead. Tight on purpose, and tuned against the live feed: the Paris
