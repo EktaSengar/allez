@@ -95,3 +95,27 @@ export const icsGeo = e => {
   const g = String(e.geo || '').split(';').map(Number);
   return g.length === 2 && g.every(Number.isFinite) ? g : null;
 };
+
+/* A keyword gate, and a crude one — an iCal feed has no tags to read
+   instead. Tight on purpose, and tuned against the live feed: the Paris
+   calendar carries a backgammon social, two gallery openings, a padel
+   tournament and a watercolour workshop alongside the AI evenings, and
+   the hobbies half of this file is already served by a source with real
+   tags on it. Better to miss a tech event than to file a vernissage
+   under `tech`.
+
+   The business vocabulary of the startup scene — founder, product,
+   SaaS, pre-seed — is deliberately absent. It matched a padel night and
+   a VC rooftop cocktail and nothing that was about building anything.
+
+   French earns its own terms rather than being translated into the
+   English ones: `IA` and `intelligence artificielle` are how half this
+   feed refers to the subject, and without them "Les Apéros de l'IA" and
+   "créer son MCP maison" both fall out. */
+export const LUMA_TECH = new RegExp('\\b(' + [
+  'a\\.?i\\.?', 'ia', 'intelligence artificielle', 'llms?', 'gpt', 'genai',
+  'machine learning', 'deep learning', 'neural', 'agents?', 'inference', 'rag',
+  'mcp', 'mlops', 'devops', 'developer', 'dev', 'engineer', 'engineering',
+  'software', 'open ?source', 'hackathon', 'api', 'database', 'data',
+  'robotics', 'hardware', 'infra', 'technolog', 'tech'
+].join('|') + ')\\b', 'i');

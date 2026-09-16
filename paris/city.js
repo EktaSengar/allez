@@ -58,6 +58,23 @@ const City = (() => {
     allHeading: 'All twenty',
     tile: n => `${n}<sup>e</sup>`,
 
+    /* A zone read out of an address, where the address says. Paris
+       postcodes are 750 + the arrondissement, which is a better answer
+       than the nearest centroid for anything near a boundary — and a
+       Luma organiser often publishes the street but withholds nothing
+       about the postcode. Optional: a pack without one is placed by
+       position alone.
+
+       75001–75020, plus 75116, which is the 16th's second postcode and
+       not a 116th arrondissement. The copy of this in practices.mjs read
+       any 75xxx as a zone, so 75116 came back as zone 116 and 75999 as
+       999 — truthy, and therefore never corrected by the position. */
+    fromAddress: text => {
+      const m = String(text || '').match(/\b75(0(?:0[1-9]|1\d|20)|116)\b/);
+      if (!m) return null;
+      return m[1] === '116' ? 16 : Number(m[1]);
+    },
+
     /* A second centroid table, and on purpose. `centroids` above is
        pulled towards where people are, which is what you want for "how
        far is that". This one is evenly spaced, which is what you want
@@ -250,9 +267,31 @@ const City = (() => {
   /* A service worker's scope is the directory its script sits in, so a
      city can only have one if it ships its own. Paris has sw.js at the
      root next to its index.html. */
+  /* ---------- what you could take up ----------
+
+     Read by scripts/practices.mjs. `city` names the half that reads a
+     municipal feed and turns its repetition into a rhythm — Paris's is
+     Que Faire à Paris, whose `occurrences` field carries every date a
+     workshop runs. */
+  const practices = { city: 'qfap' };
+
+  /* ---------- Luma ----------
+
+     The calendars to read for the tech and AI evenings no municipal feed
+     carries anywhere. A city fact rather than a practices one, because
+     more than one script reads them: practices.mjs takes the tech.
+
+     Station F is deliberately not a second calendar, having been
+     checked: `luma.com/stationf` and `luma.com/station-f` are both 404,
+     and the two calendars its events page links to are somebody's
+     "Personal" one and the Foresight Institute's, a global calendar
+     mostly in Stockholm. What they carry in Paris already arrives
+     through `discover`. */
+  const luma = [['discover', 'discplace-NdLrh1xJfeotJZC', 'Luma — What‘s Happening in Paris']];
+
   const serviceWorker = true;
 
-  return { id, name, ua, bbox, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable };
+  return { id, name, ua, bbox, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same

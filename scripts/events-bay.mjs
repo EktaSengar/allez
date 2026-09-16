@@ -9,8 +9,8 @@
    is that: DataSF's only events dataset is Our415, which is the Rec &
    Park and Public Library programme calendar and is mostly for children.
 
-   So this is two sources, neither of which is a listings magazine, and
-   between them they answer the question for two different halves of the
+   So this is three sources, none of them a listings magazine, and
+   between them they answer the question for the two halves of the
    region:
 
      events.stanford.edu   Localist, keyless. The Cantor's exhibitions,
@@ -24,9 +24,19 @@
                            would go to: plant swaps, fix-it clinics,
                            book awards, screenings.
 
-   The tech and AI evenings are not here. They are Luma's, and Luma is
-   read by practices.mjs for Paris already — the Bay's calendar is
-   declared alongside it rather than parsed a second time here.
+     luma.com/sf           Luma's discovery calendar, keyless iCal. The
+                           evenings that are not tech — reading in the
+                           park, a makers market, a transit art fair. The
+                           tech and AI ones go to practices.json, which is
+                           where Paris files them; LUMA_TECH in ics.mjs is
+                           the one line both scripts read, from opposite
+                           sides, so an evening lands in exactly one file.
+
+   In Paris, Luma's non-tech evenings can be thrown away, because the
+   city's own feed already carries that kind of thing. Nothing does here.
+   Measured on 16 September 2026: of the 44 in-city events in the SF
+   calendar, 25 were tech and 19 were not — and before this half existed
+   those 19 reached no file at all.
 
    These are `sourced` records: facts with a source, no opinion. `why`
    carries the source's own description of itself and never a claim
@@ -44,6 +54,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { dataDir, City, zoneFinder } from './shim.mjs';
+import { lumaFeed, lumaParts, icsDate, icsGeo, unescapeICS, LUMA_TECH } from './ics.mjs';
 
 const DATA = dataDir();
 const DRY  = process.argv.includes('--dry');
@@ -290,6 +301,93 @@ async function our415(log) {
 }
 
 /* ======================================================================
+   Luma — the evenings that are not tech
+   ====================================================================== */
+
+/* Luma's discovery calendar is approved rather than open, which is a
+   mild quality signal in itself, but it is still a notice board for some
+   things nobody goes to for an evening. These are the ones it carried on
+   the day this was written: a school board candidate forum, and a
+   venture fund's portfolio showcase. */
+const LUMA_NOT_FOR_US = /\b(candidate forum|board of education|town hall|portfolio\b.{0,20}\b(showcase|day)|demo day|investor|office hours|hiring|recruit(ing|ment)|career fair|info session)\b/i;
+
+/* An iCal feed carries no tags, so the kind of evening is read off its
+   title — and only the title. Reading the description as well filed four
+   meetups as food on the first run, because a meetup's blurb promises
+   dinner. Ordered, first match wins: a "Bakery Run" is a running club
+   that finishes at a bakery, and it is a run. A title that says none of
+   these is a gathering, and is called one rather than guessed at. */
+const LUMA_KIND = [
+  [/\b(run|running|hike|hiking|walk|bike ride|cycling|yoga)\b/i, 'sport',     '🏃'],
+  [/\b(read(ing)?|book|poetry|literary|author|writers?)\b/i,     'books',     '📚'],
+  [/\b(theatre|theater|improv|comedy|roast)\b/i,                 'theatre',   '🎭'],
+  [/\b(concert|music|dj|jazz|choir)\b/i,                         'music',     '🎵'],
+  [/\b(film|screening|cinema)\b/i,                               'film',      '🎬'],
+  [/\b(art|studio|gallery|exhibit\w*|ceramic|clay|design)\b/i,   'art',       '🖼️'],
+  [/\b(market|makers|fair|pop.?up)\b/i,                          'market',    '🛍️'],
+  [/\b(coffee|bakery|food|dinner|supper|tasting)\b/i,            'food',      '☕'],
+  [/\b(talk|lecture|conversation|psychology|forum|panel)\b/i,    'learn',     '🎤']
+];
+
+async function luma(log) {
+  const steps = [];
+  const step = (label, list) => { steps.push([list.length, label]); return list; };
+
+  let events = [];
+  for (const feed of City.luma || []) {
+    const got = await lumaFeed(feed, UA);
+    /* One calendar going away takes this half down, not the file: run()
+       keeps the last run's Luma records when this throws. */
+    if (!Array.isArray(got)) throw new Error(`${feed[2]} — ${got.error}`);
+    events.push(...got.map(e => ({ ...e, parts: lumaParts(e.desc), feed })));
+  }
+
+  const uids = new Set();
+  let kept = step(`${events.length} in the calendar`, events.filter(e => {
+    if (!e.uid || uids.has(e.uid)) return false;
+    uids.add(e.uid); return true;
+  }));
+  kept = step('has a position', kept.filter(e => icsGeo(e)));
+  kept = step('inside the city', kept.filter(e => { const [la, lo] = icsGeo(e); return zoneOf(la, lo) != null; }));
+  kept = step('running now or soon', kept.filter(e => {
+    const s = icsDate(e.start), n = icsDate(e.end) || s;
+    return s && n >= TODAY && s <= UNTIL;
+  }));
+  kept = step('has a link', kept.filter(e => e.parts.url));
+  kept = step('not tech — practices.json takes those', kept.filter(e =>
+    !LUMA_TECH.test(`${e.title} ${e.parts.why}`)));
+  kept = step('not a notice board', kept.filter(e =>
+    !LUMA_NOT_FOR_US.test(`${e.title} ${e.parts.why}`)));
+
+  steps.forEach(([n, label]) => log.push([n, label]));
+
+  return kept.map(e => {
+    const [lat, lon] = icsGeo(e);
+    const [cat, emoji] = (LUMA_KIND.find(([re]) => re.test(e.title)) || [null, 'community', '🫂']).slice(1);
+    const start = icsDate(e.start), end = icsDate(e.end) || start;
+    const address = /luma\.com|lu\.ma/.test(e.loc || '') ? e.parts.address : (strip(e.loc) || e.parts.address);
+    return {
+      id: 'luma-' + e.uid.replace(/@.*$/, '').replace(/[^a-zA-Z0-9]/g, '').slice(0, 40),
+      title: unent(e.title).slice(0, 120),
+      emoji,
+      type: 'event',
+      categories: [cat],
+      zone: zoneOf(lat, lon),
+      area: (address || '').slice(0, 80) || null,
+      coords: [lat, lon],
+      start,
+      end: end < start ? start : end,
+      why: unent(e.parts.why).slice(0, 320) || 'An evening on Luma.',
+      url: e.parts.url,
+      source: e.feed[2],
+      lastVerified: TODAY,
+      quality: 3,
+      uniqueness: 3
+    };
+  });
+}
+
+/* ======================================================================
    run
    ====================================================================== */
 
@@ -300,11 +398,12 @@ async function run() {
   let previous = { items: [] };
   try { previous = JSON.parse(await fs.readFile(file, 'utf8')); } catch { /* first run */ }
 
-  const logs = { stanford: [], our415: [] };
+  const logs = { stanford: [], our415: [], luma: [] };
   const results = {};
   let failures = 0;
+  const HALVES = [['stanford', stanford], ['our415', our415], ['luma', luma]];
 
-  for (const [name, fn] of [['stanford', stanford], ['our415', our415]]) {
+  for (const [name, fn] of HALVES) {
     process.stdout.write(`  ${name}\n`);
     try {
       results[name] = await fn(logs[name]);
@@ -314,19 +413,25 @@ async function run() {
          is certainly not a reason to publish an empty file. The previous
          run's records for that source are kept as they were. */
       failures++;
-      const held = (previous.items || []).filter(r => r.id.startsWith(name === 'stanford' ? 'stanford-' : 'our415-'));
+      const held = (previous.items || []).filter(r => r.id.startsWith(`${name}-`));
       results[name] = held;
       console.log(`         unreachable (${e.message}) — kept ${held.length} from the last run`);
     }
     console.log('');
   }
 
-  if (failures === 2) {
-    console.log('  both sources failed — leaving the file exactly as it was\n');
+  if (failures === HALVES.length) {
+    console.log('  every source failed — leaving the file exactly as it was\n');
     return;
   }
 
-  const items = [...results.stanford, ...results.our415]
+  /* The same evening can reach two calendars — a Stanford talk that is
+     also on Luma. Same title and same day is the same event, and the
+     first source through the door keeps it. */
+  const flat = x => String(x || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const once = new Set();
+  const items = [...results.stanford, ...results.our415, ...results.luma]
+    .filter(r => { const k = `${flat(r.title)}|${r.start}`; if (once.has(k)) return false; once.add(k); return true; })
     .filter(r => r.title && r.start && r.end && r.zone != null && r.url)
     .sort((a, b) => a.start.localeCompare(b.start));
 
@@ -343,9 +448,9 @@ async function run() {
   const doc = {
     generated: TODAY,
     window: { from: TODAY, to: UNTIL },
-    source: 'Stanford Events (events.stanford.edu) · Our415 (data.sfgov.org)',
+    source: 'Stanford Events (events.stanford.edu) · Our415 (data.sfgov.org) · Luma (luma.com/sf)',
     note: 'What the sources that publish say is on. Facts with a source and no opinion — these land in the "sourced" tier, below anything a person wrote. The Peninsula half is Stanford, which is the only dated source there is south of Daly City.',
-    counts: { stanford: results.stanford.length, our415: results.our415.length },
+    counts: { stanford: results.stanford.length, our415: results.our415.length, luma: results.luma.length },
     items
   };
 

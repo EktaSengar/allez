@@ -460,9 +460,41 @@ const City = (() => {
      them. */
   const bbox = '37.33,-122.55,37.84,-121.98';
 
+  /* ---------- Luma ----------
+
+     The Bay's real source for anything with a date on it that is not a
+     museum or a library, and the one place in this pack where the Bay
+     is richer than Paris: `luma.com/sf` is a discovery calendar fifty
+     events deep at any time, every one carrying a GEO pin. Checked and
+     found to have no discovery id of their own: `luma.com/paloalto`,
+     `luma.com/bay-area`, `luma.com/san-francisco` — the Peninsula has no
+     calendar, and what is on down there arrives through this one.
+
+     Read by two scripts, split by one rule. practices.mjs takes the tech
+     and AI evenings, as it does for Paris. events-bay.mjs takes the rest
+     — the reading in the park, the makers market, the transit art fair.
+     In Paris the city's own feed covers those and Luma's copies can be
+     discarded; here nothing else covers them, so discarding them would
+     throw away half the calendar. */
+  const luma = [['discover', 'discplace-BDj7GNbGlsF7Cka', 'Luma — San Francisco']];
+
+  /* ---------- what you could take up ----------
+
+     Read by scripts/practices.mjs. `city` is Our415's Rec & Park half,
+     and it is small for a reason worth knowing before anybody widens it.
+     Seventy of its adult rows recur on stated weekdays; sixty of those
+     are basketball, table tennis, pickleball and the weight room. They
+     are real and free and belong on the Sport tab — Paris keeps sport
+     out of practices on purpose, for the reason written in
+     practices.mjs — so what is left is the dance and art classes, which
+     is a handful. The library half does not repeat inside the month
+     Our415 publishes, so it has no rhythm to read and stays in
+     events-city.json. */
+  const practices = { city: 'our415' };
+
   const serviceWorker = false;
 
-  return { id, name, ua, bbox, serviceWorker, zone, bases, climate, reach,
+  return { id, name, ua, bbox, serviceWorker, zone, bases, climate, reach, practices, luma,
            centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
 })();
 

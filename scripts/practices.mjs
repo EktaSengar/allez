@@ -33,8 +33,8 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { dataDir } from './shim.mjs';
-import { parseICS, icsDate, lumaParts, lumaUrl } from './ics.mjs';
+import { dataDir, City, zoneFinder } from './shim.mjs';
+import { parseICS, icsDate, lumaParts, lumaUrl, LUMA_TECH as TECH } from './ics.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
@@ -49,26 +49,17 @@ const DAYS = (() => { const i = process.argv.indexOf('--days'); return i === -1 
 const QFAP = 'https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records';
 const UA   = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 
-/* Luma publishes an iCal feed per calendar with no key and no account.
-   `discover` is a whole city — every approved public event in Paris,
-   about forty at a time on a rolling month.
+/* Which Luma calendars to read, and which municipal half to run, are
+   the pack's to say — see `practices` in <city>/city.js. They used to
+   be constants here, which is why this file could only ever describe
+   Paris.
 
-   Station F is deliberately not a second feed, having been checked:
-   `luma.com/stationf` and `luma.com/station-f` are both 404, and the two
-   calendars its own events page links to are somebody's calendar named
-   "Personal" and the Foresight Institute's — a global calendar whose
-   next twenty events are mostly Stockholm and mostly without
-   coordinates. Neither is Station F's, and what they carry that is in
-   Paris already arrives through `discover`. Do not re-add them thinking
-   they are the incubator's; they are not.
-
-   This endpoint is undocumented and internal, and can change or vanish
-   without notice. That is survivable and must stay survivable: a failed
-   fetch has to leave the previous file alone rather than write an empty
-   one. See run() — the city half and the Luma half fail independently. */
-const LUMA = [
-  ['discover', 'discplace-NdLrh1xJfeotJZC', 'Luma — What‘s Happening in Paris']
-];
+   The Luma endpoint is undocumented and internal, and can change or
+   vanish without notice. That is survivable and must stay survivable: a
+   failed fetch has to leave the previous file alone rather than write an
+   empty one. See run() — the city half and the Luma half fail
+   independently. */
+const SOURCES = City.practices || { city: null };
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const UNTIL = new Date(Date.now() + DAYS * 86400000).toISOString().slice(0, 10);
@@ -77,30 +68,19 @@ const UNTIL = new Date(Date.now() + DAYS * 86400000).toISOString().slice(0, 10);
 
 const strip = s => (s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
 
-const ZONE = {
-  1:[48.8626,2.3363],  2:[48.8683,2.3413],  3:[48.8637,2.3615],  4:[48.8546,2.3572],
-  5:[48.8448,2.3501],  6:[48.8496,2.3329],  7:[48.8565,2.3120],  8:[48.8726,2.3120],
-  9:[48.8768,2.3374],  10:[48.8760,2.3595], 11:[48.8578,2.3792], 12:[48.8351,2.4212],
-  13:[48.8322,2.3556], 14:[48.8331,2.3264], 15:[48.8412,2.3003], 16:[48.8637,2.2769],
-  17:[48.8872,2.3070], 18:[48.8925,2.3444], 19:[48.8817,2.3822], 20:[48.8631,2.3980]
-};
+/* Where a point is, and whether it is in the city at all — the pack's
+   answer, not a copy of it.
 
-/* Only used when a record carries coordinates but no readable postcode —
-   the Luma half, mostly, where the address is sometimes withheld until
-   you register but the pin is always there. */
-const nearestArr = (lat, lon) => {
-  let best = null, bestD = Infinity;
-  for (const [a, [y, x]] of Object.entries(ZONE)) {
-    const d = (y - lat) ** 2 + (x - lon) ** 2;
-    if (d < bestD) { bestD = d; best = Number(a); }
-  }
-  return best;
-};
-
-const PARIS_BOX = { latMin: 48.80, latMax: 48.92, lonMin: 2.21, lonMax: 2.48 };
-const inParis = (lat, lon) =>
-  lat >= PARIS_BOX.latMin && lat <= PARIS_BOX.latMax &&
-  lon >= PARIS_BOX.lonMin && lon <= PARIS_BOX.lonMax;
+   This file used to carry its own twenty Paris centroids and its own
+   box, and both had drifted from paris/city.js: four arrondissements
+   (the 13th, 15th, 19th and 20th) sat at different coordinates, and the
+   box reached a kilometre and a half past the pack's on every side. So a
+   Luma evening could be placed in a different arrondissement here than
+   the same pin would be anywhere else on the site. */
+const zoneAt = zoneFinder(City);
+const [BOX_S, BOX_W, BOX_N, BOX_E] = String(City.bbox).split(',').map(Number);
+const inCity = (lat, lon) =>
+  lat >= BOX_S && lat <= BOX_N && lon >= BOX_W && lon <= BOX_E && zoneAt(lat, lon) != null;
 
 const MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -379,6 +359,135 @@ function cityRecords(raw, log) {
 }
 
 /* ======================================================================
+   the Our415 half — San Francisco Rec & Park
+   ====================================================================== */
+
+/* DataSF's programme calendar, keyless. It has the thing Que Faire à
+   Paris makes you infer: `days_of_week` is stated outright, so there is
+   no rhythm to read out of a list of dates — only one to parse.
+
+   It is a small half, and the reason matters more than the count. Of
+   the seventy Rec & Park rows open to adults that recur on a weekday,
+   sixty are basketball, table tennis, pickleball, badminton and the
+   weight room. They are free, real and well worth knowing about, and
+   they are sport — which this file keeps out for the reason written
+   above SUBJECT: a rugby club in a list of book clubs is a worse answer
+   than no answer. They belong on the Sport tab. What is left is the
+   dance and the art. */
+const OUR415 = 'https://data.sfgov.org/resource/8i3s-ih2a.json?%24limit=50000';
+
+/* Named rather than tagged: every Rec & Park row is filed under the one
+   category "Sports & Recreation", so the title is the only thing that
+   says what a class is about. An allow-list, like SUBJECT, because the
+   alternative — excluding sports by name — has to know every sport. */
+const TAKE_UP = [
+  [/danc|ballroom|salsa|tango|swing|folkl/i,               'dance', '💃', 'Dance class'],
+  [/\bart\b|paint|draw|sketch|ceramic|pottery|clay/i,      'art',   '🎨', 'Art class'],
+  [/photo/i,                                               'art',   '📷', 'Photography class'],
+  [/music|guitar|ukulele|drum|choir|singing/i,             'music', '🎵', 'Music class'],
+  [/writing|poetry/i,                                      'books', '📝', 'Writing workshop'],
+  [/cooking|baking/i,                                      'food',  '🍽️', 'Cooking class']
+];
+
+/* "Sa", "Th", "T,W,F", "Tue-Sat". Our415 writes a bare T for Tuesday
+   and Th for Thursday, and ranges wrap the week. Anything this cannot
+   read returns null rather than a guess — `days` hides a record on the
+   days it is absent, so a wrong weekday is worse than none. */
+const DOW = { su: 0, sun: 0, m: 1, mo: 1, mon: 1, t: 2, tu: 2, tue: 2, w: 3, we: 3, wed: 3,
+              th: 4, thu: 4, f: 5, fr: 5, fri: 5, sa: 6, sat: 6 };
+function weekdays(raw) {
+  const out = new Set();
+  for (const part of String(raw || '').split(',').map(x => x.trim().toLowerCase()).filter(Boolean)) {
+    const ends = part.split('-').map(x => DOW[x.trim()]);
+    if (!ends.length || !ends.every(Number.isInteger) || ends.length > 2) return null;
+    if (ends.length === 1) { out.add(ends[0]); continue; }
+    for (let d = ends[0]; ; d = (d + 1) % 7) { out.add(d); if (d === ends[1]) break; }
+  }
+  return out.size ? [...out].sort((a, b) => a - b) : null;
+}
+
+/* Capitalise after a space, a hyphen, a slash or an opening bracket —
+   not after every word boundary, which counts an apostrophe and turns
+   "ST. MARY'S" into "St. Mary'S". */
+const titleCase = x => String(x || '').toLowerCase().replace(/(^|[\s\-\/(])(\w)/g, (m, a, c) => a + c.toUpperCase());
+const hhmm = t => (/^(\d{2}):(\d{2})/.exec(t || '') || []).slice(1, 3).join(':') || null;
+
+async function our415Raw() {
+  const res = await fetch(OUR415, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(60000) });
+  if (!res.ok) throw new Error(`data.sfgov.org → ${res.status}`);
+  return res.json();
+}
+
+function our415Records(raw, log) {
+  const step = (label, list) => { log.push([list.length, label]); return list; };
+  const day = x => (x ? String(x).slice(0, 10) : null);
+
+  let kept = step('Rec & Park, not the library',
+    raw.filter(e => e.org_name === 'SF Rec Park'));
+  kept = step('adults are part of the intended audience',
+    kept.filter(e => /all ages|adult|senior/i.test(e.age_group_eligibility_tags || '')));
+  kept = step('runs on weekdays the feed states',
+    kept.filter(e => weekdays(e.days_of_week)));
+  kept = step('running now or soon', kept.filter(e => {
+    const a = day(e.event_start_date), b = day(e.event_end_date) || a;
+    return a && b >= TODAY && a <= UNTIL;
+  }));
+  kept = step('a class you take up — sport is the Sport tab’s',
+    kept.filter(e => TAKE_UP.some(([re]) => re.test(e.event_name || ''))));
+  kept = step('inside the city',
+    kept.filter(e => e.latitude && e.longitude && inCity(+e.latitude, +e.longitude)));
+
+  const venues = new Map();
+  kept = step(`at most ${PER_VENUE} per venue`, kept.filter(e => {
+    const v = e.site_location_name || e.event_name;
+    if ((venues.get(v) || 0) >= PER_VENUE) return false;
+    venues.set(v, (venues.get(v) || 0) + 1);
+    return true;
+  }));
+
+  return kept.map(e => {
+    const [, category, emoji, noun] = TAKE_UP.find(([re]) => re.test(e.event_name));
+    const days = weekdays(e.days_of_week);
+    const first = new Date(day(e.event_start_date)), last = new Date(day(e.event_end_date) || day(e.event_start_date));
+    const cadence = days.length === 1 ? 'weekly' : days.length === 2 ? 'twice a week' : 'several times a week';
+    const [from, to] = [hhmm(e.start_time), hhmm(e.end_time)];
+    const lat = +e.latitude, lon = +e.longitude;
+    const url = String(e.more_info || '').trim();
+    const free = e.fee === false || e.fee === 'false';
+
+    return {
+      id: 'prac-our415-' + String(e.id).replace(/[^a-zA-Z0-9]/g, '').slice(0, 40),
+      /* Verbatim, for the reason the city half keeps it verbatim. */
+      title: strip(e.event_name).replace(/&amp;/g, '&').slice(0, 120),
+      emoji,
+      type: 'class',
+      mode: 'do',
+      categories: [...new Set([category, 'learn'])],
+      zone: zoneAt(lat, lon),
+      /* The feed shouts its venue names — "BETTY ANN ONG CHINESE REC
+         CENTER". Case is presentation, not content. */
+      area: titleCase(e.site_location_name).slice(0, 80) || null,
+      coords: [lat, lon],
+      start: day(e.event_start_date),
+      end: day(e.event_end_date) || day(e.event_start_date),
+      /* The same rule the city half uses: only claim a weekday when
+         there genuinely is one or two. */
+      ...(days.length <= 2 ? { days } : {}),
+      times: from && to ? `${from}–${to}` : null,
+      why: gloss(noun, { first, last, cadence }),
+      ...(free ? { price: 0, priceNote: 'Free', labels: ['free', 'learn'] }
+               : { priceNote: 'Paid', labels: ['learn'] }),
+      /* Rec & Park publishes its register page without a scheme. */
+      url: url && !/^https?:\/\//.test(url) ? `https://${url}` : url,
+      source: 'Our415 — SF Rec & Park, data.sfgov.org',
+      lastVerified: TODAY,
+      quality: 3,
+      uniqueness: 3
+    };
+  }).filter(r => r.url);
+}
+
+/* ======================================================================
    the Luma half
    ====================================================================== */
 
@@ -386,35 +495,15 @@ function cityRecords(raw, log) {
    live in ics.mjs — the Bay Area collector needs the same three and two
    parsers for one feed format is how they drift apart. */
 
-/* A keyword gate, and a crude one — an iCal feed has no tags to read
-   instead. Tight on purpose, and tuned against the live feed: the Paris
-   calendar carries a backgammon social, two gallery openings, a padel
-   tournament and a watercolour workshop alongside the AI evenings, and
-   the hobbies half of this file is already served by a source with real
-   tags on it. Better to miss a tech event than to file a vernissage
-   under `tech`.
-
-   The business vocabulary of the startup scene — founder, product,
-   SaaS, pre-seed — is deliberately absent. It matched a padel night and
-   a VC rooftop cocktail and nothing that was about building anything.
-
-   French earns its own terms rather than being translated into the
-   English ones: `IA` and `intelligence artificielle` are how half this
-   feed refers to the subject, and without them "Les Apéros de l'IA" and
-   "créer son MCP maison" both fall out. */
-const TECH = new RegExp('\\b(' + [
-  'a\\.?i\\.?', 'ia', 'intelligence artificielle', 'llms?', 'gpt', 'genai',
-  'machine learning', 'deep learning', 'neural', 'agents?', 'inference', 'rag',
-  'mcp', 'mlops', 'devops', 'developer', 'dev', 'engineer', 'engineering',
-  'software', 'open ?source', 'hackathon', 'api', 'database', 'data',
-  'robotics', 'hardware', 'infra', 'technolog', 'tech'
-].join('|') + ')\\b', 'i');
+/* The keyword gate that decides whether a Luma evening is tech lives in
+   ics.mjs as LUMA_TECH, because events-bay.mjs needs the same line from
+   the other side: what this file takes, that one must not. */
 
 async function lumaRecords(log) {
   const seen = new Set();
   const out = [];
 
-  for (const feed of LUMA) {
+  for (const feed of City.luma || []) {
     const [, , label] = feed;
     let text;
     try {
@@ -445,7 +534,7 @@ async function lumaRecords(log) {
       const g = String(e.geo || '').split(';').map(Number);
       if (g.length !== 2 || !g.every(Number.isFinite)) continue;
       const [lat, lon] = g;
-      if (!inParis(lat, lon)) continue;
+      if (!inCity(lat, lon)) continue;
 
       const id = 'luma-' + e.uid.replace(/@.*$/, '').replace(/[^a-zA-Z0-9]/g, '').slice(0, 40);
       if (seen.has(id)) continue;
@@ -453,13 +542,12 @@ async function lumaRecords(log) {
 
       /* LOCATION is a street address when the organiser published one
          and a luma.com link when they did not; the description's own
-         Address block fills in most of the rest. The postcode is the
-         better answer for the arrondissement where either has one, and
-         the pin is the fallback. */
+         Address block fills in most of the rest. Where the pack can read
+         a zone out of an address — Paris's postcodes — that is the better
+         answer near a boundary, and the pin is the fallback. */
       const address = /luma\.com|lu\.ma/.test(e.loc || '')
         ? parts.address : (strip(e.loc) || parts.address);
-      const zip = `${e.loc || ''} ${parts.address || ''}`.match(/\b75(\d{3})\b/);
-      const zone = (zip && Number(zip[1])) || nearestArr(lat, lon);
+      const zone = City.zone.fromAddress?.(`${e.loc || ''} ${parts.address || ''}`) ?? zoneAt(lat, lon);
 
       out.push({
         id,
@@ -473,7 +561,7 @@ async function lumaRecords(log) {
         coords: [lat, lon],
         start,
         end: icsDate(e.end) || start,
-        why: parts.why.slice(0, 320) || 'Tech and AI meetup in Paris.',
+        why: parts.why.slice(0, 320) || `Tech and AI meetup in ${City.name}.`,
         url: parts.url,
         source: label,
         lastVerified: TODAY,
@@ -493,18 +581,43 @@ async function lumaRecords(log) {
    run
    ====================================================================== */
 
+/* Each municipal half: how to fetch it, how to gate it, and what the
+   file should say about where it came from. The pack picks one by name
+   (`practices.city`), and a pack that names none runs Luma alone. */
+const CITY_HALVES = {
+  qfap: {
+    label: 'city feed',
+    fetch: cityRaw,
+    records: cityRecords,
+    source: 'Que Faire à Paris · opendata.paris.fr (Licence Ouverte)',
+    note: 'Things you take up rather than attend — `mode: "do"`. The city feed already carries the repetition in its `occurrences` field and shows it as a date; this reads it as a rhythm, which is the whole point of the file. English lines are assembled from each record\'s own fields, never translated. Luma covers the tech and AI evenings the city has none of. These are `sourced` records and rank below anything hand-written. The gate lives in scripts/practices.mjs; pruned daily by scripts/refresh.mjs.'
+  },
+  our415: {
+    label: 'Our415',
+    fetch: our415Raw,
+    records: our415Records,
+    source: 'Our415 · SF Rec & Park, data.sfgov.org',
+    note: 'Things you take up rather than attend — `mode: "do"`. Luma is most of it: the tech, AI and design evenings the Bay is thick with. Our415 adds Rec & Park\'s recurring dance and art classes, whose weekdays the feed states outright; its sport drop-ins are deliberately left for the Sport tab. Lines are assembled from each record\'s own fields. These are `sourced` records and rank below anything hand-written. The gate lives in scripts/practices.mjs; pruned daily by scripts/refresh.mjs.'
+  }
+};
+
 async function run() {
-  process.stdout.write(`\nPractices — ${TODAY} to ${UNTIL}\n\n  city feed `);
+  const half = SOURCES.city ? CITY_HALVES[SOURCES.city] : null;
+  if (SOURCES.city && !half) throw new Error(`practices.city "${SOURCES.city}" is not a half this script knows`);
+
+  process.stdout.write(`\nPractices — ${TODAY} to ${UNTIL}\n\n  ${half ? half.label : 'no city half'} `);
 
   const cityLog = [], lumaLog = [];
   let city = [];
-  try {
-    const raw = await cityRaw();
-    console.log(`\n  ${raw.length} live in the window\n`);
-    city = cityRecords(raw, cityLog);
-    cityLog.forEach(([n, label]) => console.log(`  ${String(n).padStart(5)}  ${label}`));
-  } catch (e) {
-    console.log(`\n  city feed unreachable — ${e.message}`);
+  if (half) {
+    try {
+      const raw = await half.fetch();
+      console.log(`\n  ${raw.length} live in the window\n`);
+      city = half.records(raw, cityLog);
+      cityLog.forEach(([n, label]) => console.log(`  ${String(n).padStart(5)}  ${label}`));
+    } catch (e) {
+      console.log(`\n  ${half.label} unreachable — ${e.message}`);
+    }
   }
 
   console.log('\n  luma');
@@ -523,15 +636,16 @@ async function run() {
 
   const spread = {};
   items.forEach(r => { spread[r.zone] = (spread[r.zone] || 0) + 1; });
+  const byKey = (a, b) => (Number.isFinite(+a[0]) && Number.isFinite(+b[0]) ? a[0] - b[0] : String(a[0]).localeCompare(b[0]));
   console.log(`\n  ${items.length} kept · ${city.length} city · ${luma.length} luma · ` +
-              `${Object.keys(spread).length}/20 arrondissements`);
-  console.log('  per arrondissement:', Object.entries(spread)
-    .sort((a, b) => a[0] - b[0]).map(([a, n]) => `${a}:${n}`).join(' '));
+              `${Object.keys(spread).length}/${Object.keys(City.zone.centroids).length} ${City.zone.many}`);
+  console.log(`  per ${City.zone.one}:`, Object.entries(spread)
+    .sort(byKey).map(([a, n]) => `${a}:${n}`).join(' '));
 
   if (DRY) {
     console.log('\n  sample:');
     items.slice(0, 12).forEach(r =>
-      console.log(`   • ${r.emoji} ${r.title.slice(0, 60)}\n     ${r.zone}e · ${r.why.slice(0, 70)}`));
+      console.log(`   • ${r.emoji} ${r.title.slice(0, 60)}\n     ${City.zone.label(r.zone)} · ${r.why.slice(0, 70)}`));
     console.log('\n  --dry, nothing written\n');
     return;
   }
@@ -539,8 +653,8 @@ async function run() {
   const doc = {
     generated: TODAY,
     window: { from: TODAY, to: UNTIL },
-    source: 'Que Faire à Paris · opendata.paris.fr (Licence Ouverte) · Luma',
-    note: 'Things you take up rather than attend — `mode: "do"`. The city feed already carries the repetition in its `occurrences` field and shows it as a date; this reads it as a rhythm, which is the whole point of the file. English lines are assembled from each record\'s own fields, never translated. Luma covers the tech and AI evenings the city has none of. These are `sourced` records and rank below anything hand-written. The gate lives in scripts/practices.mjs; pruned daily by scripts/refresh.mjs.',
+    source: [half?.source, City.luma?.length ? 'Luma' : null].filter(Boolean).join(' · '),
+    note: half ? half.note : 'Things you take up rather than attend — `mode: "do"`, from Luma. These are `sourced` records and rank below anything hand-written.',
     items
   };
   await fs.writeFile(path.join(DATA, 'practices.json'), JSON.stringify(doc, null, 2) + '\n', 'utf8');

@@ -4,11 +4,12 @@
   "from": "2026-09-16",
   "to": "2026-11-15"
  },
- "source": "Stanford Events (events.stanford.edu) · Our415 (data.sfgov.org)",
+ "source": "Stanford Events (events.stanford.edu) · Our415 (data.sfgov.org) · Luma (luma.com/sf)",
  "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. The Peninsula half is Stanford, which is the only dated source there is south of Daly City.",
  "counts": {
-  "stanford": 41,
-  "our415": 48
+  "stanford": 42,
+  "our415": 48,
+  "luma": 17
  },
  "items": [
   {
@@ -208,6 +209,76 @@
    "uniqueness": 3
   },
   {
+   "id": "luma-evt9Od3f0F1Zqw4tPI",
+   "title": "San Francisco | Claude in Sales Meetup",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "mission",
+   "area": "Gray Area / Grand Theater, 2665 Mission St, San Francisco, CA 94110, USA",
+   "coords": [
+    37.7543922,
+    -122.41850269999999
+   ],
+   "start": "2026-09-17",
+   "end": "2026-09-17",
+   "why": "This is a Community event hosted by the Claude Community. Dreamforce brings the sales community to San Francisco. Join us for an intimate evening on how Claude is transforming the way sales teams work, with shareouts from Anthropic staff. Doors open at 6pm for welcome drinks and networking. From there, we'll move into ",
+   "url": "https://luma.com/claude-4n2g",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evt9wGzmVpKh9yB4lr",
+   "title": "Side-Project Party III",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "west-soma",
+   "area": null,
+   "coords": [
+    37.77306709535891,
+    -122.40909058997063
+   ],
+   "start": "2026-09-17",
+   "end": "2026-09-18",
+   "why": "The best things start as side-projects. Have a new idea? Or one you've been working on for years? A glimmer of curiosity you'd like to follow, or an obsession that you're spending all your shower-thoughts on? Why not work on it surrounded by other fantastic people with passions of their own? And if you've got something",
+   "url": "https://luma.com/spp3",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "stanford-53993437264584",
+   "title": "Branner Library Book & Map Exhibit - Water in the West",
+   "emoji": "🖼️",
+   "type": "event",
+   "categories": [
+    "art"
+   ],
+   "zone": "palo-alto",
+   "area": "Mitchell Earth Sciences",
+   "coords": [
+    37.426402,
+    -122.172635
+   ],
+   "start": "2026-09-18",
+   "end": "2026-12-18",
+   "why": "Branner Earth Sciences Library & Map Collection Exhibit: Water in the West Our Fall 2026 exhibition highlights the water resources in California & the Western United States to shed light on the issues that affect our waterways. The exhibit features maps and the Layperson’s guides series published by the Water Education",
+   "url": "https://events.stanford.edu/event/branner-library-book-map-exhibit-water",
+   "source": "Stanford Events — events.stanford.edu",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
    "id": "stanford-45864827002631",
    "title": "David Rumsey Map Center Guided Tour",
    "emoji": "🚶",
@@ -258,6 +329,144 @@
    "uniqueness": 3
   },
   {
+   "id": "luma-evtxHaA9awZ3DafLPY",
+   "title": "Circle, Triangle, Rectangle: A Heath Clay Studio Show by Tung Chiang",
+   "emoji": "🖼️",
+   "type": "event",
+   "categories": [
+    "art"
+   ],
+   "zone": "mission",
+   "area": "Heath Ceramics, 2900 18th St, San Francisco, CA 94110, USA",
+   "coords": [
+    37.7618438,
+    -122.41132420000001
+   ],
+   "start": "2026-09-18",
+   "end": "2026-09-18",
+   "why": "The Heath Clay Studio presents Circle, Triangle, Rectangle, a new show by Clay Studio Director Tung Chiang. Celebrate the show opening with us on September 17! Tung will be in conversation with Kelsey Keith, Creative Director at MillerKnoll, about this collection and the future of craft. Oriented around a family of sim",
+   "url": "https://luma.com/2usao24s",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtP2igCFwJcA1NPfP",
+   "title": "The Acquired Meetup",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "cow-hollow",
+   "area": null,
+   "coords": [
+    37.80904202392722,
+    -122.4324219067364
+   ],
+   "start": "2026-09-18",
+   "end": "2026-09-18",
+   "why": "For years, Acquired has brought millions of listeners together through the stories behind the world's greatest companies. Now it's time to flip the mic on them and bring the Acquired community together in person. Join Ben and David of Acquired, and your friends at Sentry, for the official Acquired meetup. On the agenda",
+   "url": "https://luma.com/acquiredmeetup",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtu8C6YzjITxVCxtX",
+   "title": "East Bay Neurotech Happy Hour",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "pier-70",
+   "area": "Almanac Adventureland & Brewery, 651 W Tower Ave, Alameda, CA 94501, USA",
+   "coords": [
+    37.783325,
+    -122.299099
+   ],
+   "start": "2026-09-18",
+   "end": "2026-09-18",
+   "why": "Greetings! Some quick updates to this Thursday's event: Time Change: The event will now kick off at 5:30pm, please plan accordingly. Venue: Meet at the Emerald Room inside Almanac Adventureland Brewery. Check in at the front to grab a nametag and get a drink ticket. Sponsors: Thank you to E11 Bio, Epia Neuro, & Nethola",
+   "url": "https://luma.com/bpk7tj30",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtF0c9jx5uMDTzesy",
+   "title": "Jane Austen Reader's Theatre",
+   "emoji": "🎭",
+   "type": "event",
+   "categories": [
+    "theatre"
+   ],
+   "zone": "duboce-triangle",
+   "area": "The Love Potion Library - Books, Tea, Pastries, 284 Noe St, San Francisco, CA 94",
+   "coords": [
+    37.7645596,
+    -122.4334143
+   ],
+   "start": "2026-09-18",
+   "end": "2026-09-18",
+   "why": "Step into an evening of sharp wit, sparkling dialogue, and deliciously petty social maneuvering at Jane Austen Reader's Theatre. This lively reading brings Austen off the page and into the room the way her fans know she shines best, through her unforgettable narration as well as the characters themselves. Local actors ",
+   "url": "https://luma.com/55b1rih6",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtFstD4UvMAUv7mQa",
+   "title": "Why Are We So Bad at Being Happy? The Psychology of Happiness",
+   "emoji": "🎤",
+   "type": "event",
+   "categories": [
+    "learn"
+   ],
+   "zone": "duboce-triangle",
+   "area": "Swedish American Hall, 2174 Market St, San Francisco, CA 94114, USA",
+   "coords": [
+    37.7667207,
+    -122.43054379999998
+   ],
+   "start": "2026-09-18",
+   "end": "2026-09-18",
+   "why": "😊 Why are we so bad at the one thing almost everyone wants: being happy? Nearly every human being strives to be happy in some form. Yet despite how universal and powerful that goal is, most of us are surprisingly bad at actually pursuing it, often falling well short of our own happiness goals. Dr. Iris Mauss, a profes",
+   "url": "https://luma.com/4ge5bar2",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtnCGmptvAwEVBlBj",
+   "title": "Mountain View Makers Market",
+   "emoji": "🛍️",
+   "type": "event",
+   "categories": [
+    "market"
+   ],
+   "zone": "mountain-view",
+   "area": "300 Castro St, Mountain View, CA 94041, USA",
+   "coords": [
+    37.39252210000001,
+    -122.08000809999999
+   ],
+   "start": "2026-09-18",
+   "end": "2026-09-19",
+   "why": "🍂✨ You’re invited to shop small this Fall on Castro Street! 🛍️🍁 We’ve curated over 50 incredible vendors for you to explore and support! 🎪💖 More than half of our talented makers are brand new to the market scene, meaning you’re guaranteed to discover something uniquely delightful. 🎨✨ 👯‍♀️ Grab a friend and come ",
+   "url": "https://luma.com/gnsypbzj",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
    "id": "our415-149160_sfpl",
    "title": "45th Annual Northern California Book Awards",
    "emoji": "🎉",
@@ -280,6 +489,52 @@
    "source": "Our415 — SF Public Library, data.sfgov.org",
    "lastVerified": "2026-09-16",
    "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evt2plHwTFIr8rT212",
+   "title": "7Pacific SF Bakery Run",
+   "emoji": "🏃",
+   "type": "event",
+   "categories": [
+    "sport"
+   ],
+   "zone": "inner-richmond",
+   "area": "Bunny Meadow, Conservatory Dr W, San Francisco, CA 94118, USA",
+   "coords": [
+    37.7727493,
+    -122.4617115
+   ],
+   "start": "2026-09-19",
+   "end": "2026-09-19",
+   "why": "The 7Pacific SF Bakery Run is an 8 mile journey through the city's holiest pastry grounds. This year's edition: Arsicault, Parachute, and Breadbelly. We'll be starting at Golden Gate Park and ending in the Dogpatch. You run, you collect a pastry at each stop, you question why you signed up around mile 5, and then you e",
+   "url": "https://luma.com/4nkiwp04",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtFxnSFH2IO1MD3jG",
+   "title": "Read in the Park - San Francisco 📚",
+   "emoji": "📚",
+   "type": "event",
+   "categories": [
+    "books"
+   ],
+   "zone": "richmond-district",
+   "area": null,
+   "coords": [
+    37.767444448988925,
+    -122.47454886915894
+   ],
+   "start": "2026-09-19",
+   "end": "2026-09-19",
+   "why": "Bring your book and read with us! 📚 Read in the Park is a growing community of readers who gather at Golden Gate Park to read. We meet twice a month. 📚 How our events go Picture a stretch of grass in Golden Gate Park, a scatter of blankets, and dozens of people quietly lost in their own books. We first read our own b",
+   "url": "https://luma.com/ritpsf",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
    "quality": 3,
    "uniqueness": 3
   },
@@ -310,6 +565,52 @@
    "uniqueness": 3
   },
   {
+   "id": "luma-evtDglQU0ckykBp1nQ",
+   "title": "Maum Market SF",
+   "emoji": "🛍️",
+   "type": "event",
+   "categories": [
+    "market"
+   ],
+   "zone": "rincon-hill",
+   "area": "1 Ferry Building, San Francisco, CA 94105, USA",
+   "coords": [
+    37.7954425,
+    -122.3936136
+   ],
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "why": "Join us for a day of discovery, design, and community at Maum Market—our curated marketplace celebrating Asian-owned brands and friends of Maum. This year, we're proud to partner with the Korean Cultural Center, Los Angeles (KCCLA), who will be bringing live performances and hands-on Korean cultural activities to celeb",
+   "url": "https://luma.com/ou0z635y",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtpWnvMAPyHx0SYcJ",
+   "title": "Coffee & Tarot",
+   "emoji": "☕",
+   "type": "event",
+   "categories": [
+    "food"
+   ],
+   "zone": "duboce-triangle",
+   "area": "The Love Potion Library - Books, Tea, Pastries, 284 Noe St, San Francisco, CA 94",
+   "coords": [
+    37.7645596,
+    -122.4334143
+   ],
+   "start": "2026-09-20",
+   "end": "2026-09-21",
+   "why": "Come rest and recharge with us! There'll be coffee, massages and an amazing coffee popup! Jornada Coffee is a Brazilian coffee popup run by siblings who are looking forward to bringing Brazilian flavors to SF. Imani Rae, owner of the Raeon Collective, is a tarot reader, Reiki healer and astrologer. Tarot is a way to co",
+   "url": "https://luma.com/z4liunka",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
    "id": "stanford-53490384005179",
    "title": "Electric Contrasts: the Art of the Detail",
    "emoji": "🖼️",
@@ -330,6 +631,52 @@
    "source": "Stanford Events — events.stanford.edu",
    "lastVerified": "2026-09-16",
    "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtipJSDV78SbivbFH",
+   "title": "Claude Coworkshop with Provectus - San Francisco",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "rincon-hill",
+   "area": null,
+   "coords": [
+    37.79628633091468,
+    -122.39147426304413
+   ],
+   "start": "2026-09-21",
+   "end": "2026-09-22",
+   "why": "Direct access to Claude, the Anthropic team, and an afternoon built around the work you actually do. This Claude Coworkshop, presented with Provectus, is a half-day product experience for business leaders who live in documents, spreadsheets, decks, and cross-tool workflows — Finance, Operations, Marketing, HR, Legal, S",
+   "url": "https://luma.com/claude-coworkshop-sf-sept-21",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtdXxU4gdZ3fLGdZi",
+   "title": "-1 to Waymo with Dmitri Dolgov",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "rincon-hill",
+   "area": null,
+   "coords": [
+    37.782985320390864,
+    -122.39315146622917
+   ],
+   "start": "2026-09-21",
+   "end": "2026-09-21",
+   "why": "South Park Commons is delighted to host Dmitri Dolgov, co-CEO of Waymo as part of our -1 to Now series. Event Details 2:30pm: Doors Open 3:00-4:00pm: Fireside Chat Dmitri Dolgov is the co-CEO of Waymo, an autonomous driving technology company with a mission to be the world’s most trusted driver. Dmitri is one of the fo",
+   "url": "https://luma.com/dmitri-waymo-spc",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
    "quality": 3,
    "uniqueness": 3
   },
@@ -408,6 +755,32 @@
    "uniqueness": 3
   },
   {
+   "id": "our415-159789_sfpl",
+   "title": "Knitting Circle",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "sunset-district",
+   "area": "Ortega",
+   "coords": [
+    37.751004000001,
+    -122.498275500002
+   ],
+   "start": "2026-09-23",
+   "end": "2026-09-23",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Hang out with other knitters and crocheters in a fun and friendly atmosphere. The library has limited supplies of yarn along with knitting needles…",
+   "url": "https://sfpl.org/events/2026/09/23/social-knitting-circle",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
    "id": "our415-160440_sfpl",
    "title": "Crochet Club – Autumn Theme",
    "emoji": "🎨",
@@ -460,28 +833,25 @@
    "uniqueness": 3
   },
   {
-   "id": "our415-159789_sfpl",
-   "title": "Knitting Circle",
-   "emoji": "🫂",
+   "id": "luma-evtCp3EndLolShng2M",
+   "title": "2nd Annual Pop Up Transit Art Fair @TJPA's Salesforce Transit Center",
+   "emoji": "🖼️",
    "type": "event",
    "categories": [
-    "community"
+    "art"
    ],
-   "zone": "sunset-district",
-   "area": "Ortega",
+   "zone": "rincon-hill",
+   "area": "Salesforce Transit Center, San Francisco, CA 94105, USA",
    "coords": [
-    37.751004000001,
-    -122.498275500002
+    37.78883,
+    -122.39729
    ],
    "start": "2026-09-23",
-   "end": "2026-09-23",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Hang out with other knitters and crocheters in a fun and friendly atmosphere. The library has limited supplies of yarn along with knitting needles…",
-   "url": "https://sfpl.org/events/2026/09/23/social-knitting-circle",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "end": "2026-09-24",
+   "why": "What do art and transit have in common? It moves us. Back for its second year, celebrate Bay Area Transit month by shopping and supporting local artists at TJPA’s Salesforce Transit Center, where the Bay Area’s transportation future is taking shape on Wednesday, September 23rd from 3 p.m. to 6 p.m. Learn about the Bay ",
+   "url": "https://luma.com/h3v4wulz",
+   "source": "Luma — San Francisco",
    "lastVerified": "2026-09-16",
-   "indoor": true,
    "quality": 3,
    "uniqueness": 3
   },
@@ -534,6 +904,29 @@
    "uniqueness": 3
   },
   {
+   "id": "luma-evt2VH2P87v7NMkIXf",
+   "title": "Pitch Roast Live - The S.F. Debut",
+   "emoji": "🎭",
+   "type": "event",
+   "categories": [
+    "theatre"
+   ],
+   "zone": "hayes-valley",
+   "area": "Public Works, 161 Erie St, San Francisco, CA 94103, USA",
+   "coords": [
+    37.7689239,
+    -122.4194193
+   ],
+   "start": "2026-09-24",
+   "end": "2026-09-24",
+   "why": "Pitch Roast Live's SF Debut. 6pm cocktail hour; 7pm doors! Pitch Roast Live️‍ is the startup pitch competition comedy roast show. The show brings comedy, startups, and venture capital together. A Shark Tank and comedy roast crossover episode. Real comedians and real VC investors roast real startup pitches. 4 founders, ",
+   "url": "https://luma.com/PRLSFdebut",
+   "source": "Luma — San Francisco",
+   "lastVerified": "2026-09-16",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
    "id": "stanford-53234372978860",
    "title": "Patty Chang: surfacing | Artist Talk",
    "emoji": "🎤",
@@ -560,28 +953,25 @@
    "uniqueness": 3
   },
   {
-   "id": "our415-163258_sfpl",
-   "title": "Craft Club in American Sign Language ASL",
-   "emoji": "🎨",
+   "id": "luma-evteiPCn8nUh0jg2CO",
+   "title": "Designers & Machines September 2026",
+   "emoji": "🫂",
    "type": "event",
    "categories": [
-    "learn"
+    "community"
    ],
-   "zone": "little-saigon",
-   "area": "Main Library",
+   "zone": "rincon-hill",
+   "area": null,
    "coords": [
-    37.779354000001,
-    -122.415871500002
+    37.78284968359894,
+    -122.39270961871594
    ],
-   "start": "2026-09-26",
-   "end": "2026-09-26",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Explore your creativity in this bilingual (English and American Sign Language) intergenerational craft session with Black Deaf educator and…",
-   "url": "https://sfpl.org/events/2026/09/26/activity-craft-club-american-sign-language-asl",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "start": "2026-09-25",
+   "end": "2026-09-25",
+   "why": "5 x 5 min demos. No slides. The most interesting designers sharing their latest experiments. A ritual gathering, once a month, to open up our minds about the future of designing machines, alongside machines. Please note that space is limited to 50 designers. So please share your coolest project links when you request t",
+   "url": "https://luma.com/8vk9mwtp",
+   "source": "Luma — San Francisco",
    "lastVerified": "2026-09-16",
-   "indoor": true,
    "quality": 3,
    "uniqueness": 3
   },
@@ -605,84 +995,6 @@
    "priceNote": "Free",
    "why": "Share stories from different generations—your aunt, grandparent, older/younger friend and craft a visual story of what you learn. Bring a picture or…",
    "url": "https://sfpl.org/events/2026/09/26/workshop-visual-story-telling-zefania-creates",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "our415-160403_sfpl",
-   "title": "Jang&#039;s Coffee and Donuts—Mobile Art Lab",
-   "emoji": "🎨",
-   "type": "event",
-   "categories": [
-    "learn"
-   ],
-   "zone": "west-portal",
-   "area": "West Portal",
-   "coords": [
-    37.741365000001,
-    -122.466163500002
-   ],
-   "start": "2026-09-26",
-   "end": "2026-09-26",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Enjoy an interactive and participatory art event with hands on silk-screen poster making and add your personal story of overcoming…",
-   "url": "https://sfpl.org/events/2026/09/26/activity-jangs-coffee-and-donuts-mobile-art-lab",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "our415-149253_sfpl",
-   "title": "¡VIVA! Kickoff Party",
-   "emoji": "🎉",
-   "type": "event",
-   "categories": [
-    "festival"
-   ],
-   "zone": "little-saigon",
-   "area": "Main Library",
-   "coords": [
-    37.779354000001,
-    -122.415871500002
-   ],
-   "start": "2026-09-26",
-   "end": "2026-09-26",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Celebrate the vibrant cultures, traditions and creativity of Latinx communities through live music, art, hands-on activities and family-friendly fun…",
-   "url": "https://sfpl.org/events/2026/09/26/celebration-viva-kickoff-party",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "our415-160335_sfpl",
-   "title": "Tiny Art Show Reception",
-   "emoji": "🎉",
-   "type": "event",
-   "categories": [
-    "festival"
-   ],
-   "zone": "silver-terrace",
-   "area": "Portola",
-   "coords": [
-    37.727118000001,
-    -122.406376500002
-   ],
-   "start": "2026-09-26",
-   "end": "2026-09-26",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Join us for an afternoon of tiny art paintings done by residents. Light refreshments will be provided.Tiny art will be on display from …",
-   "url": "https://sfpl.org/events/2026/09/26/celebration-tiny-art-show-reception",
    "source": "Our415 — SF Public Library, data.sfgov.org",
    "lastVerified": "2026-09-16",
    "indoor": true,
@@ -742,6 +1054,110 @@
    "uniqueness": 3
   },
   {
+   "id": "our415-160403_sfpl",
+   "title": "Jang&#039;s Coffee and Donuts—Mobile Art Lab",
+   "emoji": "🎨",
+   "type": "event",
+   "categories": [
+    "learn"
+   ],
+   "zone": "west-portal",
+   "area": "West Portal",
+   "coords": [
+    37.741365000001,
+    -122.466163500002
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-26",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Enjoy an interactive and participatory art event with hands on silk-screen poster making and add your personal story of overcoming…",
+   "url": "https://sfpl.org/events/2026/09/26/activity-jangs-coffee-and-donuts-mobile-art-lab",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-160335_sfpl",
+   "title": "Tiny Art Show Reception",
+   "emoji": "🎉",
+   "type": "event",
+   "categories": [
+    "festival"
+   ],
+   "zone": "silver-terrace",
+   "area": "Portola",
+   "coords": [
+    37.727118000001,
+    -122.406376500002
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-26",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Join us for an afternoon of tiny art paintings done by residents. Light refreshments will be provided.Tiny art will be on display from …",
+   "url": "https://sfpl.org/events/2026/09/26/celebration-tiny-art-show-reception",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-163258_sfpl",
+   "title": "Craft Club in American Sign Language ASL",
+   "emoji": "🎨",
+   "type": "event",
+   "categories": [
+    "learn"
+   ],
+   "zone": "little-saigon",
+   "area": "Main Library",
+   "coords": [
+    37.779354000001,
+    -122.415871500002
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-26",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Explore your creativity in this bilingual (English and American Sign Language) intergenerational craft session with Black Deaf educator and…",
+   "url": "https://sfpl.org/events/2026/09/26/activity-craft-club-american-sign-language-asl",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-149253_sfpl",
+   "title": "¡VIVA! Kickoff Party",
+   "emoji": "🎉",
+   "type": "event",
+   "categories": [
+    "festival"
+   ],
+   "zone": "little-saigon",
+   "area": "Main Library",
+   "coords": [
+    37.779354000001,
+    -122.415871500002
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-26",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Celebrate the vibrant cultures, traditions and creativity of Latinx communities through live music, art, hands-on activities and family-friendly fun…",
+   "url": "https://sfpl.org/events/2026/09/26/celebration-viva-kickoff-party",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
    "id": "stanford-53809122587438",
    "title": "Morton Feldman Centenary: music and musings on time and timelessness",
    "emoji": "🎵",
@@ -794,58 +1210,6 @@
    "uniqueness": 3
   },
   {
-   "id": "our415-151279_sfpl",
-   "title": "Bike Repair Fix-it Clinic",
-   "emoji": "🛠️",
-   "type": "event",
-   "categories": [
-    "learn"
-   ],
-   "zone": "south-beach",
-   "area": "Mission Bay",
-   "coords": [
-    37.775376000001,
-    -122.393110500002
-   ],
-   "start": "2026-09-27",
-   "end": "2026-09-27",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Keep your wheels rolling—free bike repairs available! Bring your bicycle for a free tune-up and basic repairs provided by BikeMobile. Expert…",
-   "url": "https://sfpl.org/events/2026/09/27/workshop-bike-repair-fix-it-clinic",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "our415-160834_sfpl",
-   "title": "Mary Queen of Scots Livestream",
-   "emoji": "🎵",
-   "type": "event",
-   "categories": [
-    "music"
-   ],
-   "zone": "little-saigon",
-   "area": "Main Library",
-   "coords": [
-    37.779354000001,
-    -122.415871500002
-   ],
-   "start": "2026-09-27",
-   "end": "2026-09-27",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Experience a streamed performance of SF Opera's Mary, Queen of Scots , Thea Musgrave…",
-   "url": "https://sfpl.org/events/2026/09/27/performance-mary-queen-scots-livestream",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
    "id": "our415-156368_sfpl",
    "title": "Plant Swap",
    "emoji": "🫂",
@@ -891,6 +1255,58 @@
    "priceNote": "Free",
    "why": "Enjoy an afternoon with one of the Bay Area's leading jazz groups, when the Dave Rocha Jazz Trio performs a vibrant set with music to delight all…",
    "url": "https://sfpl.org/events/2026/09/27/performance-dave-rocha-jazz-trio",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-160834_sfpl",
+   "title": "Mary Queen of Scots Livestream",
+   "emoji": "🎵",
+   "type": "event",
+   "categories": [
+    "music"
+   ],
+   "zone": "little-saigon",
+   "area": "Main Library",
+   "coords": [
+    37.779354000001,
+    -122.415871500002
+   ],
+   "start": "2026-09-27",
+   "end": "2026-09-27",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Experience a streamed performance of SF Opera's Mary, Queen of Scots , Thea Musgrave…",
+   "url": "https://sfpl.org/events/2026/09/27/performance-mary-queen-scots-livestream",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-151279_sfpl",
+   "title": "Bike Repair Fix-it Clinic",
+   "emoji": "🛠️",
+   "type": "event",
+   "categories": [
+    "learn"
+   ],
+   "zone": "south-beach",
+   "area": "Mission Bay",
+   "coords": [
+    37.775376000001,
+    -122.393110500002
+   ],
+   "start": "2026-09-27",
+   "end": "2026-09-27",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Keep your wheels rolling—free bike repairs available! Bring your bicycle for a free tune-up and basic repairs provided by BikeMobile. Expert…",
+   "url": "https://sfpl.org/events/2026/09/27/workshop-bike-repair-fix-it-clinic",
    "source": "Our415 — SF Public Library, data.sfgov.org",
    "lastVerified": "2026-09-16",
    "indoor": true,
@@ -1074,6 +1490,32 @@
    "uniqueness": 3
   },
   {
+   "id": "our415-157008_sfpl",
+   "title": "SFO Museum exhibition on Victorian Jardinières",
+   "emoji": "🛠️",
+   "type": "event",
+   "categories": [
+    "learn"
+   ],
+   "zone": "sunset-district",
+   "area": "Ortega",
+   "coords": [
+    37.751004000001,
+    -122.498275500002
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-03",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Nicole Mullen, Curator in Charge of Exhibitions at SFO Museum , leads a 30‑minute virtual tour of the museum’…",
+   "url": "https://sfpl.org/events/2026/10/03/workshop-sfo-museum-exhibition-victorian-jardinieres",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
    "id": "our415-150289_sfpl",
    "title": "Clothing Repair Fix-it Clinic",
    "emoji": "🛠️",
@@ -1093,6 +1535,84 @@
    "priceNote": "Free",
    "why": "Extend the life of your clothes—at no cost!Clothing Repair Clinic hosted by SCRAP, with support from San Francisco Environment.  Bring…",
    "url": "https://sfpl.org/events/2026/10/03/workshop-clothing-repair-fix-it-clinic",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-165522_sfpl",
+   "title": "Open House",
+   "emoji": "🎉",
+   "type": "event",
+   "categories": [
+    "festival"
+   ],
+   "zone": "parkside",
+   "area": "Parkside",
+   "coords": [
+    37.743093000001,
+    -122.479407000002
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-03",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Celebrate everything the San Francisco Public Library has to offer at our annual Open House.Schedule of Activities:1:15 p.m., A magic show by…",
+   "url": "https://sfpl.org/events/2026/10/03/celebration-open-house",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-163970_sfpl",
+   "title": "Plant Swap",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "cow-hollow",
+   "area": "Golden Gate Valley",
+   "coords": [
+    37.796850000001,
+    -122.429047500002
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-03",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Bring your cuttings, seedlings, surplus harvest or plants that need a new home to swap with other gardeners. All types of plants welcome. Pease…",
+   "url": "https://sfpl.org/events/2026/10/03/social-plant-swap",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-159573_sfpl",
+   "title": "National AIDS Memorial Quilt Repair & Panel Making Workshop",
+   "emoji": "🛠️",
+   "type": "event",
+   "categories": [
+    "learn"
+   ],
+   "zone": "little-saigon",
+   "area": "Main Library",
+   "coords": [
+    37.779354000001,
+    -122.415871500002
+   ],
+   "start": "2026-10-03",
+   "end": "2026-10-03",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Help preserve a powerful piece of history and create new ways to honor loved ones at this hands-on workshop with the National AIDS Memorial.No sewing…",
+   "url": "https://sfpl.org/events/2026/10/03/workshop-national-aids-memorial-quilt-repair-panel-making-workshop",
    "source": "Our415 — SF Public Library, data.sfgov.org",
    "lastVerified": "2026-09-16",
    "indoor": true,
@@ -1152,58 +1672,6 @@
    "uniqueness": 3
   },
   {
-   "id": "our415-165522_sfpl",
-   "title": "Open House",
-   "emoji": "🎉",
-   "type": "event",
-   "categories": [
-    "festival"
-   ],
-   "zone": "parkside",
-   "area": "Parkside",
-   "coords": [
-    37.743093000001,
-    -122.479407000002
-   ],
-   "start": "2026-10-03",
-   "end": "2026-10-03",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Celebrate everything the San Francisco Public Library has to offer at our annual Open House.Schedule of Activities:1:15 p.m., A magic show by…",
-   "url": "https://sfpl.org/events/2026/10/03/celebration-open-house",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "our415-157008_sfpl",
-   "title": "SFO Museum exhibition on Victorian Jardinières",
-   "emoji": "🛠️",
-   "type": "event",
-   "categories": [
-    "learn"
-   ],
-   "zone": "sunset-district",
-   "area": "Ortega",
-   "coords": [
-    37.751004000001,
-    -122.498275500002
-   ],
-   "start": "2026-10-03",
-   "end": "2026-10-03",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Nicole Mullen, Curator in Charge of Exhibitions at SFO Museum , leads a 30‑minute virtual tour of the museum’…",
-   "url": "https://sfpl.org/events/2026/10/03/workshop-sfo-museum-exhibition-victorian-jardinieres",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
    "id": "our415-150329_sfpl",
    "title": "FREEDOM COMES WHEN ONE WALKS THROUGH IT",
    "emoji": "🎵",
@@ -1223,58 +1691,6 @@
    "priceNote": "Free",
    "why": "Watch Flyaway Productions' dance-based public art project exploring the concept of freedom at the…",
    "url": "https://sfpl.org/events/2026/10/03/performance-freedom-comes-when-one-walks-through-it",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "our415-163970_sfpl",
-   "title": "Plant Swap",
-   "emoji": "🫂",
-   "type": "event",
-   "categories": [
-    "community"
-   ],
-   "zone": "cow-hollow",
-   "area": "Golden Gate Valley",
-   "coords": [
-    37.796850000001,
-    -122.429047500002
-   ],
-   "start": "2026-10-03",
-   "end": "2026-10-03",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Bring your cuttings, seedlings, surplus harvest or plants that need a new home to swap with other gardeners. All types of plants welcome. Pease…",
-   "url": "https://sfpl.org/events/2026/10/03/social-plant-swap",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "our415-159573_sfpl",
-   "title": "National AIDS Memorial Quilt Repair & Panel Making Workshop",
-   "emoji": "🛠️",
-   "type": "event",
-   "categories": [
-    "learn"
-   ],
-   "zone": "little-saigon",
-   "area": "Main Library",
-   "coords": [
-    37.779354000001,
-    -122.415871500002
-   ],
-   "start": "2026-10-03",
-   "end": "2026-10-03",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Help preserve a powerful piece of history and create new ways to honor loved ones at this hands-on workshop with the National AIDS Memorial.No sewing…",
-   "url": "https://sfpl.org/events/2026/10/03/workshop-national-aids-memorial-quilt-repair-panel-making-workshop",
    "source": "Our415 — SF Public Library, data.sfgov.org",
    "lastVerified": "2026-09-16",
    "indoor": true,
@@ -1433,7 +1849,7 @@
   },
   {
    "id": "our415-156999_sfpl",
-   "title": "K-Pop Stans Speak: Diversity, Identity and Inspiration",
+   "title": "Speak Yourself: Building Community Through K-Pop",
    "emoji": "🎤",
    "type": "event",
    "categories": [
@@ -1450,7 +1866,7 @@
    "price": 0,
    "priceNote": "Free",
    "why": "During this relaxed panel we’ll hear from individuals who are devoted members of BTS ARMY in their personal lives and who have thoughtfully…",
-   "url": "https://sfpl.org/events/2026/10/06/panel-k-pop-stans-speak-diversity-identity-and-inspiration",
+   "url": "https://sfpl.org/events/2026/10/06/panel-speak-yourself-building-community-through-k-pop",
    "source": "Our415 — SF Public Library, data.sfgov.org",
    "lastVerified": "2026-09-16",
    "indoor": true,
@@ -1656,32 +2072,6 @@
    "uniqueness": 3
   },
   {
-   "id": "our415-157374_sfpl",
-   "title": "BTS & ARMY Creative Lounge with the Namjooning Collective",
-   "emoji": "🎨",
-   "type": "event",
-   "categories": [
-    "learn"
-   ],
-   "zone": "little-saigon",
-   "area": "Main Library",
-   "coords": [
-    37.779354000001,
-    -122.415871500002
-   ],
-   "start": "2026-10-09",
-   "end": "2026-10-09",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Drop-in for a BTS ‑themed crafting session at the library.Create fun, fandom‑inspired…",
-   "url": "https://sfpl.org/events/2026/10/09/activity-bts-army-creative-lounge-namjooning-collective",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
    "id": "our415-156094_sfpl",
    "title": "Navy Band Woodwind Quintet",
    "emoji": "🎵",
@@ -1708,25 +2098,51 @@
    "uniqueness": 3
   },
   {
-   "id": "our415-163642_sfpl",
-   "title": "Mexican Tamale Making",
+   "id": "our415-157374_sfpl",
+   "title": "BTS & ARMY Creative Lounge with the Namjooning Collective",
+   "emoji": "🎨",
+   "type": "event",
+   "categories": [
+    "learn"
+   ],
+   "zone": "little-saigon",
+   "area": "Main Library",
+   "coords": [
+    37.779354000001,
+    -122.415871500002
+   ],
+   "start": "2026-10-09",
+   "end": "2026-10-09",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Drop-in for a BTS ‑themed crafting session at the library.Create fun, fandom‑inspired…",
+   "url": "https://sfpl.org/events/2026/10/09/activity-bts-army-creative-lounge-namjooning-collective",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-162298_sfpl",
+   "title": "Découpage Pumpkins",
    "emoji": "🛠️",
    "type": "event",
    "categories": [
     "learn"
    ],
-   "zone": "golden-gate-heights",
-   "area": "Sunset",
+   "zone": "lower-pacific-heights",
+   "area": "Presidio",
    "coords": [
-    37.763370000001,
-    -122.476257000002
+    37.788822000001,
+    -122.444865000002
    ],
    "start": "2026-10-10",
    "end": "2026-10-10",
    "price": 0,
    "priceNote": "Free",
-   "why": "Join Chef Olivia Mecalco, chef/owner of Mi Comedor Catering, for a fun and flavorful hands-on workshop where you’ll learn to prepare authentic,…",
-   "url": "https://sfpl.org/events/2026/10/10/workshop-mexican-tamale-making",
+   "why": "Celebrate the fall season with a fun, all‑ages craft. Create your own festive décor by decorating faux mini pumpkins using paper cutouts, patterned…",
+   "url": "https://sfpl.org/events/2026/10/10/workshop-decoupage-pumpkins",
    "source": "Our415 — SF Public Library, data.sfgov.org",
    "lastVerified": "2026-09-16",
    "indoor": true,
@@ -1786,51 +2202,25 @@
    "uniqueness": 3
   },
   {
-   "id": "our415-154448_sfpl",
-   "title": "FREEDOM COMES WHEN ONE WALKS THROUGH IT",
-   "emoji": "🎵",
-   "type": "event",
-   "categories": [
-    "music"
-   ],
-   "zone": "little-saigon",
-   "area": "Main Library",
-   "coords": [
-    37.779354000001,
-    -122.415871500002
-   ],
-   "start": "2026-10-10",
-   "end": "2026-10-10",
-   "price": 0,
-   "priceNote": "Free",
-   "why": "Watch Flyaway Productions' dance-based public art project exploring the concept of freedom at the…",
-   "url": "https://sfpl.org/events/2026/10/10/performance-freedom-comes-when-one-walks-through-it",
-   "source": "Our415 — SF Public Library, data.sfgov.org",
-   "lastVerified": "2026-09-16",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "our415-162298_sfpl",
-   "title": "Découpage Pumpkins",
+   "id": "our415-163642_sfpl",
+   "title": "Mexican Tamale Making",
    "emoji": "🛠️",
    "type": "event",
    "categories": [
     "learn"
    ],
-   "zone": "lower-pacific-heights",
-   "area": "Presidio",
+   "zone": "golden-gate-heights",
+   "area": "Sunset",
    "coords": [
-    37.788822000001,
-    -122.444865000002
+    37.763370000001,
+    -122.476257000002
    ],
    "start": "2026-10-10",
    "end": "2026-10-10",
    "price": 0,
    "priceNote": "Free",
-   "why": "Celebrate the fall season with a fun, all‑ages craft. Create your own festive décor by decorating faux mini pumpkins using paper cutouts, patterned…",
-   "url": "https://sfpl.org/events/2026/10/10/workshop-decoupage-pumpkins",
+   "why": "Join Chef Olivia Mecalco, chef/owner of Mi Comedor Catering, for a fun and flavorful hands-on workshop where you’ll learn to prepare authentic,…",
+   "url": "https://sfpl.org/events/2026/10/10/workshop-mexican-tamale-making",
    "source": "Our415 — SF Public Library, data.sfgov.org",
    "lastVerified": "2026-09-16",
    "indoor": true,
@@ -1857,6 +2247,32 @@
    "priceNote": "Free",
    "why": "The Prevailing Winds Woodwind Quintet blends the individual sounds of the flute, oboe, clarinet, bassoon and French horn to create a unique quintet…",
    "url": "https://sfpl.org/events/2026/10/10/performance-navy-band-southwest-woodwind-quintet",
+   "source": "Our415 — SF Public Library, data.sfgov.org",
+   "lastVerified": "2026-09-16",
+   "indoor": true,
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "our415-154448_sfpl",
+   "title": "FREEDOM COMES WHEN ONE WALKS THROUGH IT",
+   "emoji": "🎵",
+   "type": "event",
+   "categories": [
+    "music"
+   ],
+   "zone": "little-saigon",
+   "area": "Main Library",
+   "coords": [
+    37.779354000001,
+    -122.415871500002
+   ],
+   "start": "2026-10-10",
+   "end": "2026-10-10",
+   "price": 0,
+   "priceNote": "Free",
+   "why": "Watch Flyaway Productions' dance-based public art project exploring the concept of freedom at the…",
+   "url": "https://sfpl.org/events/2026/10/10/performance-freedom-comes-when-one-walks-through-it",
    "source": "Our415 — SF Public Library, data.sfgov.org",
    "lastVerified": "2026-09-16",
    "indoor": true,
