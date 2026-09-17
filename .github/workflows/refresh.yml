@@ -1,4 +1,4 @@
-name: Refresh Paris data
+name: Refresh city data
 
 # Keeps the site honest: drops events that have already happened and
 # fails the build if any record is malformed. Runs every morning so the
@@ -10,11 +10,14 @@ on:
   workflow_dispatch:           # lets you run it by hand from the Actions tab
   push:
     paths:
-      # Paris's data and page, which is what this workflow refreshes.
-      # The other three cities have no automated sources wired up yet.
+      # Paris and the Bay Area, which are the two cities with automated
+      # sources wired up. Delhi and Bengaluru have none yet.
       - 'paris/data/**'
       - 'paris/index.html'
       - 'paris/city.js'
+      - 'bay-area/data/**'
+      - 'bay-area/index.html'
+      - 'bay-area/city.js'
       - 'css/**'
       - 'js/**'
       - 'scripts/**'
@@ -40,7 +43,9 @@ jobs:
       # On a pull request we only validate; we never rewrite someone's branch.
       - name: Validate data
         if: github.event_name == 'pull_request'
-        run: node scripts/refresh.mjs --check
+        run: |
+          node scripts/refresh.mjs --check
+          HOMEGROUND_CITY=bay-area node scripts/refresh.mjs --check
 
       # Events are the one layer that genuinely changes daily — the city
       # adds and withdraws listings all week, and an events section that
@@ -64,9 +69,36 @@ jobs:
         if: github.event_name == 'schedule'
         run: node scripts/practices.mjs || echo "practices skipped — a source was unavailable"
 
+      # The Bay Area's own daily sources. Stanford's calendar and the
+      # library's move as fast as the Mairie's do, and Luma faster —
+      # `luma.com/sf` is a rolling fifty, so a week-old copy of it is
+      # mostly events that have already happened.
+      #
+      # Same best-effort contract as the two above, and the scripts hold
+      # it themselves: each half keeps the last run's records when its
+      # source is unreachable, and a run where everything fails leaves the
+      # file untouched rather than emptying it.
+      - name: Collect what is on in the Bay Area (daily)
+        if: github.event_name == 'schedule'
+        env:
+          HOMEGROUND_CITY: bay-area
+        run: node scripts/events-bay.mjs || echo "bay events skipped — a source was unavailable"
+
+      - name: Collect Bay Area practices — Luma evenings and drop-in classes (daily)
+        if: github.event_name == 'schedule'
+        env:
+          HOMEGROUND_CITY: bay-area
+        run: node scripts/practices.mjs || echo "bay practices skipped — a source was unavailable"
+
+      # Pruning is per city, because refresh.mjs reads the one it is told
+      # about. Running it for Paris alone is how the Bay Area's expired
+      # events would have survived in the file — invisible on the page,
+      # since expiry is applied when records are built, but never cleaned.
       - name: Prune expired entries and validate
         if: github.event_name != 'pull_request'
-        run: node scripts/refresh.mjs
+        run: |
+          node scripts/refresh.mjs
+          HOMEGROUND_CITY=bay-area node scripts/refresh.mjs
 
       # OpenStreetMap does not change fast enough to justify a daily crawl,
       # and Overpass throttles hard. Mondays only.
@@ -79,6 +111,9 @@ jobs:
             node scripts/civic.mjs    || echo "civic data skipped — opendata.paris.fr unavailable"
             node scripts/notable.mjs  || echo "notable layer skipped — Wikidata unavailable"
             node scripts/invaders.mjs || echo "invaders skipped — Overpass unavailable"
+            HOMEGROUND_CITY=bay-area node scripts/discover.mjs   || echo "bay discovery skipped — Overpass unavailable"
+            HOMEGROUND_CITY=bay-area node scripts/civic-bay.mjs  || echo "bay civic skipped — data.sfgov.org unavailable"
+            HOMEGROUND_CITY=bay-area node scripts/notable.mjs    || echo "bay notable skipped — Wikidata unavailable"
           else
             echo "not Monday — discovery index left alone"
           fi
