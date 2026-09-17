@@ -42,6 +42,13 @@ import { pageImages } from './images.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
 const CACHE = path.join(ROOT, 'scripts', 'photo-cache.json');
+/* The city's own language first, then English. Only a pack that has one
+   declares it — `notable.lang` — and this used to be the literal string
+   'fr', so every lookup for San Francisco asked French Wikipedia about
+   Swan Oyster Depot before asking the English one. A wasted round trip
+   per batch, and a Paris assumption wearing a constant's clothes. */
+const LANG = City.notable?.lang || null;
+
 const FORCE = process.argv.includes('--force');
 const DRY   = process.argv.includes('--dry');
 const UA = 'allez/1.0 (personal site; https://github.com/EktaSengar/allez)';
@@ -280,14 +287,16 @@ async function namedTier(cache) {
   console.log(`\ncivic.json — ${items.length} records, ${wanted.size} names, ${fresh.length} not looked up yet`);
 
   if (fresh.length) {
-    console.log('  fr.wikipedia…');
-    for (const [q, url] of await pageImages(fresh, 'fr')) {
-      const f = fileFromUrl(url);
-      if (isPhoto(f)) cache.found[`n:${q}`] = commonsPath(f);
+    if (LANG) {
+      console.log(`  ${LANG}.wikipedia…`);
+      for (const [q, url] of await pageImages(fresh, LANG)) {
+        const f = fileFromUrl(url);
+        if (isPhoto(f)) cache.found[`n:${q}`] = commonsPath(f);
+      }
     }
     const left = fresh.filter(q => !cache.found[`n:${q}`]);
     if (left.length) {
-      console.log(`  en.wikipedia for ${left.length} remaining…`);
+      console.log(`  en.wikipedia for ${left.length}${LANG ? ' remaining' : ''}…`);
       for (const [q, url] of await pageImages(left, 'en')) {
         const f = fileFromUrl(url);
         if (isPhoto(f)) cache.found[`n:${q}`] = commonsPath(f);
@@ -338,16 +347,20 @@ async function contextTier(cache, file) {
   console.log(`\n${file} — ${wanted.size} places named, ${fresh.length} not looked up yet`);
 
   if (fresh.length) {
-    /* French Wikipedia first: it is far better on Paris streets, and an
-       article about the rue Oberkampf only exists there. */
-    console.log(`  fr.wikipedia…`);
-    for (const [q, url] of await pageImages(fresh, 'fr')) {
-      const f = fileFromUrl(url);
-      if (isPhoto(f)) cache.found[`q:${q}`] = commonsPath(f);
+    /* The city's own language first where it has one: French Wikipedia is
+       far better on Paris streets, and an article about the rue Oberkampf
+       only exists there. A city that declares no language goes straight
+       to English rather than asking France about San Francisco. */
+    if (LANG) {
+      console.log(`  ${LANG}.wikipedia…`);
+      for (const [q, url] of await pageImages(fresh, LANG)) {
+        const f = fileFromUrl(url);
+        if (isPhoto(f)) cache.found[`q:${q}`] = commonsPath(f);
+      }
     }
     const left = fresh.filter(q => !cache.found[`q:${q}`]);
     if (left.length) {
-      console.log(`  en.wikipedia for ${left.length} remaining…`);
+      console.log(`  en.wikipedia for ${left.length}${LANG ? ' remaining' : ''}…`);
       for (const [q, url] of await pageImages(left, 'en')) {
         const f = fileFromUrl(url);
         if (isPhoto(f)) cache.found[`q:${q}`] = commonsPath(f);

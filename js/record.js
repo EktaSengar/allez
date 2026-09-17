@@ -509,7 +509,14 @@ const Rec = (() => {
       .concat(D.food?.items || [])
       .concat(D.itineraries?.items || [])
       .concat(D.daytrips?.items || [])
-      .concat(D.practices?.items || [])
+      /* Stated here rather than defaulted below, because the default is
+         `personal` and these are not. practices.mjs writes them from a
+         municipal feed and from Luma, says so in the file's own note —
+         "these are `sourced` records and rank below anything
+         hand-written" — and then carried no provenance at all, so all
+         forty of Paris's were being marked ★, read as somewhere one of
+         you had been, and ranked above the editorial tier. */
+      .concat((D.practices?.items || []).map(i => Object.assign({ provenance: 'sourced' }, i)))
       .filter(i => !(i.end && todayISO && i.end < todayISO));
 
     /* Everything in the curated files was written by somebody who went.
