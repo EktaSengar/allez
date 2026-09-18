@@ -143,6 +143,93 @@ are written so that it failing leaves the previous file alone.
 
 ---
 
+## Buying a dataset, and why Google Maps is not one
+
+The obvious shortcut — seed the catalogue from Google Places once, then pull
+the key and maintain it some other way — is the one thing the terms
+specifically forbid, so it is worth writing down before somebody suggests it
+again.
+
+[Google's Places policies](https://developers.google.com/maps/documentation/places/web-service/policies)
+say you must not pre-fetch, cache or store Places content, with exactly two
+exceptions: `place_id` indefinitely, and coordinates for **30 days**. Names,
+ratings, photos, hours and phone numbers are to be fetched live and shown
+with Google attribution. Paying for the calls does not license extracting
+them into a dataset of your own, and removing the key afterwards does not
+cure it. It would also poison this repository: once Google-derived rows are
+mixed in, nothing here can be cleanly relicensed or shared again.
+
+The version of that idea which is actually allowed exists, and is better:
+
+| Source | Licence | Size | Keep it? |
+|---|---|---|---|
+| [Foursquare OS Places](https://opensource.foursquare.com/os-places/) | Apache 2.0 | 100M+ POIs, 83 countries, monthly | yes, keep NOTICE.txt |
+| [Overture Maps](https://docs.overturemaps.org/guides/places/) | CDLA-Permissive 2.0 | ~53–61M places, monthly | yes |
+| OpenStreetMap | ODbL | what `discover.mjs` reads today | yes, share-alike |
+
+Both of the first two carry something OpenStreetMap does not: a category
+taxonomy and a **confidence score**. Neither carries opening hours, which
+OpenStreetMap does and which `js/hours.js` depends on. That is the whole
+argument for keeping OSM as the spine and treating the other two as
+enrichment rather than replacement.
+
+**The licence trap, which is easy to walk into.** ODbL is share-alike: merge
+OpenStreetMap into a derived database and the whole derived database
+inherits ODbL. Keeping Apache and CDLA data in their own files, joined at
+render time rather than at build time, is what stops one permissive source
+being swallowed by a share-alike one. The tier layout already does this by
+construction — keep it that way.
+
+## Events, assessed
+
+| Source | Free | Cacheable | Verdict |
+|---|---|---|---|
+| Municipal (ODS · Socrata · CKAN) | keyless | unrestricted | **Best. Use wherever it exists.** |
+| Luma iCal | keyless | unrestricted | **Best transferable.** Undocumented — must fail soft |
+| Localist (universities) | keyless | unrestricted | Strong in the US |
+| Ticketmaster Discovery | 5,000/day, **key** | "no caching beyond reasonable periods" | Concerts and sport; fights a static site |
+| Songkick | key | **24 hours** | Borderline against a daily rebuild |
+| Bandsintown | key | unclear | Artist-centric, not city-centric |
+| Eventbrite | — | — | **Dead.** Public event search retired Feb 2020 |
+| Meetup | — | — | **Dead.** Paid Pro plus OAuth since the REST retirement |
+| BookMyShow · District (India) | — | — | No public API. Scrapers exist; do not |
+
+**The rule that decides most of this: no keys in the browser.** Worth being
+precise, because it is narrower than it sounds — the collectors run in CI,
+which *could* hold a secret, and the shipped page would still have none.
+Relaxing it would unlock Ticketmaster and `data.gov.in`. It is deliberately
+not relaxed: Ticketmaster's no-caching clause fights the static model
+anyway, and a site nobody needs credentials to fork is worth more than a
+concert listing.
+
+## Keeping it fresh
+
+Three cadences, and they are already what the workflows run:
+
+| Every | What | Why |
+|---|---|---|
+| day | events, practices, prune expired | Luma is a rolling fortnight; a week-old copy is mostly things that have happened |
+| week | OSM discovery, Wikidata notable, civic | Changes slowly, and Overpass rate-limits hard |
+| month | a Overture / Foursquare snapshot, if adopted | That is their release cadence |
+
+Five mechanisms keep that honest, and a new source should inherit all of
+them rather than invent its own:
+
+- halves **fail independently** — one source going down cannot take another's records with it
+- a failed half **keeps the previous run's records** rather than writing fewer
+- a run where **everything** fails leaves the file untouched rather than empty
+- **expiry is applied when records are built**, against today's date, so a stale file cannot show a finished event
+- `check-location.mjs` **floors ratchet** — coverage that falls is a failure, not a smaller number
+
+## New York, if there is a fifth city
+
+It is by a wide margin the cheapest one to add, because it is the only city
+that has both halves: Socrata for facilities like San Francisco, **and** a
+real municipal events feed like Paris — Parks Events Listing and Public
+Programs Special Events, 21.8K rows — **and** universities running Localist,
+**and** a strong Luma calendar. Everything already written would be
+reconfiguration rather than new collectors.
+
 ## Adding a city, by country
 
 1. **Anywhere** — `discover.mjs` for OpenStreetMap, then `notable.mjs`.
