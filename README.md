@@ -70,6 +70,13 @@ node scripts/serve.mjs      # http://localhost:4321
 
 ### Adding a fifth city
 
+**Read [SOURCES.md](SOURCES.md) first.** What a new pack can reuse depends
+almost entirely on which country the city is in, and far less on how big it
+is: a European city probably publishes its own events and facilities through
+Opendatasoft or CKAN, an American one probably publishes facilities through
+Socrata and no events at all, and an Indian one publishes nothing a keyless
+script can read. Measured, with the numbers, in that file.
+
 Copy the nearest existing pack, not Paris — Paris is the one with a municipal
 data feed and twenty numbered zones, and almost nothing about that transfers.
 `check-packs.mjs` will tell you what the engine still expects that you have not
