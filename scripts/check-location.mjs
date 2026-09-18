@@ -226,19 +226,32 @@ const EXPECT = {
        restaurants in Delhi and no cafés at all.
 
        So the number is honest and the fix is not another source: it is
-       somebody writing down where to eat. The first editorial record
-       moves it off zero. */
-    floor: 0
+       somebody writing down where to eat.
+
+       11 of 160, and it was 0 until eleven editorial records were
+       written on 18 September 2026. That is the whole demonstration:
+       267 sourced records moved this number not at all, and eleven
+       hand-written ones moved it eleven. */
+    floor: 11
   },
   bengaluru: {
     probes: ['indiranagar', 'jayanagar', 'malleswaram', 'whitefield', 'koramangala'],
     need: 2,
-    /* 18, down from 34 when the pack learned to ask about temples and
-       lakes — the two things Bengaluru has instead of the classes the
-       base list knows. */
-    overshare: 18,
-    /* 18 of 160, off 31 notable records. */
-    floor: 18
+    /* 34 → 18 when the pack learned to ask about temples and lakes, then
+       back up to 21 when twelve editorial records were written. That
+       rise is an admission and worth reading as one: the records are
+       good and they are all in Basavanagudi, Malleswaram, Shivajinagar
+       and Richmond Town, so every probe now reaches for the same twelve.
+       Paris records the same effect one pair at a time — anything good
+       added in the middle of a city lands in every list until the
+       edges have something of their own.
+
+       It falls when the editorial tier spreads out, not when more is
+       added to the centre. Whitefield and Jayanagar are what close it. */
+    overshare: 21,
+    /* 28 of 160. Was 18 off the notable tier alone; twelve editorial
+       records added ten. */
+    floor: 28
   }
 };
 

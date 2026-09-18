@@ -1,6 +1,361 @@
 {
- "generated": "2026-09-14",
- "note": "Generated editorial picks.",
- "rules": [],
- "items": []
+ "generated": "2026-09-18",
+ "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: no open dataset in India describes everyday food, Wikidata holds two Delhi restaurants and no cafes, and the whole sourced tier here is monuments. See SOURCES.md.",
+ "rules": [
+  "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
+  "Say what to order and when to go. 'Lovely atmosphere' helps nobody.",
+  "No opening hours in prose. OpenStreetMap carries them, js/hours.js reads them, and a time written here is a time that rots.",
+  "quality and uniqueness cap at 4 here. 5 is reserved for somewhere one of you actually loved.",
+  "Where a claim is disputed, say it is disputed. Delhi has more than one restaurant claiming to have invented the same dish and at least one of those arguments is in court.",
+  "Always pin `match` with a zone. Matching on name alone resolved 'Bukhara' to a restaurant in Noida rather than the one in Chanakyapuri — and the famous one is not in OpenStreetMap at all, so the record was dropped. That is the index doing its job: it is what stops a writer inventing a place."
+ ],
+ "items": [
+  {
+   "id": "osm-karim-s-57299-154467",
+   "title": "Karim's",
+   "type": "restaurant",
+   "zone": "chandni-chowk",
+   "coords": [
+    28.64943,
+    77.23374
+   ],
+   "area": "Kalan Mahal Road",
+   "url": "http://www.karimhoteldelhi.com",
+   "cuisine": "chicken",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Karim's",
+    "zone": "chandni-chowk",
+    "type": "restaurant"
+   },
+   "why": "In Gali Kababian behind the Jama Masjid since 1913, opened by Haji Karimuddin, whose father cooked in the Mughal court. It began as two dishes — aloo gosht and daal with rumali roti — and those are still the honest order, along with the mutton korma and the seekh kebabs. The nihari is a morning thing and goes early.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Wikipedia; Slurrp; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-moti-mahal-57294-154480",
+   "title": "Moti Mahal",
+   "type": "restaurant",
+   "zone": "chandni-chowk",
+   "coords": [
+    28.64689,
+    77.23998
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Moti Mahal",
+    "zone": "chandni-chowk",
+    "type": "restaurant"
+   },
+   "why": "Opened in Daryaganj in 1947 by three men who came from Peshawar at Partition, and the place that brought the tandoor to Delhi restaurants — tandoori chicken, dal makhani, butter chicken. Who exactly invented the butter chicken is genuinely disputed and has been in court since 2024, the rival claim coming from the Jaggi family's own restaurant. Go for the tandoori chicken, which nobody argues about.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Wikipedia; The National; Al Jazeera (2024, on the dispute); existence confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-indian-accent-57184-154476",
+   "title": "Indian Accent",
+   "type": "restaurant",
+   "zone": "nizamuddin",
+   "coords": [
+    28.59176,
+    77.2379
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Indian Accent",
+    "zone": "nizamuddin",
+    "type": "restaurant"
+   },
+   "why": "The tasting menu that made modern Indian cooking respectable to Indians rather than only to visitors. The blue cheese naan is the dish people describe afterwards. Book weeks out; this is the special-occasion end of the city.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Wikidata (restaurant in New Delhi); published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-saravana-bhavan-57264-154432",
+   "title": "Saravana Bhavan",
+   "type": "restaurant",
+   "zone": "connaught-place",
+   "coords": [
+    28.6322,
+    77.21621
+   ],
+   "area": null,
+   "url": "https://saravanabhavan.com/",
+   "cuisine": "indian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Saravana Bhavan",
+    "zone": "connaught-place",
+    "type": "restaurant"
+   },
+   "why": "South Indian, vegetarian, fast and cheap, and the counter-argument to the idea that Delhi is only Mughlai. Ghee roast dosa and filter coffee. Connaught Place at lunch is the busiest it gets, which is also when it is best.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-kake-da-hotel-57270-154444",
+   "title": "Kake Da Hotel",
+   "type": "restaurant",
+   "zone": "connaught-place",
+   "coords": [
+    28.63497,
+    77.22203
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Kake-Da-Hotel",
+    "zone": "connaught-place",
+    "type": "restaurant"
+   },
+   "why": "Connaught Place since 1931 and not a hotel — a dhaba with a queue. Mutton is what it does; the keema and the butter chicken are the other two orders. Crowded, loud, quick, and cheap for what it is.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-lodhi-gardens-57187-154439",
+   "title": "Lodhi Gardens",
+   "type": "park",
+   "zone": "lodhi-colony",
+   "coords": [
+    28.59348,
+    77.21956
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Lodhi Gardens",
+    "zone": "lodhi-colony",
+    "type": "park"
+   },
+   "why": "Ninety acres with eleven monuments standing in it — the tombs of Muhammad Shah Sayyid (1444) and Sikandar Lodi, the Bada Gumbad, the Shish Gumbad — laid out as a garden around them in 1936. Delhi walks here in the morning. The octagonal Sayyid tomb is the one to look at properly: Hindu features built into an Indo-Islamic building.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "Wikipedia; Incredible India; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-sunder-nursery-57194-154495",
+   "title": "Sunder Nursery",
+   "type": "park",
+   "zone": "nizamuddin",
+   "coords": [
+    28.59685,
+    77.24743
+   ],
+   "area": null,
+   "url": "https://www.sundernursery.org",
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Sunder Nursery",
+    "zone": "nizamuddin",
+    "type": "park"
+   },
+   "why": "Ninety acres next to Humayun's Tomb, derelict for decades and reopened in 2018 after a ten-year restoration by the Aga Khan Trust for Culture — the charbagh canals rebuilt, the axis to the tomb restored, hundreds of native species planted as Delhi's first arboretum. Six World Heritage monuments stand inside it. Time put it on its list of the world's hundred greatest places that year.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Wikipedia; Aga Khan Development Network; Delhi Tourism; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-agrasen-ki-baoli-57252-154450",
+   "title": "Agrasen ki Baoli",
+   "type": "culture",
+   "zone": "connaught-place",
+   "coords": [
+    28.62609,
+    77.22501
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "culture"
+   ],
+   "match": {
+    "name": "Agrasen ki Baoli",
+    "zone": "connaught-place",
+    "type": "culture"
+   },
+   "why": "A stepwell 60 metres long and 108 steps deep, three storeys of arched niches going down into the ground, and it sits in a lane off Hailey Road with office towers on every side. Attributed by legend to King Agrasen and rebuilt in the fourteenth century by the Agarwal community. ASI-protected, free, and almost nobody there on a weekday morning.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "Archaeological Survey of India listing; India Heritage; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-bahrisons-booksellers-57200-154454",
+   "title": "Bahrisons Booksellers",
+   "type": "books",
+   "zone": "lodhi-colony",
+   "coords": [
+    28.6,
+    77.22718
+   ],
+   "area": null,
+   "url": "https://www.booksatbahri.com/",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Bahrisons Booksellers",
+    "zone": "lodhi-colony",
+    "type": "books"
+   },
+   "why": "Khan Market, since 1953, opened by Balraj Bahri Malhotra — nineteen when he came from Malakwal at Partition, and he raised the capital by selling one of his mother's gold bangles. Seventy years of stocking the same families. Still independent, still the best general bookshop in the city.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Wikipedia; The Better India; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-blue-tokai-coffee-roasters-57199-154452",
+   "title": "Blue Tokai Coffee Roasters",
+   "type": "cafe",
+   "zone": "lodhi-colony",
+   "coords": [
+    28.59972,
+    77.22618
+   ],
+   "area": "Khan Market",
+   "url": "https://bluetokaicoffee.com/pages/blue-tokai-coffee-roasters-khan-market",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Tokai Coffee Roasters",
+    "zone": "lodhi-colony",
+    "type": "cafe"
+   },
+   "why": "The roaster that started Indians drinking Indian coffee as something other than instant — single-estate beans from Karnataka and Kerala, roasted here, and the reason a specialty scene exists in this city at all. Ask what is fresh off the roaster rather than ordering from the board.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Published coverage; existence confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18",
+   "i": "e/e5/FabIndia_outlet,_Khan_Market,_New_Delhi.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-bengali-sweet-house-pastry-57259-154464",
+   "title": "Bengali Sweet House",
+   "type": "bakery",
+   "zone": "connaught-place",
+   "coords": [
+    28.62943,
+    77.2319
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Bengali Sweet house & Pastry",
+    "zone": "connaught-place",
+    "type": "bakery"
+   },
+   "why": "Bengali Market, and despite the name the thing to have is the chaat — the raj kachori, the gol gappe — with the mithai afterwards rather than instead. Cheap, standing room, and it has been the same for decades.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  }
+ ]
 }

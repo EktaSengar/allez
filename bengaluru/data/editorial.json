@@ -1,6 +1,392 @@
 {
- "generated": "2026-09-13",
- "note": "Generated editorial picks.",
- "rules": [],
- "items": []
+ "generated": "2026-09-18",
+ "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: Wikidata holds three cafes in the whole of Bengaluru and no open dataset in India describes everyday food. See SOURCES.md.",
+ "rules": [
+  "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
+  "Say what to order and when to go. 'Lovely atmosphere' helps nobody.",
+  "No opening hours in prose. OpenStreetMap carries them, js/hours.js reads them, and a time written here is a time that rots.",
+  "quality and uniqueness cap at 4 here. 5 is reserved for somewhere one of you actually loved.",
+  "Always pin `match` with a zone. A chain with fourteen branches will otherwise resolve to whichever one the index happened to list first."
+ ],
+ "items": [
+  {
+   "id": "osm-vidyarthi-bhavan-25890-155143",
+   "title": "Vidyarthi Bhavan",
+   "type": "restaurant",
+   "zone": "basavanagudi",
+   "coords": [
+    12.94501,
+    77.57147
+   ],
+   "area": "Gandhi Bazaar Main Road, Basavanagudi",
+   "url": "https://vidyarthibhavan.in",
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Vidyarthi Bhavan",
+    "zone": "basavanagudi",
+    "type": "restaurant"
+   },
+   "why": "Gandhi Bazaar since 1943, opened to feed students at the National College up the road — Vidyarthi Bhavan means student house. The benne masala dosa is the order and it is fried in enough butter to be a decision. Expect to give your name, wait on the pavement and share a table. Go on a weekday morning; weekends are a different and worse experience.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia; Karnataka Tourism; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-mavalli-tiffin-rooms-25910-155171",
+   "title": "Mavalli Tiffin Rooms",
+   "type": "restaurant",
+   "zone": "shanti-nagar",
+   "coords": [
+    12.95504,
+    77.58543
+   ],
+   "area": "Lalbagh Road",
+   "url": "https://www.mavallitiffinrooms.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Mavalli Tiffin Rooms",
+    "zone": "shanti-nagar",
+    "type": "restaurant"
+   },
+   "why": "Started as the Brahmin Coffee Club in 1924 and in the Art Deco building on Lalbagh Road since 1959, with a walk-through kitchen that was a radical idea at the time. The rava idli was invented here during the Second World War, when rice ran short and Yagnanarayana Maiya tried semolina instead. Order that, and the filter coffee.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia; The Better India; Citizen Matters; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-koshy-s-25951-155203",
+   "title": "Koshy's",
+   "type": "restaurant",
+   "zone": "shivajinagar",
+   "coords": [
+    12.97563,
+    77.60148
+   ],
+   "area": "Saint Mark's Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Koshy's",
+    "zone": "shivajinagar",
+    "type": "restaurant"
+   },
+   "why": "St Mark's Road, and the room where Bengaluru has argued with itself since 1940 — journalists, academics, people nursing one coffee for two hours. The food is beside the point and the mutton cutlet is the thing to order anyway. Nobody will hurry you, which is the entire proposition.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Wikidata (restaurant in Bangalore); published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-shree-sagar-ctr-25997-155139",
+   "title": "Shree Sagar CTR",
+   "type": "restaurant",
+   "zone": "malleswaram",
+   "coords": [
+    12.99826,
+    77.56949
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Shree Sagar CTR",
+    "zone": "malleswaram",
+    "type": "restaurant"
+   },
+   "why": "Malleswaram, and the benne dose that every argument about the best in the city eventually comes back to. Small, quick, cash-friendly, and busiest at breakfast. Order the dose and a coffee and do not over-plan it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-karavalli-25944-155218",
+   "title": "Karavalli",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97207,
+    77.60891
+   ],
+   "area": "Residency Road",
+   "url": null,
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Karavalli",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "Coastal Karnataka and Mangalorean cooking done seriously, in a garden courtyard off Residency Road. The appams and the fish curry are what it is for. The expensive end of the city, and the one worth it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18",
+   "i": "a/a3/Residency_Road,_Kollam.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-lalbagh-botanical-gardens-25898-155173",
+   "title": "Lalbagh Botanical Gardens",
+   "type": "park",
+   "zone": "shanti-nagar",
+   "coords": [
+    12.94889,
+    77.58667
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Lalbagh Botanical Gardens",
+    "zone": "shanti-nagar",
+    "type": "park"
+   },
+   "why": "Commissioned by Hyder Ali in the 1760s and finished by Tipu Sultan, with a Victorian glasshouse modelled on the Crystal Palace at the centre of it. The rock at the south end is older than anything else in the city by a margin measured in aeons. Early morning is when Bengaluru actually uses it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Published coverage; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-cubbon-park-25948-155187",
+   "title": "Cubbon Park",
+   "type": "park",
+   "zone": "richmond-town",
+   "coords": [
+    12.97417,
+    77.59341
+   ],
+   "area": null,
+   "url": "https://cubbonpark.in/",
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Cubbon Park",
+    "zone": "richmond-town",
+    "type": "park"
+   },
+   "why": "Three hundred acres in the middle of the city, laid out in 1870, and closed to traffic on Sundays — which is the day to go, when it fills with runners, skaters and people reading on the grass. The bamboo grove and the rose garden are the two corners worth walking to rather than past.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "Published coverage; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-champaca-bookstore-library-cafe-25975-155192",
+   "title": "Champaca Bookstore, Library & Cafe",
+   "type": "cafe",
+   "zone": "vasanth-nagar",
+   "coords": [
+    12.98735,
+    77.59599
+   ],
+   "area": "Edward Road",
+   "url": "https://www.champaca.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Champaca Bookstore, Library & Cafe",
+    "zone": "vasanth-nagar",
+    "type": "cafe"
+   },
+   "why": "Up a flight of stairs off Edward Road: a bookshop with a lending library and a small cafe attached, curated hard rather than stocked wide — translation, writing from the south, independent presses. The kind of shelf where you leave with something you had not heard of.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-blossom-book-house-25950-155210",
+   "title": "Blossom Book House",
+   "type": "books",
+   "zone": "shivajinagar",
+   "coords": [
+    12.97482,
+    77.60522
+   ],
+   "area": "Church Street",
+   "url": "https://www.blossombookhouse.in/",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Blossom Book House",
+    "zone": "shivajinagar",
+    "type": "books"
+   },
+   "why": "Church Street, three floors, second-hand and new stacked together to the ceiling with only the loosest idea of order. Budget an hour you had not planned to spend. Prices are negotiable at the top of the building and not at the bottom.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-toit-25959-155281",
+   "title": "Toit",
+   "type": "nightlife",
+   "zone": "indiranagar",
+   "coords": [
+    12.97941,
+    77.64063
+   ],
+   "area": "100 Feet Road",
+   "url": "https://toit.in/",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Toit",
+    "zone": "indiranagar",
+    "type": "nightlife"
+   },
+   "why": "The Indiranagar brewpub that started the city's microbrewery habit, and still the busiest room on 100 Feet Road. Go for the beer brewed on the premises rather than the menu, and go early — after eight there is a wait on the stairs.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18",
+   "i": "0/03/Indiranagar_Shopping_Hundred_Feet_Road,_Indiranagar_Bangalore_by_night.JPG",
+   "ik": "c"
+  },
+  {
+   "id": "osm-corner-house-25977-155154",
+   "title": "Corner House",
+   "type": "deli",
+   "zone": "gandhinagar",
+   "coords": [
+    12.98847,
+    77.57697
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Corner House",
+    "zone": "gandhinagar",
+    "type": "deli"
+   },
+   "why": "Ice cream, and specifically the Death by Chocolate, which is less a dessert than a local institution with a queue. Nothing about it is subtle and that is the point. Best late, after dinner, which is when everyone else goes.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-ulsoor-lake-park-25971-155244",
+   "title": "Ulsoor Lake Park",
+   "type": "park",
+   "zone": "halasuru",
+   "coords": [
+    12.9854,
+    77.62218
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Ulsoor Lake Park",
+    "zone": "halasuru",
+    "type": "park"
+   },
+   "why": "One of the lakes the city was built around and one of the few still worth walking, with islands in the middle and boating at the north end. Bengaluru has lost most of its tanks to construction; this is what the others looked like. Early, before the heat.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "Published coverage; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  }
+ ]
 }
