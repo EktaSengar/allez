@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ---------------------------------------------------------
-   events-bay.mjs — what is on in the Bay Area, from sources that publish.
+   events-city.mjs — what is on, from whichever sources a city has.
 
    Not `events.mjs` with a second URL in it, and the reason is that the
    Bay has no analogue of what that script reads. Paris has one municipal
@@ -9,7 +9,7 @@
    is that: DataSF's only events dataset is Our415, which is the Rec &
    Park and Public Library programme calendar and is mostly for children.
 
-   So this is three sources, none of them a listings magazine, and
+   So the Bay is three sources, none of them a listings magazine, and
    between them they answer the question for the two halves of the
    region:
 
@@ -48,7 +48,12 @@
    see run(). This is the rule practices.mjs holds and the reason it is
    written down twice.
 
-   Usage:  HOMEGROUND_CITY=bay-area node scripts/events-bay.mjs [--dry] [--days N]
+   Each half runs only where the pack asks for it — `City.events` names
+   the ones that are somebody's local institution, and `City.luma` is
+   read by any city that has a discovery calendar. Bengaluru and Delhi
+   have only the last of those, and it is most of what either has.
+
+   Usage:  HOMEGROUND_CITY=<city> node scripts/events-city.mjs [--dry] [--days N]
    --------------------------------------------------------- */
 
 import fs from 'node:fs/promises';
@@ -89,7 +94,7 @@ const day = s => (s ? String(s).slice(0, 10) : null);
    actually wants and is a fact the feed already published.
    ====================================================================== */
 
-const STANFORD = 'https://events.stanford.edu/api/2/events';
+const STANFORD = `${(City.events || {}).localist || ''}/api/2/events`;
 
 /* What Stanford calls a kind of event, and what the site calls it.
    Everything absent from this table is dropped: `Academic Dates`,
@@ -398,10 +403,22 @@ async function run() {
   let previous = { items: [] };
   try { previous = JSON.parse(await fs.readFile(file, 'utf8')); } catch { /* first run */ }
 
-  const logs = { stanford: [], our415: [], luma: [] };
+  /* Only what the city has. A pack naming none of them still has Luma,
+     which is the one source that is not anybody's local institution. */
+  const want = City.events || {};
+  const HALVES = [
+    ...(want.localist ? [['stanford', stanford]] : []),
+    ...(want.our415   ? [['our415', our415]]     : []),
+    ...(City.luma?.length ? [['luma', luma]]     : [])
+  ];
+  if (!HALVES.length) {
+    console.log(`  ${City.name} declares no event sources — nothing to collect.\n`);
+    return;
+  }
+
+  const logs = Object.fromEntries(HALVES.map(([n]) => [n, []]));
   const results = {};
   let failures = 0;
-  const HALVES = [['stanford', stanford], ['our415', our415], ['luma', luma]];
 
   for (const [name, fn] of HALVES) {
     process.stdout.write(`  ${name}\n`);
@@ -430,7 +447,7 @@ async function run() {
      first source through the door keeps it. */
   const flat = x => String(x || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   const once = new Set();
-  const items = [...results.stanford, ...results.our415, ...results.luma]
+  const items = HALVES.flatMap(([n]) => results[n])
     .filter(r => { const k = `${flat(r.title)}|${r.start}`; if (once.has(k)) return false; once.add(k); return true; })
     .filter(r => r.title && r.start && r.end && r.zone != null && r.url)
     .sort((a, b) => a.start.localeCompare(b.start));
@@ -438,19 +455,29 @@ async function run() {
   const spread = {};
   items.forEach(r => { spread[r.zone] = (spread[r.zone] || 0) + 1; });
   const free = items.filter(r => r.price === 0).length;
-  const sides = { city: 0, peninsula: 0 };
-  items.forEach(r => { const s = City.zone.side?.[r.zone]; if (s) sides[s]++; });
+  /* Only where a pack splits itself in two. The Bay does — "is it on my
+     side" is the first question anybody asks there — and printing
+     "0 on the Peninsula" under a list of Delhi events is the engine
+     talking about somewhere else. */
+  const sides = {};
+  if (City.zone.side) items.forEach(r => {
+    const side = City.zone.side[r.zone];
+    if (side) sides[side] = (sides[side] || 0) + 1;
+  });
 
   console.log(`  ${items.length} kept · ${free} free · ` +
     `${Object.keys(spread).length}/${Object.keys(City.zone.centroids).length} ${City.zone.many}`);
-  console.log(`  ${sides.city} in the city · ${sides.peninsula} on the Peninsula`);
+  if (Object.keys(sides).length)
+    console.log('  ' + Object.entries(sides).map(([k, n]) => `${n} ${k}`).join(' · '));
 
   const doc = {
     generated: TODAY,
     window: { from: TODAY, to: UNTIL },
-    source: 'Stanford Events (events.stanford.edu) · Our415 (data.sfgov.org) · Luma (luma.com/sf)',
-    note: 'What the sources that publish say is on. Facts with a source and no opinion — these land in the "sourced" tier, below anything a person wrote. The Peninsula half is Stanford, which is the only dated source there is south of Daly City.',
-    counts: { stanford: results.stanford.length, our415: results.our415.length, luma: results.luma.length },
+    source: [want.localist ? 'Stanford Events (events.stanford.edu)' : null,
+             want.our415 ? 'Our415 (data.sfgov.org)' : null,
+             City.luma?.length ? City.luma.map(f => f[2]).join(' · ') : null].filter(Boolean).join(' · '),
+    note: 'What the sources that publish say is on. Facts with a source and no opinion — these land in the "sourced" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.',
+    counts: Object.fromEntries(HALVES.map(([n]) => [n, results[n].length])),
     items
   };
 

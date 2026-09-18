@@ -57,7 +57,22 @@ const CLASSES = [
   ['wd:Q483110',  'sport'],       // stadium
   ['wd:Q2143825', 'bakery'],      // pastry shop
   ['wd:Q274393',  'bakery']       // bakery
-];
+].concat(City.notable?.classes || []);
+
+/* A pack may add to that list, and two of them have to.
+
+   The list above is what Wikidata knows about a European city, and it
+   was written against Paris. Asked about Bengaluru it returns almost
+   nothing — measured on 18 September 2026, the whole bounding box holds
+   791 hotels, 483 petrol stations and 210 HDFC Bank branches, against
+   three cafés. The classes the site asks for barely exist there, which
+   is why Bengaluru had 31 records and Delhi 81 where Paris has 838.
+
+   What those cities do have is a different vocabulary of destination:
+   Delhi's is 59 tombs, 41 mosques, 17 gurdwaras; Bengaluru's is 31
+   temples and 22 lakes, the lakes being what it has instead of parks.
+   None of that is exotic — it is simply what somebody there would tell
+   you to go and see, and the pack is where a city says what it is. */
 
 /* P576 is the date a thing stopped existing. Without this filter the
    query cheerfully returns a hippodrome demolished in 1900, and the site

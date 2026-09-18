@@ -393,7 +393,49 @@ const City = (() => {
      serves the wrong city's cached page. Deferred on purpose. */
   const serviceWorker = false;
 
-  return { id, name, ua, bbox, serviceWorker, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather };
+  /* ---------- what counts as notable here ----------
+
+     Extra Wikidata classes for scripts/notable.mjs. The base list found
+     thirty-one records in Bengaluru, because what Wikidata holds inside
+     this bounding box is 791 hotels, 483 petrol stations and 210 HDFC
+     Bank branches — and three cafés.
+
+     The lakes are the entry that matters. Bengaluru has 22 of them on
+     record and they are what this city has instead of parks: Ulsoor,
+     Sankey Tank, Hebbal. A guide here that lists parks and not lakes is
+     describing somewhere else. */
+  const notable = {
+    classes: [
+      ['wd:Q23397',   'park'],      // lake
+      ['wd:Q22746',   'park'],      // urban park
+      ['wd:Q1107656', 'park'],      // garden
+      ['wd:Q842402',  'culture'],   // Hindu temple
+      ['wd:Q16970',   'culture'],   // church building
+      ['wd:Q32815',   'culture'],   // mosque
+      ['wd:Q4989906', 'culture'],   // monument
+      ['wd:Q839954',  'culture'],   // archaeological site
+      ['wd:Q16560',   'culture']    // palace
+    ]
+  };
+
+  /* ---------- Luma ----------
+
+     Bengaluru's calendar is the densest of the four cities by a wide
+     margin relative to what else it has: 29 events on a rolling fortnight,
+     every one carrying a GEO pin, and 27 of them inside the box. Twelve
+     are tech, which for the city that exports engineers is fewer than you
+     would guess — the rest are runs, socials and build nights.
+
+     Read by two scripts, split by one rule: practices.mjs takes the tech
+     and AI evenings, events-city.mjs takes the rest. LUMA_TECH in
+     scripts/ics.mjs is that rule, and it lives in one place so an
+     evening cannot land in both files or neither. */
+  const luma = [['discover', 'discplace-G0tGUVYwl7T17Sb', 'Luma — Bengaluru']];
+
+  /* Luma only — no municipal feed here carries what you could take up. */
+  const practices = { city: null };
+
+  return { id, name, ua, bbox, serviceWorker, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather, notable, luma, practices };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;

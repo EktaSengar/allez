@@ -748,7 +748,53 @@ const City = (() => {
      and sw.js deserves splitting rather than copying. */
   const serviceWorker = false;
 
-  return { id, name, ua, bbox, serviceWorker, zone, air, seasons, reach,
+  /* ---------- what counts as notable here ----------
+
+     Extra Wikidata classes for scripts/notable.mjs, on top of the cafés
+     and bookshops it asks about everywhere. The base list is what
+     Wikidata knows about a European city; asked about Delhi it found
+     eighty-one records in a city of twenty million.
+
+     What Delhi has instead, counted in its own bounding box: 59 tombs,
+     41 mosques, 34 parks, 17 gurdwaras, 15 Hindu temples. Humayun's
+     Tomb and the Jama Masjid are not a footnote to the list of things
+     worth seeing here — they are most of it, and the list simply never
+     asked. */
+  const notable = {
+    classes: [
+      ['wd:Q381885',  'culture'],   // tomb
+      ['wd:Q32815',   'culture'],   // mosque
+      ['wd:Q842402',  'culture'],   // Hindu temple
+      ['wd:Q337986',  'culture'],   // gurdwara
+      ['wd:Q16970',   'culture'],   // church building
+      ['wd:Q4989906', 'culture'],   // monument
+      ['wd:Q839954',  'culture'],   // archaeological site
+      ['wd:Q1473950', 'culture'],   // stepwell — Agrasen ki Baoli and its kind
+      ['wd:Q57821',   'culture'],   // fortification
+      ['wd:Q16560',   'culture'],   // palace
+      ['wd:Q22746',   'park'],      // urban park
+      ['wd:Q1107656', 'park']       // garden
+    ]
+  };
+
+  /* ---------- Luma ----------
+
+     Sixteen events on a rolling fortnight, all sixteen geocoded and all
+     sixteen inside the box — and only three of them tech. Delhi's
+     calendar is morning runs, social nights and food. That is the
+     opposite of what the Paris keyword gate was tuned for, which is why
+     the non-tech half matters more here than anywhere.
+
+     Read by two scripts, split by one rule: practices.mjs takes the tech
+     and AI evenings, events-city.mjs takes the rest. LUMA_TECH in
+     scripts/ics.mjs is that rule, and it lives in one place so an
+     evening cannot land in both files or neither. */
+  const luma = [['discover', 'discplace-CzipmKodUYN2Dfx', 'Luma — Delhi']];
+
+  /* Luma only — no municipal feed here carries what you could take up. */
+  const practices = { city: null };
+
+  return { id, name, ua, bbox, serviceWorker, zone, air, seasons, reach, notable, luma, practices,
            centre, views, holidays, shutsOnHoliday, money, weather };
 })();
 

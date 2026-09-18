@@ -213,19 +213,28 @@ const EXPECT = {
   delhi: {
     probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],
     need: 2,
-    overshare: 23,
-    /* Zero of 160. Delhi has 4,457 places off OpenStreetMap and 81
-       records that say anything more than a name, so every scanned cell
-       is answered by the map layer alone. This is not a bar Delhi is
-       failing to clear; it is the measurement of a city nobody has
-       written about yet, and the first record above the map layer moves
-       it off zero. */
+    /* 21, down from 23 when the pack learned to ask Wikidata about
+       tombs and mosques. */
+    overshare: 21,
+    /* Still zero of 160, and worth understanding rather than explaining
+       away. Delhi's sourced tier went from 81 records to 267 when the
+       pack declared its own Wikidata classes — but those records are
+       tombs, mosques, gurdwaras and gardens, and the cells scanned here
+       are coffee, bread, dinner and markets. Wikidata has two
+       restaurants in Delhi and no cafés at all.
+
+       So the number is honest and the fix is not another source: it is
+       somebody writing down where to eat. The first editorial record
+       moves it off zero. */
     floor: 0
   },
   bengaluru: {
     probes: ['indiranagar', 'jayanagar', 'malleswaram', 'whitefield', 'koramangala'],
     need: 2,
-    overshare: 34,
+    /* 18, down from 34 when the pack learned to ask about temples and
+       lakes — the two things Bengaluru has instead of the classes the
+       base list knows. */
+    overshare: 18,
     /* 18 of 160, off 31 notable records. */
     floor: 18
   }

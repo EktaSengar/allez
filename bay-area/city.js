@@ -478,6 +478,16 @@ const City = (() => {
      throw away half the calendar. */
   const luma = [['discover', 'discplace-BDj7GNbGlsF7Cka', 'Luma — San Francisco']];
 
+  /* ---------- what is on ----------
+
+     Read by scripts/events-city.mjs. These two are local institutions
+     rather than anything a script could guess at: Stanford runs a
+     Localist calendar that is the Peninsula's only dated source, and
+     Our415 is DataSF's programme feed, whose library half is the only
+     part an adult would go to. Luma is declared above and read by both
+     collectors. */
+  const events = { localist: 'https://events.stanford.edu', our415: true };
+
   /* ---------- what you could take up ----------
 
      Read by scripts/practices.mjs. `city` is Our415's Rec & Park half,
@@ -494,7 +504,7 @@ const City = (() => {
 
   const serviceWorker = false;
 
-  return { id, name, ua, bbox, serviceWorker, zone, bases, climate, reach, practices, luma,
+  return { id, name, ua, bbox, serviceWorker, zone, bases, climate, reach, practices, luma, events,
            centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
 })();
 
