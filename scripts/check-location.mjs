@@ -23,7 +23,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadModule, readDiscovered, dataDir } from './shim.mjs';
+import { loadModule, readDiscovered, dataDir, City } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const VERBOSE = process.argv.includes('--verbose');
@@ -73,7 +73,14 @@ for (const n of ['civic', 'notable', 'editorial', 'notes', 'events-city']) D[n] 
 const TODAY = new Date().toISOString().slice(0, 10);
 const { all: ALL, discovered: DISCOVERED } = Rec.build(D, TODAY);
 
-Loc.boot(Loc.fromZone(1));
+const ZONES = City.zone.grid || City.zone.centroids;
+
+/* Somewhere to stand before the first `at()` moves us. This was
+   `fromZone(1)`, which is an arrondissement number and the reason this
+   file threw on every other pack twelve frames deep. Any real zone will
+   do — `at()` overwrites it before anything is measured — so it is the
+   first key the pack declares. */
+Loc.boot(Loc.fromZone(Object.keys(ZONES).sort()[0]));
 Near.use(ALL, DISCOVERED);
 
 function at(zone) {
@@ -122,9 +129,125 @@ const KINDS = [
   ['nightlife',  'walk', 2]
 ];
 
-/* Spread across the city: the old home, the quarter in the bug report,
-   somewhere genuinely far from both, and two edges. */
-const PLACES = [10, 5, 15, 18, 13];
+/* ---------- what each city expects of itself ----------
+
+   This file used to be Paris with Paris's numbers written into it, and
+   it crashed on any other pack at the first `Loc.fromZone(1)`. The test
+   itself is not Paris-specific — "does moving change the answer, and is
+   the answer worth having" is the question everywhere — so what moves
+   into a table is only the part that genuinely differs: which corners to
+   stand in, which pairs are known to share, and how much of the city is
+   currently expected to know something.
+
+   `floor` is the ratchet, and it exists because `THIN` does not scale.
+   Paris names every thin cell individually — nine once, none now — which
+   works at twenty zones and a guide somebody has been writing for a
+   year. Delhi has 272 zones, 81 records above the map layer, and fails
+   all 160 scanned cells. Listing them would be a page of noise nobody
+   reads, and dropping the assertion would be worse.
+
+   So a city with a `floor` records how many cells clear the bar *today*.
+   It fails when that number falls, not when a particular cell does, and
+   the number is raised by hand as the tiers fill. Paris has no floor and
+   keeps the stricter rule: every cell, every time. Raising a floor is
+   the work; lowering one is an admission. */
+const EXPECT = {
+  paris: {
+    /* The old home, the quarter in the bug report, somewhere genuinely
+       far from both, and two edges. */
+    probes: [10, 5, 15, 18, 13],
+    lead: 5,
+    need: 2,
+    shared: {
+    /* Three cafés are known within reach of the 13th and all three sit on
+       the 5th's side of the boundary. The 13th's own list leads with them
+       honestly labelled at 13–18 minutes; it has nothing nearer to lead
+       with. Closed by writing up a café in the 13th.
+
+       Five since notable.mjs started resolving the summaries it had been
+       losing to rate limits — Paris went from 19 known cafés to 33, and
+       Café Voltaire and Aux Tours de Notre-Dame are both central, both
+       genuinely good, and both now fill the fourth and fifth slot of the
+       5th and the 13th at once.
+
+       Same shape as the nightlife entry below, and the same reading: this
+       records the 13th having nothing of its own to lead with, not the
+       ranking failing. Every café added in the middle of Paris will keep
+       landing in this list until something in the 13th is written up. That
+       is still what closes it. */
+    'cafe:5/13': 5,
+    /* The 15th and the 13th have almost no nightlife the guide can vouch
+       for, so both reach into the 1st, 5th and 12th — where the rooms
+       actually are. The 18th has two of its own and then reaches the 10th,
+       fourteen minutes away. Closed by writing up rooms in the 13th, 15th
+       and 18th, and by the city listings covering more than the centre. */
+    /* Four since the opera houses were written up, and the fourth is
+       Opéra Bastille. The 5th and the 13th already shared Café Universel,
+       the Caveau de la Huchette and Supersonic; Bastille is central,
+       excellent and reachable from both, so it joined both lists at once.
+
+       That is the same thinness this entry has always recorded rather than
+       a new fault — the 13th still has nothing of its own to lead with,
+       and adding anything good in the middle of Paris will keep landing in
+       its list. Closed the same way: by writing up a room in the 13th. */
+    'nightlife:5/13': 4,
+    'nightlife:5/15': 3,
+    'nightlife:10/18': 3}
+  },
+  'bay-area': {
+    /* One default home, the two densest quarters, the fog side, and the
+       Peninsula — which is a different city by the pack's own account. */
+    probes: ['north-beach', 'mission', 'outer-sunset', 'palo-alto', 'bernal-heights'],
+    lead: 'mission',
+    need: 2,
+    /* 15 of the 80 pair/kind lists. Every probe reaches the Mission for
+       coffee, because that is where the vouched records are. Falls as
+       the editorial tier spreads out. */
+    overshare: 15,
+    /* 137 of 160 on 18 September 2026, the day the editorial tier was
+       written. What fails is the Peninsula — San Mateo, Sunnyvale and
+       Palo Alto for coffee, bread and markets — which is exactly where
+       the guide has three records. */
+    floor: 137
+  },
+  delhi: {
+    probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],
+    need: 2,
+    overshare: 23,
+    /* Zero of 160. Delhi has 4,457 places off OpenStreetMap and 81
+       records that say anything more than a name, so every scanned cell
+       is answered by the map layer alone. This is not a bar Delhi is
+       failing to clear; it is the measurement of a city nobody has
+       written about yet, and the first record above the map layer moves
+       it off zero. */
+    floor: 0
+  },
+  bengaluru: {
+    probes: ['indiranagar', 'jayanagar', 'malleswaram', 'whitefield', 'koramangala'],
+    need: 2,
+    overshare: 34,
+    /* 18 of 160, off 31 notable records. */
+    floor: 18
+  }
+};
+
+const PLAN = EXPECT[City.id] || { probes: [], need: 2 };
+
+/* A pack may name a zone this table does not have — a rename, or a guess
+   made before the zones existed. Saying so beats `fromZone` throwing
+   twelve frames deep. */
+const missing = PLAN.probes.filter(z => !ZONES[z]);
+if (missing.length) {
+  console.error(`\n${City.name}: EXPECT.${City.id}.probes names ${missing.length} ${
+    missing.length === 1 ? 'zone' : 'zones'} the pack does not have — ${missing.join(', ')}\n`);
+  process.exit(1);
+}
+if (!PLAN.probes.length) {
+  console.error(`\n${City.name} has no entry in EXPECT — add one, or this checks nothing.\n`);
+  process.exit(1);
+}
+
+const PLACES = PLAN.probes;
 
 const top = {};
 for (const zone of PLACES) {
@@ -142,6 +265,7 @@ const thin = [];      // known-thin cells, tracked rather than ignored
 const shared = [];    // pairs that legitimately share an answer, and why
 const fixed = [];     // known-thin cells that have since been filled in
 const pairs = [];
+const oversharing = [];
 for (let i = 0; i < PLACES.length; i++)
   for (let j = i + 1; j < PLACES.length; j++) pairs.push([PLACES[i], PLACES[j]]);
 
@@ -165,42 +289,8 @@ console.log('kind       ' + head + '   max');
    count is recorded, so the cell fails the moment it gets worse — and
    these are to-do items, not exemptions. Writing about cafés in the 13th
    is what deletes a line from here. */
-const SHARED = {
-  /* Three cafés are known within reach of the 13th and all three sit on
-     the 5th's side of the boundary. The 13th's own list leads with them
-     honestly labelled at 13–18 minutes; it has nothing nearer to lead
-     with. Closed by writing up a café in the 13th.
+const SHARED = PLAN.shared || {};
 
-     Five since notable.mjs started resolving the summaries it had been
-     losing to rate limits — Paris went from 19 known cafés to 33, and
-     Café Voltaire and Aux Tours de Notre-Dame are both central, both
-     genuinely good, and both now fill the fourth and fifth slot of the
-     5th and the 13th at once.
-
-     Same shape as the nightlife entry below, and the same reading: this
-     records the 13th having nothing of its own to lead with, not the
-     ranking failing. Every café added in the middle of Paris will keep
-     landing in this list until something in the 13th is written up. That
-     is still what closes it. */
-  'cafe:5/13': 5,
-  /* The 15th and the 13th have almost no nightlife the guide can vouch
-     for, so both reach into the 1st, 5th and 12th — where the rooms
-     actually are. The 18th has two of its own and then reaches the 10th,
-     fourteen minutes away. Closed by writing up rooms in the 13th, 15th
-     and 18th, and by the city listings covering more than the centre. */
-  /* Four since the opera houses were written up, and the fourth is
-     Opéra Bastille. The 5th and the 13th already shared Café Universel,
-     the Caveau de la Huchette and Supersonic; Bastille is central,
-     excellent and reachable from both, so it joined both lists at once.
-
-     That is the same thinness this entry has always recorded rather than
-     a new fault — the 13th still has nothing of its own to lead with,
-     and adding anything good in the middle of Paris will keep landing in
-     its list. Closed the same way: by writing up a room in the 13th. */
-  'nightlife:5/13': 4,
-  'nightlife:5/15': 3,
-  'nightlife:10/18': 3
-};
 
 for (const [kind, , allowed] of KINDS) {
   const counts = pairs.map(([a, b]) =>
@@ -209,11 +299,20 @@ for (const [kind, , allowed] of KINDS) {
     if (n <= allowed) return;
     const cell = `${kind}:${pairs[k].join('/')}`;
     const known = SHARED[cell];
-    if (known === undefined || n > known)
+    if (known !== undefined && n <= known) {
+      shared.push(`${cell}: ${n} of 5 shared — the guide has nothing closer to offer`);
+    } else if (PLAN.overshare !== undefined) {
+      /* Same ratchet as `floor`, and the same reason: naming each pair
+         only works while there are a handful. A city whose vouched
+         records all sit in two neighbourhoods will have every probe
+         reaching into them, and that is thin coverage made visible
+         rather than the retrieval failing — the distinction Paris draws
+         one pair at a time. Counted here, and the count only falls. */
+      oversharing.push(`${cell}: ${n} of 5`);
+    } else {
       failures.push(`${kind}: ${pairs[k].join(' and ')} share ${n} of 5 (max ${
         known === undefined ? allowed : known})`);
-    else
-      shared.push(`${cell}: ${n} of 5 shared — the guide has nothing closer to offer`);
+    }
   });
   console.log(kind.padEnd(11) + counts.map(n => String(n).padStart(7)).join('') +
               String(allowed).padStart(6));
@@ -221,7 +320,7 @@ for (const [kind, , allowed] of KINDS) {
 
 if (VERBOSE) {
   for (const zone of PLACES) {
-    console.log(`\n${zone}e`);
+    console.log(`\n${String(City.zone.tile(zone)).replace(/<[^>]*>/g, '')}`);
     for (const [kind] of KINDS) console.log(`  ${kind.padEnd(11)} ${top[zone][kind].join(', ')}`);
   }
 }
@@ -238,7 +337,7 @@ if (VERBOSE) {
    excellence, and it should hold in every arrondissement rather than
    only the one the catalogue was written in. */
 
-const NEED_KNOWN = 2;
+const NEED_KNOWN = PLAN.need;
 
 /* Where the guide is still thin, and why.
 
@@ -266,16 +365,37 @@ const NEED_KNOWN = 2;
    the middle of that arrondissement rather than loosening the rule. And
    an entry here is a to-do, never an excuse: it says somebody looked and
    decided the honest answer was thin, not that thin is acceptable. */
-const THIN = new Set([]);
+const THIN = new Set(PLAN.thin || []);
 const EVERYDAY = [['cafe', 'walk'], ['bakery', 'walk'], ['restaurant', 'walk'], ['market', 'walk']];
-const ALL_ARRS = Array.from({ length: 20 }, (_, i) => i + 1);
 
-console.log('\nHow much is known about the top 5, per arrondissement');
+/* Paris has twenty zones and scans all of them. Delhi has 272 and
+   Bengaluru 96, and a row per zone there is a page of output nobody
+   reads and four thousand retrievals to produce it. Above the cap the
+   scan takes an evenly spaced sample of the sorted zone keys — stable
+   between runs, so a number that moves means the data moved and not the
+   sample. */
+const SCAN_CAP = 40;
+const ALL_ARRS = (() => {
+  const keys = Object.keys(ZONES).sort((a, b) =>
+    (/^\d+$/.test(a) && /^\d+$/.test(b)) ? a - b : String(a).localeCompare(b))
+    .map(k => (/^\d+$/.test(k) ? Number(k) : k));
+  if (keys.length <= SCAN_CAP) return keys;
+  const step = keys.length / SCAN_CAP;
+  return Array.from({ length: SCAN_CAP }, (_, i) => keys[Math.floor(i * step)]);
+})();
+
+console.log(`\nHow much is known about the top 5, per ${City.zone.one}` +
+  (ALL_ARRS.length < Object.keys(ZONES).length
+    ? ` (${ALL_ARRS.length} of ${Object.keys(ZONES).length}, evenly spaced)` : ''));
 console.log('(★ visited · ◆ researched · ◇ on record · · on the map)\n');
-console.log('zone    ' + EVERYDAY.map(([k]) => k.slice(0, 6).padStart(7)).join('') + '     worst');
+const zoneLabel = z => String(City.zone.tile(z)).replace(/<[^>]*>/g, '');
+const LABEL_W = Math.max(4, ...ALL_ARRS.map(z => zoneLabel(z).length));
+console.log('zone'.padEnd(LABEL_W) + '    ' + EVERYDAY.map(([k]) => k.slice(0, 6).padStart(7)).join('') + '     worst');
 
 const MARK = { personal: '★', editorial: '◆', sourced: '◇', found: '·' };
 const beyondByArr = {};
+const gaps = [];
+let clearing = 0;
 
 for (const zone of ALL_ARRS) {
   at(zone);
@@ -286,16 +406,19 @@ for (const zone of ALL_ARRS) {
     const known = top.filter(i => Near.tierOf(i) !== 'found').length;
     worst = Math.min(worst, known);
     cells.push(top.map(i => MARK[Near.tierOf(i)]).join('').padStart(7));
-    const cell = `${zone}e ${kind}`;
+    const cell = `${zoneLabel(zone)} ${kind}`;
     if (known < NEED_KNOWN) {
-      if (THIN.has(cell)) thin.push(`${cell}: ${known} of 5 known`);
+      if (PLAN.floor !== undefined) gaps.push(cell);
+      else if (THIN.has(cell)) thin.push(`${cell}: ${known} of 5 known`);
       else failures.push(`${cell}: only ${known} of the top 5 is more than a name on a map (need ${NEED_KNOWN})`);
-    } else if (THIN.has(cell)) {
-      fixed.push(cell);
+    } else {
+      clearing++;
+      if (THIN.has(cell)) fixed.push(cell);
     }
   }
   beyondByArr[zone] = Near.beyond(Near.KIND.cafe, 10).map(i => ({ title: i.title, zone: i.zone }));
-  console.log(String(zone).padStart(3) + 'e   ' + cells.join('') + '   ' + String(worst).padStart(5));
+  console.log(zoneLabel(zone).padStart(LABEL_W) + '   ' +
+    cells.join('') + '   ' + String(worst).padStart(5));
 }
 
 /* "Worth the trip" is allowed to repeat itself between locations — the
@@ -306,7 +429,7 @@ for (const zone of ALL_ARRS) {
 for (const zone of ALL_ARRS) {
   const spread = beyondByArr[zone];
   if (spread.length >= 2 && new Set(spread.map(x => x.zone)).size < 2)
-    failures.push(`${zone}e worth-the-trip: all ${spread.length} suggestions are in the same arrondissement`);
+    failures.push(`${String(City.zone.tile(zone)).replace(/<[^>]*>/g, '')} worth-the-trip: all ${spread.length} suggestions are in the same ${City.zone.one}`);
 }
 
 /* The specific regression: the names from the original report must not be
@@ -328,21 +451,39 @@ for (const zone of ALL_ARRS) {
    entirely, being further than the ring reaches.
 
    A vouched café a fifteen-minute walk away, listed seventh, is a fair
-   answer. Leading with it is the bug. So the assertion is on the lead. */
-at(5);
-const REPORTED = ['Boot Café', 'Ten Belles', 'Café Oberkampf', 'Holybelly 5 & 19'];
-const cafes = Near.pick(Near.KIND.cafe, { rings: Near.RINGS.walk, want: 8, limit: 5 })
-  .items;
-const leaked = REPORTED.filter(r => cafes.some(i => i.title === r));
-if (leaked.length) failures.push(`the 10th's cafés still lead the 5th's coffee: ${leaked.join(', ')}`);
+   answer. Leading with it is the bug. So the assertion is on the lead.
 
-/* And the positive half of the same claim, which the original test never
-   made: the 5th must be led by somewhere in walking distance of the 5th.
-   A list that reaches across Paris for its first suggestion has not
-   really answered "coffee around here", whatever names are absent. */
-const first = cafes[0];
-if (!first || (first.minutesFromHome ?? 99) > 10)
-  failures.push(`the 5th's coffee list opens with ${first ? `${first.title} at ${first.minutesFromHome} minutes` : 'nothing'}`);
+   Paris's own, and named as such: the other packs have their own
+   founding bugs to find and none of them is this one. The positive half
+   below is not Paris-specific at all, so every city gets it — a list
+   that reaches across the region for its first suggestion has not
+   answered "coffee around here" wherever it is. */
+if (City.id === 'paris') {
+  at(5);
+  const REPORTED = ['Boot Café', 'Ten Belles', 'Café Oberkampf', 'Holybelly 5 & 19'];
+  const cafes = Near.pick(Near.KIND.cafe, { rings: Near.RINGS.walk, want: 8, limit: 5 }).items;
+  const leaked = REPORTED.filter(r => cafes.some(i => i.title === r));
+  if (leaked.length) failures.push(`the 10th's cafés still lead the 5th's coffee: ${leaked.join(', ')}`);
+}
+
+/* The positive half of the same claim, which the original test never
+   made: the named zone must be led by somewhere within walking distance
+   of it. A list that reaches across the region for its first suggestion
+   has not answered "coffee around here".
+
+   One zone rather than every probe, and the attempt to generalise it is
+   worth recording. Applied to all five of Paris's it fails on the 13th,
+   which opens with the Mosquée salon de thé thirteen minutes away — and
+   that is not the retrieval failing, it is the thinness `SHARED`
+   already documents at `cafe:5/13`. A second assertion saying the same
+   thing in a way that cannot be acknowledged is noise. */
+if (PLAN.lead) {
+  at(PLAN.lead);
+  const lead = Near.pick(Near.KIND.cafe, { rings: Near.RINGS.walk, want: 8, limit: 5 }).items[0];
+  if (!lead || (lead.minutesFromHome ?? 99) > 10)
+    failures.push(`${String(City.zone.tile(PLAN.lead)).replace(/<[^>]*>/g, '')} coffee opens with ${
+      lead ? `${lead.title} at ${lead.minutesFromHome} minutes` : 'nothing'}`);
+}
 
 if (shared.length) {
   console.log(`\n${shared.length} pairs of locations share most of an answer, already known:`);
@@ -361,6 +502,28 @@ if (fixed.length) {
   fixed.forEach(t => console.log('  ✓ ' + t));
 }
 
+if (PLAN.overshare !== undefined) {
+  console.log(`\n${oversharing.length} pair/kind lists share more than a coincidence — ` +
+    `the vouched records sit in too few ${City.zone.many}.`);
+  if (oversharing.length > PLAN.overshare)
+    failures.push(`sharing got worse: ${oversharing.length} pair/kind lists overlap, and ${PLAN.overshare} did before.`);
+  else if (oversharing.length < PLAN.overshare)
+    console.log(`  ${PLAN.overshare - oversharing.length} fewer than the ceiling of ${PLAN.overshare} — lower it in EXPECT.${City.id}.`);
+}
+
+/* The ratchet. A number that only moves one way, and says which way. */
+if (PLAN.floor !== undefined) {
+  const cells = ALL_ARRS.length * EVERYDAY.length;
+  console.log(`\n${clearing} of ${cells} ${City.zone.one}/category cells know something about what they suggest.`);
+  if (clearing < PLAN.floor)
+    failures.push(`coverage fell: ${clearing} cells clear the bar, and ${PLAN.floor} did before. ` +
+      `Something that was written up has gone, or the retrieval stopped finding it.`);
+  else if (clearing > PLAN.floor)
+    console.log(`  ${clearing - PLAN.floor} more than the floor of ${PLAN.floor} — raise it in EXPECT.${City.id}.`);
+  else
+    console.log(`  exactly the floor. ${gaps.length} cells still answered by the map alone.`);
+}
+
 console.log('');
 if (failures.length) {
   console.log('FAIL — location is not reaching retrieval:');
@@ -368,5 +531,9 @@ if (failures.length) {
   console.log('');
   process.exit(1);
 }
+const scanned = ALL_ARRS.length * EVERYDAY.length;
 console.log(`OK — ${pairs.length * KINDS.length} location pairs checked, all materially different.`);
-console.log(`     ${80 - thin.length} of 80 arrondissement/category pairs know something about what they suggest.\n`);
+if (PLAN.floor === undefined)
+  console.log(`     ${scanned - thin.length} of ${scanned} ${City.zone.one}/category pairs know something about what they suggest.\n`);
+else
+  console.log('');
