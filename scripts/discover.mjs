@@ -87,7 +87,29 @@ const LAYERS = [
   { cat:'nightlife',  emoji:'🍸', label:'Bar',         q:['node["amenity"="bar"]','node["amenity"="pub"]','node["amenity"="nightclub"]','node["amenity"="music_venue"]'] },
   { cat:'culture',    emoji:'🎭', label:'Culture',     q:['node["amenity"="theatre"]','node["amenity"="cinema"]','node["amenity"="arts_centre"]','way["amenity"="theatre"]'] },
   { cat:'books',      emoji:'📚', label:'Bookshop',    q:['node["shop"="books"]','node["shop"="music"]','node["shop"="second_hand"]','node["shop"="antiques"]'] }
-];
+].concat(City.discover?.layers || []);
+
+/* A pack may add layers, and the Indian ones have to — the same mistake
+   notable.mjs made with Wikidata classes, in a different vocabulary.
+
+   The list above is what a European city is made of. Counted inside
+   Delhi's own bounding box on 18 September 2026, what it does not ask
+   for: 280 named historic sites, 150 named waters, and 1,324 places
+   tagged `amenity=fast_food`. Delhi's index holds 4,457 places, so that
+   is a third of the city missing, and the missing third is its tombs,
+   its forts and most of where people actually eat.
+
+   `fast_food` is the one worth explaining. In Paris it means a kebab
+   shop and the guide loses nothing by skipping it; in Delhi and
+   Bengaluru it is how OpenStreetMap tags the counter places, the tiffin
+   rooms and the chaat stalls, which is not a lesser kind of eating. The
+   chains that come with it are demoted from the data itself — a name
+   that appears all over the city is a chain, which js/nearby.js derives
+   from the shipped file rather than a list anybody maintains.
+
+   Paris is deliberately not given this layer. Adding it there would be a
+   real change to a live city's index and it should be measured on its
+   own, not inherited from a fix for somewhere else. */
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 

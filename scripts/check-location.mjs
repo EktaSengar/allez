@@ -213,9 +213,11 @@ const EXPECT = {
   delhi: {
     probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],
     need: 2,
-    /* 21, down from 23 when the pack learned to ask Wikidata about
-       tombs and mosques. */
-    overshare: 21,
+    /* 14, from 23: first when the pack learned to ask Wikidata about
+       tombs and mosques, then again when it asked OpenStreetMap about
+       historic sites and counter food. A denser map means a probe finds
+       something of its own rather than reaching for the same few. */
+    overshare: 14,
     /* Still zero of 160, and worth understanding rather than explaining
        away. Delhi's sourced tier went from 81 records to 267 when the
        pack declared its own Wikidata classes — but those records are

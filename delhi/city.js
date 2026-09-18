@@ -794,7 +794,20 @@ const City = (() => {
   /* Luma only — no municipal feed here carries what you could take up. */
   const practices = { city: null };
 
-  return { id, name, ua, bbox, serviceWorker, zone, air, seasons, reach, notable, luma, practices,
+  /* ---------- what else this city is made of ----------
+
+     Extra OpenStreetMap layers for scripts/discover.mjs, on top of the
+     cafés and bakeries it looks for everywhere. See the note above
+     LAYERS in that file for the counts that prompted these. */
+  const discover = {
+    layers: [
+      { cat:'culture',    emoji:'🏛️', label:'Historic',    q:['way["historic"]["name"]','node["historic"]["name"]'] },
+      { cat:'park',       emoji:'💧', label:'Water',       q:['way["natural"="water"]["name"]'], minName:true },
+      { cat:'restaurant', emoji:'🍛', label:'Counter food', q:['node["amenity"="fast_food"]["name"]','node["amenity"="food_court"]["name"]'] }
+    ]
+  };
+
+  return { id, name, ua, bbox, serviceWorker, zone, air, seasons, reach, notable, luma, practices, discover,
            centre, views, holidays, shutsOnHoliday, money, weather };
 })();
 
