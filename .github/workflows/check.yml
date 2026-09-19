@@ -63,7 +63,7 @@ jobs:
       # Per city, because refresh.mjs reads the one it is told about.
       - name: Data is valid
         run: |
-          for city in paris bay-area bengaluru delhi; do
+          for city in paris bay-area bengaluru delhi new-york; do
             HOMEGROUND_CITY=$city node scripts/refresh.mjs --check
           done
 
@@ -78,7 +78,7 @@ jobs:
       # three nothing tested.
       - name: Moving still changes the answers
         run: |
-          for city in paris bay-area bengaluru delhi; do
+          for city in paris bay-area bengaluru delhi new-york; do
             echo "── $city"
             HOMEGROUND_CITY=$city node scripts/check-location.mjs
           done

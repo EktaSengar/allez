@@ -221,14 +221,39 @@ them rather than invent its own:
 - **expiry is applied when records are built**, against today's date, so a stale file cannot show a finished event
 - `check-location.mjs` **floors ratchet** — coverage that falls is a failure, not a smaller number
 
-## New York, if there is a fifth city
+## New York, and a correction
 
-It is by a wide margin the cheapest one to add, because it is the only city
-that has both halves: Socrata for facilities like San Francisco, **and** a
-real municipal events feed like Paris — Parks Events Listing and Public
-Programs Special Events, 21.8K rows — **and** universities running Localist,
-**and** a strong Luma calendar. Everything already written would be
-reconfiguration rather than new collectors.
+It was the cheapest of the five to add and it was cheap for the reasons
+expected — the zones come from the city's own 2020 Neighborhood Tabulation
+Areas, and the pack passed the contract on its first run. One thing in this
+file was wrong, and the way it was wrong is the general lesson:
+
+**NYC Parks Events Listing (`fudw-fgrp`) is not a feed.** It has titles,
+times, prices, links and — rare for an American city — coordinates, in a
+second table joined on `event_id`. It also stops on **28 December 2019**.
+74,880 rows, none of them in this decade. A collector was written against it
+before anybody ran `max(date)`, and it returned zero.
+
+So: **check the newest row before writing anything.** A dataset's shape tells
+you nothing about whether it is alive, and a Socrata catalogue will list a
+dead dataset next to a live one without comment.
+
+The live one is **NYC Permitted Event Information (`tvpp-9vvx`)**, running
+through 2027, and it has the categories that matter — in a sixty-day window,
+167 farmers markets, 166 block parties, 155 street events, 56 parades. What
+it has no trace of is coordinates: `event_location` is free text, either a
+park and a facility number or a street between two cross-streets. Using it
+means geocoding a few hundred rows through Nominatim at a request a second,
+which is a piece of work rather than a config line. **It is the obvious next
+thing to build for this city.**
+
+University Localist was checked too: Columbia answers 403, NYU does not run
+one, and Fordham's is 89 events a month and mostly fixtures — thin enough
+that adding it would be noise rather than coverage.
+
+New York therefore ships on Luma alone, which is 30 events a fortnight
+across four boroughs, plus the OpenStreetMap and Wikidata layers that need
+no city portal at all.
 
 ## Adding a city, by country
 

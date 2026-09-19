@@ -234,6 +234,21 @@ const EXPECT = {
        hand-written ones moved it eleven. */
     floor: 11
   },
+  'new-york': {
+    /* One per borough, which is how this city is actually divided, plus
+       the densest bit of Manhattan. */
+    probes: ['west-village', 'williamsburg', 'astoria-central', 'mott-haven-port-morris',
+             'midtown-south-flatiron-union-square'],
+    lead: 'west-village',
+    need: 2,
+    /* 68 of 160 on the day the pack was written, with no editorial tier
+       at all — the best any city has managed from generated sources
+       alone, and the reason is Wikidata: 4,223 records here against
+       Paris's 838. New York is written about more than anywhere else on
+       earth and it shows up as coverage. */
+    floor: 68,
+    overshare: 26
+  },
   bengaluru: {
     probes: ['indiranagar', 'jayanagar', 'malleswaram', 'whitefield', 'koramangala'],
     need: 2,

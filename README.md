@@ -1,6 +1,6 @@
 # Allez
 
-A city guide for the people who live in one. Paris, Delhi, Bengaluru and the Bay Area, at **[allez.city](https://allez.city)**.
+A city guide for the people who live in one. Paris, Delhi, Bengaluru, the Bay Area and New York, at **[allez.city](https://allez.city)**.
 
 **Live at → [allez.city](https://allez.city)**
 
@@ -17,9 +17,9 @@ doing so.
 
 Four things worth knowing before you change anything.
 
-**It is one engine and four city packs.** `js/` holds the engine — ranking,
+**It is one engine and five city packs.** `js/` holds the engine — ranking,
 distance, expiry, photographs, the render path. Each of `paris/`, `delhi/`,
-`bengaluru/` and `bay-area/` holds a pack: the vocabulary, the zones, the
+`bengaluru/`, `bay-area/` and `new-york/` holds a pack: the vocabulary, the zones, the
 transit grammar, the money, the calendar, which views exist and which sources
 feed them. **The engine never names a city.** If you find yourself writing
 `Paris` or `₹` or `arrondissement` in `js/`, it belongs in a pack instead — see
@@ -27,9 +27,10 @@ feed them. **The engine never names a city.** If you find yourself writing
 
 **The `why` fields are the whole product.** Every curated record says why *you*
 would care, in a human sentence somebody wrote. That is the difference between
-this and a listings site, and it does not scale, which is fine. Three of the
-four cities have an empty curated tier right now because nobody has written
-theirs yet. Adding rows is not progress; adding judgement is.
+this and a listings site, and it does not scale, which is fine. Four of the
+five cities have an empty curated tier right now because nobody has written
+theirs yet — though the Bay Area, Delhi and Bengaluru now have an editorial
+one, which is the researched-but-never-visited tier below it. Adding rows is not progress; adding judgement is.
 
 **Some of the code looks wrong and is not.** Script tags above `<main>`, a
 `:empty` CSS reservation, `<picture>` where an `<img>` would do, a 200 ms
@@ -66,9 +67,9 @@ node scripts/serve.mjs      # http://localhost:4321
 ```
 
 `http://localhost:4321/` is the city chooser; `/paris/`, `/delhi/`,
-`/bengaluru/` and `/bay-area/` are the cities.
+`/bengaluru/`, `/bay-area/` and `/new-york/` are the cities.
 
-### Adding a fifth city
+### Adding a sixth city
 
 **Read [SOURCES.md](SOURCES.md) first.** What a new pack can reuse depends
 almost entirely on which country the city is in, and far less on how big it
@@ -562,7 +563,8 @@ allez.city/paris/      paris/          index.html · city.js · data/ · sw.js
 allez.city/delhi/      delhi/
 allez.city/bengaluru/  bengaluru/      + views/yourside.js
 allez.city/bay-area/   bay-area/
-                       css/ js/        shared by all four
+allez.city/new-york/   new-york/
+                       css/ js/        shared by all five
                        scripts/        shared build and check tools
 ```
 
@@ -582,7 +584,7 @@ Records say `zone`, not `arr`. In Paris a zone is an arrondissement and the
 pack supplies the twenty of them; in Bengaluru it would be a ward and in Delhi
 a colony. Only the pack knows which — the engine treats a zone as an opaque
 key with a centroid, which is why the same shard index, the same nearest-first
-ordering and the same one-per-zone cap work in all four.
+ordering and the same one-per-zone cap work in all five.
 
 The rule it exists to hold is that **the engine never names a city**. Anything
 that needs to know what a neighbourhood is called, how money is written or when

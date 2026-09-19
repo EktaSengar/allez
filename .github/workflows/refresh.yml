@@ -22,6 +22,8 @@ on:
       - 'delhi/city.js'
       - 'bengaluru/data/**'
       - 'bengaluru/city.js'
+      - 'new-york/data/**'
+      - 'new-york/city.js'
       - 'css/**'
       - 'js/**'
       - 'scripts/**'
@@ -91,7 +93,7 @@ jobs:
       - name: Collect what is on, city by city (daily)
         if: github.event_name == 'schedule'
         run: |
-          for city in bay-area delhi bengaluru; do
+          for city in bay-area delhi bengaluru new-york; do
             HOMEGROUND_CITY=$city node scripts/events-city.mjs \
               || echo "$city events skipped — a source was unavailable"
             HOMEGROUND_CITY=$city node scripts/practices.mjs \
@@ -105,7 +107,7 @@ jobs:
       - name: Prune expired entries and validate
         if: github.event_name != 'pull_request'
         run: |
-          for city in paris bay-area delhi bengaluru; do
+          for city in paris bay-area delhi bengaluru new-york; do
             HOMEGROUND_CITY=$city node scripts/refresh.mjs
           done
 
@@ -121,7 +123,7 @@ jobs:
             node scripts/notable.mjs  || echo "notable layer skipped — Wikidata unavailable"
             node scripts/invaders.mjs || echo "invaders skipped — Overpass unavailable"
             HOMEGROUND_CITY=bay-area node scripts/civic-bay.mjs || echo "bay civic skipped — data.sfgov.org unavailable"
-            for city in bay-area delhi bengaluru; do
+            for city in bay-area delhi bengaluru new-york; do
               HOMEGROUND_CITY=$city node scripts/discover.mjs || echo "$city discovery skipped — Overpass unavailable"
               HOMEGROUND_CITY=$city node scripts/notable.mjs  || echo "$city notable skipped — Wikidata unavailable"
             done
@@ -140,7 +142,7 @@ jobs:
       - name: Resolve photographs for the generated tiers
         if: github.event_name != 'pull_request'
         run: |
-          for city in paris bay-area delhi bengaluru; do
+          for city in paris bay-area delhi bengaluru new-york; do
             HOMEGROUND_CITY=$city node scripts/photos.mjs \
               || echo "$city photos skipped — Wikimedia unavailable"
           done
@@ -175,12 +177,12 @@ jobs:
       - name: Commit any changes
         if: github.event_name != 'pull_request'
         run: |
-          if [ -z "$(git status --porcelain paris delhi bengaluru bay-area scripts/photo-cache.json)" ]; then
+          if [ -z "$(git status --porcelain paris delhi bengaluru bay-area new-york scripts/photo-cache.json)" ]; then
             echo "Nothing changed — no events expired and assets already stamped."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add paris delhi bengaluru bay-area scripts/photo-cache.json
+          git add paris delhi bengaluru bay-area new-york scripts/photo-cache.json
           git commit -m "chore: prune expired events and restamp assets ($(date -u +%Y-%m-%d))"
           git push
