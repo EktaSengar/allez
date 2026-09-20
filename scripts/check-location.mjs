@@ -228,11 +228,10 @@ const EXPECT = {
   delhi: {
     probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],
     need: 2,
-    /* 14, from 23: first when the pack learned to ask Wikidata about
-       tombs and mosques, then again when it asked OpenStreetMap about
-       historic sites and counter food. A denser map means a probe finds
-       something of its own rather than reaching for the same few. */
-    overshare: 14,
+    /* 23 → 14 as the pack learned to ask Wikidata and OpenStreetMap the
+       right questions, then 16 when the Luma feed rolled and took three
+       dated events with it — see DRIFT above. */
+    overshare: 16,
     /* Still zero of 160, and worth understanding rather than explaining
        away. Delhi's sourced tier went from 81 records to 267 when the
        pack declared its own Wikidata classes — but those records are
@@ -243,11 +242,15 @@ const EXPECT = {
        So the number is honest and the fix is not another source: it is
        somebody writing down where to eat.
 
-       11 of 160, and it was 0 until eleven editorial records were
-       written on 18 September 2026. That is the whole demonstration:
-       267 sourced records moved this number not at all, and eleven
-       hand-written ones moved it eleven. */
-    floor: 11
+       0 → 11 with eleven editorial records, then 11 → 45 with four
+       more. The four were markets and a book street, and the difference
+       is the whole lesson: the first eleven were restaurants and
+       monuments in categories that already had something, and the next
+       four were the only records in a category that had nothing.
+       Markets showed a single dot in all forty sampled colonies.
+
+       Find the dead column before writing anything. */
+    floor: 45
   },
   'new-york': {
     /* One per borough, which is how this city is actually divided, plus
@@ -287,11 +290,15 @@ const EXPECT = {
        edges have something of their own.
 
        It falls when the editorial tier spreads out, not when more is
-       added to the centre. Whitefield and Jayanagar are what close it. */
-    overshare: 21,
-    /* 28 of 160. Was 18 off the notable tier alone; twelve editorial
-       records added ten. */
-    floor: 28
+       added to the centre — and it did: 21 down to 15 once the markets
+       and the bakery gave the probes something of their own to reach
+       for. */
+    overshare: 15,
+    /* 18 off the notable tier alone; 28 with twelve editorial records;
+       62 with four more. The four were markets and an Iyengar bakery —
+       the market column had been blank in every sampled neighbourhood,
+       meaning no market record was within reach of anywhere. */
+    floor: 62
   }
 };
 
