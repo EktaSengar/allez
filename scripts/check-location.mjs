@@ -150,7 +150,22 @@ const KINDS = [
    It fails when that number falls, not when a particular cell does, and
    the number is raised by hand as the tiers fill. Paris has no floor and
    keeps the stricter rule: every cell, every time. Raising a floor is
-   the work; lowering one is an admission. */
+   the work; lowering one is an admission.
+
+   Both numbers carry a tolerance, and the reason is worth knowing
+   before anybody tightens it. In a city whose only events source is a
+   rolling fortnight of Luma, the dated records turn over daily without
+   anybody touching the code — Delhi went from 13 events to 10 overnight
+   and its sharing moved 14 to 16, its coverage 11 to 13, on identical
+   data files otherwise. Events compete with places for the top five, so
+   fewer of them both raises coverage and makes probes reach for the same
+   evergreen records.
+
+   A ratchet that fails on that is a ratchet people learn to ignore,
+   which is the failure check-perf.mjs is written to avoid. So drift of
+   a couple either way is reported and not failed; a real regression is
+   bigger than the feed. */
+const DRIFT = 2;
 const EXPECT = {
   paris: {
     /* The old home, the quarter in the bug report, somewhere genuinely
@@ -241,13 +256,23 @@ const EXPECT = {
              'midtown-south-flatiron-union-square'],
     lead: 'west-village',
     need: 2,
-    /* 68 of 160 on the day the pack was written, with no editorial tier
-       at all — the best any city has managed from generated sources
-       alone, and the reason is Wikidata: 4,223 records here against
-       Paris's 838. New York is written about more than anywhere else on
-       earth and it shows up as coverage. */
-    floor: 68,
-    overshare: 26
+    /* 68 of 160 with no editorial tier at all — the best any city has
+       managed from generated sources alone, because Wikidata holds 4,223
+       records here against Paris's 838. Then 109, from sixteen
+       hand-written ones.
+
+       Those sixteen were chosen off this check's own output rather than
+       from a list of famous places: markets were map-only in all forty
+       sampled neighbourhoods, and coffee and bread went dark across the
+       Bronx and eastern Queens. Three market records and two Bronx
+       bakeries move more cells than sixteen more restaurants in
+       Manhattan would have.
+
+       Which is also why over-sharing *fell* here, 26 to 23, where
+       Bengaluru's rose: records written at the edges pull probes apart,
+       records written in the middle pull them together. */
+    floor: 109,
+    overshare: 23
   },
   bengaluru: {
     probes: ['indiranagar', 'jayanagar', 'malleswaram', 'whitefield', 'koramangala'],
@@ -544,8 +569,11 @@ if (fixed.length) {
 if (PLAN.overshare !== undefined) {
   console.log(`\n${oversharing.length} pair/kind lists share more than a coincidence — ` +
     `the vouched records sit in too few ${City.zone.many}.`);
-  if (oversharing.length > PLAN.overshare)
-    failures.push(`sharing got worse: ${oversharing.length} pair/kind lists overlap, and ${PLAN.overshare} did before.`);
+  if (oversharing.length > PLAN.overshare + DRIFT)
+    failures.push(`sharing got worse: ${oversharing.length} pair/kind lists overlap, and ${PLAN.overshare} did before ` +
+      `(drift of ${DRIFT} allowed for the events feed turning over).`);
+  else if (oversharing.length > PLAN.overshare)
+    console.log(`  ${oversharing.length - PLAN.overshare} above the ceiling of ${PLAN.overshare}, inside the drift the feed causes.`);
   else if (oversharing.length < PLAN.overshare)
     console.log(`  ${PLAN.overshare - oversharing.length} fewer than the ceiling of ${PLAN.overshare} — lower it in EXPECT.${City.id}.`);
 }
@@ -554,9 +582,9 @@ if (PLAN.overshare !== undefined) {
 if (PLAN.floor !== undefined) {
   const cells = ALL_ARRS.length * EVERYDAY.length;
   console.log(`\n${clearing} of ${cells} ${City.zone.one}/category cells know something about what they suggest.`);
-  if (clearing < PLAN.floor)
-    failures.push(`coverage fell: ${clearing} cells clear the bar, and ${PLAN.floor} did before. ` +
-      `Something that was written up has gone, or the retrieval stopped finding it.`);
+  if (clearing < PLAN.floor - DRIFT)
+    failures.push(`coverage fell: ${clearing} cells clear the bar, and ${PLAN.floor} did before ` +
+      `(drift of ${DRIFT} allowed). Something that was written up has gone, or the retrieval stopped finding it.`);
   else if (clearing > PLAN.floor)
     console.log(`  ${clearing - PLAN.floor} more than the floor of ${PLAN.floor} — raise it in EXPECT.${City.id}.`);
   else

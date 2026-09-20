@@ -1,6 +1,516 @@
 {
- "generated": "2026-09-18",
- "note": "Researched recommendations, written in the site’s voice but by somebody who has not been.",
- "rules": [],
- "items": []
+ "generated": "2026-09-20",
+ "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. Written against the measured gaps rather than the famous names: markets were map-only in all forty sampled neighbourhoods, and coffee and bread went dark across the Bronx and eastern Queens.",
+ "rules": [
+  "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
+  "Say what to order and when to go. 'Lovely atmosphere' helps nobody.",
+  "No opening hours in prose. OpenStreetMap carries them, js/hours.js reads them, and a time written here is a time that rots.",
+  "quality and uniqueness cap at 4 here. 5 is reserved for somewhere one of you actually loved.",
+  "Always pin `match` with a zone. Manhattan has four Levains and Queens has two Cannelles.",
+  "Write where the check says the guide is thin, not where it is easy. Manhattan does not need more help."
+ ],
+ "items": [
+  {
+   "id": "osm-essex-market-81436--147976",
+   "title": "Essex Market",
+   "type": "market",
+   "zone": "lower-east-side",
+   "coords": [
+    40.71792,
+    -73.98805
+   ],
+   "area": "Essex Street",
+   "url": "https://www.essexmarket.nyc/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Essex Market",
+    "zone": "lower-east-side",
+    "type": "market"
+   },
+   "why": "LaGuardia built the original in 1940 to get the pushcarts off the Lower East Side streets — four buildings and 475 stalls, for the Jewish and Italian sellers he had just displaced. It moved across Essex Street in 2019 into a space three times the size. Still the best single room in the city for buying things rather than being sold them.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Wikipedia; Turnstile Tours; Village Preservation; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19",
+   "i": "a/a3/39-49_Essex_Street_tenements.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-grand-army-plaza-greenmarket-81345--147940",
+   "title": "Grand Army Plaza Greenmarket",
+   "type": "market",
+   "zone": "prospect-heights",
+   "coords": [
+    40.67241,
+    -73.96998
+   ],
+   "area": null,
+   "url": "https://www.grownyc.org/greenmarket/brooklyn-grand-army-plaza",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Grand Army Plaza Greenmarket",
+    "zone": "prospect-heights",
+    "type": "market"
+   },
+   "why": "Saturdays at the northwest corner of Prospect Park since 1989, and the second-largest greenmarket in the city after Union Square — over six hundred varieties across the year. Go early and walk into the park afterwards; the Brooklyn Museum and the Botanic Garden are both a few minutes from the same corner.",
+   "quality": 4,
+   "uniqueness": 4,
+   "days": [
+    6
+   ],
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "GrowNYC; Prospect Park Alliance; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-smorgasburg-81442--147924",
+   "title": "Smorgasburg",
+   "type": "market",
+   "zone": "williamsburg",
+   "coords": [
+    40.72095,
+    -73.96224
+   ],
+   "area": "Kent Avenue",
+   "url": "https://www.smorgasburg.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Smorgasburg",
+    "zone": "williamsburg",
+    "type": "market"
+   },
+   "why": "The open-air food market that turned into the city's clearest view of what people will queue for this year. Williamsburg on Saturdays, on the waterfront. Go hungry and early — by one o'clock every good stall has a line and the East River Ferry back is full.",
+   "quality": 4,
+   "uniqueness": 4,
+   "days": [
+    6
+   ],
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-russ-daughters-81445--147976",
+   "title": "Russ & Daughters",
+   "type": "deli",
+   "zone": "east-village",
+   "coords": [
+    40.72258,
+    -73.98819
+   ],
+   "area": "East Houston Street",
+   "url": "https://shop.russanddaughters.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Russ & Daughters",
+    "zone": "east-village",
+    "type": "deli"
+   },
+   "why": "An appetizing store — the Jewish trade that sells the fish and the dairy, while the delicatessen next door sells the meat. Joel Russ arrived from Poland around 1905, carried mushrooms on his shoulders, bought a pushcart, and opened a shop in 1914. In 1933 he made his three daughters partners and renamed it, which is thought to be the first American business with '& Daughters' in the name. Sable, not lox, if somebody will let you choose.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia; the shop's own history; Village Preservation; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19",
+   "i": "a/a7/East_Houston_Street_NYC_9183.JPG",
+   "ik": "c"
+  },
+  {
+   "id": "osm-arepa-lady-81494--147777",
+   "title": "Arepa Lady",
+   "type": "restaurant",
+   "zone": "jackson-heights",
+   "coords": [
+    40.74692,
+    -73.88849
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Arepa Lady",
+    "zone": "jackson-heights",
+    "type": "restaurant"
+   },
+   "why": "María Piedad Cano was a judge in Medellín and left with four sons when Colombia turned in the eighties. She could not find work, a fellow vendor taught her to make arepas, and her cart on Roosevelt Avenue became the thing people crossed the city for — the New York Press called her the Saintly Arepa Lady in 1993 and the name stuck. Order the arepa de choclo, the sweet-corn one folded like an empanada, which is the harder one to make and the reason to come.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "CBS News; Time Out; NYC Tourism; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-cannelle-patisserie-81520--147784",
+   "title": "Cannelle Patisserie",
+   "type": "bakery",
+   "zone": "jackson-heights",
+   "coords": [
+    40.7601,
+    -73.89202
+   ],
+   "area": "31st Avenue",
+   "url": "https://cannellepatisserie.com/cannelle-patisserie-queens/",
+   "cuisine": "frwnch",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Cannelle Patisserie",
+    "zone": "jackson-heights",
+    "type": "bakery"
+   },
+   "why": "In a strip mall off 31st Avenue, and the best French pastry in the city at a third of the Manhattan price. Jean-Claude Perennou was executive pastry chef at the Waldorf for over a decade; he opened this with Gnanasampanthan Sabaratnam, a sous-chef he met there, in 2007. The canelé it is named for, the Paris-Brest, and the pear bourdaloue.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "NYC Tourism; the bakery's own history; QNS; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-addeo-bakers-81709--147775",
+   "title": "Addeo Bakers",
+   "type": "bakery",
+   "zone": "belmont",
+   "coords": [
+    40.85446,
+    -73.88737
+   ],
+   "area": "Hughes Avenue",
+   "url": "https://addeobakers.com",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Addeo Bakers",
+    "zone": "belmont",
+    "type": "bakery"
+   },
+   "why": "Arthur Avenue, which is the Bronx's Little Italy and the one New York actually shops in. Gennaro and Vincenza Addeo opened a bread shop here in 1944 and the third generation still runs it, on bread-slicing machines and scales old enough to be exhibits. Ask for the pane di ciccioli — lard bread, studded with pork, and increasingly hard to find anywhere.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Bronx Little Italy; the bakery's own history; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-lloyd-s-carrot-cake-81576--147899",
+   "title": "Lloyd's Carrot Cake",
+   "type": "bakery",
+   "zone": "east-harlem-south",
+   "coords": [
+    40.7879,
+    -73.94927
+   ],
+   "area": "Lexington Avenue",
+   "url": "https://www.lloydscarrotcake.com",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "LLoyd's Carrot Cake",
+    "zone": "van-cortlandt-park",
+    "type": "bakery"
+   },
+   "why": "Riverdale since April 1986. Lloyd Adams came from St Thomas at nine years old with his mother's recipe, never advertised, and the cake did the rest — his children run it now. It sells carrot cake and very little else, which is the correct amount of menu.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "ABC7 New York; the shop's own history; NYC Tourism; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19",
+   "i": "0/05/Lexington_Ave_From_Chrysler_Building.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-sey-coffee-81411--147865",
+   "title": "SEY Coffee",
+   "type": "cafe",
+   "zone": "bushwick-west",
+   "coords": [
+    40.70542,
+    -73.93238
+   ],
+   "area": "Grattan Street",
+   "url": "https://www.seycoffee.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "SEY Coffee",
+    "zone": "bushwick-west",
+    "type": "cafe"
+   },
+   "why": "A roastery in Bushwick with a skylit white room attached, and the most serious light-roast filter coffee in the city. Order the filter rather than a flat white, ask what they are excited about, and expect to be told at length. Go on a weekday; weekends it is full of people photographing it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19",
+   "i": "f/ff/Grattan_Street_Parkville_(19_September_2024).jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-devocion-81377--147967",
+   "title": "Devoción",
+   "type": "cafe",
+   "zone": "downtown-brooklyn-dumbo-boerum-hill",
+   "coords": [
+    40.6886,
+    -73.98347
+   ],
+   "area": "Livingston Street",
+   "url": "https://www.devocion.com/pages/devocion-cafe-downtown-brooklyn-ny",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Devoción",
+    "zone": "downtown-brooklyn-dumbo-boerum-hill",
+    "type": "cafe"
+   },
+   "why": "Colombian coffee flown from the farm rather than shipped, which is the whole argument and is on the wall in case you miss it. The Williamsburg room has a glass roof over a wall of plants and is the nicest place to work in Brooklyn that does not mind you working.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-abraco-81455--147972",
+   "title": "Abraço",
+   "type": "cafe",
+   "zone": "east-village",
+   "coords": [
+    40.7273,
+    -73.98619
+   ],
+   "area": "East 7th Street",
+   "url": "http://www.abraconyc.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Abraço",
+    "zone": "east-village",
+    "type": "cafe"
+   },
+   "why": "A counter and almost no seats on East 7th Street. The olive oil cake is the order — it has been the order for fifteen years — with an espresso standing up. Not a place to sit with a laptop, and better for it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-astoria-bookshop-81513--147862",
+   "title": "Astoria Bookshop",
+   "type": "books",
+   "zone": "queensbridge-ravenswood-dutch-kills",
+   "coords": [
+    40.75639,
+    -73.93085
+   ],
+   "area": "30th Street",
+   "url": "https://www.astoriabookshop.com/",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Astoria Bookshop",
+    "zone": "queensbridge-ravenswood-dutch-kills",
+    "type": "books"
+   },
+   "why": "The general bookshop Queens did not have until 2013, on 31st Street under the N train. Strong on translated fiction and on writers from the neighbourhood, which in Astoria means most of the world. Events most weeks.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-greenlight-bookstore-81372--147949",
+   "title": "Greenlight Bookstore",
+   "type": "books",
+   "zone": "fort-greene",
+   "coords": [
+    40.68624,
+    -73.97463
+   ],
+   "area": "Fulton Street",
+   "url": "https://www.greenlightbookstore.com/",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Greenlight Bookstore",
+    "zone": "fort-greene",
+    "type": "books"
+   },
+   "why": "Fort Greene, on the corner of South Portland, and the shop that proved a neighbourhood bookstore could still open in 2009 and work. Good on Brooklyn writers for the obvious reason that most of them live within a mile of it.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-mcsorley-s-old-ale-house-81458--147979",
+   "title": "McSorley's Old Ale House",
+   "type": "nightlife",
+   "zone": "greenwich-village",
+   "coords": [
+    40.72876,
+    -73.9897
+   ],
+   "area": "East 7th Street",
+   "url": "https://mcsorleysoldalehouse.nyc/",
+   "cuisine": "pub",
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "McSorley's Old Ale House",
+    "zone": "greenwich-village",
+    "type": "nightlife"
+   },
+   "why": "Sawdust on the floor, two choices of ale — light or dark, served two at a time — and it did not admit women until a court made it in 1970, which the bar will tell you about itself. Go in the afternoon. In the evening it is mostly people who have read about it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-katz-s-delicatessen-81445--147975",
+   "title": "Katz's Delicatessen",
+   "type": "restaurant",
+   "zone": "east-village",
+   "coords": [
+    40.72234,
+    -73.98735
+   ],
+   "area": "East Houston Street",
+   "url": "https://www.katzsdelicatessen.com",
+   "cuisine": "deli",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Katz's Delicatessen",
+    "zone": "east-village",
+    "type": "restaurant"
+   },
+   "why": "Since 1888, and the ticket system at the door is not a gimmick — lose it and you pay for the privilege. Pastrami on rye, hand-cut, and you tip the carver at the counter rather than queueing for a table. Touristy and worth it, which is a rarer combination than it sounds.",
+   "quality": 4,
+   "uniqueness": 4,
+   "touristy": true,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19",
+   "i": "a/a7/East_Houston_Street_NYC_9183.JPG",
+   "ik": "c"
+  },
+  {
+   "id": "osm-di-palo-s-81438--147993",
+   "title": "Di Palo's",
+   "type": "deli",
+   "zone": "soho-little-italy-hudson-square",
+   "coords": [
+    40.7192,
+    -73.99655
+   ],
+   "area": "Grand Street",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Di Palo's",
+    "zone": "soho-little-italy-hudson-square",
+    "type": "deli"
+   },
+   "why": "Grand Street, family-run since 1925, and the last of Little Italy's food shops that is still a food shop rather than a souvenir. Take a number. Somebody will cut you a piece of whatever you are undecided about and then talk you through it, which is why the number takes so long.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  }
+ ]
 }

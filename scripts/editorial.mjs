@@ -42,8 +42,28 @@ const compactId = Rec.compactId;
 /* Exact name first, then a contains match, then the same words in any
    order — enough slack for "Boulangerie Utopie" vs "Utopie", not enough
    to match a different shop. */
+/* A record whose `match` names no zone, in a city where that name
+   exists more than once, is a coin toss the writer did not know they
+   were making — and it has gone wrong twice: 'Bukhara' resolved to a
+   restaurant in Noida rather than the one in Chanakyapuri, and Lloyd's
+   Carrot Cake to the Harlem branch of a shop the card describes in
+   Riverdale. Both read as correct in the output, because both are real
+   places with the right name.
+
+   So an ambiguous match is reported. It is not an error — plenty of
+   names are unique enough not to need a zone — but it is the one thing
+   this file cannot check for itself. */
+const ambiguous = [];
+
 function findPlace(pool, m) {
   const want = flat(m.name);
+  if (m.zone == null) {
+    const sameName = pool.filter(p => flat(p.n) === want &&
+      (m.type == null || p.c === m.type));
+    if (sameName.length > 1)
+      ambiguous.push(`${m.name} — ${sameName.length} of them (${
+        [...new Set(sameName.map(p => p.a))].slice(0, 4).join(', ')})`);
+  }
   const inArr = pool.filter(p => (m.zone == null || p.a === m.zone) &&
                                  (m.type == null || p.c === m.type));
   const exact = inArr.find(p => flat(p.n) === want);
@@ -104,6 +124,10 @@ async function run() {
   items.forEach(i => { byArr[i.zone] = (byArr[i.zone] || 0) + 1; byType[i.type] = (byType[i.type] || 0) + 1; });
 
   console.log(`\n  ${resolved} of ${doc.items.length} resolved against the discovery index`);
+  if (ambiguous.length) {
+    console.log(`\n  ${ambiguous.length} matched a name the city has more than one of — pin a zone:`);
+    ambiguous.forEach(a => console.log('    ? ' + a));
+  }
   if (Object.keys(byType).length) console.log('  by kind:', Object.entries(byType).map(([k, n]) => `${k}:${n}`).join(' '));
   if (Object.keys(byArr).length) console.log(`  per ${City.zone.one}:`, Object.entries(byArr)
     .sort((a, b) => a[0] - b[0]).map(([a, n]) => `${a}:${n}`).join(' '));

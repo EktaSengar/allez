@@ -1,315 +1,244 @@
 {
-  "generated": "2026-09-18",
-  "window": {
-    "from": "2026-09-18",
-    "to": "2026-11-17"
+ "generated": "2026-09-20",
+ "window": {
+  "from": "2026-09-20",
+  "to": "2026-11-19"
+ },
+ "source": "Luma — Delhi",
+ "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
+ "counts": {
+  "luma": 10
+ },
+ "items": [
+  {
+   "id": "luma-evtB6wYMVItmag9rsf",
+   "title": "3K Run with Heineken 0.0",
+   "emoji": "🏃",
+   "type": "event",
+   "categories": [
+    "sport"
+   ],
+   "zone": "sector-58",
+   "area": "Enji's - Speciality Coffee Bar & Bakehouse, Unit No. 9, The Boulevard at Magnum ",
+   "coords": [
+    28.411532299999998,
+    77.1067752
+   ],
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "why": "3K Run with Heineken 0.0 A fun 3K with the DRC community, followed by a post-run morning packed with good music, fun challenges, and a DJ set. Run with the crew, hang around after, take on a few challenges, and head home with some Heineken 0.0 goodies. Hosted by DelhiRunCollective",
+   "url": "https://luma.com/6qd0icno",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
   },
-  "source": "Luma — Delhi",
-  "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
-  "counts": {
-    "luma": 13
+  {
+   "id": "luma-evtzQZcme4Bi2QlWDH",
+   "title": "Mall Meets Movement",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "vasant-kunj",
+   "area": "Ambience Mall, Vasant Kunj, 2, Nelson Mandela Marg, Ambience Island, Vasant Kunj",
+   "coords": [
+    28.5414101,
+    77.15513589999999
+   ],
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "why": "Mall Meets Movement A morning of movement, community, and good vibes with The Gym Collective BeastLife. ✨ 3K & 5K Run ✨ Pilates ✨ Deadlift Challenge ✨ Merch 📍 Ambience Mall, Delhi 📅 20 Sept | ⏰ 7 AM See you there. Hosted by TheGymCollective",
+   "url": "https://luma.com/tomprduv",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
   },
-  "items": [
-    {
-      "id": "luma-evtRMVkgJDqeDRWmHw",
-      "title": "SoulAura Saturdayzz",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "sector-26",
-      "area": "Aravali Biodiversity Park, F4J6+PJ4, Acharya Shree Tulsi Marg, DLF Phase 3, Sect",
-      "coords": [
-        28.4817671,
-        77.11158379999999
-      ],
-      "start": "2026-09-19",
-      "end": "2026-09-19",
-      "why": "Schedule for the event 6:00–6:30 AM → Welcome + introductions + group photo 6:15–7:00 AM → Community run (3K/5K/10K) 7:00–7:20 AM → Stretching + recovery 7:20–7:50 AM → Coffee and conversations.. 7:50–8:00 AM → Reflection, feedback QR code and the \"See you next Weekend!\" video https://chat.whatsapp.com/FZRQukbByYwC9grU",
-      "url": "https://luma.com/p9780f6s",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtFmnxrSxTrATCHpn",
-      "title": "RTJ Saturday Morning Roast Run",
-      "emoji": "🏃",
-      "type": "event",
-      "categories": [
-        "sport"
-      ],
-      "zone": "sector-53",
-      "area": null,
-      "coords": [
-        28.450002422173878,
-        77.09477638735702
-      ],
-      "start": "2026-09-19",
-      "end": "2026-09-19",
-      "why": "Anti-Run-Club Run, Saturday morning edition. We’ll meet at Beanly Coffee, lace up, and head out for a run with exactly the right amount of attitude. Afterward, the reward is coffee, but you’re paying for your own cup, and the vibe stays sharp, loud, and brutally honest. Bring your own water bottle, show up ready to mov",
-      "url": "https://luma.com/ppq71yt3",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtEvDuHxZzUMq42YQ",
-      "title": "New Delhi | Claude Build Day",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "mamura",
-      "area": "Webkul, H-28, H Block, Sector 63, Noida, Uttar Pradesh 201309, India",
-      "coords": [
-        28.629770299999997,
-        77.3778858
-      ],
-      "start": "2026-09-19",
-      "end": "2026-09-19",
-      "why": "Fable 5.1 just shipped. Let’s build on it with Claude Code before the rest of the world finishes reading the launch post. We’re bringing developers together in New Delhi to push Anthropic’s newest model on Claude Code. This is a Build Day: no long talks, no passive watching. You show up, see what the model can actually",
-      "url": "https://luma.com/claude-yc9k",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtfoy9xO0TSDWMc78",
-      "title": "Blood on the Clocktower - A Social Deduction Game Evening",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "nizamuddin",
-      "area": "Sunder Nursery, Bharat Scouts and Guides Marg, opposite Humayun Tomb Park, Nizam",
-      "coords": [
-        28.5956467,
-        77.2451691
-      ],
-      "start": "2026-09-19",
-      "end": "2026-09-19",
-      "why": "BotC is a game of murder and mystery, lies and logic, deduction and deception for five-to-twenty courageous players and one devious storyteller. A social game played in person, seated in a circle, each player receives either a ‘good’ or ‘evil’ token with their unique character on it. Good players share information to s",
-      "url": "https://luma.com/z23rs55w",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtB6wYMVItmag9rsf",
-      "title": "3K Run with Heineken 0.0",
-      "emoji": "🏃",
-      "type": "event",
-      "categories": [
-        "sport"
-      ],
-      "zone": "sector-58",
-      "area": "Enji's - Speciality Coffee Bar & Bakehouse, Unit No. 9, The Boulevard at Magnum ",
-      "coords": [
-        28.411532299999998,
-        77.1067752
-      ],
-      "start": "2026-09-20",
-      "end": "2026-09-20",
-      "why": "3K Run with Heineken 0.0 A fun 3K with the DRC community, followed by a post-run morning packed with good music, fun challenges, and a DJ set. Run with the crew, hang around after, take on a few challenges, and head home with some Heineken 0.0 goodies. Hosted by DelhiRunCollective",
-      "url": "https://luma.com/6qd0icno",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtzQZcme4Bi2QlWDH",
-      "title": "Mall Meets Movement",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "vasant-kunj",
-      "area": "Ambience Mall, Vasant Kunj, 2, Nelson Mandela Marg, Ambience Island, Vasant Kunj",
-      "coords": [
-        28.5414101,
-        77.15513589999999
-      ],
-      "start": "2026-09-20",
-      "end": "2026-09-20",
-      "why": "Mall Meets Movement A morning of movement, community, and good vibes with The Gym Collective BeastLife. ✨ 3K & 5K Run ✨ Pilates ✨ Deadlift Challenge ✨ Merch 📍 Ambience Mall, Delhi 📅 20 Sept | ⏰ 7 AM See you there. Hosted by TheGymCollective",
-      "url": "https://luma.com/tomprduv",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evt38031ZfaiZDuEX2",
-      "title": "The Consumer Circle",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "sector-12",
-      "area": "Gurugram, Haryana, India",
-      "coords": [
-        28.4594965,
-        77.0266383
-      ],
-      "start": "2026-09-20",
-      "end": "2026-09-20",
-      "why": "The Consumer Circle is presented by Cashfree Payments and Consumer Collective by Atrium About the Event: Indian consumer behaviour is changing faster than the playbooks built around it. Discovery, validation, purchase and loyalty are happening across increasingly fragmented surfaces, and building a great product is onl",
-      "url": "https://luma.com/w7nuc6rr",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "d/d6/Cyber_City_View.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "luma-evtS4DqW9PpHzOTtoi",
-      "title": "The LodhiWalk by PiXelance x RECdot",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "lodhi-colony",
-      "area": "Lodhi Art District, 18, Lodhi Rd, Gokalpuri, Institutional Area, Lodi Colony, Ne",
-      "coords": [
-        28.5853628,
-        77.2233349
-      ],
-      "start": "2026-09-20",
-      "end": "2026-09-20",
-      "why": "Ditch the tourist shots. Join PiXelance and RECdot for a hands-on street photography walk across the alleys and murals of the Lodhi Art District. Mentors Raj and Priyansh will lead on-ground prompts focusing on framing, candid moments, shadow play, and overcoming the hesitation of shooting on the street. When & Where: ",
-      "url": "https://luma.com/tqh18v0p",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtrwcTzpjt4ZRYzeQ",
-      "title": "A little more life🌻",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "chanakyapuri",
-      "area": "Nehru Park--Gate 1 Parking, H5VV+M56 Nehru park, Nehru Park, Niti Marg, Ramnagar",
-      "coords": [
-        28.594162599999997,
-        77.19303599999999
-      ],
-      "start": "2026-09-20",
-      "end": "2026-09-20",
-      "why": "This Suicide Prevention Month, Prabhav is bringing people together for an afternoon that’s all about life, connection and having a genuinely good time. We’ll be talking about life in all its forms, the good days, the bad days, the things that keep us going and everything in between. Expect games, fun activities, conver",
-      "url": "https://luma.com/cqzqbixy",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtWUxQpznIAT7Z3zW",
-      "title": "Foto Walk 2026 - New Delhi IN",
-      "emoji": "🏃",
-      "type": "event",
-      "categories": [
-        "sport"
-      ],
-      "zone": "chandni-chowk",
-      "area": null,
-      "coords": [
-        28.657081614575418,
-        77.23431746252614
-      ],
-      "start": "2026-09-26",
-      "end": "2026-09-26",
-      "why": "A photo walk, hosted by your local Foto community hosts, Photographer(s) Udit Kulshrestha & Shashwat Nagpal. We meet, we walk, we make photos together, no likes or followers involved. The 2026 edition of Fotowalk spans 75+ cities across 35+ countries and 6 Continents. What to expect You'll spend about two hours walking",
-      "url": "https://luma.com/jzioa7is",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtnAjBsMFeMOC8sAC",
-      "title": "Ctrl+Alt+Delusion",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "sector-44",
-      "area": "BEYOND JUST WORK, B7 10, Sushant Lok Phase I, Sector 43, Gurugram, Haryana 12200",
-      "coords": [
-        28.4597201,
-        77.0747413
-      ],
-      "start": "2026-09-26",
-      "end": "2026-09-26",
-      "why": "CTRL + ALT + DELUSION is a high energy meme to startup pitch show where the most chaotic, and hilarious ideas are transformed into surprisingly convincing business pitches. Contestants have to build, pitch, survive brutal roasts from the judges, and entertain the audience all while proving that even the worst ideas can",
-      "url": "https://luma.com/3kgrnxdn",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtYHgkXMEf6d4zMcQ",
-      "title": "The Big Aaaaart Club",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "satbari",
-      "area": "South Delhi, New Delhi, Delhi, India",
-      "coords": [
-        28.4929198,
-        77.1847921
-      ],
-      "start": "2026-09-27",
-      "end": "2026-09-27",
-      "why": "The Big Aaaaart Club is back again! 🎨 Join us on Sunday, 27th September for an evening of art, conversations, and community as we bring together people who simply love making, discovering, and experiencing art. Think of it as your excuse to step away from the usual Sunday plans and spend a few hours exploring your cre",
-      "url": "https://luma.com/65xmpzm9",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtXw8mSE6JANPmtOj",
-      "title": "🚶Curious Walking Club - New Delhi 🇮🇳 #1 | Friends of Screate Labs",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "sector-53",
-      "area": "DLF One Horizon Center, Gurugram, Horizon Centre, DLF One, Golf Course Rd, Horiz",
-      "coords": [
-        28.4511625,
-        77.09645309999999
-      ],
-      "start": "2026-10-01",
-      "end": "2026-10-01",
-      "why": "We’re bringing Curious Walking Club to New Delhi. 70+ people have already raised their hands. Now we're looking for the people who will actually show up for a 5K+ walk, bring someone interesting, and help make the local ritual stick. -- Curious Walking Club is a global, recurring 5K+ walking ritual started by Hien Nguy",
-      "url": "https://luma.com/gh92tx4q",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-09-18",
-      "quality": 3,
-      "uniqueness": 3
-    }
-  ]
+  {
+   "id": "luma-evt38031ZfaiZDuEX2",
+   "title": "The Consumer Circle",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "sector-12",
+   "area": "Gurugram, Haryana, India",
+   "coords": [
+    28.4594965,
+    77.0266383
+   ],
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "why": "The Consumer Circle is presented by Cashfree Payments and Consumer Collective by Atrium About the Event: Indian consumer behaviour is changing faster than the playbooks built around it. Discovery, validation, purchase and loyalty are happening across increasingly fragmented surfaces, and building a great product is onl",
+   "url": "https://luma.com/w7nuc6rr",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtS4DqW9PpHzOTtoi",
+   "title": "The LodhiWalk by PiXelance x RECdot",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "lodhi-colony",
+   "area": "Lodhi Art District, 18, Lodhi Rd, Gokalpuri, Institutional Area, Lodi Colony, Ne",
+   "coords": [
+    28.5853628,
+    77.2233349
+   ],
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "why": "Ditch the tourist shots. Join PiXelance and RECdot for a hands-on street photography walk across the alleys and murals of the Lodhi Art District. Mentors Raj and Priyansh will lead on-ground prompts focusing on framing, candid moments, shadow play, and overcoming the hesitation of shooting on the street. When & Where: ",
+   "url": "https://luma.com/tqh18v0p",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtF2DrdnMeKZCqafO",
+   "title": "Clay in Delhi : Delhi B2B CatchUp",
+   "emoji": "🖼️",
+   "type": "event",
+   "categories": [
+    "art"
+   ],
+   "zone": "connaught-place",
+   "area": null,
+   "coords": [
+    28.634165881019385,
+    77.22202269360407
+   ],
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "why": "B2B Delhi Catchup | Clay Community Delhi's B2B crowd, one room, no slides. If you work in GTM, RevOps, growth, or sales in Delhi NCR, this one's for you. It's an evening to meet the people building outbound systems, running ABM plays, and figuring out what actually works in pipeline right now. No keynote marathon. Just",
+   "url": "https://luma.com/1gdv8s2d",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtrwcTzpjt4ZRYzeQ",
+   "title": "A little more life🌻",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "chanakyapuri",
+   "area": "Nehru Park--Gate 1 Parking, H5VV+M56 Nehru park, Nehru Park, Niti Marg, Ramnagar",
+   "coords": [
+    28.594162599999997,
+    77.19303599999999
+   ],
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "why": "This Suicide Prevention Month, Prabhav is bringing people together for an afternoon that’s all about life, connection and having a genuinely good time. We’ll be talking about life in all its forms, the good days, the bad days, the things that keep us going and everything in between. Expect games, fun activities, conver",
+   "url": "https://luma.com/cqzqbixy",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtWUxQpznIAT7Z3zW",
+   "title": "Foto Walk 2026 - New Delhi IN",
+   "emoji": "🏃",
+   "type": "event",
+   "categories": [
+    "sport"
+   ],
+   "zone": "chandni-chowk",
+   "area": null,
+   "coords": [
+    28.657081614575418,
+    77.23431746252614
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-26",
+   "why": "A photo walk, hosted by your local Foto community hosts, Photographer(s) Udit Kulshrestha & Shashwat Nagpal. We meet, we walk, we make photos together, no likes or followers involved. The 2026 edition of Fotowalk spans 75+ cities across 35+ countries and 6 Continents. What to expect You'll spend about two hours walking",
+   "url": "https://luma.com/jzioa7is",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtnAjBsMFeMOC8sAC",
+   "title": "Ctrl+Alt+Delusion",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "sector-44",
+   "area": "BEYOND JUST WORK, B7 10, Sushant Lok Phase I, Sector 43, Gurugram, Haryana 12200",
+   "coords": [
+    28.4597201,
+    77.0747413
+   ],
+   "start": "2026-09-26",
+   "end": "2026-09-26",
+   "why": "CTRL + ALT + DELUSION is a high energy meme to startup pitch show where the most chaotic, and hilarious ideas are transformed into surprisingly convincing business pitches. Contestants have to build, pitch, survive brutal roasts from the judges, and entertain the audience all while proving that even the worst ideas can",
+   "url": "https://luma.com/3kgrnxdn",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtYHgkXMEf6d4zMcQ",
+   "title": "The Big Aaaaart Club",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "satbari",
+   "area": "South Delhi, New Delhi, Delhi, India",
+   "coords": [
+    28.4929198,
+    77.1847921
+   ],
+   "start": "2026-09-27",
+   "end": "2026-09-27",
+   "why": "The Big Aaaaart Club is back again! 🎨 Join us on Sunday, 27th September for an evening of art, conversations, and community as we bring together people who simply love making, discovering, and experiencing art. Think of it as your excuse to step away from the usual Sunday plans and spend a few hours exploring your cre",
+   "url": "https://luma.com/65xmpzm9",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
+  },
+  {
+   "id": "luma-evtXw8mSE6JANPmtOj",
+   "title": "🚶Curious Walking Club - New Delhi 🇮🇳 #1 | Friends of Screate Labs",
+   "emoji": "🫂",
+   "type": "event",
+   "categories": [
+    "community"
+   ],
+   "zone": "sector-53",
+   "area": "DLF One Horizon Center, Gurugram, Horizon Centre, DLF One, Golf Course Rd, Horiz",
+   "coords": [
+    28.4511625,
+    77.09645309999999
+   ],
+   "start": "2026-10-01",
+   "end": "2026-10-01",
+   "why": "We’re bringing Curious Walking Club to New Delhi. 70+ people have already raised their hands. Now we're looking for the people who will actually show up for a 5K+ walk, bring someone interesting, and help make the local ritual stick. -- Curious Walking Club is a global, recurring 5K+ walking ritual started by Hien Nguy",
+   "url": "https://luma.com/gh92tx4q",
+   "source": "Luma — Delhi",
+   "lastVerified": "2026-09-20",
+   "quality": 3,
+   "uniqueness": 3
+  }
+ ]
 }
