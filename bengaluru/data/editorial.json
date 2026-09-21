@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: Wikidata holds three cafes in the whole of Bengaluru and no open dataset in India describes everyday food. See SOURCES.md.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -509,6 +509,321 @@
    "labels": [],
    "source": "Published coverage; position confirmed against OpenStreetMap",
    "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-albert-bakery-25993-155228",
+   "title": "Albert Bakery",
+   "type": "bakery",
+   "zone": "frazer-town",
+   "coords": [
+    12.9966,
+    77.61422
+   ],
+   "area": "Mosque Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Albert Bakery",
+    "zone": "frazer-town",
+    "type": "bakery"
+   },
+   "why": "Mohammed Suleman started it as a godown on Sangam Road in 1902 and it became a bakery in Frazer Town in 1921 — named Albert, probably after the prince, to bring in the Anglo-Indian trade. The mutton keema samosas and the coconut puffs, and in Ramadan the brain puff, which is the reason people cross the city that month.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Bakers Brûlée; LBB; Local Samosa; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-thom-s-bakery-25983-155228",
+   "title": "Thom's Bakery",
+   "type": "bakery",
+   "zone": "frazer-town",
+   "coords": [
+    12.99155,
+    77.61418
+   ],
+   "area": "Wheeler Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Thom's Bakery",
+    "zone": "frazer-town",
+    "type": "bakery"
+   },
+   "why": "Frazer Town since 1970 and grown into a small supermarket around the original counter, which is still where to go. Plum cake at Christmas is what it is famous for; the puffs and the bread the rest of the year.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the bakery's listing; The Tasty Tales; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-lj-iyengars-bakery-25801-155175",
+   "title": "LJ Iyengars Bakery",
+   "type": "bakery",
+   "zone": "jp-nagar",
+   "coords": [
+    12.9007,
+    77.58729
+   ],
+   "area": "18th Cross Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "LJ Iyengars Bakery",
+    "zone": "jp-nagar",
+    "type": "bakery"
+   },
+   "why": "An Iyengar bakery in the south of the city, which is where most of them are. The tradition started in Chikpet in 1898 and the founders came from a handful of villages in Hassan district; the menu is the same one everywhere and that is the point. Honey cake, khara bun, benne biscuit. Late afternoon, when the day's baking comes out.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "The Quint; Slurrp; CurryLore; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-hatti-kaapi-25857-155163",
+   "title": "Hatti Kaapi",
+   "type": "cafe",
+   "zone": "jayanagar",
+   "coords": [
+    12.92841,
+    77.58168
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Hatti Kaapi",
+    "zone": "jayanagar",
+    "type": "cafe"
+   },
+   "why": "Filter coffee, standing up, at a price that is the argument — Lakshman Swamy started it in November 2009 to sell the city's own coffee properly and cheaply. A bar and a few stools and nothing to linger over, which is exactly how filter coffee is meant to be drunk.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Hatti Kaapi; Tripadvisor listing; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-third-wave-coffee-roasters-25869-155259",
+   "title": "Third Wave Coffee Roasters",
+   "type": "cafe",
+   "zone": "koramangala",
+   "coords": [
+    12.93474,
+    77.62962
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Third Wave Coffee Roasters",
+    "zone": "koramangala",
+    "type": "cafe"
+   },
+   "why": "The first one, which opened on 24 September 2016 on 80 Feet Road after a year of the founders working out what to build. There are forty-odd across the city now and the rest are a chain; this is where Bengaluru's specialty coffee habit started.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "YourStory; LBB; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-dyu-art-cafe-25874-155235",
+   "title": "Dyu Art Cafe",
+   "type": "cafe",
+   "zone": "koramangala",
+   "coords": [
+    12.93719,
+    77.61768
+   ],
+   "area": "KHB Colony, Next To Mangala Kalyana Mantapa 5th Block Adugod",
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Dyu Art Cafe",
+    "zone": "koramangala",
+    "type": "cafe"
+   },
+   "why": "An old Kerala-Portuguese bungalow in Koramangala with courtyards and gabled roofs, run as a café and a gallery at once — the owners wanted somewhere artists could show work to people who had only come for a sandwich. Sit in the courtyard, and look at the walls on the way out.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "IBTimes India; LBB; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-blue-tokai-coffee-roasters-26014-155158",
+   "title": "Blue Tokai Coffee Roasters",
+   "type": "cafe",
+   "zone": "sadashivanagar",
+   "coords": [
+    13.00692,
+    77.57898
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Tokai Coffee Roasters",
+    "zone": "sadashivanagar",
+    "type": "cafe"
+   },
+   "why": "The roaster that got Indians drinking Indian coffee as something other than instant, buying single-estate beans from Karnataka and Kerala — which in Bengaluru means from a couple of hundred kilometres away. Here for the north of the city.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-brahmin-s-coffee-bar-25908-155138",
+   "title": "Brahmin's Coffee Bar",
+   "type": "restaurant",
+   "zone": "chamarajapete",
+   "coords": [
+    12.95394,
+    77.56881
+   ],
+   "area": "2nd Cross Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Brahmin's Coffee Bar",
+    "zone": "chamarajapete",
+    "type": "restaurant"
+   },
+   "why": "Since 1965, and the menu has not changed since: idli, vada, khara bath, kesari bath, coffee. Everything comes with the coconut chutney that is the entire reason for the queue. Standing only. Go early — it is a breakfast place and it runs out.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Time Out Bangalore; LBB; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-lavonne-cafe-25934-155274",
+   "title": "Lavonne Café",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.96693,
+    77.63689
+   ],
+   "area": "3rd Cross Road",
+   "url": "https://lavonne.in/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Lavonne Café",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "The café of a pastry school — Lavonne was started in 2012 by three chefs as India's first dedicated international baking academy, and the students run the counter downstairs while the classes go on above. On a quiet street off Double Road. The croissants hold their shape and flake properly, which is the test and the reason to come.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Time Out Bengaluru; LBB; Lavonne Academy; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-sharon-tea-stall-25946-155294",
+   "title": "Sharon Tea Stall",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.97317,
+    77.64705
+   ],
+   "area": "Thippasandra Main Road",
+   "url": "https://sharonteastall.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sharon Tea Stall",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "A tea stall on the corner of Thippasandra Road that sells over a thousand cups a day. Daniel was a private driver on six thousand rupees a month, leased out his house to start it, lost ten lakh on a café upstairs that failed, and kept the stall. A long board of flavoured teas, a counter of snacks, and nowhere to sit. Stand on the pavement with everybody else.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "YourStory; Tripadvisor listing; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
   }
  ]
 }

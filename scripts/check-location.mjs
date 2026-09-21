@@ -229,9 +229,18 @@ const EXPECT = {
     probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],
     need: 2,
     /* 23 → 14 as the pack learned to ask Wikidata and OpenStreetMap the
-       right questions, then 16 when the Luma feed rolled and took three
-       dated events with it — see DRIFT above. */
-    overshare: 16,
+       right questions, 16 when the Luma feed rolled, and then 23 when
+       the café and bakery tier was written.
+
+       That last rise is the cost of the coverage and is recorded as one.
+       The two measures pull against each other: coverage asks whether
+       each colony knows two things, and a small cluster of good records
+       satisfies it everywhere; sharing asks whether those things differ,
+       and the same cluster fails it. Most of the overlap is books —
+       every probe reaches the same three bookshops — and cafés in the
+       Lodhi Colony / Connaught Place middle. It falls when colonies get
+       records of their own, not when the middle gets more. */
+    overshare: 23,
     /* Still zero of 160, and worth understanding rather than explaining
        away. Delhi's sourced tier went from 81 records to 267 when the
        pack declared its own Wikidata classes — but those records are
@@ -249,8 +258,13 @@ const EXPECT = {
        four were the only records in a category that had nothing.
        Markets showed a single dot in all forty sampled colonies.
 
-       Find the dead column before writing anything. */
-    floor: 45
+       Find the dead column before writing anything.
+
+       Then 45 → 99 with seven cafés and bakeries: the café and bakery
+       columns had been dead in all forty sampled colonies, because a
+       cell needs *two* known places in its top five and one Blue Tokai
+       could never supply that anywhere. */
+    floor: 99
   },
   'new-york': {
     /* One per borough, which is how this city is actually divided, plus
@@ -292,13 +306,22 @@ const EXPECT = {
        It falls when the editorial tier spreads out, not when more is
        added to the centre — and it did: 21 down to 15 once the markets
        and the bakery gave the probes something of their own to reach
-       for. */
-    overshare: 15,
+       for.
+
+       Then back to 20, when the café tier was written, and this one is
+       worth reading carefully. After it, Indiranagar, Jayanagar and
+       Koramangala returned the *identical* five cafés — five of five
+       shared, eight kilometres apart, which is the founding bug of this
+       whole file. Indiranagar had no café of its own and borrowed its
+       neighbours'. Two written there brought the worst of it to four of
+       five. What closes the rest is a café of its own in each of those
+       neighbourhoods, and that is the to-do this number carries. */
+    overshare: 20,
     /* 18 off the notable tier alone; 28 with twelve editorial records;
-       62 with four more. The four were markets and an Iyengar bakery —
-       the market column had been blank in every sampled neighbourhood,
-       meaning no market record was within reach of anywhere. */
-    floor: 62
+       62 with four markets and an Iyengar bakery; 120 with ten cafés and
+       bakeries, when those two columns had been dead in all forty sampled
+       neighbourhoods. */
+    floor: 120
   }
 };
 

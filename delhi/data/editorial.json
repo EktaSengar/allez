@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-20",
+ "generated": "2026-09-21",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: no open dataset in India describes everyday food, Wikidata holds two Delhi restaurants and no cafes, and the whole sourced tier here is monuments. See SOURCES.md.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -483,6 +483,222 @@
    ],
    "source": "Published coverage; position confirmed against OpenStreetMap",
    "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-wenger-s-57267-154436",
+   "title": "Wenger's",
+   "type": "bakery",
+   "zone": "connaught-place",
+   "coords": [
+    28.63338,
+    77.21807
+   ],
+   "area": "Inner Circle",
+   "url": "https://wengers.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Wenger's",
+    "zone": "connaught-place",
+    "type": "bakery"
+   },
+   "why": "The oldest surviving establishment in Connaught Place. A Swiss couple, Jeanne and H C Wenger, started it in 1926 at Kashmere Gate catering for British troops, and moved it into the Robert Tor Russell building in 1933 — with a café and a ballroom that officers, diplomats and princes filled. Brij Mohan Tandon, who had worked for them, bought it in 1944. Buy the patties and a slice of something from the cold counter and eat in the colonnade.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "ThePrint; Slurrp; Delhipedia; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-l-opera-57200-154452",
+   "title": "L'Opera",
+   "type": "bakery",
+   "zone": "lodhi-colony",
+   "coords": [
+    28.59982,
+    77.22617
+   ],
+   "area": null,
+   "url": "https://loperaindia.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "L'Opera",
+    "zone": "lodhi-colony",
+    "type": "bakery"
+   },
+   "why": "The patisserie that brought French pastry to India when it opened in 2008, and still the reference for it here. Khan Market, next door to Full Circle. The macarons are why people come; the croissant is why they come back.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the bakery's own history; Tripadvisor listing; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-cafe-lota-57226-154485",
+   "title": "Cafe Lota",
+   "type": "cafe",
+   "zone": "nizamuddin",
+   "coords": [
+    28.61315,
+    77.24263
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Cafe Lota",
+    "zone": "nizamuddin",
+    "type": "cafe"
+   },
+   "why": "Inside the National Crafts Museum, opposite Purana Qila, in a half-open room built by the craftsmen the museum exists for. Regional Indian cooking you will not find on a Delhi menu elsewhere, and South Indian filter coffee. Do the museum, then lunch; it is the right order.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "National Crafts Museum; Atlas Obscura; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-kunzum-57107-154389",
+   "title": "Kunzum Travel Cafe",
+   "type": "cafe",
+   "zone": "hauz-khas",
+   "coords": [
+    28.55355,
+    77.19435
+   ],
+   "area": null,
+   "url": "https://kunzum.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Kunzum",
+    "zone": "hauz-khas",
+    "type": "cafe"
+   },
+   "why": "In the lanes of Hauz Khas Village, and the coffee and the cookies come with no price on them — you pay what you think they were worth. Travel books to read, travel talks and screenings in the evenings. Shut on Mondays.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Tripadvisor listing; LBB; Let's Expresso; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-subko-cafe-57160-154443",
+   "title": "Subko Cafe",
+   "type": "cafe",
+   "zone": "lodhi-colony",
+   "coords": [
+    28.57997,
+    77.22144
+   ],
+   "area": null,
+   "url": "https://subko.coffee",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Subko Cafe",
+    "zone": "lodhi-colony",
+    "type": "cafe"
+   },
+   "why": "The Mumbai roastery and bakehouse that opened in a restored Bandra bungalow in 2020, and this is its Delhi outpost in Lodhi Colony's Khanna Market. Order from the coffee menu rather than the milk menu, and a pastry from the counter — the bakehouse is half the point.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Subko; The Gourmet Edit; New Delhi Wants; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-blue-tokai-coffee-roasters-57081-154514",
+   "title": "Blue Tokai Coffee Roasters",
+   "type": "cafe",
+   "zone": "chittaranjan-park",
+   "coords": [
+    28.54063,
+    77.25678
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Tokai Coffee Roasters",
+    "zone": "chittaranjan-park",
+    "type": "cafe"
+   },
+   "why": "The Chittaranjan Park branch of the roaster on the Lodhi Colony card — single-estate beans from Karnataka and Kerala, roasted in-house. Here for the south-east of the city, which otherwise has almost nothing on record for coffee.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-indian-coffee-house-57261-154432",
+   "title": "Indian Coffee House",
+   "type": "restaurant",
+   "zone": "connaught-place",
+   "coords": [
+    28.63069,
+    77.21605
+   ],
+   "area": "Baba Kharak Singh Marg",
+   "url": "http://indiancoffeehouse.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Indian Coffee House",
+    "zone": "connaught-place",
+    "type": "restaurant"
+   },
+   "why": "A workers' cooperative since 1957, when Nehru told the coffee-house workers to run the places themselves. Thrown out of its first building during the Emergency, it reopened on the roof of Mohan Singh Place, where it still is — waiters in turbans and cummerbunds, dosa and filter coffee at prices from another decade, and a room that has hosted every political argument Delhi has had since.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia; Cambridge University Press (ILWCH, 2026); Slurrp; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
   }
  ]
 }
