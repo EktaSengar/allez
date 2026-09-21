@@ -824,6 +824,67 @@
    ],
    "source": "YourStory; Tripadvisor listing; confirmed against OpenStreetMap",
    "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-karma-kaapi-caffeine-studio-25847-155163",
+   "title": "Karma Kaapi",
+   "type": "cafe",
+   "zone": "jayanagar",
+   "coords": [
+    12.92326,
+    77.58141
+   ],
+   "area": null,
+   "url": "https://karmakaapi.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Karma Kaapi – Caffeine Studio",
+    "zone": "jayanagar",
+    "type": "cafe"
+   },
+   "why": "A micro-roastery and café on 36th Cross in Jayanagar 5th Block, roasting beans from Indian estates and a few from abroad. The menu runs from filter coffee to espresso drinks; ask for whatever they roasted most recently, which is the reason to come to the roaster rather than a café.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "LBB; the roaster's own site; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-go-native-jayanagar-25845-155169",
+   "title": "Go Native",
+   "type": "restaurant",
+   "zone": "jayanagar",
+   "coords": [
+    12.92261,
+    77.58465
+   ],
+   "area": "10A Main Road",
+   "url": "https://gonative.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Go Native Jayanagar",
+    "zone": "jayanagar",
+    "type": "restaurant"
+   },
+   "why": "Down a lane off 10th Main under a great deal of green, cooking with indigenous grains, pulses and spices — contemporary South Indian food that uses millets where you would expect rice. The menu changes; vegan dishes are marked. Lunch in the garden is the right way to do it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "HappyCow; Bindu Gopal Rao; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
   }
  ]
 }

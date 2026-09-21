@@ -242,8 +242,11 @@ const EXPECT = {
        records of their own, not when the middle gets more.
 
        32 on a clean checkout — see the correction on `floor` below; the
-       23 first committed here was the same unreproducible reading. */
-    overshare: 32,
+       23 first committed here was the same unreproducible reading. Then
+       28, from six records written in Saket, Dwarka and Gurgaon: Dwarka
+       had been sharing four cafés with Connaught Place, twenty
+       kilometres away, for want of any of its own. */
+    overshare: 28,
     /* Still zero of 160, and worth understanding rather than explaining
        away. Delhi's sourced tier went from 81 records to 267 when the
        pack declared its own Wikidata classes — but those records are
@@ -274,8 +277,12 @@ const EXPECT = {
        at any clock time, with or without dated events. So the commit
        that set 99 shipped this check failing. The number is what the
        data gives, and a ratchet set from a reading nobody can repeat is
-       worse than none. */
-    floor: 87
+       worse than none.
+
+       91 once Saket, Dwarka and the NCR sectors each got something of
+       their own — and sharing fell with it, which is the tell that the
+       records went to the edges rather than the middle. */
+    floor: 91
   },
   'new-york': {
     /* One per borough, which is how this city is actually divided, plus
@@ -326,13 +333,20 @@ const EXPECT = {
        whole file. Indiranagar had no café of its own and borrowed its
        neighbours'. Two written there brought the worst of it to four of
        five. What closes the rest is a café of its own in each of those
-       neighbourhoods, and that is the to-do this number carries. */
-    overshare: 20,
+       neighbourhoods, and that is the to-do this number carries.
+
+       18 after Jayanagar got a second café and a restaurant of its own.
+       The arithmetic of why it will not reach Paris's level quickly: the
+       retrieval ring widens until it holds *four* known places, so a
+       neighbourhood with two of its own still reaches next door for the
+       other two. Closing it means four per category per neighbourhood —
+       Paris density, which is years of somebody going out. */
+    overshare: 18,
     /* 18 off the notable tier alone; 28 with twelve editorial records;
        62 with four markets and an Iyengar bakery; 120 with ten cafés and
        bakeries, when those two columns had been dead in all forty sampled
-       neighbourhoods. */
-    floor: 120
+       neighbourhoods; 123 with two more in Jayanagar. */
+    floor: 123
   }
 };
 

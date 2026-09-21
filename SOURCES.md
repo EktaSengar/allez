@@ -115,6 +115,72 @@ why Delhi scores 0 of 160 in `check-location.mjs` while having 267 sourced
 records — the records are monuments, and the question being asked is
 breakfast. **Only the editorial tier closes it.**
 
+### India, looked at harder
+
+A second pass, on 21 September 2026, went looking specifically for what an
+Indian city *does* publish. Every one of these was fetched, not assumed.
+
+| Source | Keyless | What it is | Verdict |
+|---|---|---|---|
+| **OpenCity** (`data.opencity.in`) | yes, real CKAN | 1,099 civic datasets, mostly Bengaluru | An archive, not a feed. PDFs, KML and CSV snapshots — the parks list is from 2016, licences often blank. BBMP's lakes KML is public domain and usable once. |
+| **Wikivoyage** | yes, MediaWiki API | geocoded eat / drink / buy listings, CC BY-SA 4.0 | Real, well-written, and **net-negative here**. See below. |
+| **Delhi Open Transit Data** (`otd.delhi.gov.in`) | registration for real-time | official DMRC and DTC GTFS | Genuine, and about transit rather than places. Useful to the reach model one day, not to recommendations. |
+| `data.gov.in` | **no** | national portal | Needs a key — `Authorization field missing`. Out. |
+| Zomato API | — | — | **Retired.** The developer endpoint now redirects nowhere. |
+| AllEvents.in | **no** | event listings | Key required. Out. |
+| BookMyShow · District | — | — | No public API. |
+| Karnataka state portal | — | — | Did not answer. |
+
+**Wikivoyage, and the number that was wrong first.** The first sizing of it
+reported 1,159 Delhi listings. That was wrong: MediaWiki's `prefixsearch` is
+the search box's fuzzy typeahead, not a prefix match, and asked for pages under
+`Delhi/` it also returned pages about Denbigh and Tasmania. With `allpages`,
+which is strict, Delhi has 62 eat, drink and buy listings, 18 with
+coordinates. Bengaluru has 247, of which 25 have coordinates. Coordinates are
+the limit, not coverage.
+
+The same bug went one step further before it was caught: Delhi declares no
+`limitKm`, so `zoneFinder` returns the nearest colony for *any* point on earth,
+and the first run filed a café in Wales under a Delhi colony. It was caught by
+reading every record rather than the counts. `scripts/wikivoyage.mjs` now uses
+the strict page list and the same bounding-box test `practices.mjs` uses.
+
+Then it was measured, and it made things worse. Delhi's coverage fell from 99
+to 94 and both cities shared more — Bengaluru's over-sharing went from 20 to
+29. The reason is the most useful thing in this section: **a travel guide
+covers what a visitor sees**, and Bengaluru's Wikivoyage listings sit in
+Shivajinagar, Frazer Town, Richmond Town, Malleswaram and Basavanagudi — the
+old centre, exactly where the editorial tier already is. Records added to the
+middle pull every probe towards the same answer, which is the one failure
+`check-location.mjs` exists to catch.
+
+So the collector is written, tested and **switched off**: no pack declares
+`wikivoyage`. Turn it on for a city once its edges are covered, when adding to
+the middle stops costing anything.
+
+**The conclusion for India holds, and is now sharper.** Every open source
+found here — Wikidata, Wikivoyage, OpenCity — is thickest where the guide
+already is. What moves an Indian city is hand-written records *at the edges*,
+chosen off `check-location.mjs`'s own output: in Delhi, six records in Saket,
+Dwarka and Gurgaon raised coverage and lowered sharing at the same time.
+That pairing is the tell that a record went where it was needed.
+
+### Google, asked a second time
+
+Worth answering again for India specifically, because it is the one place
+where Google's coverage is genuinely better than anything open: Google Maps
+knows every tiffin room in Bengaluru and Wikidata knows three cafés. That is
+exactly why the terms matter rather than being a technicality. The data that
+would help most is the data you may not keep — `place_id` indefinitely,
+coordinates for thirty days, and nothing else.
+
+Two uses are legitimate and neither fixes the gap. A plain Google Maps *link*
+to a place, which is not the API and needs no key, is fine and the site
+already has "Look it up". And the Places API can be called live in the
+browser to show a place's current details — but that needs a key in the page,
+which breaks the rule this site is built on, costs money per view, and
+decorates records we already have rather than finding new ones.
+
 ---
 
 ## Everywhere
