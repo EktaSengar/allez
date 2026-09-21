@@ -239,8 +239,11 @@ const EXPECT = {
        and the same cluster fails it. Most of the overlap is books —
        every probe reaches the same three bookshops — and cafés in the
        Lodhi Colony / Connaught Place middle. It falls when colonies get
-       records of their own, not when the middle gets more. */
-    overshare: 23,
+       records of their own, not when the middle gets more.
+
+       32 on a clean checkout — see the correction on `floor` below; the
+       23 first committed here was the same unreproducible reading. */
+    overshare: 32,
     /* Still zero of 160, and worth understanding rather than explaining
        away. Delhi's sourced tier went from 81 records to 267 when the
        pack declared its own Wikidata classes — but those records are
@@ -260,11 +263,19 @@ const EXPECT = {
 
        Find the dead column before writing anything.
 
-       Then 45 → 99 with seven cafés and bakeries: the café and bakery
+       Then 45 → 87 with seven cafés and bakeries: the café and bakery
        columns had been dead in all forty sampled colonies, because a
        cell needs *two* known places in its top five and one Blue Tokai
-       could never supply that anywhere. */
-    floor: 99
+       could never supply that anywhere.
+
+       A correction worth leaving in. This floor was first committed as
+       99, from a measurement that cannot be reproduced against the files
+       that were committed with it: 87 on a clean checkout, every run,
+       at any clock time, with or without dated events. So the commit
+       that set 99 shipped this check failing. The number is what the
+       data gives, and a ratchet set from a reading nobody can repeat is
+       worse than none. */
+    floor: 87
   },
   'new-york': {
     /* One per borough, which is how this city is actually divided, plus
