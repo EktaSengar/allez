@@ -4,7 +4,8 @@
     "Key each entry by the id of the place you are overriding. Places found on the map look like 'osm-verve-coffe-roasters-74888--244326' and are stable across the weekly rebuild — but they are built from the name OSM carries, so if a misspelling there is ever corrected the id moves and the note is orphaned. The console says so when that happens.",
     "Whatever you set replaces what was there, including 'title' — which is how a name the map has wrong gets written correctly here.",
     "A 'why' is the useful one — it turns a name on a map into a recommendation, and marks it as somewhere you have actually been.",
-    "'HOMEGROUND_CITY=bay-area node scripts/draft.mjs <search terms>' finds a place and writes a filled-in stub."
+    "'HOMEGROUND_CITY=bay-area node scripts/draft.mjs <search terms>' finds a place and writes a filled-in stub.",
+    "'hide': true takes a place off every list — for somewhere you tried and would not send anyone. Give it a 'reason' so the next reader knows it was a verdict, not a mistake. Do not write a 'why' for these: a 'why' is a recommendation."
   ],
   "items": {
     "osm-verve-coffe-roasters-74888--244326": {
@@ -95,9 +96,9 @@
     },
     "osm-namaste-74852--244290": {
       "title": "Namaste Indian Cuisine",
-      "why": "Warm, everyday Indian on California Avenue: the paneer tikka masala, garlic naan and momos are the dishes people come back for. It is popular, so book at busy times.",
-      "quality": 4,
-      "uniqueness": 3,
+      "why": "Liked it, but nothing special — good, not one to go out of the way for. Warm, everyday Indian on California Avenue: the paneer tikka masala, garlic naan and momos are the dishes people come back for. It is popular, so book at busy times.",
+      "quality": 3,
+      "uniqueness": 2,
       "labels": [],
       "goodFor": [
         "evening",
@@ -110,7 +111,7 @@
     },
     "osm-darbar-indian-cuisine-74890--244330": {
       "title": "Darbar Indian Cuisine",
-      "why": "Eaten here. Downtown's long-running everyday Indian on Lytton, and the one for a quick, good-value lunch: the weekday buffet has about two dozen dishes that change daily, with plenty of naan. It is always busy at lunchtime.",
+      "why": "Liked it, but nothing special — good, not one to go out of the way for. Downtown's long-running everyday Indian on Lytton, and the one for a quick, good-value lunch: the weekday buffet has about two dozen dishes that change daily, with plenty of naan. It is always busy at lunchtime.",
       "quality": 3,
       "uniqueness": 2,
       "labels": [
@@ -123,6 +124,25 @@
       ],
       "area": "129 Lytton Avenue",
       "cuisine": "indian"
+    },
+    "osm-ramen-nagi-74891--244321": {
+      "title": "Ramen Nagi",
+      "why": "Would definitely recommend. The first American branch of a Tokyo ramen shop: you tick boxes on a card for broth richness, noodle firmness, garlic and spice. Get the Original King, a rich pork tonkotsu. The queue is the price, so arrive before it opens or late in the afternoon.",
+      "quality": 5,
+      "uniqueness": 4,
+      "labels": [
+        "dontmiss"
+      ],
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food"
+      ],
+      "area": "541 Bryant Street"
+    },
+    "osm-onigilly-74889--244326": {
+      "hide": true,
+      "reason": "Ordered in; didn't like the food much."
     }
   }
 }
