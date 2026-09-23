@@ -900,8 +900,10 @@ body[data-view="away"]    { --accent: #3f5e7a; --blush: #93add0; }
 
 /* ---------- play / watch mode switch ---------- */
 
+/* As many as fit: Sport has two modes in Paris and three where there
+   are hikes, and a fixed two left Hike alone on a second row. */
 .mode {
-  display: grid; grid-template-columns: 1fr 1fr; gap: .6rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .6rem;
   margin-bottom: 2rem;
 }
 .mode-btn {

@@ -611,7 +611,7 @@ const App = (() => {
     nightlife: '🍸', bar: '🍸',   jazz: '🎷',       venue: '🎤',   club: '🪩',
     comedy: '🎙️',     dessert: '🍨',
     sport: '🏃',   play: '🤾',    run: '🏃',        watch: '🏟️',
-    event: '🎫',   class: '🎓',   walk: '🚶',       itinerary: '🗺️',
+    event: '🎫',   class: '🎓',   walk: '🚶',       itinerary: '🗺️',   hike: '🥾', ride: '🚲',
     mission: '🎯', daytrip: '🚆'
   };
 
@@ -1420,6 +1420,7 @@ const App = (() => {
   function renderSport() {
     const sports = D.sports.items || [];
     const play = sports.filter(i => i.type === 'play' || i.type === 'run');
+    const trails = ALL.filter(i => i.type === 'hike' || i.type === 'ride');
 
     const modeBar = `<div class="mode" id="sport-mode">
       <button class="mode-btn ${SPORT_MODE === 'play' ? 'on' : ''}" data-mode="play">
@@ -1430,9 +1431,50 @@ const App = (() => {
         <span class="mode-emoji">🏟️</span> Watch
         <em>things we can go and see</em>
       </button>
+      ${trails.length ? `<button class="mode-btn ${SPORT_MODE === 'trails' ? 'on' : ''}" data-mode="trails">
+        <span class="mode-emoji">🥾</span> Trails
+        <em>hikes and rides, for a morning or a weekend</em>
+      </button>` : ''}
     </div>`;
 
-    return modeBar + (SPORT_MODE === 'play' ? renderPlay(play) : renderWatch(sports));
+    return modeBar + (SPORT_MODE === 'trails' && trails.length ? renderTrails(trails)
+                    : SPORT_MODE === 'watch' ? renderWatch(sports) : renderPlay(play));
+  }
+
+  /* ---------- trails ----------
+
+     A third mode rather than more of Play, because a hike or a ride is a
+     different plan from a pitch: it is half a day, it often starts with a
+     drive, and the question is how far rather than which one. So the list
+     is split by that — near enough to do before lunch, or worth a
+     Saturday — and the line under each says where to start, how far and
+     how much it climbs.
+
+     Hikes and rides share it because they answer the same question. They
+     stay separate kinds of record, since what a rider needs to know
+     (paved or dirt, shared with cars or not, where the bikes are) is not
+     what a walker does; a place that is good for both, like Arastradero,
+     is a hike that also carries `cycling`, and shows under either filter.
+     A city with none of either gets no button, which is Paris. */
+  const TRAIL_MORNING = 35;
+  let TRAIL_KIND = 'all';
+  const isHike = i => i.type === 'hike';
+  const isRide = i => i.type === 'ride' || (i.type === 'hike' && (i.categories || []).includes('cycling'));
+
+  function renderTrails(trails) {
+    const kinds = [['all', 'All'], ['hike', '🥾 Hike'], ['ride', '🚲 Ride']];
+    const chips = `<div class="chips" id="trail-kind">${kinds.map(([k, label]) =>
+      `<button class="chip ${TRAIL_KIND === k ? 'on' : ''}" data-trailkind="${k}">${label}</button>`).join('')}</div>`;
+    const want = TRAIL_KIND === 'hike' ? isHike : TRAIL_KIND === 'ride' ? isRide : () => true;
+    const ranked = Rank.rank(trails.filter(want), CTX)
+      .sort((a, b) => (a.minutesFromHome ?? 999) - (b.minutesFromHome ?? 999));
+    const near = ranked.filter(i => (i.minutesFromHome ?? 999) <= TRAIL_MORNING);
+    const far = ranked.filter(i => (i.minutesFromHome ?? 999) > TRAIL_MORNING);
+    const here = Loc.displayName(Loc.active());
+    return chips
+      + (near.length ? stripHead('For a morning', `Within about ${TRAIL_MORNING} minutes of ${here}`) + rows(near, null, true) : '')
+      + (far.length ? stripHead('For a weekend', 'Further out, and worth the drive') + rows(far, null, true) : '')
+      + (!ranked.length ? `<p class="empty">Nothing of that kind written up yet.</p>` : '');
   }
 
   /* ---------- active city exploration ----------
@@ -3065,6 +3107,13 @@ const App = (() => {
     document.addEventListener('click', e => {
       const b = e.target.closest('[data-mode]'); if (!b) return;
       SPORT_MODE = b.dataset.mode;
+      render();
+    });
+
+    // Sport → Trails: hike, ride or both
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-trailkind]'); if (!b) return;
+      TRAIL_KIND = b.dataset.trailkind;
       render();
     });
 
