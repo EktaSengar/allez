@@ -20,7 +20,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadRecord, readDiscovered, dataDir } from './shim.mjs';
+import { loadRecord, readDiscovered, dataDir, City } from './shim.mjs';
 
 const { Rec } = loadRecord();
 
@@ -41,11 +41,12 @@ const flat = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '
    it in js/record.js and every existing note id changes with it. */
 const osmId = Rec.compactId;
 
-const ZONE_NAMES = {
-  1:'Louvre', 2:'Bourse', 3:'Haut Marais', 4:'Marais', 5:'Latin Quarter', 6:'Saint-Germain',
-  7:'Invalides', 8:'Champs-Élysées', 9:'SoPi', 10:'Canal Saint-Martin', 11:'Oberkampf',
-  12:'Bercy', 13:'Butte-aux-Cailles', 14:'Montparnasse', 15:'Vaugirard', 16:'Passy',
-  17:'Batignolles', 18:'Montmartre', 19:'Buttes-Chaumont', 20:'Belleville'
+/* The pack knows how to write its own zones: Paris tiles them as 11<sup>e</sup>
+   and names them separately, every other pack tiles them by name already. */
+const zoneLabel = z => {
+  const tile = String(City.zone.tile(z)).replace(/<[^>]*>/g, '');
+  const name = City.zone.names?.[z];
+  return name && name !== tile ? `${tile} ${name}` : tile;
 };
 
 async function run() {
@@ -75,7 +76,7 @@ async function run() {
 
   console.log(`\n  ${hits.length} match${hits.length === 1 ? '' : 'es'} for “${terms}”:\n`);
   hits.slice(0, 12).forEach((h, n) => {
-    const where = [h.zone ? `${h.zone}e ${ZONE_NAMES[h.zone] || ''}`.trim() : null, h.street].filter(Boolean).join(' · ');
+    const where = [h.zone ? zoneLabel(h.zone) : null, h.street].filter(Boolean).join(' · ');
     console.log(`  ${String(n + 1).padStart(2)}. ${h.name}`);
     console.log(`      ${[h.cat, where, h.curated ? 'already written up' : h.from].filter(Boolean).join('  ·  ')}`);
     console.log(`      ${h.id}\n`);

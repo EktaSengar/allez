@@ -126,9 +126,9 @@ Indian city *does* publish. Every one of these was fetched, not assumed.
 | **Wikivoyage** | yes, MediaWiki API | geocoded eat / drink / buy listings, CC BY-SA 4.0 | Real, well-written, and **net-negative here**. See below. |
 | **Delhi Open Transit Data** (`otd.delhi.gov.in`) | registration for real-time | official DMRC and DTC GTFS | Genuine, and about transit rather than places. Useful to the reach model one day, not to recommendations. |
 | `data.gov.in` | **no** | national portal | Needs a key — `Authorization field missing`. Out. |
-| Zomato API | — | — | **Retired.** The developer endpoint now redirects nowhere. |
+| Zomato API | — | — | **Retired.** The developer endpoint now redirects nowhere. How Zomato got its data, and why none of it is reachable, is below. |
 | AllEvents.in | **no** | event listings | Key required. Out. |
-| BookMyShow · District | — | — | No public API. |
+| BookMyShow · District | — | — | No public API. District is Zomato's; see below. |
 | Karnataka state portal | — | — | Did not answer. |
 
 **Wikivoyage, and the number that was wrong first.** The first sizing of it
@@ -164,6 +164,42 @@ already is. What moves an Indian city is hand-written records *at the edges*,
 chosen off `check-location.mjs`'s own output: in Delhi, six records in Saket,
 Dwarka and Gurgaon raised coverage and lowered sharing at the same time.
 That pairing is the tell that a record went where it was needed.
+
+### Zomato and District, and why the answer is feet
+
+Asked on 22 September 2026, because if one company in India already has the
+restaurant data, the shortest path is theirs.
+
+Zomato built it by walking. The original model was staff — "Zomans" — who
+[physically visited restaurants](https://techcrunch.com/2015/10/16/restaurant-search-app-zomato-lays-off-300-10-of-staff-in-shift-away-from-live-data-collection/)
+door to door and wrote down menus, hours and photographs. That was the whole
+difference from Yelp, which waited for users. In 2015 they laid off 300 people,
+a tenth of the company, shutting that operation down in the United States —
+and kept it in India, where they lead. On top of that base sit merchant
+self-claiming, user reviews and photographs, and now transaction data from
+delivery, Blinkit and District bookings. District is the going-out app built
+on that inheritance, plus Paytm Insider's events catalogue.
+
+Do they use Google? Two different products, two different answers. Google
+**Maps** — tiles, routing, delivery geocoding — yes, and at a scale that makes
+them one of the larger Indian customers. Google **Places** as the source of the
+listings, no, and they could not: §3.2.3(d) of Google's terms forbids using
+the services in a listings or directory service, which is precisely what
+Zomato is. They also had no reason to, having had people in the field years
+before the question arose.
+
+None of it is reachable. The public API (`developers.zomato.com/api/v2.1`) is
+retired; what exists now is a POS and partner integration for merchants
+already on Zomato, not a data API. Scrapers for both Zomato and District are
+sold openly. Do not — it is a terms breach and a dependency on someone else's
+markup.
+
+**The useful conclusion is the cost.** The best restaurant data in India was
+assembled by sending hundreds of people to knock on doors, and the company
+that did it treated that as a line item it eventually cut. That is the honest
+price of answering "where should we eat in Delhi", and it is why the editorial
+and personal tiers here are not a shortcut being avoided. They are the same
+method, at the only scale this repository can afford.
 
 ### Google, asked a second time
 
@@ -245,6 +281,49 @@ inherits ODbL. Keeping Apache and CDLA data in their own files, joined at
 render time rather than at build time, is what stops one permissive source
 being swallowed by a share-alike one. The tier layout already does this by
 construction — keep it that way.
+
+### The thirty-day refresh, which does not work
+
+Asked on 22 September 2026: if coordinates may be held for thirty days, can
+the site cache Google's data and rebuild it every thirty days? The terms were
+read rather than remembered, and the answer is no on four independent grounds.
+
+**The clock covers only coordinates.** Service Specific Terms §14.3 grants one
+caching permission for the Places API: latitude and longitude, up to thirty
+consecutive calendar days, then delete. Master terms §3.2.3(b) forbids caching
+anything else except where expressly permitted. Names, hours, ratings, reviews
+and photographs appear in no grant at all — so there is no thirty-day window
+on them to expire and renew. A refresh cycle renews nothing, because the
+permission was never given. What it would lawfully yield each month is
+coordinates, which OpenStreetMap already gives permanently and free.
+
+**The architecture is a named example.** §3.2.3(a) lists among prohibited
+scraping: pre-fetching, indexing, storing, resharing or rehosting Maps content
+outside the services, bulk-downloading places information, and copying and
+saving business names, addresses or reviews.
+
+**Even the cacheable field is unusable here.** §3.2.3(c) gives as an example of
+creating content the use of Places latitude/longitude as input for
+point-in-polygon analysis. That is exactly what `zoneFinder` does — take a
+coordinate and decide which zone it falls in. The one field with a thirty-day
+grant cannot be used the way this repository uses coordinates.
+
+**And git cannot forget.** The terms impose a deletion obligation. A public git
+repository cannot delete: `git log -p` holds every prior version of every JSON
+file for as long as the repository exists. Honouring the obligation would mean
+rewriting history on every refresh, breaking every clone. Publication is a
+separate breach in any case — pushing to a public repository reshares and
+rehosts on day one, whatever the age of the copy.
+
+**One correction, in Google's favour.** An earlier note in this file implied
+Places content must be shown on a Google map. It need not: §14.1 permits using
+it with no map at all, and §14.2 only forbids using it alongside a *non*-Google
+map. This site renders no map — no Leaflet, no MapLibre, no tile layer — so
+that is the single clause here that does not bite. Every other one does.
+
+The thirty days is a latency allowance for live applications, so they need not
+re-call for a coordinate fetched a minute ago. It is not a warehouse licence on
+a timer.
 
 ## Events, assessed
 

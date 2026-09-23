@@ -667,8 +667,15 @@ const App = (() => {
     return `about ${m} minutes`;
   }
 
+  /* The engine never names a city. The pack labels its own zones, and a
+     neighbourhood beats a city name at disambiguating a search — "Palo Alto"
+     finds the right Verve, where "the Bay Area" would find none of them.
+     `tile` may return markup, which has no business in a query string. */
   const mapsLink = i =>
-    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${i.title} ${i.area || ''} Paris`)}`;
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      [i.title, i.area,
+       i.zone != null ? String(City.zone.tile(i.zone)).replace(/<[^>]*>/g, '') : null,
+       City.searchRegion || City.name].filter(Boolean).join(' '))}`;
 
   /* Commons renders only a fixed set of thumbnail widths — anything else is a
      400. Keep in sync with THUMB_WIDTHS in scripts/images.mjs. */

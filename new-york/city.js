@@ -20,6 +20,10 @@ const City = (() => {
 
   const id   = 'new-york';
   const name = 'New York';
+  /* What a map search should be told, when the display name is not a place
+     you can look up. "the Bay Area" finds nothing; a New York zone label is
+     an NTA composite like "Annadale-Huguenot-Prince's Bay-Woodrow". */
+  const searchRegion = 'New York';
   const ua   = 'allez-new-york (personal site)';
 
   /* ---------- what a piece of it is called ----------
@@ -874,7 +878,7 @@ const City = (() => {
 
   const serviceWorker = false;
 
-  return { id, name, ua, bbox, serviceWorker, zone, reach, centre, views,
+  return { id, name, searchRegion, ua, bbox, serviceWorker, zone, reach, centre, views,
            holidays, shutsOnHoliday, money, weather, luma, events, practices };
 })();
 

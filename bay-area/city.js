@@ -33,6 +33,10 @@ const City = (() => {
      so headings of that shape are supplied by the pack rather than
      assembled by the engine. See `hiddenHeading`. */
   const name = 'the Bay Area';
+  /* What a map search should be told, when the display name is not a place
+     you can look up. "the Bay Area" finds nothing; a New York zone label is
+     an NTA composite like "Annadale-Huguenot-Prince's Bay-Woodrow". */
+  const searchRegion = 'CA';
 
   const ua = 'allez-bay-area (personal site)';
 
@@ -504,7 +508,7 @@ const City = (() => {
 
   const serviceWorker = false;
 
-  return { id, name, ua, bbox, serviceWorker, zone, bases, climate, reach, practices, luma, events,
+  return { id, name, searchRegion, ua, bbox, serviceWorker, zone, bases, climate, reach, practices, luma, events,
            centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
 })();
 
