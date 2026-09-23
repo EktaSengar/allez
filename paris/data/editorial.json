@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-18",
+ "generated": "2026-09-23",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -19,6 +19,8 @@
    ],
    "area": "Rue de Babylone",
    "url": "https://www.coutumecafe.com/content/25-coffee-shop-coutume-babylone-paris",
+   "hours": "Mo-Fr 08:00-17:30; Sa,Su 09:00-18:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee",
    "categories": [
     "food"
@@ -51,6 +53,8 @@
    ],
    "area": null,
    "url": "https://www.terresdecafe.com/",
+   "hours": "Mo-Fr 09:30-19:00; Sa,Su 10:00-19:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -81,6 +85,8 @@
    ],
    "area": null,
    "url": null,
+   "hours": "Mo-Su 08:00-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -143,6 +149,8 @@
    ],
    "area": "Boulevard Garibaldi",
    "url": "https://belhorizon.coffee/",
+   "hours": "Mo-Fr 08:00-17:30; Sa 10:00-18:00; Su 10:00-17:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -175,6 +183,8 @@
    ],
    "area": null,
    "url": null,
+   "hours": "Mo-Fr 08:00-15:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee",
    "categories": [
     "food"
@@ -205,6 +215,8 @@
    ],
    "area": "Place du Docteur Félix Lobligeois",
    "url": "http://https//dose.paris",
+   "hours": "Mo-Fr 08:00-18:30; Sa-Su 08:30-18:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": "breakfast",
    "categories": [
     "food"
@@ -237,6 +249,8 @@
    ],
    "area": "Rue Lebon",
    "url": "https://www.loutsa.fr/",
+   "hours": "Tu-Fr 08:30-19:00; Sa 10:00-19:00; Su 10:00-12:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": "pastry",
    "categories": [
     "food"
@@ -269,6 +283,8 @@
    ],
    "area": "Rue des Moines",
    "url": "https://www.lagazettebatignolles.fr/",
+   "hours": "Mo-Fr 07:00-00:00; Sa-Su 08:30-00:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "french",
    "categories": [
     "food"
@@ -302,6 +318,8 @@
    ],
    "area": "Rue Marcadet",
    "url": "https://lomi.cafe",
+   "hours": "Mo-Fr 08:00-18:00; Sa-Su 10:00-19:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -336,6 +354,8 @@
    ],
    "area": "Rue Lamarck",
    "url": null,
+   "hours": "Mo-Fr 07:45-18:00; Sa,Su,PH 08:30-18:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -368,6 +388,8 @@
    ],
    "area": null,
    "url": "https://www.cafepimpin.com",
+   "hours": "Mo off; Tu-Fr 08:30-18:00; Sa-Su 11:00-18:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -400,6 +422,8 @@
    ],
    "area": "Avenue Jean Jaurès",
    "url": "https://www.cafedelamusique.fr/",
+   "hours": "Mo-Th 12:00-01:00; Fr-Sa 12:00-02:00; Su 12:00-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "french",
    "categories": [
     "food"
@@ -463,6 +487,8 @@
    ],
    "area": "Rue des Envierges",
    "url": "https://moncoeurbelleville.com/",
+   "hours": "Mo,Tu 09:30-01:00, We,Th 09:30-01:30, Fr,Sa 09:30-02:00, Su 09:30-23:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -498,6 +524,8 @@
    ],
    "area": "Rue des Pyramides",
    "url": "https://www.sebastiengaudard.com/",
+   "hours": "Tu-Fr 10:00-19:00; Sa-Su 10:00-19:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -530,6 +558,8 @@
    ],
    "area": null,
    "url": "https://akiparis.fr/collections/aki-boulangerie-commande-de-gateaux",
+   "hours": "Mo-Sa 07:30-20:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": "japanese",
    "categories": [
     "food"
@@ -560,6 +590,8 @@
    ],
    "area": "Rue Montorgueil",
    "url": "https://stohrer.fr/",
+   "hours": "Mo-Fr 08:00-20:30; Su 08:00-20:00; PH closed",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -594,6 +626,8 @@
    ],
    "area": "Rue Saint-Denis",
    "url": "https://thefrenchbastards.fr",
+   "hours": "Mo-Fr 08:00-20:00; Sa 08:30-19:30; Su 08:30-18:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -624,6 +658,8 @@
    ],
    "area": null,
    "url": "https://www.arnaud-delmontel.com/",
+   "hours": "Mo-Su 07:00-20:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -654,6 +690,8 @@
    ],
    "area": null,
    "url": "https://www.sebastiengaudard.com/",
+   "hours": "Tu-Fr 10:00-20:00; Sa 09:00-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -684,6 +722,8 @@
    ],
    "area": null,
    "url": "https://www.boulangerie-patisserie-vandermeersch.com/",
+   "hours": "Tu-Sa 07:00-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -716,6 +756,8 @@
    ],
    "area": "Rue Jean de La Fontaine",
    "url": "https://maisondesgranges.com/",
+   "hours": "Mo, We-Sa 07:00-20:00; Su 07:00-19:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -746,6 +788,8 @@
    ],
    "area": "Avenue de Versailles",
    "url": "https://www.maisonlandemaine.com",
+   "hours": "Mo-Sa 07:00-20:30; Su 07:00-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -778,6 +822,8 @@
    ],
    "area": null,
    "url": "https://www.epicery.com/epiceries/delmontel-levis",
+   "hours": "Mo, We-Su 07:00-20:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -808,6 +854,8 @@
    ],
    "area": null,
    "url": "https://jeffreycagnes.fr",
+   "hours": "Mo-Sa 08:00-20:00; Su 08:00-19:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -838,6 +886,8 @@
    ],
    "area": "Rue Sorbier",
    "url": "https://benoitcastel.com",
+   "hours": "We-Su 08:00-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -873,6 +923,8 @@
    ],
    "area": null,
    "url": "https://www.gana.fr/",
+   "hours": "Tu-Sa 07:30-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -905,6 +957,8 @@
    ],
    "area": "Rue de Capri",
    "url": "http://www.leszygomates.fr",
+   "hours": "Tu-Sa 12:00-14:00, We-Sa 19:30-22:00; Su,Mo off",
+   "hoursFrom": "openstreetmap",
    "cuisine": "french",
    "categories": [
     "food"
@@ -938,6 +992,8 @@
    ],
    "area": "Rue des Cinq Diamants",
    "url": "https://chezgladines-butteauxcailles.fr/",
+   "hours": "Mo-Fr 12:00-15:00, 19:00-23:45; Sa, Su 12:00-16:00, 19:00-23:45",
+   "hoursFrom": "openstreetmap",
    "cuisine": "french",
    "categories": [
     "food"
@@ -971,6 +1027,8 @@
    ],
    "area": "Rue de la Butte-aux-Cailles",
    "url": "https://www.letempsdescerisescoop.com/",
+   "hours": "Mo-Fr 12:00-14:30, 19:00-23:00; Sa 12:00-15:00, 19:00-23:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "french",
    "categories": [
     "food"
@@ -1006,6 +1064,8 @@
    ],
    "area": "Boulevard Masséna",
    "url": "https://laodouangpaseuth.fr/",
+   "hours": "Th-Tu 12:00-14:45, 18:30-22:15",
+   "hoursFrom": "openstreetmap",
    "cuisine": "asian",
    "categories": [
     "food"
@@ -1039,6 +1099,8 @@
    ],
    "area": "Avenue Niel",
    "url": "https://www.cavespetrissans.fr/fr",
+   "hours": "Mo-Fr 12:15-14:00, 19:30-22:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "french",
    "categories": [
     "food"
@@ -1072,6 +1134,8 @@
    ],
    "area": "Rue Sorbier",
    "url": "https://lelieuditrestaurant.com/",
+   "hours": "Tu-Su 16:00-02:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -1105,6 +1169,8 @@
    ],
    "area": null,
    "url": "https://www.chezprospernation.com/",
+   "hours": "Mo-Su 07:30-01:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -1135,6 +1201,8 @@
    ],
    "area": "Rue de Pontoise",
    "url": "https://restaurant-baieta-paris.fr/",
+   "hours": "Tu-Sa 12:00-14:15,19:00-22:15",
+   "hoursFrom": "openstreetmap",
    "cuisine": "french",
    "categories": [
     "food"
@@ -1168,6 +1236,8 @@
    ],
    "area": "Rue Maître Albert",
    "url": "https://www.ateliermaitrealbert.com",
+   "hours": "Mo-Su 12:00-14:30,18:30-21:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -1199,6 +1269,8 @@
    ],
    "area": "Rue des Bernardins",
    "url": "http://www.anahuacalli.fr",
+   "hours": "Mo-Sa 19:00-23:00; Su 12:30-14:30,19:00-22:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": "mexican",
    "categories": [
     "food"
@@ -1232,6 +1304,8 @@
    ],
    "area": null,
    "url": "http://www.laurent-duchene.com/",
+   "hours": "Mo-Sa 07:30-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -1262,6 +1336,8 @@
    ],
    "area": null,
    "url": "https://www.farinez-vous.com/",
+   "hours": "Mo-Fr 07:00-19:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "sandwich",
    "categories": [
     "food"
@@ -1294,6 +1370,8 @@
    ],
    "area": null,
    "url": "https://atelierp1.fr/",
+   "hours": "Tu-Fr 08:00-20:00; Sa 08:00-19:30; Su 08:00-19:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -1326,6 +1404,8 @@
    ],
    "area": "Rue de Belleville",
    "url": "https://www.au140.com/",
+   "hours": "07:00-20:00; PH 07:00-19:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"

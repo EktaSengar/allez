@@ -82,3 +82,13 @@ jobs:
             echo "── $city"
             HOMEGROUND_CITY=$city node scripts/check-location.mjs
           done
+
+      # How complete the records the guide vouches for are — coordinates,
+      # hours, a link to act on, a source and a checked date, a photo.
+      # Reported, not enforced: the targets are coverage, and a failing
+      # check would only teach people to add empty fields.
+      - name: Record completeness (report)
+        run: |
+          for city in paris bay-area bengaluru delhi new-york; do
+            HOMEGROUND_CITY=$city node scripts/check-records.mjs
+          done
