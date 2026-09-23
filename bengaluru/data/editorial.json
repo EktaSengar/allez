@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-21",
+ "generated": "2026-09-23",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: Wikidata holds three cafes in the whole of Bengaluru and no open dataset in India describes everyday food. See SOURCES.md.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -20,6 +20,8 @@
    ],
    "area": "Gandhi Bazaar Main Road, Basavanagudi",
    "url": "https://vidyarthibhavan.in",
+   "hours": "Mo-Th 06:30-11:30, Mo-Th 14:00-20:00, Sa-Su 06:30-12:00, Sa-Su 14:30-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "regional",
    "categories": [
     "food"
@@ -52,6 +54,8 @@
    ],
    "area": "Lalbagh Road",
    "url": "https://www.mavallitiffinrooms.com/",
+   "hours": "Tu-Su 06:30-11:00, 12:30-21:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -82,6 +86,8 @@
    ],
    "area": "Saint Mark's Road",
    "url": null,
+   "hours": "09:00 - 23:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -144,6 +150,8 @@
    ],
    "area": "Residency Road",
    "url": null,
+   "hours": "Mo-Su 12:30-15:00,19:00-23:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": "regional",
    "categories": [
     "food"
@@ -241,6 +249,8 @@
    ],
    "area": "Edward Road",
    "url": "https://www.champaca.in/",
+   "hours": "Tu-Su 11:00-19:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -585,6 +595,8 @@
    ],
    "area": "18th Cross Road",
    "url": null,
+   "hours": "Mo-Fr 10:00-23:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -679,6 +691,8 @@
    ],
    "area": "KHB Colony, Next To Mangala Kalyana Mantapa 5th Block Adugod",
    "url": null,
+   "hours": "10:00-22:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -802,6 +816,8 @@
    ],
    "area": "Thippasandra Main Road",
    "url": "https://sharonteastall.com/",
+   "hours": "Mo-Sa 05:30-22:00; Su 16:00-22:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"

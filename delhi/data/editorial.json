@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-21",
+ "generated": "2026-09-23",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: no open dataset in India describes everyday food, Wikidata holds two Delhi restaurants and no cafes, and the whole sourced tier here is monuments. See SOURCES.md.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -113,6 +113,8 @@
    ],
    "area": null,
    "url": "https://saravanabhavan.com/",
+   "hours": "Mo-Su 08:00-23:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "indian",
    "categories": [
     "food"
@@ -211,6 +213,8 @@
    ],
    "area": null,
    "url": "https://www.sundernursery.org",
+   "hours": "Mo-Su 07:00-22:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "park"
@@ -274,6 +278,8 @@
    ],
    "area": null,
    "url": "https://www.booksatbahri.com/",
+   "hours": "10:30-20:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "books"
@@ -304,6 +310,8 @@
    ],
    "area": "Khan Market",
    "url": "https://bluetokaicoffee.com/pages/blue-tokai-coffee-roasters-khan-market",
+   "hours": "07:00-23:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -557,6 +565,8 @@
    ],
    "area": null,
    "url": null,
+   "hours": "Mo-Su 08:00-21:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -619,6 +629,8 @@
    ],
    "area": null,
    "url": "https://subko.coffee",
+   "hours": "08:00-22:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -679,6 +691,8 @@
    ],
    "area": "Baba Kharak Singh Marg",
    "url": "http://indiancoffeehouse.com/",
+   "hours": "08:30-21:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -771,6 +785,8 @@
    ],
    "area": null,
    "url": null,
+   "hours": "Mo-Su 10:00-18:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -831,6 +847,8 @@
    ],
    "area": null,
    "url": null,
+   "hours": "Mo-Su 09:00-21:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"
@@ -862,6 +880,8 @@
    ],
    "area": null,
    "url": "https://www.anotherfineday.net/",
+   "hours": "Mo-Su 11:00-21:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": null,
    "categories": [
     "food"

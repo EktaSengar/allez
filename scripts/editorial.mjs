@@ -113,6 +113,12 @@ async function run() {
       coords: [hit.lat, hit.lon],
       area: hit.s || null,
       url: hit.w || null,
+      /* The map's own opening hours, which this used to throw away: every
+         researched café and bakery reached the page with no hours even
+         when OpenStreetMap had them, so "open now" could never be said
+         about the places the guide recommends most. Hand-written hours in
+         the record still win, below. */
+      ...(hit.oh ? { hours: hit.oh, hoursFrom: 'openstreetmap' } : {}),
       cuisine: hit.k || null,
       categories: [['cafe','bakery','restaurant','market','deli'].includes(hit.c) ? 'food' : hit.c],
       match,

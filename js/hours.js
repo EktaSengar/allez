@@ -101,7 +101,14 @@ const Hours = (() => {
        Su 10:00-13:00`. Common enough in the wild to be worth reading.
        Only split where the comma follows a time and precedes a weekday —
        `Mo,We,Fr 09:00-17:00` is a legitimate day list and must survive. */
-    const normalised = raw.replace(/(\d),\s*(?=(Mo|Tu|We|Th|Fr|Sa|Su)\b)/gi, '$1;');
+    /* "Tu, Th-Fr 09:00-17:00" is valid OSM and was unreadable: the day
+       selector is matched lazily up to the first space, so it took "Tu,"
+       alone and then failed to read "Th-Fr 09:00" as a time. Closing up
+       a space after a comma between day names fixes it before anything
+       else looks at the string. */
+    const normalised = raw
+      .replace(/(\b(?:Mo|Tu|We|Th|Fr|Sa|Su|PH)),\s+(?=(?:Mo|Tu|We|Th|Fr|Sa|Su|PH)\b)/gi, '$1,')
+      .replace(/(\d),\s*(?=(Mo|Tu|We|Th|Fr|Sa|Su)\b)/gi, '$1;');
 
     const rules = [];
     for (const chunk of normalised.split(';')) {
