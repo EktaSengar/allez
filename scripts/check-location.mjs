@@ -80,6 +80,34 @@ const ZONES = City.zone.grid || City.zone.centroids;
    file threw on every other pack twelve frames deep. Any real zone will
    do — `at()` overwrites it before anything is measured — so it is the
    first key the pack declares. */
+/* ---------- one clock, so a number means one thing ----------
+
+   Coverage is gated on `minutesFromHome`, and a pack's reach model reads
+   the clock: Bengaluru's trip east at 11am and at 6pm are different trips.
+   In a browser that is correct — the reader's own clock is the one that
+   should decide. Here there is no reader, only whatever timezone the
+   machine happens to sit in, and the ratchet moved with it. Measured at
+   one instant, Bengaluru scored 123 in UTC and 95 in Pacific, because
+   19:47 in California falls inside rush hours declared for Bengaluru.
+
+   So the clock is pinned. The components are local, not an epoch, which
+   is the point — `new Date(2026, 8, 19, 12, 30)` is half past twelve on
+   Saturday whatever timezone reads it, so `getHours()` and `getDay()`
+   answer the same everywhere. The rest of the check was already
+   deterministic; this was the last thing that was not. */
+const PINNED = new Date(2026, 8, 19, 12, 30);
+
+if (City.reach.isPeak && City.reach.isPeak(PINNED)) {
+  const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const at = `${DAYS[PINNED.getDay()]} ${String(PINNED.getHours()).padStart(2, '0')}:` +
+             String(PINNED.getMinutes()).padStart(2, '0');
+  console.error(`\n${City.name} now declares a rush hour at ${at}, which is the`);
+  console.error('instant this check pins. Move PINNED to a quiet hour for every pack, and');
+  console.error('re-baseline the floors — the numbers before and after are not comparable.\n');
+  process.exit(1);
+}
+Loc.setClock(() => PINNED);
+
 Loc.boot(Loc.fromZone(Object.keys(ZONES).sort()[0]));
 Near.use(ALL, DISCOVERED);
 

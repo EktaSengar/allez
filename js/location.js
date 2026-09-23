@@ -96,13 +96,26 @@ const Loc = (() => {
      same trip east at 11am and at 6pm are different trips, and a model
      that cannot say so is wrong about the only thing that matters here.
 
-     `when` is passed so a pack can care. Paris's ignores it. */
+     `when` is passed so a pack can care. Paris's ignores it.
+
+     The default clock is the reader's own, and that is the right one:
+     somebody in Delhi reading Delhi should be told about Delhi's rush
+     hour, and somebody in Palo Alto reading the Bay Area about theirs.
+     A browser gets this right for free.
+
+     A script has no reader, so it picks up whatever timezone the machine
+     is in — which made `check-location.mjs` answer differently at
+     breakfast than at six, and differently again in CI. Scripts pin this;
+     nothing in the browser touches it. */
+  let clock = () => new Date();
+  const setClock = fn => { clock = fn || (() => new Date()); };
+
   function minutes(coords, when) {
     const a = active();
     if (!a || !coords) return null;
     const d = km([a.lat, a.lon], coords);
     if (!isFinite(d)) return null;
-    return City.reach.minutes(d, when || new Date());
+    return City.reach.minutes(d, when || clock());
   }
 
   /* Distance for a record: its own coordinates if it has them, otherwise
@@ -189,6 +202,6 @@ const Loc = (() => {
   return {
     boot, save, active, home, isExploring, setHome, explore, resetToHome, recents,
     minutes, minutesTo, kmTo, km, displayName, zoneName, zoneCoords, presets,
-    search, locate, fromZone, ZONE_NAMES
+    search, locate, fromZone, ZONE_NAMES, setClock
   };
 })();
