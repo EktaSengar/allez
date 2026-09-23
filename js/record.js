@@ -522,8 +522,12 @@ const Rec = (() => {
       .concat((D.practices?.items || []).map(i => Object.assign({ provenance: 'sourced' }, i)))
       .filter(i => !(i.end && todayISO && i.end < todayISO));
 
-    /* Everything in the curated files was written by somebody who went.
-       Anything arriving from a generated tier states its own provenance. */
+    /* Everything in the curated files was written by somebody who went,
+       unless the record says otherwise. A researched place the map layer
+       never collects (the HP Garage is a `tourism=attraction`, which
+       discover.mjs does not ask for) can only live here, so it states
+       `provenance: 'editorial'` itself. Anything arriving from a
+       generated tier states its own provenance. */
     all.forEach(i => { if (!i.provenance) i.provenance = 'personal'; });
     discovered.forEach(i => { if (!i.provenance) i.provenance = 'found'; });
 

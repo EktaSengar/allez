@@ -533,6 +533,18 @@ const Near = (() => {
     restaurant: i => i.type === 'restaurant',
     market:     i => i.type === 'market',
     deli:       i => i.type === 'deli',
+    /* Not a type of its own on the map: OpenStreetMap's ice-cream shops
+       arrive as `deli`, beside the cheese and wine shops, and bubble tea
+       as `cafe`. The cuisine tag is what says it, where a mapper set one;
+       a hand-written record says it with `dessert` in its categories. */
+    dessert:    i => i.type === 'dessert' || (i.categories || []).includes('dessert')
+                  || /^(ice_cream|gelato|frozen_yogurt|soft_serve|dessert|bubble_?tea|donut|cake)$/.test(i.cuisine || '')
+                  /* Most have no cuisine tag at all, and the name is the only
+                     thing that says it — Kara's Cupcakes, The Penny Ice
+                     Creamery. Only among shops, cafés and bakeries: a
+                     restaurant called Cheesecake-anything is dinner. */
+                  || (['deli', 'bakery', 'cafe'].includes(i.type)
+                      && /\b(cakes?|cupcakes?|ice ?cream(ery)?|creamery|gelat(o|eria)|froyo|frozen yogh?urt|desserts?|donuts?|doughnuts?)\b/i.test(i.title || '')),
     park:       i => i.type === 'park' || (i.categories || []).includes('park'),
     museum:     i => ['museum', 'gallery', 'culture'].includes(i.type),
     books:      i => i.type === 'books' || (i.categories || []).includes('books'),
