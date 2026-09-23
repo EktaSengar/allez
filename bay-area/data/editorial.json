@@ -827,6 +827,8 @@
    ],
    "area": "University Avenue",
    "url": "https://bluebottlecoffee.com/cafes/palo-alto",
+   "hours": "Mo-Su 06:00-19:00",
+   "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -848,13 +850,13 @@
    "lastVerified": "2026-09-23"
   },
   {
-   "id": "osm-elizabeth-gamble-gardens-74880--244297",
-   "title": "Elizabeth Gamble Gardens",
+   "id": "osm-elizabeth-f-gamble-garden-74880--244297",
+   "title": "Gamble Garden",
    "type": "park",
    "zone": "palo-alto",
    "coords": [
     37.43998,
-    -122.14845
+    -122.14837
    ],
    "area": null,
    "url": null,
@@ -863,7 +865,7 @@
     "park"
    ],
    "match": {
-    "name": "Elizabeth Gamble Gardens",
+    "name": "Elizabeth F. Gamble Garden",
     "zone": "palo-alto",
     "type": "park"
    },

@@ -507,7 +507,13 @@ const Rec = (() => {
        keeps the earlier of any pair, which the ordering above has already
        made the more informative one. */
     const kept = selfDedupe(dropDuplicates(sourced, curated.concat(written)));
-    const writtenIds = new Set(written.map(i => i.id));
+    /* The map ids a record stands for: its own, if it came from the map,
+       and any it names in `sameAs`. The second is for the places the map
+       spells differently from the record — "Rose and Crown" for The Rose &
+       Crown, "Cafe Tosca" for Tosca Cafe — where matching by name and
+       distance cannot see that they are one place and both would show. */
+    const writtenIds = new Set([...written.map(i => i.id),
+      ...curated.concat(written).flatMap(i => i.sameAs || [])]);
     const discovered = kept.concat(
       /* A researched record that carries a map id *is* that place, even
          where it has moved it: Turtle Tower's map entry is still on

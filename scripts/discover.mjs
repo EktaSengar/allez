@@ -87,7 +87,22 @@ const LAYERS = [
   { cat:'nightlife',  emoji:'🍸', label:'Bar',         q:['node["amenity"="bar"]','node["amenity"="pub"]','node["amenity"="nightclub"]','node["amenity"="music_venue"]'] },
   { cat:'culture',    emoji:'🎭', label:'Culture',     q:['node["amenity"="theatre"]','node["amenity"="cinema"]','node["amenity"="arts_centre"]','way["amenity"="theatre"]'] },
   { cat:'books',      emoji:'📚', label:'Bookshop',    q:['node["shop"="books"]','node["shop"="music"]','node["shop"="second_hand"]','node["shop"="antiques"]'] }
-].concat(City.discover?.layers || []);
+].concat(City.discover?.layers || [])
+  /* A restaurant drawn as the outline of its building is as much a
+     restaurant as one drawn as a pin, and the queries above asked only
+     for pins. Measured in Palo Alto on 23 September 2026: Ettan, Rooh,
+     Khazana, Oren's, Bevri, Taverna, Local Union 271 and Pho Ha Noi are
+     all on University Avenue and all mapped as buildings, so none of them
+     reached the index — the busiest block of the Peninsula looked half
+     empty. `out center` already gives a way a point, and the de-duplication
+     below already folds a pin and a building of the same place together.
+
+     Per pack, like the layers above, because it changes what a live
+     city's index holds and each city should be measured when it gets it.
+     Paris has not been switched on yet. */
+  .map(l => City.discover?.buildings
+    ? { ...l, q: l.q.map(q => q.replace(/^node\[/, 'nwr[')) }
+    : l);
 
 /* A pack may add layers, and the Indian ones have to — the same mistake
    notable.mjs made with Wikidata classes, in a different vocabulary.
@@ -265,12 +280,20 @@ async function run() {
     await sleep(1500);                                  // be a good citizen
   }
 
-  /* De-duplicate: OSM often has the same shop as a node and a way. */
-  const seen = new Set();
+  /* De-duplicate: OSM often has the same shop as a node and a way. This
+     rounded both to a 0.001° grid, which folds a pin and its building
+     together only when they fall in the same cell: Molly Tea in
+     Sunnyvale, a pin at -122.02444 and a building at -122.02451, sat
+     either side of a cell edge seven metres apart and shipped twice once
+     buildings were being fetched. Same category, same name, within 80 m
+     is the same place. */
+  const seen = new Map();
+  const close = (a, b) => Math.abs(a.lat - b.lat) < 0.0008 && Math.abs(a.lon - b.lon) < 0.001;
   const items = out.filter(p => {
-    const key = `${p.c}|${p.n.toLowerCase()}|${p.lat.toFixed(3)}|${p.lon.toFixed(3)}`;
-    if (seen.has(key)) return false;
-    seen.add(key); return true;
+    const key = `${p.c}|${p.n.toLowerCase()}`;
+    const prior = seen.get(key) || [];
+    if (prior.some(q => close(p, q))) return false;
+    prior.push(p); seen.set(key, prior); return true;
   });
 
   const spread = {};

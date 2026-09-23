@@ -62,12 +62,18 @@ async function overpassTags(refs) {
       return out;
     } catch { /* the other mirror */ }
   }
-  throw new Error('Overpass unreachable — nothing written');
+  /* Overpass throttles hard, especially right after discover.mjs has run.
+     The lookups by id wait for another day; the matches against the
+     discovery index below need nothing from the network, so the run
+     carries on rather than throwing both away. */
+  console.log('  Overpass unreachable — looking up by id skipped this run');
+  return new Map();
 }
 
 async function run() {
   const disc = await readDiscovered();
   const index = disc.items || [];
+  const byId = new Map(index.map(p => [Rec.compactId(p), p]));
   const docs = {};
   const todo = [];
   for (const f of FILES) {
@@ -96,9 +102,13 @@ async function run() {
     if (ref && tags.has(ref)) {
       const t = tags.get(ref);
       hours = t.opening_hours || null; phone = t.phone || t['contact:phone'] || null; from = `openstreetmap ${ref}`;
-    } else if (i.coords) {
+    } else {
+      /* By a map id the record names in `sameAs` — the places the map
+         spells differently, which a name match cannot find — then by the
+         same name close by. */
+      const same = (i.sameAs || []).map(id => byId.get(id)).find(Boolean);
       const want = flat(i.title);
-      const hit = index.find(p => flat(p.n) === want && km([p.lat, p.lon], i.coords) < 0.15);
+      const hit = same || (i.coords && index.find(p => flat(p.n) === want && km([p.lat, p.lon], i.coords) < 0.15));
       if (hit) { hours = hit.oh || null; phone = hit.ph || null; from = 'openstreetmap (discovery index)'; }
     }
     if (!from) { unmatched.push(i.title); continue; }
