@@ -655,6 +655,192 @@
       "imageSubject": "Portola Valley, California",
       "imageKind": "context",
       "imageCredit": "Jack Boucher · Public domain"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "baseball"
+      ],
+      "intent": [
+        "watch"
+      ],
+      "goodFor": [
+        "weekend",
+        "couple",
+        "sport",
+        "socialize"
+      ],
+      "lastVerified": "2026-09-23",
+      "uniqueness": 4,
+      "quality": 4,
+      "id": "watch-oracle-park",
+      "title": "Giants at Oracle Park",
+      "emoji": "⚾",
+      "coords": [
+        37.77861,
+        -122.38947
+      ],
+      "zone": "south-beach",
+      "area": "Oracle Park, 24 Willie Mays Plaza",
+      "coordsFrom": "osm relation/7325085",
+      "indoor": false,
+      "weatherSensitive": true,
+      "durationMin": 210,
+      "priceNote": "Cheap seats in the bleachers; more behind home plate",
+      "times": "MLB, April to late September, most days in season",
+      "transit": "Muni Metro to 2nd & King, or Caltrain to 4th & King",
+      "why": "The best-placed ballpark in America, on the bay at the edge of SoMa. A home run to right field lands in the water of McCovey Cove, where kayakers wait for it. Get bleacher seats and watch the sun go down over the city behind the outfield. Bring a jacket to a night game: it is cold by the fourth inning.",
+      "labels": [
+        "dontmiss",
+        "couple",
+        "outdoor"
+      ],
+      "url": "https://www.mlb.com/giants/schedule",
+      "source": "San Francisco Giants; Wikipedia; confirmed against OpenStreetMap",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/McCovey_Cove_%28767980568%29.jpg/1280px-McCovey_Cove_%28767980568%29.jpg",
+      "imageSubject": "McCovey Cove",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "intent": [
+        "watch"
+      ],
+      "goodFor": [
+        "weekend",
+        "couple",
+        "sport",
+        "socialize"
+      ],
+      "lastVerified": "2026-09-23",
+      "uniqueness": 4,
+      "quality": 4,
+      "id": "watch-chase-center",
+      "title": "Warriors and Valkyries at Chase Center",
+      "emoji": "🏀",
+      "coords": [
+        37.7679,
+        -122.38742
+      ],
+      "zone": "pier-70",
+      "area": "Chase Center, Mission Bay",
+      "coordsFrom": "osm way/579646390",
+      "indoor": true,
+      "rainyDayPick": true,
+      "durationMin": 180,
+      "priceNote": "Warriors are expensive; Valkyries much less so",
+      "times": "Warriors, October to April; Valkyries (WNBA), May to September",
+      "transit": "Muni T Third to the UCSF/Chase Center stop",
+      "why": "The arena in Mission Bay, open since 2019, and home to two teams. The Warriors are the famous ticket. The Valkyries are the better night out: the WNBA's newest team, a sold-out crowd from their first season, and in 2026 one of the best records the league has seen. The waterfront park outside is good before the game.",
+      "labels": [
+        "couple"
+      ],
+      "url": "https://www.chasecenter.com/",
+      "source": "Chase Center; SF Standard; confirmed against OpenStreetMap",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chase_Center_-_July_2019_%287605%29.jpg/1280px-Chase_Center_-_July_2019_%287605%29.jpg",
+      "imageSubject": "Chase Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "intent": [
+        "watch"
+      ],
+      "goodFor": [
+        "weekend",
+        "couple",
+        "sport",
+        "socialize"
+      ],
+      "lastVerified": "2026-09-23",
+      "uniqueness": 4,
+      "quality": 4,
+      "id": "watch-levis-stadium",
+      "title": "49ers at Levi's Stadium",
+      "emoji": "🏈",
+      "coords": [
+        37.40299,
+        -121.96965
+      ],
+      "area": "Levi's Stadium, Santa Clara",
+      "coordsFrom": "osm way/296503400",
+      "indoor": false,
+      "weatherSensitive": true,
+      "durationMin": 300,
+      "priceNote": "NFL prices; the upper deck is the way in",
+      "times": "NFL, September to January, home games roughly every other Sunday",
+      "transit": "Caltrain to Mountain View, then VTA light rail to Great America",
+      "why": "The 49ers' stadium in Santa Clara, open since 2014, which hosted the Super Bowl in 2016 and again in February 2026. Tailgating in the lots is half the day. Take the train rather than driving: the car parks empty very slowly.",
+      "labels": [
+        "weekend"
+      ],
+      "url": "https://www.49ers.com/schedule/",
+      "source": "Levi's Stadium; San Francisco 49ers; confirmed against OpenStreetMap",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
+      "imageSubject": "Levi's Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "intent": [
+        "watch"
+      ],
+      "goodFor": [
+        "weekend",
+        "couple",
+        "sport",
+        "socialize"
+      ],
+      "lastVerified": "2026-09-23",
+      "uniqueness": 4,
+      "quality": 4,
+      "id": "watch-stanford-stadium",
+      "title": "Stanford football at Stanford Stadium",
+      "emoji": "🌲",
+      "coords": [
+        37.43453,
+        -122.16199
+      ],
+      "zone": "palo-alto",
+      "area": "Stanford Stadium",
+      "coordsFrom": "osm relation/18564360",
+      "indoor": false,
+      "weatherSensitive": true,
+      "durationMin": 240,
+      "priceNote": "Among the cheapest big-stadium tickets in the Bay",
+      "times": "College football, September to November, home Saturdays",
+      "transit": "Caltrain to Palo Alto and walk across campus, or the free Marguerite shuttle",
+      "why": "Big-time college football you can walk to from downtown Palo Alto. The stadium sits in a grove of trees on campus, with the band and a crowd of students. Tickets are easy to get and cheap by the standard of the pros. Make a day of it: lunch on University Avenue, the game, and the Rodin garden on the way home.",
+      "labels": [
+        "couple",
+        "weekend"
+      ],
+      "url": "https://gostanford.com/sports/football/schedule",
+      "source": "Stanford Athletics; confirmed against OpenStreetMap",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
+      "imageSubject": "Stanford Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }

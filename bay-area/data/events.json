@@ -1,6 +1,478 @@
 {
   "generated": "2026-09-23",
   "window": null,
-  "note": "Hand-written dated events. Empty.",
-  "items": []
+  "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the team's or organiser's own schedule on the date given.",
+  "items": [
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "giants-dodgers-2026-09",
+      "title": "Giants v Dodgers — the last home series",
+      "emoji": "⚾",
+      "coords": [
+        37.77861,
+        -122.38947
+      ],
+      "zone": "south-beach",
+      "area": "Oracle Park, 24 Willie Mays Plaza",
+      "coordsFrom": "osm relation/7325085",
+      "start": "2026-09-25",
+      "end": "2026-09-27",
+      "durationMin": 210,
+      "priceNote": "From the bleachers up",
+      "times": "Friday to Sunday, the final weekend of the season",
+      "why": "The oldest rivalry in the game, and the last three home games of the season. Giants against Dodgers is the series Oracle Park fills for. Sunday is the regular season's final day.",
+      "categories": [
+        "sport",
+        "baseball"
+      ],
+      "labels": [
+        "couple"
+      ],
+      "url": "https://www.mlb.com/giants/schedule",
+      "source": "MLB / San Francisco Giants schedule",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/McCovey_Cove_%28767980568%29.jpg/1280px-McCovey_Cove_%28767980568%29.jpg",
+      "imageSubject": "McCovey Cove",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "stanford-georgia-tech-2026",
+      "title": "Stanford v Georgia Tech",
+      "emoji": "🏈",
+      "coords": [
+        37.43453,
+        -122.16199
+      ],
+      "zone": "palo-alto",
+      "area": "Stanford Stadium",
+      "coordsFrom": "osm relation/18564360",
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "durationMin": 240,
+      "priceNote": "Cheap",
+      "why": "An ACC Saturday at Stanford Stadium, a walk from downtown Palo Alto.",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "url": "https://gostanford.com/sports/football/schedule",
+      "source": "Stanford Athletics 2026 schedule",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
+      "imageSubject": "Stanford Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "valkyries-playoffs-2026",
+      "title": "Valkyries in the playoffs",
+      "emoji": "🏀",
+      "coords": [
+        37.7679,
+        -122.38742
+      ],
+      "zone": "pier-70",
+      "area": "Chase Center, Mission Bay",
+      "coordsFrom": "osm way/579646390",
+      "start": "2026-09-27",
+      "end": "2026-10-02",
+      "durationMin": 180,
+      "priceNote": "Tickets online only",
+      "why": "The Valkyries clinched a home playoff game in only their second season, after one of the best regular seasons the WNBA has seen. The playoffs start on September 27, and the exact home dates depend on the final seeding. Buy tickets online the moment they are set, because Chase Center has sold out for this team.",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "labels": [
+        "dontmiss",
+        "couple"
+      ],
+      "url": "https://valkyries.wnba.com/tickets",
+      "source": "Golden State Valkyries; CBS San Francisco; SF Standard",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chase_Center_-_July_2019_%287605%29.jpg/1280px-Chase_Center_-_July_2019_%287605%29.jpg",
+      "imageSubject": "Chase Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "49ers-broncos-2026",
+      "title": "49ers v Broncos",
+      "emoji": "🏈",
+      "coords": [
+        37.40299,
+        -121.96965
+      ],
+      "area": "Levi's Stadium, Santa Clara",
+      "coordsFrom": "osm way/296503400",
+      "start": "2026-10-04",
+      "end": "2026-10-04",
+      "durationMin": 300,
+      "priceNote": "NFL prices",
+      "why": "A Sunday home game at Levi's. Take the train.",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "url": "https://www.49ers.com/schedule/",
+      "source": "Levi's Stadium 2026 schedule",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
+      "imageSubject": "Levi's Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "couple",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "fleet-week-2026",
+      "title": "Fleet Week and the Blue Angels",
+      "emoji": "✈️",
+      "coords": [
+        37.8066,
+        -122.43912
+      ],
+      "zone": "cow-hollow",
+      "area": "Marina Green and the waterfront",
+      "coordsFrom": "osm way/16761472",
+      "start": "2026-10-09",
+      "end": "2026-10-11",
+      "price": 0,
+      "priceNote": "Free from the shore",
+      "durationMin": 240,
+      "times": "Air show noon to 4pm, Friday to Sunday; ships from October 4",
+      "why": "The Blue Angels are back after the 2025 shutdown grounded them. The air show fills the sky between the Golden Gate and Alcatraz from noon to four each day, the Friday morning starts with the Parade of Ships, and navy ships are open for tours at Piers 35 and 27 on October 7 and 8. Watching from the shore costs nothing.",
+      "spectator": "Marina Green, Crissy Field or Fort Mason, which has Equator Coffees at the gate. Arrive by eleven with a blanket and layers.",
+      "categories": [
+        "sport",
+        "outdoor",
+        "free"
+      ],
+      "labels": [
+        "dontmiss",
+        "couple",
+        "outdoor"
+      ],
+      "url": "https://fleetweeksf.org/air-show/",
+      "source": "Fleet Week San Francisco; SF Chronicle; ABC7",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Marina_Green.jpg/1280px-Marina_Green.jpg",
+      "imageSubject": "Marina Green",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "stanford-elon-2026",
+      "title": "Stanford v Elon — Homecoming",
+      "emoji": "🏈",
+      "coords": [
+        37.43453,
+        -122.16199
+      ],
+      "zone": "palo-alto",
+      "area": "Stanford Stadium",
+      "coordsFrom": "osm relation/18564360",
+      "start": "2026-10-17",
+      "end": "2026-10-17",
+      "durationMin": 240,
+      "priceNote": "Cheap",
+      "why": "Homecoming weekend at Stanford: the campus is at its liveliest, and the stadium fills with alumni.",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "url": "https://gostanford.com/sports/football/schedule",
+      "source": "Stanford Athletics 2026 schedule",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
+      "imageSubject": "Stanford Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "49ers-commanders-2026",
+      "title": "49ers v Commanders — Monday night",
+      "emoji": "🏈",
+      "coords": [
+        37.40299,
+        -121.96965
+      ],
+      "area": "Levi's Stadium, Santa Clara",
+      "coordsFrom": "osm way/296503400",
+      "start": "2026-10-19",
+      "end": "2026-10-19",
+      "durationMin": 300,
+      "priceNote": "NFL prices",
+      "why": "A Monday night home game, with Keena Turner inducted into the 49ers Hall of Fame at half-time.",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "url": "https://www.49ers.com/schedule/",
+      "source": "Levi's Stadium 2026 schedule",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
+      "imageSubject": "Levi's Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "warriors-opener-2026",
+      "title": "Warriors home opener v Grizzlies",
+      "emoji": "🏀",
+      "coords": [
+        37.7679,
+        -122.38742
+      ],
+      "zone": "pier-70",
+      "area": "Chase Center, Mission Bay",
+      "coordsFrom": "osm way/579646390",
+      "start": "2026-10-23",
+      "end": "2026-10-23",
+      "durationMin": 180,
+      "priceNote": "Expensive — the opener is the hardest ticket of the year",
+      "why": "The first home game of the Warriors' season at Chase Center, against Memphis.",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "url": "https://www.chasecenter.com/",
+      "source": "Golden State Warriors 2026–27 schedule",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chase_Center_-_July_2019_%287605%29.jpg/1280px-Chase_Center_-_July_2019_%287605%29.jpg",
+      "imageSubject": "Chase Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "stanford-nc-state-2026",
+      "title": "Stanford v NC State",
+      "emoji": "🏈",
+      "coords": [
+        37.43453,
+        -122.16199
+      ],
+      "zone": "palo-alto",
+      "area": "Stanford Stadium",
+      "coordsFrom": "osm relation/18564360",
+      "start": "2026-10-23",
+      "end": "2026-10-24",
+      "durationMin": 240,
+      "priceNote": "Cheap",
+      "why": "Friday the 23rd or Saturday the 24th — the ACC has not fixed the day yet, so check before you plan around it.",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "url": "https://gostanford.com/sports/football/schedule",
+      "source": "Stanford Athletics 2026 schedule",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
+      "imageSubject": "Stanford Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "49ers-raiders-2026",
+      "title": "49ers v Raiders",
+      "emoji": "🏈",
+      "coords": [
+        37.40299,
+        -121.96965
+      ],
+      "area": "Levi's Stadium, Santa Clara",
+      "coordsFrom": "osm way/296503400",
+      "start": "2026-11-08",
+      "end": "2026-11-08",
+      "durationMin": 300,
+      "priceNote": "NFL prices",
+      "why": "The old Bay Area rivalry, now that the Raiders play in Las Vegas. It is a Sunday afternoon game.",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "url": "https://www.49ers.com/schedule/",
+      "source": "Levi's Stadium 2026 schedule",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
+      "imageSubject": "Levi's Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "stanford-smu-2026",
+      "title": "Stanford v SMU",
+      "emoji": "🏈",
+      "coords": [
+        37.43453,
+        -122.16199
+      ],
+      "zone": "palo-alto",
+      "area": "Stanford Stadium",
+      "coordsFrom": "osm relation/18564360",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "durationMin": 240,
+      "priceNote": "Cheap",
+      "why": "The last home game of Stanford's season, on Thanksgiving Saturday.",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "url": "https://gostanford.com/sports/football/schedule",
+      "source": "Stanford Athletics 2026 schedule",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
+      "imageSubject": "Stanford Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "49ers-seahawks-2026",
+      "title": "49ers v Seahawks",
+      "emoji": "🏈",
+      "coords": [
+        37.40299,
+        -121.96965
+      ],
+      "area": "Levi's Stadium, Santa Clara",
+      "coordsFrom": "osm way/296503400",
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "durationMin": 300,
+      "priceNote": "NFL prices",
+      "why": "The division rival, at home on the Sunday after Thanksgiving.",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "url": "https://www.49ers.com/schedule/",
+      "source": "Levi's Stadium 2026 schedule",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
+      "imageSubject": "Levi's Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }
