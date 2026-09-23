@@ -522,7 +522,16 @@ const City = (() => {
 
   const serviceWorker = false;
 
-  return { id, name, searchRegion, ua, bbox, serviceWorker, zone, bases, climate, reach, practices, luma, events,
+  /* The lines under the Nights headings. */
+  const nightNotes = {
+    comedy: 'Where Robin Williams started, and improv by the bay',
+    jazz:   'A concert hall built for it, and a supper club underground',
+    venue:  'The ballrooms the sixties happened in',
+    club:   'The late ones',
+    bar:    'Beat bars, tiki, and a Chinatown mai tai'
+  };
+
+  return { id, name, searchRegion, ua, bbox, nightNotes, serviceWorker, zone, bases, climate, reach, practices, luma, events,
            centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
 })();
 

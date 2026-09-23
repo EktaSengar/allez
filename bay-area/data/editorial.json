@@ -1226,6 +1226,40 @@
    "labels": [],
    "source": "San Francisco Chronicle; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-turtle-tower-75568--244836",
+   "title": "Turtle Tower",
+   "type": "restaurant",
+   "zone": "telegraph-hill",
+   "coords": [
+    37.79361,
+    -122.39934
+   ],
+   "area": "220 California Street, Financial District",
+   "url": "https://turtletowersf.com/",
+   "cuisine": "vietnamese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Turtle Tower",
+    "zone": "little-saigon",
+    "type": "restaurant"
+   },
+   "why": "The best Northern-style pho in the city: the Hanoi way, with a clear, gingery broth and none of the hoisin and basil on the side. Order the pho ga, made with free-range chicken and skin-on strips of meat. It was a Tenderloin fixture from 1999, closed in 2023, and came back on California Street. A second branch is on Fillmore in Cow Hollow.",
+   "quality": 5,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "food",
+    "cheap"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "The Infatuation; SF Standard; SFGate; moved from its old address on Larkin Street, where the map still has it",
+   "lastVerified": "2026-09-23"
   }
  ]
 }
