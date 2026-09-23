@@ -174,15 +174,19 @@ jobs:
         # every city's page or three of them point at a hash that is gone.
         run: node scripts/version.mjs --all
 
+      # permit-places.json is New York's geocoding cache: every crossing
+      # OpenStreetMap has already been asked about. Left out, each run
+      # would ask again about every block added since it was last
+      # committed by hand, and that list only grows.
       - name: Commit any changes
         if: github.event_name != 'pull_request'
         run: |
-          if [ -z "$(git status --porcelain paris delhi bengaluru bay-area new-york scripts/photo-cache.json)" ]; then
+          if [ -z "$(git status --porcelain paris delhi bengaluru bay-area new-york scripts/photo-cache.json scripts/permit-places.json)" ]; then
             echo "Nothing changed — no events expired and assets already stamped."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add paris delhi bengaluru bay-area new-york scripts/photo-cache.json
+          git add paris delhi bengaluru bay-area new-york scripts/photo-cache.json scripts/permit-places.json
           git commit -m "chore: prune expired events and restamp assets ($(date -u +%Y-%m-%d))"
           git push
