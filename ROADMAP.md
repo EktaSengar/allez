@@ -434,3 +434,91 @@ record was last confirmed, rather than deciding on their behalf.
 
 Phases 1 and 4 are the pair that delivers what was asked for. Phase 2 is the
 one that stops an existing section from quietly dying.
+
+---
+
+## Two audiences: the site, and the agents  ·  *written 23 September 2026*
+
+Meta shipped Muse this month: a personal agent that plans, books through
+partners such as OpenTable, and reads the user's Instagram, WhatsApp and
+mail. It will answer "where should we eat in Palo Alto" for more people in a
+week than this site will reach in a year. The first hands-on reviews also
+caught it recommending restaurants that had been closed for years and giving
+a phone number it admitted it had made up.
+
+That is the whole strategy in two sentences. An agent is strongest at reach
+and at acting; it is weakest at knowing whether a place is still there and
+whether anybody who can be named has been. Those are the two things this
+repository is built around — the provenance ladder, a source and a
+`lastVerified` on every written record, and the closed-place rules in
+`js/record.js`.
+
+So there are two audiences, and one set of data feeds both.
+
+**allez.city stays a product people open directly.** An agent answers the
+question it was asked. The site answers the ones nobody thought to ask — the
+lesser-known trips, the hidden corners, somewhere new this weekend — and it
+works without being asked at all: today's picks, what is on tonight, the
+weekend's plan, at a glance. It keeps things between visits (saved lists,
+ratings that reorder the page, quests, Regulars on a rhythm), and it says
+plainly on every card whether somebody went, researched it, or only found it
+on a map. None of that survives being flattened into an agent's paragraph,
+and none of it should be traded away for the agent channel.
+
+**Agents are a distribution channel, not the product.** The aim is to be the
+source an agent can cite: probably an MCP server, read-only, a thin layer
+over `record.js`, `nearby.js` and `scoring.js` so an agent gets exactly the
+answers the page does. Whether Muse accepts third-party MCP servers was not
+confirmed when this was written; built to the standard, the same server
+serves Claude and other clients today and Muse when it opens.
+
+### What "works flawlessly" needs from the data
+
+The work is the same for both audiences, which is why it comes first.
+
+1. **Is it still there, and when did somebody check.** This is not Phase 1.5
+   reopened, and the argument is a different one. That phase was about the
+   22,000 records nobody wrote; this is about the few hundred somebody did —
+   the curated files and `editorial.json` — where one stale card costs the
+   most trust. Signals already within reach: a dead website (`refresh.mjs
+   --links` already HEADs every URL), the matched OpenStreetMap id turning
+   `disused:` or vanishing from the weekly index, a Wikipedia article going
+   past tense. The output is a list for a person, never a deletion: Phase
+   1.5's warning about silent false closures stands, and `notes.json`'s
+   `hide` is the only way a place leaves. Then show the date on the card —
+   the piece Phase 1.5 already named as cheap and unfinished.
+2. **Hours on every place the site recommends**, in the OSM format
+   `js/hours.js` already reads.
+3. **A way to act**: the booking page itself (Tock, Resy, OpenTable),
+   the phone number, the website. A link, never a booking engine.
+4. **The same fields in every pack**, checked by `check-packs.mjs`: price
+   level, cuisine, `goodFor`, indoor, duration, how to get there.
+5. **Provenance travels with every answer**, so an agent can say "somebody
+   went" rather than flattening all three tiers into one confident voice.
+6. **Verdicts live in fields, not prose.** A ranking the owner gives —
+   "good, nothing special" — sets `quality`; only words offered as a
+   description of the place go in `why`.
+7. **First-hand photographs** on the ★ records, taken by the people who went,
+   resized to the image slots in `.claude/skills/paris-performance`. Never
+   copied from Instagram, Yelp or Google: those are somebody else's, and
+   scraping them breaks the platforms' terms besides.
+
+### For the site on its own
+
+- A **tonight** view: what to do at seven o'clock near where you are, in one
+  screen.
+- **Installable and offline** on a phone. The manifests exist; the Bay Area's
+  service worker is off.
+- **Share a card or a route by link** — how the site finds new readers
+  without an agent in between.
+
+### Order
+
+1. The liveness list and a checked date on every written card.
+2. Hours and booking links for the ★ and editorial records.
+3. A read-only MCP server over the Bay Area pack, tested with Claude.
+4. Structured place data in each page and an `llms.txt`, for agents that
+   only read the web.
+5. The tonight view, offline, and share links — in parallel with 1–4, since
+   they need nothing from them.
+6. Other packs, and Muse when it can connect.
