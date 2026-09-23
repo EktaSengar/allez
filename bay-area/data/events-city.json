@@ -4,12 +4,12 @@
     "from": "2026-09-23",
     "to": "2026-11-22"
   },
-  "source": "Stanford Events (events.stanford.edu) · Our415 (data.sfgov.org) · Luma — San Francisco",
+  "source": "Stanford Events (events.stanford.edu) · Our415 (data.sfgov.org) · Luma — San Francisco · Luma — Bay Area Founders Club · Luma — Open Source for AI · Luma — Bay Area AI",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
     "stanford": 51,
-    "our415": 51,
-    "luma": 19
+    "our415": 52,
+    "luma": 32
   },
   "items": [
     {
@@ -213,6 +213,32 @@
       "uniqueness": 3
     },
     {
+      "id": "our415-160440_sfpl",
+      "title": "Crochet Club – Autumn Theme",
+      "emoji": "🎨",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "westwood-park",
+      "area": "Ingleside",
+      "coords": [
+        37.724058000001,
+        -122.456290500002
+      ],
+      "start": "2026-09-23",
+      "end": "2026-09-23",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Select from a range of crochet projects or bring your own project. Instruction will be provided, if needed. Crocheters of all experience levels,…",
+      "url": "https://sfpl.org/events/2026/09/23/activity-crochet-club-autumn-theme",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
       "id": "our415-159789_sfpl",
       "title": "Knitting Circle",
       "emoji": "🫂",
@@ -260,32 +286,6 @@
       "priceNote": "Free",
       "why": "Meet the pets and humans that call the Excelsior neighborhood home.   4:00 p.m. - Meet at the Excelsior Branch Library4:10 p.m. - Walking…",
       "url": "https://sfpl.org/events/2026/09/23/social-walking-pet-tour",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "our415-160440_sfpl",
-      "title": "Crochet Club – Autumn Theme",
-      "emoji": "🎨",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "westwood-park",
-      "area": "Ingleside",
-      "coords": [
-        37.724058000001,
-        -122.456290500002
-      ],
-      "start": "2026-09-23",
-      "end": "2026-09-23",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Select from a range of crochet projects or bring your own project. Instruction will be provided, if needed. Crocheters of all experience levels,…",
-      "url": "https://sfpl.org/events/2026/09/23/activity-crochet-club-autumn-theme",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
@@ -412,6 +412,52 @@
       "uniqueness": 3
     },
     {
+      "id": "luma-evtVxMofV01w6gOJJj",
+      "title": "CISO Roundtable Dinner",
+      "emoji": "☕",
+      "type": "event",
+      "categories": [
+        "food"
+      ],
+      "zone": "los-altos",
+      "area": null,
+      "coords": [
+        37.37552247174147,
+        -122.14706997284314
+      ],
+      "start": "2026-09-24",
+      "end": "2026-09-24",
+      "why": "Hosted by Yvonne Newlands & 5 others",
+      "url": "https://luma.com/svg1qdnw",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-09-23",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtWO05KmFeCRRWjib",
+      "title": "DevGuild: The Long Horizon Stack",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "polk-gulch",
+      "area": null,
+      "coords": [
+        37.78908152248859,
+        -122.42016598858238
+      ],
+      "start": "2026-09-24",
+      "end": "2026-09-25",
+      "why": "Hosted by Dana Oshiro & 3 others",
+      "url": "https://luma.com/long-horizon-stack",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-09-23",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
       "id": "stanford-53234372978860",
       "title": "Patty Chang: surfacing | Artist Talk",
       "emoji": "🎤",
@@ -507,32 +553,6 @@
       "uniqueness": 3
     },
     {
-      "id": "our415-161772_sfpl",
-      "title": "Visual Story-telling with Zefania Creates",
-      "emoji": "🛠️",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "little-saigon",
-      "area": "Main Library",
-      "coords": [
-        37.779354000001,
-        -122.415871500002
-      ],
-      "start": "2026-09-26",
-      "end": "2026-09-26",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Share stories from different generations—your aunt, grandparent, older/younger friend and craft a visual story of what you learn. Bring a picture or…",
-      "url": "https://sfpl.org/events/2026/09/26/workshop-visual-story-telling-zefania-creates",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
       "id": "our415-163258_sfpl",
       "title": "Craft Club in American Sign Language ASL",
       "emoji": "🎨",
@@ -552,32 +572,6 @@
       "priceNote": "Free",
       "why": "Explore your creativity in this bilingual (English and American Sign Language) intergenerational craft session with Black Deaf educator and…",
       "url": "https://sfpl.org/events/2026/09/26/activity-craft-club-american-sign-language-asl",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "our415-149253_sfpl",
-      "title": "¡VIVA! Kickoff Party",
-      "emoji": "🎉",
-      "type": "event",
-      "categories": [
-        "festival"
-      ],
-      "zone": "little-saigon",
-      "area": "Main Library",
-      "coords": [
-        37.779354000001,
-        -122.415871500002
-      ],
-      "start": "2026-09-26",
-      "end": "2026-09-26",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Celebrate the vibrant cultures, traditions and creativity of Latinx communities through live music, art, hands-on activities and family-friendly fun…",
-      "url": "https://sfpl.org/events/2026/09/26/celebration-viva-kickoff-party",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
@@ -611,32 +605,6 @@
       "uniqueness": 3,
       "i": "e/e5/West_Portal,_San_Francisco_in_2009.jpg",
       "ik": "c"
-    },
-    {
-      "id": "our415-158602_sfpl",
-      "title": "Open House",
-      "emoji": "🎉",
-      "type": "event",
-      "categories": [
-        "festival"
-      ],
-      "zone": "noe-valley",
-      "area": "Noe Valley/Sally Brunn",
-      "coords": [
-        37.750302000001,
-        -122.435118000002
-      ],
-      "start": "2026-09-26",
-      "end": "2026-09-26",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Join us at the Noe Valley Library for a day full of fun and community for the whole family:  Big Playdate 10 a.m.–12 p.m. Little…",
-      "url": "https://sfpl.org/events/2026/09/26/celebration-open-house",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
     },
     {
       "id": "our415-152226_sfpl",
@@ -684,6 +652,84 @@
       "priceNote": "Free",
       "why": "Join us for an afternoon of tiny art paintings done by residents. Light refreshments will be provided.Tiny art will be on display from …",
       "url": "https://sfpl.org/events/2026/09/26/celebration-tiny-art-show-reception",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-161772_sfpl",
+      "title": "Visual Story-telling with Zefania Creates",
+      "emoji": "🛠️",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "little-saigon",
+      "area": "Main Library",
+      "coords": [
+        37.779354000001,
+        -122.415871500002
+      ],
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Share stories from different generations—your aunt, grandparent, older/younger friend and craft a visual story of what you learn. Bring a picture or…",
+      "url": "https://sfpl.org/events/2026/09/26/workshop-visual-story-telling-zefania-creates",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-158602_sfpl",
+      "title": "Open House",
+      "emoji": "🎉",
+      "type": "event",
+      "categories": [
+        "festival"
+      ],
+      "zone": "noe-valley",
+      "area": "Noe Valley/Sally Brunn",
+      "coords": [
+        37.750302000001,
+        -122.435118000002
+      ],
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Join us at the Noe Valley Library for a day full of fun and community for the whole family:  Big Playdate 10 a.m.–12 p.m. Little…",
+      "url": "https://sfpl.org/events/2026/09/26/celebration-open-house",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-149253_sfpl",
+      "title": "¡VIVA! Kickoff Party",
+      "emoji": "🎉",
+      "type": "event",
+      "categories": [
+        "festival"
+      ],
+      "zone": "little-saigon",
+      "area": "Main Library",
+      "coords": [
+        37.779354000001,
+        -122.415871500002
+      ],
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Celebrate the vibrant cultures, traditions and creativity of Latinx communities through live music, art, hands-on activities and family-friendly fun…",
+      "url": "https://sfpl.org/events/2026/09/26/celebration-viva-kickoff-party",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
@@ -812,32 +858,6 @@
       "uniqueness": 3
     },
     {
-      "id": "our415-160834_sfpl",
-      "title": "Mary Queen of Scots Livestream",
-      "emoji": "🎵",
-      "type": "event",
-      "categories": [
-        "music"
-      ],
-      "zone": "little-saigon",
-      "area": "Main Library",
-      "coords": [
-        37.779354000001,
-        -122.415871500002
-      ],
-      "start": "2026-09-27",
-      "end": "2026-09-27",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Experience a streamed performance of SF Opera's Mary, Queen of Scots , Thea Musgrave…",
-      "url": "https://sfpl.org/events/2026/09/27/performance-mary-queen-scots-livestream",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
       "id": "our415-156368_sfpl",
       "title": "Plant Swap",
       "emoji": "🫂",
@@ -866,32 +886,6 @@
       "ik": "c"
     },
     {
-      "id": "our415-151279_sfpl",
-      "title": "Bike Repair Fix-it Clinic",
-      "emoji": "🛠️",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "south-beach",
-      "area": "Mission Bay",
-      "coords": [
-        37.775376000001,
-        -122.393110500002
-      ],
-      "start": "2026-09-27",
-      "end": "2026-09-27",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Keep your wheels rolling—free bike repairs available! Bring your bicycle for a free tune-up and basic repairs provided by BikeMobile. Expert…",
-      "url": "https://sfpl.org/events/2026/09/27/workshop-bike-repair-fix-it-clinic",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
       "id": "our415-165691_sfpl",
       "title": "Living Poets Society Series—WORDS WITHOUT WALLS",
       "emoji": "🎤",
@@ -918,6 +912,32 @@
       "uniqueness": 3
     },
     {
+      "id": "our415-151279_sfpl",
+      "title": "Bike Repair Fix-it Clinic",
+      "emoji": "🛠️",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "south-beach",
+      "area": "Mission Bay",
+      "coords": [
+        37.775376000001,
+        -122.393110500002
+      ],
+      "start": "2026-09-27",
+      "end": "2026-09-27",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Keep your wheels rolling—free bike repairs available! Bring your bicycle for a free tune-up and basic repairs provided by BikeMobile. Expert…",
+      "url": "https://sfpl.org/events/2026/09/27/workshop-bike-repair-fix-it-clinic",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
       "id": "our415-160733_sfpl",
       "title": "Dave Rocha Jazz Trio",
       "emoji": "🎵",
@@ -937,6 +957,32 @@
       "priceNote": "Free",
       "why": "Enjoy an afternoon with one of the Bay Area's leading jazz groups, when the Dave Rocha Jazz Trio performs a vibrant set with music to delight all…",
       "url": "https://sfpl.org/events/2026/09/27/performance-dave-rocha-jazz-trio",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-160834_sfpl",
+      "title": "Mary Queen of Scots Livestream",
+      "emoji": "🎵",
+      "type": "event",
+      "categories": [
+        "music"
+      ],
+      "zone": "little-saigon",
+      "area": "Main Library",
+      "coords": [
+        37.779354000001,
+        -122.415871500002
+      ],
+      "start": "2026-09-27",
+      "end": "2026-09-27",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Experience a streamed performance of SF Opera's Mary, Queen of Scots , Thea Musgrave…",
+      "url": "https://sfpl.org/events/2026/09/27/performance-mary-queen-scots-livestream",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
@@ -1282,6 +1328,52 @@
       "uniqueness": 3
     },
     {
+      "id": "luma-evtQnKbn39kUm8E1ws",
+      "title": "Just raised? Here's how to get on Forbes and TechCrunch without a PR team",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "union-square",
+      "area": null,
+      "coords": [
+        37.79199903215487,
+        -122.39947941894059
+      ],
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "why": "Hosted by Claire Xie & 5 others",
+      "url": "https://luma.com/press",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-09-23",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtji5H2depnjiUtKs",
+      "title": "📚 Short Story Symposium",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "hayes-valley",
+      "area": "540 Laguna St, San Francisco, CA 94102, USA",
+      "coords": [
+        37.776135499999995,
+        -122.42603709999999
+      ],
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "why": "Hosted by Mendel Liu & The SF Commons",
+      "url": "https://luma.com/shortstories",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-09-23",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
       "id": "stanford-54002030507290",
       "title": "First Fridays Collab Lab",
       "emoji": "🎵",
@@ -1349,6 +1441,7 @@
       ],
       "start": "2026-10-02",
       "end": "2026-10-02",
+      "priceNote": "25",
       "why": "The Stanford Medicine Orchestra, supported by Stanford's Medicine & The Muse program, is in its 5th season, holding 3-4 concerts a year. The orchestra is made up of volunteer performers comprised of Stanford School of Medicine (SOM) and Stanford Healthcare faculty, staff, residents, postdocs, medical students, and othe",
       "url": "https://events.stanford.edu/event/stanford-medicine-orchestra-with-violinist-stella-chen",
       "source": "Stanford Events — events.stanford.edu",
@@ -1432,31 +1525,105 @@
       "uniqueness": 3
     },
     {
-      "id": "our415-162397_sfpl",
-      "title": "Ekphrastic Poetry",
-      "emoji": "🛠️",
+      "id": "luma-evt9WNIscWOtzoEMEw",
+      "title": "Generative UI Night III",
+      "emoji": "🫂",
       "type": "event",
       "categories": [
-        "learn"
+        "community"
       ],
-      "zone": "cole-valley",
-      "area": "Park",
+      "zone": "union-square",
+      "area": "WorkOS, 660 Market St, San Francisco, CA 94104, USA",
       "coords": [
-        37.770273000001,
-        -122.451052500002
+        37.788385399999996,
+        -122.4029183
+      ],
+      "start": "2026-10-02",
+      "end": "2026-10-02",
+      "why": "Hosted by Sofía Sánchez-Zárate, Uli Barkai & WorkOS",
+      "url": "https://luma.com/copilo-ldpw",
+      "source": "Luma — Open Source for AI",
+      "lastVerified": "2026-09-23",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtCGs9DakBk2Uc7zA",
+      "title": "Party Multiplayer Build Night on the Peninsula",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "redwood-city",
+      "area": "810 Hamilton St, Redwood City, CA 94063, USA",
+      "coords": [
+        37.4862146,
+        -122.23024410000001
+      ],
+      "start": "2026-10-02",
+      "end": "2026-10-02",
+      "why": "Hosted by Julian Alberts & GLO | Global Entrepreneurs Hub",
+      "url": "https://luma.com/wgp9cd4t",
+      "source": "Luma — Bay Area AI",
+      "lastVerified": "2026-09-23",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-150329_sfpl",
+      "title": "FREEDOM COMES WHEN ONE WALKS THROUGH IT",
+      "emoji": "🎵",
+      "type": "event",
+      "categories": [
+        "music"
+      ],
+      "zone": "bayshore",
+      "area": "Visitacion Valley",
+      "coords": [
+        37.712520000001,
+        -122.407780500002
       ],
       "start": "2026-10-03",
       "end": "2026-10-03",
       "price": 0,
       "priceNote": "Free",
-      "why": "What happens when we meet visual art with words? Explore ekphrastic poetry through source materials—including art exhibits and installations at…",
-      "url": "https://sfpl.org/events/2026/10/03/workshop-ekphrastic-poetry",
+      "why": "Watch Flyaway Productions' dance-based public art project exploring the concept of freedom at the…",
+      "url": "https://sfpl.org/events/2026/10/03/performance-freedom-comes-when-one-walks-through-it",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
-      "i": "d/d3/Halleyparknovember_b_(cropped).jpg",
+      "i": "4/45/Visitacion_Valley_San_Francisco.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-150289_sfpl",
+      "title": "Clothing Repair Fix-it Clinic",
+      "emoji": "🛠️",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "ingleside-terraces",
+      "area": "Merced",
+      "coords": [
+        37.726713000001,
+        -122.474461500002
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-03",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Extend the life of your clothes—at no cost!Clothing Repair Clinic hosted by SCRAP, with support from San Francisco Environment.  Bring…",
+      "url": "https://sfpl.org/events/2026/10/03/workshop-clothing-repair-fix-it-clinic",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "a/ac/Tioga_Hotel_-_Merced_California_(cropped).jpg",
       "ik": "c"
     },
     {
@@ -1488,53 +1655,53 @@
       "ik": "c"
     },
     {
-      "id": "our415-150329_sfpl",
-      "title": "FREEDOM COMES WHEN ONE WALKS THROUGH IT",
-      "emoji": "🎵",
+      "id": "our415-162397_sfpl",
+      "title": "Ekphrastic Poetry",
+      "emoji": "🛠️",
       "type": "event",
       "categories": [
-        "music"
+        "learn"
       ],
-      "zone": "bayshore",
-      "area": "Visitacion Valley",
+      "zone": "cole-valley",
+      "area": "Park",
       "coords": [
-        37.712520000001,
-        -122.407780500002
+        37.770273000001,
+        -122.451052500002
       ],
       "start": "2026-10-03",
       "end": "2026-10-03",
       "price": 0,
       "priceNote": "Free",
-      "why": "Watch Flyaway Productions' dance-based public art project exploring the concept of freedom at the…",
-      "url": "https://sfpl.org/events/2026/10/03/performance-freedom-comes-when-one-walks-through-it",
+      "why": "What happens when we meet visual art with words? Explore ekphrastic poetry through source materials—including art exhibits and installations at…",
+      "url": "https://sfpl.org/events/2026/10/03/workshop-ekphrastic-poetry",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
-      "i": "4/45/Visitacion_Valley_San_Francisco.jpg",
+      "i": "d/d3/Halleyparknovember_b_(cropped).jpg",
       "ik": "c"
     },
     {
-      "id": "our415-163720_sfpl",
-      "title": "Button Making Mayan Art",
-      "emoji": "🎨",
+      "id": "our415-165522_sfpl",
+      "title": "Open House",
+      "emoji": "🎉",
       "type": "event",
       "categories": [
-        "learn"
+        "festival"
       ],
-      "zone": "little-saigon",
-      "area": "Main Library",
+      "zone": "parkside",
+      "area": "Parkside",
       "coords": [
-        37.779354000001,
-        -122.415871500002
+        37.743093000001,
+        -122.479407000002
       ],
       "start": "2026-10-03",
       "end": "2026-10-03",
       "price": 0,
       "priceNote": "Free",
-      "why": "Create buttons with Mayan art designs at the Bay Area Maya Fest 2026.The Bay Area Maya Festival, a single-day festival on the Mission Campus of the…",
-      "url": "https://sfpl.org/events/2026/10/03/activity-button-making-mayan-art",
+      "why": "Celebrate everything the San Francisco Public Library has to offer at our annual Open House.Schedule of Activities:1:15 p.m., A magic show by…",
+      "url": "https://sfpl.org/events/2026/10/03/celebration-open-house",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
@@ -1570,58 +1737,30 @@
       "ik": "c"
     },
     {
-      "id": "our415-165522_sfpl",
-      "title": "Open House",
-      "emoji": "🎉",
+      "id": "our415-163720_sfpl",
+      "title": "Button Making Mayan Art",
+      "emoji": "🎨",
       "type": "event",
       "categories": [
-        "festival"
+        "learn"
       ],
-      "zone": "parkside",
-      "area": "Parkside",
+      "zone": "little-saigon",
+      "area": "Main Library",
       "coords": [
-        37.743093000001,
-        -122.479407000002
+        37.779354000001,
+        -122.415871500002
       ],
       "start": "2026-10-03",
       "end": "2026-10-03",
       "price": 0,
       "priceNote": "Free",
-      "why": "Celebrate everything the San Francisco Public Library has to offer at our annual Open House.Schedule of Activities:1:15 p.m., A magic show by…",
-      "url": "https://sfpl.org/events/2026/10/03/celebration-open-house",
+      "why": "Create buttons with Mayan art designs at the Bay Area Maya Fest 2026.The Bay Area Maya Festival, a single-day festival on the Mission Campus of the…",
+      "url": "https://sfpl.org/events/2026/10/03/activity-button-making-mayan-art",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
-    },
-    {
-      "id": "our415-150289_sfpl",
-      "title": "Clothing Repair Fix-it Clinic",
-      "emoji": "🛠️",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "ingleside-terraces",
-      "area": "Merced",
-      "coords": [
-        37.726713000001,
-        -122.474461500002
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-03",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Extend the life of your clothes—at no cost!Clothing Repair Clinic hosted by SCRAP, with support from San Francisco Environment.  Bring…",
-      "url": "https://sfpl.org/events/2026/10/03/workshop-clothing-repair-fix-it-clinic",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "a/ac/Tioga_Hotel_-_Merced_California_(cropped).jpg",
-      "ik": "c"
     },
     {
       "id": "luma-evtPmHmvg50YlA0MNT",
@@ -1647,28 +1786,25 @@
       "uniqueness": 3
     },
     {
-      "id": "our415-167119_sfpl",
-      "title": "Awesome Sauce with June Jo Lee, Food Ethnographer",
-      "emoji": "📚",
+      "id": "luma-evtTqiHjAXZjKSp3Sw",
+      "title": "CAL vs. UNLV Watch Party",
+      "emoji": "🫂",
       "type": "event",
       "categories": [
-        "books"
+        "community"
       ],
-      "zone": "little-saigon",
-      "area": "Main Library",
+      "zone": "san-carlos",
+      "area": "Molly O's, 1163 San Carlos Ave, San Carlos, CA 94070, USA",
       "coords": [
-        37.779354000001,
-        -122.415871500002
+        37.5065766,
+        -122.26063649999999
       ],
-      "start": "2026-10-04",
-      "end": "2026-10-04",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Mix. Dip. Wrap. Try all six tongue tastes. Spicy or sweet? Mild or bold? Make your own signature Awesome Sauce just right for you and fall in love…",
-      "url": "https://sfpl.org/events/2026/10/04/author-awesome-sauce-june-jo-lee-food-ethnographer",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "start": "2026-10-03",
+      "end": "2026-10-03",
+      "why": "Hosted by Cal Alumni of Silicon Valley",
+      "url": "https://luma.com/srgt0w3t",
+      "source": "Luma — Bay Area Founders Club",
       "lastVerified": "2026-09-23",
-      "indoor": true,
       "quality": 3,
       "uniqueness": 3
     },
@@ -1909,24 +2045,24 @@
       "ik": "c"
     },
     {
-      "id": "luma-evtXkAExC8FDvPpgnK",
-      "title": "Founder Friends San Francisco",
-      "emoji": "🫂",
+      "id": "luma-evto0t9Oo7KiZe8FJw",
+      "title": "FC SF • Founders Run & Coffee!",
+      "emoji": "🏃",
       "type": "event",
       "categories": [
-        "community"
+        "sport"
       ],
-      "zone": "union-square",
-      "area": null,
+      "zone": "rincon-hill",
+      "area": "Blue Bottle Coffee, 1 Ferry Building #7, San Francisco, CA 94111, USA",
       "coords": [
-        37.78854539202606,
-        -122.40633871823131
+        37.796118,
+        -122.393985
       ],
       "start": "2026-10-06",
       "end": "2026-10-06",
-      "why": "Let's hang! Join the San Francisco founder community to connect with other founders and hear stories from a founder who went through the wringer and came out the other side. The Schedule: 6-7pm: Get here, eat pizza, make friends 7-7:30pm: Fireside chat 7:30-8pm: Q&A 8-8:30pm: Finish pizza, make more friends 8:30pm: End",
-      "url": "https://luma.com/4xjpmq1m",
-      "source": "Luma — San Francisco",
+      "why": "Hosted by Founders Common, Nikki Heyder & Chris Ashley",
+      "url": "https://luma.com/2opylbqn",
+      "source": "Luma — Bay Area Founders Club",
       "lastVerified": "2026-09-23",
       "quality": 3,
       "uniqueness": 3
@@ -2002,6 +2138,52 @@
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtdCbCNd2oZmOIixm",
+      "title": "Ready for Anything: IPOs, SPACs and Capital Market Shifts",
+      "emoji": "🛍️",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "rincon-hill",
+      "area": null,
+      "coords": [
+        37.79340202878961,
+        -122.39276687726257
+      ],
+      "start": "2026-10-07",
+      "end": "2026-10-07",
+      "why": "Hosted by Yvonne Newlands & 6 others",
+      "url": "https://luma.com/fb7ihel0",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-09-23",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evt4M7eyIkR3AyapEO",
+      "title": "Agentic Zero: The Agentic Finance Summit #SFTechWeek",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "polk-gulch",
+      "area": "The Avalon, 1244 Sutter St, San Francisco, CA 94109, USA",
+      "coords": [
+        37.787903,
+        -122.42103499999999
+      ],
+      "start": "2026-10-07",
+      "end": "2026-10-08",
+      "why": "Hosted by lukaskywalker & 3 others",
+      "url": "https://luma.com/jlr72ut4",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-09-23",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2152,6 +2334,29 @@
       "uniqueness": 3
     },
     {
+      "id": "luma-evtKhNEKIS8jZa0Zec",
+      "title": "🧠 The Thought Experiment Lab",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "hayes-valley",
+      "area": "540 Laguna St, San Francisco, CA 94102, USA",
+      "coords": [
+        37.776135499999995,
+        -122.42603709999999
+      ],
+      "start": "2026-10-08",
+      "end": "2026-10-08",
+      "why": "Hosted by Mendel Liu & The SF Commons",
+      "url": "https://luma.com/thoughtexperiments",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-09-23",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
       "id": "our415-156094_sfpl",
       "title": "Navy Band Woodwind Quintet",
       "emoji": "🎵",
@@ -2206,12 +2411,12 @@
       "uniqueness": 3
     },
     {
-      "id": "our415-163379_sfpl",
-      "title": "Navy Band Southwest Woodwind Quintet",
-      "emoji": "🎵",
+      "id": "our415-163642_sfpl",
+      "title": "Mexican Tamale Making",
+      "emoji": "🛠️",
       "type": "event",
       "categories": [
-        "music"
+        "learn"
       ],
       "zone": "golden-gate-heights",
       "area": "Sunset",
@@ -2223,8 +2428,8 @@
       "end": "2026-10-10",
       "price": 0,
       "priceNote": "Free",
-      "why": "The Prevailing Winds Woodwind Quintet blends the individual sounds of the flute, oboe, clarinet, bassoon and French horn to create a unique quintet…",
-      "url": "https://sfpl.org/events/2026/10/10/performance-navy-band-southwest-woodwind-quintet",
+      "why": "Join Chef Olivia Mecalco, chef/owner of Mi Comedor Catering, for a fun and flavorful hands-on workshop where you’ll learn to prepare authentic,…",
+      "url": "https://sfpl.org/events/2026/10/10/workshop-mexican-tamale-making",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
@@ -2234,31 +2439,57 @@
       "ik": "c"
     },
     {
-      "id": "our415-161582_sfpl",
-      "title": "Cow Hollow Walking Tour",
-      "emoji": "🫂",
+      "id": "our415-154448_sfpl",
+      "title": "FREEDOM COMES WHEN ONE WALKS THROUGH IT",
+      "emoji": "🎵",
       "type": "event",
       "categories": [
-        "community"
+        "music"
       ],
-      "zone": "cow-hollow",
-      "area": "Golden Gate Valley",
+      "zone": "little-saigon",
+      "area": "Main Library",
       "coords": [
-        37.796850000001,
-        -122.429047500002
+        37.779354000001,
+        -122.415871500002
       ],
       "start": "2026-10-10",
       "end": "2026-10-10",
       "price": 0,
       "priceNote": "Free",
-      "why": "Take a tour with San Francisco City Guides around the Cow Hollow neighborhood. Spared destruction from the 1906 disaster, Cow Hollow contains…",
-      "url": "https://sfpl.org/events/2026/10/10/social-cow-hollow-walking-tour",
+      "why": "Watch Flyaway Productions' dance-based public art project exploring the concept of freedom at the…",
+      "url": "https://sfpl.org/events/2026/10/10/performance-freedom-comes-when-one-walks-through-it",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-162298_sfpl",
+      "title": "Découpage Pumpkins",
+      "emoji": "🛠️",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "lower-pacific-heights",
+      "area": "Presidio",
+      "coords": [
+        37.788822000001,
+        -122.444865000002
+      ],
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Celebrate the fall season with a fun, all‑ages craft. Create your own festive décor by decorating faux mini pumpkins using paper cutouts, patterned…",
+      "url": "https://sfpl.org/events/2026/10/10/workshop-decoupage-pumpkins",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
-      "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
+      "i": "e/e0/Presidio_of_San_Diego_1820_map.jpg",
       "ik": "c"
     },
     {
@@ -2290,12 +2521,40 @@
       "ik": "c"
     },
     {
-      "id": "our415-163642_sfpl",
-      "title": "Mexican Tamale Making",
-      "emoji": "🛠️",
+      "id": "our415-161582_sfpl",
+      "title": "Cow Hollow Walking Tour",
+      "emoji": "🫂",
       "type": "event",
       "categories": [
-        "learn"
+        "community"
+      ],
+      "zone": "cow-hollow",
+      "area": "Golden Gate Valley",
+      "coords": [
+        37.796850000001,
+        -122.429047500002
+      ],
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Take a tour with San Francisco City Guides around the Cow Hollow neighborhood. Spared destruction from the 1906 disaster, Cow Hollow contains…",
+      "url": "https://sfpl.org/events/2026/10/10/social-cow-hollow-walking-tour",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-163379_sfpl",
+      "title": "Navy Band Southwest Woodwind Quintet",
+      "emoji": "🎵",
+      "type": "event",
+      "categories": [
+        "music"
       ],
       "zone": "golden-gate-heights",
       "area": "Sunset",
@@ -2307,8 +2566,8 @@
       "end": "2026-10-10",
       "price": 0,
       "priceNote": "Free",
-      "why": "Join Chef Olivia Mecalco, chef/owner of Mi Comedor Catering, for a fun and flavorful hands-on workshop where you’ll learn to prepare authentic,…",
-      "url": "https://sfpl.org/events/2026/10/10/workshop-mexican-tamale-making",
+      "why": "The Prevailing Winds Woodwind Quintet blends the individual sounds of the flute, oboe, clarinet, bassoon and French horn to create a unique quintet…",
+      "url": "https://sfpl.org/events/2026/10/10/performance-navy-band-southwest-woodwind-quintet",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
@@ -2316,60 +2575,6 @@
       "uniqueness": 3,
       "i": "f/f6/Full_cycle_of_a_Sunset_on_the_high_plains_of_the_Mojave_Desert.jpg",
       "ik": "c"
-    },
-    {
-      "id": "our415-162298_sfpl",
-      "title": "Découpage Pumpkins",
-      "emoji": "🛠️",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "lower-pacific-heights",
-      "area": "Presidio",
-      "coords": [
-        37.788822000001,
-        -122.444865000002
-      ],
-      "start": "2026-10-10",
-      "end": "2026-10-10",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Celebrate the fall season with a fun, all‑ages craft. Create your own festive décor by decorating faux mini pumpkins using paper cutouts, patterned…",
-      "url": "https://sfpl.org/events/2026/10/10/workshop-decoupage-pumpkins",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "e/e0/Presidio_of_San_Diego_1820_map.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "our415-154448_sfpl",
-      "title": "FREEDOM COMES WHEN ONE WALKS THROUGH IT",
-      "emoji": "🎵",
-      "type": "event",
-      "categories": [
-        "music"
-      ],
-      "zone": "little-saigon",
-      "area": "Main Library",
-      "coords": [
-        37.779354000001,
-        -122.415871500002
-      ],
-      "start": "2026-10-10",
-      "end": "2026-10-10",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Watch Flyaway Productions' dance-based public art project exploring the concept of freedom at the…",
-      "url": "https://sfpl.org/events/2026/10/10/performance-freedom-comes-when-one-walks-through-it",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
     },
     {
       "id": "stanford-52827065017882",
@@ -2471,32 +2676,6 @@
       "uniqueness": 3
     },
     {
-      "id": "our415-162599_sfpl",
-      "title": "Cajón Drum Circle with Cunamacué",
-      "emoji": "🛠️",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "potrero-terrace",
-      "area": "Potrero",
-      "coords": [
-        37.760067000001,
-        -122.397615000002
-      ],
-      "start": "2026-10-14",
-      "end": "2026-10-14",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Learn a brief history of the Afro-Peruvian Cajón (wooden box drum) and learn to play Afro-Peruvian and Latin rhythms on the instrument. For ages 5…",
-      "url": "https://sfpl.org/events/2026/10/14/workshop-cajon-drum-circle-cunamacue",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
       "id": "our415-161239_sfpl",
       "title": "Knitting Circle",
       "emoji": "🫂",
@@ -2525,6 +2704,32 @@
       "ik": "c"
     },
     {
+      "id": "our415-162599_sfpl",
+      "title": "Cajón Drum Circle with Cunamacué",
+      "emoji": "🛠️",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "potrero-terrace",
+      "area": "Potrero",
+      "coords": [
+        37.760067000001,
+        -122.397615000002
+      ],
+      "start": "2026-10-14",
+      "end": "2026-10-14",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Learn a brief history of the Afro-Peruvian Cajón (wooden box drum) and learn to play Afro-Peruvian and Latin rhythms on the instrument. For ages 5…",
+      "url": "https://sfpl.org/events/2026/10/14/workshop-cajon-drum-circle-cunamacue",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
       "id": "stanford-53994364480741",
       "title": "Chinaka Hodge's All Greg's Kids Come Home, a staged reading",
       "emoji": "🎵",
@@ -2550,31 +2755,31 @@
       "uniqueness": 3
     },
     {
-      "id": "our415-155422_sfpl",
-      "title": "FREEDOM COMES WHEN ONE WALKS THROUGH IT",
-      "emoji": "🎵",
+      "id": "our415-150303_sfpl",
+      "title": "Bike Repair Fix-it Clinic",
+      "emoji": "🛠️",
       "type": "event",
       "categories": [
-        "music"
+        "learn"
       ],
-      "zone": "sunset-district",
-      "area": "Ortega",
+      "zone": "bayshore",
+      "area": "Visitacion Valley",
       "coords": [
-        37.751004000001,
-        -122.498275500002
+        37.712520000001,
+        -122.407780500002
       ],
       "start": "2026-10-17",
       "end": "2026-10-17",
       "price": 0,
       "priceNote": "Free",
-      "why": "Watch Flyaway Productions ' dance-based public art project exploring the concept of freedom at the…",
-      "url": "https://sfpl.org/events/2026/10/17/performance-freedom-comes-when-one-walks-through-it",
+      "why": "Keep your wheels rolling—free bike repairs available! Bring your bicycle for a free tune-up and basic repairs provided by BikeMobile. Expert…",
+      "url": "https://sfpl.org/events/2026/10/17/workshop-bike-repair-fix-it-clinic",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
-      "i": "6/69/Ortega_Shield.png",
+      "i": "4/45/Visitacion_Valley_San_Francisco.jpg",
       "ik": "c"
     },
     {
@@ -2606,32 +2811,6 @@
       "ik": "c"
     },
     {
-      "id": "our415-150889_sfpl",
-      "title": "Clothing Repair Fix-it Clinic",
-      "emoji": "🛠️",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "noe-valley",
-      "area": "Noe Valley/Sally Brunn",
-      "coords": [
-        37.750302000001,
-        -122.435118000002
-      ],
-      "start": "2026-10-17",
-      "end": "2026-10-17",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Extend the life of your clothes—at no cost! Clothing Repair Clinic hosted by SCRAP, with support from San Francisco Environment. Bring one…",
-      "url": "https://sfpl.org/events/2026/10/17/workshop-clothing-repair-fix-it-clinic",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
       "id": "our415-163567_sfpl",
       "title": "Open House",
       "emoji": "🎉",
@@ -2660,31 +2839,57 @@
       "ik": "c"
     },
     {
-      "id": "our415-150303_sfpl",
-      "title": "Bike Repair Fix-it Clinic",
+      "id": "our415-150889_sfpl",
+      "title": "Clothing Repair Fix-it Clinic",
       "emoji": "🛠️",
       "type": "event",
       "categories": [
         "learn"
       ],
-      "zone": "bayshore",
-      "area": "Visitacion Valley",
+      "zone": "noe-valley",
+      "area": "Noe Valley/Sally Brunn",
       "coords": [
-        37.712520000001,
-        -122.407780500002
+        37.750302000001,
+        -122.435118000002
       ],
       "start": "2026-10-17",
       "end": "2026-10-17",
       "price": 0,
       "priceNote": "Free",
-      "why": "Keep your wheels rolling—free bike repairs available! Bring your bicycle for a free tune-up and basic repairs provided by BikeMobile. Expert…",
-      "url": "https://sfpl.org/events/2026/10/17/workshop-bike-repair-fix-it-clinic",
+      "why": "Extend the life of your clothes—at no cost! Clothing Repair Clinic hosted by SCRAP, with support from San Francisco Environment. Bring one…",
+      "url": "https://sfpl.org/events/2026/10/17/workshop-clothing-repair-fix-it-clinic",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-155422_sfpl",
+      "title": "FREEDOM COMES WHEN ONE WALKS THROUGH IT",
+      "emoji": "🎵",
+      "type": "event",
+      "categories": [
+        "music"
+      ],
+      "zone": "sunset-district",
+      "area": "Ortega",
+      "coords": [
+        37.751004000001,
+        -122.498275500002
+      ],
+      "start": "2026-10-17",
+      "end": "2026-10-17",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Watch Flyaway Productions ' dance-based public art project exploring the concept of freedom at the…",
+      "url": "https://sfpl.org/events/2026/10/17/performance-freedom-comes-when-one-walks-through-it",
       "source": "Our415 — SF Public Library, data.sfgov.org",
       "lastVerified": "2026-09-23",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
-      "i": "4/45/Visitacion_Valley_San_Francisco.jpg",
+      "i": "6/69/Ortega_Shield.png",
       "ik": "c"
     },
     {
@@ -2788,32 +2993,6 @@
       "uniqueness": 3
     },
     {
-      "id": "our415-166276_sfpl",
-      "title": "Día de los Muertos Community Altar",
-      "emoji": "🎨",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "sunnyside",
-      "area": "Excelsior",
-      "coords": [
-        37.727028000001,
-        -122.433246000002
-      ],
-      "start": "2026-10-21",
-      "end": "2026-10-21",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Learn how to build your own Día de Muertos Altar and paint a mini wooden themed frame.For all ages and abilities. Aprende cómo construir tu…",
-      "url": "https://sfpl.org/events/2026/10/21/activity-dia-de-los-muertos-community-altar",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-09-23",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
       "id": "our415-163593_sfpl",
       "title": "Glen Park Neighborhood Walk",
       "emoji": "🎨",
@@ -2842,6 +3021,32 @@
       "ik": "c"
     },
     {
+      "id": "our415-166276_sfpl",
+      "title": "Día de los Muertos Community Altar",
+      "emoji": "🎨",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "sunnyside",
+      "area": "Excelsior",
+      "coords": [
+        37.727028000001,
+        -122.433246000002
+      ],
+      "start": "2026-10-21",
+      "end": "2026-10-21",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Learn how to build your own Día de Muertos Altar and paint a mini wooden themed frame.For all ages and abilities. Aprende cómo construir tu…",
+      "url": "https://sfpl.org/events/2026/10/21/activity-dia-de-los-muertos-community-altar",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
       "id": "stanford-52206222934826",
       "title": "Tour Denning House, home to Knight-Hennessy Scholars",
       "emoji": "🚶",
@@ -2862,6 +3067,81 @@
       "source": "Stanford Events — events.stanford.edu",
       "lastVerified": "2026-09-23",
       "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-166080_sfpl",
+      "title": "Dia de los Muertos Photo Frame Collage",
+      "emoji": "🛠️",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "silver-terrace",
+      "area": "Portola",
+      "coords": [
+        37.727118000001,
+        -122.406376500002
+      ],
+      "start": "2026-10-22",
+      "end": "2026-10-22",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Create a photo frame for pictures to hang on your altar with artist Zefania Preza. Use collage materials to decorate or create calavera designs to…",
+      "url": "https://sfpl.org/events/2026/10/22/workshop-dia-de-los-muertos-photo-frame-collage",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-158592_sfpl",
+      "title": "Macabre Marvels in the Stacks—Inspiration From SFPL&#039;s Hidden Books",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "little-saigon",
+      "area": "Main Library",
+      "coords": [
+        37.779354000001,
+        -122.415871500002
+      ],
+      "start": "2026-10-22",
+      "end": "2026-10-22",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "For one night in October, the Library opens its vaults. Explore rarely accessible, reference-only books containing masks, costumes and creepy images…",
+      "url": "https://sfpl.org/events/2026/10/22/social-macabre-marvels-stacks-inspiration-sfpls-hidden-books",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-09-23",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evt3CoZhFUnVoiKRKD",
+      "title": "Investors on the Bay A Fall Mixer",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "south-beach",
+      "area": null,
+      "coords": [
+        37.77954610225493,
+        -122.3882288670666
+      ],
+      "start": "2026-10-23",
+      "end": "2026-10-24",
+      "why": "Hosted by Murray & 4 others",
+      "url": "https://luma.com/yjx9xkoe",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-09-23",
       "quality": 3,
       "uniqueness": 3
     },
@@ -3058,6 +3338,29 @@
       "uniqueness": 3
     },
     {
+      "id": "luma-evts3EWJDIum6y8B4J",
+      "title": "One Way Summit 2026: The Flagship Event for Immigrant Entrepreneurship",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "rincon-hill",
+      "area": "The Commonwealth Club, 110 The Embarcadero, San Francisco, CA 94105, USA",
+      "coords": [
+        37.7933452,
+        -122.3925028
+      ],
+      "start": "2026-10-28",
+      "end": "2026-10-30",
+      "why": "Hosted by Eugene Malobrodsky, Brian Sparkes & James Gee",
+      "url": "https://luma.com/onewaysummit2026",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-09-23",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
       "id": "stanford-54003212411520",
       "title": "2026 Halloween Concert",
       "emoji": "🎵",
@@ -3079,6 +3382,29 @@
       "source": "Stanford Events — events.stanford.edu",
       "lastVerified": "2026-09-23",
       "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtM7fiQ0trqfKX6bG",
+      "title": "Run by Apify",
+      "emoji": "🏃",
+      "type": "event",
+      "categories": [
+        "sport"
+      ],
+      "zone": "dogpatch",
+      "area": "The Pearl, 601 19th St, San Francisco, CA 94107, USA",
+      "coords": [
+        37.7614446,
+        -122.3889506
+      ],
+      "start": "2026-11-10",
+      "end": "2026-11-11",
+      "why": "Hosted by Apify, Jan Curn & Petros Hong",
+      "url": "https://luma.com/run-by-apify",
+      "source": "Luma — Open Source for AI",
+      "lastVerified": "2026-09-23",
       "quality": 3,
       "uniqueness": 3
     }

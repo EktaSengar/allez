@@ -593,7 +593,7 @@ const App = (() => {
     park: '🌳',    museum: '🏛️',  gallery: '🖼️',    books: '📚',   culture: '🎭',
     exhibition: '🖼️', shop: '🛍️', design: '🪑',
     nightlife: '🍸', bar: '🍸',   jazz: '🎷',       venue: '🎤',   club: '🪩',
-    comedy: '🎙️',
+    comedy: '🎙️',     dessert: '🍨',
     sport: '🏃',   play: '🤾',    run: '🏃',        watch: '🏟️',
     event: '🎫',   class: '🎓',   walk: '🚶',       itinerary: '🗺️',
     mission: '🎯', daytrip: '🚆'
@@ -606,6 +606,9 @@ const App = (() => {
      least a place. */
   const markFor = item =>
     item.emoji
+    /* An ice-cream shop is filed as `deli` beside the cheesemongers, and
+       wore their 🧀 at the top of the Dessert list. */
+    || (item.type === 'deli' && Near.KIND.dessert(item) ? MARK.dessert : null)
     || MARK[item.type]
     || (item.categories || []).map(c => MARK[c]).find(Boolean)
     || '📍';
@@ -961,7 +964,7 @@ const App = (() => {
       ? `<div class="route-shot">${img(item, 'route')}</div>`
       : '';
     const meta = [
-      item.zone ? `${item.zone}e` : null,
+      item.zone != null ? String(City.zone.label(item.zone)) : null,
       item.startTime ? `from ${item.startTime}` : null,
       durText(item.durationMin),
       item.priceNote || (item.price ? City.money.format(item.price) : 'Free')
@@ -1897,7 +1900,8 @@ const App = (() => {
     ['cafe',       MARK.cafe,       'Coffee',      'specialty and roasters', 'cafe',       'quest-coffee'],
     ['bakery',     MARK.bakery,     'Bakeries',    'bread and pastry',       'bakery',     'quest-croissant'],
     ['restaurant', MARK.restaurant, 'Restaurants', 'where to actually eat',  'restaurant', null],
-    ['market',     MARK.market,     'Markets',     'food, flea and flower',  'market',     'quest-markets']
+    ['market',     MARK.market,     'Markets',     'food, flea and flower',  'market',     'quest-markets'],
+    ['dessert',    MARK.dessert,    'Dessert',     'ice cream, gelato, tea', 'dessert',    null]
   ];
 
   /* A mission happens in a particular neighbourhood — the bakeries are where
@@ -1907,14 +1911,22 @@ const App = (() => {
     const mins = m.minutesFromHome;
     const here = Loc.active()?.zone ?? null;
     if (m.generated) return 'right where you are';
-    if (m.zone && m.zone === here) return `in the ${ordinal(m.zone)}, where you are`;
+    if (m.zone && m.zone === here) return `in ${inZone(m.zone)}, where you are`;
     if (mins == null) return '';
-    const place = m.zone ? `in the ${ordinal(m.zone)}` : 'across town';
+    const place = m.zone ? `in ${inZone(m.zone)}` : 'across town';
     return mins <= 12 ? `${place} · ~${mins} min to the first stop`
                       : `${place} · ~${mins} min to get there`;
   }
 
-  const ordinal = n => `${n}${n === 1 ? 'er' : 'e'}`;
+  /* "in the 10e" in Paris, "in Palo Alto" anywhere the zone is a name.
+     This was an arrondissement suffix written into the engine, and the
+     Bay Area's missions and routes read "palo-altoe". The pack's own
+     `label` already knows how a zone is written; only the article is
+     decided here, by whether that label is a number. */
+  const inZone = k => {
+    const l = String(City.zone.label(k));
+    return /^\d/.test(l) ? `the ${l}` : l;
+  };
 
   function missionCard(m, lead = false) {
     const cands = (m.candidates || []).map((c, n) => `
@@ -1984,7 +1996,7 @@ const App = (() => {
     const here = Loc.displayName(Loc.active());
     return EAT_MODE === 'missions'
       ? `Missions rather than listings. Pick one, do it properly, rate it.`
-      : `Coffee, bread, dinner and markets around ${here} — nearest and best first.`;
+      : `Coffee, bread, dinner, markets and dessert around ${here} — nearest and best first.`;
   }
 
   function renderEat() {
@@ -2138,7 +2150,8 @@ const App = (() => {
       cafe:       'Start here — the one to try first',
       bakery:     'Start here — the one to try first',
       restaurant: 'Start here — the one to book first',
-      market:     'Start here — the one to go to first'
+      market:     'Start here — the one to go to first',
+      dessert:    'Start here — the one to queue for'
     };
 
     return (lead ? featured(lead, KICKERS[EAT_MODE] || 'Start here') : '')
@@ -2352,7 +2365,7 @@ const App = (() => {
     const n = Store.zones().length;
     const here = Loc.displayName(Loc.active());
     return n
-      ? `${n} of 20 marked explored. Here is where you are, and the nearest one you have not done.`
+      ? `${n} of ${(D.neighborhoods?.items || []).length} marked explored. Here is where you are, and the nearest one you have not done.`
       : `Where you are, where to go next, and the walks within reach of ${here}.`;
   }
 
@@ -2569,7 +2582,9 @@ const App = (() => {
         [MARK.books,  Near.inArr(hereArr, Near.KIND.books, 1)]
       ].filter(([, l]) => l.length)
        .map(([e, l]) => `<span class="pair"><span class="e">${e}</span>${esc(l.map(i => i.title).join(' · '))}</span>`);
-      standing = stripHead(`You are in the ${hereArr}${hereArr === 1 ? 'er' : 'e'} — ${esc(mine.name)}`,
+      const zl = String(City.zone.label(hereArr));
+      standing = stripHead(zl === mine.name ? `You are in ${inZone(hereArr)}`
+                                            : `You are in ${inZone(hereArr)} — ${esc(mine.name)}`,
                            esc(mine.famousFor || ''))
         + (bits.length ? `<div class="pairs"><div class="pairs-row">${bits.join('')}</div></div>` : '');
     }

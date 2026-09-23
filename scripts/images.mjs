@@ -30,6 +30,27 @@ const FORCE = process.argv.includes('--force');
    the value is the street or quarter it stands on — and that is what the
    credit will name. */
 const QUERIES = {
+  // the Bay Area — day trips, landmarks and hand-placed cards
+  'filoli': 'Filoli',
+  'half-moon-bay': 'Half Moon Bay, California',
+  'santa-cruz': 'Santa Cruz, California',
+  'muir-woods': 'Muir Woods National Monument',
+  'napa-valley': 'Napa Valley AVA',
+  'monterey-carmel': 'Monterey Bay Aquarium',
+  'point-reyes': 'Point Reyes National Seashore',
+  'big-sur': 'Bixby Creek Bridge',
+  'lake-tahoe': 'Lake Tahoe',
+  'yosemite': 'Yosemite Valley',
+  'hp-garage': 'HP Garage',
+  'stanford-dish-loop': 'Stanford Dish (Stanford Radio Telescope)',
+  'palo-alto-art-center': 'Palo Alto Art Center',
+  'mademoiselle-colette-lytton': 'Palo Alto, California',
+  'bacio-di-latte-stanford': 'Stanford Shopping Center',
+  'friday-night-waltz': 'Waltz',
+  'stanford-afternoon': 'Cantor Arts Center',
+  'downtown-saturday-morning': 'Palo Alto, California',
+  'adventure-cat-sunset-sail': 'Golden Gate Bridge',
+
   // events
   'villette-open-air-cinema-2026': 'Parc de la Villette',
   'paris-plages-2026': 'Bassin de la Villette',
@@ -234,6 +255,9 @@ const QUERIES = {
 
    Anything not listed here is assumed to be a photo of the subject itself. */
 const CONTEXT_ONLY = new Set([
+  'mademoiselle-colette-lytton', 'bacio-di-latte-stanford', 'friday-night-waltz',
+  'stanford-afternoon', 'downtown-saturday-morning', 'monterey-carmel', 'big-sur',
+  'adventure-cat-sunset-sail',
   'du-pain-et-des-idees', 'ten-belles', 'holybelly', 'boulangerie-utopie', 'mamiche',
   'cafe-oberkampf', 'belleville-brulerie', 'boot-cafe', 'cafe-margo', 'la-tresorerie', 'empreintes',
   'e-dehillerin', 'artazart', 'ofr-bookshop', 'green-factory', 'sennelier',

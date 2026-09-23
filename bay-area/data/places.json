@@ -1,5 +1,319 @@
 {
   "generated": "2026-09-14",
   "note": "The curated tier. Hand-written, and empty is honest.",
-  "items": []
+  "items": [
+    {
+      "id": "mademoiselle-colette-lytton",
+      "title": "Mademoiselle Colette",
+      "emoji": "🥐",
+      "type": "bakery",
+      "categories": [
+        "food",
+        "bakery"
+      ],
+      "zone": "palo-alto",
+      "area": "499 Lytton Avenue",
+      "why": "Get the almond croissant. It is really flaky, and really good. It is a day-old croissant split, filled with almond cream and baked a second time, which is why the outside shatters. A French bakery-café on Lytton, a short walk from the University Avenue cafés.",
+      "goodFor": [
+        "food",
+        "morning"
+      ],
+      "indoor": true,
+      "labels": [
+        "foodmission"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "url": "https://www.mademoisellecolette.com/palo-alto-menu/",
+      "hours": "Mo-Sa 08:00-16:00; Su 08:00-14:00",
+      "coords": [
+        37.4491,
+        -122.16071
+      ],
+      "coordsFrom": "osm way/120317227",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG/1280px-Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG",
+      "imageSubject": "Palo Alto, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "bacio-di-latte-stanford",
+      "title": "Bacio di Latte",
+      "emoji": "🍨",
+      "type": "cafe",
+      "categories": [
+        "food",
+        "cafe",
+        "dessert"
+      ],
+      "zone": "palo-alto",
+      "area": "Stanford Shopping Center",
+      "why": "Coffee and gelato under one roof, and a favourite. It is a Brazilian gelateria, the chain's first in the Bay Area, and it opened this spring. The gelato is made in-house every day from Clover organic milk. There are over twenty flavours, and an affogato bar joins the two halves: espresso poured over a scoop.",
+      "goodFor": [
+        "food",
+        "afternoon",
+        "evening"
+      ],
+      "indoor": true,
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 3,
+      "url": "https://www.simon.com/mall/stanford-shopping-center/stores/bacio-di-latte",
+      "coords": [
+        37.44319,
+        -122.17092
+      ],
+      "coordsFrom": "the shopping centre (osm way/110163462); the shop is not mapped yet",
+      "lastVerified": "2026-09-23",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Stanford_Shopping_Center_1.jpg",
+      "imageSubject": "Stanford Shopping Center",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "hp-garage",
+      "title": "HP Garage",
+      "emoji": "🏚️",
+      "type": "museum",
+      "provenance": "editorial",
+      "categories": [
+        "culture",
+        "free"
+      ],
+      "zone": "palo-alto",
+      "area": "367 Addison Avenue",
+      "price": 0,
+      "priceNote": "Free, from the pavement",
+      "durationMin": 15,
+      "touristy": true,
+      "why": "The birthplace of Silicon Valley: Bill Hewlett and Dave Packard started the company in this garage in 1938, and it is a California Historical Landmark. HP restored the house, garage and shed to how they looked in 1939. It is not open for tours. HP says you may look and take photographs from the sidewalk. It is a quiet residential street, so keep it short and keep it quiet.",
+      "goodFor": [
+        "afternoon"
+      ],
+      "indoor": false,
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://en.wikipedia.org/wiki/HP_Garage",
+      "source": "Wikipedia; hpmuseum.org; HP; existence and position confirmed against OpenStreetMap (node/1710414037)",
+      "coords": [
+        37.44294,
+        -122.15459
+      ],
+      "coordsFrom": "osm node/1710414037",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/HP_Garage.jpg/1280px-HP_Garage.jpg",
+      "imageSubject": "HP Garage",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "stanford-dish-loop",
+      "title": "The Dish loop",
+      "emoji": "📡",
+      "type": "walk",
+      "provenance": "editorial",
+      "categories": [
+        "outdoors",
+        "free",
+        "walk"
+      ],
+      "zone": "palo-alto",
+      "area": "Stanford Avenue trailhead",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 90,
+      "why": "A 3.7-mile paved loop over the Stanford foothills past a 150-foot radio telescope, with views across the whole Bay. It climbs more than it looks (about 530 feet). There is almost no shade and very little parking, so go early and bring water. The gates open and close with the daylight, and the times change by month.",
+      "goodFor": [
+        "morning",
+        "outdoors",
+        "exercise"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "outdoor"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.destinationpaloalto.com/stanford-dish-walk",
+      "source": "AllTrails; Destination Palo Alto; Wikipedia; trailhead confirmed against OpenStreetMap (node/4562251453)",
+      "coords": [
+        37.41066,
+        -122.1605
+      ],
+      "coordsFrom": "osm node/4562251453",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Radio_telescope_The_Dish.jpg/1280px-Radio_telescope_The_Dish.jpg",
+      "imageSubject": "Stanford Dish (Stanford Radio Telescope)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "friday-night-waltz",
+      "title": "Friday Night Waltz",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "provenance": "editorial",
+      "categories": [
+        "dance",
+        "learn",
+        "indoor"
+      ],
+      "zone": "palo-alto",
+      "area": "First United Methodist Church, 625 Hamilton Avenue",
+      "price": 15,
+      "priceNote": "$15 at the door, $10 students",
+      "durationMin": 180,
+      "days": [
+        5
+      ],
+      "why": "A dance evening every Friday near the Caltrain station. It starts with a lesson, then an intermediate one, then a DJ until late. Mostly waltz, with polka, tango, swing and salsa in between. You don't need a partner: the classes rotate partners quickly, so it is a good first try even if you have never done any of it.",
+      "goodFor": [
+        "evening",
+        "learn",
+        "couple",
+        "socialize"
+      ],
+      "indoor": true,
+      "rainyDayPick": true,
+      "labels": [
+        "learn",
+        "couple"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.fridaynightwaltz.com/",
+      "source": "fridaynightwaltz.com; Yelp; the church confirmed against OpenStreetMap (way/131995317)",
+      "coords": [
+        37.4492,
+        -122.15699
+      ],
+      "coordsFrom": "osm way/131995317",
+      "lastVerified": "2026-09-23",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Phenakistoscope_3g07690d.gif",
+      "imageSubject": "Waltz",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "palo-alto-art-center",
+      "title": "Palo Alto Art Center",
+      "emoji": "🏺",
+      "type": "class",
+      "mode": "do",
+      "provenance": "editorial",
+      "categories": [
+        "craft",
+        "art",
+        "learn",
+        "indoor"
+      ],
+      "zone": "palo-alto",
+      "area": "1313 Newell Road",
+      "durationMin": 180,
+      "why": "The city's own art centre, by Rinconada Park. Adult classes run in terms: painting, drawing, mixed media, jewellery, and ceramics, with a proper ceramics studio and kilns. It is the place to learn to throw a pot without paying private-studio prices. The galleries are worth a look while you're there.",
+      "goodFor": [
+        "learn",
+        "indoor"
+      ],
+      "indoor": true,
+      "rainyDayPick": true,
+      "bookAhead": true,
+      "labels": [
+        "learn",
+        "bookahead"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "url": "https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Make-Art/Adults",
+      "source": "City of Palo Alto; Palo Alto Online; confirmed against OpenStreetMap (way/231246592)",
+      "coords": [
+        37.44397,
+        -122.139
+      ],
+      "coordsFrom": "osm way/231246592",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Palo_Alto_Art_Center_-_February_2019.jpg/1280px-Palo_Alto_Art_Center_-_February_2019.jpg",
+      "imageSubject": "Palo Alto Art Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "adventure-cat-sunset-sail",
+      "title": "Sunset sail — Adventure Cat",
+      "emoji": "⛵",
+      "type": "experience",
+      "categories": [
+        "outdoors",
+        "couple"
+      ],
+      "zone": "fisherman-s-wharf",
+      "area": "Pier 39, Gate J, by the sea lions",
+      "price": 90,
+      "priceNote": "$80 Mon–Wed, $90 Thu–Sun, one drink included",
+      "durationMin": 90,
+      "why": "An amazing experience: sailing under the Golden Gate Bridge with the sunset behind it. Ninety minutes on a catamaran out of Pier 39, and the city lights come on behind you on the way back. Bring a jacket, because it is cold on the water even after a warm day. Locals get 20% off on Mondays with the code SFLOCAL.",
+      "goodFor": [
+        "evening",
+        "couple",
+        "outdoors",
+        "special"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "bookAhead": true,
+      "labels": [
+        "hiddengem",
+        "couple",
+        "dontmiss",
+        "bookahead"
+      ],
+      "quality": 5,
+      "uniqueness": 5,
+      "url": "https://www.adventurecat.com/sunset-sail-san-francisco-bay/",
+      "coords": [
+        37.80985,
+        -122.41035
+      ],
+      "coordsFrom": "Pier 39 (osm way/128240121); the boat is not mapped",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/GG-ftpoint-bridge-2.jpg/1280px-GG-ftpoint-bridge-2.jpg",
+      "imageSubject": "Golden Gate Bridge",
+      "imageKind": "context",
+      "imageCredit": "David Ball · CC BY 2.5"
+    },
+    {
+      "id": "molly-tea-university",
+      "title": "Molly Tea",
+      "emoji": "🍵",
+      "type": "cafe",
+      "categories": [
+        "food",
+        "cafe",
+        "dessert"
+      ],
+      "zone": "palo-alto",
+      "area": "318 University Avenue",
+      "why": "Unique tea and matcha drinks you won't find elsewhere downtown, and worth the wait in the line. It is a Chinese fragrant-tea chain built around jasmine and other floral teas, and this is its fourth Bay Area shop. It opened last November and the line has wrapped round the corner since. Service is quick, so the wait is shorter than it looks.",
+      "goodFor": [
+        "food",
+        "afternoon",
+        "evening"
+      ],
+      "indoor": true,
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.yelp.com/biz/molly-tea-palo-alto-2",
+      "coords": [
+        37.44606,
+        -122.1611
+      ],
+      "coordsFrom": "the building at 310–318 University Avenue (osm way/133116320); the shop itself is not mapped yet",
+      "lastVerified": "2026-09-23"
+    }
+  ]
 }

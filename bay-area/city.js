@@ -480,7 +480,21 @@ const City = (() => {
      In Paris the city's own feed covers those and Luma's copies can be
      discarded; here nothing else covers them, so discarding them would
      throw away half the calendar. */
-  const luma = [['discover', 'discplace-BDj7GNbGlsF7Cka', 'Luma — San Francisco']];
+  /* The discovery calendar is the city's, and from Palo Alto it is
+     almost all out of reach: of eighteen tech evenings on 23 September
+     2026, seventeen were in San Francisco, so the Peninsula's Regulars
+     tab was empty. (luma.com/san-jose is this same calendar under
+     another name.) Three organiser calendars that do meet down there
+     were measured and added, each by how many of its upcoming events
+     fell south of San Mateo: Bay Area Founders Club 8 of 58, Open
+     Source for AI 3 of 18, Bay Area AI 1 of 3. Stanford's own founder
+     calendars had nothing upcoming and are left out. */
+  const luma = [
+    ['discover', 'discplace-BDj7GNbGlsF7Cka', 'Luma — San Francisco'],
+    ['calendar', 'cal-2BuL8o8ylVizd6x', 'Luma — Bay Area Founders Club'],
+    ['calendar', 'cal-8zLyKMgaKTvonbT', 'Luma — Open Source for AI'],
+    ['calendar', 'cal-UnI4f4BhUDYndI8', 'Luma — Bay Area AI']
+  ];
 
   /* ---------- what is on ----------
 

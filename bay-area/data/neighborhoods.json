@@ -1,6 +1,62 @@
 {
-  "generated": "2026-09-14",
-  "home": "north-beach",
-  "note": "One dossier per neighbourhood worth writing one for. Empty.",
-  "items": []
+ "generated": "2026-09-23",
+ "home": "north-beach",
+ "note": "One profile per town on the Peninsula, written from what is on the site. The city side is not done yet. `minutesFromHome` is recomputed from wherever you are.",
+ "items": [
+  {
+   "zone": "palo-alto",
+   "name": "Palo Alto",
+   "minutesFromHome": 0,
+   "famousFor": "Stanford, the HP Garage, and the downtown Silicon Valley grew up around",
+   "streets": [
+    "University Avenue",
+    "Ramona Street",
+    "California Avenue"
+   ],
+   "cafe": "Goodthing on Ramona — the upstairs loft, and the Einspänner",
+   "bakery": "Mademoiselle Colette on Lytton — the almond croissant",
+   "culture": "The Cantor and the Rodin garden at Stanford — both free",
+   "park": "Gamble Garden, two and a half acres off Waverley, free and rarely busy",
+   "unusual": "The HP Garage on Addison Avenue, the birthplace of Silicon Valley, seen from the sidewalk",
+   "food": "The Saturday farmers’ market on Gilman Street, there since 1983",
+   "walk": "Ramona Street → University Avenue → Addison Avenue for the HP Garage",
+   "hidden": "The Baylands boardwalk at dawn, a quarter of a mile over the marsh to open water"
+  },
+  {
+   "zone": "menlo-park",
+   "name": "Menlo Park",
+   "minutesFromHome": 8,
+   "famousFor": "Kepler's Books and the Santa Cruz Avenue high street",
+   "streets": [
+    "Santa Cruz Avenue",
+    "El Camino Real"
+   ],
+   "cafe": "Café Borrone, next door to Kepler's since 1989",
+   "bakery": "Mademoiselle Colette on Santa Cruz Avenue",
+   "culture": "Kepler's — the Peninsula's counterculture bookshop since 1955, with a serious events programme"
+  },
+  {
+   "zone": "mountain-view",
+   "name": "Mountain View",
+   "minutesFromHome": 15,
+   "famousFor": "Castro Street and the Computer History Museum",
+   "streets": [
+    "Castro Street"
+   ],
+   "culture": "The Computer History Museum on Shoreline Boulevard",
+   "park": "Shoreline Park — the lake, and the bay trail out over the marshes"
+  },
+  {
+   "zone": "los-altos",
+   "name": "Los Altos",
+   "minutesFromHome": 15,
+   "famousFor": "A small-town Main Street, a few minutes from everything that is not",
+   "streets": [
+    "Main Street",
+    "State Street"
+   ],
+   "culture": "Linden Tree Books, the children's bookshop on State Street",
+   "food": "Chef Chu's, open since 1970 on San Antonio Road"
+  }
+ ]
 }
