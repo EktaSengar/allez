@@ -1,5 +1,660 @@
 {
   "generated": "2026-09-14",
   "note": "Hand-written. Empty.",
-  "items": []
+  "items": [
+    {
+      "id": "stanford-dish-loop",
+      "title": "The Dish loop",
+      "emoji": "📡",
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "zone": "palo-alto",
+      "area": "Stanford Avenue trailhead · 3.7 mi loop · about 530 ft up",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 90,
+      "why": "A 3.7-mile paved loop over the Stanford foothills past a 150-foot radio telescope, with views across the whole Bay. It climbs more than it looks (about 530 feet). There is almost no shade and very little parking, so go early and bring water. The gates open and close with the daylight, and the times change by month.",
+      "goodFor": [
+        "morning",
+        "outdoors",
+        "sport"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "outdoor"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.destinationpaloalto.com/stanford-dish-walk",
+      "source": "AllTrails; Destination Palo Alto; Wikipedia; trailhead confirmed against OpenStreetMap (node/4562251453)",
+      "coords": [
+        37.41066,
+        -122.1605
+      ],
+      "coordsFrom": "osm node/4562251453",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Radio_telescope_The_Dish.jpg/1280px-Radio_telescope_The_Dish.jpg",
+      "imageSubject": "Stanford Dish (Stanford Radio Telescope)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "palo-alto",
+      "id": "hike-arastradero",
+      "title": "Pearson-Arastradero Preserve",
+      "emoji": "🥾",
+      "area": "Arastradero Road lot · 3.7 mi loop · about 300 ft up · bikes allowed on its wide trails",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 120,
+      "why": "The gentlest hike in Palo Alto: open grassland and oak hills a few minutes past 280, with ten miles of trail to choose from. The Arastradero Creek loop goes out along the Juan Bautista de Anza trail and back by Acorn and Meadowlark. It is good for birds, and the loop to do when you want to be walking in twenty minutes. Some trails close after rain.",
+      "quality": 4,
+      "uniqueness": 3,
+      "url": "https://openspacetrust.org/hike/arastradero-creek-loop/",
+      "source": "POST (Peninsula Open Space Trust); AllTrails; preserve confirmed against OpenStreetMap (relation/10781180)",
+      "coords": [
+        37.37646,
+        -122.18678
+      ],
+      "coordsFrom": "osm relation/10781180 (preserve)",
+      "labels": [
+        "outdoor"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/View_from_Arastradero_Preserve_in_Palo_Alto_California.JPG/1280px-View_from_Arastradero_Preserve_in_Palo_Alto_California.JPG",
+      "imageSubject": "Arastradero Preserve",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "palo-alto",
+      "id": "hike-foothills",
+      "title": "Foothills Nature Preserve",
+      "emoji": "🥾",
+      "area": "Page Mill Road entrance · 15 miles of trail",
+      "durationMin": 180,
+      "priceNote": "Entry rules and a daily cap — check before you go",
+      "why": "Palo Alto's own mountain park: fifteen miles of trail in the foothills, with Boronda Lake and Vista Hill. From the top of Vista Hill, on a clear day, you can see Hoover Tower, the Dumbarton Bridge, Mount Diablo and Mount Hamilton. It was for Palo Alto residents only for fifty-one years and opened to everyone in December 2020. Visitor numbers are still capped, so check the city's page for the current rules.",
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.paloalto.gov/Departments/Community-Services/Parks-Open-Space-Golf-Division/Neighborhood-Parks/Foothills-Nature-Preserve",
+      "source": "City of Palo Alto; San Francisco Chronicle; Palo Alto Online; confirmed against OpenStreetMap (relation/6258591)",
+      "coords": [
+        37.35183,
+        -122.18639
+      ],
+      "coordsFrom": "osm relation/6258591 (preserve)",
+      "labels": [
+        "outdoor"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Foothills_Park_86_%28cropped%29.jpg/1280px-Foothills_Park_86_%28cropped%29.jpg",
+      "imageSubject": "Foothills Nature Preserve",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "id": "hike-windy-hill",
+      "title": "Windy Hill — Spring Ridge Trail",
+      "emoji": "🥾",
+      "area": "Portola Road lot · 5.6 mi · about 1,370 ft up",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 180,
+      "why": "The climb the Peninsula knows by sight: the bare green hill above Portola Valley. Go up Spring Ridge Trail from the Portola Road lot to the top, where the whole bay spreads out below. It is steep and open, so go early. For a longer day, make it a 7.5-mile loop down Hamms Gulch through the woods.",
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.openspace.org/preserves/windy-hill",
+      "source": "Midpeninsula Regional Open Space District; POST; AllTrails; preserve confirmed against OpenStreetMap (relation/193017)",
+      "coords": [
+        37.36078,
+        -122.23664
+      ],
+      "coordsFrom": "osm relation/193017 (preserve)",
+      "labels": [
+        "outdoor"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/WindyHill.jpg",
+      "imageSubject": "Windy Hill Open Space Preserve",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons · CC BY-SA 3.0"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "los-altos",
+      "id": "hike-rancho-san-antonio",
+      "title": "Rancho San Antonio — PG&E Trail",
+      "emoji": "🥾",
+      "area": "Cristo Rey Drive lots · 4.3 mi loop · about 700 ft up",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 150,
+      "why": "The busiest trailhead on the Peninsula, for good reason. There are loops of every length, from an easy walk to Deer Hollow Farm (baby goats in spring) up to eleven-plus miles up the PG&E Trail. The classic is the PG&E, Wildcat and Coyote loop. The one catch is parking: on a summer weekend the lots are full by eight, so arrive before that.",
+      "quality": 4,
+      "uniqueness": 3,
+      "url": "https://www.openspace.org/preserves/rancho-san-antonio",
+      "source": "Midpeninsula Regional Open Space District; Hilltromper; AllTrails; preserve confirmed against OpenStreetMap (way/296113630)",
+      "coords": [
+        37.33529,
+        -122.11889
+      ],
+      "coordsFrom": "osm way/296113630 (preserve)",
+      "labels": [
+        "outdoor"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Meadow_in_Rancho_San_Antonio_County_Park.jpg/1280px-Meadow_in_Rancho_San_Antonio_County_Park.jpg",
+      "imageSubject": "Rancho San Antonio Open Space Preserve",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "id": "hike-purisima",
+      "title": "Purisima Creek Redwoods",
+      "emoji": "🌲",
+      "area": "Skyline Boulevard or Purisima Creek Road · 4.8 to 10.5 mi loops",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 240,
+      "why": "The nearest proper redwood forest to Palo Alto, on the ocean side of Skyline. The 4.8-mile Grabtown Gulch and Borden Hatch Mill loop goes through second-growth redwoods. The full day is about ten miles down the creek and back up. There is also a quarter-mile flat, wheelchair-accessible path through tall redwoods right off Skyline. It is often in fog, so bring a layer.",
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.openspace.org/preserves/purisima-creek-redwoods",
+      "source": "Midpeninsula Regional Open Space District; Bay Area Ridge Trail; confirmed against OpenStreetMap (relation/193021)",
+      "coords": [
+        37.42972,
+        -122.33715
+      ],
+      "coordsFrom": "osm relation/193021 (preserve)",
+      "labels": [
+        "outdoor"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Purisima_Creek_Trail_5.JPG/1280px-Purisima_Creek_Trail_5.JPG",
+      "imageSubject": "Purisima Creek Redwoods Open Space Preserve",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "pacifica",
+      "id": "hike-mori-point",
+      "title": "Mori Point",
+      "emoji": "🌊",
+      "area": "Pacifica · 1.7 to 2.6 mi loops",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 75,
+      "why": "A short coastal loop over a headland in Pacifica, with the Pacific on three sides. You climb the steep Bootlegger's Steps to the top of the bluff, named for the Prohibition smugglers who landed here. It takes an hour, so it works as a morning before breakfast, or as the walk to end a day on the coast.",
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.parksconservancy.org/trails/mori-point-peak-loop-trail",
+      "source": "Golden Gate National Parks Conservancy; AllTrails; confirmed against OpenStreetMap (relation/3923236)",
+      "coords": [
+        37.6189,
+        -122.49178
+      ],
+      "coordsFrom": "osm relation/3923236",
+      "labels": [
+        "outdoor"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Mori_Point_from_Pacifica_Beach_in_Pacifica_California_%289060304932%29.jpg/1280px-Mori_Point_from_Pacifica_Beach_in_Pacifica_California_%289060304932%29.jpg",
+      "imageSubject": "Mori Point",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "id": "hike-tennessee-valley",
+      "title": "Tennessee Valley to the beach",
+      "emoji": "🏖️",
+      "area": "Mill Valley, end of Tennessee Valley Road · 3.4 mi out and back",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 100,
+      "why": "An easy, nearly flat walk down a green valley to a small cove beach on the Pacific, 1.7 miles each way. The first half-mile is paved. It is the Marin hike for a slow morning or for anyone who doesn't want to climb. The lot fills fast at weekends, and cars end up parked far down the road.",
+      "quality": 4,
+      "uniqueness": 3,
+      "url": "https://www.alltrails.com/trail/us/california/tennessee-valley-trail",
+      "source": "AllTrails; Marin County Visitor; road confirmed against OpenStreetMap (way/659312700)",
+      "coords": [
+        37.86056,
+        -122.53616
+      ],
+      "coordsFrom": "osm way/659312700 (end of Tennessee Valley Road)",
+      "labels": [
+        "outdoor"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Tennessee_watershed.png",
+      "imageSubject": "Tennessee Valley",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "id": "hike-steep-ravine-matt-davis",
+      "title": "Steep Ravine & Matt Davis loop",
+      "emoji": "🌲",
+      "area": "Stinson Beach trailhead · about 6.4 mi · about 1,900 ft up",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 240,
+      "why": "The best loop on Mount Tamalpais, and a full morning. Go up the Matt Davis Trail from Stinson Beach, through forest and then out onto grassland high above the Pacific. Come down Steep Ravine, past waterfalls and redwoods and down the famous wooden ladder. It climbs about 1,900 feet. Finish in the sea at Stinson.",
+      "quality": 5,
+      "uniqueness": 5,
+      "labels": [
+        "outdoor",
+        "dontmiss"
+      ],
+      "url": "https://www.parksconservancy.org/trails/matt-davis-trail",
+      "source": "Golden Gate National Parks Conservancy; Bay Area Hiker; AllTrails; trail confirmed against OpenStreetMap (way/1442270016)",
+      "coords": [
+        37.89972,
+        -122.63734
+      ],
+      "coordsFrom": "osm way/1442270016 (Matt Davis Trail)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Mt._Tamalpais%2C_viewed_from_the_south.jpg/1280px-Mt._Tamalpais%2C_viewed_from_the_south.jpg",
+      "imageSubject": "Mount Tamalpais",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "fisherman-s-wharf",
+      "id": "ride-golden-gate-sausalito",
+      "title": "Over the Golden Gate to Sausalito",
+      "emoji": "🚲",
+      "area": "From Aquatic Park · about 8 mi · paths, some road, hills at the bridge",
+      "priceNote": "Bike hire from the Wharf; ferry back ~$15",
+      "durationMin": 180,
+      "why": "The classic ride. From Aquatic Park it runs along the water through Fort Mason, the Marina and Crissy Field, climbs to the bridge and crosses it, then drops down into Sausalito. Take the ferry back instead of climbing home. In 2026 that means the Golden Gate Ferry to the Ferry Building, because the Blue & Gold boat to Pier 41 isn't running while its dock is repaired. Bike hire is all along Fisherman's Wharf.",
+      "quality": 5,
+      "uniqueness": 5,
+      "labels": [
+        "outdoor",
+        "dontmiss",
+        "couple"
+      ],
+      "url": "https://www.blazingsaddles.com/san-francisco/routes-and-tours/bike-the-bridge-self-guided",
+      "source": "Blazing Saddles; OurSausalito; Inside Guide to San Francisco Tourism; start confirmed against OpenStreetMap (way/32839638)",
+      "coords": [
+        37.80701,
+        -122.42231
+      ],
+      "coordsFrom": "osm way/32839638 (Aquatic Park)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/GG-ftpoint-bridge-2.jpg/1280px-GG-ftpoint-bridge-2.jpg",
+      "imageSubject": "Golden Gate Bridge",
+      "imageKind": "context",
+      "imageCredit": "David Ball · CC BY 2.5"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "inner-richmond",
+      "id": "ride-golden-gate-park-ocean",
+      "title": "Golden Gate Park to Ocean Beach",
+      "emoji": "🚲",
+      "area": "JFK Promenade from the Conservatory · 3.4 mi each way · car-free, paved",
+      "price": 0,
+      "priceNote": "Free; bike share at the park",
+      "durationMin": 90,
+      "why": "The easy one, and entirely in the city. JFK Drive through Golden Gate Park has been car-free since 2020, made permanent in 2022. Start at the Conservatory of Flowers and roll west past the museums and lakes all the way to the ocean. It is a gentle downhill out and a gentle climb back. Carry on along the Great Highway path by Ocean Beach if you have the legs.",
+      "quality": 4,
+      "uniqueness": 4,
+      "labels": [
+        "outdoor",
+        "couple",
+        "cheap"
+      ],
+      "url": "https://sfrecpark.org/1538/JFK-Promenade",
+      "source": "SF Recreation & Parks; TrailLink; start confirmed against OpenStreetMap (way/30675038)",
+      "coords": [
+        37.77261,
+        -122.46023
+      ],
+      "coordsFrom": "osm way/30675038 (Conservatory of Flowers)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Golden_Gate_Park_and_The_Panhandle_%285189323840%29.jpg/1280px-Golden_Gate_Park_and_The_Panhandle_%285189323840%29.jpg",
+      "imageSubject": "Golden Gate Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "hillsborough",
+      "id": "ride-sawyer-camp",
+      "title": "Sawyer Camp Trail",
+      "emoji": "🚲",
+      "area": "Crystal Springs Dam · 6 mi each way · paved, car-free",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 120,
+      "why": "Six miles of paved, car-free trail along Crystal Springs Reservoir, in the rift valley of the San Andreas Fault. It is halfway between San Francisco and Palo Alto, so it works from either. Halfway along is the Jepson Laurel, more than six hundred years old and the oldest in California. It is shared with walkers and runners, so ride it slow. The county has closed it for storm and culvert repairs before, so check its advisories first.",
+      "quality": 4,
+      "uniqueness": 4,
+      "labels": [
+        "outdoor"
+      ],
+      "url": "https://www.smcgov.org/parks/sawyer-camp-segment",
+      "source": "County of San Mateo; Wikipedia; trail confirmed against OpenStreetMap (way/791183517)",
+      "coords": [
+        37.53092,
+        -122.36428
+      ],
+      "coordsFrom": "osm way/791183517 (Sawyer Camp Trail)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Sawyer_Camp_Trail_%288755207154%29.jpg/1280px-Sawyer_Camp_Trail_%288755207154%29.jpg",
+      "imageSubject": "Sawyer Camp Trail",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "palo-alto",
+      "id": "ride-bay-trail-baylands-shoreline",
+      "title": "The Bay Trail: Baylands to Shoreline",
+      "emoji": "🚲",
+      "area": "Palo Alto Baylands · flat · gravel and crushed shell, some paved",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 120,
+      "why": "Flat riding along the edge of the bay from the Palo Alto Baylands south to Shoreline Park in Mountain View, past salt ponds and marsh, with birds the whole way. The surface is mostly gravel and crushed shell with some paved stretches, so a hybrid is better than a road bike. Shoreline has ten more miles of paths around its lake. The Stevens Creek Trail, paved and off-street, runs inland from there if you want more.",
+      "quality": 4,
+      "uniqueness": 3,
+      "labels": [
+        "outdoor",
+        "cheap"
+      ],
+      "url": "https://mtc.ca.gov/operations/regional-trails-parks/san-francisco-bay-trail/explore-trail/bicycling",
+      "source": "Bay Trail (MTC); City of Mountain View; MTB Project; start confirmed against OpenStreetMap",
+      "coords": [
+        37.45963,
+        -122.10634
+      ],
+      "coordsFrom": "the Baylands interpretive center (on the site already)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Palo_Alto_Baylands_January_2013_005.jpg/1280px-Palo_Alto_Baylands_January_2013_005.jpg",
+      "imageSubject": "Palo Alto Baylands Nature Preserve",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "atherton",
+      "id": "ride-portola-loop",
+      "title": "The Portola Loop",
+      "emoji": "🚴",
+      "area": "Sand Hill, Portola and Alpine roads · about 11.5 mi · on the road",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 75,
+      "why": "The loop every Peninsula road cyclist knows: Sand Hill, Portola and Alpine roads round Portola Valley, about eleven and a half miles, and packed with riders on weekend mornings. The locals argue about which direction to ride it. It is on the road with cars, with bike lanes most of the way. Ride it early at weekends, when it is mostly other cyclists.",
+      "quality": 4,
+      "uniqueness": 3,
+      "labels": [
+        "outdoor"
+      ],
+      "url": "https://www.paloaltobicycles.com/articles/local-rides-pg128.htm",
+      "source": "Palo Alto Bicycles; Bo Crane Books; Strava; confirmed against OpenStreetMap (way/40187960)",
+      "coords": [
+        37.37283,
+        -122.20889
+      ],
+      "coordsFrom": "osm way/40187960 (Portola Valley)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/OurLadyoftheWayside.jpg",
+      "imageSubject": "Portola Valley, California",
+      "imageKind": "context",
+      "imageCredit": "Jack Boucher · Public domain"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors",
+        "sport"
+      ],
+      "lastVerified": "2026-09-23",
+      "zone": "atherton",
+      "id": "ride-old-la-honda",
+      "title": "Old La Honda climb",
+      "emoji": "⛰️",
+      "area": "Portola Road, by the stone bridge · 3 mi · just under 8%",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 60,
+      "why": "The Peninsula's benchmark climb, for when the loop isn't enough. It is almost exactly three miles at just under eight percent, from the stone bridge off Portola Road up to Skyline, through redwoods and tanoak. The road is narrow and there is some traffic. Come down the way you went up, carefully, or carry on over Skyline for a long day.",
+      "quality": 4,
+      "uniqueness": 4,
+      "labels": [
+        "outdoor"
+      ],
+      "url": "https://www.paloaltobicycles.com/articles/local-rides-pg128.htm",
+      "source": "Palo Alto Bicycles; Komoot; road confirmed against OpenStreetMap (way/941162598)",
+      "coords": [
+        37.39595,
+        -122.24687
+      ],
+      "coordsFrom": "osm way/941162598 (Old La Honda Road)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/OurLadyoftheWayside.jpg",
+      "imageSubject": "Portola Valley, California",
+      "imageKind": "context",
+      "imageCredit": "Jack Boucher · Public domain"
+    }
+  ]
 }
