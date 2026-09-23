@@ -1,5 +1,686 @@
 {
   "generated": "2026-09-14",
-  "note": "Hand-written. Empty.",
-  "items": []
+  "note": "Night places that do not expire — jazz rooms, comedy, live venues and bars. Researched, not visited: every record says so. Programmes change nightly, so the link goes to the venue's own calendar; dated concerts belong in events.json.",
+  "items": [
+    {
+      "type": "jazz",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "sfjazz-center",
+      "title": "SFJAZZ Center",
+      "emoji": "🎷",
+      "coords": [
+        37.77638,
+        -122.42157
+      ],
+      "coordsFrom": "osm way/256720482",
+      "area": "201 Franklin Street, Hayes Valley",
+      "priceNote": "Tickets vary by show",
+      "durationMin": 150,
+      "why": "The first free-standing building in America built for jazz, open since 2013. The main hall seats 350 to 700 depending on the set-up, and nowhere in it is far from the stage. The programme runs from legends to local players. Pick a night from the calendar.",
+      "url": "https://www.sfjazz.org/",
+      "source": "Wikipedia; SFJAZZ; confirmed against OpenStreetMap (way/256720482)",
+      "labels": [
+        "dontmiss"
+      ],
+      "zone": "hayes-valley",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/SF_Jazz_Center_2013-05-06_20-22.jpg/1280px-SF_Jazz_Center_2013-05-06_20-22.jpg",
+      "imageSubject": "SFJAZZ Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "jazz",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "black-cat-sf",
+      "title": "Black Cat",
+      "emoji": "🎷",
+      "area": "400 Eddy Street",
+      "priceNote": "Cover plus dinner or drinks",
+      "durationMin": 150,
+      "why": "A jazz supper club downstairs in the Tenderloin: live sets most nights, cocktails, and dinner at candlelit tables. San Francisco Magazine called it the city's most romantic spot. Book a table for the early set.",
+      "bookAhead": true,
+      "url": "https://blackcatsf.com/",
+      "source": "Black Cat; OpenTable; confirmed against OpenStreetMap",
+      "labels": [
+        "romantic",
+        "couple"
+      ],
+      "zone": "little-saigon",
+      "coords": [
+        37.78391,
+        -122.41445
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Tenderloin_Street_Chess%2C_SF%2C_CA%2C_jjron_26.03.2012.jpg/1280px-Tenderloin_Street_Chess%2C_SF%2C_CA%2C_jjron_26.03.2012.jpg",
+      "imageSubject": "Tenderloin, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "comedy"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "punch-line-sf",
+      "title": "Punch Line",
+      "emoji": "🎙️",
+      "area": "Battery Street, Financial District",
+      "priceNote": "Tickets plus a two-drink minimum",
+      "durationMin": 120,
+      "why": "San Francisco's longest-running comedy club, open since 1978, and its only full-time one. Robin Williams, Ellen DeGeneres and Chris Rock worked out their acts here. The room is small enough that there are no bad seats.",
+      "bookAhead": true,
+      "url": "https://www.punchlinecomedyclub.com/",
+      "source": "Punch Line; Wikipedia; confirmed against OpenStreetMap",
+      "labels": [
+        "couple"
+      ],
+      "zone": "telegraph-hill",
+      "coords": [
+        37.79553,
+        -122.40001
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Punch_Line_San_Francisco.jpg/1280px-Punch_Line_San_Francisco.jpg",
+      "imageSubject": "Punch Line San Francisco",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "comedy"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "cobbs-comedy-club",
+      "title": "Cobb's Comedy Club",
+      "emoji": "🎙️",
+      "area": "Columbus Avenue, North Beach",
+      "priceNote": "Tickets plus a two-drink minimum",
+      "durationMin": 120,
+      "why": "The bigger of the two stand-up rooms, in North Beach, where touring headliners play. Check the calendar, since who is on is the whole decision. Walk to Vesuvio afterwards.",
+      "bookAhead": true,
+      "url": "https://www.cobbscomedy.com/",
+      "source": "Wikipedia; confirmed against OpenStreetMap",
+      "zone": "russian-hill",
+      "coords": [
+        37.80292,
+        -122.4142
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "labels": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Cobb%27s_Comedy_Club_entrance%2C_2017-02-10.jpg/1280px-Cobb%27s_Comedy_Club_entrance%2C_2017-02-10.jpg",
+      "imageSubject": "Cobb's Comedy Club",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "comedy",
+        "theatre"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "bats-improv",
+      "title": "BATS Improv",
+      "emoji": "🎭",
+      "area": "Fort Mason Center, Building B",
+      "priceNote": "Cheap",
+      "durationMin": 120,
+      "why": "Improv at the Bayfront Theatre in Fort Mason on Saturday nights, with a short early show at 6:45 and the main one at 8. It is unscripted and different every time, and cheap enough to take a chance on. Coffee at Equator by the gate first.",
+      "days": [
+        6
+      ],
+      "url": "https://fortmason.org/resident/bats-improv/",
+      "source": "Fort Mason Center; confirmed against OpenStreetMap",
+      "zone": "cow-hollow",
+      "coords": [
+        37.80651,
+        -122.43177
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "labels": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/FortMasonWharves.JPG/1280px-FortMasonWharves.JPG",
+      "imageSubject": "Fort Mason",
+      "imageKind": "context",
+      "imageCredit": "Original uploader was SuperJumbo at en.wikipedia · CC BY-SA 3.0"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "the-fillmore",
+      "title": "The Fillmore",
+      "emoji": "🎸",
+      "area": "1805 Geary Boulevard",
+      "priceNote": "Tickets vary by show",
+      "durationMin": 180,
+      "why": "The ballroom where Bill Graham put on the Grateful Dead, Jefferson Airplane and Big Brother between 1965 and 1968. The walls are still covered with the posters. Go for whoever is playing, and arrive early to read the walls.",
+      "url": "https://thefillmore.com/",
+      "source": "The Fillmore; FoundSF; confirmed against OpenStreetMap",
+      "labels": [
+        "dontmiss"
+      ],
+      "zone": "fillmore-district",
+      "coords": [
+        37.78408,
+        -122.43317
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/The_Fillmore.jpg/1280px-The_Fillmore.jpg",
+      "imageSubject": "The Fillmore",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "great-american-music-hall",
+      "title": "Great American Music Hall",
+      "emoji": "🎸",
+      "area": "859 O'Farrell Street",
+      "priceNote": "Tickets vary by show",
+      "durationMin": 180,
+      "why": "San Francisco's oldest nightclub, built in 1907 after the earthquake, with its gilded columns, carved balconies and original ceiling murals still in place. The room is as much the reason to go as the band.",
+      "url": "https://www.greatmusichall.com/",
+      "source": "Wikipedia; 7x7; SFGate; confirmed against OpenStreetMap",
+      "zone": "little-saigon",
+      "coords": [
+        37.7848,
+        -122.41884
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "labels": [],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Great_American_Music_Hall_%28April_1976%29.jpg",
+      "imageSubject": "Great American Music Hall",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "history"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "vesuvio",
+      "title": "Vesuvio",
+      "emoji": "🍺",
+      "coords": [
+        37.79749,
+        -122.40645
+      ],
+      "coordsFrom": "osm way/35537202",
+      "area": "255 Columbus Avenue, on Jack Kerouac Alley",
+      "priceNote": "Cheap",
+      "durationMin": 90,
+      "why": "The Beats' bar, opened in 1948 across the alley from City Lights. Kerouac, Ginsberg and Neal Cassady drank here, and Cassady stopped in on his way to the Six Gallery reading in 1955. It is a museum you can drink in. Buy a book at City Lights, then take it upstairs here.",
+      "url": "https://vesuvio.com/",
+      "source": "Wikipedia; vesuvio.com; National Trust for Historic Preservation; confirmed against OpenStreetMap (way/35537202)",
+      "labels": [
+        "dontmiss",
+        "hiddengem"
+      ],
+      "zone": "telegraph-hill",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Vesuvio_mural.jpg/1280px-Vesuvio_mural.jpg",
+      "imageSubject": "Vesuvio Cafe",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "tosca-cafe",
+      "title": "Tosca Cafe",
+      "emoji": "🍷",
+      "area": "242 Columbus Avenue",
+      "priceNote": "Cocktails and Italian dinner",
+      "durationMin": 120,
+      "why": "Open since 1919, a red-leather room on Columbus. Order the house cappuccino, which isn't coffee at all but a Prohibition-era hot chocolate with bourbon and cognac. It was saved from closing and reopened with dinner. Go late and sit at the bar.",
+      "url": "https://www.toscacafe-sf.com/",
+      "source": "Tosca Cafe; SF Chronicle; confirmed against OpenStreetMap",
+      "labels": [
+        "romantic",
+        "couple"
+      ],
+      "zone": "telegraph-hill",
+      "coords": [
+        37.79755,
+        -122.40596
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/SF_Filbert_St_North_Beach_CA.jpg/1280px-SF_Filbert_St_North_Beach_CA.jpg",
+      "imageSubject": "North Beach, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "li-po-lounge",
+      "title": "Li Po Cocktail Lounge",
+      "emoji": "🏮",
+      "area": "Grant Avenue, Chinatown",
+      "priceNote": "Cheap, cash is easier",
+      "durationMin": 60,
+      "why": "Chinatown's oldest bar, open since 1937 and barely changed: red lanterns, a low ceiling and a Buddha shrine behind the bar. Order the Chinese mai tai. The recipe is a secret and uses a Chinese liqueur they make themselves.",
+      "url": "https://lipolounge.com/",
+      "source": "KQED; SFGate; confirmed against OpenStreetMap",
+      "labels": [
+        "hiddengem"
+      ],
+      "zone": "telegraph-hill",
+      "coords": [
+        37.79542,
+        -122.40645
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/San_Francisco_China_Town_MC.jpg/1280px-San_Francisco_China_Town_MC.jpg",
+      "imageSubject": "Chinatown, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "smugglers-cove",
+      "title": "Smuggler's Cove",
+      "emoji": "🍹",
+      "area": "Gough Street, Hayes Valley",
+      "priceNote": "Cocktails ~$15–18",
+      "durationMin": 90,
+      "why": "A three-storey tiki bar with more rums than any other bar in the country, over thirteen hundred. There are eighty cocktails on the menu, and it was named the best cocktail bar in the United States in 2016. Martin Cate, who founded it in 2009, wrote the book on rum. Go early, because it is small and the line forms.",
+      "url": "https://www.smugglerscovesf.com/",
+      "source": "Wikipedia; PUNCH; World's 50 Best; confirmed against OpenStreetMap",
+      "labels": [
+        "dontmiss"
+      ],
+      "zone": "hayes-valley",
+      "coords": [
+        37.7794,
+        -122.42334
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Smuggler%27s_Cove_bar.jpg/1280px-Smuggler%27s_Cove_bar.jpg",
+      "imageSubject": "Smuggler's Cove (bar)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "trick-dog",
+      "title": "Trick Dog",
+      "emoji": "🍸",
+      "area": "3010 20th Street, Mission",
+      "priceNote": "Cocktails ~$18",
+      "durationMin": 90,
+      "why": "The Mission cocktail bar that reinvents its whole menu around a theme every so often: a wrestling belt one year, a book of San Francisco photographs the next. It won the cocktail world's top award in 2025. Order off whatever the current menu is.",
+      "url": "https://www.trickdogbar.com/",
+      "source": "SF Standard; Axios; confirmed against OpenStreetMap",
+      "zone": "mission",
+      "coords": [
+        37.75922,
+        -122.41119
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "labels": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Mission_High_School_%28cropped%29.jpg/1280px-Mission_High_School_%28cropped%29.jpg",
+      "imageSubject": "Mission District, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "history"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "zam-zam",
+      "title": "Zam Zam",
+      "emoji": "🍸",
+      "area": "1633 Haight Street",
+      "priceNote": "Cheap",
+      "durationMin": 60,
+      "why": "A 1941 Persian Art Deco cocktail lounge in the Haight, opened as the Persian Aub Zam Zam, with arches and murals. For decades its owner famously ran it with an iron hand. Order a martini, which is what it is known for.",
+      "url": "https://www.sfheritage.org/heritage-in-the-neighborhoods/zam-zam/",
+      "source": "SF Heritage; SF Examiner; confirmed against OpenStreetMap",
+      "labels": [
+        "hiddengem"
+      ],
+      "zone": "cole-valley",
+      "coords": [
+        37.7696,
+        -122.4493
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Imm027.jpg/1280px-Imm027.jpg",
+      "imageSubject": "Haight-Ashbury",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons · CC BY-SA 3.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "rose-and-crown-pa",
+      "title": "The Rose & Crown",
+      "emoji": "🍺",
+      "coords": [
+        37.44441,
+        -122.16173
+      ],
+      "coordsFrom": "osm way/133116331",
+      "zone": "palo-alto",
+      "area": "547 Emerson Street",
+      "priceNote": "Pints and pub food",
+      "durationMin": 120,
+      "why": "Palo Alto's oldest bar, an English pub on Emerson with more than twenty beers on tap, and fish and chips. Tuesday is trivia night: claim a table between 7:30 and 7:50, and the winners drink for free.",
+      "url": "https://www.yelp.com/biz/the-rose-and-crown-palo-alto",
+      "source": "Palo Alto Online; confirmed against OpenStreetMap (way/133116331)",
+      "labels": [
+        "cheap"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG/1280px-Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG",
+      "imageSubject": "Palo Alto, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "dutch-goose",
+      "title": "Dutch Goose",
+      "emoji": "🥜",
+      "zone": "menlo-park",
+      "area": "3567 Alameda de las Pulgas, Menlo Park",
+      "priceNote": "Cheap",
+      "durationMin": 90,
+      "why": "The Stanford crowd's bar since 1966: peanut shells on the floor, burgers, pitchers, and deviled eggs made to the same recipe for sixty years. Order the eggs.",
+      "url": "https://www.dutchgoose.net/about",
+      "source": "Stanford Magazine; M-A Chronicle; confirmed against OpenStreetMap",
+      "labels": [
+        "cheap"
+      ],
+      "coords": [
+        37.43202,
+        -122.20157
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Downtown_Menlo_Park_California.jpg/1280px-Downtown_Menlo_Park_California.jpg",
+      "imageSubject": "Menlo Park, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "british-bankers-club",
+      "title": "British Bankers Club",
+      "emoji": "🍸",
+      "area": "Santa Cruz Avenue, Menlo Park",
+      "priceNote": "Cocktails and dinner",
+      "durationMin": 120,
+      "why": "A 1925 brick building by Birge Clark that has been a bank, Menlo Park's city hall and its jail. It has been a bar since 1977, now with a rooftop. Drink on the roof on a warm evening.",
+      "url": "https://www.britishbankersclub.com/",
+      "source": "The Almanac; InMenlo; confirmed against OpenStreetMap",
+      "zone": "menlo-park",
+      "coords": [
+        37.45382,
+        -122.18267
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "labels": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Downtown_Menlo_Park_California.jpg/1280px-Downtown_Menlo_Park_California.jpg",
+      "imageSubject": "Menlo Park, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "frost-amphitheater",
+      "title": "Frost Amphitheater",
+      "emoji": "🎶",
+      "area": "Lasuen Street, Stanford",
+      "priceNote": "Tickets vary by show",
+      "durationMin": 180,
+      "weatherSensitive": true,
+      "why": "An outdoor bowl on the Stanford campus, from 1937, where 8,000 people sit on grass slopes above the stage. The summer and autumn concerts are the Peninsula's best big night out. Bring a blanket and a layer.",
+      "url": "https://live.stanford.edu/your-visit/venues/frost-amphitheater/",
+      "source": "Stanford Live; Wikipedia; confirmed against OpenStreetMap",
+      "labels": [
+        "outdoor"
+      ],
+      "zone": "palo-alto",
+      "coords": [
+        37.43069,
+        -122.16596
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_Leland_Stanford_Junior_University.svg/1280px-Seal_of_Leland_Stanford_Junior_University.svg.png",
+      "imageSubject": "Stanford University",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-23",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "bing-concert-hall",
+      "title": "Bing Concert Hall",
+      "emoji": "🎻",
+      "area": "Lasuen Street, Stanford",
+      "priceNote": "Tickets vary by show",
+      "durationMin": 150,
+      "why": "Stanford's concert hall, open since 2013: 842 seats in vineyard-style terraces around the stage, with acoustics by Yasuhisa Toyota. Stanford Live puts on classical, jazz and world music here. Every seat is close.",
+      "url": "https://live.stanford.edu/your-visit/venues/bing-concert-hall/",
+      "source": "Stanford Live; Wikipedia; confirmed against OpenStreetMap",
+      "zone": "palo-alto",
+      "coords": [
+        37.43211,
+        -122.16615
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "labels": [],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Bing_concert_hall_at_Stanford_University.JPG/1280px-Bing_concert_hall_at_Stanford_University.JPG",
+      "imageSubject": "Bing Concert Hall",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }
