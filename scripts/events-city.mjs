@@ -306,6 +306,261 @@ async function our415(log) {
 }
 
 /* ======================================================================
+   Permits — data.cityofnewyork.us, dataset tvpp-9vvx
+
+   NYC Permitted Event Information: every street closure, park booking
+   and plaza programme the city has signed off, 30,000 rows running into
+   2027. It is the one live municipal feed New York has — the Parks
+   listing that looks like one stopped in 2019 — and it is a permit
+   register, not a programme, which decides almost everything below.
+
+   **Most of it is not for anybody.** Measured on 22 September 2026 over
+   sixty days: 26,000 of 30,000 rows are youth and adult league bookings
+   of a ballfield. "Special Event" is 3,265 rows of Parks administration
+   — lawn closures, gazebo construction, and private "Celebration"
+   bookings of a pavilion. "Street Event" is mostly health outreach vans.
+   Block parties are the neighbours' own afternoon. What is left, and
+   what is kept, is the kind of thing a stranger may walk into: the
+   greenmarkets, parades, street festivals, plaza programmes and Open
+   Streets.
+
+   **It carries no coordinates.** `event_location` is free text in a
+   handful of shapes — "AVENUE M between EAST 45 STREET and EAST 46
+   STREET", "VANDERBILT AVENUE - ATLANTIC AVENUE to PARK PLACE", or a
+   plaza name followed by one of those. The block is placed by asking
+   OpenStreetMap where the named street crosses its two cross streets,
+   and averaging. Street names repeat across boroughs, so a crossing is
+   accepted only when it lands in a zone whose `side` is the permit's
+   borough. Every answer, including "not found", is cached in
+   scripts/permit-places.json, because Overpass takes five to ten seconds
+   a question and the same greenmarket asks it every week.
+
+   **One row per occurrence**, like Localist. A greenmarket open on
+   Tuesdays and Fridays arrives eighteen times in sixty days. Rows are
+   collapsed by name and place into one record with a span and `days`,
+   which is what the scoring reads to show it only on the right
+   weekdays.
+
+   There is no link. The permit knows where and when and nothing else,
+   so the card links to the spot on the map, and `why` says plainly that
+   this is a permit and not a listing.
+   ====================================================================== */
+
+const PERMITS = id => `https://data.cityofnewyork.us/resource/${id}.json`;
+
+const PERMIT_KINDS = {
+  'Farmers Market':            ['market',    '🥕'],
+  'Parade':                    ['festival',  '🎉'],
+  'Street Festival':           ['festival',  '🎉'],
+  'Single Block Festival':     ['festival',  '🎉'],
+  'Plaza Event':               ['community', '🫂'],
+  'Plaza Partner Event':       ['community', '🫂'],
+  'Open Street Partner Event': ['community', '🫂']
+};
+
+/* Inside the kept kinds, the rows that are still somebody at work or a
+   private occasion. Read off the name, because that is all there is. */
+const PERMIT_NOT_FOR_US = /\b(wellness|outreach|distribution|enrol+ment|wedding|closure|closed|construction|renovation|clean.?up|e-?waste|recycling|afterschool|after school|meeting|vaccin\w*|flu shot|health fair|voter|memorial|funeral|structure|load.?in|filming)\b/i;
+
+const PERMIT_CACHE = new URL('./permit-places.json', import.meta.url);
+
+/* "EAST   37 STREET" → "East 37th Street"; "10 AVENUE" → "10th Avenue";
+   "FT WASHINGTON AVENUE" → "Fort Washington Avenue". OpenStreetMap
+   spells New York's numbered streets with ordinals and in full, and the
+   permit register spells them neither way. */
+const ORD = n => n + ((n % 100 >= 11 && n % 100 <= 13) ? 'th' : ({ 1: 'st', 2: 'nd', 3: 'rd' }[n % 10] || 'th'));
+const WORD = { e: 'East', w: 'West', n: 'North', s: 'South', ft: 'Fort', st: 'Street', ave: 'Avenue',
+               av: 'Avenue', pl: 'Place', rd: 'Road', blvd: 'Boulevard', pkwy: 'Parkway', dr: 'Drive',
+               ln: 'Lane', ct: 'Court', ter: 'Terrace', hwy: 'Highway', sq: 'Square' };
+/* "Second Avenue" is how people and some permits say it; the map says
+   "2nd Avenue". Avenue of the Americas is 6th Avenue on the map. */
+const NUMWORD = { first: 1, second: 2, third: 3, fourth: 4, fifth: 5, sixth: 6, seventh: 7,
+                  eighth: 8, ninth: 9, tenth: 10, eleventh: 11, twelfth: 12 };
+const ALIAS = { 'avenue of americas': '6th Avenue', 'avenue of the americas': '6th Avenue' };
+function osmStreet(raw) {
+  const plain = String(raw).replace(/[.]/g, ' ').replace(/\s+/g, ' ').trim();
+  if (ALIAS[plain.toLowerCase()]) return ALIAS[plain.toLowerCase()];
+  const words = plain.split(' ').filter(Boolean);
+  return words.map((w, i) => {
+    const lw = w.toLowerCase();
+    if (NUMWORD[lw] && i < words.length - 1) return ORD(NUMWORD[lw]);
+    if (/^\d+$/.test(w) && i < words.length - 1) return ORD(+w);
+    if (/^\d+(st|nd|rd|th)$/i.test(w)) return ORD(parseInt(w, 10));   // "32rd" is in the data
+    /* A single letter is Avenue M, not an abbreviation; "St" first is Saint. */
+    if (WORD[lw] && !(lw === 'st' && i === 0) && !(lw.length === 1 && i > 0)) return WORD[lw];
+    return lw.charAt(0).toUpperCase() + lw.slice(1);
+  }).join(' ');
+}
+
+/* The first block the text names, as [street, from, to], or null. A
+   parade route lists several — the first is where it forms up. */
+function firstBlock(text) {
+  const t = String(text).replace(/\s+/g, ' ');
+  let m = /(?:^|[:,)]\s*|\b[A-Z][a-z]+ Plaza\)?\s+)?([A-Za-z0-9 .'-]+?) between ([A-Za-z0-9 .'-]+?) and ([A-Za-z0-9 .'-]+?)(?:,|$| [A-Z][a-z]+:)/.exec(t);
+  if (!m) m = /([A-Za-z0-9 .'-]+?) - ([A-Za-z0-9 .'-]+?) to ([A-Za-z0-9 .'-]+?)(?::|,|$)/.exec(t);
+  if (!m) return null;
+  /* A plaza prefix leaves its own name glued to the street: "Avenue C
+     Plaza MCDONALD AVENUE". The street is the upper-case run at the end,
+     or failing that the last two or three words. */
+  const tidy = s => { const up = /([A-Z0-9][A-Z0-9 .'-]+)$/.exec(s.trim()); return (up && up[1].trim().length > 3 ? up[1] : s).trim(); };
+  return [tidy(m[1]).replace(/^.*\bPlaza\)?\s+(?=\S)/i, ''), m[2].trim(), m[3].trim()].map(osmStreet);
+}
+
+const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/* Where each block's street meets its two cross streets, for many
+   blocks in one Overpass request. One question per block was the first
+   version, and it did not survive contact: the public instance answers
+   504 whenever it is busy, which in the evening is often, and a
+   ten-second query times two hundred is a long time to be lucky.
+
+   A `make` element between groups marks where one block's answer ends
+   and the next begins, so a single reply can be split back apart. */
+const PER_REQUEST = 15;
+
+async function crossings(blocks) {
+  const [s, w, n, e] = City.bbox.split(',');
+  const bb = `(${s},${w},${n},${e})`;
+  const q = '[out:json][timeout:120];\n' + blocks.map(([street, from, to], i) =>
+    `way[highway][~"^(name|alt_name|old_name)$"~"^${escRe(street)}$",i]${bb}->.a;\n` +
+    `way[highway][~"^(name|alt_name|old_name)$"~"^(${escRe(from)}|${escRe(to)})$",i]${bb}->.b;\n` +
+    `node(w.a)(w.b);out skel;\nmake block i=${i};out;`).join('\n');
+  for (let attempt = 0; attempt < 4; attempt++) {
+    for (const host of ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter']) {
+      try {
+        const res = await fetch(host, { method: 'POST', headers: { 'user-agent': UA }, body: q,
+                                        signal: AbortSignal.timeout(180000) });
+        if (!res.ok) continue;
+        const out = blocks.map(() => []);
+        let cur = [];
+        for (const el of (await res.json()).elements) {
+          if (el.type === 'block') { out[+el.tags.i] = cur; cur = []; }
+          else cur.push([el.lat, el.lon]);
+        }
+        return out;
+      } catch { /* the other mirror, then wait */ }
+    }
+    await new Promise(r => setTimeout(r, 20000 * (attempt + 1)));
+  }
+  return null;
+}
+
+async function permits(log) {
+  let cache = {};
+  try { cache = JSON.parse(await fs.readFile(PERMIT_CACHE, 'utf8')); } catch { /* first run */ }
+
+  const kinds = Object.keys(PERMIT_KINDS).map(k => `'${k}'`).join(',');
+  const url = `${PERMITS(City.events.permits)}?$limit=50000&$where=` + encodeURIComponent(
+    `start_date_time between '${TODAY}' and '${UNTIL}T23:59:59' AND event_type in (${kinds})`);
+  const res = await fetch(url, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(60000) });
+  if (!res.ok) throw new Error(`permits ${res.status}`);
+  const rows = await res.json();
+
+  const steps = [];
+  const step = (label, list) => { steps.push([list.length, label]); return list; };
+
+  let kept = step(`${rows.length} permits of a kind a stranger could walk into`, rows);
+  kept = step('not somebody at work, or a private occasion',
+    kept.filter(r => !PERMIT_NOT_FOR_US.test(r.event_name || '')));
+
+  /* Collapse occurrences: one market, one record, with its weekdays. */
+  const groups = new Map();
+  for (const r of kept) {
+    const k = `${(r.event_name || '').trim().toLowerCase()}|${r.event_location}`;
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(r);
+  }
+  kept = step('distinct events once the dates are collapsed', [...groups.values()]);
+
+  const todo = new Map();
+  const want = kept.map(occ => {
+    const r = occ[0];
+    const block = firstBlock(r.event_location);
+    if (!block) return null;
+    const key = `${r.event_borough}|${block.join('|')}`;
+    if (!(key in cache)) todo.set(key, [block, r.event_borough]);
+    return [occ, key];
+  }).filter(Boolean);
+  steps.push([want.length, 'name a block that can be looked for']);
+
+  /* Keep only crossings in the permit's own borough — "East 37th
+     Street" is in Manhattan and in Brooklyn — then take the middle of
+     what is left. Nothing left is cached as null, so a street the map
+     does not know is asked about once rather than weekly. A batch that
+     fails is not cached at all, and is asked again next run; the rest
+     of the run carries on without it. */
+  const pending = [...todo.entries()];
+  let unanswered = 0;
+  for (let i = 0; i < pending.length; i += PER_REQUEST) {
+    const batch = pending.slice(i, i + PER_REQUEST);
+    const got = await crossings(batch.map(([, [block]]) => block));
+    if (!got) { unanswered += batch.length; continue; }
+    batch.forEach(([key, [, borough]], j) => {
+      const mine = got[j].filter(([la, lo]) => {
+        const z = zoneOf(la, lo); return z != null && City.zone.side?.[z] === borough;
+      });
+      /* A street that meets a cross street many times — 12th Avenue
+         merging in and out of the West Side Highway — averages to
+         somewhere between them all, which is nowhere. Crossings more
+         than three kilometres apart are not one block, and are left
+         unplaced rather than placed wrongly. */
+      const spread = mine.length && Math.max(
+        ...mine.map(a => Math.max(...mine.map(b => Math.hypot((a[0] - b[0]) * 111, (a[1] - b[1]) * 84)))));
+      cache[key] = mine.length && spread <= 3
+        ? [+(mine.reduce((a, p) => a + p[0], 0) / mine.length).toFixed(5),
+           +(mine.reduce((a, p) => a + p[1], 0) / mine.length).toFixed(5)]
+        : null;
+    });
+    await fs.writeFile(PERMIT_CACHE, JSON.stringify(
+      Object.fromEntries(Object.entries(cache).sort()), null, 1) + '\n', 'utf8');
+  }
+  const placed = want.filter(([, key]) => cache[key]).map(([occ, key]) => [occ, cache[key]]);
+  if (pending.length && unanswered === pending.length && !placed.length)
+    throw new Error('Overpass unreachable');
+  steps.push([placed.length, `placed on the map (${pending.length - unanswered} blocks newly looked up` +
+    (unanswered ? `, ${unanswered} unanswered and left for next run)` : ')')]);
+
+  /* The cache is written as it fills, and even on --dry: it is a record of
+     OpenStreetMap's answers, not output, and should not be paid for twice. */
+
+  steps.forEach(([n, label]) => log.push([n, label]));
+
+  return placed.map(([occ, [lat, lon]]) => {
+    const r = occ[0];
+    const [cat, emoji] = PERMIT_KINDS[r.event_type];
+    const dates = occ.map(o => day(o.start_date_time)).sort();
+    const start = dates[0], end = day(occ.map(o => o.end_date_time).sort().pop()) || start;
+    /* A weekly market lists its weekdays; a one-day parade does not
+       need to. getUTCDay on a bare date is the weekday of that date. */
+    const days = occ.length > 1
+      ? [...new Set(dates.map(d => new Date(d + 'T00:00:00Z').getUTCDay()))].sort() : undefined;
+    const block = firstBlock(r.event_location);
+    const title = unent(r.event_name).replace(/\s+/g, ' ');
+    return {
+      id: `permits-${r.event_id}`,
+      title: (/[a-z]/.test(title) ? title : title.toLowerCase().replace(/\b\w/g, c => c.toUpperCase())).slice(0, 120),
+      emoji,
+      type: 'event',
+      categories: [cat],
+      zone: zoneOf(lat, lon),
+      area: `${block[0]}, ${block[1]} to ${block[2]}`.slice(0, 80),
+      coords: [lat, lon],
+      start,
+      end: end < start ? start : end,
+      ...(days ? { days } : {}),
+      why: `${r.event_type} on ${block[0]} in ${r.event_borough}, permitted by the ${r.event_agency}. ` +
+           'This is the city\'s permit, not a listing — it says where and when, and nothing about what it is like.',
+      url: `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=18/${lat}/${lon}`,
+      source: 'NYC Permitted Event Information — data.cityofnewyork.us',
+      lastVerified: TODAY,
+      indoor: false,
+      quality: 3,
+      uniqueness: 3
+    };
+  });
+}
+
+/* ======================================================================
    Luma — the evenings that are not tech
    ====================================================================== */
 
@@ -409,6 +664,7 @@ async function run() {
   const HALVES = [
     ...(want.localist ? [['stanford', stanford]] : []),
     ...(want.our415   ? [['our415', our415]]     : []),
+    ...(want.permits  ? [['permits', permits]]   : []),
     ...(City.luma?.length ? [['luma', luma]]     : [])
   ];
   if (!HALVES.length) {
@@ -475,6 +731,7 @@ async function run() {
     window: { from: TODAY, to: UNTIL },
     source: [want.localist ? 'Stanford Events (events.stanford.edu)' : null,
              want.our415 ? 'Our415 (data.sfgov.org)' : null,
+             want.permits ? 'NYC Permitted Event Information (data.cityofnewyork.us)' : null,
              City.luma?.length ? City.luma.map(f => f[2]).join(' · ') : null].filter(Boolean).join(' · '),
     note: 'What the sources that publish say is on. Facts with a source and no opinion — these land in the "sourced" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.',
     counts: Object.fromEntries(HALVES.map(([n]) => [n, results[n].length])),

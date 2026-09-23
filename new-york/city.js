@@ -835,18 +835,20 @@ const City = (() => {
      markets, 166 block parties, 155 street events and 56 parades in a
      sixty-day window. What it has no trace of is coordinates. Its
      `event_location` is free text — "Harris Park: Baseball-01", or a
-     street between two cross-streets — so using it means geocoding a few
-     hundred rows through Nominatim at a request a second. That is a
-     piece of work rather than a config line, and it is the obvious next
-     thing to build for this city.
+     street between two cross-streets — and scripts/events-city.mjs
+     places each block by asking OpenStreetMap where the street meets
+     its cross streets. Built 22 September 2026: 107 events worth
+     walking into in sixty days, 103 of them placed. See the `permits`
+     half of that script for what is kept and why.
 
      A university Localist calendar is deliberately absent too:
      Columbia's answers 403, NYU does not run one, and Fordham's is 89
      events a month and mostly fixtures.
 
-     So New York is Luma alone for now, which is 30 events a fortnight
-     across four boroughs. */
-  const events = {};
+     So New York is the permit register and Luma: the first for the
+     greenmarkets, parades, plazas and Open Streets, the second for the
+     evenings, about 30 a fortnight. */
+  const events = { permits: 'tvpp-9vvx' };
 
   /* No municipal feed of things you could take up — the Parks events are
      dated, not recurring in the way practices.json means. Luma only. */

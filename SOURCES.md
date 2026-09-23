@@ -389,15 +389,42 @@ through 2027, and it has the categories that matter — in a sixty-day window,
 it has no trace of is coordinates: `event_location` is free text, either a
 park and a facility number or a street between two cross-streets. Using it
 means geocoding a few hundred rows through Nominatim at a request a second,
-which is a piece of work rather than a config line. **It is the obvious next
-thing to build for this city.**
+which is a piece of work rather than a config line.
+
+**Built on 22 September 2026**, as the `permits` half of `events-city.mjs`.
+Three things were learned doing it:
+
+- **Almost none of it is for anybody.** In sixty days: 26,000 rows are league
+  bookings of a ballfield; "Special Event" is 3,265 rows of Parks
+  administration, from lawn closures and gazebo construction to private
+  pavilion bookings; "Street Event" is mostly health-outreach vans; block
+  parties are the neighbours' own. Kept: farmers markets, parades, street
+  festivals, plaza programmes and Open Streets. That is 315 permits, 251
+  once outreach and closures are dropped by name, and **107 distinct events**
+  once each greenmarket's eighteen occurrences are collapsed into one
+  record with `days`.
+- **Nominatim cannot do it.** It cannot geocode a crossing of two streets.
+  Overpass can: the named street's nodes that it shares with either cross
+  street, averaged. Old and alternative names are matched too, because the
+  permit office still writes Lenox Avenue. A crossing only counts inside
+  the permit's own borough, and crossings more than 3 km apart count as no
+  answer at all. 12th Avenue meets the West Side Highway so many times
+  that the average lands thirty blocks north. **103 of 107 placed.**
+- **One question per block does not survive.** The public Overpass instance
+  answers 504 whenever it is busy. Blocks go fifteen to a request, split
+  apart again on `make` markers. Every answer, including "no such crossing",
+  is cached in `scripts/permit-places.json`, so a weekly run asks only about
+  blocks it has not seen.
+
+The permit has no link and no description. Cards link to the spot on
+OpenStreetMap, and `why` says it is a permit, not a listing. With Luma, New
+York's dated events now reach 64 of 237 neighbourhoods, up from 15.
 
 University Localist was checked too: Columbia answers 403, NYU does not run
 one, and Fordham's is 89 events a month and mostly fixtures — thin enough
 that adding it would be noise rather than coverage.
 
-New York therefore ships on Luma alone, which is 30 events a fortnight
-across four boroughs, plus the OpenStreetMap and Wikidata layers that need
+New York therefore ships on the permit register and Luma, plus the OpenStreetMap and Wikidata layers that need
 no city portal at all.
 
 ## Adding a city, by country
