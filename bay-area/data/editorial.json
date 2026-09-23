@@ -773,6 +773,302 @@
    "labels": [],
    "source": "The Stanford Daily (April 2026); Palo Alto Online; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-blue-bottle-coffee-74895--244319",
+   "title": "Blue Bottle Coffee",
+   "type": "cafe",
+   "zone": "palo-alto",
+   "coords": [
+    37.44752,
+    -122.1594
+   ],
+   "area": "University Avenue",
+   "url": "https://bluebottlecoffee.com/cafes/palo-alto",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Bottle Coffee",
+    "zone": "palo-alto",
+    "type": "cafe"
+   },
+   "why": "Order the New Orleans iced coffee: cold-brewed with roasted chicory and cut with milk and a little sugar. James Freeman first sold it at Bay Area farmers' markets in 2005, before Blue Bottle had cafés. There is a second branch at Stanford Shopping Center, but this is the one on University.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "bluebottlecoffee.com; LAist; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-elizabeth-gamble-gardens-74880--244297",
+   "title": "Elizabeth Gamble Gardens",
+   "type": "park",
+   "zone": "palo-alto",
+   "coords": [
+    37.43998,
+    -122.14845
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Elizabeth Gamble Gardens",
+    "zone": "palo-alto",
+    "type": "park"
+   },
+   "why": "Two and a half acres around a 1902 house in Old Palo Alto: a rose garden, a wisteria garden, an herb garden and an allée. It was left to the city by the granddaughter of Procter & Gamble's co-founder. It is free and open every day during daylight, and it is rarely busy — somewhere to sit rather than somewhere to see.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "relax",
+    "outdoors"
+   ],
+   "labels": [
+    "outdoor",
+    "hiddengem"
+   ],
+   "source": "gamblegarden.org; SFGate; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-rodin-sculpture-garden-74865--244342",
+   "title": "Rodin Sculpture Garden",
+   "type": "park",
+   "zone": "palo-alto",
+   "coords": [
+    37.43229,
+    -122.17099
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Rodin Sculpture Garden",
+    "zone": "palo-alto",
+    "type": "park"
+   },
+   "why": "Twenty Rodin bronzes in the open air beside the Cantor, including a full cast of The Gates of Hell. Stanford's Rodin collection is the largest outside Paris. It is free and never closes. Docents give free tours on Wednesday afternoons and at weekends, and the Cantor next door is free too.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "outdoors"
+   ],
+   "labels": [
+    "outdoor",
+    "hiddengem"
+   ],
+   "source": "The Stanford Daily; Cantor Arts Center; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-lucy-evans-baylands-nature-inter-74919--244213",
+   "title": "Baylands Nature Preserve",
+   "type": "museum",
+   "zone": "east-palo-alto",
+   "coords": [
+    37.45963,
+    -122.10634
+   ],
+   "area": "Embarcadero Road",
+   "url": "https://www.cityofpaloalto.org/gov/depts/csd/parks/preserves/baylands.asp",
+   "cuisine": null,
+   "categories": [
+    "museum"
+   ],
+   "match": {
+    "name": "Lucy Evans Baylands Nature Interpretive Center",
+    "type": "museum"
+   },
+   "why": "Salt marsh at the edge of the Bay, and one of the best places to watch birds on the West Coast. A boardwalk runs a quarter of a mile from this centre across the marsh to open water. Autumn to spring is the season: shorebirds and ducks stop here on the Pacific Flyway. For photographs, early mornings from March to May.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "outdoors",
+    "relax"
+   ],
+   "labels": [
+    "outdoor"
+   ],
+   "source": "KQED; Santa Clara Valley Bird Alliance; Wikipedia; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-pacific-art-league-74888--244320",
+   "title": "Pacific Art League",
+   "type": "culture",
+   "zone": "palo-alto",
+   "coords": [
+    37.4438,
+    -122.16007
+   ],
+   "area": "Ramona Street",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "art",
+    "learn",
+    "indoor"
+   ],
+   "match": {
+    "name": "Pacific Art League",
+    "zone": "palo-alto"
+   },
+   "mode": "do",
+   "why": "Downtown's art school, in a historic building on Ramona: over fifty classes a term in watercolour, oil and acrylic, drawing, life drawing, sculpture and photography, taught by working artists. It runs quarterly terms plus one-off weekend workshops, and a workshop is the easy way to find out whether you want the term.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "learn",
+    "indoor"
+   ],
+   "labels": [
+    "learn"
+   ],
+   "source": "pacificartleague.org; Wikipedia; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-the-penny-ice-creamery-74877--244318",
+   "title": "The Penny Ice Creamery",
+   "type": "deli",
+   "zone": "palo-alto",
+   "coords": [
+    37.43869,
+    -122.15897
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "The Penny Ice Creamery",
+    "zone": "palo-alto",
+    "type": "deli"
+   },
+   "why": "Small-batch ice cream from Santa Cruz, made from scratch in the shop with organic dairy. It is one of the smallest dairy plants in California, and you can watch it being churned. The flavours follow the season, and the torched marshmallow topping is the one people queue for. It is in Town & Country, across El Camino from Stanford.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "thepennyicecreamery.com; Verde Magazine; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-rick-s-ice-cream-74837--244218",
+   "title": "Rick's Ice Cream",
+   "type": "restaurant",
+   "zone": "mountain-view",
+   "coords": [
+    37.41854,
+    -122.10925
+   ],
+   "area": "Middlefield Road",
+   "url": "http://www.ricksicecream.com/",
+   "cuisine": "ice_cream",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Rick's Ice Cream",
+    "type": "restaurant"
+   },
+   "why": "Palo Alto's old ice cream shop: about seventy years on Middlefield at Charleston, with four dozen flavours made on site. Try Computer Chip, which is chocolate with chocolate chips and orange zest, or the kulfi, or Blue Moon. The Pints of Joy team took it over this year and added black sesame and Alphonso mango without retiring the old ones.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Palo Alto Online (January 2026); ricksicecream.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-marvel-cake-74890--244323",
+   "title": "Marvel Cake",
+   "type": "bakery",
+   "zone": "palo-alto",
+   "coords": [
+    37.44507,
+    -122.16164
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food",
+    "bakery",
+    "dessert"
+   ],
+   "match": {
+    "name": "Marvel Cake",
+    "zone": "palo-alto",
+    "type": "bakery"
+   },
+   "why": "A small patisserie on University doing French technique with Asian flavours. The mango crêpe cake, thin crêpes layered with cream and mango, is the thing to order. Good coffee too, and a few seats.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Yelp; Wanderlog; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-susie-cakes-74905--244368",
+   "title": "SusieCakes",
+   "type": "bakery",
+   "zone": "menlo-park",
+   "coords": [
+    37.4527,
+    -122.18387
+   ],
+   "area": "Santa Cruz Avenue",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food",
+    "bakery",
+    "dessert"
+   ],
+   "match": {
+    "name": "Susie Cakes",
+    "zone": "menlo-park",
+    "type": "bakery"
+   },
+   "why": "An old-fashioned American cake shop on Santa Cruz Avenue. The six-layer chocolate cake is the signature, with the red velvet close behind. Buy it by the slice for today, or order a whole one for a birthday.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "susiecakes.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
   }
  ]
 }

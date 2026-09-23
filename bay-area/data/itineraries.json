@@ -1,5 +1,140 @@
 {
-  "generated": "2026-09-14",
-  "note": "Hand-written routes. Empty.",
-  "items": []
+  "generated": "2026-09-23",
+  "note": "Ready-made routes. Each is a sequence, not a list — the order matters. Researched from the records they name; walk one and rewrite it in your own words.",
+  "items": [
+    {
+      "id": "stanford-afternoon",
+      "title": "An afternoon at Stanford",
+      "emoji": "🗿",
+      "type": "itinerary",
+      "provenance": "editorial",
+      "categories": [
+        "culture",
+        "walk",
+        "outdoors",
+        "free"
+      ],
+      "zone": "palo-alto",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 180,
+      "startTime": "13:00",
+      "why": "Everything on it is free, and it is the best-looking square mile on the Peninsula. Rodin first, then the Cantor while you are standing next to it, then the Cactus Garden, tucked into the arboretum and easy to miss.",
+      "goodFor": [
+        "culture",
+        "couple",
+        "outdoors",
+        "weekend"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "couple",
+        "weekend",
+        "cheap"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "stops": [
+        {
+          "emoji": "🗿",
+          "text": "The Rodin Sculpture Garden — The Gates of Hell, in the open air"
+        },
+        {
+          "emoji": "🖼️",
+          "text": "The Cantor Arts Center next door, free",
+          "walk": "1 min"
+        },
+        {
+          "emoji": "⛪",
+          "text": "Across the Oval to the Main Quad and Memorial Church",
+          "walk": "10 min"
+        },
+        {
+          "emoji": "🌵",
+          "text": "The Arizona Cactus Garden, hidden in the arboretum",
+          "walk": "12 min"
+        }
+      ],
+      "url": "https://museum.stanford.edu/",
+      "coords": [
+        37.43229,
+        -122.17099
+      ],
+      "coordsFrom": "osm (Rodin Sculpture Garden)",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Iris_%26_B._Gerald_Cantor_Center_for_Visual_Arts%2C_Stanford%2C_California_-_20060728.jpg/1280px-Iris_%26_B._Gerald_Cantor_Center_for_Visual_Arts%2C_Stanford%2C_California_-_20060728.jpg",
+      "imageSubject": "Cantor Arts Center",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "downtown-saturday-morning",
+      "title": "Saturday morning downtown",
+      "emoji": "🧺",
+      "type": "itinerary",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "walk"
+      ],
+      "zone": "palo-alto",
+      "price": 20,
+      "priceNote": "~$20 each",
+      "durationMin": 150,
+      "startTime": "08:30",
+      "days": [
+        6
+      ],
+      "why": "The farmers' market is only on Saturday and only in the morning, so it goes first. After that it is a slow loop through the downtown that is on the site.",
+      "goodFor": [
+        "food",
+        "weekend",
+        "morning",
+        "couple",
+        "relax"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "foodmission",
+        "weekend",
+        "couple"
+      ],
+      "uniqueness": 3,
+      "quality": 4,
+      "stops": [
+        {
+          "emoji": "🥕",
+          "text": "The farmers' market on Gilman Street — fruit, bread, cheese, flowers"
+        },
+        {
+          "emoji": "☕",
+          "text": "Coffee upstairs at Goodthing on Ramona",
+          "walk": "5 min"
+        },
+        {
+          "emoji": "🥐",
+          "text": "An almond croissant at Mademoiselle Colette on Lytton",
+          "walk": "7 min"
+        },
+        {
+          "emoji": "🏚️",
+          "text": "Down to Addison Avenue for the HP Garage, from the sidewalk",
+          "walk": "12 min"
+        }
+      ],
+      "url": "https://www.pafarmersmarket.org/",
+      "coords": [
+        37.44536,
+        -122.15903
+      ],
+      "coordsFrom": "the market record (osm-palo-alto-farmer-s-market-74891--244318)",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG/1280px-Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG",
+      "imageSubject": "Palo Alto, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

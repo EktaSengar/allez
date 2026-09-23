@@ -252,8 +252,10 @@ const EXPECT = {
        Palo Alto for coffee, bread and markets — which is exactly where
        the guide has three records. 143 on 22 September, after eight
        researched records around University Avenue filled Palo Alto's
-       restaurant column; San Mateo and Sunnyvale are what is left. */
-    floor: 143
+       restaurant column; San Mateo and Sunnyvale are what is left.
+       144 on 23 September, with two Palo Alto places visited and
+       written up, and the gardens and landmarks around them. */
+    floor: 144
   },
   delhi: {
     probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],

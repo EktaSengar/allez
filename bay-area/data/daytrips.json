@@ -1,5 +1,375 @@
 {
-  "generated": "2026-09-14",
-  "note": "Point Reyes, Santa Cruz, Big Basin, Napa. NOT Palo Alto or Mountain View — those are zones.",
-  "items": []
+  "generated": "2026-09-23",
+  "note": "Driving times are from downtown Palo Alto, off-peak, and are only a guide: the Bay Bridge and Highway 17 can double them. Anything with a booking is said so on its card. Researched, not yet done — rate them as you go.",
+  "items": [
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "filoli",
+      "title": "Filoli",
+      "emoji": "🌷",
+      "categories": [
+        "daytrip",
+        "culture",
+        "outdoors"
+      ],
+      "minutesFromHome": 20,
+      "durationMin": 240,
+      "price": 39,
+      "priceNote": "from ~$39, parking free",
+      "transit": "Drive up Cañada Road, 20 min",
+      "why": "A Georgian Revival house and sixteen acres of formal gardens on 654 acres of the Santa Cruz foothills: a walled garden, an orchard and trails into the nature reserve behind it. It is the nearest real outing from Palo Alto and it changes by season. Autumn Days brings giant pumpkins and cider, and the house is dressed for the holidays from November. Book tickets online.",
+      "goodFor": [
+        "couple",
+        "weekend",
+        "outdoors",
+        "culture"
+      ],
+      "labels": [
+        "couple",
+        "weekend",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://filoli.org/visit/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Filoli_Main_House_Entrance.jpg/1280px-Filoli_Main_House_Entrance.jpg",
+      "imageSubject": "Filoli",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "half-moon-bay",
+      "title": "Half Moon Bay & the coast",
+      "emoji": "🌊",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 40,
+      "durationMin": 300,
+      "price": 0,
+      "priceNote": "Free",
+      "transit": "Highway 92 over the hill, about 40 min",
+      "why": "The nearest ocean: over the hill on 92 and you are in fog and cypress. Walk the coastal trail and go out to Pillar Point, where the Mavericks surf break sits offshore. Buy fish off the boats in the harbour. In mid-October the town's Art & Pumpkin Festival takes over Main Street and 92 jams all day, so go another weekend.",
+      "goodFor": [
+        "outdoors",
+        "weekend",
+        "relax",
+        "couple"
+      ],
+      "labels": [
+        "outdoor",
+        "weekend"
+      ],
+      "uniqueness": 3,
+      "quality": 4,
+      "url": "https://www.visithalfmoonbay.org/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/2009_aerial_view_of_Pillar_Point_Harbor_and_Bluff.jpg/1280px-2009_aerial_view_of_Pillar_Point_Harbor_and_Bluff.jpg",
+      "imageSubject": "Half Moon Bay, California",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "santa-cruz",
+      "title": "Santa Cruz",
+      "emoji": "🎢",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 50,
+      "durationMin": 420,
+      "priceNote": "Free to walk; rides and parks extra",
+      "transit": "Highway 17 over the mountains, about 50 min, much longer on summer weekends",
+      "why": "Three kinds of day in one town. There is the Boardwalk, with the 1924 Giant Dipper, one of the oldest wooden roller coasters still running. There is West Cliff Drive, a walk along the cliffs to the surfers at Steamer Lane. And ten minutes inland, the old-growth redwoods of Henry Cowell. Go early: 17 is slow in both directions on a sunny weekend.",
+      "goodFor": [
+        "outdoors",
+        "weekend",
+        "couple"
+      ],
+      "labels": [
+        "weekend",
+        "outdoor"
+      ],
+      "uniqueness": 3,
+      "quality": 4,
+      "url": "https://www.santacruz.org/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Mission_Santa_Cruz_%288321945663%29.jpg/1280px-Mission_Santa_Cruz_%288321945663%29.jpg",
+      "imageSubject": "Santa Cruz, California",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "muir-woods",
+      "title": "Muir Woods",
+      "emoji": "🌲",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 75,
+      "durationMin": 300,
+      "price": 25,
+      "priceNote": "$15 entry + $10 parking reservation",
+      "transit": "Through San Francisco and over the Golden Gate, about 75 min",
+      "why": "Old-growth coast redwoods in a canyon under Mount Tamalpais, made a national monument in 1908. The flat boardwalk loop is short. Take the Dipsea or Ben Johnson trail up the side of the canyon to get away from the crowd. You cannot just turn up: parking and the shuttle both need a reservation, every day, at gomuirwoods.com.",
+      "goodFor": [
+        "outdoors",
+        "weekend",
+        "couple"
+      ],
+      "labels": [
+        "weekend",
+        "outdoor",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://gomuirwoods.com/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Muir_Woods_National_Monument_%2847830840162%29.jpg/1280px-Muir_Woods_National_Monument_%2847830840162%29.jpg",
+      "imageSubject": "Muir Woods National Monument",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": false,
+      "lastVerified": "2026-09-23",
+      "id": "napa-valley",
+      "title": "Napa Valley",
+      "emoji": "🍷",
+      "categories": [
+        "daytrip",
+        "food"
+      ],
+      "minutesFromHome": 105,
+      "durationMin": 540,
+      "priceNote": "Tastings ~$40–100+ each",
+      "transit": "About 1h45 via the Bay Bridge or the San Mateo Bridge and I-880",
+      "why": "The valley is thirty miles of vineyards between two ridges, and a good day is two or three wineries, not six. Most tastings are by appointment now, so book them before you drive. Have lunch at the Oxbow Public Market in the town of Napa, and take the Silverado Trail rather than Highway 29 when 29 is jammed. Somebody has to not drink: plan who drives, or stay the night.",
+      "goodFor": [
+        "food",
+        "couple",
+        "weekend"
+      ],
+      "labels": [
+        "couple",
+        "weekend",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.visitnapavalley.com/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/TTB_Map_Napa_Valley_AVA.png",
+      "imageSubject": "Napa Valley AVA",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "monterey-carmel",
+      "title": "Monterey & Carmel",
+      "emoji": "🐙",
+      "categories": [
+        "daytrip",
+        "culture",
+        "outdoors"
+      ],
+      "minutesFromHome": 100,
+      "durationMin": 540,
+      "priceNote": "Aquarium ~$60; Point Lobos $10 a car",
+      "transit": "US-101 south and Highway 156, about 1h40",
+      "why": "Two halves. The Monterey Bay Aquarium, on Cannery Row, is the reason to come: the kelp forest tank is three storeys tall. Then go south to Point Lobos, the rockiest, greenest few miles of the coast, where sea otters float in the coves. Point Lobos is moving to reservations for every visitor this year, so check before you go. Carmel village is for a walk and dinner.",
+      "goodFor": [
+        "couple",
+        "weekend",
+        "outdoors",
+        "culture"
+      ],
+      "labels": [
+        "couple",
+        "weekend",
+        "dontmiss"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "url": "https://www.montereybayaquarium.org/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/MontereyBayAquariumBackview.jpg/1280px-MontereyBayAquariumBackview.jpg",
+      "imageSubject": "Monterey Bay Aquarium",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "point-reyes",
+      "title": "Point Reyes",
+      "emoji": "🦭",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 120,
+      "durationMin": 540,
+      "price": 0,
+      "priceNote": "Free (national seashore)",
+      "transit": "Over the Golden Gate and out through Marin, about 2 hours",
+      "why": "A peninsula of cliffs, beaches and cattle ranches. Walk down to the lighthouse, 300-odd steps below the headland. From December to March, elephant seals haul out at Chimney Rock. Tomales Bay oysters, eaten at the water's edge, are the lunch. It is windy and cold out there even when Palo Alto is hot, so bring a layer.",
+      "goodFor": [
+        "outdoors",
+        "couple",
+        "weekend"
+      ],
+      "labels": [
+        "weekend",
+        "outdoor"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.nps.gov/pore/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Chimney_Rock_Trail_Point_Reyes_December_2016_panorama_1.jpg/1280px-Chimney_Rock_Trail_Point_Reyes_December_2016_panorama_1.jpg",
+      "imageSubject": "Point Reyes National Seashore",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "big-sur",
+      "title": "Big Sur",
+      "emoji": "🌉",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 150,
+      "durationMin": 720,
+      "priceNote": "Mostly free; state parks ~$10 a car",
+      "transit": "Through Carmel and down Highway 1, about 2h30 to Bixby Bridge",
+      "why": "The drive is the point: Highway 1 on cliffs over the Pacific. Bixby Bridge (1932) is the famous view. At Julia Pfeiffer Burns, McWay Falls drops onto a beach you are not allowed to reach, which somehow makes it better. It is a long day there and back, and better as a night away. The road closes for landslides most winters, so check Caltrans before you set off.",
+      "goodFor": [
+        "outdoors",
+        "couple",
+        "weekend"
+      ],
+      "labels": [
+        "couple",
+        "weekend",
+        "dontmiss",
+        "outdoor"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://roads.dot.ca.gov/?roadnumber=1",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Bixby_Creek_Bridge_May_2011_panorama.jpg/1280px-Bixby_Creek_Bridge_May_2011_panorama.jpg",
+      "imageSubject": "Bixby Creek Bridge",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "lake-tahoe",
+      "title": "Lake Tahoe",
+      "emoji": "🏔️",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 240,
+      "durationMin": 2880,
+      "priceNote": "A weekend: lodging is the cost",
+      "transit": "About 4 hours via I-80 or US-50 — a weekend, not a day",
+      "why": "A clear alpine lake in the Sierra, and a weekend rather than a day. In summer, Emerald Bay and the beaches. In winter, the ski resorts. Friday-evening traffic out of the Bay is the real obstacle, so leave early or on Saturday morning. In winter, chain controls on 80 and 50 are routine: carry chains or have four-wheel drive.",
+      "goodFor": [
+        "outdoors",
+        "weekend",
+        "couple"
+      ],
+      "labels": [
+        "weekend",
+        "outdoor"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "url": "https://visitlaketahoe.com/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Golden_Hour_at_Emerald_Bay.jpg/1280px-Golden_Hour_at_Emerald_Bay.jpg",
+      "imageSubject": "Lake Tahoe",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "yosemite",
+      "title": "Yosemite Valley",
+      "emoji": "⛰️",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 240,
+      "durationMin": 2880,
+      "priceNote": "$35 a car for 7 days",
+      "transit": "About 4 hours via I-580 and Highway 120 — a weekend, not a day",
+      "why": "Granite walls three thousand feet high: El Capitan, Half Dome, and waterfalls that run hardest in late spring. It needs a weekend. Book somewhere to sleep well ahead, because the valley fills up. The park has used entry reservations at peak times in recent years, so check nps.gov for your dates before you go.",
+      "goodFor": [
+        "outdoors",
+        "weekend"
+      ],
+      "labels": [
+        "weekend",
+        "outdoor",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://www.nps.gov/yose/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Ahwahnee_Hotel_and_Half_Dome.JPG/1280px-Ahwahnee_Hotel_and_Half_Dome.JPG",
+      "imageSubject": "Yosemite Valley",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }
