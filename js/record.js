@@ -420,7 +420,15 @@ const Rec = (() => {
     const curated = [].concat(D.events?.items || [], D.places?.items || [],
       D.nightlife?.items || [], D.sports?.items || [], D.food?.items || []);
 
-    const curatedNames = new Set(curated.flatMap(i => namesOf(i.title)));
+    /* Only for records with no position. A named, placed record is
+       matched to its map copy by `dropDuplicates` below — same name within
+       250 m — and this used to drop every same-named place in the whole
+       city as well: writing up Mademoiselle Colette on Lytton hid the
+       Menlo Park and Redwood City shops, and Oren's Hummus in Palo Alto
+       would have hidden the one in San Francisco. A record that cannot say
+       where it is still claims its name everywhere, which is the most it
+       can do. */
+    const curatedNames = new Set(curated.filter(i => !i.coords).flatMap(i => namesOf(i.title)));
 
     let found = (D.discovered?.items || [])
       .filter(p => !curatedNames.has(flatten(p.n)))
@@ -499,8 +507,14 @@ const Rec = (() => {
        keeps the earlier of any pair, which the ordering above has already
        made the more informative one. */
     const kept = selfDedupe(dropDuplicates(sourced, curated.concat(written)));
+    const writtenIds = new Set(written.map(i => i.id));
     const discovered = kept.concat(
-      dropDuplicates(found, kept.concat(written).concat(curated)));
+      /* A researched record that carries a map id *is* that place, even
+         where it has moved it: Turtle Tower's map entry is still on
+         Larkin Street, the restaurant is now on California Street, and
+         the record says so with its own coordinates. Matching by name and
+         distance alone left the old address standing beside the new one. */
+      dropDuplicates(found.filter(p => !writtenIds.has(p.id)), kept.concat(written).concat(curated)));
 
     const all = []
       .concat(written)

@@ -300,7 +300,17 @@ const City = (() => {
     'Every arrondissement has one thing worth crossing town for.'
   ];
 
-  return { id, name, ua, bbox, epigraphs, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma };
+  /* The lines under the Nights headings, which were written for Paris
+     and lived in the engine until another city had a Nights page. */
+  const nightNotes = {
+    comedy: 'English, French, and who to follow for Hindi',
+    jazz:   'Two sets a night, most nights',
+    venue:  'Check the listing, then buy blind',
+    club:   'Doors at midnight — earlier is a beginner’s error',
+    bar:    'Wine, cocktails, and one taqueria with a secret door'
+  };
+
+  return { id, name, ua, bbox, epigraphs, nightNotes, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same

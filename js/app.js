@@ -1298,6 +1298,20 @@ const App = (() => {
 
   const isNight = i => (i.categories || []).includes('nightlife');
 
+  /* The line under each Nights heading. These were Paris's lines in the
+     engine — "English, French, and who to follow for Hindi", "one
+     taqueria with a secret door" — and the Bay Area's Nights would have
+     printed them. A pack may write its own in `City.nightNotes`; these
+     are what any city can say. */
+  const NIGHT_NOTES = {
+    comedy: 'Stand-up and improv — check who is on',
+    jazz:   'Sets most nights',
+    venue:  'Check the listing, then buy blind',
+    club:   'The late ones',
+    bar:    'Somewhere to start the night'
+  };
+  const nightNote = k => (City.nightNotes && City.nightNotes[k]) || NIGHT_NOTES[k];
+
   function renderNights() {
     const nightlife = D.nightlife.items || [];
 
@@ -1323,8 +1337,11 @@ const App = (() => {
       return stripHead(title, note) + rows(items);
     };
 
-    /* What is open around you tonight that nobody wrote about. */
-    const localNight = Near.pick(i => i.discovered && Near.KIND.nightlife(i), {
+    /* What is open around you tonight that nobody wrote about. "Open" is
+       the claim, so a record whose article is about a club that shut —
+       the Black Hawk, 1949 to 1963; Keystone Korner, until 1983 — is left
+       out here the way somewhereNew already leaves it out. */
+    const localNight = Near.pick(i => i.discovered && Near.KIND.nightlife(i) && Rec.stillStanding(i), {
       rings: Near.RINGS.walk, want: 6, limit: 10, exclude: notWanted
     });
 
@@ -1336,11 +1353,11 @@ const App = (() => {
           ? stripHead('On sale now', 'Dated, and they sell out in this order')
             + `<div class="grid">${rest.slice(0, 6).map(i => card(i)).join('')}</div>`
           : '')
-      + group('Comedy', 'English, French, and who to follow for Hindi', i => i.type === 'comedy')
-      + group('Jazz rooms', 'Two sets a night, most nights', i => i.type === 'jazz')
-      + group('Live music', 'Check the listing, then buy blind', i => i.type === 'venue')
-      + group('Late', 'Doors at midnight — earlier is a beginner’s error', i => i.type === 'club')
-      + group('A drink first', 'Wine, cocktails, and one taqueria with a secret door', i => i.type === 'bar')
+      + group('Comedy', nightNote('comedy'), i => i.type === 'comedy')
+      + group('Jazz rooms', nightNote('jazz'), i => i.type === 'jazz')
+      + group('Live music', nightNote('venue'), i => i.type === 'venue')
+      + group('Late', nightNote('club'), i => i.type === 'club')
+      + group('A drink first', nightNote('bar'), i => i.type === 'bar')
       + (localNight.items.length
           ? stripHead(`Open around ${Loc.displayName(Loc.active())}`,
                       radiusNote(localNight.radius, localNight.items, localNight.widened))
