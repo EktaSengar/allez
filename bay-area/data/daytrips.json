@@ -1,6 +1,6 @@
 {
   "generated": "2026-09-23",
-  "note": "Driving times are from downtown Palo Alto, off-peak, and are only a guide: the Bay Bridge and Highway 17 can double them. Anything with a booking is said so on its card. Researched, not yet done — rate them as you go.",
+  "note": "Driving times are off-peak and only a guide: the Bay Bridge, 101 and Highway 17 can double them. Each trip carries a time from both bases — North Beach and Palo Alto — and the site shows the one nearer to wherever you are. Anything with a booking says so. Researched, not yet done — rate them as you go.",
   "items": [
     {
       "type": "daytrip",
@@ -40,7 +40,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Filoli_Main_House_Entrance.jpg/1280px-Filoli_Main_House_Entrance.jpg",
       "imageSubject": "Filoli",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 35,
+        "peninsula": 20
+      }
     },
     {
       "type": "daytrip",
@@ -77,7 +81,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/2009_aerial_view_of_Pillar_Point_Harbor_and_Bluff.jpg/1280px-2009_aerial_view_of_Pillar_Point_Harbor_and_Bluff.jpg",
       "imageSubject": "Half Moon Bay, California",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 45,
+        "peninsula": 40
+      }
     },
     {
       "type": "daytrip",
@@ -112,7 +120,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Mission_Santa_Cruz_%288321945663%29.jpg/1280px-Mission_Santa_Cruz_%288321945663%29.jpg",
       "imageSubject": "Santa Cruz, California",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 80,
+        "peninsula": 50
+      }
     },
     {
       "type": "daytrip",
@@ -150,7 +162,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Muir_Woods_National_Monument_%2847830840162%29.jpg/1280px-Muir_Woods_National_Monument_%2847830840162%29.jpg",
       "imageSubject": "Muir Woods National Monument",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 35,
+        "peninsula": 75
+      }
     },
     {
       "type": "daytrip",
@@ -187,7 +203,11 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/TTB_Map_Napa_Valley_AVA.png",
       "imageSubject": "Napa Valley AVA",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 70,
+        "peninsula": 105
+      }
     },
     {
       "type": "daytrip",
@@ -196,7 +216,7 @@
       "weatherSensitive": true,
       "lastVerified": "2026-09-23",
       "id": "monterey-carmel",
-      "title": "Monterey & Carmel",
+      "title": "Monterey & Point Lobos",
       "emoji": "🐙",
       "categories": [
         "daytrip",
@@ -207,7 +227,7 @@
       "durationMin": 540,
       "priceNote": "Aquarium ~$60; Point Lobos $10 a car",
       "transit": "US-101 south and Highway 156, about 1h40",
-      "why": "Two halves. The Monterey Bay Aquarium, on Cannery Row, is the reason to come: the kelp forest tank is three storeys tall. Then go south to Point Lobos, the rockiest, greenest few miles of the coast, where sea otters float in the coves. Point Lobos is moving to reservations for every visitor this year, so check before you go. Carmel village is for a walk and dinner.",
+      "why": "The Monterey Bay Aquarium, on Cannery Row, is the reason to come: the kelp forest tank is three storeys tall. Then go south to Point Lobos, the rockiest, greenest few miles of the coast, where sea otters float in the coves. Point Lobos is moving to reservations for every visitor this year, so check before you go. Carmel is five minutes on and has a card of its own.",
       "goodFor": [
         "couple",
         "weekend",
@@ -225,7 +245,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/MontereyBayAquariumBackview.jpg/1280px-MontereyBayAquariumBackview.jpg",
       "imageSubject": "Monterey Bay Aquarium",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 130,
+        "peninsula": 100
+      }
     },
     {
       "type": "daytrip",
@@ -261,7 +285,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Chimney_Rock_Trail_Point_Reyes_December_2016_panorama_1.jpg/1280px-Chimney_Rock_Trail_Point_Reyes_December_2016_panorama_1.jpg",
       "imageSubject": "Point Reyes National Seashore",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 75,
+        "peninsula": 120
+      }
     },
     {
       "type": "daytrip",
@@ -298,7 +326,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Bixby_Creek_Bridge_May_2011_panorama.jpg/1280px-Bixby_Creek_Bridge_May_2011_panorama.jpg",
       "imageSubject": "Bixby Creek Bridge",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 170,
+        "peninsula": 150
+      }
     },
     {
       "type": "daytrip",
@@ -333,7 +365,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Golden_Hour_at_Emerald_Bay.jpg/1280px-Golden_Hour_at_Emerald_Bay.jpg",
       "imageSubject": "Lake Tahoe",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 210,
+        "peninsula": 240
+      }
     },
     {
       "type": "daytrip",
@@ -368,6 +404,214 @@
       "url": "https://www.nps.gov/yose/",
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Ahwahnee_Hotel_and_Half_Dome.JPG/1280px-Ahwahnee_Hotel_and_Half_Dome.JPG",
       "imageSubject": "Yosemite Valley",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "minutesFrom": {
+        "city": 240,
+        "peninsula": 240
+      }
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "capitola",
+      "title": "Capitola",
+      "emoji": "🏖️",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFrom": {
+        "city": 80,
+        "peninsula": 50
+      },
+      "minutesFromHome": 50,
+      "durationMin": 360,
+      "price": 0,
+      "priceNote": "Free; parking metered in the village",
+      "transit": "Highway 17 to Santa Cruz, then ten minutes east — about 50 min from Palo Alto",
+      "why": "The nearest thing to the Italian Riviera in California. The Venetian Court is two rows of candy-coloured stucco houses right on the sand, built in 1924 and listed on the National Register. The beach sits in a sheltered cove, so the water is gentler than anywhere else on this coast. It was California's first seaside resort, in 1874. Walk the wharf, eat in the village, and swim if you're brave.",
+      "goodFor": [
+        "outdoors",
+        "couple",
+        "weekend",
+        "relax"
+      ],
+      "labels": [
+        "hiddengem",
+        "couple",
+        "weekend",
+        "outdoor"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "url": "https://www.capitolavillage.com/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Colorful_Venetian_Hotel_on_the_Beach_in_Capitola_%288038026675%29_%28cropped%29.jpg/1280px-Colorful_Venetian_Hotel_on_the_Beach_in_Capitola_%288038026675%29_%28cropped%29.jpg",
+      "imageSubject": "Capitola, California",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "carmel-by-the-sea",
+      "title": "Carmel-by-the-Sea",
+      "emoji": "🏡",
+      "categories": [
+        "daytrip",
+        "outdoors",
+        "culture"
+      ],
+      "minutesFrom": {
+        "city": 135,
+        "peninsula": 105
+      },
+      "minutesFromHome": 105,
+      "durationMin": 420,
+      "priceNote": "Free to walk",
+      "transit": "US-101 and Highway 1 through Monterey, about 1h45",
+      "why": "A village that looks like an English storybook. In the 1920s Hugh Comstock built fairytale cottages here, with swooping roofs and stone chimneys, and the houses still go by names rather than street numbers. Walk the lanes to find Hansel and Gretel, then down to Carmel Beach: white sand under wind-bent cypress, and dogs off the lead. Pair it with Point Lobos, five minutes south.",
+      "goodFor": [
+        "couple",
+        "weekend",
+        "outdoors",
+        "culture"
+      ],
+      "labels": [
+        "couple",
+        "weekend"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.carmelcalifornia.com/carmel-fairytale-cottages/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Carmel_Mission_Church.jpg/1280px-Carmel_Mission_Church.jpg",
+      "imageSubject": "Carmel-by-the-Sea, California",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "sausalito",
+      "title": "Sausalito by ferry",
+      "emoji": "⛴️",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFrom": {
+        "city": 30,
+        "peninsula": 75
+      },
+      "minutesFromHome": 75,
+      "durationMin": 300,
+      "priceNote": "Ferry ~$15 each way",
+      "transit": "The ferry from the Ferry Building, about 30 min across the bay",
+      "why": "Go by boat, not by car: the ferry from the Ferry Building crosses the bay past Alcatraz with the Golden Gate on your left. Sausalito is a hillside town over the water. Walk the waterfront, then out to the floating houseboat community on Richardson Bay. Take the ferry back at sunset.",
+      "goodFor": [
+        "couple",
+        "outdoors",
+        "weekend",
+        "relax"
+      ],
+      "labels": [
+        "couple",
+        "weekend"
+      ],
+      "uniqueness": 3,
+      "quality": 4,
+      "url": "https://www.goldengateferry.org/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Sausalito.jpg/1280px-Sausalito.jpg",
+      "imageSubject": "Sausalito, California",
+      "imageKind": "subject",
+      "imageCredit": "en:User:Squirrel 22 · Public domain"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "ano-nuevo",
+      "title": "Año Nuevo elephant seals",
+      "emoji": "🦭",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFrom": {
+        "city": 75,
+        "peninsula": 55
+      },
+      "minutesFromHome": 55,
+      "durationMin": 300,
+      "priceNote": "Guided walk + parking, booked ahead in winter",
+      "transit": "Down Highway 1 past Pescadero, about 55 min from Palo Alto",
+      "why": "The largest mainland breeding colony of elephant seals in the world, on a windswept point down the coast. In winter the bulls fight on the beach and the pups are born. From December 15 to March 31 you can only go on a docent-led walk of three to four miles, and those book out, so reserve on ReserveCalifornia the day they open. From April to November you can walk out on your own.",
+      "goodFor": [
+        "outdoors",
+        "weekend"
+      ],
+      "labels": [
+        "hiddengem",
+        "weekend",
+        "outdoor",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://www.parks.ca.gov/anosealwalks",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/A%C3%B1o_Nuevo_State_Reserve.JPG",
+      "imageSubject": "Año Nuevo State Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "id": "fitzgerald-marine-reserve",
+      "title": "Fitzgerald tide pools",
+      "emoji": "🦀",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFrom": {
+        "city": 30,
+        "peninsula": 45
+      },
+      "minutesFromHome": 45,
+      "durationMin": 180,
+      "price": 0,
+      "priceNote": "Free, free parking",
+      "transit": "Highway 1 to Moss Beach, 15 min north of Half Moon Bay",
+      "why": "Some of the richest tide pooling on the California coast, in Moss Beach. Time it to a low tide of one foot or less, best an hour or two before the lowest point. Then the reef is uncovered and full of giant green anemones, purple sea stars, urchins and hermit crabs, with harbour seals on the rocks. Check a tide table before you go, wear shoes with grip, and bring a jacket. Volunteer naturalists are there at weekends.",
+      "goodFor": [
+        "outdoors",
+        "morning"
+      ],
+      "labels": [
+        "hiddengem",
+        "outdoor"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.visithalfmoonbay.org/places/fitzgerald-marine-reserve/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Anemone%2C_Fitzgerald_Marine_Reserve%2C_CA.jpg",
+      "imageSubject": "Fitzgerald Marine Reserve",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
     }

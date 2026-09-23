@@ -254,8 +254,9 @@ const EXPECT = {
        researched records around University Avenue filled Palo Alto's
        restaurant column; San Mateo and Sunnyvale are what is left.
        144 on 23 September, with two Palo Alto places visited and
-       written up, and the gardens and landmarks around them. */
-    floor: 144
+       written up, and the gardens and landmarks around them. 146 the
+       same day, once San Francisco's hidden corners were written. */
+    floor: 146
   },
   delhi: {
     probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],

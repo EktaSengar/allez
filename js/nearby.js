@@ -537,14 +537,17 @@ const Near = (() => {
        arrive as `deli`, beside the cheese and wine shops, and bubble tea
        as `cafe`. The cuisine tag is what says it, where a mapper set one;
        a hand-written record says it with `dessert` in its categories. */
-    dessert:    i => i.type === 'dessert' || (i.categories || []).includes('dessert')
-                  || /^(ice_cream|gelato|frozen_yogurt|soft_serve|dessert|bubble_?tea|donut|cake)$/.test(i.cuisine || '')
+    /* Ice cream, gelato, frozen yogurt and bubble tea. Not cake: a cake
+       shop is a bakery, and the Bakeries section already holds it —
+       Marvel Cake and SusieCakes were on both lists. */
+    dessert:    i => i.type !== 'bakery' && (
+                  i.type === 'dessert' || (i.categories || []).includes('dessert')
+                  || /^(ice_cream|gelato|frozen_yogurt|soft_serve|dessert|bubble_?tea)$/.test(i.cuisine || '')
                   /* Most have no cuisine tag at all, and the name is the only
-                     thing that says it — Kara's Cupcakes, The Penny Ice
-                     Creamery. Only among shops, cafés and bakeries: a
-                     restaurant called Cheesecake-anything is dinner. */
-                  || (['deli', 'bakery', 'cafe'].includes(i.type)
-                      && /\b(cakes?|cupcakes?|ice ?cream(ery)?|creamery|gelat(o|eria)|froyo|frozen yogh?urt|desserts?|donuts?|doughnuts?)\b/i.test(i.title || '')),
+                     thing that says it — The Penny Ice Creamery. Only among
+                     shops and cafés: a restaurant called Creamery is a diner. */
+                  || (['deli', 'cafe'].includes(i.type)
+                      && /\b(ice ?cream(ery)?|creamery|gelat(o|eria)|froyo|frozen yogh?urt)\b/i.test(i.title || ''))),
     park:       i => i.type === 'park' || (i.categories || []).includes('park'),
     museum:     i => ['museum', 'gallery', 'culture'].includes(i.type),
     books:      i => i.type === 'books' || (i.categories || []).includes('books'),

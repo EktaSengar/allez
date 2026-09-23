@@ -135,6 +135,138 @@
       "imageSubject": "Palo Alto, California",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "telegraph-hill-steps",
+      "title": "North Beach and the Filbert Steps",
+      "emoji": "🪜",
+      "type": "itinerary",
+      "provenance": "editorial",
+      "categories": [
+        "walk",
+        "culture",
+        "food"
+      ],
+      "zone": "north-beach",
+      "price": 10,
+      "priceNote": "~$10 each",
+      "durationMin": 150,
+      "startTime": "10:00",
+      "why": "Up Telegraph Hill the front way and down it the back way, through gardens you can't see from the street. The stairs are steep, so do it in this direction.",
+      "goodFor": [
+        "walk",
+        "couple",
+        "weekend",
+        "morning"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "couple",
+        "weekend"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "stops": [
+        {
+          "emoji": "📚",
+          "text": "City Lights on Columbus — the Beats, upstairs in the poetry room"
+        },
+        {
+          "emoji": "🥟",
+          "text": "A box of dim sum from Good Mong Kok on Stockton",
+          "walk": "5 min"
+        },
+        {
+          "emoji": "⛪",
+          "text": "Washington Square, under the church",
+          "walk": "6 min"
+        },
+        {
+          "emoji": "🗼",
+          "text": "Up Filbert Street to Coit Tower",
+          "walk": "12 min"
+        },
+        {
+          "emoji": "🪜",
+          "text": "Down the Filbert Steps through the cottage gardens to the bay",
+          "walk": "10 min"
+        }
+      ],
+      "url": "https://citylights.com/",
+      "coords": [
+        37.79765,
+        -122.40662
+      ],
+      "coordsFrom": "osm way/32858754 (City Lights)",
+      "lastVerified": "2026-09-23",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Coittower1.jpg",
+      "imageSubject": "Coit Tower",
+      "imageKind": "context",
+      "imageCredit": "en:user:Kkmd · CC BY-SA 3.0"
+    },
+    {
+      "id": "lands-end-sutro",
+      "title": "Lands End to the Sutro Baths",
+      "emoji": "🌊",
+      "type": "itinerary",
+      "provenance": "editorial",
+      "categories": [
+        "walk",
+        "outdoors",
+        "free"
+      ],
+      "zone": "richmond-district",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 120,
+      "startTime": "15:00",
+      "why": "The wildest walk inside the city limits: a cliff trail through cypress with the Golden Gate opening up ahead, ending at the ruins of a Victorian bathhouse. Do it late afternoon and stay for the sunset.",
+      "goodFor": [
+        "walk",
+        "outdoors",
+        "couple"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "couple",
+        "cheap"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "stops": [
+        {
+          "emoji": "🏛️",
+          "text": "Start at the Sutro Baths ruins, below the Lands End lookout"
+        },
+        {
+          "emoji": "🌲",
+          "text": "East along the Lands End Trail, through the cypress",
+          "walk": "30 min"
+        },
+        {
+          "emoji": "🌉",
+          "text": "The Golden Gate from the cliff at Eagle’s Point",
+          "walk": "20 min"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Back to the baths for sunset over the Pacific",
+          "walk": "40 min"
+        }
+      ],
+      "url": "https://www.nps.gov/goga/planyourvisit/landsend.htm",
+      "coords": [
+        37.78025,
+        -122.51363
+      ],
+      "coordsFrom": "osm way/32776564 (Sutro Baths)",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Coastal_Trail_and_Golden_Gate_Bridge%2C_April_2019.JPG/1280px-Coastal_Trail_and_Golden_Gate_Bridge%2C_April_2019.JPG",
+      "imageSubject": "Lands End (San Francisco)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }
