@@ -505,6 +505,22 @@ const App = (() => {
       if (c) h.minutesFromHome = (h.zone === here) ? 0 : Loc.minutes(c);
       h.isHome = h.zone === here;
     });
+
+    /* A day trip is a drive of an hour or more, which the city's own
+       reach model was never built to estimate, so its time is written
+       down rather than computed. In a pack with two bases fifty
+       kilometres apart one number is wrong from one of them — Sausalito
+       is twenty-five minutes from North Beach and an hour from Palo Alto
+       — so a trip may carry `minutesFrom` keyed by base, and the base
+       nearest to wherever you are decides which one is shown. */
+    if (BASES.length) {
+      const a = Loc.active();
+      const d2 = b => (b.lat - a.lat) ** 2 + (b.lon - a.lon) ** 2;
+      const base = BASES.reduce((x, y) => (d2(y) < d2(x) ? y : x));
+      ALL.forEach(i => {
+        if (i.minutesFrom && i.minutesFrom[base.id] != null) i.minutesFromHome = i.minutesFrom[base.id];
+      });
+    }
   }
 
   function buildContext() {
@@ -2622,11 +2638,20 @@ const App = (() => {
   /* ---------- away ---------- */
 
   function renderAway() {
-    const trips = Rank.rank(D.daytrips.items || [], CTX);
+    const ranked = Rank.rank(D.daytrips.items || [], CTX);
+    /* The famous trips outrank the small ones on every measure the
+       ranking has, so a tide-pool reserve or a village on a cove never
+       reached the top six and sat unread under "Also reachable". They
+       are the ones worth being told about, so they get their own strip. */
+    const isGem = i => (i.labels || []).includes('hiddengem');
+    const trips = ranked.filter(i => !isGem(i));
+    const gems = ranked.filter(isGem);
     const featured = trips.slice(0, 6);
     const rest = trips.slice(6);
 
     return `<div class="trips">${featured.map(tripBlock).join('')}</div>`
+      + (gems.length ? stripHead('Lesser known', 'Closer, quieter, and easy to miss')
+                       + `<div class="trips">${gems.map(tripBlock).join('')}</div>` : '')
       + (rest.length ? stripHead('Also reachable') + rows(rest) : '');
   }
 
