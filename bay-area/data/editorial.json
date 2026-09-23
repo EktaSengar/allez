@@ -1,6 +1,778 @@
 {
- "generated": "2026-09-14",
- "note": "Generated editorial picks.",
- "rules": [],
- "items": []
+ "generated": "2026-09-23",
+ "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. Written against the holes the generated tiers cannot fill: Wikidata knows of three cafés and two bakeries in the whole Bay Area and no markets at all, and the Peninsula has almost nothing.",
+ "rules": [
+  "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
+  "Say what to order and when to go. 'Lovely atmosphere' helps nobody.",
+  "Set touristy: true for anywhere that is a sight rather than a local habit — it stays eligible for Culture and Worth the trip, and drops out of the everyday sections.",
+  "quality and uniqueness cap at 4 here. 5 is reserved for somewhere one of you actually loved.",
+  "No opening hours in prose. OpenStreetMap carries them, js/hours.js reads them, and a time written here is a time that rots.",
+  "Nothing about how good the coffee is unless somebody published a reason. Being famous is not a reason."
+ ],
+ "items": [
+  {
+   "id": "osm-tartine-bakery-75523--244848",
+   "title": "Tartine Bakery",
+   "type": "bakery",
+   "zone": "mission",
+   "coords": [
+    37.76146,
+    -122.42395
+   ],
+   "area": "Guerrero Street",
+   "url": "https://tartinebakery.com/san-francisco/bakery",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Tartine Bakery",
+    "zone": "mission",
+    "type": "bakery"
+   },
+   "why": "The morning bun is the thing to queue for — bready rather than flaky, with marmalade hidden in the middle — and it sells out. Chad Robertson and Elisabeth Prueitt won the Beard for Outstanding Pastry Chef here in 2008, and his 2010 book is the one that started half the world baking sourdough. The fresh bread lands mid-afternoon, so a morning visit and an afternoon one are two different errands.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "James Beard Foundation; SFGate; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-b-patisserie-75576--244882",
+   "title": "b. patisserie",
+   "type": "bakery",
+   "zone": "lower-pacific-heights",
+   "coords": [
+    37.78789,
+    -122.44082
+   ],
+   "area": "California Street",
+   "url": "https://www.bpatisserie.com/",
+   "cuisine": "breakfast",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "b Patisserie",
+    "zone": "lower-pacific-heights",
+    "type": "bakery"
+   },
+   "why": "Order the kouign-amann and nothing else until you have had one: laminated Breton dough with a layer of sugar that turns to liquid caramel at the base. Belinda Leong won the James Beard award for Outstanding Baker for this shop, and her partner Michel Suas founded the San Francisco Baking Institute, which is to say the city's bakers were taught by him.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "James Beard Foundation; bpatisserie.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17",
+   "i": "8/80/SF_California_Street_USA.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-arizmendi-bakery-75527--244933",
+   "title": "Arizmendi Bakery",
+   "type": "bakery",
+   "zone": "golden-gate-heights",
+   "coords": [
+    37.76341,
+    -122.46642
+   ],
+   "area": "9th Avenue",
+   "url": "https://www.arizmendibakery.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Arizmendi Bakery",
+    "zone": "golden-gate-heights",
+    "type": "bakery"
+   },
+   "why": "A worker-owned cooperative, one of the network the Cheese Board Collective in Berkeley helped start, and they bake exactly one kind of pizza a day — whatever whoever is on shift decided, chalked on the board outside. Sourdough crust, by the slice or the whole pie. Going without checking the board first is the point.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "arizmendibakery.com; Wikipedia; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-good-mong-kok-bakery-75591--244817",
+   "title": "Good Mong Kok Bakery",
+   "type": "bakery",
+   "zone": "north-beach",
+   "coords": [
+    37.79545,
+    -122.40834
+   ],
+   "area": "Stockton Street",
+   "url": "https://goodmongkokbakery.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Good Mong Kok Bakery",
+    "zone": "north-beach",
+    "type": "bakery"
+   },
+   "why": "Cash, no seats, and a queue that moves faster than you will be ready for — you point at what you want through the glass and it goes in a box. Har gow, siu mai, baked char siu bao, roughly a dollar a piece. Decide before you reach the counter. Eat it on the steps of Portsmouth Square.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "The San Francisco Standard; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17",
+   "i": "7/74/Stockton_Street_from_Broadway_70.JPG",
+   "ik": "c"
+  },
+  {
+   "id": "osm-ritual-coffee-roasters-75513--244842",
+   "title": "Ritual Coffee Roasters",
+   "type": "cafe",
+   "zone": "mission",
+   "coords": [
+    37.75643,
+    -122.42125
+   ],
+   "area": "Valencia Street",
+   "url": "https://ritualroasters.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Ritual Coffee Roasters",
+    "zone": "mission",
+    "type": "cafe"
+   },
+   "why": "The Valencia Street room that opened in 2005 and is generally credited with starting San Francisco on specialty coffee — it was buying direct from farms by 2006, before that was a thing anyone advertised. Worth knowing which one you are in: this is the original.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia; ritualcoffee.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17",
+   "i": "a/ab/933–951_Valencia_Street,_San_Francisco.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-andytown-coffee-roasters-75483--245010",
+   "title": "Andytown Coffee Roasters",
+   "type": "cafe",
+   "zone": "outer-sunset",
+   "coords": [
+    37.74163,
+    -122.50518
+   ],
+   "area": "Taraval Street",
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Andytown Coffee Roasters",
+    "zone": "outer-sunset",
+    "type": "cafe"
+   },
+   "why": "Ask for a Snowy Plover: espresso over sparkling water and ice with brown sugar and whipped cream on top, which sounds wrong and is the reason people come out here. The Irish soda bread is the other one. Two streets from Ocean Beach, so it is a stop on the way rather than a destination — take it with you.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "SF Weekly; andytownsf.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-ferry-plaza-farmers-market-75591--244785",
+   "title": "Ferry Plaza Farmers Market",
+   "type": "market",
+   "zone": "rincon-hill",
+   "coords": [
+    37.79528,
+    -122.39237
+   ],
+   "area": null,
+   "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Ferry Plaza Farmers Market",
+    "zone": "rincon-hill",
+    "type": "market"
+   },
+   "why": "Saturday is the big one — over a hundred farmers and makers, and the morning most of the city's cooks are there. Tuesday and Thursday are smaller and much easier to actually shop. Run by the non-profit Foodwise, year round, rain or shine.",
+   "quality": 4,
+   "uniqueness": 4,
+   "days": [
+    2,
+    4,
+    6
+   ],
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "foodwise.org; ferrybuildingmarketplace.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-alemany-farmers-market-75472--244820",
+   "title": "Alemany Farmers Market",
+   "type": "market",
+   "zone": "bernal-heights",
+   "coords": [
+    37.73597,
+    -122.41004
+   ],
+   "area": null,
+   "url": "https://www.sf.gov/location--alemany-farmers-market",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Alemany Farmers Market",
+    "zone": "bernal-heights",
+    "type": "market"
+   },
+   "why": "California's first farmers market, opened in 1943, and still the one where the produce is cheap and the crowd is people shopping rather than browsing. The city tried to close it in 1946 and was overruled by ballot. Saturdays; the flea market takes the same lot on Sundays.",
+   "quality": 4,
+   "uniqueness": 4,
+   "days": [
+    6
+   ],
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "foodwise.org; San Francisco Chronicle; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-swan-oyster-depot-75582--244842",
+   "title": "Swan Oyster Depot",
+   "type": "restaurant",
+   "zone": "polk-gulch",
+   "coords": [
+    37.79097,
+    -122.42092
+   ],
+   "area": "Polk Street",
+   "url": "https://swanoysterdepot.net/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Swan Oyster Depot",
+    "zone": "polk-gulch",
+    "type": "restaurant"
+   },
+   "why": "Eighteen stools at a marble counter on Polk Street since 1912, cash only, no reservations, no tables, and it shuts in the early afternoon. Oysters, the crab Louis, the smoked salmon, chowder. Go before eleven or expect to wait an hour on the pavement, and bring notes — the nearest cash machine is across the road.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "SFGate; Tripadvisor listing; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17",
+   "i": "3/35/AnNeoplanOnThe19InSanFrancisco.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-la-taqueria-75502--244836",
+   "title": "La Taqueria",
+   "type": "restaurant",
+   "zone": "mission",
+   "coords": [
+    37.75087,
+    -122.41816
+   ],
+   "area": "Mission Street",
+   "url": "https://lataqueriasf.com/",
+   "cuisine": "mexican",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "La Taqueria",
+    "zone": "mission",
+    "type": "restaurant"
+   },
+   "why": "A James Beard America's Classic, and the burrito people argue about: Miguel Jara leaves the rice out entirely, puts in more meat, and griddles the outside until it is golden. Ask for it dorado. If you have opinions about Mission burritos this is the one they are measured against.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "James Beard Foundation 2017; Mission Local; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17",
+   "i": "3/30/Mission_District_San_Francisco.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-tommaso-s-ristorante-italiano-75596--244811",
+   "title": "Tommaso's Ristorante Italiano",
+   "type": "restaurant",
+   "zone": "telegraph-hill",
+   "coords": [
+    37.79778,
+    -122.4053
+   ],
+   "area": "Kearny Street",
+   "url": "https://www.tommasos.com/",
+   "cuisine": "italian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Tommaso's Ristorante Italiano",
+    "zone": "telegraph-hill",
+    "type": "restaurant"
+   },
+   "why": "The first wood-fired brick pizza oven on the West Coast, lit in 1935 by a Neapolitan family who brought the oven with them, and still the oven the pizza comes out of. Alice Waters is said to have modelled the one at Chez Panisse on it. Downstairs, in booths, the way it has always been.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "San Francisco Chronicle; Pizza Hall of Fame; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17",
+   "i": "4/4d/Kearny_Street_(53825865272).jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-green-apple-books-75566--244929",
+   "title": "Green Apple Books",
+   "type": "books",
+   "zone": "inner-richmond",
+   "coords": [
+    37.78307,
+    -122.46471
+   ],
+   "area": "Clement Street",
+   "url": "https://www.greenapplebooks.com/",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Green Apple Books",
+    "zone": "inner-richmond",
+    "type": "books"
+   },
+   "why": "On Clement Street since 1967, when Richard Savoy opened it at twenty-five with a credit union loan and a stock of second-hand paperbacks. It has grown about tenfold into the building since, new and used shelved together across two floors of small themed rooms. An hour disappears here; budget for it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "greenapplebooks.com store history; Wikipedia; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17",
+   "i": "f/ff/Sfrichmonddistrict_ggbridge.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-kepler-s-books-74907--244364",
+   "title": "Kepler's Books",
+   "type": "books",
+   "zone": "menlo-park",
+   "coords": [
+    37.45357,
+    -122.18222
+   ],
+   "area": "El Camino Real",
+   "url": "https://www.keplers.com/",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Kepler's Books",
+    "zone": "menlo-park",
+    "type": "books"
+   },
+   "why": "Opened in 1955 by Roy Kepler, a conscientious objector who had been interned for it, and it became the Peninsula's counterculture hub — the Grateful Dead played here early on. Still independent, still running a serious events programme. Café Borrone is next door and has been since 1989; the two are one outing, not two.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "keplers.com; Wikipedia; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-zareen-s-74854--244288",
+   "title": "Zareen's",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.42678,
+    -122.14413
+   ],
+   "area": "South California Avenue",
+   "url": "https://www.zareensrestaurant.com/",
+   "cuisine": "pakistani",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Zareen's",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "Zareen Khan cooks her family's Karachi recipes on California Avenue, and it is the chicken Memoni samosas that got her into the Michelin Guide. Halal, counter service, and the rare Peninsula place that is neither a chain nor an expense account.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Michelin Guide; The Stanford Daily; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-manresa-bread-74877--244317",
+   "title": "Manresa Bread",
+   "type": "bakery",
+   "zone": "palo-alto",
+   "coords": [
+    37.43826,
+    -122.15858
+   ],
+   "area": "El Camino Real",
+   "url": "https://www.manresabread.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Manresa Bread",
+    "zone": "palo-alto",
+    "type": "bakery"
+   },
+   "why": "The bakery that grew out of Manresa, the Michelin three-star in Los Gatos. Avery Ruzicka mills the grain in house — rye, red and white wheat — which is why the bread tastes of something rather than of nothing. The Peninsula has one bakery of this order and this is it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "San Francisco Chronicle; manresabread.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-lake-merced-park-75440--244987",
+   "title": "Lake Merced Park",
+   "type": "park",
+   "zone": "parkside",
+   "coords": [
+    37.71993,
+    -122.49349
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Lake Merced Park",
+    "zone": "parkside",
+    "type": "park"
+   },
+   "why": "Four and a half miles of flat paved path all the way round the lake, past the rowing clubs and through eucalyptus, with about 130 feet of climb in the whole loop. It is the run in San Francisco that asks nothing of your legs — an hour and a half at a walk, well under that running, and no junctions to stop at.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "AllTrails; TrailLink; SFGate; existence and position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-coupa-cafe-74857--244351",
+   "title": "Coupa Café",
+   "type": "cafe",
+   "zone": "palo-alto",
+   "coords": [
+    37.42833,
+    -122.17559
+   ],
+   "area": "Via Ortega Street",
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Coupa Café",
+    "zone": "palo-alto",
+    "type": "cafe"
+   },
+   "why": "Order an arepa and a Venezuelan hot chocolate, which is spiced and not sweet. Nancy Coupal lived in Caracas for twenty-seven years and opened this in 2004 to be near her children at Stanford. The Coupa kiosks on campus came later, from this shop. Go to the Ramona original, a 1930s building, rather than the newer Lytton branch by the station.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Palo Alto Online (twenty years, 2024); coupacafe.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-oklava-74890--244326",
+   "title": "Oklava",
+   "type": "bakery",
+   "zone": "palo-alto",
+   "coords": [
+    37.44493,
+    -122.16279
+   ],
+   "area": "University Avenue",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Oklava",
+    "zone": "palo-alto",
+    "type": "bakery"
+   },
+   "why": "A Turkish family bakery whose name means the rolling pin that baklava is made with. The case holds around twenty kinds, so buy a mixed box of pistachio, walnut and hazelnut rather than one slice of the classic. It also does a proper Turkish breakfast. And it stays open late enough to be somewhere to go after dinner on University.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Verde Magazine; Punch Magazine; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-palo-alto-farmer-s-market-74891--244318",
+   "title": "Palo Alto Farmer's Market",
+   "type": "market",
+   "zone": "palo-alto",
+   "coords": [
+    37.44536,
+    -122.15903
+   ],
+   "area": null,
+   "url": "https://www.pafarmersmarket.org/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Palo Alto Farmer's Market",
+    "zone": "palo-alto",
+    "type": "market"
+   },
+   "why": "Palo Alto's oldest farmers' market, on Gilman Street every Saturday since 1983. It is a small one — fruit, bread, cheese, eggs, fish and flowers — and it is run by volunteers who give the proceeds to Avenidas, the town's senior centre. Go early, before the good stone fruit is gone, and walk to University for coffee afterwards.",
+   "quality": 3,
+   "uniqueness": 3,
+   "days": [
+    6
+   ],
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "pafarmersmarket.org; Punch Magazine; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-palo-alto-creamery-74888--244324",
+   "title": "Palo Alto Creamery",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.44389,
+    -122.16177
+   ],
+   "area": "Emerson Street",
+   "url": "http://www.paloaltocreamery.com",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Palo Alto Creamery",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "A 1950s diner on Emerson and Hamilton, from a family dairy business that started here in 1923. Sit at the counter for a milkshake, and have a slice of pie, which the old Creamery fountain was famous for. It suits a weekend brunch with children, or anyone who is tired of small plates.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Verde Magazine (centennial); Nob Hill Gazette; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-ramen-nagi-74891--244321",
+   "title": "Ramen Nagi",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.44548,
+    -122.1607
+   ],
+   "area": "Bryant Street",
+   "url": "https://ramennagiusa.com/",
+   "cuisine": "japanese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Ramen Nagi",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "The first American branch of a Tokyo ramen shop, opened on Bryant Street in 2018. You tick boxes on a card for broth richness, noodle firmness, garlic and spice. Get the Original King, a pork-bone tonkotsu, and ask for the noodles firm. The queue is the price. Arrive before it opens or late in the afternoon, never at seven.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "The Infatuation; Ramen Club; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-tane-vegan-izakaya-74890--244326",
+   "title": "Tane Vegan Izakaya",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.445,
+    -122.16308
+   ],
+   "area": "Emerson Street",
+   "url": "https://www.tanevegan.com/",
+   "cuisine": "sushi",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Tane Vegan Izakaya",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "A small Japanese izakaya where everything is plant-based and nothing tastes like a compromise. The rolls are the point: order the Point Reyes, made with king oyster mushroom, and the Ewa, with enoki tempura and matcha salt. There are very few tables, so book even on a weeknight.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "HappyCow; trybayarea.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-bistro-maxine-74889--244323",
+   "title": "Bistro Maxine",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.44465,
+    -122.16137
+   ],
+   "area": "Ramona Street",
+   "url": null,
+   "cuisine": "french",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Bistro Maxine",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "A crêperie on Ramona, open since 2009, that began as the smallest restaurant in Palo Alto with a liquor licence. Order a savoury galette, then the crêpe Suzette, which is flambéed. The sidewalk tables are the closest thing downtown has to a Paris café.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "outdoors"
+   ],
+   "labels": [
+    "outdoor"
+   ],
+   "source": "bistromaxine.com; OpenTable; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-scoop-microcreamery-74890--244326",
+   "title": "Scoop Microcreamery",
+   "type": "deli",
+   "zone": "palo-alto",
+   "coords": [
+    37.4449,
+    -122.16282
+   ],
+   "area": "University Avenue",
+   "url": null,
+   "cuisine": "ice_cream",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Scoop Microcreamery",
+    "zone": "palo-alto"
+   },
+   "why": "Small-batch ice cream frozen to order with liquid nitrogen, so it comes out denser than churned. The owners are home bakers, and the flavours show it: salted caramel with bourbon vanilla, or Biscoff and cream. It is the place for dessert after dinner on University.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "The Stanford Daily (April 2026); Palo Alto Online; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  }
+ ]
 }

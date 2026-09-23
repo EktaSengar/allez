@@ -20,7 +20,9 @@ const TYPES = {
 
 http.createServer((req, res) => {
   const url = decodeURIComponent(req.url.split('?')[0]);
-  let file = path.join(ROOT, url === '/' ? 'index.html' : url);
+  /* A directory means its index.html, as it does on Pages — /new-york/
+     answered "not found" here while working in production. */
+  let file = path.join(ROOT, url.endsWith('/') ? url + 'index.html' : url);
 
   // never serve outside the project
   if (!file.startsWith(ROOT)) { res.writeHead(403).end('forbidden'); return; }

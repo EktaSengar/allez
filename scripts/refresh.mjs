@@ -22,7 +22,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { dataDir } from './shim.mjs';
+import { dataDir, City } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
@@ -167,7 +167,7 @@ async function run() {
   if (CHECK_LINKS) await checkLinks(allItems);
 
   /* ---- report ---- */
-  console.log(`\nParis data refresh — ${TODAY}`);
+  console.log(`\n${City.name} data refresh — ${TODAY}`);
   console.log(`  ${total} live records across ${Object.keys(FILES).length} files`);
   console.log(`  ${pruned} expired ${pruned === 1 ? 'entry' : 'entries'} removed`);
 

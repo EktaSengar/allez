@@ -1,7 +1,106 @@
 {
-  "generated": "2026-09-14",
-  "window": null,
-  "source": null,
-  "note": "Paris fills this from opendata.paris.fr. Delhi has no municipal events feed — the substitute is venue calendars (India Habitat Centre, IIC, Kamani, Triveni, KNMA) and none are wired up yet.",
-  "items": []
+  "generated": "2026-09-23",
+  "window": {
+    "from": "2026-09-20",
+    "to": "2026-11-19"
+  },
+  "source": "Luma — Delhi",
+  "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
+  "counts": {
+    "luma": 10
+  },
+  "items": [
+    {
+      "id": "luma-evtWUxQpznIAT7Z3zW",
+      "title": "Foto Walk 2026 - New Delhi IN",
+      "emoji": "🏃",
+      "type": "event",
+      "categories": [
+        "sport"
+      ],
+      "zone": "chandni-chowk",
+      "area": null,
+      "coords": [
+        28.657081614575418,
+        77.23431746252614
+      ],
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "why": "A photo walk, hosted by your local Foto community hosts, Photographer(s) Udit Kulshrestha & Shashwat Nagpal. We meet, we walk, we make photos together, no likes or followers involved. The 2026 edition of Fotowalk spans 75+ cities across 35+ countries and 6 Continents. What to expect You'll spend about two hours walking",
+      "url": "https://luma.com/jzioa7is",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-09-20",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtnAjBsMFeMOC8sAC",
+      "title": "Ctrl+Alt+Delusion",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "sector-44",
+      "area": "BEYOND JUST WORK, B7 10, Sushant Lok Phase I, Sector 43, Gurugram, Haryana 12200",
+      "coords": [
+        28.4597201,
+        77.0747413
+      ],
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "why": "CTRL + ALT + DELUSION is a high energy meme to startup pitch show where the most chaotic, and hilarious ideas are transformed into surprisingly convincing business pitches. Contestants have to build, pitch, survive brutal roasts from the judges, and entertain the audience all while proving that even the worst ideas can",
+      "url": "https://luma.com/3kgrnxdn",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-09-20",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtYHgkXMEf6d4zMcQ",
+      "title": "The Big Aaaaart Club",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "satbari",
+      "area": "South Delhi, New Delhi, Delhi, India",
+      "coords": [
+        28.4929198,
+        77.1847921
+      ],
+      "start": "2026-09-27",
+      "end": "2026-09-27",
+      "why": "The Big Aaaaart Club is back again! 🎨 Join us on Sunday, 27th September for an evening of art, conversations, and community as we bring together people who simply love making, discovering, and experiencing art. Think of it as your excuse to step away from the usual Sunday plans and spend a few hours exploring your cre",
+      "url": "https://luma.com/65xmpzm9",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-09-20",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtXw8mSE6JANPmtOj",
+      "title": "🚶Curious Walking Club - New Delhi 🇮🇳 #1 | Friends of Screate Labs",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "sector-53",
+      "area": "DLF One Horizon Center, Gurugram, Horizon Centre, DLF One, Golf Course Rd, Horiz",
+      "coords": [
+        28.4511625,
+        77.09645309999999
+      ],
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "why": "We’re bringing Curious Walking Club to New Delhi. 70+ people have already raised their hands. Now we're looking for the people who will actually show up for a 5K+ walk, bring someone interesting, and help make the local ritual stick. -- Curious Walking Club is a global, recurring 5K+ walking ritual started by Hien Nguy",
+      "url": "https://luma.com/gh92tx4q",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-09-20",
+      "quality": 3,
+      "uniqueness": 3
+    }
+  ]
 }

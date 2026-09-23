@@ -60,11 +60,25 @@ jobs:
         run: node scripts/version.mjs --all --check
 
       # Every record still valid, and nothing expired still shipping.
+      # Per city, because refresh.mjs reads the one it is told about.
       - name: Data is valid
-        run: node scripts/refresh.mjs --check
+        run: |
+          for city in paris bay-area bengaluru delhi new-york; do
+            HOMEGROUND_CITY=$city node scripts/refresh.mjs --check
+          done
 
       # The one that exists because the site once passed every eyeball
       # test while being completely broken: distance reached the ranking
       # but not the retrieval, and nothing on screen said so.
+      #
+      # All four cities now. It ran on Paris alone until September 2026,
+      # not by choice but because it threw on any other pack at the first
+      # `fromZone(1)` — so the three cities with no curated tier, which
+      # are exactly the ones most likely to be quietly broken, were the
+      # three nothing tested.
       - name: Moving still changes the answers
-        run: node scripts/check-location.mjs
+        run: |
+          for city in paris bay-area bengaluru delhi new-york; do
+            echo "── $city"
+            HOMEGROUND_CITY=$city node scripts/check-location.mjs
+          done

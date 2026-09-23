@@ -30,7 +30,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { dataDir, City } from './shim.mjs';
+import { dataDir, City, zoneFinder } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = dataDir();
@@ -57,7 +57,22 @@ const CLASSES = [
   ['wd:Q483110',  'sport'],       // stadium
   ['wd:Q2143825', 'bakery'],      // pastry shop
   ['wd:Q274393',  'bakery']       // bakery
-];
+].concat(City.notable?.classes || []);
+
+/* A pack may add to that list, and two of them have to.
+
+   The list above is what Wikidata knows about a European city, and it
+   was written against Paris. Asked about Bengaluru it returns almost
+   nothing — measured on 18 September 2026, the whole bounding box holds
+   791 hotels, 483 petrol stations and 210 HDFC Bank branches, against
+   three cafés. The classes the site asks for barely exist there, which
+   is why Bengaluru had 31 records and Delhi 81 where Paris has 838.
+
+   What those cities do have is a different vocabulary of destination:
+   Delhi's is 59 tombs, 41 mosques, 17 gurdwaras; Bengaluru's is 31
+   temples and 22 lakes, the lakes being what it has instead of parks.
+   None of that is exotic — it is simply what somebody there would tell
+   you to go and see, and the pack is where a city says what it is. */
 
 /* P576 is the date a thing stopped existing. Without this filter the
    query cheerfully returns a hippodrome demolished in 1900, and the site
@@ -105,29 +120,22 @@ SELECT ?item ?itemLabel ?desc ?cls ?coord ?article ?heritage ?inception WHERE {
 const CAT_OF = Object.fromEntries(CLASSES.map(([q, c]) => [q.replace('wd:', ''), c]));
 
 /* Nearest centroid, not point-in-polygon: good enough to print next to a
-   name, never used for distance. Same source and same rule as
-   discover.mjs, so a notable record and a discovered one on the same
-   street agree about where they are.
+   name, never used for distance. Literally the same rule as
+   discover.mjs now rather than merely the same idea — both call
+   `zoneFinder`, so a notable record and a discovered one on the same
+   street cannot disagree about where they are.
 
-   This table used to be written out here, and it was the twenty Paris
+   The table used to be written out here, and it was the twenty Paris
    arrondissements — identical, key for key, to what `paris/city.js`
    already declared as `zone.grid`. Reading the pack instead changes
    nothing for Paris and stops the other three cities being told they are
-   in the 12th. */
-const ZONE = City.zone.grid || City.zone.centroids;
+   in the 12th.
 
-/* Paris numbers its zones and the other packs name them, so a key stays
-   whatever kind of thing it already was. */
-const zoneKey = k => (/^\d+$/.test(k) ? Number(k) : k);
-
-const nearestArr = (lat, lon) => {
-  let best = null, bd = Infinity;
-  for (const [n, [a, b]] of Object.entries(ZONE)) {
-    const d = (a - lat) ** 2 + (b - lon) ** 2;
-    if (d < bd) { bd = d; best = zoneKey(n); }
-  }
-  return best;
-};
+   It answers `null` where the pack declares `zone.limitKm` and the point
+   is further than that from every centroid, which is how the Bay Area
+   says that a rectangle reaching Mountain View also reaches Oakland and
+   it did not mean to. */
+const nearestArr = zoneFinder(City);
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -342,12 +350,21 @@ function toRecord(p) {
      tier. It stays in the map layer, where a bare name is honest. */
   if (RE_BARE_LOCATION.test(why.trim())) return null;
 
+  /* Further from every zone than the pack allows is not in this city,
+     however comfortably it sits inside the bounding box. Wikidata is
+     where this hurt most: a box drawn from San Francisco to Mountain
+     View also contains Oakland and Berkeley, and 387 of the Bay Area's
+     1,496 records came from there — each stamped with the nearest zone
+     on the far side of the water. */
+  const a = nearestArr(p.lat, p.lon);
+  if (a == null && City.zone.limitKm != null) return null;
+
   return {
     n: p.name.slice(0, 70),
     c: p.cat,
     lat: +p.lat.toFixed(5),
     lon: +p.lon.toFixed(5),
-    a: nearestArr(p.lat, p.lon),
+    a,
     why,
     w: p.article ? `https://en.wikipedia.org/wiki/${encodeURIComponent(p.article)}` : null,
     src: p.article ? 'Wikipedia' : 'Wikidata',

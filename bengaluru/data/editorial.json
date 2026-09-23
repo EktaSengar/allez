@@ -1,6 +1,890 @@
 {
- "generated": "2026-09-13",
- "note": "Generated editorial picks.",
- "rules": [],
- "items": []
+ "generated": "2026-09-21",
+ "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: Wikidata holds three cafes in the whole of Bengaluru and no open dataset in India describes everyday food. See SOURCES.md.",
+ "rules": [
+  "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
+  "Say what to order and when to go. 'Lovely atmosphere' helps nobody.",
+  "No opening hours in prose. OpenStreetMap carries them, js/hours.js reads them, and a time written here is a time that rots.",
+  "quality and uniqueness cap at 4 here. 5 is reserved for somewhere one of you actually loved.",
+  "Always pin `match` with a zone. A chain with fourteen branches will otherwise resolve to whichever one the index happened to list first."
+ ],
+ "items": [
+  {
+   "id": "osm-vidyarthi-bhavan-25890-155143",
+   "title": "Vidyarthi Bhavan",
+   "type": "restaurant",
+   "zone": "basavanagudi",
+   "coords": [
+    12.94501,
+    77.57147
+   ],
+   "area": "Gandhi Bazaar Main Road, Basavanagudi",
+   "url": "https://vidyarthibhavan.in",
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Vidyarthi Bhavan",
+    "zone": "basavanagudi",
+    "type": "restaurant"
+   },
+   "why": "Gandhi Bazaar since 1943, opened to feed students at the National College up the road — Vidyarthi Bhavan means student house. The benne masala dosa is the order and it is fried in enough butter to be a decision. Expect to give your name, wait on the pavement and share a table. Go on a weekday morning; weekends are a different and worse experience.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia; Karnataka Tourism; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-mavalli-tiffin-rooms-25910-155171",
+   "title": "Mavalli Tiffin Rooms",
+   "type": "restaurant",
+   "zone": "shanti-nagar",
+   "coords": [
+    12.95504,
+    77.58543
+   ],
+   "area": "Lalbagh Road",
+   "url": "https://www.mavallitiffinrooms.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Mavalli Tiffin Rooms",
+    "zone": "shanti-nagar",
+    "type": "restaurant"
+   },
+   "why": "Started as the Brahmin Coffee Club in 1924 and in the Art Deco building on Lalbagh Road since 1959, with a walk-through kitchen that was a radical idea at the time. The rava idli was invented here during the Second World War, when rice ran short and Yagnanarayana Maiya tried semolina instead. Order that, and the filter coffee.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia; The Better India; Citizen Matters; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-koshy-s-25951-155203",
+   "title": "Koshy's",
+   "type": "restaurant",
+   "zone": "shivajinagar",
+   "coords": [
+    12.97563,
+    77.60148
+   ],
+   "area": "Saint Mark's Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Koshy's",
+    "zone": "shivajinagar",
+    "type": "restaurant"
+   },
+   "why": "St Mark's Road, and the room where Bengaluru has argued with itself since 1940 — journalists, academics, people nursing one coffee for two hours. The food is beside the point and the mutton cutlet is the thing to order anyway. Nobody will hurry you, which is the entire proposition.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Wikidata (restaurant in Bangalore); published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-shree-sagar-ctr-25997-155139",
+   "title": "Shree Sagar CTR",
+   "type": "restaurant",
+   "zone": "malleswaram",
+   "coords": [
+    12.99826,
+    77.56949
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Shree Sagar CTR",
+    "zone": "malleswaram",
+    "type": "restaurant"
+   },
+   "why": "Malleswaram, and the benne dose that every argument about the best in the city eventually comes back to. Small, quick, cash-friendly, and busiest at breakfast. Order the dose and a coffee and do not over-plan it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-karavalli-25944-155218",
+   "title": "Karavalli",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97207,
+    77.60891
+   ],
+   "area": "Residency Road",
+   "url": null,
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Karavalli",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "Coastal Karnataka and Mangalorean cooking done seriously, in a garden courtyard off Residency Road. The appams and the fish curry are what it is for. The expensive end of the city, and the one worth it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18",
+   "i": "a/a3/Residency_Road,_Kollam.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-lalbagh-botanical-gardens-25898-155173",
+   "title": "Lalbagh Botanical Gardens",
+   "type": "park",
+   "zone": "shanti-nagar",
+   "coords": [
+    12.94889,
+    77.58667
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Lalbagh Botanical Gardens",
+    "zone": "shanti-nagar",
+    "type": "park"
+   },
+   "why": "Commissioned by Hyder Ali in the 1760s and finished by Tipu Sultan, with a Victorian glasshouse modelled on the Crystal Palace at the centre of it. The rock at the south end is older than anything else in the city by a margin measured in aeons. Early morning is when Bengaluru actually uses it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Published coverage; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-cubbon-park-25948-155187",
+   "title": "Cubbon Park",
+   "type": "park",
+   "zone": "richmond-town",
+   "coords": [
+    12.97417,
+    77.59341
+   ],
+   "area": null,
+   "url": "https://cubbonpark.in/",
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Cubbon Park",
+    "zone": "richmond-town",
+    "type": "park"
+   },
+   "why": "Three hundred acres in the middle of the city, laid out in 1870, and closed to traffic on Sundays — which is the day to go, when it fills with runners, skaters and people reading on the grass. The bamboo grove and the rose garden are the two corners worth walking to rather than past.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "Published coverage; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-champaca-bookstore-library-cafe-25975-155192",
+   "title": "Champaca Bookstore, Library & Cafe",
+   "type": "cafe",
+   "zone": "vasanth-nagar",
+   "coords": [
+    12.98735,
+    77.59599
+   ],
+   "area": "Edward Road",
+   "url": "https://www.champaca.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Champaca Bookstore, Library & Cafe",
+    "zone": "vasanth-nagar",
+    "type": "cafe"
+   },
+   "why": "Up a flight of stairs off Edward Road: a bookshop with a lending library and a small cafe attached, curated hard rather than stocked wide — translation, writing from the south, independent presses. The kind of shelf where you leave with something you had not heard of.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-blossom-book-house-25950-155210",
+   "title": "Blossom Book House",
+   "type": "books",
+   "zone": "shivajinagar",
+   "coords": [
+    12.97482,
+    77.60522
+   ],
+   "area": "Church Street",
+   "url": "https://www.blossombookhouse.in/",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Blossom Book House",
+    "zone": "shivajinagar",
+    "type": "books"
+   },
+   "why": "Church Street, three floors, second-hand and new stacked together to the ceiling with only the loosest idea of order. Budget an hour you had not planned to spend. Prices are negotiable at the top of the building and not at the bottom.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-toit-25959-155281",
+   "title": "Toit",
+   "type": "nightlife",
+   "zone": "indiranagar",
+   "coords": [
+    12.97941,
+    77.64063
+   ],
+   "area": "100 Feet Road",
+   "url": "https://toit.in/",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Toit",
+    "zone": "indiranagar",
+    "type": "nightlife"
+   },
+   "why": "The Indiranagar brewpub that started the city's microbrewery habit, and still the busiest room on 100 Feet Road. Go for the beer brewed on the premises rather than the menu, and go early — after eight there is a wait on the stairs.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18",
+   "i": "0/03/Indiranagar_Shopping_Hundred_Feet_Road,_Indiranagar_Bangalore_by_night.JPG",
+   "ik": "c"
+  },
+  {
+   "id": "osm-corner-house-25977-155154",
+   "title": "Corner House",
+   "type": "deli",
+   "zone": "gandhinagar",
+   "coords": [
+    12.98847,
+    77.57697
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Corner House",
+    "zone": "gandhinagar",
+    "type": "deli"
+   },
+   "why": "Ice cream, and specifically the Death by Chocolate, which is less a dessert than a local institution with a queue. Nothing about it is subtle and that is the point. Best late, after dinner, which is when everyone else goes.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-ulsoor-lake-park-25971-155244",
+   "title": "Ulsoor Lake Park",
+   "type": "park",
+   "zone": "halasuru",
+   "coords": [
+    12.9854,
+    77.62218
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Ulsoor Lake Park",
+    "zone": "halasuru",
+    "type": "park"
+   },
+   "why": "One of the lakes the city was built around and one of the few still worth walking, with islands in the middle and boating at the north end. Bengaluru has lost most of its tanks to construction; this is what the others looked like. Early, before the heat.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "Published coverage; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18"
+  },
+  {
+   "id": "osm-city-market-25931-155153",
+   "title": "City Market",
+   "type": "market",
+   "zone": "chikkapete",
+   "coords": [
+    12.96571,
+    77.57627
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "City Market",
+    "zone": "chikkapete",
+    "type": "market"
+   },
+   "why": "Krishna Rajendra Market, and everyone calls it City Market. Built in 1921 as the New General Market and renamed in 1946 after the Maharaja whose government put it up, on a site that was a kalyani — a temple tank — attributed to Kempegowda, who founded the city. It is one of Asia's largest flower markets: over twenty tonnes a day, and fifty in wedding season. Go at six in the morning for the flowers, which is the only hour that makes sense.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia; Something Curated; published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-malleshwaram-8th-cross-market-25998-155141",
+   "title": "Malleshwaram 8th Cross Market",
+   "type": "market",
+   "zone": "malleswaram",
+   "coords": [
+    12.99903,
+    77.57054
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Malleshwaram 8th Cross Market",
+    "zone": "malleswaram",
+    "type": "market"
+   },
+   "why": "Malleswaram was laid out in 1898 when the plague drove people out of the old city, and 8th Cross off Sampige Road is still its busiest street — flower stalls from five in the morning, then vegetables and fruit. Sampige and Margosa Roads are named after the trees that used to line them. Come early, and eat at one of the tiffin rooms on the same stretch afterwards.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Citizen Matters; published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-iyengar-s-bakery-26002-155145",
+   "title": "Iyengar's Bakery",
+   "type": "bakery",
+   "zone": "malleswaram",
+   "coords": [
+    13.0011,
+    77.5723
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Iyengar's Bakery",
+    "zone": "malleswaram",
+    "type": "bakery"
+   },
+   "why": "The Iyengar bakery is Bangalore's own institution, and this is one. The first opened in Chikpet in 1898, after an Englishman taught H S Thirumalachar to bake bread; most of the founders came from a cluster of villages in Hassan district, and they turned out to be very good at it. Honey cake first, then a khara bun and a benne biscuit. Baked each afternoon for that evening and the next morning, so go late in the day.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "The Quint; Slurrp; CurryLore; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-yeshwantpur-market-26042-155108",
+   "title": "Yeshwantpur Market",
+   "type": "market",
+   "zone": "yeswanthpur",
+   "coords": [
+    13.02081,
+    77.55406
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Yeshwantpur Market",
+    "zone": "yeswanthpur",
+    "type": "market"
+   },
+   "why": "The wholesale market on the north-west edge, next to the APMC yard, and the one that supplies the smaller markets you will otherwise shop in. Worth the trip if you want to see the scale rather than buy at it — it is a working market and not laid on for anybody.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Published coverage; position confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-19"
+  },
+  {
+   "id": "osm-albert-bakery-25993-155228",
+   "title": "Albert Bakery",
+   "type": "bakery",
+   "zone": "frazer-town",
+   "coords": [
+    12.9966,
+    77.61422
+   ],
+   "area": "Mosque Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Albert Bakery",
+    "zone": "frazer-town",
+    "type": "bakery"
+   },
+   "why": "Mohammed Suleman started it as a godown on Sangam Road in 1902 and it became a bakery in Frazer Town in 1921 — named Albert, probably after the prince, to bring in the Anglo-Indian trade. The mutton keema samosas and the coconut puffs, and in Ramadan the brain puff, which is the reason people cross the city that month.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Bakers Brûlée; LBB; Local Samosa; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-thom-s-bakery-25983-155228",
+   "title": "Thom's Bakery",
+   "type": "bakery",
+   "zone": "frazer-town",
+   "coords": [
+    12.99155,
+    77.61418
+   ],
+   "area": "Wheeler Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Thom's Bakery",
+    "zone": "frazer-town",
+    "type": "bakery"
+   },
+   "why": "Frazer Town since 1970 and grown into a small supermarket around the original counter, which is still where to go. Plum cake at Christmas is what it is famous for; the puffs and the bread the rest of the year.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the bakery's listing; The Tasty Tales; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-lj-iyengars-bakery-25801-155175",
+   "title": "LJ Iyengars Bakery",
+   "type": "bakery",
+   "zone": "jp-nagar",
+   "coords": [
+    12.9007,
+    77.58729
+   ],
+   "area": "18th Cross Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "LJ Iyengars Bakery",
+    "zone": "jp-nagar",
+    "type": "bakery"
+   },
+   "why": "An Iyengar bakery in the south of the city, which is where most of them are. The tradition started in Chikpet in 1898 and the founders came from a handful of villages in Hassan district; the menu is the same one everywhere and that is the point. Honey cake, khara bun, benne biscuit. Late afternoon, when the day's baking comes out.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "The Quint; Slurrp; CurryLore; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-hatti-kaapi-25857-155163",
+   "title": "Hatti Kaapi",
+   "type": "cafe",
+   "zone": "jayanagar",
+   "coords": [
+    12.92841,
+    77.58168
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Hatti Kaapi",
+    "zone": "jayanagar",
+    "type": "cafe"
+   },
+   "why": "Filter coffee, standing up, at a price that is the argument — Lakshman Swamy started it in November 2009 to sell the city's own coffee properly and cheaply. A bar and a few stools and nothing to linger over, which is exactly how filter coffee is meant to be drunk.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Hatti Kaapi; Tripadvisor listing; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-third-wave-coffee-roasters-25869-155259",
+   "title": "Third Wave Coffee Roasters",
+   "type": "cafe",
+   "zone": "koramangala",
+   "coords": [
+    12.93474,
+    77.62962
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Third Wave Coffee Roasters",
+    "zone": "koramangala",
+    "type": "cafe"
+   },
+   "why": "The first one, which opened on 24 September 2016 on 80 Feet Road after a year of the founders working out what to build. There are forty-odd across the city now and the rest are a chain; this is where Bengaluru's specialty coffee habit started.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "YourStory; LBB; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-dyu-art-cafe-25874-155235",
+   "title": "Dyu Art Cafe",
+   "type": "cafe",
+   "zone": "koramangala",
+   "coords": [
+    12.93719,
+    77.61768
+   ],
+   "area": "KHB Colony, Next To Mangala Kalyana Mantapa 5th Block Adugod",
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Dyu Art Cafe",
+    "zone": "koramangala",
+    "type": "cafe"
+   },
+   "why": "An old Kerala-Portuguese bungalow in Koramangala with courtyards and gabled roofs, run as a café and a gallery at once — the owners wanted somewhere artists could show work to people who had only come for a sandwich. Sit in the courtyard, and look at the walls on the way out.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "IBTimes India; LBB; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-blue-tokai-coffee-roasters-26014-155158",
+   "title": "Blue Tokai Coffee Roasters",
+   "type": "cafe",
+   "zone": "sadashivanagar",
+   "coords": [
+    13.00692,
+    77.57898
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Tokai Coffee Roasters",
+    "zone": "sadashivanagar",
+    "type": "cafe"
+   },
+   "why": "The roaster that got Indians drinking Indian coffee as something other than instant, buying single-estate beans from Karnataka and Kerala — which in Bengaluru means from a couple of hundred kilometres away. Here for the north of the city.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Published coverage; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-brahmin-s-coffee-bar-25908-155138",
+   "title": "Brahmin's Coffee Bar",
+   "type": "restaurant",
+   "zone": "chamarajapete",
+   "coords": [
+    12.95394,
+    77.56881
+   ],
+   "area": "2nd Cross Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Brahmin's Coffee Bar",
+    "zone": "chamarajapete",
+    "type": "restaurant"
+   },
+   "why": "Since 1965, and the menu has not changed since: idli, vada, khara bath, kesari bath, coffee. Everything comes with the coconut chutney that is the entire reason for the queue. Standing only. Go early — it is a breakfast place and it runs out.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Time Out Bangalore; LBB; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-lavonne-cafe-25934-155274",
+   "title": "Lavonne Café",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.96693,
+    77.63689
+   ],
+   "area": "3rd Cross Road",
+   "url": "https://lavonne.in/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Lavonne Café",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "The café of a pastry school — Lavonne was started in 2012 by three chefs as India's first dedicated international baking academy, and the students run the counter downstairs while the classes go on above. On a quiet street off Double Road. The croissants hold their shape and flake properly, which is the test and the reason to come.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Time Out Bengaluru; LBB; Lavonne Academy; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-sharon-tea-stall-25946-155294",
+   "title": "Sharon Tea Stall",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.97317,
+    77.64705
+   ],
+   "area": "Thippasandra Main Road",
+   "url": "https://sharonteastall.com/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sharon Tea Stall",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "A tea stall on the corner of Thippasandra Road that sells over a thousand cups a day. Daniel was a private driver on six thousand rupees a month, leased out his house to start it, lost ten lakh on a café upstairs that failed, and kept the stall. A long board of flavoured teas, a counter of snacks, and nowhere to sit. Stand on the pavement with everybody else.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "YourStory; Tripadvisor listing; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-karma-kaapi-caffeine-studio-25847-155163",
+   "title": "Karma Kaapi",
+   "type": "cafe",
+   "zone": "jayanagar",
+   "coords": [
+    12.92326,
+    77.58141
+   ],
+   "area": null,
+   "url": "https://karmakaapi.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Karma Kaapi – Caffeine Studio",
+    "zone": "jayanagar",
+    "type": "cafe"
+   },
+   "why": "A micro-roastery and café on 36th Cross in Jayanagar 5th Block, roasting beans from Indian estates and a few from abroad. The menu runs from filter coffee to espresso drinks; ask for whatever they roasted most recently, which is the reason to come to the roaster rather than a café.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "LBB; the roaster's own site; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-go-native-jayanagar-25845-155169",
+   "title": "Go Native",
+   "type": "restaurant",
+   "zone": "jayanagar",
+   "coords": [
+    12.92261,
+    77.58465
+   ],
+   "area": "10A Main Road",
+   "url": "https://gonative.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Go Native Jayanagar",
+    "zone": "jayanagar",
+    "type": "restaurant"
+   },
+   "why": "Down a lane off 10th Main under a great deal of green, cooking with indigenous grains, pulses and spices — contemporary South Indian food that uses millets where you would expect rice. The menu changes; vegan dishes are marked. Lunch in the garden is the right way to do it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "HappyCow; Bindu Gopal Rao; confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-21"
+  }
+ ]
 }

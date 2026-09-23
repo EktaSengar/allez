@@ -96,13 +96,26 @@ const Loc = (() => {
      same trip east at 11am and at 6pm are different trips, and a model
      that cannot say so is wrong about the only thing that matters here.
 
-     `when` is passed so a pack can care. Paris's ignores it. */
+     `when` is passed so a pack can care. Paris's ignores it.
+
+     The default clock is the reader's own, and that is the right one:
+     somebody in Delhi reading Delhi should be told about Delhi's rush
+     hour, and somebody in Palo Alto reading the Bay Area about theirs.
+     A browser gets this right for free.
+
+     A script has no reader, so it picks up whatever timezone the machine
+     is in — which made `check-location.mjs` answer differently at
+     breakfast than at six, and differently again in CI. Scripts pin this;
+     nothing in the browser touches it. */
+  let clock = () => new Date();
+  const setClock = fn => { clock = fn || (() => new Date()); };
+
   function minutes(coords, when) {
     const a = active();
     if (!a || !coords) return null;
     const d = km([a.lat, a.lon], coords);
     if (!isFinite(d)) return null;
-    return City.reach.minutes(d, when || new Date());
+    return City.reach.minutes(d, when || clock());
   }
 
   /* Distance for a record: its own coordinates if it has them, otherwise
@@ -154,14 +167,20 @@ const Loc = (() => {
       // a quarter or suburb if OSM knows one — never the house number
       area: a.suburb || a.quarter || a.neighbourhood || a.city_district || null,
       label: (hit.display_name || '').split(',')[0],
-      city: a.city || a.town || a.municipality || 'Paris'
+      city: a.city || a.town || a.municipality || City.name
     };
   }
 
+  /* Searched inside the pack's own box rather than by appending a city
+     name. The name was ", Paris, France", on every pack — so "Bedford
+     Ave" typed on the New York page went looking in Paris. Nominatim
+     wants the box as west,north,east,south; the pack keeps it the way
+     Overpass does, south,west,north,east. */
   async function search(query) {
-    const q = /paris|france/i.test(query) ? query : `${query}, Paris, France`;
+    const [s, w, n, e] = City.bbox.split(',');
     const url = 'https://nominatim.openstreetmap.org/search'
-      + `?q=${encodeURIComponent(q)}&format=json&limit=1&addressdetails=1`;
+      + `?q=${encodeURIComponent(query)}&format=json&limit=1&addressdetails=1`
+      + `&viewbox=${w},${n},${e},${s}&bounded=1`;
     const res = await fetch(url, { headers: { 'accept-language': 'en' } });
     if (!res.ok) throw new Error('Could not reach the place finder.');
     const [hit] = await res.json();
@@ -189,6 +208,6 @@ const Loc = (() => {
   return {
     boot, save, active, home, isExploring, setHome, explore, resetToHome, recents,
     minutes, minutesTo, kmTo, km, displayName, zoneName, zoneCoords, presets,
-    search, locate, fromZone, ZONE_NAMES
+    search, locate, fromZone, ZONE_NAMES, setClock
   };
 })();

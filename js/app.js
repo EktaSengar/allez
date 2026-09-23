@@ -49,7 +49,7 @@ const App = (() => {
   let CLIM = null;
   let CLIMP = null;
   let VIEW = 'today';
-  let HOME = { label: 'Paris' };        // replaced by the location engine
+  let HOME = { label: City.name };        // replaced by the location engine
   let DISCOVERED = [];                  // OpenStreetMap layer, positions only
 
   const $  = s => document.querySelector(s);
@@ -101,11 +101,15 @@ const App = (() => {
 
   /* One line under the wordmark, chosen by the date so it changes daily
      but stays the same all day. Written for the two of them, not for a
-     brochure — the aim is a nudge out of the door, not a poem. */
+     brochure — the aim is a nudge out of the door, not a poem.
+
+     Only lines true in any city live here. Three used to name Paris —
+     the canal, the second look, the arrondissement worth crossing town
+     for — and New York was greeted with the arrondissement. They are
+     Paris's own now, in `City.epigraphs`, and a pack with lines of its
+     own adds them the same way. */
   const EPIGRAPHS = [
     'Somewhere to walk, and each other to walk with. That is the whole plan.',
-    'The canal is four minutes away and the light is best around seven.',
-    'Paris rewards the second look more than the first. Go somewhere twice.',
     'Nothing here needs booking. Put your shoes on and see what happens.',
     'The best evenings start with no particular destination.',
     'You live here. That means the good things can wait for a Tuesday.',
@@ -115,9 +119,8 @@ const App = (() => {
     'The city is at its best when you are not trying to see it.',
     'Go for the bread. Stay for the afternoon.',
     'A short trip you actually take beats the grand one you keep postponing.',
-    'Sit by the water. Let the evening do the rest.',
-    'Every arrondissement has one thing worth crossing town for.'
-  ];
+    'Sit by the water. Let the evening do the rest.'
+  ].concat(City.epigraphs || []);
 
   function epigraph() {
     const start = new Date(TODAY.getFullYear(), 0, 0);
@@ -643,7 +646,7 @@ const App = (() => {
 
   function kicker(item) {
     const bits = [];
-    if (item.zone) bits.push(`${item.zone}<sup>e</sup>`);
+    if (item.zone) bits.push(City.zone.tile(item.zone));
     else if (item.type === 'daytrip') bits.push('Out of town');
     if (item.minutesFromHome != null) bits.push(`${item.minutesFromHome} min`);
     bits.push(priceText(item));
@@ -667,8 +670,15 @@ const App = (() => {
     return `about ${m} minutes`;
   }
 
+  /* The engine never names a city. The pack labels its own zones, and a
+     neighbourhood beats a city name at disambiguating a search — "Palo Alto"
+     finds the right Verve, where "the Bay Area" would find none of them.
+     `tile` may return markup, which has no business in a query string. */
   const mapsLink = i =>
-    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${i.title} ${i.area || ''} Paris`)}`;
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      [i.title, i.area,
+       i.zone != null ? String(City.zone.tile(i.zone)).replace(/<[^>]*>/g, '') : null,
+       City.searchRegion || City.name].filter(Boolean).join(' '))}`;
 
   /* Commons renders only a fixed set of thumbnail widths — anything else is a
      400. Keep in sync with THUMB_WIDTHS in scripts/images.mjs. */
@@ -864,10 +874,33 @@ const App = (() => {
      those never take the hero slot. */
   const hasRealPhoto = i => i.image && i.imageKind === 'subject';
 
+  /* A record without a photograph gets the same tinted tile `shot()`
+     draws, at the hero's own aspect ratio so nothing moves. This used to
+     call img() unconditionally, which built `<img src="undefined">` and
+     threw out of `srcset` before the first render — taking the whole
+     page with it, not just the card.
+
+     Paris never hit it because photos.mjs gives every generated record
+     an `i`, so the hero always had one. The Bay Area's first collected
+     events arrived without photographs and the site rendered nothing at
+     all. An engine that assumes a photograph exists is wrong about the
+     city that has not been photographed yet, which is every new one. */
+  /* Paris numbers its zones, so a dossier reads "10e — Le Marais" and
+     both halves earn their place. Everywhere else the zone *is* the
+     name, and the same template reads "Telegraph Hill — Telegraph
+     Hill". The pack already knows which it is. */
+  const zoneHeading = f => {
+    const head = City.zone.tile(f.zone);
+    return head === f.name ? esc(f.name) : `${head} — ${esc(f.name)}`;
+  };
+
   function hero(item) {
+    const picture = item.image
+      ? `<div class="hero-img">${img(item, 'hero', 'loaded', true)}</div>`
+      : `<div class="hero-img ph" data-kind="${esc(item.type || '')}"><span class="ph-mark">${markFor(item)}</span></div>`;
     return `<a class="hero" data-id="${esc(item.id)}" href="${item.url ? esc(item.url) : mapsLink(item)}"
         target="_blank" rel="noopener">
-      <div class="hero-img">${img(item, 'hero', 'loaded', true)}</div>
+      ${picture}
       <div class="hero-body">
         <p class="hero-kicker">${kicker(item)}</p>
         <h2 class="hero-title">${esc(item.title)}</h2>
@@ -878,7 +911,7 @@ const App = (() => {
 
   function row(item, thumb = false) {
     const bits = [];
-    if (item.zone) bits.push(`${item.zone}<sup>e</sup>`);
+    if (item.zone) bits.push(City.zone.tile(item.zone));
     if (item.area) bits.push(esc(item.area));
     if (item.priceNote) bits.push(esc(item.priceNote));
     else bits.push(priceText(item));
@@ -1154,7 +1187,7 @@ const App = (() => {
     return `<div class="near-card ${tierCls(item)}" data-id="${esc(item.id)}">
       <p class="near-label"><span class="e">${emoji}</span>${esc(label)}</p>
       <h4 class="near-name">${esc(item.title)}</h4>
-      <p class="near-meta">~${mins} min${item.zone ? ` · ${item.zone}<sup>e</sup>` : ''}${tier(item).note ? ` · ${esc(tier(item).note.toLowerCase())}` : ''}</p>
+      <p class="near-meta">~${mins} min${item.zone ? ` · ${City.zone.tile(item.zone)}` : ''}${tier(item).note ? ` · ${esc(tier(item).note.toLowerCase())}` : ''}</p>
       <p class="near-why">${esc(line)}</p>
       <a class="near-link" href="${item.url ? esc(item.url) : mapsLink(item)}" target="_blank" rel="noopener">
         ${item.url ? 'Look it up' : 'Directions'}</a>
@@ -1455,7 +1488,7 @@ const App = (() => {
       <div class="inv-score">
         <div class="inv-stat"><b>${p.found}</b><span>found</span></div>
         <div class="inv-stat"><b>${p.total}</b><span>on the map</span></div>
-        ${p.zones ? `<div class="inv-stat"><b>${p.zones}</b><span>${p.zones === 1 ? 'arrondissement' : 'arrondissements'}</span></div>` : ''}
+        ${p.zones ? `<div class="inv-stat"><b>${p.zones}</b><span>${p.zones === 1 ? City.zone.one : City.zone.many}</span></div>` : ''}
       </div>`;
 
     const list = near.length ? `
@@ -1529,7 +1562,7 @@ const App = (() => {
     const games = pool.filter(isCityGame);
     if (!games.length) return '';
     return stripHead('Active city exploration',
-                     'Sport that is really just leaving the flat and moving around Paris')
+                     `Sport that is really just leaving the flat and moving around ${City.name}`)
       + games.map(g => `
           <div class="citygame">
             <div class="citygame-head">
@@ -1604,7 +1637,7 @@ const App = (() => {
           : '')
       + foundStrip(local.found, Loc.displayName(Loc.active()))
       + (allRuns.length
-          ? stripHead('Run Paris', 'Nearest first, and getting longer')
+          ? stripHead(`Run ${City.name}`, 'Nearest first, and getting longer')
             + (runs.length ? `<div class="routes">${runs.map(routeCard).join('')}</div>` : '')
             + (plainRuns.length ? rows(plainRuns, null, true) : '')
           : '')
@@ -1653,8 +1686,8 @@ const App = (() => {
 
     const tiers = [
       ['near',  `Near ${Loc.displayName(Loc.active())}`, `Within about ${WIDER_MIN} minutes`],
-      ['worth', 'Worth crossing Paris for', 'Distance is not the point'],
-      ['around','Elsewhere in Paris', 'Further out, still worth knowing']
+      ['worth', `Worth crossing ${City.name} for`, 'Distance is not the point'],
+      ['around',`Elsewhere in ${City.name}`, 'Further out, still worth knowing']
     ];
 
     return (big ? hero(big) : '')
@@ -2002,7 +2035,7 @@ const App = (() => {
     return moodBar
       + (lead ? missionCard(lead, true) : '')
       + (rest.length
-          ? stripHead(away === rest.length ? 'Missions elsewhere in Paris' : 'More missions',
+          ? stripHead(away === rest.length ? `Missions elsewhere in ${City.name}` : 'More missions',
                       'Written for a particular set of streets — the walk is the point')
             + `<div class="missions">${rest.map(m => missionCard(m)).join('')}</div>`
           : '');
@@ -2274,12 +2307,15 @@ const App = (() => {
       </g>`;
     }).join('');
 
+    /* Only a pack declaring zone.map reaches this, which today is Paris
+       alone — but the ordinal still comes from the pack, so the next one
+       to draw a map does not inherit an arrondissement suffix. */
     return `<div class="zone-map-wrap">
       <svg class="zone-map" viewBox="2 6 84 78" role="group" aria-label="Arrondissements explored">
         <path class="seine" d="M4,58 C26,50 36,63 50,58 C64,53 76,63 92,52" />
         ${dots}
       </svg>
-      <p class="zone-map-note">Tap one as you do it. You are in the ${Loc.active()?.zone ?? '—'}<sup>e</sup>, so that one is free.</p>
+      <p class="zone-map-note">Tap one as you do it. You are in the ${Loc.active()?.zone != null ? City.zone.tile(Loc.active().zone) : '—'}, so that one is free.</p>
     </div>`;
   }
 
@@ -2511,7 +2547,7 @@ const App = (() => {
 
       dossier = `<div class="hood">
         ${local ? `<div class="hood-shot">${img(local, '(min-width: 1040px) 1000px, 96vw', 'loaded')}</div>` : ''}
-        <h3>${f.zone}<sup>e</sup> — ${esc(f.name)}</h3>
+        <h3>${zoneHeading(f)}</h3>
         <p class="sub">About ${f.minutesFromHome} minutes from you${local ? ` · photo: ${esc(local.imageSubject)}` : ''}</p>
         <div class="facts-grid">
           ${facts.map(([k, v]) => `<dl class="f"><dt>${esc(k)}</dt><dd>${esc(v)}</dd></dl>`).join('')}

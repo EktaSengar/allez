@@ -1,5 +1,45 @@
 {
-  "note": "Handwritten overrides. No script rewrites this.",
-  "how": [],
-  "items": []
+  "note": "Handwritten notes. The only data file meant to be edited by hand, and the only one no script ever rewrites. Everything here wins over the generated tiers, so this is where you overrule the site.",
+  "how": [
+    "Key each entry by the id of the place you are overriding. Places found on the map look like 'osm-verve-coffe-roasters-74888--244326' and are stable across the weekly rebuild — but they are built from the name OSM carries, so if a misspelling there is ever corrected the id moves and the note is orphaned. The console says so when that happens.",
+    "Whatever you set replaces what was there, including 'title' — which is how a name the map has wrong gets written correctly here.",
+    "A 'why' is the useful one — it turns a name on a map into a recommendation, and marks it as somewhere you have actually been.",
+    "'HOMEGROUND_CITY=bay-area node scripts/draft.mjs <search terms>' finds a place and writes a filled-in stub."
+  ],
+  "items": {
+    "osm-verve-coffe-roasters-74888--244326": {
+      "title": "Verve Coffee Roasters",
+      "why": "The patio is the reason to pick this one. Inside and out it is rarely quiet — students behind laptops, founders, people reading — and it runs seven to six every day, which makes it an afternoon place as much as a morning one.",
+      "quality": 4,
+      "uniqueness": 2,
+      "labels": [
+        "outdoor"
+      ],
+      "goodFor": [
+        "food",
+        "morning",
+        "outdoors",
+        "socialize"
+      ],
+      "area": "162 University Avenue"
+    },
+    "osm-goodthing-74890--244323": {
+      "title": "Goodthing Coffee",
+      "why": "The upstairs loft is the draw — room to open a laptop and stay, which downtown Palo Alto is short of, and a patio underneath it. Order the Einspänner, black sesame or pistachio. The beans rotate through European roasters; Tanat was on when I was last in, and that is the one worth timing a visit for.",
+      "quality": 5,
+      "uniqueness": 4,
+      "labels": [
+        "outdoor"
+      ],
+      "goodFor": [
+        "food",
+        "morning",
+        "relax",
+        "outdoors"
+      ],
+      "area": "532 Ramona Street",
+      "url": "https://goodthing.coffee/",
+      "hours": "Mo-Su 08:00-18:00"
+    }
+  }
 }

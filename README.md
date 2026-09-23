@@ -1,6 +1,6 @@
 # Allez
 
-A city guide for the people who live in one. Paris, Delhi, Bengaluru and the Bay Area, at **[allez.city](https://allez.city)**.
+A city guide for the people who live in one. Paris, Delhi, Bengaluru, the Bay Area and New York, at **[allez.city](https://allez.city)**.
 
 **Live at → [allez.city](https://allez.city)**
 
@@ -17,9 +17,9 @@ doing so.
 
 Four things worth knowing before you change anything.
 
-**It is one engine and four city packs.** `js/` holds the engine — ranking,
+**It is one engine and five city packs.** `js/` holds the engine — ranking,
 distance, expiry, photographs, the render path. Each of `paris/`, `delhi/`,
-`bengaluru/` and `bay-area/` holds a pack: the vocabulary, the zones, the
+`bengaluru/`, `bay-area/` and `new-york/` holds a pack: the vocabulary, the zones, the
 transit grammar, the money, the calendar, which views exist and which sources
 feed them. **The engine never names a city.** If you find yourself writing
 `Paris` or `₹` or `arrondissement` in `js/`, it belongs in a pack instead — see
@@ -27,9 +27,10 @@ feed them. **The engine never names a city.** If you find yourself writing
 
 **The `why` fields are the whole product.** Every curated record says why *you*
 would care, in a human sentence somebody wrote. That is the difference between
-this and a listings site, and it does not scale, which is fine. Three of the
-four cities have an empty curated tier right now because nobody has written
-theirs yet. Adding rows is not progress; adding judgement is.
+this and a listings site, and it does not scale, which is fine. Four of the
+five cities have an empty curated tier right now because nobody has written
+theirs yet — though the Bay Area, Delhi and Bengaluru now have an editorial
+one, which is the researched-but-never-visited tier below it. Adding rows is not progress; adding judgement is.
 
 **Some of the code looks wrong and is not.** Script tags above `<main>`, a
 `:empty` CSS reservation, `<picture>` where an `<img>` would do, a 200 ms
@@ -66,9 +67,16 @@ node scripts/serve.mjs      # http://localhost:4321
 ```
 
 `http://localhost:4321/` is the city chooser; `/paris/`, `/delhi/`,
-`/bengaluru/` and `/bay-area/` are the cities.
+`/bengaluru/`, `/bay-area/` and `/new-york/` are the cities.
 
-### Adding a fifth city
+### Adding a sixth city
+
+**Read [SOURCES.md](SOURCES.md) first.** What a new pack can reuse depends
+almost entirely on which country the city is in, and far less on how big it
+is: a European city probably publishes its own events and facilities through
+Opendatasoft or CKAN, an American one probably publishes facilities through
+Socrata and no events at all, and an Indian one publishes nothing a keyless
+script can read. Measured, with the numbers, in that file.
 
 Copy the nearest existing pack, not Paris — Paris is the one with a municipal
 data feed and twenty numbered zones, and almost nothing about that transfers.
@@ -555,7 +563,8 @@ allez.city/paris/      paris/          index.html · city.js · data/ · sw.js
 allez.city/delhi/      delhi/
 allez.city/bengaluru/  bengaluru/      + views/yourside.js
 allez.city/bay-area/   bay-area/
-                       css/ js/        shared by all four
+allez.city/new-york/   new-york/
+                       css/ js/        shared by all five
                        scripts/        shared build and check tools
 ```
 
@@ -575,7 +584,7 @@ Records say `zone`, not `arr`. In Paris a zone is an arrondissement and the
 pack supplies the twenty of them; in Bengaluru it would be a ward and in Delhi
 a colony. Only the pack knows which — the engine treats a zone as an opaque
 key with a centroid, which is why the same shard index, the same nearest-first
-ordering and the same one-per-zone cap work in all four.
+ordering and the same one-per-zone cap work in all five.
 
 The rule it exists to hold is that **the engine never names a city**. Anything
 that needs to know what a neighbourhood is called, how money is written or when
@@ -633,6 +642,38 @@ the sofa. So the number is stated plainly at the top, indoor things rise, outdoo
 things fall a long way and never fall off, and the hourly forecast is used for
 the genuinely useful part: *"Better around 5am, at about 174."* Paris declares no
 `air`, never loads the file, and pays nothing.
+
+A pack whose zones do not tile its bounding box declares `zone.limitKm`, and a
+point further than that from every zone is not in the city at all. Only the Bay
+Area needs one so far, and the reason is its shape: `bbox` is a rectangle and
+the bay runs diagonally through it, so a box reaching Mountain View in the
+south necessarily reaches Oakland in the north. There is no rectangle that says
+*SF down to Mountain View and nothing east of the water* — but the zones can say
+it, because there are none over there.
+
+Left unsaid, this was not a cosmetic problem. 2,766 of 9,170 discovered places
+were east of the bay and each was labelled with the nearest San Francisco zone
+across it: Montclair Branch Library, in Oakland, came back as Rincon Hill, 16.5
+km and a bridge away. `castro-valley` had quietly become the second-largest
+zone in the index on 542 places, most of them in Oakland. Eight Alameda County
+zones have been removed from the pack along with it.
+
+Ten kilometres was chosen from the data rather than picked: it drops 2,325
+places and not one of them is in scope, the nearest in-scope records to the line
+being the hill places above Woodside at 8–9 km. What it does not fix, because a
+distance cannot tell water from road: 441 East Bay places sit within 10 km of a
+San Francisco centroid, the Oakland and Alameda waterfronts genuinely being that
+close to Hunters Point as the crow flies. Those want a boundary, not a radius.
+
+**Selection and the limit use different measures, deliberately.** Which centroid
+is nearest is the squared-degree comparison every pack has always used, so no
+city's existing labels move; the limit is real kilometres, because a threshold
+written in kilometres has to be measured in them. Switching selection to true
+distance is defensible — it is geometrically the better rule and scores
+identically against sixteen Paris landmarks whose arrondissement is a matter of
+record — but it relabels 2,997 Paris places, 197 in Delhi and 268 in Bengaluru,
+and it would move 16 of the Bay Area's 9,170. That is a change to make on its
+own evidence, not as a side effect of a bounding box.
 
 A pack that has no shape worth drawing omits `zone.map` and the zone quest
 falls back to a list of chips. Paris spirals out from the 1st and is worth a

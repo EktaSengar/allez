@@ -374,7 +374,32 @@ const Rec = (() => {
 
   const CLOSED = /closed (?:in|down|its doors)\b|became defunct|(?:was|has been|now) demolished|no longer exists|until its closure in/i;
 
-  const stillThere = p => !CLOSED.test(p.why || '');
+  /* A closed date range is a plain statement of closure too, and the
+     phrasing above never caught it. "Woodward's Gardens … was a
+     combination amusement park, museum, art gallery, zoo, and aquarium
+     operating from 1866 to 1891" arrived as a park with a heritage
+     listing, scored uniqueness 5 for being older than 1900, and became
+     the Bay Area's Saturday morning. Bop City "from 1949 to 1965" and
+     the I-Beam "active from 1977 to 1994" were two of the twenty-three
+     bars the Nights tab had on record.
+
+     Still not "was a", for the Maison de Balzac's sake: this needs a
+     verb of running and two years, the second one past. Measured when
+     it was written against every record in both cities that the rule
+     above let through: nine caught, eight in the Bay and one in Paris —
+     the American Center for Art and Culture, active from 1986 to 2022 —
+     and every one of them genuinely shut. A range ending this year or
+     later is left alone; that is a place announcing its last season, and
+     it may still be open. */
+  const RAN = /\b(?:operat(?:ing|ed)|active|open(?:ed)?|ran|existed|in business)\b[^.]{0,60}?\bfrom (?:1[5-9]\d\d|20\d\d) (?:to|until|–|-) (1[5-9]\d\d|20\d\d)\b/i;
+  const ranUntil = why => { const m = RAN.exec(why); return m ? Number(m[1]) : null; };
+
+  const stillThere = p => {
+    const why = p.why || '';
+    if (CLOSED.test(why)) return false;
+    const until = ranUntil(why);
+    return until == null || until >= new Date().getFullYear();
+  };
 
   /* ---------- the two layers ----------
 
@@ -426,7 +451,10 @@ const Rec = (() => {
       })))
       .concat((D.civic?.items || []).map(p => Object.assign(fromCompact(p), {
         provenance: 'sourced',
-        source: 'Ville de Paris — opendata.paris.fr',
+        /* The file says who published it. This was a literal, and every
+           one of the Bay Area's 501 facilities was credited to the
+           Mairie de Paris. */
+        source: D.civic?.source || 'City open data',
         lastVerified: D.civic?.generated || null
       })));
 
@@ -484,7 +512,14 @@ const Rec = (() => {
       .concat(D.food?.items || [])
       .concat(D.itineraries?.items || [])
       .concat(D.daytrips?.items || [])
-      .concat(D.practices?.items || [])
+      /* Stated here rather than defaulted below, because the default is
+         `personal` and these are not. practices.mjs writes them from a
+         municipal feed and from Luma, says so in the file's own note —
+         "these are `sourced` records and rank below anything
+         hand-written" — and then carried no provenance at all, so all
+         forty of Paris's were being marked ★, read as somewhere one of
+         you had been, and ranked above the editorial tier. */
+      .concat((D.practices?.items || []).map(i => Object.assign({ provenance: 'sourced' }, i)))
       .filter(i => !(i.end && todayISO && i.end < todayISO));
 
     /* Everything in the curated files was written by somebody who went.

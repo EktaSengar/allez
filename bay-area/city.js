@@ -33,6 +33,10 @@ const City = (() => {
      so headings of that shape are supplied by the pack rather than
      assembled by the engine. See `hiddenHeading`. */
   const name = 'the Bay Area';
+  /* What a map search should be told, when the display name is not a place
+     you can look up. "the Bay Area" finds nothing; a New York zone label is
+     an NTA composite like "Annadale-Huguenot-Prince's Bay-Woodrow". */
+  const searchRegion = 'CA';
 
   const ua = 'allez-bay-area (personal site)';
 
@@ -46,7 +50,15 @@ const City = (() => {
      `side` is what makes that work, and it is the Bay-specific idea in
      this file: every zone knows whether it is in the city or on the
      Peninsula, because "is it on my side" is the first question anybody
-     asks here and the answer is not a distance. */
+     asks here and the answer is not a distance.
+
+     Eight zones used to sit in these tables that do not belong in this
+     pack at all — Fremont, Hayward, Castro Valley, Union City, Newark,
+     Decoto, Alvarado and Centerville. Every one is in Alameda County,
+     which is to say the East Bay, which `bbox` below says in its own
+     words this guide is not about. They were labelled `peninsula`, and
+     `castro-valley` had quietly become the second-largest zone in the
+     index on 542 places, most of them in Oakland. */
 
   const zone = {
     one:  'neighbourhood',
@@ -57,8 +69,34 @@ const City = (() => {
     allHeading: 'Everywhere',
     tile: k => (zone.names[k] || k),
 
+    /* How far a point may be from the nearest centroid and still be in
+       this city. The first pack to need one, and the reason is the
+       shape: `bbox` is a rectangle and the bay runs diagonally through
+       it, so a box that reaches Mountain View in the south necessarily
+       reaches Oakland in the north. There is no rectangle that says "SF
+       down to Mountain View" and nothing east of the water.
+
+       The zones can say it, because there are none over there. Measured
+       on the September index: 2,766 of 9,170 discovered places were east
+       of the bay, and each was labelled with the nearest San Francisco
+       zone across it — Montclair Branch Library, in Oakland, came back
+       as Rincon Hill, 16.5 km and a bridge away. 266 notable records
+       were more than 8 km from the zone they had been given.
+
+       Ten kilometres, chosen from the data rather than picked: it drops
+       2,325 of them and not one is in scope. The nearest in-scope
+       records to the line are the hill places above Woodside and Portola
+       Valley at 8–9 km, genuinely that far from anywhere with a name,
+       and they stay.
+
+       What it does not fix, stated so nobody thinks it does: 441 East
+       Bay places sit within 10 km of a San Francisco centroid, because
+       the Oakland and Alameda waterfronts genuinely are that close to
+       Hunters Point as the crow flies. A distance cannot tell water from
+       road. Those want a boundary, not a radius. */
+    limitKm: 10,
+
     centroids: {
-      'alvarado': [37.59649, -122.07893],
       'anza-vista': [37.78084, -122.44315],
       'atherton': [37.45377, -122.20583],
       'balboa-terrace': [37.73171, -122.46857],
@@ -68,12 +106,9 @@ const City = (() => {
       'bernal-heights': [37.741, -122.41421],
       'brisbane': [37.68717, -122.40279],
       'burlingame': [37.5781, -122.34731],
-      'castro-valley': [37.69455, -122.08574],
-      'centerville-district': [37.5541, -121.99913],
       'cole-valley': [37.76581, -122.44996],
       'cow-hollow': [37.79726, -122.43625],
       'daly-city': [37.69048, -122.47267],
-      'decoto': [37.60259, -122.02141],
       'diamond-heights': [37.74229, -122.43921],
       'dogpatch': [37.7607, -122.3892],
       'duboce-triangle': [37.76714, -122.43223],
@@ -83,11 +118,9 @@ const City = (() => {
       'forest-hill': [37.74743, -122.46358],
       'forest-knolls': [37.75427, -122.45895],
       'foster-city': [37.56003, -122.26885],
-      'fremont': [37.54827, -121.98857],
       'golden-gate-heights': [37.75459, -122.4709],
       'half-moon-bay': [37.46355, -122.42859],
       'hayes-valley': [37.77669, -122.42294],
-      'hayward': [37.66882, -122.0808],
       'hillsborough': [37.55725, -122.36253],
       'hunters-point': [37.72677, -122.37157],
       'ingleside-terraces': [37.72462, -122.46815],
@@ -106,7 +139,6 @@ const City = (() => {
       'mission': [37.75993, -122.41914],
       'mount-davidson-manor': [37.72828, -122.46397],
       'mountain-view': [37.38939, -122.08321],
-      'newark': [37.52966, -122.04024],
       'noe-valley': [37.75159, -122.43208],
       'north-beach': [37.80117, -122.409],
       'north-fair-oaks': [37.47571, -122.20174],
@@ -141,7 +173,6 @@ const City = (() => {
       'sunset-district': [37.75354, -122.49525],
       'telegraph-hill': [37.80078, -122.40409],
       'top-of-the-hill': [37.7054, -122.46193],
-      'union-city': [37.58726, -122.02157],
       'union-square': [37.78751, -122.40716],
       'west-portal': [37.74034, -122.46637],
       'west-soma': [37.77681, -122.40844],
@@ -150,7 +181,6 @@ const City = (() => {
     },
 
     names: {
-      'alvarado': 'Alvarado',
       'anza-vista': 'Anza Vista',
       'atherton': 'Atherton',
       'balboa-terrace': 'Balboa Terrace',
@@ -160,12 +190,9 @@ const City = (() => {
       'bernal-heights': 'Bernal Heights',
       'brisbane': 'Brisbane',
       'burlingame': 'Burlingame',
-      'castro-valley': 'Castro Valley',
-      'centerville-district': 'Centerville District',
       'cole-valley': 'Cole Valley',
       'cow-hollow': 'Cow Hollow',
       'daly-city': 'Daly City',
-      'decoto': 'Decoto',
       'diamond-heights': 'Diamond Heights',
       'dogpatch': 'Dogpatch',
       'duboce-triangle': 'Duboce Triangle',
@@ -175,11 +202,9 @@ const City = (() => {
       'forest-hill': 'Forest Hill',
       'forest-knolls': 'Forest Knolls',
       'foster-city': 'Foster City',
-      'fremont': 'Fremont',
       'golden-gate-heights': 'Golden Gate Heights',
       'half-moon-bay': 'Half Moon Bay',
       'hayes-valley': 'Hayes Valley',
-      'hayward': 'Hayward',
       'hillsborough': 'Hillsborough',
       'hunters-point': 'Hunters Point',
       'ingleside-terraces': 'Ingleside Terraces',
@@ -198,7 +223,6 @@ const City = (() => {
       'mission': 'Mission',
       'mount-davidson-manor': 'Mount Davidson Manor',
       'mountain-view': 'Mountain View',
-      'newark': 'Newark',
       'noe-valley': 'Noe Valley',
       'north-beach': 'North Beach',
       'north-fair-oaks': 'North Fair Oaks',
@@ -233,7 +257,6 @@ const City = (() => {
       'sunset-district': 'Sunset District',
       'telegraph-hill': 'Telegraph Hill',
       'top-of-the-hill': 'Top of the Hill',
-      'union-city': 'Union City',
       'union-square': 'Union Square',
       'west-portal': 'West Portal',
       'west-soma': 'West SoMa',
@@ -243,7 +266,6 @@ const City = (() => {
 
     /* city | peninsula */
     side: {
-      'alvarado': 'peninsula',
       'anza-vista': 'city',
       'atherton': 'peninsula',
       'balboa-terrace': 'city',
@@ -253,12 +275,9 @@ const City = (() => {
       'bernal-heights': 'city',
       'brisbane': 'peninsula',
       'burlingame': 'peninsula',
-      'castro-valley': 'peninsula',
-      'centerville-district': 'peninsula',
       'cole-valley': 'city',
       'cow-hollow': 'city',
       'daly-city': 'peninsula',
-      'decoto': 'peninsula',
       'diamond-heights': 'city',
       'dogpatch': 'city',
       'duboce-triangle': 'city',
@@ -268,11 +287,9 @@ const City = (() => {
       'forest-hill': 'city',
       'forest-knolls': 'city',
       'foster-city': 'peninsula',
-      'fremont': 'peninsula',
       'golden-gate-heights': 'city',
       'half-moon-bay': 'peninsula',
       'hayes-valley': 'city',
-      'hayward': 'peninsula',
       'hillsborough': 'peninsula',
       'hunters-point': 'city',
       'ingleside-terraces': 'city',
@@ -291,7 +308,6 @@ const City = (() => {
       'mission': 'city',
       'mount-davidson-manor': 'city',
       'mountain-view': 'peninsula',
-      'newark': 'peninsula',
       'noe-valley': 'city',
       'north-beach': 'city',
       'north-fair-oaks': 'peninsula',
@@ -326,7 +342,6 @@ const City = (() => {
       'sunset-district': 'city',
       'telegraph-hill': 'city',
       'top-of-the-hill': 'city',
-      'union-city': 'peninsula',
       'union-square': 'city',
       'west-portal': 'city',
       'west-soma': 'city',
@@ -449,9 +464,51 @@ const City = (() => {
      them. */
   const bbox = '37.33,-122.55,37.84,-121.98';
 
+  /* ---------- Luma ----------
+
+     The Bay's real source for anything with a date on it that is not a
+     museum or a library, and the one place in this pack where the Bay
+     is richer than Paris: `luma.com/sf` is a discovery calendar fifty
+     events deep at any time, every one carrying a GEO pin. Checked and
+     found to have no discovery id of their own: `luma.com/paloalto`,
+     `luma.com/bay-area`, `luma.com/san-francisco` — the Peninsula has no
+     calendar, and what is on down there arrives through this one.
+
+     Read by two scripts, split by one rule. practices.mjs takes the tech
+     and AI evenings, as it does for Paris. events-bay.mjs takes the rest
+     — the reading in the park, the makers market, the transit art fair.
+     In Paris the city's own feed covers those and Luma's copies can be
+     discarded; here nothing else covers them, so discarding them would
+     throw away half the calendar. */
+  const luma = [['discover', 'discplace-BDj7GNbGlsF7Cka', 'Luma — San Francisco']];
+
+  /* ---------- what is on ----------
+
+     Read by scripts/events-city.mjs. These two are local institutions
+     rather than anything a script could guess at: Stanford runs a
+     Localist calendar that is the Peninsula's only dated source, and
+     Our415 is DataSF's programme feed, whose library half is the only
+     part an adult would go to. Luma is declared above and read by both
+     collectors. */
+  const events = { localist: 'https://events.stanford.edu', our415: true };
+
+  /* ---------- what you could take up ----------
+
+     Read by scripts/practices.mjs. `city` is Our415's Rec & Park half,
+     and it is small for a reason worth knowing before anybody widens it.
+     Seventy of its adult rows recur on stated weekdays; sixty of those
+     are basketball, table tennis, pickleball and the weight room. They
+     are real and free and belong on the Sport tab — Paris keeps sport
+     out of practices on purpose, for the reason written in
+     practices.mjs — so what is left is the dance and art classes, which
+     is a handful. The library half does not repeat inside the month
+     Our415 publishes, so it has no rhythm to read and stays in
+     events-city.json. */
+  const practices = { city: 'our415' };
+
   const serviceWorker = false;
 
-  return { id, name, ua, bbox, serviceWorker, zone, bases, climate, reach,
+  return { id, name, searchRegion, ua, bbox, serviceWorker, zone, bases, climate, reach, practices, luma, events,
            centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
 })();
 

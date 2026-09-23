@@ -1,4 +1,4 @@
-name: Refresh Paris data
+name: Refresh city data
 
 # Keeps the site honest: drops events that have already happened and
 # fails the build if any record is malformed. Runs every morning so the
@@ -10,11 +10,20 @@ on:
   workflow_dispatch:           # lets you run it by hand from the Actions tab
   push:
     paths:
-      # Paris's data and page, which is what this workflow refreshes.
-      # The other three cities have no automated sources wired up yet.
+      # All four now: every city has at least a Luma calendar, and the
+      # collectors run for whichever sources its pack declares.
       - 'paris/data/**'
       - 'paris/index.html'
       - 'paris/city.js'
+      - 'bay-area/data/**'
+      - 'bay-area/index.html'
+      - 'bay-area/city.js'
+      - 'delhi/data/**'
+      - 'delhi/city.js'
+      - 'bengaluru/data/**'
+      - 'bengaluru/city.js'
+      - 'new-york/data/**'
+      - 'new-york/city.js'
       - 'css/**'
       - 'js/**'
       - 'scripts/**'
@@ -40,7 +49,9 @@ jobs:
       # On a pull request we only validate; we never rewrite someone's branch.
       - name: Validate data
         if: github.event_name == 'pull_request'
-        run: node scripts/refresh.mjs --check
+        run: |
+          node scripts/refresh.mjs --check
+          HOMEGROUND_CITY=bay-area node scripts/refresh.mjs --check
 
       # Events are the one layer that genuinely changes daily — the city
       # adds and withdraws listings all week, and an events section that
@@ -64,9 +75,41 @@ jobs:
         if: github.event_name == 'schedule'
         run: node scripts/practices.mjs || echo "practices skipped — a source was unavailable"
 
+      # The Bay Area's own daily sources. Stanford's calendar and the
+      # library's move as fast as the Mairie's do, and Luma faster —
+      # `luma.com/sf` is a rolling fifty, so a week-old copy of it is
+      # mostly events that have already happened.
+      #
+      # Same best-effort contract as the two above, and the scripts hold
+      # it themselves: each half keeps the last run's records when its
+      # source is unreachable, and a run where everything fails leaves the
+      # file untouched rather than emptying it.
+      # The other three cities, from whatever each pack declares. Every
+      # one has a Luma calendar and Luma is a rolling fortnight, so a
+      # week-old copy is mostly events that have already happened. The
+      # scripts hold the best-effort contract themselves: a half whose
+      # source is unreachable keeps the last run's records, and a run
+      # where everything fails leaves the file untouched.
+      - name: Collect what is on, city by city (daily)
+        if: github.event_name == 'schedule'
+        run: |
+          for city in bay-area delhi bengaluru new-york; do
+            HOMEGROUND_CITY=$city node scripts/events-city.mjs \
+              || echo "$city events skipped — a source was unavailable"
+            HOMEGROUND_CITY=$city node scripts/practices.mjs \
+              || echo "$city practices skipped — a source was unavailable"
+          done
+
+      # Pruning is per city, because refresh.mjs reads the one it is told
+      # about. Running it for Paris alone is how the Bay Area's expired
+      # events would have survived in the file — invisible on the page,
+      # since expiry is applied when records are built, but never cleaned.
       - name: Prune expired entries and validate
         if: github.event_name != 'pull_request'
-        run: node scripts/refresh.mjs
+        run: |
+          for city in paris bay-area delhi bengaluru new-york; do
+            HOMEGROUND_CITY=$city node scripts/refresh.mjs
+          done
 
       # OpenStreetMap does not change fast enough to justify a daily crawl,
       # and Overpass throttles hard. Mondays only.
@@ -79,6 +122,11 @@ jobs:
             node scripts/civic.mjs    || echo "civic data skipped — opendata.paris.fr unavailable"
             node scripts/notable.mjs  || echo "notable layer skipped — Wikidata unavailable"
             node scripts/invaders.mjs || echo "invaders skipped — Overpass unavailable"
+            HOMEGROUND_CITY=bay-area node scripts/civic-bay.mjs || echo "bay civic skipped — data.sfgov.org unavailable"
+            for city in bay-area delhi bengaluru new-york; do
+              HOMEGROUND_CITY=$city node scripts/discover.mjs || echo "$city discovery skipped — Overpass unavailable"
+              HOMEGROUND_CITY=$city node scripts/notable.mjs  || echo "$city notable skipped — Wikidata unavailable"
+            done
           else
             echo "not Monday — discovery index left alone"
           fi
@@ -93,7 +141,11 @@ jobs:
       # Only genuinely new records cost a request.
       - name: Resolve photographs for the generated tiers
         if: github.event_name != 'pull_request'
-        run: node scripts/photos.mjs || echo "photos skipped — Wikimedia unavailable"
+        run: |
+          for city in paris bay-area delhi bengaluru new-york; do
+            HOMEGROUND_CITY=$city node scripts/photos.mjs \
+              || echo "$city photos skipped — Wikimedia unavailable"
+          done
 
       # The "is it open" filter acts on a parser that deliberately refuses
       # what it cannot read. This fails if the share of Paris it can read
@@ -122,15 +174,19 @@ jobs:
         # every city's page or three of them point at a hash that is gone.
         run: node scripts/version.mjs --all
 
+      # permit-places.json is New York's geocoding cache: every crossing
+      # OpenStreetMap has already been asked about. Left out, each run
+      # would ask again about every block added since it was last
+      # committed by hand, and that list only grows.
       - name: Commit any changes
         if: github.event_name != 'pull_request'
         run: |
-          if [ -z "$(git status --porcelain paris delhi bengaluru bay-area scripts/photo-cache.json)" ]; then
+          if [ -z "$(git status --porcelain paris delhi bengaluru bay-area new-york scripts/photo-cache.json scripts/permit-places.json)" ]; then
             echo "Nothing changed — no events expired and assets already stamped."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add paris delhi bengaluru bay-area scripts/photo-cache.json
+          git add paris delhi bengaluru bay-area new-york scripts/photo-cache.json scripts/permit-places.json
           git commit -m "chore: prune expired events and restamp assets ($(date -u +%Y-%m-%d))"
           git push
