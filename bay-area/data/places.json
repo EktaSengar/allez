@@ -313,7 +313,215 @@
         -122.1611
       ],
       "coordsFrom": "the building at 310–318 University Avenue (osm way/133116320); the shop itself is not mapped yet",
-      "lastVerified": "2026-09-23"
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG/1280px-Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG",
+      "imageSubject": "Palo Alto, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "provenance": "editorial",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "uniqueness": 4,
+      "quality": 4,
+      "id": "filbert-steps",
+      "title": "The Filbert Steps",
+      "emoji": "🪜",
+      "type": "walk",
+      "categories": [
+        "outdoors",
+        "free",
+        "walk"
+      ],
+      "zone": "telegraph-hill",
+      "area": "Filbert Street, below Coit Tower",
+      "durationMin": 30,
+      "why": "Wooden stairs down the steep east side of Telegraph Hill, where the street gives out, through cottage gardens residents have tended for decades. You can't see them from anywhere else in the city. Go down them rather than up.",
+      "goodFor": [
+        "walk",
+        "couple"
+      ],
+      "url": "https://en.wikipedia.org/wiki/Filbert_Street_(San_Francisco)",
+      "source": "Wikipedia; confirmed against OpenStreetMap (way/1437026588)",
+      "coords": [
+        37.80209,
+        -122.40333
+      ],
+      "coordsFrom": "osm way/1437026588",
+      "labels": [
+        "hiddengem"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/FilbertStreetAndGrantAvenueLookingTowardsCoitTowerAndGarfieldElementarySchool.jpg/1280px-FilbertStreetAndGrantAvenueLookingTowardsCoitTowerAndGarfieldElementarySchool.jpg",
+      "imageSubject": "Filbert Street (San Francisco)",
+      "imageKind": "subject",
+      "imageCredit": "Goodshoped35110s · Public domain"
+    },
+    {
+      "provenance": "editorial",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "uniqueness": 4,
+      "quality": 4,
+      "id": "sutro-baths",
+      "title": "Sutro Baths ruins",
+      "emoji": "🏛️",
+      "type": "walk",
+      "categories": [
+        "outdoors",
+        "free",
+        "culture"
+      ],
+      "zone": "richmond-district",
+      "area": "Lands End, Point Lobos Avenue",
+      "durationMin": 45,
+      "why": "The concrete ruins of an enormous Victorian bathhouse, opened in 1896, which burned in 1966. It sits in a cove at the edge of the Pacific below Lands End. You can walk the old walls and the tunnel through the rock. It is best at sunset, and it is part of the national recreation area, so it's free.",
+      "goodFor": [
+        "outdoors",
+        "couple",
+        "evening"
+      ],
+      "url": "https://www.nps.gov/goga/learn/historyculture/sutro-baths.htm",
+      "source": "National Park Service; Wikipedia; confirmed against OpenStreetMap (way/32776564)",
+      "coords": [
+        37.78025,
+        -122.51363
+      ],
+      "coordsFrom": "osm way/32776564",
+      "labels": [
+        "hiddengem"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Sutro_Baths_in_San_Francisco.jpg",
+      "imageSubject": "Sutro Baths",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "provenance": "editorial",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "uniqueness": 4,
+      "quality": 4,
+      "id": "wave-organ",
+      "title": "The Wave Organ",
+      "emoji": "🎶",
+      "type": "walk",
+      "categories": [
+        "outdoors",
+        "free",
+        "culture"
+      ],
+      "zone": "cow-hollow",
+      "area": "The end of the Marina jetty",
+      "durationMin": 30,
+      "why": "An acoustic sculpture at the end of the Marina jetty: pipes set into granite and marble from a demolished cemetery, played by the waves. It is loudest at high tide and nearly silent at low, so check the tide first. It opened in 1986, and the view back across the harbour to the city is its own reason to go.",
+      "goodFor": [
+        "outdoors",
+        "couple"
+      ],
+      "url": "https://www.exploratorium.edu/visit/wave-organ",
+      "source": "Exploratorium; Wikipedia; confirmed against OpenStreetMap (node/590952130)",
+      "coords": [
+        37.80849,
+        -122.44021
+      ],
+      "coordsFrom": "osm node/590952130",
+      "labels": [
+        "hiddengem"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Wave_Organ_2.jpg/1280px-Wave_Organ_2.jpg",
+      "imageSubject": "Wave Organ",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "provenance": "editorial",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-23",
+      "uniqueness": 4,
+      "quality": 4,
+      "id": "balmy-alley",
+      "title": "Balmy Alley murals",
+      "emoji": "🎨",
+      "type": "walk",
+      "categories": [
+        "outdoors",
+        "free",
+        "culture",
+        "art"
+      ],
+      "zone": "mission",
+      "area": "Between 24th and 25th Streets",
+      "durationMin": 20,
+      "why": "One block of the Mission, between 24th and 25th, painted end to end: garage doors and fences covered in murals since the early 1970s, many about Central America and the neighbourhood itself. They are repainted as they fade, so it is never the same twice. Walk it on the way to 24th Street's bakeries and taquerías.",
+      "goodFor": [
+        "walk",
+        "culture"
+      ],
+      "url": "https://en.wikipedia.org/wiki/Balmy_Alley",
+      "source": "Wikipedia; Precita Eyes; confirmed against OpenStreetMap (way/8920344)",
+      "coords": [
+        37.75177,
+        -122.41241
+      ],
+      "coordsFrom": "osm way/8920344",
+      "labels": [
+        "hiddengem"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Mission_High_School_%28cropped%29.jpg/1280px-Mission_High_School_%28cropped%29.jpg",
+      "imageSubject": "Mission District, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "equator-fort-mason",
+      "title": "Equator Coffees — Fort Mason",
+      "emoji": "☕",
+      "type": "cafe",
+      "categories": [
+        "food",
+        "cafe"
+      ],
+      "zone": "cow-hollow",
+      "area": "2 Marina Boulevard, at the Fort Mason gate",
+      "why": "Loved the views here, and the energy is unmatched. The café is in the old Army gatehouse at the entrance to Fort Mason, right on the Bay Trail, looking straight across the water to the Golden Gate Bridge. People on bikes and runners stop on their way along the waterfront. Come in the morning for an espresso, or late in the day to watch the sunset over the bridge.",
+      "goodFor": [
+        "food",
+        "morning",
+        "afternoon",
+        "outdoors",
+        "relax",
+        "couple"
+      ],
+      "indoor": false,
+      "labels": [
+        "outdoor"
+      ],
+      "quality": 5,
+      "uniqueness": 5,
+      "url": "https://www.equatorcoffees.com/blogs/cafes/fort-mason",
+      "coords": [
+        37.80672,
+        -122.43181
+      ],
+      "coordsFrom": "Fort Mason Center (osm node/358857198); the café is at its entrance and is not mapped itself",
+      "lastVerified": "2026-09-23",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/FortMasonWharves.JPG/1280px-FortMasonWharves.JPG",
+      "imageSubject": "Fort Mason",
+      "imageKind": "context",
+      "imageCredit": "Original uploader was SuperJumbo at en.wikipedia · CC BY-SA 3.0"
     }
   ]
 }

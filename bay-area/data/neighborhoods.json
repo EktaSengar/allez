@@ -1,7 +1,7 @@
 {
  "generated": "2026-09-23",
  "home": "north-beach",
- "note": "One profile per town on the Peninsula, written from what is on the site. The city side is not done yet. `minutesFromHome` is recomputed from wherever you are.",
+ "note": "One profile per neighbourhood or town, written from what is on the site. `minutesFromHome` is recomputed from wherever you are.",
  "items": [
   {
    "zone": "palo-alto",
@@ -57,6 +57,88 @@
    ],
    "culture": "Linden Tree Books, the children's bookshop on State Street",
    "food": "Chef Chu's, open since 1970 on San Antonio Road"
+  },
+  {
+   "zone": "mission",
+   "name": "Mission",
+   "minutesFromHome": 15,
+   "famousFor": "Murals, taquerías, Dolores Park and the coffee that started San Francisco on specialty",
+   "streets": [
+    "Valencia Street",
+    "24th Street",
+    "Balmy Alley"
+   ],
+   "cafe": "Ritual on Valencia, the room that started the city on specialty coffee in 2005",
+   "bakery": "Tartine on Guerrero — the morning bun, and it sells out",
+   "park": "Dolores Park — the city lies on this hill on any warm afternoon",
+   "unusual": "Balmy Alley, one block of murals repainted by Mission artists for decades",
+   "food": "La Taqueria on Mission Street — ask for the burrito dorado",
+   "walk": "24th Street → Balmy Alley → up Valencia → Dolores Park"
+  },
+  {
+   "zone": "north-beach",
+   "name": "North Beach",
+   "minutesFromHome": 0,
+   "famousFor": "Little Italy, the Beats, and City Lights",
+   "streets": [
+    "Columbus Avenue",
+    "Grant Avenue",
+    "Stockton Street"
+   ],
+   "bakery": "Good Mong Kok on Stockton — dim sum by the piece, cash, point through the glass",
+   "culture": "City Lights, the bookshop Lawrence Ferlinghetti founded in 1953",
+   "park": "Washington Square, under the church",
+   "food": "Tommaso's on Kearny — the first wood-fired pizza oven on the West Coast, lit in 1935",
+   "walk": "Washington Square → Filbert Street → the Filbert Steps → Coit Tower",
+   "hidden": "The Filbert Steps — wooden stairs down Telegraph Hill through cottage gardens"
+  },
+  {
+   "zone": "hayes-valley",
+   "name": "Hayes Valley",
+   "minutesFromHome": 15,
+   "famousFor": "Patricia's Green and the independent shops of Hayes Street",
+   "streets": [
+    "Hayes Street",
+    "Octavia Street",
+    "Gough Street"
+   ],
+   "park": "Patricia's Green, built where the freeway used to be",
+   "culture": "The symphony and the opera, a block away at Civic Center"
+  },
+  {
+   "zone": "inner-richmond",
+   "name": "Inner Richmond",
+   "minutesFromHome": 20,
+   "famousFor": "Clement Street, and the north side of Golden Gate Park",
+   "streets": [
+    "Clement Street"
+   ],
+   "culture": "Green Apple Books on Clement, since 1967, new and used shelved together",
+   "park": "Golden Gate Park, a few blocks south"
+  },
+  {
+   "zone": "outer-sunset",
+   "name": "Outer Sunset",
+   "minutesFromHome": 25,
+   "famousFor": "Ocean Beach, fog, and the surf end of the city",
+   "streets": [
+    "Judah Street",
+    "Taraval Street"
+   ],
+   "cafe": "Andytown on Taraval — ask for a Snowy Plover",
+   "park": "Ocean Beach, three miles of it",
+   "hidden": "Sutro Baths and Lands End, at the north end of the beach"
+  },
+  {
+   "zone": "cow-hollow",
+   "name": "Cow Hollow",
+   "minutesFromHome": 15,
+   "famousFor": "Union Street, and the Marina and the waterfront below it",
+   "streets": [
+    "Union Street",
+    "Chestnut Street"
+   ],
+   "hidden": "The Wave Organ, at the end of the jetty — the sea plays it at high tide"
   }
  ]
 }

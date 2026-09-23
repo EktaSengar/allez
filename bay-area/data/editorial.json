@@ -1020,8 +1020,7 @@
    "cuisine": null,
    "categories": [
     "food",
-    "bakery",
-    "dessert"
+    "bakery"
    ],
    "match": {
     "name": "Marvel Cake",
@@ -1052,8 +1051,7 @@
    "cuisine": null,
    "categories": [
     "food",
-    "bakery",
-    "dessert"
+    "bakery"
    ],
    "match": {
     "name": "Susie Cakes",
@@ -1068,6 +1066,163 @@
    ],
    "labels": [],
    "source": "susiecakes.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-caffe-trieste-75597--244815",
+   "title": "Caffe Trieste",
+   "type": "cafe",
+   "zone": "north-beach",
+   "coords": [
+    37.79867,
+    -122.4073
+   ],
+   "area": "Vallejo Street",
+   "url": "https://caffetrieste.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Caffe Trieste",
+    "zone": "north-beach",
+    "type": "cafe"
+   },
+   "why": "The first espresso house on the West Coast. Giovanni Giotta opened it in 1956 because he missed the coffee of Trieste. It became the Beats' café, with Kerouac and Ferlinghetti, and Francis Ford Coppola wrote much of The Godfather screenplay at a table in the corner. Order a cappuccino and sit. It is about the room more than the cup.",
+   "quality": 4,
+   "uniqueness": 5,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "hiddengem"
+   ],
+   "source": "Wikipedia; caffetrieste.com; 7x7; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-sightglass-coffee-75554--244817",
+   "title": "Sightglass Coffee",
+   "type": "cafe",
+   "zone": "west-soma",
+   "coords": [
+    37.77703,
+    -122.40844
+   ],
+   "area": "7th Street",
+   "url": "https://sightglasscoffee.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sightglass Coffee",
+    "zone": "west-soma",
+    "type": "cafe"
+   },
+   "why": "The Morrison brothers' flagship: a roastery in a big SoMa warehouse on 7th Street, open since 2010. They started with a coffee cart the year before. The roaster works in the middle of the room, and there is a loft with seating above the bar, which makes it one of the few serious coffee rooms where you can stay and work.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "work"
+   ],
+   "labels": [],
+   "source": "sightglasscoffee.com; Food GPS; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-four-barrel-coffee-75534--244844",
+   "title": "Four Barrel Coffee",
+   "type": "cafe",
+   "zone": "mission",
+   "coords": [
+    37.76702,
+    -122.42193
+   ],
+   "area": "Valencia Street",
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Four Barrel Coffee",
+    "zone": "mission",
+    "type": "cafe"
+   },
+   "why": "One of the roasters that started San Francisco’s specialty coffee movement, on Valencia since 2008. Walk it together with Ritual, a few blocks up the same street, and taste the two side by side.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Wikipedia; fourbarrelcoffee.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-the-coffee-movement-75590--244821",
+   "title": "The Coffee Movement",
+   "type": "cafe",
+   "zone": "north-beach",
+   "coords": [
+    37.79475,
+    -122.4103
+   ],
+   "area": "Washington Street",
+   "url": "https://www.thecoffeemovement.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Coffee Movement",
+    "zone": "north-beach",
+    "type": "cafe"
+   },
+   "why": "A tiny standing-room shop on Washington Street, between Chinatown and Nob Hill. It is one of the city's most talked-about coffee counters. Order the tasting flight: three of the day's coffees, brewed different ways side by side. It isn't somewhere to stay with a laptop. Have one very good cup, talk to the baristas, and walk on.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Eater SF (January 2026); Food & Wine; Filter Notes; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-23"
+  },
+  {
+   "id": "osm-kopiku-75602--244851",
+   "title": "Kopiku",
+   "type": "cafe",
+   "zone": "russian-hill",
+   "coords": [
+    37.80097,
+    -122.42536
+   ],
+   "area": "Lombard Street",
+   "url": "https://www.beanekacoffee.com/pages/our-location",
+   "cuisine": "indonesian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Kopiku",
+    "zone": "russian-hill",
+    "type": "cafe"
+   },
+   "why": "San Francisco's first Indonesian coffee shop, on Lombard. The beans come from small Indonesian farms through the owners' own roastery, Beaneka. Order the pandan latte, which is just sweet and tastes faintly of vanilla. The avocado coffee is the adventurous one. Pineapple tarts go with either.",
+   "quality": 4,
+   "uniqueness": 5,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "San Francisco Chronicle; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-23"
   }
  ]
