@@ -49,7 +49,7 @@ const App = (() => {
   let CLIM = null;
   let CLIMP = null;
   let VIEW = 'today';
-  let HOME = { label: 'Paris' };        // replaced by the location engine
+  let HOME = { label: City.name };        // replaced by the location engine
   let DISCOVERED = [];                  // OpenStreetMap layer, positions only
 
   const $  = s => document.querySelector(s);
@@ -101,11 +101,15 @@ const App = (() => {
 
   /* One line under the wordmark, chosen by the date so it changes daily
      but stays the same all day. Written for the two of them, not for a
-     brochure — the aim is a nudge out of the door, not a poem. */
+     brochure — the aim is a nudge out of the door, not a poem.
+
+     Only lines true in any city live here. Three used to name Paris —
+     the canal, the second look, the arrondissement worth crossing town
+     for — and New York was greeted with the arrondissement. They are
+     Paris's own now, in `City.epigraphs`, and a pack with lines of its
+     own adds them the same way. */
   const EPIGRAPHS = [
     'Somewhere to walk, and each other to walk with. That is the whole plan.',
-    'The canal is four minutes away and the light is best around seven.',
-    'Paris rewards the second look more than the first. Go somewhere twice.',
     'Nothing here needs booking. Put your shoes on and see what happens.',
     'The best evenings start with no particular destination.',
     'You live here. That means the good things can wait for a Tuesday.',
@@ -115,9 +119,8 @@ const App = (() => {
     'The city is at its best when you are not trying to see it.',
     'Go for the bread. Stay for the afternoon.',
     'A short trip you actually take beats the grand one you keep postponing.',
-    'Sit by the water. Let the evening do the rest.',
-    'Every arrondissement has one thing worth crossing town for.'
-  ];
+    'Sit by the water. Let the evening do the rest.'
+  ].concat(City.epigraphs || []);
 
   function epigraph() {
     const start = new Date(TODAY.getFullYear(), 0, 0);
@@ -1485,7 +1488,7 @@ const App = (() => {
       <div class="inv-score">
         <div class="inv-stat"><b>${p.found}</b><span>found</span></div>
         <div class="inv-stat"><b>${p.total}</b><span>on the map</span></div>
-        ${p.zones ? `<div class="inv-stat"><b>${p.zones}</b><span>${p.zones === 1 ? 'arrondissement' : 'arrondissements'}</span></div>` : ''}
+        ${p.zones ? `<div class="inv-stat"><b>${p.zones}</b><span>${p.zones === 1 ? City.zone.one : City.zone.many}</span></div>` : ''}
       </div>`;
 
     const list = near.length ? `
@@ -1559,7 +1562,7 @@ const App = (() => {
     const games = pool.filter(isCityGame);
     if (!games.length) return '';
     return stripHead('Active city exploration',
-                     'Sport that is really just leaving the flat and moving around Paris')
+                     `Sport that is really just leaving the flat and moving around ${City.name}`)
       + games.map(g => `
           <div class="citygame">
             <div class="citygame-head">
@@ -1634,7 +1637,7 @@ const App = (() => {
           : '')
       + foundStrip(local.found, Loc.displayName(Loc.active()))
       + (allRuns.length
-          ? stripHead('Run Paris', 'Nearest first, and getting longer')
+          ? stripHead(`Run ${City.name}`, 'Nearest first, and getting longer')
             + (runs.length ? `<div class="routes">${runs.map(routeCard).join('')}</div>` : '')
             + (plainRuns.length ? rows(plainRuns, null, true) : '')
           : '')
@@ -1683,8 +1686,8 @@ const App = (() => {
 
     const tiers = [
       ['near',  `Near ${Loc.displayName(Loc.active())}`, `Within about ${WIDER_MIN} minutes`],
-      ['worth', 'Worth crossing Paris for', 'Distance is not the point'],
-      ['around','Elsewhere in Paris', 'Further out, still worth knowing']
+      ['worth', `Worth crossing ${City.name} for`, 'Distance is not the point'],
+      ['around',`Elsewhere in ${City.name}`, 'Further out, still worth knowing']
     ];
 
     return (big ? hero(big) : '')
@@ -2032,7 +2035,7 @@ const App = (() => {
     return moodBar
       + (lead ? missionCard(lead, true) : '')
       + (rest.length
-          ? stripHead(away === rest.length ? 'Missions elsewhere in Paris' : 'More missions',
+          ? stripHead(away === rest.length ? `Missions elsewhere in ${City.name}` : 'More missions',
                       'Written for a particular set of streets — the walk is the point')
             + `<div class="missions">${rest.map(m => missionCard(m)).join('')}</div>`
           : '');

@@ -9,8 +9,9 @@
    what a neighbourhood is called, how money is written or when the shops
    shut, it asks here. A second city is a second one of these, not a fork.
 
-   Not here: the voice (every `why` and epigraph — hand-written, and the
-   point of the site), the data (already per-city), and index.html, which
+   Not here: the voice (every `why` — hand-written, and the point of the
+   site; the epigraphs that only make sense in Paris are the exception,
+   below), the data (already per-city), and index.html, which
    is Paris's own page down to the croissant.
    --------------------------------------------------------- */
 
@@ -291,7 +292,15 @@ const City = (() => {
 
   const serviceWorker = true;
 
-  return { id, name, ua, bbox, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma };
+  /* The lines under the wordmark that are only true here. The engine
+     keeps the ones that are true anywhere and adds these to them. */
+  const epigraphs = [
+    'The canal is four minutes away and the light is best around seven.',
+    'Paris rewards the second look more than the first. Go somewhere twice.',
+    'Every arrondissement has one thing worth crossing town for.'
+  ];
+
+  return { id, name, ua, bbox, epigraphs, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same

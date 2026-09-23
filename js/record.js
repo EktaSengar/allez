@@ -451,7 +451,10 @@ const Rec = (() => {
       })))
       .concat((D.civic?.items || []).map(p => Object.assign(fromCompact(p), {
         provenance: 'sourced',
-        source: 'Ville de Paris — opendata.paris.fr',
+        /* The file says who published it. This was a literal, and every
+           one of the Bay Area's 501 facilities was credited to the
+           Mairie de Paris. */
+        source: D.civic?.source || 'City open data',
         lastVerified: D.civic?.generated || null
       })));
 

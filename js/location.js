@@ -167,14 +167,20 @@ const Loc = (() => {
       // a quarter or suburb if OSM knows one — never the house number
       area: a.suburb || a.quarter || a.neighbourhood || a.city_district || null,
       label: (hit.display_name || '').split(',')[0],
-      city: a.city || a.town || a.municipality || 'Paris'
+      city: a.city || a.town || a.municipality || City.name
     };
   }
 
+  /* Searched inside the pack's own box rather than by appending a city
+     name. The name was ", Paris, France", on every pack — so "Bedford
+     Ave" typed on the New York page went looking in Paris. Nominatim
+     wants the box as west,north,east,south; the pack keeps it the way
+     Overpass does, south,west,north,east. */
   async function search(query) {
-    const q = /paris|france/i.test(query) ? query : `${query}, Paris, France`;
+    const [s, w, n, e] = City.bbox.split(',');
     const url = 'https://nominatim.openstreetmap.org/search'
-      + `?q=${encodeURIComponent(q)}&format=json&limit=1&addressdetails=1`;
+      + `?q=${encodeURIComponent(query)}&format=json&limit=1&addressdetails=1`
+      + `&viewbox=${w},${n},${e},${s}&bounded=1`;
     const res = await fetch(url, { headers: { 'accept-language': 'en' } });
     if (!res.ok) throw new Error('Could not reach the place finder.');
     const [hit] = await res.json();
