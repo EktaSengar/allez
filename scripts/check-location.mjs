@@ -250,8 +250,10 @@ const EXPECT = {
     /* 137 of 160 on 18 September 2026, the day the editorial tier was
        written. What fails is the Peninsula — San Mateo, Sunnyvale and
        Palo Alto for coffee, bread and markets — which is exactly where
-       the guide has three records. */
-    floor: 137
+       the guide has three records. 143 on 22 September, after eight
+       researched records around University Avenue filled Palo Alto's
+       restaurant column; San Mateo and Sunnyvale are what is left. */
+    floor: 143
   },
   delhi: {
     probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],

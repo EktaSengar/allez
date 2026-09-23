@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-20",
+ "generated": "2026-09-23",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. Written against the holes the generated tiers cannot fill: Wikidata knows of three cafés and two bakeries in the whole Bay Area and no markets at all, and the Peninsula has almost nothing.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -522,6 +522,257 @@
    ],
    "source": "AllTrails; TrailLink; SFGate; existence and position confirmed against OpenStreetMap",
    "lastVerified": "2026-09-17"
+  },
+  {
+   "id": "osm-coupa-cafe-74857--244351",
+   "title": "Coupa Café",
+   "type": "cafe",
+   "zone": "palo-alto",
+   "coords": [
+    37.42833,
+    -122.17559
+   ],
+   "area": "Via Ortega Street",
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Coupa Café",
+    "zone": "palo-alto",
+    "type": "cafe"
+   },
+   "why": "Order an arepa and a Venezuelan hot chocolate, which is spiced and not sweet. Nancy Coupal lived in Caracas for twenty-seven years and opened this in 2004 to be near her children at Stanford. The Coupa kiosks on campus came later, from this shop. Go to the Ramona original, a 1930s building, rather than the newer Lytton branch by the station.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Palo Alto Online (twenty years, 2024); coupacafe.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-oklava-74890--244326",
+   "title": "Oklava",
+   "type": "bakery",
+   "zone": "palo-alto",
+   "coords": [
+    37.44493,
+    -122.16279
+   ],
+   "area": "University Avenue",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Oklava",
+    "zone": "palo-alto",
+    "type": "bakery"
+   },
+   "why": "A Turkish family bakery whose name means the rolling pin that baklava is made with. The case holds around twenty kinds, so buy a mixed box of pistachio, walnut and hazelnut rather than one slice of the classic. It also does a proper Turkish breakfast. And it stays open late enough to be somewhere to go after dinner on University.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Verde Magazine; Punch Magazine; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-palo-alto-farmer-s-market-74891--244318",
+   "title": "Palo Alto Farmer's Market",
+   "type": "market",
+   "zone": "palo-alto",
+   "coords": [
+    37.44536,
+    -122.15903
+   ],
+   "area": null,
+   "url": "https://www.pafarmersmarket.org/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Palo Alto Farmer's Market",
+    "zone": "palo-alto",
+    "type": "market"
+   },
+   "why": "Palo Alto's oldest farmers' market, on Gilman Street every Saturday since 1983. It is a small one — fruit, bread, cheese, eggs, fish and flowers — and it is run by volunteers who give the proceeds to Avenidas, the town's senior centre. Go early, before the good stone fruit is gone, and walk to University for coffee afterwards.",
+   "quality": 3,
+   "uniqueness": 3,
+   "days": [
+    6
+   ],
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "pafarmersmarket.org; Punch Magazine; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-palo-alto-creamery-74888--244324",
+   "title": "Palo Alto Creamery",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.44389,
+    -122.16177
+   ],
+   "area": "Emerson Street",
+   "url": "http://www.paloaltocreamery.com",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Palo Alto Creamery",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "A 1950s diner on Emerson and Hamilton, from a family dairy business that started here in 1923. Sit at the counter for a milkshake, and have a slice of pie, which the old Creamery fountain was famous for. It suits a weekend brunch with children, or anyone who is tired of small plates.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Verde Magazine (centennial); Nob Hill Gazette; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-ramen-nagi-74891--244321",
+   "title": "Ramen Nagi",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.44548,
+    -122.1607
+   ],
+   "area": "Bryant Street",
+   "url": "https://ramennagiusa.com/",
+   "cuisine": "japanese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Ramen Nagi",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "The first American branch of a Tokyo ramen shop, opened on Bryant Street in 2018. You tick boxes on a card for broth richness, noodle firmness, garlic and spice. Get the Original King, a pork-bone tonkotsu, and ask for the noodles firm. The queue is the price. Arrive before it opens or late in the afternoon, never at seven.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "The Infatuation; Ramen Club; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-tane-vegan-izakaya-74890--244326",
+   "title": "Tane Vegan Izakaya",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.445,
+    -122.16308
+   ],
+   "area": "Emerson Street",
+   "url": "https://www.tanevegan.com/",
+   "cuisine": "sushi",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Tane Vegan Izakaya",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "A small Japanese izakaya where everything is plant-based and nothing tastes like a compromise. The rolls are the point: order the Point Reyes, made with king oyster mushroom, and the Ewa, with enoki tempura and matcha salt. There are very few tables, so book even on a weeknight.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "HappyCow; trybayarea.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-bistro-maxine-74889--244323",
+   "title": "Bistro Maxine",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.44465,
+    -122.16137
+   ],
+   "area": "Ramona Street",
+   "url": null,
+   "cuisine": "french",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Bistro Maxine",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "A crêperie on Ramona, open since 2009, that began as the smallest restaurant in Palo Alto with a liquor licence. Order a savoury galette, then the crêpe Suzette, which is flambéed. The sidewalk tables are the closest thing downtown has to a Paris café.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "outdoors"
+   ],
+   "labels": [
+    "outdoor"
+   ],
+   "source": "bistromaxine.com; OpenTable; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
+  },
+  {
+   "id": "osm-scoop-microcreamery-74890--244326",
+   "title": "Scoop Microcreamery",
+   "type": "deli",
+   "zone": "palo-alto",
+   "coords": [
+    37.4449,
+    -122.16282
+   ],
+   "area": "University Avenue",
+   "url": null,
+   "cuisine": "ice_cream",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Scoop Microcreamery",
+    "zone": "palo-alto"
+   },
+   "why": "Small-batch ice cream frozen to order with liquid nitrogen, so it comes out denser than churned. The owners are home bakers, and the flavours show it: salted caramel with bourbon vanilla, or Biscoff and cream. It is the place for dessert after dinner on University.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "The Stanford Daily (April 2026); Palo Alto Online; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-22"
   }
  ]
 }
