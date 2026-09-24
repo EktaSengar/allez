@@ -297,6 +297,12 @@ const City = (() => {
      city and no venue, so this is the whole of the matching. */
   const conferences = ['Paris'];
 
+  /* Luma's own page for the calendar above. Its terms let us read the
+     calendar but not show what is in it, so Events links here instead —
+     a link is not a copy. Checked 24 September 2026: this is the page
+     for the same discovery id. */
+  const lumaPage = ['https://luma.com/paris', 'Paris'];
+
   const luma = [['discover', 'discplace-NdLrh1xJfeotJZC', 'Luma — What‘s Happening in Paris']];
 
   const serviceWorker = true;
@@ -323,7 +329,7 @@ const City = (() => {
      `buildings`: places drawn as a building outline as well as a pin. */
   const discover = { buildings: true };
 
-  return { id, name, ua, bbox, discover, epigraphs, nightNotes, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma, conferences };
+  return { id, name, ua, bbox, discover, epigraphs, nightNotes, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma, conferences, lumaPage };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same

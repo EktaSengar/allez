@@ -824,6 +824,12 @@ const City = (() => {
      city and no venue, so this is the whole of the matching. */
   const conferences = ['New York', 'Brooklyn', 'Manhattan', 'NYC'];
 
+  /* Luma's own page for the calendar above. Its terms let us read the
+     calendar but not show what is in it, so Events links here instead —
+     a link is not a copy. Checked 24 September 2026: this is the page
+     for the same discovery id. */
+  const lumaPage = ['https://luma.com/nyc', 'New York'];
+
   const luma = [['discover', 'discplace-Izx1rQVSh8njYpP', 'Luma — New York']];
 
   /* ---------- what is on, and what turned out not to be ----------
@@ -894,7 +900,7 @@ const City = (() => {
   const discover = { buildings: true };
 
   return { id, name, searchRegion, ua, bbox, discover, serviceWorker, zone, reach, centre, views,
-           holidays, shutsOnHoliday, money, weather, luma, conferences, events, practices };
+           holidays, shutsOnHoliday, money, weather, luma, conferences, lumaPage, events, practices };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;

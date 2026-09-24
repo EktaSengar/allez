@@ -131,8 +131,11 @@ async function developersEvents(log) {
   const soon = here.filter(e => iso(e.date.at(-1)) >= TODAY && iso(e.date[0]) <= UNTIL);
   log.push([soon.length, 'running now or soon']);
   return soon.map(e => {
+    /* Some tags describe the event rather than its subject — "a
+       conference on conference" is what those read as. */
     const topics = [...new Set((e.tags || []).filter(t => t.key === 'topic' || t.key === 'tech')
-      .map(t => t.value.replace(/-/g, ' ')))];
+      .map(t => t.value.replace(/-/g, ' ')))]
+      .filter(t => !/^(conference|conferences|event|events|general|technology|tech|summit|meetup)$/i.test(t));
     return record(e.name, iso(e.date[0]), iso(e.date.at(-1)), e.city || cityOf(e.location),
       e.hyperlink, topics, SOURCE.dev);
   });

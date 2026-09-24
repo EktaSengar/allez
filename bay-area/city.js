@@ -498,6 +498,12 @@ const City = (() => {
      city and no venue, so this is the whole of the matching. */
   const conferences = ['San Francisco', 'South San Francisco', 'Palo Alto', 'Menlo Park', 'Mountain View', 'Redwood City', 'San Mateo', 'Sunnyvale', 'Santa Clara', 'San Jose', 'Oakland', 'Berkeley'];
 
+  /* Luma's own page for the calendar above. Its terms let us read the
+     calendar but not show what is in it, so Events links here instead —
+     a link is not a copy. Checked 24 September 2026: this is the page
+     for the same discovery id. */
+  const lumaPage = ['https://luma.com/sf', 'San Francisco'];
+
   const luma = [
     ['discover', 'discplace-BDj7GNbGlsF7Cka', 'Luma — San Francisco'],
     ['calendar', 'cal-2BuL8o8ylVizd6x', 'Luma — Bay Area Founders Club'],
@@ -545,7 +551,7 @@ const City = (() => {
      most of University Avenue is drawn that way. */
   const discover = { buildings: true };
 
-  return { id, name, searchRegion, ua, bbox, nightNotes, discover, serviceWorker, zone, bases, climate, reach, practices, luma, conferences, events,
+  return { id, name, searchRegion, ua, bbox, nightNotes, discover, serviceWorker, zone, bases, climate, reach, practices, luma, conferences, lumaPage, events,
            centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
 })();
 
