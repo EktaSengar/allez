@@ -265,9 +265,11 @@ and `whenComplete()` is still awaited by anything that changes the question.
 
 ### Photographs
 
-Every card carries a picture from Wikimedia Commons, resolved at build time by
-`scripts/images.mjs` and baked into the JSON as a plain URL — so the browser
-makes no API call and nothing can rate-limit the page.
+The photographs are curated. Where one of us went, the card carries our own
+picture, placed by `scripts/own-photos.mjs` and credited "Our own photograph".
+Every other card carries a picture from Wikimedia Commons, resolved at build
+time by `scripts/images.mjs` and baked into the JSON as a plain URL — so the
+browser makes no API call and nothing can rate-limit the page.
 
 Commons renders a fixed set of thumbnail widths, and its 1280px rendering of a
 single card photograph is 696 KB. On a phone at 2.6 device pixels an honest

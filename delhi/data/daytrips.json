@@ -1,5 +1,474 @@
 {
-  "generated": "2026-09-14",
-  "note": "Agra, Jaipur, Neemrana, the Aravallis. NOT Gurugram or Noida — those are zones, not day trips.",
-  "items": []
+  "generated": "2026-09-24",
+  "note": "Times are from GK-1 and only a guide: the way out of Delhi can take as long as the road beyond it, and in winter fog closes the expressways at dawn. Where a train is faster, the card says so. Gurugram and Noida are zones, not day trips. Researched, not yet done — rate them as you go.",
+  "items": [
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "agra",
+      "title": "Agra and the Taj",
+      "emoji": "🕌",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 210,
+      "durationMin": 720,
+      "price": 250,
+      "priceNote": "About ₹250 for Indian visitors with the mausoleum; more for foreign ones",
+      "transit": "Gatimaan Express from Hazrat Nizamuddin, under 2 h; about 3 h 30 min by the Yamuna Expressway",
+      "why": "The Taj Mahal is not overrated, and seeing it at sunrise, before the crowd, is how to prove it. Add Agra Fort, where Shah Jahan spent his last years looking across the river at the tomb he built, and Itimad-ud-Daulah, the small marble tomb that came first. At sunset, Mehtab Bagh has the Taj from the far bank. The Taj is shut on Fridays; buy tickets online.",
+      "goodFor": [
+        "culture",
+        "couple",
+        "weekend",
+        "family"
+      ],
+      "labels": [
+        "dontmiss",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://www.tajmahal.gov.in/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg/1280px-Taj_Mahal%2C_Agra%2C_India_edit3.jpg",
+      "imageSubject": "Taj Mahal",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "fatehpur-sikri",
+      "title": "Fatehpur Sikri",
+      "emoji": "🏯",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 250,
+      "durationMin": 480,
+      "price": 50,
+      "priceNote": "Small ASI fee for the palaces; the mosque is free",
+      "transit": "Yamuna Expressway via Agra, about 4 h",
+      "why": "Akbar's red sandstone capital, built from 1571 and abandoned within fifteen years, forty minutes past Agra. The palaces are empty and intact. The great mosque beside them is anything but: through the Buland Darwaza, a gateway fifty-odd metres high, the white marble tomb of Salim Chishti still draws people tying threads to its screens for a wish. Do it with Agra if you start early, or on its own.",
+      "goodFor": [
+        "culture",
+        "weekend"
+      ],
+      "labels": [
+        "weekend"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Fatehpur_Sikri",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg/1280px-Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg",
+      "imageSubject": "Buland Darwaza",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "jaipur",
+      "title": "Jaipur",
+      "emoji": "🌸",
+      "categories": [
+        "daytrip",
+        "culture",
+        "food"
+      ],
+      "minutesFromHome": 300,
+      "durationMin": 2880,
+      "transit": "Trains from New Delhi in about 4 h 30 min; about 5 h on NH48",
+      "why": "Close enough for a weekend, far enough to feel like somewhere else. Amber Fort in the morning, before the heat and the coaches. The City Palace and the stone instruments of Jantar Mantar, which still tell the time, in the afternoon. Hawa Mahal from a café terrace opposite, and sunset from Nahargarh above the old city. Eat at LMB in Johari Bazaar and shop the bazaars for block prints. The morning trains are calmer than the drive.",
+      "goodFor": [
+        "culture",
+        "food",
+        "weekend",
+        "couple"
+      ],
+      "labels": [
+        "weekend",
+        "couple"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "url": "https://www.tourism.rajasthan.gov.in/jaipur.html",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg/1280px-20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg",
+      "imageSubject": "Amer Fort",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "abhaneri",
+      "title": "Chand Baori, Abhaneri",
+      "emoji": "🪜",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 270,
+      "durationMin": 360,
+      "price": 25,
+      "priceNote": "Small ASI fee",
+      "transit": "NH48 and the Dausa road, about 4 h 30 min; an hour and a half short of Jaipur",
+      "why": "A stepwell dug in the ninth century and thirteen storeys deep, three of its sides a geometry of about 3,500 narrow steps down to green water. It sits in a village off the Jaipur–Agra road, and it is the best reason on this map to take the long way to Jaipur. The Harshat Mata temple across the lane is from the same age.",
+      "goodFor": [
+        "culture",
+        "couple"
+      ],
+      "labels": [
+        "hiddengem"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "url": "https://www.tourism.rajasthan.gov.in/abhaneri.html",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Chand_Baori.png/1280px-Chand_Baori.png",
+      "imageSubject": "Chand Baori",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "neemrana",
+      "title": "Neemrana Fort-Palace",
+      "emoji": "🏰",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 150,
+      "durationMin": 360,
+      "priceNote": "Day pass with a meal; zipline extra",
+      "transit": "NH48 south-west, about 2 h 30 min",
+      "why": "A fort from 1464 on the Jaipur highway, restored as a hotel and stepped down its hillside in terraces. It is the easy Delhi escape: arrive for lunch, walk the ramparts and the courtyards, and ride the zipline over the fort and the Aravallis. Day visitors buy a pass, usually with a meal; stay the night and the place is quiet after dark.",
+      "goodFor": [
+        "couple",
+        "relax",
+        "weekend"
+      ],
+      "labels": [
+        "couple",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.tourism.rajasthan.gov.in/neemrana.html",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Neemrana_Fort_Palace_terrace_and_the_town_below.jpg/1280px-Neemrana_Fort_Palace_terrace_and_the_town_below.jpg",
+      "imageSubject": "Neemrana",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "sultanpur",
+      "title": "Sultanpur & Farrukhnagar",
+      "emoji": "🦢",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 90,
+      "durationMin": 300,
+      "priceNote": "Small entry fee",
+      "transit": "Past Gurugram on the Farrukhnagar road, about 1 h 30 min",
+      "why": "A shallow lake and scrub woodland on the far side of Gurugram, which from October to March fills with birds that winter here from Central Asia and Siberia: bar-headed geese, pintails, cranes, and flamingos in a good year. Arrive at opening and walk the loop around the water with binoculars. On the way back, stop at Farrukhnagar for the Ghaus Ali Shah baoli, an octagonal Mughal stepwell almost nobody has heard of.",
+      "goodFor": [
+        "outdoors",
+        "morning",
+        "couple"
+      ],
+      "labels": [
+        "hiddengem",
+        "outdoor"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Sultanpur_National_Park",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Sultanpur_National_Park_on_a_foggy_morning.jpg/1280px-Sultanpur_National_Park_on_a_foggy_morning.jpg",
+      "imageSubject": "Sultanpur National Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "keoladeo",
+      "title": "Keoladeo, Bharatpur",
+      "emoji": "🦩",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 225,
+      "durationMin": 480,
+      "priceNote": "Entry fee, plus the rickshaw or bicycle",
+      "transit": "Yamuna Expressway to Mathura, then west, about 3 h 45 min",
+      "why": "The marsh the Maharajas of Bharatpur kept for duck shoots, now a World Heritage site and one of the best places in Asia to watch birds. Hire a bicycle, or a cycle rickshaw whose driver has been trained by the park as a guide, and go slowly along the causeways between the water: painted storks, pelicans, owls, and in winter the migrants. November to February is the season. An easy pairing with Mathura or Agra.",
+      "goodFor": [
+        "outdoors",
+        "couple",
+        "weekend"
+      ],
+      "labels": [
+        "hiddengem",
+        "outdoor",
+        "weekend"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://www.tourism.rajasthan.gov.in/bharatpur.html",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Sheet_of_glass.jpg/1280px-Sheet_of_glass.jpg",
+      "imageSubject": "Keoladeo National Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": false,
+      "lastVerified": "2026-09-24",
+      "id": "mathura-vrindavan",
+      "title": "Mathura & Vrindavan",
+      "emoji": "🪈",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 180,
+      "durationMin": 480,
+      "price": 0,
+      "priceNote": "Free",
+      "transit": "Yamuna Expressway, about 3 h",
+      "why": "Krishna's country, three hours down the Yamuna Expressway. Mathura has the temple on his birthplace; Vrindavan, a few kilometres on, has thousands more, and the one everybody goes to is Banke Bihari, where the curtain before the image is drawn shut every few minutes so no one looks too long. In March the villages around them hold the most famous Holi in India, Barsana's Lathmar Holi, with sticks. The crowds are the point here; go knowing that.",
+      "goodFor": [
+        "culture",
+        "family"
+      ],
+      "labels": [
+        "weekend"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Vrindavan",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Banke_Bihari_Vrindavan.jpg/1280px-Banke_Bihari_Vrindavan.jpg",
+      "imageSubject": "Banke Bihari Temple",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "rishikesh-haridwar",
+      "title": "Haridwar & Rishikesh",
+      "emoji": "🌊",
+      "categories": [
+        "daytrip",
+        "outdoors",
+        "culture"
+      ],
+      "minutesFromHome": 330,
+      "durationMin": 2880,
+      "priceNote": "Free to wander; rafting from a few hundred rupees",
+      "transit": "Trains to Haridwar in about 4 h 30 min; 5 h 30 min by road",
+      "why": "The Ganga coming out of the hills. Haridwar has the evening aarti at Har Ki Pauri: fire, bells, and thousands on the ghats. Rishikesh, forty minutes further, has the bridges, the ashrams, the cafés, and rafting on the river from about September to June. The ashram where the Beatles stayed in 1968 is a painted ruin you can walk through. Take the train to Haridwar and skip the drive.",
+      "goodFor": [
+        "outdoors",
+        "culture",
+        "weekend",
+        "friends"
+      ],
+      "labels": [
+        "weekend"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://uttarakhandtourism.gov.in/destination/rishikesh",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Evening_view_of_Har-ki-Pauri%2C_Haridwar.jpg",
+      "imageSubject": "Har Ki Pauri",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "landour",
+      "title": "Landour",
+      "emoji": "🌲",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 420,
+      "durationMin": 2880,
+      "transit": "Train to Dehradun and a taxi up, or about 7 h by road",
+      "why": "Above Mussoorie, and nothing like it: a quiet cantonment of old cottages and deodar forest, with a road that loops the top of the hill in an hour's walk. Have pancakes at Char Dukan, buy jam and peanut butter at Prakash Stores, and read Ruskin Bond, who has written about this hill for half a century. A long weekend, not a day.",
+      "goodFor": [
+        "outdoors",
+        "couple",
+        "relax",
+        "weekend"
+      ],
+      "labels": [
+        "weekend",
+        "couple"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://uttarakhandtourism.gov.in/destination/mussoorie",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Kellogg_Memorial_Church%2C_Landour.jpg/1280px-Kellogg_Memorial_Church%2C_Landour.jpg",
+      "imageSubject": "Landour",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "chandigarh",
+      "title": "Chandigarh",
+      "emoji": "📐",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 270,
+      "durationMin": 720,
+      "priceNote": "Small fees; the Capitol Complex by booking",
+      "transit": "Shatabdi from New Delhi in about 3 h 30 min; about 4 h 30 min on NH44",
+      "why": "The city Le Corbusier planned in the 1950s, and still the best argument for it anywhere in India. The Capitol Complex, with the High Court, the Secretariat, the Assembly and the Open Hand, is a World Heritage site; book a guided visit. Then Nek Chand's Rock Garden, forty acres of figures he built in secret from broken crockery, bangles and rubble, and a walk round Sukhna Lake.",
+      "goodFor": [
+        "culture",
+        "weekend"
+      ],
+      "labels": [
+        "weekend"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Rock_Garden_of_Chandigarh",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Chandigarh_Rock_Garden_4.jpg/1280px-Chandigarh_Rock_Garden_4.jpg",
+      "imageSubject": "Rock Garden of Chandigarh",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "sariska",
+      "title": "Sariska & Bhangarh",
+      "emoji": "🐅",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 240,
+      "durationMin": 2880,
+      "priceNote": "Safari by booking",
+      "transit": "NH48 and Alwar, about 4 h",
+      "why": "A tiger reserve in the Aravallis that came back: by 2005 every tiger here had been poached, and the ones there now were brought in from Ranthambore. Book a jeep safari at dawn. On the far edge of the reserve, Bhangarh is a ruined seventeenth-century town with its bazaar, temples and palace still standing in outline, called the most haunted place in India. The Archaeological Survey locks it at sunset.",
+      "goodFor": [
+        "outdoors",
+        "weekend",
+        "friends"
+      ],
+      "labels": [
+        "weekend",
+        "outdoor",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.tourism.rajasthan.gov.in/alwar.html",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Sariska_Tiger_Reserve%2C_Alwar.jpg",
+      "imageSubject": "Sariska Tiger Reserve",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "mangar-bani",
+      "title": "Mangar Bani",
+      "emoji": "🌳",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 60,
+      "durationMin": 180,
+      "price": 0,
+      "priceNote": "Free",
+      "transit": "Gurugram–Faridabad road, about 1 h",
+      "why": "The last sacred grove of the Delhi ridge, an hour from GK on the Gurugram–Faridabad road. The villagers of Mangar have protected it for generations as the forest of a local saint, and it is one of the few places left with the old dhau woodland of the Aravallis. Walk the trails early, before the heat, and bring water: there is nothing to buy.",
+      "goodFor": [
+        "outdoors",
+        "morning",
+        "friends"
+      ],
+      "labels": [
+        "hiddengem",
+        "outdoor"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Mangar_Bani",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Aravalli.jpg/1280px-Aravalli.jpg",
+      "imageSubject": "Aravalli Range",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons · CC BY-SA 2.5"
+    }
+  ]
 }

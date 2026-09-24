@@ -30,6 +30,35 @@ const FORCE = process.argv.includes('--force');
    the value is the street or quarter it stands on — and that is what the
    credit will name. */
 const QUERIES = {
+  // Bengaluru — day trips and weekends
+  'nandi-hills': 'Nandi Hills, India',
+  'mysuru': 'Mysore Palace',
+  'srirangapatna': 'Ranganathittu Bird Sanctuary',
+  'shivanasamudra': 'Shivanasamudra Falls',
+  'somanathapura': 'Chennakesava Temple, Somanathapura',
+  'savandurga': 'Savandurga',
+  'lepakshi': 'Veerabhadra Temple, Lepakshi',
+  'antara-gange': 'Antara Gange',
+  'coorg': 'Abbey Falls',
+  'chikmagalur': 'Baba Budangiri',
+  'belur-halebidu': 'Hoysaleswara Temple',
+  'hampi': 'Hampi',
+
+  // Delhi — day trips and weekends
+  'agra': 'Taj Mahal',
+  'fatehpur-sikri': 'Buland Darwaza',
+  'jaipur': 'Amer Fort',
+  'abhaneri': 'Chand Baori',
+  'neemrana': 'Neemrana',
+  'sultanpur': 'Sultanpur National Park',
+  'keoladeo': 'Keoladeo National Park',
+  'mathura-vrindavan': 'Banke Bihari Temple',
+  'rishikesh-haridwar': 'Har Ki Pauri',
+  'landour': 'Landour',
+  'chandigarh': 'Rock Garden of Chandigarh',
+  'sariska': 'Sariska Tiger Reserve',
+  'mangar-bani': 'Aravalli Range',
+
   // the Bay Area — day trips, landmarks and hand-placed cards
   'filoli': 'Filoli',
   'half-moon-bay': 'Half Moon Bay, California',
@@ -326,7 +355,7 @@ const QUERIES = {
 const CONTEXT_ONLY = new Set([
   'mademoiselle-colette-lytton', 'bacio-di-latte-stanford', 'friday-night-waltz',
   'stanford-afternoon', 'downtown-saturday-morning', 'monterey-carmel', 'big-sur',
-  'adventure-cat-sunset-sail',
+  'adventure-cat-sunset-sail', 'mangar-bani',
   'telegraph-hill-steps', 'balmy-alley', 'molly-tea-university', 'equator-fort-mason',
   'ride-golden-gate-sausalito', 'ride-portola-loop', 'ride-old-la-honda', 'fleet-week-2026',
   'orens-hummus-university', 'ettan-palo-alto', 'rooh-palo-alto', 'khazana-palo-alto', 'pho-ha-noi-palo-alto',
