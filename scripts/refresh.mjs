@@ -47,6 +47,9 @@ const FILES = {
      reason events-city is: a term of workshops ends, and a practice
      whose last date has passed is not a practice any more. */
   'practices.json':     { timeSensitive: true,  required: ['id', 'title', 'why', 'url', 'lastVerified', 'source'] },
+  /* Generated daily by scripts/conferences.mjs. A conference that has
+     ended is pruned like any other dated record. */
+  'conferences.json':   { timeSensitive: true,  required: ['id', 'title', 'why', 'url', 'lastVerified', 'source'] },
   'places.json':        { timeSensitive: false, required: ['id', 'title', 'why', 'url'] },
   'nightlife.json':     { timeSensitive: false, required: ['id', 'title', 'why', 'url'] },
   'sports.json':        { timeSensitive: false, required: ['id', 'title', 'why', 'url'] },

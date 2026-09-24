@@ -62,6 +62,14 @@ const Rec = (() => {
 
   const FOOD = ['cafe', 'bakery', 'restaurant', 'market', 'deli'];
 
+  /* Sources that let us read their listings but not display them.
+     Luma's terms allow its public calendar feeds but forbid republishing
+     or displaying what is in them without written permission, which has
+     been asked for. Until it is given, nothing of Luma's reaches any
+     view. Checked 24 September 2026; delete the pattern when the answer
+     is yes. */
+  const UNLICENSED = /^Luma\b/;
+
 /* ---------- what a kind of place is like ----------
 
      js/scoring.js marks records on `indoor` and `goodFor`. The curated
@@ -570,7 +578,12 @@ const Rec = (() => {
          forty of Paris's were being marked ★, read as somewhere one of
          you had been, and ranked above the editorial tier. */
       .concat((D.practices?.items || []).map(i => Object.assign({ provenance: 'sourced' }, i)))
-      .filter(i => !(i.end && todayISO && i.end < todayISO));
+      /* Tech conferences from two open lists — see scripts/conferences.mjs.
+         A file of their own because their licences differ from the
+         city feeds'. */
+      .concat((D.conferences?.items || []).map(i => Object.assign({ provenance: 'sourced' }, i)))
+      .filter(i => !(i.end && todayISO && i.end < todayISO))
+      .filter(i => !UNLICENSED.test(i.source || ''));
 
     /* Everything in the curated files was written by somebody who went,
        unless the record says otherwise. A researched place the map layer

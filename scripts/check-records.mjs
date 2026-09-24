@@ -30,7 +30,7 @@ import { loadRecord, readDiscovered, dataDir, City } from './shim.mjs';
 const read = f => { try { return JSON.parse(fs.readFileSync(path.join(dataDir(), f + '.json'), 'utf8')); } catch { return { items: [] }; } };
 const D = {};
 for (const n of ['events', 'places', 'nightlife', 'sports', 'food', 'itineraries', 'daytrips',
-                 'civic', 'notable', 'editorial', 'notes', 'events-city']) D[n] = read(n);
+                 'civic', 'notable', 'editorial', 'notes', 'events-city', 'practices', 'conferences']) D[n] = read(n);
 D.discovered = await readDiscovered();
 
 const TODAY = new Date().toISOString().slice(0, 10);

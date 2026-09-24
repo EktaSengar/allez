@@ -35,6 +35,38 @@ card credits its source, and the text stays under the same licence here.
 The facts beside it come from Wikidata, which is
 [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
+## Tech conferences — MIT and CC BY-NC 4.0
+
+`*/data/conferences.json` (every city) is built by
+`scripts/conferences.mjs` from two open lists. It is a file of its own
+because neither licence can be folded into an ODbL file.
+
+- **[confs.tech](https://confs.tech)** —
+  [tech-conferences/conference-data](https://github.com/tech-conferences/conference-data),
+  under the MIT licence:
+
+  > Permission is hereby granted, free of charge, to any person obtaining
+  > a copy of this software and associated documentation files (the
+  > "Software"), to deal in the Software without restriction, including
+  > without limitation the rights to use, copy, modify, merge, publish,
+  > distribute, sublicense, and/or sell copies of the Software, and to
+  > permit persons to whom the Software is furnished to do so, subject to
+  > the following conditions: The above copyright notice and this
+  > permission notice shall be included in all copies or substantial
+  > portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT
+  > WARRANTY OF ANY KIND.
+
+- **[developers.events](https://developers.events)** — the Developers
+  Conferences Agenda by Aurélie Vache and contributors
+  ([scraly/developers-conferences-agenda](https://github.com/scraly/developers-conferences-agenda)),
+  content under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+  Records from it are **non-commercial only**: they may be shown here
+  because this site has no ads, subscriptions or sales, and the day it
+  does, they have to go or be licensed. Each card credits its source.
+
+Only facts are taken — name, dates, city, topic tags, link. The line
+under each title is assembled from those fields.
+
 ## Other sources, and what they allow
 
 Checked 24 September 2026.
@@ -45,7 +77,7 @@ Checked 24 September 2026.
 | NYC Open Data — Permitted Event Information | `new-york/data/events-city.json` | NYC Open Data: [no restrictions on use](https://opendata.cityofnewyork.us/faq/) |
 | Stanford Events (Localist) | `bay-area/data/events-city.json` | Public read-only API, which Stanford documents for pulling its events into other sites; no licence is stated |
 | Open-Meteo — weather, and air quality in Delhi | fetched live, never stored | [CC BY 4.0](https://open-meteo.com/en/license), free for non-commercial use; air quality also credits Copernicus (CAMS). Both are credited in every city's footer |
-| **Luma** | `*/data/events-city.json`, `*/data/practices.json` | **Not licensed for display.** Its terms allow reading its public calendar feeds but forbid republishing or displaying their content without written permission. The Events tab excludes these records; the rest of the site has not yet been changed |
+| **Luma** | `*/data/events-city.json`, `*/data/practices.json` | **Not licensed for display.** Its terms allow reading its public calendar feeds but forbid republishing or displaying their content without written permission, which has been requested. No view shows these records (`UNLICENSED` in `js/record.js`); they are still collected into the data files while that is decided |
 
 The hand-written records, the editorial tier and the notes are this
 site's own work.

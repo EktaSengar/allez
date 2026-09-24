@@ -31,8 +31,9 @@ const App = (() => {
   /* `practices` is behind the first paint on purpose. It feeds one
      section of one tab, so nothing the reader sees first is waiting on
      it, and putting it in CORE would take bandwidth from the files that
-     are. Same reasoning as civic and notable. */
-  const LATER = ['civic', 'notable', 'practices'];
+     are. Same reasoning as civic and notable, and it holds for
+     `conferences` too: a few dozen records that feed Events' Tech group. */
+  const LATER = ['civic', 'notable', 'practices', 'conferences'];
   const FILES = [...FIRST, ...CORE, ...LATER];
   const D = {};
   let ALL = [];
@@ -2484,7 +2485,7 @@ const App = (() => {
     ['see',  '🖼️', 'Exhibitions', 'art, photography, design',  ['exhibition', 'art', 'photography', 'design', 'fashion']],
     ['show', '🎭', 'Shows',       'music, stage, film, talks', ['music', 'theatre', 'dance', 'comedy', 'film', 'books', 'nightlife', 'culture', 'learn']],
     ['out',  '🎪', 'Out & about', 'festivals, markets, walks', ['festival', 'market', 'walk', 'food', 'community']],
-    ['tech', '🤖', 'Tech',        'meetups and hackathons',    ['tech']]
+    ['tech', '🤖', 'Tech',        'developer conferences',     ['tech']]
   ];
 
   function evGroupOf(i) {
@@ -2523,18 +2524,9 @@ const App = (() => {
 
   const evSpan = i => Rank.daysBetween(i.start, i.end);
 
-  /* Listings whose source has not licensed us to show them. Luma's
-     terms allow reading its public calendar feeds but not republishing
-     or displaying what is in them without written permission, so its
-     evenings stay off this tab — which takes every tech record with
-     them, since Luma was the only place they came from. The group stays
-     declared, and draws itself again when a source that allows it (or a
-     hand-written record) fills it. Audited 24 September 2026. */
-  const UNLICENSED = /^Luma\b/;
 
   function isEvent(i) {
     if (!i.start || !i.end) return false;
-    if (UNLICENSED.test(i.source || '')) return false;
     if (i.type !== 'event' && i.type !== 'exhibition') return false;
     const g = evGroupOf(i);
     if (!g) return false;
@@ -2645,7 +2637,11 @@ const App = (() => {
 
     /* Only the groups that have something, for the reason Regulars
        gives: a button that leads nowhere is worse than no button. */
-    const groups = EV_GROUPS.filter(([k]) => pool.some(e => e.g === k));
+    /* Tech is the exception, and on purpose: it is the group people come
+       looking for, and it is thin because only two open lists will let us
+       show what they carry. An empty Tech says so; a missing one looks
+       like the tab forgot. */
+    const groups = EV_GROUPS.filter(([k]) => k === 'tech' || pool.some(e => e.g === k));
     if (!groups.some(([k]) => k === EV_MODE)) EV_MODE = 'all';
     const tabs = [['all', '📅', 'Coming up', 'a bit of everything'], ...groups];
     const modeBar = `<div class="mode mode-wide mode-chips" id="ev-mode">
@@ -2658,6 +2654,9 @@ const App = (() => {
 
     const all = EV_MODE === 'all';
     const mine = all ? pool : pool.filter(e => e.g === EV_MODE);
+    if (!mine.length) {
+      return modeBar + `<p class="empty">No tech conferences in the next month from the two open lists we can show — confs.tech and developers.events. Meetups will follow once a source lets us list them.</p>`;
+    }
     return modeBar + (EV_MODE === 'see' ? eventsExhibitions(mine) : eventsByDay(mine, all));
   }
 
@@ -2772,7 +2771,7 @@ const App = (() => {
   function renderRegulars() {
     const pool = ALL.filter(isRegular);
     /* Three cities had only tech here, all of it from Luma, and it has
-       left — see UNLICENSED under Events. */
+       left — see UNLICENSED in js/record.js. */
     if (!pool.length) {
       return `<p class="empty">Nothing that repeats is collected here yet.</p>`;
     }

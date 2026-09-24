@@ -61,7 +61,7 @@
      cached hard, so a returning reader spends no round trips at all
      being told the file has not changed. -->
 <script>
-  window.__DV = {"civic":"3c726120","daytrips":"0964795f","editorial":"faaa3512","events":"137480f6","events-city":"597feb88","food":"d0c731fd","home":"b541c726","invaders":"ad7f739e","itineraries":"6f33d13e","neighborhoods":"3ba16044","nightlife":"283da68c","notable":"e7d02b8a","notes":"c5842853","places":"f89cc3f0","places/g00":"203ae687","places/g01":"b1c93f1c","places/g02":"23185b15","places/g03":"9841a167","places/g10":"236fe0b0","places/g11":"b7e2220b","places/g12":"7967112b","places/g13":"3b8f5ad6","places/g20":"bffa4a91","places/g21":"59e626b8","places/g22":"a008db71","places/g23":"b740b4e8","places/g30":"6aa1acbf","places/g31":"418ea079","places/g32":"ea5a50ee","places/g33":"7f8d4038","places/index":"117bc4f1","practices":"677446a6","quests":"1eefefd6","sports":"283da68c"};
+  window.__DV = {"civic":"3c726120","conferences":"d63ae14d","daytrips":"0964795f","editorial":"faaa3512","events":"137480f6","events-city":"597feb88","food":"d0c731fd","home":"b541c726","invaders":"ad7f739e","itineraries":"6f33d13e","neighborhoods":"3ba16044","nightlife":"283da68c","notable":"e7d02b8a","notes":"c5842853","places":"f89cc3f0","places/g00":"203ae687","places/g01":"b1c93f1c","places/g02":"23185b15","places/g03":"9841a167","places/g10":"236fe0b0","places/g11":"b7e2220b","places/g12":"7967112b","places/g13":"3b8f5ad6","places/g20":"bffa4a91","places/g21":"59e626b8","places/g22":"a008db71","places/g23":"b740b4e8","places/g30":"6aa1acbf","places/g31":"418ea079","places/g32":"ea5a50ee","places/g33":"7f8d4038","places/index":"117bc4f1","practices":"677446a6","quests":"1eefefd6","sports":"283da68c"};
   (function () {
     var core = ['home', 'places/index',
                 'events', 'events-city', 'places', 'nightlife', 'sports', 'food',
@@ -171,17 +171,17 @@
      app.js all read `City` as they evaluate, not later. keys.js is
      second for the same reason — it needs City.id to name a key, and
      state.js and location.js need the name as they evaluate. -->
-<script src="city.js?v=add8cbac"></script>
+<script src="city.js?v=f69b0973"></script>
 <script src="../js/keys.js?v=d850c74b"></script>
 <script src="../js/location.js?v=9d06fda4"></script>
 <script src="../js/state.js?v=381f1374"></script>
 <script src="../js/weather.js?v=f053584c"></script>
 <script src="../js/hours.js?v=989d1fda"></script>
-<script src="../js/record.js?v=b3399b17"></script>
+<script src="../js/record.js?v=394550ce"></script>
 <script src="../js/invaders.js?v=bc4c1aab"></script>
 <script src="../js/nearby.js?v=8d53e2a7"></script>
 <script src="../js/scoring.js?v=16ed6bd0"></script>
-<script src="../js/app.js?v=d0b2e72d"></script>
+<script src="../js/app.js?v=bbd98b78"></script>
 <!-- After app.js, because it calls App.defineView. This is what a pack
      shipping its own view looks like: one file, one registration, and
      nothing in the engine that knows it exists. -->
@@ -193,6 +193,7 @@
       <button class="tab" data-view="today">Today</button>
       <button class="tab" data-view="nights">Nights</button>
       <button class="tab" data-view="weekend">Weekend</button>
+      <button class="tab" data-view="events">Events</button>
       <button class="tab" data-view="eat">Eat</button>
       <button class="tab" data-view="sport">Sport</button>
       <button class="tab" data-view="yourside">Your side</button>
@@ -272,6 +273,7 @@
     <p id="stamp"></p>
     <p>Photographs curated by us. Where one of us went, the picture is our own; the rest come from Wikimedia Commons under their respective licences. Each card says whose.</p>
     <p>Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, under the ODbL.</p>
+    <p>Tech conferences from <a href="https://confs.tech">confs.tech</a> (MIT) and <a href="https://developers.events">developers.events</a> (<a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>).</p>
     <p>Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>, under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Place descriptions from Wikipedia are <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
   </div>
 </footer>

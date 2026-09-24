@@ -289,6 +289,14 @@ const City = (() => {
      "Personal" one and the Foresight Institute's, a global calendar
      mostly in Stockholm. What they carry in Paris already arrives
      through `discover`. */
+
+  /* ---------- tech conferences ----------
+
+     The names scripts/events-city.mjs looks for in the two open
+     conference lists, confs.tech and developers.events. They give a
+     city and no venue, so this is the whole of the matching. */
+  const conferences = ['Paris'];
+
   const luma = [['discover', 'discplace-NdLrh1xJfeotJZC', 'Luma — What‘s Happening in Paris']];
 
   const serviceWorker = true;
@@ -315,7 +323,7 @@ const City = (() => {
      `buildings`: places drawn as a building outline as well as a pin. */
   const discover = { buildings: true };
 
-  return { id, name, ua, bbox, discover, epigraphs, nightNotes, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma };
+  return { id, name, ua, bbox, discover, epigraphs, nightNotes, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma, conferences };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same

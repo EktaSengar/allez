@@ -68,7 +68,7 @@ for (const n of ['events', 'places', 'nightlife', 'sports', 'food', 'itineraries
   D[n] = read(n);
 D.discovered = await readDiscovered();
 
-for (const n of ['civic', 'notable', 'editorial', 'notes', 'events-city']) D[n] = readOpt(n);
+for (const n of ['civic', 'notable', 'editorial', 'notes', 'events-city', 'conferences']) D[n] = readOpt(n);
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const { all: ALL, discovered: DISCOVERED } = Rec.build(D, TODAY);

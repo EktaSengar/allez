@@ -309,6 +309,7 @@ const City = (() => {
       { id: 'today',    label: 'Today' },
       { id: 'nights',   label: 'Nights' },
       { id: 'weekend',  label: 'Weekend' },
+      { id: 'events',   label: 'Events' },
       { id: 'eat',      label: 'Eat' },
       { id: 'sport',    label: 'Sport' },
       { id: 'yourside', label: 'Your side' },
@@ -430,6 +431,14 @@ const City = (() => {
      and AI evenings, events-city.mjs takes the rest. LUMA_TECH in
      scripts/ics.mjs is that rule, and it lives in one place so an
      evening cannot land in both files or neither. */
+
+  /* ---------- tech conferences ----------
+
+     The names scripts/events-city.mjs looks for in the two open
+     conference lists, confs.tech and developers.events. They give a
+     city and no venue, so this is the whole of the matching. */
+  const conferences = ['Bengaluru', 'Bangalore'];
+
   const luma = [['discover', 'discplace-G0tGUVYwl7T17Sb', 'Luma — Bengaluru']];
 
   /* Luma only — no municipal feed here carries what you could take up. */
@@ -452,7 +461,7 @@ const City = (() => {
     ]
   };
 
-  return { id, name, ua, bbox, serviceWorker, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather, notable, luma, practices, discover };
+  return { id, name, ua, bbox, serviceWorker, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather, notable, luma, conferences, practices, discover };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;
