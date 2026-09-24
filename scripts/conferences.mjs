@@ -188,7 +188,7 @@ async function run() {
     console.log('\n  --dry, nothing written\n');
     return;
   }
-  await fs.writeFile(FILE, JSON.stringify(doc, null, 1) + '\n', 'utf8');
+  await fs.writeFile(FILE, JSON.stringify(doc, null, 2) + '\n', 'utf8');
   console.log(`  wrote data/conferences.json — ${Math.round(JSON.stringify(doc).length / 1024)} KB\n`);
 }
 
