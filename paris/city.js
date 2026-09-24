@@ -310,7 +310,11 @@ const City = (() => {
     bar:    'Wine, cocktails, and one taqueria with a secret door'
   };
 
-  return { id, name, ua, bbox, epigraphs, nightNotes, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma };
+  /* What discover.mjs asks OpenStreetMap for, beyond the base layers.
+     `buildings`: places drawn as a building outline as well as a pin. */
+  const discover = { buildings: true };
+
+  return { id, name, ua, bbox, discover, epigraphs, nightNotes, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same

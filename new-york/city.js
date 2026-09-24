@@ -880,7 +880,11 @@ const City = (() => {
 
   const serviceWorker = false;
 
-  return { id, name, searchRegion, ua, bbox, serviceWorker, zone, reach, centre, views,
+  /* What discover.mjs asks OpenStreetMap for, beyond the base layers.
+     `buildings`: places drawn as a building outline as well as a pin. */
+  const discover = { buildings: true };
+
+  return { id, name, searchRegion, ua, bbox, discover, serviceWorker, zone, reach, centre, views,
            holidays, shutsOnHoliday, money, weather, luma, events, practices };
 })();
 

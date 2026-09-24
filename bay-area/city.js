@@ -531,7 +531,12 @@ const City = (() => {
     bar:    'Beat bars, tiki, and a Chinatown mai tai'
   };
 
-  return { id, name, searchRegion, ua, bbox, nightNotes, serviceWorker, zone, bases, climate, reach, practices, luma, events,
+  /* What discover.mjs asks OpenStreetMap for, beyond the base layers.
+     `buildings`: places mapped as a building outline as well as a pin —
+     most of University Avenue is drawn that way. */
+  const discover = { buildings: true };
+
+  return { id, name, searchRegion, ua, bbox, nightNotes, discover, serviceWorker, zone, bases, climate, reach, practices, luma, events,
            centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
 })();
 

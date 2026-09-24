@@ -442,14 +442,34 @@ const Near = (() => {
      the same coordinates. Two entries with the same name a hundred metres
      apart are one place as far as a reader is concerned, so the list keeps
      the better-scoring of them and drops the rest. */
+  /* Two corrections, both found when the Bay Area's index started to
+     include buildings. The comment above said "keeps the better-scoring",
+     and the code kept whichever came first — in a list sorted by distance,
+     the nearest. And it merged on the name alone, anywhere: in Kengeri a
+     bare map entry for an Iyengar's Bakery, one branch of a name that is
+     on every other street in Bengaluru, swallowed the Iyengar's Bakery the
+     guide recommends in Malleswaram, fifteen kilometres away, and three
+     neighbourhoods lost their only write-up.
+
+     So: the same name *close by* is one place (half a kilometre is a long
+     market street, not a different branch), and of the two the list keeps
+     the one that knows more — a write-up over a name on a map — in the
+     position of the one it replaces. */
+  const NEAR_DEG = 0.0045;          // ≈ 500 m of latitude
+  const sameSpot = (a, b) => !a.coords || !b.coords ||
+    (Math.abs(a.coords[0] - b.coords[0]) < NEAR_DEG && Math.abs(a.coords[1] - b.coords[1]) < NEAR_DEG * 1.3);
   function dedupe(items) {
-    const seen = new Set();
-    return items.filter(i => {
+    const kept = [];
+    const byKey = new Map();
+    for (const i of items) {
       const k = nameKey(i.title);
-      if (!k || seen.has(k)) return false;
-      seen.add(k);
-      return true;
-    });
+      if (!k) continue;
+      const twins = byKey.get(k) || [];
+      const at = twins.find(t => sameSpot(kept[t], i));
+      if (at == null) { twins.push(kept.length); byKey.set(k, twins); kept.push(i); continue; }
+      if (localScore(i) > localScore(kept[at])) kept[at] = i;
+    }
+    return kept;
   }
 
   /* The counterweight to a radius: what is outside it and worth the
