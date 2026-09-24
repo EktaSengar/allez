@@ -62,6 +62,8 @@ const UA   = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 const SOURCES = City.practices || { city: null };
 
 const TODAY = new Date().toISOString().slice(0, 10);
+/* Luma stamps are UTC; the day an evening falls on is the city's. */
+const TZ = City.weather?.tz;
 const UNTIL = new Date(Date.now() + DAYS * 86400000).toISOString().slice(0, 10);
 
 /* ---------- shared ---------- */
@@ -522,7 +524,7 @@ async function lumaRecords(log) {
     let kept = 0;
     for (const e of events) {
       if (!e.uid || !e.title || !e.start) continue;
-      const start = icsDate(e.start);
+      const start = icsDate(e.start, TZ);
       if (!start || start < TODAY || start > UNTIL) continue;
 
       const parts = lumaParts(e.desc);
@@ -560,7 +562,7 @@ async function lumaRecords(log) {
         area: (address || '').slice(0, 80) || null,
         coords: [lat, lon],
         start,
-        end: icsDate(e.end) || start,
+        end: icsDate(e.end, TZ) || start,
         why: parts.why.slice(0, 320) || `Tech and AI meetup in ${City.name}.`,
         url: parts.url,
         source: label,

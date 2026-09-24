@@ -1250,6 +1250,21 @@ body[data-view="away"]    { --accent: #3f5e7a; --blush: #93add0; }
 .mode-wide .mode-btn em { font-size: .7rem; }
 .mode-wide .mode-emoji { display: block; margin: 0 0 .15rem; font-size: 1.15rem; }
 
+/* Events on a phone: one swipeable row rather than three rows of
+   cards. The groups there are a filter over a list of dates, and the
+   dates are what the page is for — five full-width buttons put the
+   first of them below the fold. */
+@media (max-width: 560px) {
+  .mode-chips {
+    display: flex; gap: .4rem; overflow-x: auto; scrollbar-width: none;
+    margin: 0 -1.25rem 1.4rem; padding: 0 1.25rem;
+  }
+  .mode-chips::-webkit-scrollbar { display: none; }
+  .mode-chips .mode-btn { flex: none; padding: .5rem .8rem; font-size: 1rem; white-space: nowrap; border-radius: 999px; }
+  .mode-chips .mode-btn em { display: none; }
+  .mode-chips .mode-emoji { display: inline; margin: 0 .25rem 0 0; font-size: 1rem; }
+}
+
 @media (max-width: 900px) { .mode-wide { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 560px) { .mode-wide { grid-template-columns: repeat(2, 1fr); } }
 

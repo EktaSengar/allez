@@ -44,10 +44,22 @@ export const unescapeICS = s => (s || '')
   .replace(/\\n/g, ' ').replace(/\\,/g, ',').replace(/\;/g, ';').replace(/\\\\/g, '\\')
   .replace(/\s+/g, ' ').trim();
 
-/* "20260907T170000Z" → "2026-09-07" */
-export const icsDate = s => {
-  const m = String(s || '').match(/^(\d{4})(\d{2})(\d{2})/);
-  return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
+/* "20260907T170000Z" → "2026-09-07", on the city's own calendar.
+
+   Luma writes every time in UTC, and reading the date straight off the
+   stamp was only right where the evening ends before UTC midnight —
+   which is Paris, and not New York or San Francisco. A 7 pm meetup in
+   Manhattan is 23:00Z on the right day; an 8 pm one is 00:00Z the next,
+   so it was filed a day late, and one ending at 9 pm read as running
+   into tomorrow. A stamp without the `Z` is already local (or a bare
+   date) and keeps its digits. */
+export const icsDate = (s, tz) => {
+  const str = String(s || '');
+  const m = str.match(/^(\d{4})(\d{2})(\d{2})(?:T(\d{2})(\d{2})(\d{2})Z)?/);
+  if (!m) return null;
+  if (!m[4] || !tz) return `${m[1]}-${m[2]}-${m[3]}`;
+  const at = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +m[6]));
+  return new Intl.DateTimeFormat('en-CA', { timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit' }).format(at);
 };
 
 /* Luma writes the description in a fixed shape:

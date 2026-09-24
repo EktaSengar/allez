@@ -202,6 +202,7 @@ const City = (() => {
       { id: 'nights',   label: 'Nights',
         lede: 'Concerts, jazz rooms, dancing and a drink first. Doors, prices and how far each one is from where you are.' },
       { id: 'weekend',  label: 'Weekend' },
+      { id: 'events',   label: 'Events' },
       { id: 'eat',      label: 'Eat' },
       { id: 'sport',    label: 'Sport',
         lede: 'Two halves: things we can play, and things we can go and watch.' },
