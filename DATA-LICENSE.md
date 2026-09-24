@@ -25,9 +25,27 @@ also for the city's open data. The ODbL covers the database, not the
 photographs sometimes linked from it; this site uses none of the city's
 photographs (see the README, *Photographs*).
 
-## Everything else
+## Creative Commons Attribution-ShareAlike (CC BY-SA 4.0)
 
-The other data files — the hand-written records, the editorial tier,
-notes — are this site's own work. Records built from Wikidata are CC0.
-Luma, Localist and the US city portals are read for facts with a link
-back to the source, and each record says which one it came from.
+`*/data/notable.json` (every city) carries up to two sentences of
+Wikipedia text per place, and Wikivoyage text where
+`scripts/wikivoyage.mjs` has been run. That text is
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/): each
+card credits its source, and the text stays under the same licence here.
+The facts beside it come from Wikidata, which is
+[CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+
+## Other sources, and what they allow
+
+Checked 24 September 2026.
+
+| source | files | terms |
+|---|---|---|
+| DataSF — Our415, Rec & Park facilities | `bay-area/data/events-city.json`, `practices.json`, `civic.json` | [Public domain (PDDL 1.0)](https://opendatacommons.org/licenses/pddl/1-0/) |
+| NYC Open Data — Permitted Event Information | `new-york/data/events-city.json` | NYC Open Data: [no restrictions on use](https://opendata.cityofnewyork.us/faq/) |
+| Stanford Events (Localist) | `bay-area/data/events-city.json` | Public read-only API, which Stanford documents for pulling its events into other sites; no licence is stated |
+| Open-Meteo — weather, and air quality in Delhi | fetched live, never stored | [CC BY 4.0](https://open-meteo.com/en/license), free for non-commercial use; air quality also credits Copernicus (CAMS). Both are credited in every city's footer |
+| **Luma** | `*/data/events-city.json`, `*/data/practices.json` | **Not licensed for display.** Its terms allow reading its public calendar feeds but forbid republishing or displaying their content without written permission. The Events tab excludes these records; the rest of the site has not yet been changed |
+
+The hand-written records, the editorial tier and the notes are this
+site's own work.
