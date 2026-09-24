@@ -1,5 +1,429 @@
 {
-  "generated": "2026-09-13",
-  "note": "Nandi Hills, Mysuru, Ramanagara, Shivanasamudra. Hand-written. Empty.",
-  "items": []
+  "generated": "2026-09-24",
+  "note": "Driving times are off-peak from Kodihalli and only a guide: leave before seven or the city takes the first hour. The nearer trips are day trips; Coorg, Chikmagalur and Hampi are weekends. Anything that needs a booking says so. Researched, not yet done — rate them as you go.",
+  "items": [
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "nandi-hills",
+      "title": "Nandi Hills",
+      "emoji": "🌄",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 90,
+      "durationMin": 300,
+      "priceNote": "Small entry and parking fees",
+      "transit": "Up the airport road past Devanahalli, about 90 min before dawn",
+      "why": "The drive everybody in Bengaluru makes once: up the hairpins before dawn to stand above the cloud at sunrise. The gates open at six, and on weekends the queue of cars starts well before that, so go on a weekday if you can. Tipu's Drop is the cliff at the top. At the foot of the hill, the Bhoga Nandeeshwara temple is older than all of it, begun in the ninth century and far quieter.",
+      "goodFor": [
+        "outdoors",
+        "couple",
+        "morning",
+        "friends"
+      ],
+      "labels": [
+        "outdoor",
+        "weekend"
+      ],
+      "uniqueness": 3,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Nandi_Hills,_India",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Sunrise_at_Nandi_Hills.jpg/1280px-Sunrise_at_Nandi_Hills.jpg",
+      "imageSubject": "Nandi Hills, India",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "mysuru",
+      "title": "Mysuru",
+      "emoji": "👑",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 165,
+      "durationMin": 720,
+      "price": 100,
+      "priceNote": "Palace from about ₹100",
+      "transit": "The Bengaluru–Mysuru expressway, about 2 h 45 min; trains from KSR take about the same",
+      "why": "Two and a half hours down the expressway, and a slower city. The palace is the reason to come: on Sunday evenings and public holidays it is lit with nearly a hundred thousand bulbs for under an hour, from seven, and the whole forecourt goes quiet. Go up Chamundi Hills for the temple and the view, walk Devaraja Market for flowers and sandalwood, and eat Mysore pak at Guru Sweet Mart, whose family claims to have invented it. At Dasara, in October, the palace is lit every night.",
+      "goodFor": [
+        "culture",
+        "weekend",
+        "couple",
+        "food"
+      ],
+      "labels": [
+        "weekend",
+        "dontmiss"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "url": "https://karnatakatourism.org/destinations/mysuru/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Mysore_Palace_Morning.jpg/1280px-Mysore_Palace_Morning.jpg",
+      "imageSubject": "Mysore Palace",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "srirangapatna",
+      "title": "Srirangapatna & Ranganathittu",
+      "emoji": "🏰",
+      "categories": [
+        "daytrip",
+        "culture",
+        "outdoors"
+      ],
+      "minutesFromHome": 150,
+      "durationMin": 360,
+      "priceNote": "Small fees at the palace and the sanctuary; boats extra",
+      "transit": "The Mysuru expressway, about 2 h 30 min",
+      "why": "The island in the Kaveri that was Tipu Sultan's capital, twenty minutes short of Mysuru and worth stopping for on the way. The Ranganathaswamy temple gives the town its name. Daria Daulat Bagh, Tipu's summer palace, is painted wall to wall with his battles. Five minutes out, the Ranganathittu bird sanctuary puts you in a rowing boat under islets crowded with nesting storks and pelicans, and crocodiles asleep on the rocks.",
+      "goodFor": [
+        "culture",
+        "outdoors",
+        "weekend"
+      ],
+      "labels": [
+        "weekend"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://karnatakatourism.org/destinations/srirangapatna/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Spot-billed_Pelican_Rising_Flight_Ranganathittu_Feb24_D72_26266.jpg/1280px-Spot-billed_Pelican_Rising_Flight_Ranganathittu_Feb24_D72_26266.jpg",
+      "imageSubject": "Ranganathittu Bird Sanctuary",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "shivanasamudra",
+      "title": "Shivanasamudra Falls",
+      "emoji": "💧",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 180,
+      "durationMin": 480,
+      "priceNote": "Small entry fees",
+      "transit": "Kanakapura Road and Malavalli, about 3 h",
+      "why": "Where the Kaveri splits around an island and drops off the Deccan in two waterfalls a few kilometres apart, Gaganachukki and Bharachukki. It is a sight only after the monsoon: from about August to November it is a roar of brown water, and by March it can be a trickle, so go in season. One of Asia's first hydroelectric stations was built here in 1902, to light the Kolar gold fields.",
+      "goodFor": [
+        "outdoors",
+        "weekend",
+        "friends"
+      ],
+      "labels": [
+        "outdoor",
+        "weekend"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Shivanasamudra_Falls",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gagana_Chukki_%281%29.jpg/1280px-Gagana_Chukki_%281%29.jpg",
+      "imageSubject": "Shivanasamudra Falls",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "somanathapura",
+      "title": "Somanathapura",
+      "emoji": "🛕",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 165,
+      "durationMin": 300,
+      "priceNote": "Small ASI entry fee",
+      "transit": "The Mysuru road to Maddur, then south through Malavalli, about 2 h 45 min",
+      "why": "One Hoysala temple in a village with nothing else in it, and one of the finest carved buildings in the country. The Keshava temple was consecrated in 1268: three shrines on a raised, star-shaped platform, every surface worked in soapstone, down to friezes of elephants, horsemen and scenes from the epics. Since 2023 it has been a World Heritage site with Belur and Halebidu, and it still gets a fraction of their visitors. An easy detour on a Mysuru day.",
+      "goodFor": [
+        "culture",
+        "couple"
+      ],
+      "labels": [
+        "hiddengem",
+        "weekend"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://en.wikipedia.org/wiki/Chennakesava_Temple,_Somanathapura",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Le_temple_de_Chennakesava_%28Somanathapura%2C_Inde%29_%2814465165685%29.jpg/1280px-Le_temple_de_Chennakesava_%28Somanathapura%2C_Inde%29_%2814465165685%29.jpg",
+      "imageSubject": "Chennakesava Temple, Somanathapura",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "savandurga",
+      "title": "Savandurga",
+      "emoji": "⛰️",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 105,
+      "durationMin": 360,
+      "priceNote": "Small forest fee",
+      "transit": "Magadi Road out of the west side, about 1 h 45 min from the east",
+      "why": "One of the largest monoliths in Asia: two granite hills, Karigudda and Biligudda, the black and the white, west of the city on the Magadi road. The climb up the bare rock takes two to three hours there and back, steep enough in places to need your hands, and there is no shade, so start early, carry water, and do not go up in rain, when the rock turns slick. Several of the state's treks now need booking with the forest department; check before you go.",
+      "goodFor": [
+        "outdoors",
+        "friends",
+        "morning"
+      ],
+      "labels": [
+        "outdoor"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Savandurga",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Savandurga_Hill_02.jpg/1280px-Savandurga_Hill_02.jpg",
+      "imageSubject": "Savandurga",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "lepakshi",
+      "title": "Lepakshi",
+      "emoji": "🗿",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 135,
+      "durationMin": 300,
+      "price": 0,
+      "priceNote": "Free",
+      "transit": "NH44 north past the airport, about 2 h 15 min",
+      "why": "Two hours up the airport highway and just over the border into Andhra. The Veerabhadra temple is sixteenth-century Vijayanagara work: painted ceilings, a seven-hooded stone serpent over a lingam, and the hanging pillar, which does not quite touch the floor, so visitors slide a cloth underneath it. On the way into the village a Nandi carved from a single rock, one of the biggest in India, faces the temple. From the east of the city there is no easier heritage day.",
+      "goodFor": [
+        "culture",
+        "couple",
+        "family"
+      ],
+      "labels": [
+        "hiddengem"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Lepakshi",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Veerabhadra_Temple_Tower.JPG/1280px-Veerabhadra_Temple_Tower.JPG",
+      "imageSubject": "Veerabhadra Temple, Lepakshi",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "antara-gange",
+      "title": "Antara Gange",
+      "emoji": "🪨",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 90,
+      "durationMin": 240,
+      "price": 0,
+      "priceNote": "Free",
+      "transit": "Old Madras Road to Kolar, about 1 h 30 min",
+      "why": "A hill of tumbled boulders above Kolar, ninety minutes out on Old Madras Road. At its foot a temple spring runs all year from the mouth of a stone Nandi. Above, the climb is less a trail than a scramble through caves and gaps between the rocks, with the plains laid out at the top. Short, strange, and best with a torch and a friend.",
+      "goodFor": [
+        "outdoors",
+        "friends"
+      ],
+      "labels": [
+        "hiddengem",
+        "outdoor"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Antara_Gange",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Antharagange.JPG/1280px-Antharagange.JPG",
+      "imageSubject": "Antara Gange",
+      "imageKind": "subject",
+      "imageCredit": "Vedamurthy J · CC BY-SA 3.0"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "coorg",
+      "title": "Coorg",
+      "emoji": "☕",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 330,
+      "durationMin": 2880,
+      "priceNote": "Homestays; book ahead for long weekends",
+      "transit": "Mysuru road and Hunsur, about 5 h 30 min",
+      "why": "The weekend. Five hours west, Kodagu is coffee country: arabica and robusta under silver oak hung with pepper vines, homestays on the estates themselves, and cool air after Bengaluru. Stop at Bylakuppe on the way for Namdroling, the golden temple of one of the largest Tibetan settlements in India. Then walk to Abbey Falls, watch the elephants bathed at Dubare in the morning, and buy coffee and honey in Madikeri. It rains hard from June to September; October to March is the season.",
+      "goodFor": [
+        "outdoors",
+        "weekend",
+        "couple",
+        "relax"
+      ],
+      "labels": [
+        "weekend",
+        "couple"
+      ],
+      "uniqueness": 4,
+      "quality": 5,
+      "url": "https://karnatakatourism.org/destinations/coorg/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Abbey_Falls_New.jpg/1280px-Abbey_Falls_New.jpg",
+      "imageSubject": "Abbey Falls",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "chikmagalur",
+      "title": "Chikmagalur",
+      "emoji": "🏔️",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 300,
+      "durationMin": 2880,
+      "transit": "NH75 through Hassan, about 5 h",
+      "why": "Where Indian coffee began: in the seventeenth century the Sufi saint Baba Budan is said to have carried seven beans back from Yemen and planted them in these hills. The road to Mullayanagiri, the highest peak in Karnataka, climbs through estates and cloud, and the shrine on Baba Budangiri still carries his name. The quieter, higher answer to Coorg, an hour from Belur and Halebidu.",
+      "goodFor": [
+        "outdoors",
+        "weekend",
+        "couple"
+      ],
+      "labels": [
+        "weekend",
+        "outdoor"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://en.wikipedia.org/wiki/Chikmagalur",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/A_scenery_from_bababudan_hill.jpg/1280px-A_scenery_from_bababudan_hill.jpg",
+      "imageSubject": "Baba Budangiri",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "belur-halebidu",
+      "title": "Belur & Halebidu",
+      "emoji": "🏛️",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "minutesFromHome": 270,
+      "durationMin": 600,
+      "priceNote": "Free or nearly; guides wait at the gate",
+      "transit": "NH75 through Hassan, about 4 h 30 min",
+      "why": "Two Hoysala capitals twenty minutes apart, and temples with more carving to the square metre than almost anywhere. The Chennakeshava at Belur, begun in 1117, is still in worship; its bracket figures of dancers are the famous ones. The Hoysaleswara at Halebidu, sacked twice in the fourteenth century, has no tower above it and does not need one: bands of elephants, lions and horsemen, then the Ramayana and the Mahabharata, run the length of its walls. A World Heritage site since 2023, and a good pair with Chikmagalur.",
+      "goodFor": [
+        "culture",
+        "weekend"
+      ],
+      "labels": [
+        "weekend"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://en.wikipedia.org/wiki/Hoysaleswara_Temple",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Hoysaleshwara_temple_in_Monsoon.JPG/1280px-Hoysaleshwara_temple_in_Monsoon.JPG",
+      "imageSubject": "Hoysaleswara Temple",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-24",
+      "id": "hampi",
+      "title": "Hampi",
+      "emoji": "🏺",
+      "categories": [
+        "daytrip",
+        "culture",
+        "outdoors"
+      ],
+      "minutesFromHome": 390,
+      "durationMin": 2880,
+      "priceNote": "Mostly free; the Vittala complex has a small fee",
+      "transit": "Overnight train from KSR to Hosapete, then 30 min by road; about 6 h 30 min to drive",
+      "why": "The long weekend. The ruined capital of the Vijayanagara empire lies across a landscape of piled granite on the Tungabhadra: the Virupaksha temple, still in worship; the stone chariot at the Vittala temple; the Queen's Bath, the elephant stables, and long bazaar streets between. Take the overnight train to Hosapete and a rickshaw on, hire a bicycle or a moped, and watch the sun go down from Hemakuta or Matanga hill. Go between October and February; by April the heat is punishing.",
+      "goodFor": [
+        "culture",
+        "outdoors",
+        "weekend",
+        "friends"
+      ],
+      "labels": [
+        "weekend",
+        "dontmiss",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://karnatakatourism.org/destinations/hampi/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Hampi-Old-And-New.jpg/1280px-Hampi-Old-And-New.jpg",
+      "imageSubject": "Hampi",
+      "imageKind": "subject",
+      "imageCredit": "Bjørn Christian Tørrissen · CC BY-SA 3.0"
+    }
+  ]
 }
