@@ -394,9 +394,39 @@ const Rec = (() => {
   const RAN = /\b(?:operat(?:ing|ed)|active|open(?:ed)?|ran|existed|in business)\b[^.]{0,60}?\bfrom (?:1[5-9]\d\d|20\d\d) (?:to|until|–|-) (1[5-9]\d\d|20\d\d)\b/i;
   const ranUntil = why => { const m = RAN.exec(why); return m ? Number(m[1]) : null; };
 
+  /* And a place that is *described* as gone, when what it was is
+     something you go to for what happens inside. "Former movie theater in
+     Palo Alto" — the Bijou — was the Today tab's suggestion for an
+     afternoon. A former cinema, restaurant, club or museum is shut; a
+     former prison, fort or missile site is something to go and see, which
+     is why this names the kind and `PAST_TENSE` below, which does not, is
+     kept to the two views that propose somewhere open.
+
+     Read in the first sentence only, where Wikipedia says what the thing
+     is: "SFMOMA … is a … museum" is not undone by a later "was the first
+     museum on the West Coast". "Is a former" counts only as the first
+     thing said — Studio 54 "is a Broadway theater and former nightclub",
+     and the Bouwerie Lane "is a former bank building which became" a
+     theatre. And "was a", not "was the": the Schimmel Center "was the
+     principal theatre of Pace University and is located" where it was.
+
+     Measured against every sourced record in the five cities when it was
+     written: 221 of 1,091 in the Bay, 84 of 857 in Paris, 1,433 of 4,223 in
+     New York — most of them starred restaurants that have since closed —
+     4 in Delhi, 3 in Bengaluru. One is still open: New York's "AMC Empire 25", whose
+     article is about the old Empire Theatre whose shell it occupies. The
+     map has the cinema itself, so it still appears. */
+  const GONE_KIND = String.raw`(?:cinema|movie (?:theat(?:er|re)|house|palace)|theat(?:er|re)|playhouse|opera house|music[ -]hall|caf[eé](?:-concert)?|coffee ?house|restaurant|brasserie|bistro|diner|bakery|bar|pub|tavern|saloon|nightclub|night club|club|dance hall|museum|gallery|library|bookstore|bookshop|shop|store|hotel|amusement park|water park|venue|arena|stadium|ballpark|baseball park)s?`;
+  const UPTO = String.raw`(?:(?!\b(?:which|that|now|and)\b)[^.]){0,60}?`;
+  const GONE = new RegExp(String.raw`^\s*former\b${UPTO}\b${GONE_KIND}\b` +
+    String.raw`|\b(?:is|are)\s+(?:a|an|the)\s+former\b${UPTO}\b${GONE_KIND}\b` +
+    String.raw`|\b(?:was|were)\s+(?:a|an)\b${UPTO}\b${GONE_KIND}\b`, 'i');
+  const firstSentence = why => String(why || '').split(/(?<=[a-z)\]])\.\s/)[0];
+
   const stillThere = p => {
     const why = p.why || '';
     if (CLOSED.test(why)) return false;
+    if (GONE.test(firstSentence(why))) return false;
     const until = ranUntil(why);
     return until == null || until >= new Date().getFullYear();
   };

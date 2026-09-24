@@ -389,8 +389,13 @@ const EXPECT = {
        no bakery at all within thirty minutes on the map, so retrieval fell
        back to returning everything and counted write-ups 35 to 48 minutes
        away as the local answer. Now a real bakery nine minutes from
-       Kengeri is on the map, and the honest answer there is that one. */
-    floor: 120
+       Kengeri is on the map, and the honest answer there is that one.
+
+       114 on 24 September, when js/record.js stopped admitting places
+       described as gone — "was a vegetarian restaurant", "was a film
+       theatre". New Krishna Bhavan, The Kitchen of Joy and the Plaza were
+       the answer in six cells, and a closed restaurant is no answer. */
+    floor: 114
   }
 };
 
