@@ -2262,9 +2262,16 @@ const App = (() => {
     if (!items.length) return null;
     const rank = i => Near.AUTHORITY[Near.tierOf(i)] ?? 0;
     const best = Math.max(...items.map(rank));
-    /* The list arrives ordered by distance, so the first record of the
-       best-attested tier is also the nearest of them. */
-    return items.find(i => rank(i) === best);
+    /* Within the best-attested tier, the owner's verdict comes before
+       distance: Molly Tea and Salt & Straw are both ★ and a minute apart
+       on University, and "good, on a par with Blue Bottle" should not lead
+       over "worth the queue" because it is forty metres nearer. Everything
+       here is already inside the list's walking radius, so this never
+       sends anyone across town for a point of quality. The list arrives
+       ordered by distance, so among equals the first is the nearest. */
+    const top = items.filter(i => rank(i) === best);
+    const q = Math.max(...top.map(i => i.quality ?? 0));
+    return top.find(i => (i.quality ?? 0) === q);
   }
 
   /* The coverage layer, given its own heading and its own sentence rather
