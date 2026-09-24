@@ -62,6 +62,8 @@ const UA   = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 const SOURCES = City.practices || { city: null };
 
 const TODAY = new Date().toISOString().slice(0, 10);
+/* Luma stamps are UTC; the day an evening falls on is the city's. */
+const TZ = City.weather?.tz;
 const UNTIL = new Date(Date.now() + DAYS * 86400000).toISOString().slice(0, 10);
 
 /* ---------- shared ---------- */
@@ -345,7 +347,7 @@ function cityRecords(raw, log) {
       ...(free ? { price: 0, priceNote: 'Free', labels: ['free', 'learn'] }
                : { priceNote: strip(e.price_detail).slice(0, 60) || 'Paid', labels: ['learn'] }),
       url: e.url,
-      source: 'Que Faire à Paris — opendata.paris.fr',
+      source: 'Que Faire à Paris — opendata.paris.fr · ODbL',
       lastVerified: TODAY,
       indoor: e.event_indoor === 1 || e.event_indoor === true ? true
             : e.event_indoor === 0 || e.event_indoor === false ? false : undefined,
@@ -522,7 +524,7 @@ async function lumaRecords(log) {
     let kept = 0;
     for (const e of events) {
       if (!e.uid || !e.title || !e.start) continue;
-      const start = icsDate(e.start);
+      const start = icsDate(e.start, TZ);
       if (!start || start < TODAY || start > UNTIL) continue;
 
       const parts = lumaParts(e.desc);
@@ -560,7 +562,7 @@ async function lumaRecords(log) {
         area: (address || '').slice(0, 80) || null,
         coords: [lat, lon],
         start,
-        end: icsDate(e.end) || start,
+        end: icsDate(e.end, TZ) || start,
         why: parts.why.slice(0, 320) || `Tech and AI meetup in ${City.name}.`,
         url: parts.url,
         source: label,
@@ -589,7 +591,7 @@ const CITY_HALVES = {
     label: 'city feed',
     fetch: cityRaw,
     records: cityRecords,
-    source: 'Que Faire à Paris · opendata.paris.fr (Licence Ouverte)',
+    source: 'Que Faire à Paris · opendata.paris.fr (ODbL)',
     note: 'Things you take up rather than attend — `mode: "do"`. The city feed already carries the repetition in its `occurrences` field and shows it as a date; this reads it as a rhythm, which is the whole point of the file. English lines are assembled from each record\'s own fields, never translated. Luma covers the tech and AI evenings the city has none of. These are `sourced` records and rank below anything hand-written. The gate lives in scripts/practices.mjs; pruned daily by scripts/refresh.mjs.'
   },
   our415: {

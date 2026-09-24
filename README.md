@@ -1014,6 +1014,15 @@ So a real relocation is three jobs, in order of how much of it is a machine's:
    neighbourhood. Research, and still the reason the guide is worth anything —
    but no longer the difference between the site working and not working.
 
+## Data licences
+
+The city's open data in Paris and the OpenStreetMap layer everywhere are
+ODbL, which asks for a credit and keeps anything derived from them under
+the same licence. [DATA-LICENSE.md](DATA-LICENSE.md) lists which files
+that covers. Read it before adding a source: a new open database brings
+its licence with it, and the label in the script that reads it is what
+every card repeats.
+
 ## Privacy
 
 No exact address is in this repository or sent anywhere. Distances are
