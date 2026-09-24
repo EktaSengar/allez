@@ -67,6 +67,8 @@ const DAYS = (() => { const i = process.argv.indexOf('--days'); return i === -1 
 const UA   = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 
 const TODAY = new Date().toISOString().slice(0, 10);
+/* Luma stamps are UTC; the day an evening falls on is the city's. */
+const TZ = City.weather?.tz;
 const UNTIL = new Date(Date.now() + DAYS * 86400000).toISOString().slice(0, 10);
 
 const zoneOf = zoneFinder(City);
@@ -610,7 +612,7 @@ async function luma(log) {
   kept = step('has a position', kept.filter(e => icsGeo(e)));
   kept = step('inside the city', kept.filter(e => { const [la, lo] = icsGeo(e); return zoneOf(la, lo) != null; }));
   kept = step('running now or soon', kept.filter(e => {
-    const s = icsDate(e.start), n = icsDate(e.end) || s;
+    const s = icsDate(e.start, TZ), n = icsDate(e.end, TZ) || s;
     return s && n >= TODAY && s <= UNTIL;
   }));
   kept = step('has a link', kept.filter(e => e.parts.url));
@@ -624,7 +626,7 @@ async function luma(log) {
   return kept.map(e => {
     const [lat, lon] = icsGeo(e);
     const [cat, emoji] = (LUMA_KIND.find(([re]) => re.test(e.title)) || [null, 'community', '🫂']).slice(1);
-    const start = icsDate(e.start), end = icsDate(e.end) || start;
+    const start = icsDate(e.start, TZ), end = icsDate(e.end, TZ) || start;
     const address = /luma\.com|lu\.ma/.test(e.loc || '') ? e.parts.address : (strip(e.loc) || e.parts.address);
     return {
       id: 'luma-' + e.uid.replace(/@.*$/, '').replace(/[^a-zA-Z0-9]/g, '').slice(0, 40),

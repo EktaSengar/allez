@@ -61,7 +61,7 @@ const SEEDED  = argv.includes('--seed');
    every hash, so a baseline and its comparison must share one. */
 const DATE = String(flag('--date', '2026-09-16'));
 
-const VIEWS = ['today', 'nights', 'weekend', 'eat', 'sport',
+const VIEWS = ['today', 'nights', 'weekend', 'events', 'eat', 'sport',
                'regulars', 'explore', 'away', 'quests', 'saved'];
 
 const sha = s => crypto.createHash('sha256').update(s, 'utf8').digest('hex').slice(0, 16);

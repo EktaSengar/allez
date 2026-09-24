@@ -1046,6 +1046,7 @@ const App = (() => {
   defineView('weekend',  c  => renderWeekend(c.weekend), c => weekendLede(c.weekend));
   defineView('eat',      () => renderEat(),      () => eatLede());
   defineView('explore',  () => renderExplore(),  () => exploreLede());
+  defineView('events',   () => renderEvents(),   () => eventsLede());
   defineView('regulars', () => renderRegulars(), () => regularsLede());
   defineView('away',     () => renderAway());
   defineView('quests',   () => renderQuests());
@@ -2463,6 +2464,220 @@ const App = (() => {
       : `Where you are, where to go next, and the walks within reach of ${here}.`;
   }
 
+  /* ---------- events ----------
+
+     What is on once. Everything dated already reaches Today and the
+     Weekend, but only as one answer among places, and nothing on the
+     site read the next month as a calendar. This does, and nothing else.
+
+     Four groups rather than one per subject in the feed. Thirteen
+     subjects across a row of buttons is a filter panel, and most of them
+     answer the same wish: Music, Stage and Film are all "a seat and
+     something in front of it". The line that does matter is between a
+     thing you catch on a date and a run you catch before it closes,
+     which is why the dates are the sections and the groups only filter.
+
+     A record says several true things about itself; its own first
+     subject that a group claims is the one that counts. Nuit Blanche is
+     art and a festival, and says festival first. */
+  const EV_GROUPS = [
+    ['see',  '🖼️', 'Exhibitions', 'art, photography, design',  ['exhibition', 'art', 'photography', 'design', 'fashion']],
+    ['show', '🎭', 'Shows',       'music, stage, film, talks', ['music', 'theatre', 'dance', 'comedy', 'film', 'books', 'nightlife', 'culture', 'learn']],
+    ['out',  '🎪', 'Out & about', 'festivals, markets, walks', ['festival', 'market', 'walk', 'food', 'community']],
+    ['tech', '🤖', 'Tech',        'meetups and hackathons',    ['tech']]
+  ];
+
+  function evGroupOf(i) {
+    const cats = i.categories || [];
+    /* Tech first whatever order it is written in: the Luma records say
+       `tech, learn`, and `learn` would otherwise file them under talks. */
+    if (cats.includes('tech')) return 'tech';
+    if (i.type === 'exhibition') return 'see';
+    /* The city's feed files anything visual as `art`, so a street-art
+       workshop and a garden party arrive beside the retrospectives. An
+       exhibition is something that runs; a one-day art thing is an
+       outing, and goes wherever its other subjects say. */
+    const brief = i.start && i.end && Rank.daysBetween(i.start, i.end) < 3;
+    let fallback = null;
+    for (const c of cats) {
+      const g = EV_GROUPS.find(([, , , , subjects]) => subjects.includes(c));
+      if (!g) continue;
+      if (g[0] === 'see' && brief) { fallback = 'out'; continue; }
+      return g[0];
+    }
+    return fallback;
+  }
+
+  /* How far ahead the tab looks, and when a dated thing stops being an
+     occasion. The city's feed dates a weekly capoeira class September to
+     June and a guided walk 2024 to 2027; both are true, and neither is
+     happening in the sense this tab means. Exhibitions get longer
+     because three or four months is what an exhibition is. */
+  const EV_AHEAD = 30;
+  const EV_RUN = 7;                     // longer than this is a run, not a date
+  const EV_MAX_RUN = 120, EV_MAX_SHOW = 240;
+  /* What repeats belongs to Regulars. The feed files classes under the
+     subject they teach, so they arrive here as dance and theatre; their
+     titles say what they are. */
+  const EV_CLASS = /\b(cours|ateliers?|stages?|workshops?|class(es)?|lessons?|initiation|recrutement|jam|ciné-club)\b/i;
+
+  const evSpan = i => Rank.daysBetween(i.start, i.end);
+
+  function isEvent(i) {
+    if (!i.start || !i.end) return false;
+    if (i.type !== 'event' && i.type !== 'exhibition') return false;
+    const g = evGroupOf(i);
+    if (!g) return false;
+    if (i.mode === 'do' && g !== 'tech') return false;
+    /* Fixtures are the Sport tab's, and it draws them better. */
+    if ((i.categories || []).includes('sport')) return false;
+    if (EV_CLASS.test(i.title || '')) return false;
+    return evSpan(i) <= (g === 'see' ? EV_MAX_SHOW : EV_MAX_RUN);
+  }
+
+  /* The first day in the window it is on, as days from today, or null.
+     `isOpenOn` already knows about weekdays and holidays. */
+  function evNext(i) {
+    const from = Math.max(0, Rank.daysBetween(TODAY_ISO, i.start));
+    for (let d = from; d <= EV_AHEAD; d++) {
+      if (Rank.isOpenOn(i, iso(addDays(TODAY, d)))) return d;
+    }
+    return null;
+  }
+
+  const dayLabel = d => d === 0 ? 'Today' : d === 1 ? 'Tomorrow' : fmtShort(addDays(TODAY, d));
+  const endLabel = i => fmtShort(new Date(i.end + 'T12:00:00'));
+
+  /* One-offs are filed under the day they next happen. The buckets are
+     named the way somebody plans — tonight, tomorrow, the weekend — and
+     only switch to dates once it is far enough off to need one. */
+  function evBucket(d) {
+    if (d === 0) return 'Today';
+    if (d === 1) return 'Tomorrow';
+    const w = weekend();
+    const untilSun = Rank.daysBetween(TODAY_ISO, w.sunISO);
+    const date = addDays(TODAY, d);
+    if (d <= untilSun) return (date.getDay() === 0 || date.getDay() === 6) ? 'This weekend' : 'Later this week';
+    if (d <= untilSun + 7) return 'Next week';
+    return 'Further ahead';
+  }
+  const EV_BUCKETS = ['Today', 'Tomorrow', 'Later this week', 'This weekend', 'Next week', 'Further ahead'];
+
+  let EV_MODE = 'all';
+
+  function evPool() {
+    const out = [];
+    for (const i of ALL) {
+      if (!isEvent(i) || spent(i)) continue;
+      const d = evNext(i);
+      if (d == null) continue;
+      out.push({ i, d, g: evGroupOf(i), run: evSpan(i) > EV_RUN });
+    }
+    return out;
+  }
+
+  /* The date goes first in the meta line, because on this tab it is the
+     first thing anybody asks. */
+  function evRow(e, lead) {
+    return row(e.i).replace('<p class="row-meta">',
+      `<p class="row-meta"><b class="pick-label">${esc(lead)}</b> · `);
+  }
+
+  function evWhen(e) {
+    const left = Rank.daysBetween(TODAY_ISO, e.i.end);
+    if (e.i.start < TODAY_ISO && left === 0) return 'Last day today';
+    if (e.i.start < TODAY_ISO && left === 1) return 'Until tomorrow';
+    if (e.run) return e.i.start > TODAY_ISO ? `Opens ${fmtShort(new Date(e.i.start + 'T12:00:00'))}` : `Until ${endLabel(e.i)}`;
+    const on = dayLabel(e.d);
+    return e.i.end > iso(addDays(TODAY, e.d)) ? `${on}, until ${endLabel(e.i)}` : on;
+  }
+
+  /* Ranked within a section, never across: you are choosing a day first
+     and a thing second. `per` keeps one group from taking a mixed list,
+     which is how the tech evenings took Regulars before they moved.
+
+     The score decides which make the cut and the calendar decides the
+     order they are read in, as on Nights — "Next week" in score order
+     read Wednesday, Monday, Sunday, Tuesday. Runs sort by how long is
+     left instead, since that is the date that matters for them. */
+  function evSection(title, entries, cap, per) {
+    if (!entries.length) return '';
+    const ranked = Rank.rank(entries.map(e => e.i), CTX);
+    const byItem = new Map(entries.map(e => [e.i, e]));
+    const seen = {};
+    const pick = [];
+    for (const it of ranked) {
+      const e = byItem.get(it);
+      if (per && (seen[e.g] || 0) >= per) continue;
+      seen[e.g] = (seen[e.g] || 0) + 1;
+      pick.push(e);
+      if (pick.length >= cap) break;
+    }
+    const when = e => e.run && e.i.start <= TODAY_ISO ? e.i.end : iso(addDays(TODAY, e.d));
+    pick.sort((a, b) => when(a).localeCompare(when(b)));
+    const note = entries.length > pick.length
+      ? `${pick.length} of ${entries.length}, best first — the rest are further or less known`
+      : null;
+    return stripHead(title, note)
+      + `<div class="list">${pick.map(e => evRow(e, evWhen(e))).join('')}</div>`;
+  }
+
+  function eventsLede() {
+    const here = Loc.displayName(Loc.active());
+    return `What is on once in the next month, and the runs still worth catching. Best first, nearest breaking ties, from ${here}.`;
+  }
+
+  function renderEvents() {
+    const pool = evPool();
+    if (!pool.length) {
+      return `<p class="empty">Nothing dated in the next month yet. <code>scripts/events-city.mjs</code> fills this.</p>`;
+    }
+
+    /* Only the groups that have something, for the reason Regulars
+       gives: a button that leads nowhere is worse than no button. */
+    const groups = EV_GROUPS.filter(([k]) => pool.some(e => e.g === k));
+    if (!groups.some(([k]) => k === EV_MODE)) EV_MODE = 'all';
+    const tabs = [['all', '📅', 'Coming up', 'a bit of everything'], ...groups];
+    const modeBar = `<div class="mode mode-wide mode-chips" id="ev-mode">
+      ${tabs.map(([k, e, label, sub]) =>
+        `<button class="mode-btn ${EV_MODE === k ? 'on' : ''}" data-evmode="${k}">
+          <span class="mode-emoji">${e}</span> ${label}
+          <em>${esc(sub)}</em>
+        </button>`).join('')}
+    </div>`;
+
+    const all = EV_MODE === 'all';
+    const mine = all ? pool : pool.filter(e => e.g === EV_MODE);
+    return modeBar + (EV_MODE === 'see' ? eventsExhibitions(mine) : eventsByDay(mine, all));
+  }
+
+  function eventsByDay(pool, all) {
+    const once = pool.filter(e => !e.run || e.i.start > TODAY_ISO);
+    const runs = pool.filter(e => e.run && e.i.start <= TODAY_ISO);
+    const closing = runs.filter(e => Rank.daysBetween(TODAY_ISO, e.i.end) <= 10);
+    const running = runs.filter(e => !closing.includes(e));
+
+    const cap = all ? 4 : 8, per = all ? 2 : 0;
+    const days = EV_BUCKETS.map(b =>
+      evSection(b, once.filter(e => evBucket(e.d) === b), cap, per)).join('');
+
+    return (days || `<p class="empty">No one-off dates in the next month.</p>`)
+      + evSection('Last chance', closing, all ? 3 : 6, per)
+      + evSection('Running now', running, all ? 3 : 6, per);
+  }
+
+  /* Exhibitions are almost all runs, so a list by day would put every
+     one of them under Today. What decides whether you go is how long
+     is left. */
+  function eventsExhibitions(pool) {
+    const closing = pool.filter(e => e.i.start <= TODAY_ISO && Rank.daysBetween(TODAY_ISO, e.i.end) <= 14);
+    const opening = pool.filter(e => e.i.start > TODAY_ISO);
+    const on = pool.filter(e => !closing.includes(e) && !opening.includes(e));
+    return evSection('Closing in the next fortnight', closing, 8)
+      + evSection('Opening soon', opening, 6)
+      + evSection('On now', on, 8);
+  }
+
   /* ---------- regulars ----------
 
      The subject a record is about, as opposed to the things it also is.
@@ -2480,8 +2695,7 @@ const App = (() => {
     ['move',  '💃', 'Move',  'dance and circus',        ['dance', 'circus']],
     ['stage', '🎭', 'Stage', 'theatre and comedy',      ['theatre', 'comedy']],
     ['sing',  '🎤', 'Sing',  'choirs and voice',        ['music', 'singing']],
-    ['taste', '🍷', 'Taste', 'cooking and wine',        ['food']],
-    ['tech',  '🤖', 'Tech',  'AI and engineering',      ['tech']]
+    ['taste', '🍷', 'Taste', 'cooking and wine',        ['food']]
   ];
 
   /* Sing is declared and, today, empty. The city's feed has no choir in
@@ -2512,7 +2726,10 @@ const App = (() => {
      restate an OpenStreetMap entry as a suggestion. */
   const groupPlaces = key => (REG_GROUPS.find(g => g[0] === key) || [])[5] || null;
 
-  const isRegular = i => i.mode === 'do';
+  /* Tech used to be a group here and was the one that did not belong:
+     every record in it, in all five cities, is a single evening or a
+     two-day hackathon, and none of them repeats. They are on Events. */
+  const isRegular = i => i.mode === 'do' && !(i.categories || []).includes('tech');
 
   function capPerSubject(items, per, limit) {
     const seen = {};
@@ -2543,8 +2760,10 @@ const App = (() => {
 
   function renderRegulars() {
     const pool = ALL.filter(isRegular);
+    /* Three cities had only tech here, and it moved to Events. Saying
+       where it went beats a blank tab that looks like a failed load. */
     if (!pool.length) {
-      return `<p class="empty">Nothing collected yet. <code>scripts/practices.mjs</code> fills this.</p>`;
+      return `<p class="empty">Nothing that repeats is collected here yet. One-off evenings, tech included, are on <button class="tab-link" data-view="events" type="button">Events</button>.</p>`;
     }
 
     const groups = liveGroups(pool);
@@ -2562,10 +2781,11 @@ const App = (() => {
     return modeBar + (REG_MODE === 'all' ? regularsAll() : regularsGroup(REG_MODE));
   }
 
-  /* The overview keeps the per-subject cap. Without it the tech evenings
-     take every row, because they are collected from a source that skews
-     central and this flat is central — which is exactly how the first
-     version of this came out reading as a list about AI. */
+  /* The overview keeps the per-subject cap. Without it one subject can
+     take every row — the tech evenings did, before they moved to Events,
+     because they are collected from a source that skews central and this
+     flat is central, and the first version came out reading as a list
+     about AI. */
   function regularsAll() {
     const near = Near.pick(isRegular, {
       rings: Near.RINGS.out, want: 6, limit: 40, exclude: notWanted
@@ -3172,6 +3392,14 @@ const App = (() => {
       const k = b.dataset.intent;
       if (SPORT_INTENT.has(k)) SPORT_INTENT.delete(k); else SPORT_INTENT.add(k);
       render();
+    });
+
+    // Events: the four groups, same component as Regulars'
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-evmode]'); if (!b) return;
+      EV_MODE = b.dataset.evmode;
+      render();
+      window.scrollTo({ top: $('#main').offsetTop - 60, behavior: 'smooth' });
     });
 
     // Regulars: subsections, same component as Eat's
