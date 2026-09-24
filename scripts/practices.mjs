@@ -347,7 +347,7 @@ function cityRecords(raw, log) {
       ...(free ? { price: 0, priceNote: 'Free', labels: ['free', 'learn'] }
                : { priceNote: strip(e.price_detail).slice(0, 60) || 'Paid', labels: ['learn'] }),
       url: e.url,
-      source: 'Que Faire à Paris — opendata.paris.fr',
+      source: 'Que Faire à Paris — opendata.paris.fr · ODbL',
       lastVerified: TODAY,
       indoor: e.event_indoor === 1 || e.event_indoor === true ? true
             : e.event_indoor === 0 || e.event_indoor === false ? false : undefined,
@@ -591,7 +591,7 @@ const CITY_HALVES = {
     label: 'city feed',
     fetch: cityRaw,
     records: cityRecords,
-    source: 'Que Faire à Paris · opendata.paris.fr (Licence Ouverte)',
+    source: 'Que Faire à Paris · opendata.paris.fr (ODbL)',
     note: 'Things you take up rather than attend — `mode: "do"`. The city feed already carries the repetition in its `occurrences` field and shows it as a date; this reads it as a rhythm, which is the whole point of the file. English lines are assembled from each record\'s own fields, never translated. Luma covers the tech and AI evenings the city has none of. These are `sourced` records and rank below anything hand-written. The gate lives in scripts/practices.mjs; pruned daily by scripts/refresh.mjs.'
   },
   our415: {

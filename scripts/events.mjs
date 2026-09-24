@@ -181,7 +181,7 @@ function toRecord(e) {
                  priceNote: strip(e.price_detail).slice(0, 60) || 'Paid' }),
     why: strip(e.lead_text || e.description).slice(0, 320),
     url: e.url,
-    source: 'Que Faire à Paris — opendata.paris.fr',
+    source: 'Que Faire à Paris — opendata.paris.fr · ODbL',
     lastVerified: TODAY,
     indoor: e.event_indoor === 1 || e.event_indoor === true ? true
           : e.event_indoor === 0 || e.event_indoor === false ? false : undefined,
@@ -251,7 +251,7 @@ async function run() {
   const doc = {
     generated: TODAY,
     window: { from: TODAY, to: UNTIL },
-    source: 'Que Faire à Paris · Ville de Paris · opendata.paris.fr (Licence Ouverte)',
+    source: 'Que Faire à Paris · Ville de Paris · opendata.paris.fr (ODbL)',
     note: 'What is on, from the city itself. Facts with a source and no opinion — these are `sourced` records and rank below anything hand-written. The gate that decides what reaches this file lives in scripts/events.mjs and is the point of it: the feed carries around 2,200 live listings and this is the fraction that earns a place. Pruned daily by scripts/refresh.mjs.',
     items
   };

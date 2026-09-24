@@ -281,7 +281,7 @@ async function run() {
 
   const doc = {
     generated: new Date().toISOString().slice(0, 10),
-    source: 'Ville de Paris — opendata.paris.fr (Licence Ouverte / Open Licence)',
+    source: 'Ville de Paris — opendata.paris.fr · ODbL',
     note: 'Facilities the city publishes about itself: markets with their days and hours, pools, courts, parks, libraries. Factual, not opinion — these land in the "sourced" tier, below anything a person wrote and above a bare name on a map.',
     counts: byCat,
     items: deduped
