@@ -2219,7 +2219,19 @@ const App = (() => {
        itself: these are the places near you, and the guide has no opinion
        about them yet. */
     const lead = vouched ? leadOf(items) : null;
+    /* Places somebody rated from a visit come first, best first, and the
+       nearer of two equals first; everything else keeps the nearest-first
+       order it arrived in. Decided 24 September 2026: a list that put
+       Bacio di Latte sixth behind four places rated lower, because the
+       Stanford Shopping Center is a few minutes further than University
+       Avenue, was answering "what is closest" when the owner had already
+       said what is best. Only the ★ tier is reordered — a researched or
+       mapped place has no verdict to sort by. */
+    const rated = i => Near.tierOf(i) === 'personal';
     const rest = items.filter(i => i.id !== (lead && lead.id));
+    rest.sort((a, b) =>
+      (rated(b) - rated(a)) ||
+      (rated(a) && rated(b) ? ((b.quality ?? 0) - (a.quality ?? 0)) : 0));
 
     const KICKERS = {
       cafe:       'Start here — the one to try first',
