@@ -2629,9 +2629,24 @@ const App = (() => {
     return `What is on once in the next month, and the runs still worth catching. Best first, nearest breaking ties, from ${here}.`;
   }
 
+  /* Where the evenings are, when we may not list them. Luma's terms let
+     us read its city calendars but not display what is in them, so rather
+     than a copy there is a door: the city's own page on Luma. A pack
+     names it in `lumaPage`; a city without one simply has no door. */
+  function lumaOut() {
+    if (!City.lumaPage) return '';
+    const [url, where] = City.lumaPage;
+    return `<div class="near-card luma-out">
+      <p class="near-label"><span class="e">🎟️</span>Meetups and evenings</p>
+      <h4 class="near-name">What is on in ${esc(where)}, on Luma</h4>
+      <p class="near-why">Tech meetups, hackathons, demo nights and more, on Luma's own calendar. We link to it rather than copy it.</p>
+      <a class="near-link" href="${esc(url)}" target="_blank" rel="noopener">Browse on Luma ↗</a>
+    </div>`;
+  }
+
   function renderEvents() {
     const pool = evPool();
-    if (!pool.length) {
+    if (!pool.length && !City.lumaPage) {
       return `<p class="empty">Nothing dated in the next month yet. <code>scripts/events-city.mjs</code> fills this.</p>`;
     }
 
@@ -2655,9 +2670,15 @@ const App = (() => {
     const all = EV_MODE === 'all';
     const mine = all ? pool : pool.filter(e => e.g === EV_MODE);
     if (!mine.length) {
-      return modeBar + `<p class="empty">No tech conferences in the next month from the two open lists we can show — confs.tech and developers.events. Meetups will follow once a source lets us list them.</p>`;
+      const why = EV_MODE === 'tech'
+        ? 'No tech conferences in the next month from the two open lists we can show, confs.tech and developers.events.'
+        : 'Nothing dated in the next month yet.';
+      return modeBar + `<p class="empty">${why}</p>` + lumaOut();
     }
-    return modeBar + (EV_MODE === 'see' ? eventsExhibitions(mine) : eventsByDay(mine, all));
+    /* The door goes last: what we can vouch for first, then where to look
+       for more. Only on the two views where evenings belong. */
+    return modeBar + (EV_MODE === 'see' ? eventsExhibitions(mine) : eventsByDay(mine, all))
+      + (all || EV_MODE === 'tech' ? lumaOut() : '');
   }
 
   function eventsByDay(pool, all) {

@@ -723,6 +723,7 @@ const City = (() => {
       { id: 'today',    label: 'Today' },
       { id: 'nights',   label: 'Nights' },
       { id: 'weekend',  label: 'Weekend' },
+      { id: 'events',   label: 'Events' },
       { id: 'eat',      label: 'Eat' },
       { id: 'sport',    label: 'Sport' },
       { id: 'regulars', label: 'Regulars' },
@@ -797,6 +798,12 @@ const City = (() => {
      city and no venue, so this is the whole of the matching. */
   const conferences = ['New Delhi', 'Delhi', 'Gurugram', 'Gurgaon', 'Noida'];
 
+  /* Luma's own page for the calendar above. Its terms let us read the
+     calendar but not show what is in it, so Events links here instead —
+     a link is not a copy. Checked 24 September 2026: this is the page
+     for the same discovery id. */
+  const lumaPage = ['https://luma.com/delhi', 'Delhi'];
+
   const luma = [['discover', 'discplace-CzipmKodUYN2Dfx', 'Luma — Delhi']];
 
   /* Luma only — no municipal feed here carries what you could take up. */
@@ -819,7 +826,7 @@ const City = (() => {
     ]
   };
 
-  return { id, name, ua, bbox, serviceWorker, zone, air, seasons, reach, notable, luma, conferences, practices, discover,
+  return { id, name, ua, bbox, serviceWorker, zone, air, seasons, reach, notable, luma, conferences, lumaPage, practices, discover,
            centre, views, holidays, shutsOnHoliday, money, weather };
 })();
 

@@ -439,6 +439,12 @@ const City = (() => {
      city and no venue, so this is the whole of the matching. */
   const conferences = ['Bengaluru', 'Bangalore'];
 
+  /* Luma's own page for the calendar above. Its terms let us read the
+     calendar but not show what is in it, so Events links here instead —
+     a link is not a copy. Checked 24 September 2026: this is the page
+     for the same discovery id. */
+  const lumaPage = ['https://luma.com/bengaluru', 'Bengaluru'];
+
   const luma = [['discover', 'discplace-G0tGUVYwl7T17Sb', 'Luma — Bengaluru']];
 
   /* Luma only — no municipal feed here carries what you could take up. */
@@ -461,7 +467,7 @@ const City = (() => {
     ]
   };
 
-  return { id, name, ua, bbox, serviceWorker, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather, notable, luma, conferences, practices, discover };
+  return { id, name, ua, bbox, serviceWorker, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather, notable, luma, conferences, lumaPage, practices, discover };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;
