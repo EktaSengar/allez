@@ -1,0 +1,9 @@
+{
+  "note": "Our own photographs: which file in photos/ (git ignores that folder) is which place, and where in the frame the place is — focus 0 is the top of the photo, 1 the bottom. Run node scripts/own-photos.mjs after adding a line.",
+  "photos": [
+    { "file": "oren's.hummus.jpeg",  "city": "bay-area", "id": "orens-hummus-university",       "subject": "Oren's Hummus, University Avenue", "focus": 0.72 },
+    { "file": "salt&straw.jpeg",     "city": "bay-area", "id": "osm-salt-straw-74891--244324",  "subject": "Salt & Straw, University Avenue",  "focus": 0.55 },
+    { "file": "maruwu.seicha.jpeg",  "city": "bay-area", "id": "maruwu-seicha-palo-alto",       "subject": "Maruwu Seicha, University Avenue", "focus": 0.47 },
+    { "file": "local.union.271.jpeg","city": "bay-area", "id": "local-union-271",               "subject": "Local Union 271, from the door",   "focus": 0.58 }
+  ]
+}
