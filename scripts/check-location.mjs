@@ -314,8 +314,12 @@ const EXPECT = {
 
        91 once Saket, Dwarka and the NCR sectors each got something of
        their own — and sharing fell with it, which is the tell that the
-       records went to the edges rather than the middle. */
-    floor: 91
+       records went to the edges rather than the middle.
+
+       97 on 23 September, when list de-duplication stopped merging
+       same-named places kilometres apart: a bare map entry for one branch
+       of a common name had been swallowing the write-up of another. */
+    floor: 97
   },
   'new-york': {
     /* One per borough, which is how this city is actually divided, plus
@@ -378,8 +382,15 @@ const EXPECT = {
     /* 18 off the notable tier alone; 28 with twelve editorial records;
        62 with four markets and an Iyengar bakery; 120 with ten cafés and
        bakeries, when those two columns had been dead in all forty sampled
-       neighbourhoods; 123 with two more in Jayanagar. */
-    floor: 123
+       neighbourhoods; 123 with two more in Jayanagar. 120 on 23 September,
+       when the index began to include places drawn as buildings, and the
+       fall is the old number being wrong rather than the guide getting
+       worse: Kengeri, Nadaprabhu Kempegowda Layout and Sir MV Layout had
+       no bakery at all within thirty minutes on the map, so retrieval fell
+       back to returning everything and counted write-ups 35 to 48 minutes
+       away as the local answer. Now a real bakery nine minutes from
+       Kengeri is on the map, and the honest answer there is that one. */
+    floor: 120
   }
 };
 

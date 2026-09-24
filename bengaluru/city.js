@@ -441,6 +441,10 @@ const City = (() => {
      cafés and bakeries it looks for everywhere. See the note above
      LAYERS in that file for the counts that prompted these. */
   const discover = {
+    /* Places drawn as a building outline as well as a pin — see
+       discover.mjs. Most of a market street's restaurants are drawn that
+       way, and the index missed every one of them. */
+    buildings: true,
     layers: [
       { cat:'culture',    emoji:'🏛️', label:'Historic',    q:['way["historic"]["name"]','node["historic"]["name"]'] },
       { cat:'park',       emoji:'💧', label:'Water',       q:['way["natural"="water"]["name"]'], minName:true },
