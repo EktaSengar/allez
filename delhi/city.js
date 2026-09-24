@@ -723,7 +723,6 @@ const City = (() => {
       { id: 'today',    label: 'Today' },
       { id: 'nights',   label: 'Nights' },
       { id: 'weekend',  label: 'Weekend' },
-      { id: 'events',   label: 'Events' },
       { id: 'eat',      label: 'Eat' },
       { id: 'sport',    label: 'Sport' },
       { id: 'regulars', label: 'Regulars' },

@@ -2523,8 +2523,18 @@ const App = (() => {
 
   const evSpan = i => Rank.daysBetween(i.start, i.end);
 
+  /* Listings whose source has not licensed us to show them. Luma's
+     terms allow reading its public calendar feeds but not republishing
+     or displaying what is in them without written permission, so its
+     evenings stay off this tab — which takes every tech record with
+     them, since Luma was the only place they came from. The group stays
+     declared, and draws itself again when a source that allows it (or a
+     hand-written record) fills it. Audited 24 September 2026. */
+  const UNLICENSED = /^Luma\b/;
+
   function isEvent(i) {
     if (!i.start || !i.end) return false;
+    if (UNLICENSED.test(i.source || '')) return false;
     if (i.type !== 'event' && i.type !== 'exhibition') return false;
     const g = evGroupOf(i);
     if (!g) return false;
@@ -2728,7 +2738,8 @@ const App = (() => {
 
   /* Tech used to be a group here and was the one that did not belong:
      every record in it, in all five cities, is a single evening or a
-     two-day hackathon, and none of them repeats. They are on Events. */
+     two-day hackathon, and none of them repeats. They belong to Events,
+     which holds them back until a licensed source supplies them. */
   const isRegular = i => i.mode === 'do' && !(i.categories || []).includes('tech');
 
   function capPerSubject(items, per, limit) {
@@ -2760,10 +2771,10 @@ const App = (() => {
 
   function renderRegulars() {
     const pool = ALL.filter(isRegular);
-    /* Three cities had only tech here, and it moved to Events. Saying
-       where it went beats a blank tab that looks like a failed load. */
+    /* Three cities had only tech here, all of it from Luma, and it has
+       left — see UNLICENSED under Events. */
     if (!pool.length) {
-      return `<p class="empty">Nothing that repeats is collected here yet. One-off evenings, tech included, are on <button class="tab-link" data-view="events" type="button">Events</button>.</p>`;
+      return `<p class="empty">Nothing that repeats is collected here yet.</p>`;
     }
 
     const groups = liveGroups(pool);

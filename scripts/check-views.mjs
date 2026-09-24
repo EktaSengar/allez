@@ -377,10 +377,18 @@ async function run() {
     }
 
     for (const view of VIEWS) {
-      await page.evaluate(v => {
+      /* Not every city has every view — Events is left out where no
+         licensed source fills it. Without a tab to click, the capture
+         would hash whichever view was drawn last and call it this one. */
+      const has = await page.evaluate(v => {
         const t = document.querySelector(`.tab[data-view="${v}"]`);
         if (t) t.click();
+        return !!t;
       }, view);
+      if (!has) {
+        process.stdout.write(`  ${view.padEnd(9)} not in this city\n`);
+        continue;
+      }
       const ok = await settle(page);
       const snap = await capture(page, view);
       out.views[view] = {
