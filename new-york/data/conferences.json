@@ -1,347 +1,347 @@
 {
- "generated": "2026-09-24",
- "window": {
-  "from": "2026-09-24",
-  "to": "2026-11-23"
- },
- "source": "confs.tech (MIT) · developers.events (CC BY-NC 4.0)",
- "note": "Tech conferences in this city, from two open lists maintained by volunteers. Facts only: name, dates, city, topic, link — the line under each title is assembled from those, never copied. Kept apart from events-city.json because the licences differ; see DATA-LICENSE.md. Written daily by scripts/conferences.mjs, pruned by scripts/refresh.mjs.",
- "items": [
-  {
-   "id": "conf-api-conference-nyc-2026-09-28",
-   "title": "API Conference NYC",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-09-28",
-   "end": "2026-10-02",
-   "why": "A 5-day conference on API in New York, NY. Tickets and programme on its own site.",
-   "url": "https://apiconference.net/new-york",
-   "source": "confs.tech — tech-conferences/conference-data (MIT)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
+  "generated": "2026-09-24",
+  "window": {
+    "from": "2026-09-24",
+    "to": "2026-11-23"
   },
-  {
-   "id": "conf-decopscon-nyc-2026-09-28",
-   "title": "DecOpsCon NYC",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-09-28",
-   "end": "2026-10-02",
-   "why": "A 5-day conference on API in New York, NY. Tickets and programme on its own site.",
-   "url": "https://devopscon.io/new-york",
-   "source": "confs.tech — tech-conferences/conference-data (MIT)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-devopscon-nyc-2026-2026-09-28",
-   "title": "DevOpsCon NYC 2026",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-09-28",
-   "end": "2026-10-02",
-   "why": "A 5-day conference on kubernetes, platform engineering, DevOps in New York, NY. Tickets and programme on its own site.",
-   "url": "https://devopscon.io/new-york/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-international-javascript-conference-nyc-2026-09-28",
-   "title": "International JavaScript Conference NYC",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-09-28",
-   "end": "2026-10-02",
-   "why": "A 5-day conference on javascript in New York, NY. Tickets and programme on its own site.",
-   "url": "https://javascript-conference.com/new-york",
-   "source": "confs.tech — tech-conferences/conference-data (MIT)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-mlcon-nyc-2026-09-28",
-   "title": "MLCon NYC",
-   "emoji": "🤖",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-09-28",
-   "end": "2026-10-02",
-   "why": "A 5-day conference on data in New York, NY. Tickets and programme on its own site.",
-   "url": "https://mlconference.ai/new-york",
-   "source": "confs.tech — tech-conferences/conference-data (MIT)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-elastic-on-2026-10-08",
-   "title": "Elastic{ON}",
-   "emoji": "🤖",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-10-08",
-   "end": "2026-10-08",
-   "why": "A one-day conference on elasticsearch, data, search in New York, NY. Tickets and programme on its own site.",
-   "url": "https://www.elastic.co/events/elasticon",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-aie-nyc-2026-2026-10-12",
-   "title": "AIE NYC 2026",
-   "emoji": "🤖",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-10-12",
-   "end": "2026-10-14",
-   "why": "A three-day conference on artificial intelligence, machine learning, deep learning in New York, NY. Tickets and programme on its own site.",
-   "url": "https://ai.engineer/nyc",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-ai-engineer-nyc-2026-2026-10-14",
-   "title": "AI Engineer NYC 2026",
-   "emoji": "🤖",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-10-14",
-   "end": "2026-10-14",
-   "why": "A one-day conference on AI, python, data in New York, NY. Tickets and programme on its own site.",
-   "url": "https://www.ai.engineer/nyc/2026",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-bsidesnyc-0x06-2026-10-17",
-   "title": "BSidesNYC 0x06",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-10-17",
-   "end": "2026-10-17",
-   "why": "A one-day conference on cybersecurity, security in New York, NY. Tickets and programme on its own site.",
-   "url": "https://bsidesnyc.org",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-a-case-for-community-open-source-events-with-gat-2026-10-27",
-   "title": "A Case for Community: Open Source Events with GatherPress",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-10-27",
-   "end": "2026-10-27",
-   "why": "A one-day conference on wordpress, open source, technology in New York, NY. Tickets and programme on its own site.",
-   "url": "https://www.meetup.com/wordpressnyc/events/316377220/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-ai-devcon-nyc-2026-11-02",
-   "title": "AI DevCon NYC",
-   "emoji": "🤖",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Brooklyn, NY",
-   "start": "2026-11-02",
-   "end": "2026-11-04",
-   "why": "A three-day conference on data in Brooklyn, NY. Tickets and programme on its own site.",
-   "url": "https://tessl.io/devcon",
-   "source": "confs.tech — tech-conferences/conference-data (MIT)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-ai-native-devcon-new-york-2026-2026-11-03",
-   "title": "AI Native DevCon New York 2026",
-   "emoji": "🤖",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Brooklyn, NY",
-   "start": "2026-11-03",
-   "end": "2026-11-04",
-   "why": "A two-day conference in Brooklyn, NY. Tickets and programme on its own site.",
-   "url": "https://ainativedevcon.io/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-open-source-in-finance-forum-new-york-2026-11-04",
-   "title": "Open Source in Finance Forum New York",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-11-04",
-   "end": "2026-11-05",
-   "why": "A two-day conference on finance, open source, technology in New York, NY. Tickets and programme on its own site.",
-   "url": "https://events.linuxfoundation.org/open-source-finance-forum-new-york/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-ai-coding-summit-new-york-edition-2026-11-16",
-   "title": "AI Coding Summit New York Edition",
-   "emoji": "🤖",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-11-16",
-   "end": "2026-11-19",
-   "why": "A 4-day conference on javascript in New York, NY. Tickets and programme on its own site.",
-   "url": "https://aicodingsummit.com/nyc",
-   "source": "confs.tech — tech-conferences/conference-data (MIT)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-jsnation-us-2026-11-16",
-   "title": "JSNation US",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-11-16",
-   "end": "2026-11-19",
-   "why": "A 4-day conference on javascript in New York, NY. Tickets and programme on its own site.",
-   "url": "https://jsnation.us",
-   "source": "confs.tech — tech-conferences/conference-data (MIT)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-react-summit-us-2026-11-17",
-   "title": "React Summit US",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "New York, NY",
-   "start": "2026-11-17",
-   "end": "2026-11-20",
-   "why": "A 4-day conference on javascript in New York, NY. Tickets and programme on its own site.",
-   "url": "https://reactsummit.us",
-   "source": "confs.tech — tech-conferences/conference-data (MIT)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  }
- ]
+  "source": "confs.tech (MIT) · developers.events (CC BY-NC 4.0)",
+  "note": "Tech conferences in this city, from two open lists maintained by volunteers. Facts only: name, dates, city, topic, link — the line under each title is assembled from those, never copied. Kept apart from events-city.json because the licences differ; see DATA-LICENSE.md. Written daily by scripts/conferences.mjs, pruned by scripts/refresh.mjs.",
+  "items": [
+    {
+      "id": "conf-api-conference-nyc-2026-09-28",
+      "title": "API Conference NYC",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-09-28",
+      "end": "2026-10-02",
+      "why": "A 5-day conference on API in New York, NY. Tickets and programme on its own site.",
+      "url": "https://apiconference.net/new-york",
+      "source": "confs.tech — tech-conferences/conference-data (MIT)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-decopscon-nyc-2026-09-28",
+      "title": "DecOpsCon NYC",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-09-28",
+      "end": "2026-10-02",
+      "why": "A 5-day conference on API in New York, NY. Tickets and programme on its own site.",
+      "url": "https://devopscon.io/new-york",
+      "source": "confs.tech — tech-conferences/conference-data (MIT)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-devopscon-nyc-2026-2026-09-28",
+      "title": "DevOpsCon NYC 2026",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-09-28",
+      "end": "2026-10-02",
+      "why": "A 5-day conference on kubernetes, platform engineering, DevOps in New York, NY. Tickets and programme on its own site.",
+      "url": "https://devopscon.io/new-york/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-international-javascript-conference-nyc-2026-09-28",
+      "title": "International JavaScript Conference NYC",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-09-28",
+      "end": "2026-10-02",
+      "why": "A 5-day conference on javascript in New York, NY. Tickets and programme on its own site.",
+      "url": "https://javascript-conference.com/new-york",
+      "source": "confs.tech — tech-conferences/conference-data (MIT)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-mlcon-nyc-2026-09-28",
+      "title": "MLCon NYC",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-09-28",
+      "end": "2026-10-02",
+      "why": "A 5-day conference on data in New York, NY. Tickets and programme on its own site.",
+      "url": "https://mlconference.ai/new-york",
+      "source": "confs.tech — tech-conferences/conference-data (MIT)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-elastic-on-2026-10-08",
+      "title": "Elastic{ON}",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-10-08",
+      "end": "2026-10-08",
+      "why": "A one-day conference on elasticsearch, data, search in New York, NY. Tickets and programme on its own site.",
+      "url": "https://www.elastic.co/events/elasticon",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-aie-nyc-2026-2026-10-12",
+      "title": "AIE NYC 2026",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-10-12",
+      "end": "2026-10-14",
+      "why": "A three-day conference on artificial intelligence, machine learning, deep learning in New York, NY. Tickets and programme on its own site.",
+      "url": "https://ai.engineer/nyc",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-ai-engineer-nyc-2026-2026-10-14",
+      "title": "AI Engineer NYC 2026",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-10-14",
+      "end": "2026-10-14",
+      "why": "A one-day conference on AI, python, data in New York, NY. Tickets and programme on its own site.",
+      "url": "https://www.ai.engineer/nyc/2026",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-bsidesnyc-0x06-2026-10-17",
+      "title": "BSidesNYC 0x06",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-10-17",
+      "end": "2026-10-17",
+      "why": "A one-day conference on cybersecurity, security in New York, NY. Tickets and programme on its own site.",
+      "url": "https://bsidesnyc.org",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-a-case-for-community-open-source-events-with-gat-2026-10-27",
+      "title": "A Case for Community: Open Source Events with GatherPress",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-10-27",
+      "end": "2026-10-27",
+      "why": "A one-day conference on wordpress, open source, technology in New York, NY. Tickets and programme on its own site.",
+      "url": "https://www.meetup.com/wordpressnyc/events/316377220/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-ai-devcon-nyc-2026-11-02",
+      "title": "AI DevCon NYC",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Brooklyn, NY",
+      "start": "2026-11-02",
+      "end": "2026-11-04",
+      "why": "A three-day conference on data in Brooklyn, NY. Tickets and programme on its own site.",
+      "url": "https://tessl.io/devcon",
+      "source": "confs.tech — tech-conferences/conference-data (MIT)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-ai-native-devcon-new-york-2026-2026-11-03",
+      "title": "AI Native DevCon New York 2026",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Brooklyn, NY",
+      "start": "2026-11-03",
+      "end": "2026-11-04",
+      "why": "A two-day conference in Brooklyn, NY. Tickets and programme on its own site.",
+      "url": "https://ainativedevcon.io/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-open-source-in-finance-forum-new-york-2026-11-04",
+      "title": "Open Source in Finance Forum New York",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-11-04",
+      "end": "2026-11-05",
+      "why": "A two-day conference on finance, open source, technology in New York, NY. Tickets and programme on its own site.",
+      "url": "https://events.linuxfoundation.org/open-source-finance-forum-new-york/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-ai-coding-summit-new-york-edition-2026-11-16",
+      "title": "AI Coding Summit New York Edition",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-11-16",
+      "end": "2026-11-19",
+      "why": "A 4-day conference on javascript in New York, NY. Tickets and programme on its own site.",
+      "url": "https://aicodingsummit.com/nyc",
+      "source": "confs.tech — tech-conferences/conference-data (MIT)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-jsnation-us-2026-11-16",
+      "title": "JSNation US",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-11-16",
+      "end": "2026-11-19",
+      "why": "A 4-day conference on javascript in New York, NY. Tickets and programme on its own site.",
+      "url": "https://jsnation.us",
+      "source": "confs.tech — tech-conferences/conference-data (MIT)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-react-summit-us-2026-11-17",
+      "title": "React Summit US",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-11-17",
+      "end": "2026-11-20",
+      "why": "A 4-day conference on javascript in New York, NY. Tickets and programme on its own site.",
+      "url": "https://reactsummit.us",
+      "source": "confs.tech — tech-conferences/conference-data (MIT)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    }
+  ]
 }

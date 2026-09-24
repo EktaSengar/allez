@@ -1,221 +1,221 @@
 {
- "generated": "2026-09-24",
- "window": {
-  "from": "2026-09-24",
-  "to": "2026-11-23"
- },
- "source": "confs.tech (MIT) · developers.events (CC BY-NC 4.0)",
- "note": "Tech conferences in this city, from two open lists maintained by volunteers. Facts only: name, dates, city, topic, link — the line under each title is assembled from those, never copied. Kept apart from events-city.json because the licences differ; see DATA-LICENSE.md. Written daily by scripts/conferences.mjs, pruned by scripts/refresh.mjs.",
- "items": [
-  {
-   "id": "conf-owasp-appsec-days-france-2026-2026-09-24",
-   "title": "OWASP AppSec Days France 2026",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-09-24",
-   "end": "2026-09-24",
-   "why": "A one-day conference on security, appsec in Paris. Tickets and programme on its own site.",
-   "url": "https://www.owaspappsecdays.fr/2026/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
+  "generated": "2026-09-24",
+  "window": {
+    "from": "2026-09-24",
+    "to": "2026-11-23"
   },
-  {
-   "id": "conf-paris-web-2026-2026-09-24",
-   "title": "Paris Web 2026",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-09-24",
-   "end": "2026-09-26",
-   "why": "A three-day conference on web, design in Paris. Tickets and programme on its own site.",
-   "url": "https://www.paris-web.fr",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-platformcon-paris-2026-09-24",
-   "title": "PlatformCon Paris",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-09-24",
-   "end": "2026-09-24",
-   "why": "A one-day conference on platform, web in Paris. Tickets and programme on its own site.",
-   "url": "https://platformconlive.fr/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-react-native-connection-2026-2026-09-24",
-   "title": "React Native Connection 2026",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-09-24",
-   "end": "2026-09-24",
-   "why": "A one-day conference on mobile, react native in Paris. Tickets and programme on its own site.",
-   "url": "https://reactnativeconnection.io/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-sap-inside-track-paris-2026-2026-09-25",
-   "title": "SAP Inside Track Paris 2026",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-09-25",
-   "end": "2026-09-25",
-   "why": "A one-day conference on SAP, enterprise, technology in Paris. Tickets and programme on its own site.",
-   "url": "https://sapcommunityparis.github.io/SITPAR2026",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-4th-tech-summit-on-ai-robotics-2026-09-28",
-   "title": "4th Tech Summit on AI & Robotics",
-   "emoji": "🤖",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-09-28",
-   "end": "2026-09-29",
-   "why": "A two-day conference on AI, robotics in Paris. Tickets and programme on its own site.",
-   "url": "https://artificialintelligence.averconferences.com/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-kubeauto-day-paris-2026-10-08",
-   "title": "KubeAuto Day Paris",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-10-08",
-   "end": "2026-10-08",
-   "why": "A one-day conference on kubernetes, cloud native, open source in Paris. Tickets and programme on its own site.",
-   "url": "https://kubeauto.day/paris",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-dev-with-ai-2026-10-12",
-   "title": "Dev With AI",
-   "emoji": "🤖",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-10-12",
-   "end": "2026-10-12",
-   "why": "A one-day conference on AI, development in Paris. Tickets and programme on its own site.",
-   "url": "https://www.devw.ai/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-directions-emea-2026-2026-10-27",
-   "title": "Directions EMEA 2026",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-10-27",
-   "end": "2026-10-29",
-   "why": "A three-day conference on cloud, DevOps in Paris. Tickets and programme on its own site.",
-   "url": "https://www.directionsforpartners.com/emea2026",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  },
-  {
-   "id": "conf-ovhcloud-summit-2026-11-19",
-   "title": "OVHcloud Summit",
-   "emoji": "💻",
-   "type": "event",
-   "categories": [
-    "tech"
-   ],
-   "zone": null,
-   "approx": "city",
-   "area": "Paris",
-   "start": "2026-11-19",
-   "end": "2026-11-19",
-   "why": "A one-day conference on cloud, infrastructure in Paris. Tickets and programme on its own site.",
-   "url": "https://summit.ovhcloud.com/en/",
-   "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-   "lastVerified": "2026-09-24",
-   "indoor": true,
-   "quality": 3,
-   "uniqueness": 3
-  }
- ]
+  "source": "confs.tech (MIT) · developers.events (CC BY-NC 4.0)",
+  "note": "Tech conferences in this city, from two open lists maintained by volunteers. Facts only: name, dates, city, topic, link — the line under each title is assembled from those, never copied. Kept apart from events-city.json because the licences differ; see DATA-LICENSE.md. Written daily by scripts/conferences.mjs, pruned by scripts/refresh.mjs.",
+  "items": [
+    {
+      "id": "conf-owasp-appsec-days-france-2026-2026-09-24",
+      "title": "OWASP AppSec Days France 2026",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-09-24",
+      "end": "2026-09-24",
+      "why": "A one-day conference on security, appsec in Paris. Tickets and programme on its own site.",
+      "url": "https://www.owaspappsecdays.fr/2026/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-paris-web-2026-2026-09-24",
+      "title": "Paris Web 2026",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-09-24",
+      "end": "2026-09-26",
+      "why": "A three-day conference on web, design in Paris. Tickets and programme on its own site.",
+      "url": "https://www.paris-web.fr",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-platformcon-paris-2026-09-24",
+      "title": "PlatformCon Paris",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-09-24",
+      "end": "2026-09-24",
+      "why": "A one-day conference on platform, web in Paris. Tickets and programme on its own site.",
+      "url": "https://platformconlive.fr/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-react-native-connection-2026-2026-09-24",
+      "title": "React Native Connection 2026",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-09-24",
+      "end": "2026-09-24",
+      "why": "A one-day conference on mobile, react native in Paris. Tickets and programme on its own site.",
+      "url": "https://reactnativeconnection.io/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-sap-inside-track-paris-2026-2026-09-25",
+      "title": "SAP Inside Track Paris 2026",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-09-25",
+      "end": "2026-09-25",
+      "why": "A one-day conference on SAP, enterprise, technology in Paris. Tickets and programme on its own site.",
+      "url": "https://sapcommunityparis.github.io/SITPAR2026",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-4th-tech-summit-on-ai-robotics-2026-09-28",
+      "title": "4th Tech Summit on AI & Robotics",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-09-28",
+      "end": "2026-09-29",
+      "why": "A two-day conference on AI, robotics in Paris. Tickets and programme on its own site.",
+      "url": "https://artificialintelligence.averconferences.com/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-kubeauto-day-paris-2026-10-08",
+      "title": "KubeAuto Day Paris",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-10-08",
+      "end": "2026-10-08",
+      "why": "A one-day conference on kubernetes, cloud native, open source in Paris. Tickets and programme on its own site.",
+      "url": "https://kubeauto.day/paris",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-dev-with-ai-2026-10-12",
+      "title": "Dev With AI",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-10-12",
+      "end": "2026-10-12",
+      "why": "A one-day conference on AI, development in Paris. Tickets and programme on its own site.",
+      "url": "https://www.devw.ai/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-directions-emea-2026-2026-10-27",
+      "title": "Directions EMEA 2026",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-10-27",
+      "end": "2026-10-29",
+      "why": "A three-day conference on cloud, DevOps in Paris. Tickets and programme on its own site.",
+      "url": "https://www.directionsforpartners.com/emea2026",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-ovhcloud-summit-2026-11-19",
+      "title": "OVHcloud Summit",
+      "emoji": "💻",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Paris",
+      "start": "2026-11-19",
+      "end": "2026-11-19",
+      "why": "A one-day conference on cloud, infrastructure in Paris. Tickets and programme on its own site.",
+      "url": "https://summit.ovhcloud.com/en/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-09-24",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    }
+  ]
 }
