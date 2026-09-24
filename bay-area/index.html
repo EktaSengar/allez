@@ -61,7 +61,7 @@
      cached hard, so a returning reader spends no round trips at all
      being told the file has not changed. -->
 <script>
-  window.__DV = {"civic":"962ebe63","daytrips":"e25eb56e","editorial":"74d37bb4","events":"71eb13df","events-city":"69b94428","food":"cdca552d","home":"8b72f3e3","invaders":"bc425794","itineraries":"9e30400c","neighborhoods":"d35e04cf","nightlife":"ed6d4cda","notable":"06ff3706","notes":"ccbeeefa","places":"5eff7329","places/g00":"63d3885a","places/g01":"78498766","places/g02":"36122076","places/g03":"f316474f","places/g10":"0961c3f8","places/g11":"5a144213","places/g12":"c703d6b4","places/g13":"6542e54f","places/g20":"82c97771","places/g21":"1eaa32fc","places/g30":"e9d9ee41","places/g31":"e5bf9a5d","places/index":"e51758b8","practices":"4cd4d801","quests":"bc844eb9","sports":"6f3c3cb8"};
+  window.__DV = {"civic":"962ebe63","conferences":"62b9636c","daytrips":"e25eb56e","editorial":"74d37bb4","events":"71eb13df","events-city":"69b94428","food":"cdca552d","home":"8b72f3e3","invaders":"bc425794","itineraries":"9e30400c","neighborhoods":"d35e04cf","nightlife":"ed6d4cda","notable":"06ff3706","notes":"ccbeeefa","places":"5eff7329","places/g00":"63d3885a","places/g01":"78498766","places/g02":"36122076","places/g03":"f316474f","places/g10":"0961c3f8","places/g11":"5a144213","places/g12":"c703d6b4","places/g13":"6542e54f","places/g20":"82c97771","places/g21":"1eaa32fc","places/g30":"e9d9ee41","places/g31":"e5bf9a5d","places/index":"e51758b8","practices":"4cd4d801","quests":"bc844eb9","sports":"6f3c3cb8"};
   (function () {
     var core = ['home', 'places/index',
                 'events', 'events-city', 'places', 'nightlife', 'sports', 'food',
@@ -171,17 +171,17 @@
      app.js all read `City` as they evaluate, not later. keys.js is
      second for the same reason — it needs City.id to name a key, and
      state.js and location.js need the name as they evaluate. -->
-<script src="city.js?v=36c9aa17"></script>
+<script src="city.js?v=80081c04"></script>
 <script src="../js/keys.js?v=d850c74b"></script>
 <script src="../js/location.js?v=9d06fda4"></script>
 <script src="../js/state.js?v=381f1374"></script>
 <script src="../js/weather.js?v=f053584c"></script>
 <script src="../js/hours.js?v=989d1fda"></script>
-<script src="../js/record.js?v=b3399b17"></script>
+<script src="../js/record.js?v=394550ce"></script>
 <script src="../js/invaders.js?v=bc4c1aab"></script>
 <script src="../js/nearby.js?v=8d53e2a7"></script>
 <script src="../js/scoring.js?v=16ed6bd0"></script>
-<script src="../js/app.js?v=d0b2e72d"></script>
+<script src="../js/app.js?v=bbd98b78"></script>
 <!-- After app.js, because it calls App.defineView. This is what a pack
      shipping its own view looks like: one file, one registration, and
      nothing in the engine that knows it exists. -->
@@ -271,6 +271,7 @@
     <p id="stamp"></p>
     <p>Photographs curated by us. Where one of us went, the picture is our own; the rest come from Wikimedia Commons under their respective licences. Each card says whose.</p>
     <p>Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, under the ODbL.</p>
+    <p>Tech conferences from <a href="https://confs.tech">confs.tech</a> (MIT) and <a href="https://developers.events">developers.events</a> (<a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>).</p>
     <p>Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>, under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Place descriptions from Wikipedia are <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
   </div>
 </footer>

@@ -490,6 +490,14 @@ const City = (() => {
      fell south of San Mateo: Bay Area Founders Club 8 of 58, Open
      Source for AI 3 of 18, Bay Area AI 1 of 3. Stanford's own founder
      calendars had nothing upcoming and are left out. */
+
+  /* ---------- tech conferences ----------
+
+     The names scripts/events-city.mjs looks for in the two open
+     conference lists, confs.tech and developers.events. They give a
+     city and no venue, so this is the whole of the matching. */
+  const conferences = ['San Francisco', 'South San Francisco', 'Palo Alto', 'Menlo Park', 'Mountain View', 'Redwood City', 'San Mateo', 'Sunnyvale', 'Santa Clara', 'San Jose', 'Oakland', 'Berkeley'];
+
   const luma = [
     ['discover', 'discplace-BDj7GNbGlsF7Cka', 'Luma — San Francisco'],
     ['calendar', 'cal-2BuL8o8ylVizd6x', 'Luma — Bay Area Founders Club'],
@@ -537,7 +545,7 @@ const City = (() => {
      most of University Avenue is drawn that way. */
   const discover = { buildings: true };
 
-  return { id, name, searchRegion, ua, bbox, nightNotes, discover, serviceWorker, zone, bases, climate, reach, practices, luma, events,
+  return { id, name, searchRegion, ua, bbox, nightNotes, discover, serviceWorker, zone, bases, climate, reach, practices, luma, conferences, events,
            centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
 })();
 

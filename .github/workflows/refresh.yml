@@ -100,6 +100,18 @@ jobs:
               || echo "$city practices skipped — a source was unavailable"
           done
 
+      # Tech conferences, from two open lists on GitHub (confs.tech, MIT;
+      # developers.events, CC BY-NC 4.0). Every city, including Paris —
+      # into conferences.json, never events-city.json, because Paris's
+      # events file is ODbL and the licences cannot share a file.
+      - name: Collect tech conferences, city by city (daily)
+        if: github.event_name == 'schedule'
+        run: |
+          for city in paris bay-area delhi bengaluru new-york; do
+            HOMEGROUND_CITY=$city node scripts/conferences.mjs \
+              || echo "$city conferences skipped — a source was unavailable"
+          done
+
       # Pruning is per city, because refresh.mjs reads the one it is told
       # about. Running it for Paris alone is how the Bay Area's expired
       # events would have survived in the file — invisible on the page,

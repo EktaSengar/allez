@@ -816,6 +816,14 @@ const City = (() => {
      luma.com/nyc, 50 events on a rolling fortnight and every one of them
      geocoded. Checked and found to have none of their own:
      luma.com/new-york and luma.com/brooklyn. */
+
+  /* ---------- tech conferences ----------
+
+     The names scripts/events-city.mjs looks for in the two open
+     conference lists, confs.tech and developers.events. They give a
+     city and no venue, so this is the whole of the matching. */
+  const conferences = ['New York', 'Brooklyn', 'Manhattan', 'NYC'];
+
   const luma = [['discover', 'discplace-Izx1rQVSh8njYpP', 'Luma — New York']];
 
   /* ---------- what is on, and what turned out not to be ----------
@@ -886,7 +894,7 @@ const City = (() => {
   const discover = { buildings: true };
 
   return { id, name, searchRegion, ua, bbox, discover, serviceWorker, zone, reach, centre, views,
-           holidays, shutsOnHoliday, money, weather, luma, events, practices };
+           holidays, shutsOnHoliday, money, weather, luma, conferences, events, practices };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;
