@@ -195,10 +195,43 @@ const Rec = (() => {
 
      Matched on the copula, not on a bare `former` — the Maison de Balzac
      "is a writer's house museum" in the former residence of Balzac, and is
-     very much open. */
-  const PAST_TENSE = /^\s*former\b|\b(?:is|are)\s+(?:a|an|the)\s+former\b|\bwas\s+(?:a|an|the)\b/i;
+     very much open.
 
-  const stillStanding = i => !PAST_TENSE.test(String(i.why || ''));
+     Read in the first sentence only, and "was a" only where it comes
+     before any "is": that is where an encyclopaedia says what a place is,
+     or was. Matched across the whole text, it caught a later "was" in the
+     history of places that are open today — SFMOMA, the Golden Gate
+     Theatre, Polidor, Union Square, Koi Palace ("It was a semifinalist") —
+     and "is an example … and was the summer residence" is Tipu Sultan's
+     palace, still standing. Measured on 24 September 2026: 103 records
+     across the five cities before, 61 after.
+
+     Never applied to what we wrote. A ★ note or a researched record is
+     somebody vouching that the place is there, and a story about its
+     past is not a claim that it closed — "It was the first flavour they
+     ever made" had marked Salt & Straw as gone. */
+
+  /* Where Wikipedia says what the thing is. Shared with `stillThere`.
+     "St." is not the end of a sentence: split there, "St. Nick's Jazz Pub
+     was a jazz club" read as "St", and both tests passed a closed club.
+     The same for the other titles and street words that end in a
+     lower-case letter; initials already survive, being capitals. */
+  const firstSentence = why => String(why || '')
+    .split(/(?<=[a-z)\]])(?<!\b(?:St|Ste|Jr|Sr|Dr|Mt|Ft|Mr|Mrs|Ms|Rev|Ave|Blvd|Rd|No|vs|approx))\.\s/)[0];
+  const FORMER = /^\s*former\b|\b(?:is|are)\s+(?:a|an|the)\s+former\b/i;
+  const WAS = /\bwas\s+(?:a|an|the)\b/i;
+  const IS = /\b(?:is|are)\b/i;
+  const describedAsPast = why => {
+    const s = firstSentence(why);
+    if (FORMER.test(s)) return true;
+    const w = WAS.exec(s);
+    if (!w) return false;
+    const is = IS.exec(s);
+    return !is || is.index > w.index;
+  };
+  const OURS = new Set(['personal', 'editorial']);
+
+  const stillStanding = i => OURS.has(i.provenance) || !describedAsPast(i.why);
 
 /* ---------- where a photograph lives ----------
 
@@ -407,7 +440,7 @@ const Rec = (() => {
      Palo Alto" — the Bijou — was the Today tab's suggestion for an
      afternoon. A former cinema, restaurant, club or museum is shut; a
      former prison, fort or missile site is something to go and see, which
-     is why this names the kind and `PAST_TENSE` below, which does not, is
+     is why this names the kind and `describedAsPast` above, which does not, is
      kept to the two views that propose somewhere open.
 
      Read in the first sentence only, where Wikipedia says what the thing
@@ -429,7 +462,6 @@ const Rec = (() => {
   const GONE = new RegExp(String.raw`^\s*former\b${UPTO}\b${GONE_KIND}\b` +
     String.raw`|\b(?:is|are)\s+(?:a|an|the)\s+former\b${UPTO}\b${GONE_KIND}\b` +
     String.raw`|\b(?:was|were)\s+(?:a|an)\b${UPTO}\b${GONE_KIND}\b`, 'i');
-  const firstSentence = why => String(why || '').split(/(?<=[a-z)\]])\.\s/)[0];
 
   const stillThere = p => {
     const why = p.why || '';

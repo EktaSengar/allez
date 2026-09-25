@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24",
+  "generated": "2026-09-25",
   "window": {
     "from": "2026-09-24",
     "to": "2026-12-23"
@@ -7,36 +7,6 @@
   "source": "Que Faire à Paris · opendata.paris.fr (ODbL) · Luma",
   "note": "Things you take up rather than attend — `mode: \"do\"`. The city feed already carries the repetition in its `occurrences` field and shows it as a date; this reads it as a rhythm, which is the whole point of the file. English lines are assembled from each record's own fields, never translated. Luma covers the tech and AI evenings the city has none of. These are `sourced` records and rank below anything hand-written. The gate lives in scripts/practices.mjs; pruned daily by scripts/refresh.mjs.",
   "items": [
-    {
-      "id": "luma-evtqf4k3zp1MBuzAJB",
-      "title": "DuckDB - Paris Meetup",
-      "emoji": "💻",
-      "type": "event",
-      "mode": "do",
-      "categories": [
-        "tech",
-        "learn"
-      ],
-      "zone": 8,
-      "area": "Algolia, 55 Rue d'Amsterdam, 75008 Paris, France",
-      "coords": [
-        48.880370799999994,
-        2.3268816
-      ],
-      "start": "2026-09-24",
-      "end": "2026-09-24",
-      "why": "🇫🇷 Paris data folks, save the date. On September 24th, DuckDB and Altertable are hosting a meetup at Algolia’s Paris HQ. 📍 55 Rue d’Amsterdam, 75008 Paris Expect talks, demos, architecture discussions, food, drinks, and swag. Speakers & topics Tom Larkworthy, Staff Engineer at Taktile “DuckDB-Iceberg at Taktile” Usi",
-      "url": "https://luma.com/p9n5hkvf",
-      "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-09-24",
-      "indoor": true,
-      "labels": [
-        "learn",
-        "afterwork"
-      ],
-      "quality": 3,
-      "uniqueness": 3
-    },
     {
       "id": "luma-evtxdp3aJvEbRXpen5",
       "title": "{Tech: Europe} AI Gaming Hack",
