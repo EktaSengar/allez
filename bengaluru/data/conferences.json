@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-25",
+  "generated": "2026-09-26",
   "window": {
-    "from": "2026-09-25",
-    "to": "2026-11-24"
+    "from": "2026-09-26",
+    "to": "2026-11-25"
   },
   "source": "confs.tech (MIT) · developers.events (CC BY-NC 4.0)",
   "note": "Tech conferences in this city, from two open lists maintained by volunteers. Facts only: name, dates, city, topic, link — the line under each title is assembled from those, never copied. Kept apart from events-city.json because the licences differ; see DATA-LICENSE.md. Written daily by scripts/conferences.mjs, pruned by scripts/refresh.mjs.",
@@ -23,7 +23,7 @@
       "why": "A two-day conference on open source, open data, DevOps in Bengaluru. Tickets and programme on its own site.",
       "url": "https://fossunited.org/indiafoss/2026",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -44,7 +44,7 @@
       "why": "A one-day conference on data in Bangalore. Tickets and programme on its own site.",
       "url": "https://globalai.community/e/bd1o37ln",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -65,7 +65,7 @@
       "why": "A 4-day conference on design, festival in Bengaluru. Tickets and programme on its own site.",
       "url": "https://26.designup.io",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -86,7 +86,7 @@
       "why": "A two-day conference on compiler, programming languages, software engineering in Bengaluru. Tickets and programme on its own site.",
       "url": "https://compilertech.org/",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -107,7 +107,7 @@
       "why": "A 4-day conference on cybersecurity, cloud security, AI security in Bengaluru. Tickets and programme on its own site.",
       "url": "https://www.blackhat-india.com/",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -128,7 +128,7 @@
       "why": "A two-day conference on ubuntu, open source, linux in Bengaluru. Tickets and programme on its own site.",
       "url": "https://events.canonical.com/event/157/overview",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -149,7 +149,7 @@
       "why": "A one-day conference on cloud, infrastructure in Bengaluru. Tickets and programme on its own site.",
       "url": "https://events.linuxfoundation.org/grpconf-india/",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -170,7 +170,7 @@
       "why": "A one-day conference on android in Bengaluru. Tickets and programme on its own site.",
       "url": "https://india.droidcon.com",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -191,7 +191,7 @@
       "why": "A one-day conference in Bangalore. Tickets and programme on its own site.",
       "url": "https://india.fluttercon.dev",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -212,7 +212,28 @@
       "why": "A one-day conference on cloud, DevOps in Bengaluru. Tickets and programme on its own site.",
       "url": "https://www.civo.com/navigate/india/2026",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-26",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-wearedevelopers-conference-india-2026-11-25",
+      "title": "WeAreDevelopers Conference India",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "Bengaluru",
+      "start": "2026-11-25",
+      "end": "2026-11-26",
+      "why": "A two-day conference on data in Bengaluru. Tickets and programme on its own site.",
+      "url": "https://www.wearedevelopers.com/conference-india",
+      "source": "confs.tech — tech-conferences/conference-data (MIT)",
+      "lastVerified": "2026-09-26",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
