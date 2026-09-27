@@ -172,7 +172,7 @@
      second for the same reason — it needs City.id to name a key, and
      state.js and location.js need the name as they evaluate. -->
 <script src="city.js?v=2a065815"></script>
-<script src="../js/keys.js?v=d850c74b"></script>
+<script src="../js/keys.js?v=e5461a5d"></script>
 <script src="../js/location.js?v=9d06fda4"></script>
 <script src="../js/state.js?v=14a2b952"></script>
 <script src="../js/weather.js?v=f053584c"></script>
@@ -184,7 +184,7 @@
 <!-- Deferred: nothing reads Plan until the first render, which waits for
      DOMContentLoaded, so it need not hold up the header. -->
 <script src="../js/plan.js?v=ae97375b" defer></script>
-<script src="../js/app.js?v=c4a8feb1"></script>
+<script src="../js/app.js?v=47be8f8b"></script>
 <!-- After app.js, because it calls App.defineView. This is what a pack
      shipping its own view looks like: one file, one registration, and
      nothing in the engine that knows it exists. -->
@@ -280,6 +280,11 @@
 </footer>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- Last, and deferred, unlike every script above: it writes nothing
+     the first paint needs, and a visit count is never worth a moment of
+     it. See js/count.js for what is counted and how to stop it. -->
+<script src="../js/count.js?v=5b3188b9" defer></script>
 
 </body>
 </html>

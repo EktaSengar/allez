@@ -3322,6 +3322,7 @@ const App = (() => {
     document.addEventListener('click', e => {
       const t = e.target.closest('.tab, .tab-link'); if (!t) return;
       VIEW = t.dataset.view;
+      if (typeof Count !== 'undefined') Count.view(VIEW);    // js/count.js; counts nothing unless configured
       render();
       window.scrollTo({ top: $('#main').offsetTop - 60, behavior: 'smooth' });
       if (!isComplete()) {
@@ -3752,7 +3753,7 @@ const App = (() => {
      draw from. Kept deliberately small: a pack composes the same rows,
      cards and headings every built-in view does, or it does not match. */
   const ui = {
-    esc, rows, row, card, stripHead, img, MARK,
+    esc, rows, row, card, stripHead, img, MARK, toast,
     /* The two tiers, live rather than copied — a view is built after the
        fill, and a snapshot taken at registration would be empty. */
     records: () => ({ all: ALL, discovered: DISCOVERED, ctx: CTX })

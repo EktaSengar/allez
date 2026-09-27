@@ -119,6 +119,8 @@ js/
   scoring.js    the ranking engine — is this good today
   plan.js       the weekend as a sequence of stops — see "The plan" below
   app.js        loading and rendering
+  count.js      how often the site is opened, and which views — no cookies;
+                see "Privacy"
 data/
   events.json         time-sensitive; expires and is pruned automatically
   events-city.json    what the city says is on — collected daily, gated hard
@@ -1113,8 +1115,34 @@ every card repeats.
 No exact address is in this repository or sent anywhere. Distances are
 estimated from the neighbourhood, and the weather request uses coordinates
 rounded to two decimal places — roughly a kilometre. Ratings, saved places,
-quest progress and your theme choice are stored in your browser's localStorage
-and are never transmitted. There is no analytics, no tracking and no login.
+quest progress, stated preferences and your theme choice are stored in your
+browser's localStorage and are never transmitted. There are no cookies and no
+login.
+
+**Counting visits.** `js/count.js` counts visits with
+[GoatCounter](https://www.goatcounter.com), which sets no cookies and is free
+for non-commercial use. It is off until its `ENDPOINT` names a GoatCounter
+site, and it counts only on allez.city. What it sends: the page's path and
+title, the screen width, the site a visit came from (never the page), which
+views are opened (once per visit each), and, once a week per city, whether
+this browser had visited in an earlier week. That last needs something kept
+in the browser: two Mondays, the week the mark was set and the last week
+counted. Neither identifies anyone, and the mark is dropped thirteen months
+after it was set however often you visit, rather than renewing itself.
+GoatCounter tells visitors apart by a hash of the site, the browser and the IP
+address, held in memory for eight hours and never stored.
+
+Nothing is counted under Do Not Track or Global Privacy Control, in an
+automated browser, or after `#no-count` has been added to the address (add it
+again to undo). `#household` marks a browser as the owners', and its counts
+arrive tagged "(household)", so the dashboard can tell our own use from
+everybody else's. The Paris page serves readers in the EU, where keeping even
+those two dates for measurement falls under the rules on device storage.
+France's CNIL lets audience measurement this narrow run without consent on
+conditions: the publisher's own statistics only, anonymous totals, no mark
+lasting or renewing itself past thirteen months, readers told, a way to
+object, and figures kept for at most twenty-five months. The code meets the
+first five; the last is a retention setting in the GoatCounter account.
 
 ## Appearance
 

@@ -256,7 +256,9 @@ and dropped from every dated section. `check-hours.mjs` had been reporting it
 as "9 strings parse but are never open — suspicious" and it went unchased. One
 real bug in the closure logic already here, worth more than the register.
 
-**Still open, and cheap:** surface the check date in the interface. `checked`
+**Still open, and cheap:** surface the check date in the interface. *Done
+25 September 2026: a card's details say when it was checked, and a name from
+the map says the year a mapper last confirmed it.* `checked`
 and `edited` are already carried, and a line reading "confirmed by a mapper in
 2025" turns an uncertainty that cannot be resolved into information a reader
 can weigh — far more this site's voice than silently guessing. `notes.json`
@@ -430,7 +432,8 @@ Smallest risk first, and each step shippable on its own.
 
 Every phase in this document is now either built or deliberately dropped. The
 one piece of unfinished work it leaves behind is small: show the reader when a
-record was last confirmed, rather than deciding on their behalf.
+record was last confirmed, rather than deciding on their behalf. *Done 25
+September 2026.*
 
 Phases 1 and 4 are the pair that delivers what was asked for. Phase 2 is the
 one that stops an existing section from quietly dying.
@@ -514,11 +517,79 @@ The work is the same for both audiences, which is why it comes first.
 
 ### Order
 
-1. The liveness list and a checked date on every written card.
-2. Hours and booking links for the ★ and editorial records.
+1. The liveness list and a checked date on every written card. *The date is
+   on every card, 25 September 2026; the list is still to build — see below.*
+2. Hours and booking links for the ★ and editorial records. *Done for the Bay
+   Area, 25 September 2026, and held there by CI.*
 3. A read-only MCP server over the Bay Area pack, tested with Claude.
 4. Structured place data in each page and an `llms.txt`, for agents that
    only read the web.
 5. The tonight view, offline, and share links — in parallel with 1–4, since
    they need nothing from them.
 6. Other packs, and Muse when it can connect.
+
+---
+
+## The plan's inputs, for the Bay Area  ·  *done, 25 September 2026*
+
+The app's weekend is a plan rather than a list, and a plan is only as good as
+four facts about each stop: when it is open, how long it takes, what it
+costs, and whether you have to book. Most of the Bay Area's recommendations
+carried none of them, and nothing failed when they were missing.
+
+**Every ★ and researched Bay Area record now states them**, 135 records, and
+`check-packs.mjs` fails the build if one stops: a checked date, hours (or a
+start time, or a sentence saying why there are none), a part of the day,
+a duration, a price level, indoors or out, and a booking link or `false`.
+Each was checked against the place's own site where it has one, on 25
+September; where it has none, the listings are named as the source.
+
+Three things were learned by checking rather than assuming.
+
+*The map's hours for the places we recommend were wrong more often than
+right.* Of the 47 records that already carried OpenStreetMap hours, 19 were
+right, 26 were wrong, and two needed only a rewrite: Turtle Tower was
+09:00–16:00 on the map and is 11:00–21:30; Tommaso's was open Tuesday to
+Saturday and is Wednesday to Sunday; Taverna and Rooh had lost their lunches,
+and the British Bankers Club gained one it does not serve. `check-hours.mjs`
+measures whether the parser can read a string, which it could in every case.
+Whether the string is true is a different question, and only looking answers
+it. The other cities' records deserve the same pass before any of them is held
+to the contract.
+
+*The parser was reading 366 opening times wrong.* A comma between
+rules — `Tu-Fr 12:00-13:30, Tu-Sa 19:00-21:30` — adds to the rules before it;
+`js/hours.js` read it as a semicolon, which replaces them, so wherever lunch
+and dinner were written that way the lunch disappeared. 366 strings across the
+five cities read differently now, 319 of them in Paris, and "open now" stops
+calling them shut at noon. `check-hours.mjs` now holds a handful of settled
+strings, each one once read wrongly.
+
+*Links rot in worse ways than breaking.* La Taqueria's old domain now forwards
+to a gambling site, and Li Po Lounge's belongs to a cosmetic-surgery blog; the
+Swan Oyster Depot link was somebody else's write-up, since Swan has no site;
+Ritual's went nowhere. Coupa Café's record pointed at the campus kiosk while
+its words sent you to the Ramona Street original. Kopiku is Kopi Kita now.
+Ramen Nagi's own site carries injected casino spam. These are exactly what the
+liveness list in item 1 is for, and a HEAD request would have caught only one
+of them: one hijacked domain redirects off the site and the other answers 200.
+The list needs to follow redirects off the domain and read what comes back.
+
+**Also built alongside it, as engine code rather than interface:**
+
+- `js/plan.js` — the Weekend tab's choosing, moved out of `renderWeekend()`
+  unchanged (every view byte-identical in all five cities, and in Paris and
+  the Bay Area also with a seeded store and on a Saturday and a Sunday) and
+  extended: each stop carries the
+  journey from the one before, reason codes, an open block and a spend.
+  `check-plan.mjs` holds the shape.
+- Taste that fades, listens and looks outward — `Store.tasteWeights()` takes
+  stated preferences, halves a rating's weight every 180 days, and gives a
+  kind of place nobody has rated a small bump.
+- Counting, with GoatCounter, without cookies — see the README's privacy note.
+
+**What the plan's new fields already show**, and are the next things to fix
+in the planner rather than the data: a morning route can land in the
+afternoon slot (its open block says `fits: false`), and a Sunday can go Palo
+Alto → Fort Mason → Stanford, 63 and then 64 minutes apart, because no slot
+test looks at the journey. Both are visible now that the plan says so.

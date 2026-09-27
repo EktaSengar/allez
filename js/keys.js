@@ -39,6 +39,14 @@ const Keys = (() => {
   const store    = `${NS}.${City.id}.v1`;
   const location = `${NS}.${City.id}.location.v1`;
 
+  /* What js/count.js keeps, and only while it is counting: whether this
+     browser is the household's or has asked not to be counted, which
+     follows the reader everywhere; and two Mondays — when the mark was set
+     and the last week this city was opened — which do not. See the
+     privacy note in the README. */
+  const count = `${NS}.count`;
+  const week  = `${NS}.${City.id}.week`;
+
   /* ---------- the one-time carry-over ----------
 
      Only ever from the single-city naming, and only for Paris: no other
@@ -66,5 +74,5 @@ const Keys = (() => {
 
   carryOver();
 
-  return { theme, store, location };
+  return { theme, store, location, count, week };
 })();
