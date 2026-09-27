@@ -94,6 +94,14 @@ jobs:
       - name: Taste learns what it should
         run: node scripts/check-taste.mjs
 
+      # Settled strings first — each one was once read wrongly — then how
+      # much of each city's opening hours the parser can read at all.
+      - name: Opening hours read the way they are written
+        run: |
+          for city in paris bay-area; do
+            HOMEGROUND_CITY=$city node scripts/check-hours.mjs
+          done
+
       # How complete the records the guide vouches for are — coordinates,
       # hours, a link to act on, a source and a checked date, a photo.
       # Reported, not enforced: the targets are coverage, and a failing

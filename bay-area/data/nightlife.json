@@ -39,7 +39,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/SF_Jazz_Center_2013-05-06_20-22.jpg/1280px-SF_Jazz_Center_2013-05-06_20-22.jpg",
       "imageSubject": "SFJAZZ Center",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "booking": "https://www.sfjazz.org/calendar/",
+      "priceLevel": 3
     },
     {
       "type": "jazz",
@@ -54,7 +57,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "black-cat-sf",
@@ -80,7 +83,12 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Tenderloin_Street_Chess%2C_SF%2C_CA%2C_jjron_26.03.2012.jpg/1280px-Tenderloin_Street_Chess%2C_SF%2C_CA%2C_jjron_26.03.2012.jpg",
       "imageSubject": "Tenderloin, San Francisco",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "We-Th 18:00-23:00; Fr-Sa 18:00-24:00; Su 18:00-23:00",
+      "hoursFrom": "blackcatsf.com",
+      "hoursChecked": "2026-09-25",
+      "booking": "https://blackcatsf.turntabletickets.com/",
+      "priceLevel": 3
     },
     {
       "type": "comedy",
@@ -122,7 +130,10 @@
       "imageCredit": "Wikimedia Commons",
       "sameAs": [
         "osm-punch-line-comedy-club-75591--244800"
-      ]
+      ],
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "booking": "https://www.punchlinecomedyclub.com/shows",
+      "priceLevel": 2
     },
     {
       "type": "comedy",
@@ -159,7 +170,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Cobb%27s_Comedy_Club_entrance%2C_2017-02-10.jpg/1280px-Cobb%27s_Comedy_Club_entrance%2C_2017-02-10.jpg",
       "imageSubject": "Cobb's Comedy Club",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "booking": "https://www.cobbscomedy.com/shows",
+      "priceLevel": 2
     },
     {
       "type": "comedy",
@@ -174,7 +188,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "bats-improv",
@@ -187,7 +201,7 @@
       "days": [
         6
       ],
-      "url": "https://fortmason.org/resident/bats-improv/",
+      "url": "https://www.improv.org/",
       "source": "Fort Mason Center; confirmed against OpenStreetMap",
       "zone": "cow-hollow",
       "coords": [
@@ -200,7 +214,11 @@
       "imageSubject": "Fort Mason",
       "imageKind": "context",
       "imageCredit": "Original uploader was SuperJumbo at en.wikipedia · CC BY-SA 3.0",
-      "phone": "+1-415-474-6776"
+      "phone": "+1-415-474-6776",
+      "hoursNote": "Main-stage shows on Saturday nights; improv.org has the season",
+      "startTime": "20:00",
+      "booking": "https://www.improv.org/",
+      "priceLevel": 2
     },
     {
       "type": "venue",
@@ -239,7 +257,10 @@
       "imageSubject": "The Fillmore",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons",
-      "phone": "+1-415-346-3000"
+      "phone": "+1-415-346-3000",
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "booking": "https://www.thefillmore.com/shows",
+      "priceLevel": 3
     },
     {
       "type": "venue",
@@ -275,7 +296,10 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Great_American_Music_Hall_%28April_1976%29.jpg",
       "imageSubject": "Great American Music Hall",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "booking": "https://www.greatmusichall.com/",
+      "priceLevel": 3
     },
     {
       "type": "bar",
@@ -289,7 +313,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "vesuvio",
@@ -314,7 +338,12 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Vesuvio_mural.jpg/1280px-Vesuvio_mural.jpg",
       "imageSubject": "Vesuvio Cafe",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "Su-Th 11:00-01:00; Fr-Sa 11:00-02:00",
+      "hoursFrom": "vesuvio.com",
+      "hoursChecked": "2026-09-25",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "type": "bar",
@@ -328,7 +357,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "tosca-cafe",
@@ -356,7 +385,12 @@
       "imageCredit": "Wikimedia Commons",
       "sameAs": [
         "osm-cafe-tosca-75595--244812"
-      ]
+      ],
+      "hours": "Tu-We 17:00-22:00; Th-Sa 17:00-23:00",
+      "hoursFrom": "toscacafe-sf.com",
+      "hoursChecked": "2026-09-25",
+      "booking": "https://www.opentable.com/r/tosca-cafe-san-francisco",
+      "priceLevel": 3
     },
     {
       "type": "bar",
@@ -369,7 +403,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "li-po-lounge",
@@ -379,7 +413,7 @@
       "priceNote": "Cheap, cash is easier",
       "durationMin": 60,
       "why": "Chinatown's oldest bar, open since 1937 and barely changed: red lanterns, a low ceiling and a Buddha shrine behind the bar. Order the Chinese mai tai. The recipe is a secret and uses a Chinese liqueur they make themselves.",
-      "url": "https://lipolounge.com/",
+      "url": "https://www.timeout.com/san-francisco/bars/li-po",
       "source": "KQED; SFGate; confirmed against OpenStreetMap",
       "labels": [
         "hiddengem"
@@ -394,10 +428,12 @@
       "imageSubject": "Chinatown, San Francisco",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons",
-      "hours": "Mo-Su 14:00-25:30",
-      "hoursFrom": "openstreetmap (discovery index)",
-      "hoursChecked": "2026-09-23",
-      "phone": "+1 415 9820072"
+      "hours": "Mo-Su 14:00-01:00",
+      "hoursFrom": "the Corner and SF Station listings",
+      "hoursChecked": "2026-09-25",
+      "phone": "+1 415 9820072",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "type": "bar",
@@ -410,7 +446,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "smugglers-cove",
@@ -435,9 +471,11 @@
       "imageSubject": "Smuggler's Cove (bar)",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons",
-      "hours": "Mo-Su 17:00-01:45",
-      "hoursFrom": "openstreetmap (discovery index)",
-      "hoursChecked": "2026-09-23"
+      "hours": "Mo-Su 17:00-01:15",
+      "hoursFrom": "smugglerscovesf.com",
+      "hoursChecked": "2026-09-25",
+      "priceLevel": 2,
+      "booking": false
     },
     {
       "type": "bar",
@@ -450,7 +488,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "trick-dog",
@@ -473,10 +511,12 @@
       "imageSubject": "Mission District, San Francisco",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons",
-      "hours": "Su,Mo-Th 16:00-24:00; Fr-Sa 16:00-25:00",
-      "hoursFrom": "openstreetmap (discovery index)",
-      "hoursChecked": "2026-09-23",
-      "phone": "+1 415 4712999"
+      "hours": "Su-Th 16:00-24:00; Fr-Sa 16:00-02:00",
+      "hoursFrom": "trickdogbar.com",
+      "hoursChecked": "2026-09-25",
+      "phone": "+1 415 4712999",
+      "booking": "https://www.sevenrooms.com/explore/trickdog/reservations/create/search/",
+      "priceLevel": 2
     },
     {
       "type": "bar",
@@ -490,7 +530,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "zam-zam",
@@ -517,7 +557,12 @@
       "imageCredit": "Wikimedia Commons · CC BY-SA 3.0",
       "sameAs": [
         "osm-aub-zam-zam-75539--244899"
-      ]
+      ],
+      "hours": "Mo-Fr 15:00-02:00; Sa-Su 13:00-02:00",
+      "hoursFrom": "the Yelp and Tripadvisor listings — Zam Zam has no website",
+      "hoursChecked": "2026-09-25",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "type": "bar",
@@ -530,7 +575,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "rose-and-crown-pa",
@@ -546,7 +591,7 @@
       "priceNote": "Pints and pub food",
       "durationMin": 120,
       "why": "Palo Alto's oldest bar, an English pub on Emerson with more than twenty beers on tap, and fish and chips. Tuesday is trivia night: claim a table between 7:30 and 7:50, and the winners drink for free.",
-      "url": "https://www.yelp.com/biz/the-rose-and-crown-palo-alto",
+      "url": "https://www.therosepa.com/",
       "source": "Palo Alto Online; confirmed against OpenStreetMap (way/133116331)",
       "labels": [
         "cheap"
@@ -557,7 +602,12 @@
       "imageCredit": "Wikimedia Commons",
       "sameAs": [
         "osm-rose-and-crown-74889--244323"
-      ]
+      ],
+      "hours": "Mo-We 14:00-23:00; Th 14:00-24:00; Fr 14:00-01:00; Sa 13:00-01:00; Su 13:00-23:00",
+      "hoursFrom": "therosepa.com",
+      "hoursChecked": "2026-09-25",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "type": "bar",
@@ -571,7 +621,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "dutch-goose",
@@ -595,7 +645,12 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Downtown_Menlo_Park_California.jpg/1280px-Downtown_Menlo_Park_California.jpg",
       "imageSubject": "Menlo Park, California",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "Su-We 11:00-24:00; Th-Sa 11:00-02:00",
+      "hoursFrom": "dutchgoose.net",
+      "hoursChecked": "2026-09-25",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "type": "bar",
@@ -608,7 +663,7 @@
         "evening",
         "couple"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 4,
       "id": "british-bankers-club",
@@ -631,10 +686,12 @@
       "imageSubject": "Menlo Park, California",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons",
-      "hours": "Mo-Th 11:30-22:00; Fr-Sa 11:30-23:00; Su 10:00-21:00",
-      "hoursFrom": "openstreetmap (discovery index)",
-      "hoursChecked": "2026-09-23",
-      "phone": "+1-650-382-3191"
+      "hours": "Mo-Th 16:00-21:30; Fr-Sa 16:00-22:00; Su 16:00-21:00",
+      "hoursFrom": "britishbankersclub.com",
+      "hoursChecked": "2026-09-25",
+      "phone": "+1-650-382-3191",
+      "booking": "https://www.britishbankersclub.com/reservation",
+      "priceLevel": 2
     },
     {
       "type": "venue",
@@ -676,7 +733,10 @@
       "imageCredit": "Wikimedia Commons",
       "sameAs": [
         "osm-frost-amphitheatre-74861--244332"
-      ]
+      ],
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "booking": "https://live.stanford.edu/events/events",
+      "priceLevel": 3
     },
     {
       "type": "venue",
@@ -712,7 +772,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Bing_concert_hall_at_Stanford_University.JPG/1280px-Bing_concert_hall_at_Stanford_University.JPG",
       "imageSubject": "Bing Concert Hall",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "booking": "https://live.stanford.edu/events/events",
+      "priceLevel": 3
     }
   ]
 }

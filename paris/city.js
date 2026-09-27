@@ -174,7 +174,13 @@ const City = (() => {
   /* `cheap` is a judgement about this city, not a conversion: twenty
      euros is a cheap evening in Paris, and Delhi's figure is whatever a
      cheap evening costs there. */
-  const money = { symbol: '€', cheap: 20, format: n => `€${n}` };
+  /* What a price level means, per person: the most each of the first
+     three runs to, and what to count each as when adding up a day. € is
+     a sandwich or a falafel, €€ a lunch formule, €€€ a proper dinner,
+     €€€€ a tasting menu. Rough on purpose — it is for a plan that says
+     "about this much", not a bill. */
+  const money = { symbol: '€', cheap: 20, format: n => `€${n}`,
+                  levels: { upTo: [0, 15, 30, 60], about: [0, 10, 22, 45, 100] } };
 
   /* ---------- which views this city has ----------
 

@@ -97,10 +97,14 @@ const Hours = (() => {
     }
     if (UNSUPPORTED.test(raw)) return remember(null);
 
-    /* A comma where the syntax wants a semicolon: `Mo-Sa 10:00-20:00,
-       Su 10:00-13:00`. Common enough in the wild to be worth reading.
-       Only split where the comma follows a time and precedes a weekday —
-       `Mo,We,Fr 09:00-17:00` is a legitimate day list and must survive. */
+    /* A comma after a time and before a weekday — `Mo-Sa 10:00-20:00,
+       Su 10:00-13:00` — is the syntax's *additional* rule: it adds to what
+       came before for the days it names, where a semicolon replaces. It
+       was read as a semicolon, which is the same thing until two rules
+       name the same day: Darbar's `Mo-Fr 11:00-14:30, … Su-We
+       17:00-21:30` lost its weekday lunch, and the lunch buffet is the
+       reason the card recommends it. `Mo,We,Fr 09:00-17:00` is a day list,
+       not a rule, and must survive. */
     /* "Tu, Th-Fr 09:00-17:00" is valid OSM and was unreadable: the day
        selector is matched lazily up to the first space, so it took "Tu,"
        alone and then failed to read "Th-Fr 09:00" as a time. Closing up
@@ -108,10 +112,14 @@ const Hours = (() => {
        else looks at the string. */
     const normalised = raw
       .replace(/(\b(?:Mo|Tu|We|Th|Fr|Sa|Su|PH)),\s+(?=(?:Mo|Tu|We|Th|Fr|Sa|Su|PH)\b)/gi, '$1,')
-      .replace(/(\d),\s*(?=(Mo|Tu|We|Th|Fr|Sa|Su)\b)/gi, '$1;');
+      .replace(/(\d),\s*(?=(Mo|Tu|We|Th|Fr|Sa|Su)\b)/gi, '$1\u0001');
+
+    const chunks = [];
+    normalised.split(';').forEach(part =>
+      part.split('\u0001').forEach((c, n) => chunks.push([c, n > 0])));
 
     const rules = [];
-    for (const chunk of normalised.split(';')) {
+    for (const [chunk, add] of chunks) {
       const rule = chunk.trim();
       if (!rule) continue;
       if (HOLIDAY_RULE.test(rule)) continue;
@@ -140,7 +148,7 @@ const Hours = (() => {
 
       const ranges = parseTimes(rest);
       if (!ranges) return remember(null);
-      rules.push({ days, ranges });
+      rules.push({ days, ranges, add });
     }
     /* A spec made only of exceptions says when a place is *shut* and
        nothing about when it is open. `Su off` means closed on Sunday —
@@ -160,12 +168,13 @@ const Hours = (() => {
   /* ---------- asking ---------- */
 
   /* The ranges in force on one weekday, after later rules have overridden
-     earlier ones. An `off` rule wins for its days and leaves nothing. */
+     earlier ones — or added to them, for a rule that followed a comma. An
+     `off` rule wins for its days and leaves nothing. */
   function rangesOn(rules, dow) {
     let ranges = null;
     for (const r of rules) {
       if (!r.days.has(dow)) continue;
-      ranges = r.off ? [] : r.ranges;
+      ranges = r.off ? [] : (r.add && ranges ? ranges.concat(r.ranges) : r.ranges);
     }
     return ranges || [];
   }

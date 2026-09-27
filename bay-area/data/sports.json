@@ -39,11 +39,17 @@
         -122.1605
       ],
       "coordsFrom": "osm node/4562251453",
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Radio_telescope_The_Dish.jpg/1280px-Radio_telescope_The_Dish.jpg",
       "imageSubject": "Stanford Dish (Stanford Radio Telescope)",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "sunrise-sunset",
+      "hoursFrom": "destinationpaloalto.com — the Dish is open sunrise to sunset",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "Sunrise to sunset"
     },
     {
       "type": "hike",
@@ -63,7 +69,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "palo-alto",
       "id": "hike-arastradero",
       "title": "Pearson-Arastradero Preserve",
@@ -88,7 +94,13 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/View_from_Arastradero_Preserve_in_Palo_Alto_California.JPG/1280px-View_from_Arastradero_Preserve_in_Palo_Alto_California.JPG",
       "imageSubject": "Arastradero Preserve",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "08:00-sunset",
+      "hoursFrom": "paloalto.gov — the city's open spaces are open 8am to sunset",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "8am to sunset"
     },
     {
       "type": "hike",
@@ -107,7 +119,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "palo-alto",
       "id": "hike-foothills",
       "title": "Foothills Nature Preserve",
@@ -131,7 +143,13 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Foothills_Park_86_%28cropped%29.jpg/1280px-Foothills_Park_86_%28cropped%29.jpg",
       "imageSubject": "Foothills Nature Preserve",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "08:00-sunset",
+      "hoursFrom": "paloalto.gov — the city's open spaces are open 8am to sunset",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 1,
+      "hoursNote": "8am to sunset"
     },
     {
       "type": "hike",
@@ -150,7 +168,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "hike-windy-hill",
       "title": "Windy Hill — Spring Ridge Trail",
       "emoji": "🥾",
@@ -174,7 +192,13 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/WindyHill.jpg",
       "imageSubject": "Windy Hill Open Space Preserve",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons · CC BY-SA 3.0"
+      "imageCredit": "Wikimedia Commons · CC BY-SA 3.0",
+      "hours": "(sunrise-00:30)-(sunset+00:30)",
+      "hoursFrom": "openspace.org — half an hour before sunrise until half an hour after sunset",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "Half an hour before sunrise to half an hour after sunset"
     },
     {
       "type": "hike",
@@ -193,7 +217,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "los-altos",
       "id": "hike-rancho-san-antonio",
       "title": "Rancho San Antonio — PG&E Trail",
@@ -218,7 +242,13 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Meadow_in_Rancho_San_Antonio_County_Park.jpg/1280px-Meadow_in_Rancho_San_Antonio_County_Park.jpg",
       "imageSubject": "Rancho San Antonio Open Space Preserve",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "(sunrise-00:30)-(sunset+00:30)",
+      "hoursFrom": "openspace.org — half an hour before sunrise until half an hour after sunset",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "Half an hour before sunrise to half an hour after sunset"
     },
     {
       "type": "hike",
@@ -237,7 +267,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "hike-purisima",
       "title": "Purisima Creek Redwoods",
       "emoji": "🌲",
@@ -261,7 +291,13 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Purisima_Creek_Trail_5.JPG/1280px-Purisima_Creek_Trail_5.JPG",
       "imageSubject": "Purisima Creek Redwoods Open Space Preserve",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "(sunrise-00:30)-(sunset+00:30)",
+      "hoursFrom": "openspace.org — half an hour before sunrise until half an hour after sunset",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "Half an hour before sunrise to half an hour after sunset"
     },
     {
       "type": "hike",
@@ -280,7 +316,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "pacifica",
       "id": "hike-mori-point",
       "title": "Mori Point",
@@ -305,7 +341,13 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Mori_Point_from_Pacifica_Beach_in_Pacifica_California_%289060304932%29.jpg/1280px-Mori_Point_from_Pacifica_Beach_in_Pacifica_California_%289060304932%29.jpg",
       "imageSubject": "Mori Point",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "sunrise-sunset",
+      "hoursFrom": "nps.gov — the trails are open around the clock, the car parks sunrise to sunset",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "The trails never close; the car park is open sunrise to sunset"
     },
     {
       "type": "hike",
@@ -324,7 +366,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "hike-tennessee-valley",
       "title": "Tennessee Valley to the beach",
       "emoji": "🏖️",
@@ -348,7 +390,13 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Tennessee_watershed.png",
       "imageSubject": "Tennessee Valley",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "sunrise-sunset",
+      "hoursFrom": "nps.gov — the trails are open around the clock, the car parks sunrise to sunset",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "The trails never close; the car park is open sunrise to sunset"
     },
     {
       "type": "hike",
@@ -367,7 +415,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "hike-steep-ravine-matt-davis",
       "title": "Steep Ravine & Matt Davis loop",
       "emoji": "🌲",
@@ -392,7 +440,13 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Mt._Tamalpais%2C_viewed_from_the_south.jpg/1280px-Mt._Tamalpais%2C_viewed_from_the_south.jpg",
       "imageSubject": "Mount Tamalpais",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "07:00-sunset",
+      "hoursFrom": "parks.ca.gov — Mount Tamalpais State Park, 7am to sunset",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "7am to sunset"
     },
     {
       "type": "ride",
@@ -410,7 +464,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "fisherman-s-wharf",
       "id": "ride-golden-gate-sausalito",
       "title": "Over the Golden Gate to Sausalito",
@@ -436,7 +490,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/GG-ftpoint-bridge-2.jpg/1280px-GG-ftpoint-bridge-2.jpg",
       "imageSubject": "Golden Gate Bridge",
       "imageKind": "context",
-      "imageCredit": "David Ball · CC BY 2.5"
+      "imageCredit": "David Ball · CC BY 2.5",
+      "hoursNote": "Bikes may cross the bridge at any hour, through gates at night; the ferry back runs to a timetable",
+      "booking": "https://www.blazingsaddles.com/san-francisco/routes-and-tours/bike-the-bridge-self-guided",
+      "priceLevel": 3
     },
     {
       "type": "ride",
@@ -454,7 +511,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "inner-richmond",
       "id": "ride-golden-gate-park-ocean",
       "title": "Golden Gate Park to Ocean Beach",
@@ -481,7 +538,12 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Golden_Gate_Park_and_The_Panhandle_%285189323840%29.jpg/1280px-Golden_Gate_Park_and_The_Panhandle_%285189323840%29.jpg",
       "imageSubject": "Golden Gate Park",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "05:00-24:00",
+      "hoursFrom": "San Francisco Park Code §3.21 — city parks close from midnight to 5am",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0
     },
     {
       "type": "ride",
@@ -499,7 +561,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "hillsborough",
       "id": "ride-sawyer-camp",
       "title": "Sawyer Camp Trail",
@@ -524,7 +586,13 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Sawyer_Camp_Trail_%288755207154%29.jpg/1280px-Sawyer_Camp_Trail_%288755207154%29.jpg",
       "imageSubject": "Sawyer Camp Trail",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "sunrise-sunset",
+      "hoursFrom": "San Mateo County Parks, via Bay Area Hiker",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "Sunrise to sunset"
     },
     {
       "type": "ride",
@@ -542,7 +610,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "palo-alto",
       "id": "ride-bay-trail-baylands-shoreline",
       "title": "The Bay Trail: Baylands to Shoreline",
@@ -568,7 +636,13 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Palo_Alto_Baylands_January_2013_005.jpg/1280px-Palo_Alto_Baylands_January_2013_005.jpg",
       "imageSubject": "Palo Alto Baylands Nature Preserve",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "08:00-sunset",
+      "hoursFrom": "paloalto.gov — the city's open spaces are open 8am to sunset; Shoreline in Mountain View keeps its own",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0,
+      "hoursNote": "8am to sunset"
     },
     {
       "type": "ride",
@@ -586,7 +660,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "atherton",
       "id": "ride-portola-loop",
       "title": "The Portola Loop",
@@ -611,7 +685,12 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/OurLadyoftheWayside.jpg",
       "imageSubject": "Portola Valley, California",
       "imageKind": "context",
-      "imageCredit": "Jack Boucher · Public domain"
+      "imageCredit": "Jack Boucher · Public domain",
+      "hours": "24/7",
+      "hoursFrom": "public roads",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0
     },
     {
       "type": "ride",
@@ -629,7 +708,7 @@
         "outdoors",
         "sport"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "zone": "atherton",
       "id": "ride-old-la-honda",
       "title": "Old La Honda climb",
@@ -654,7 +733,12 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/OurLadyoftheWayside.jpg",
       "imageSubject": "Portola Valley, California",
       "imageKind": "context",
-      "imageCredit": "Jack Boucher · Public domain"
+      "imageCredit": "Jack Boucher · Public domain",
+      "hours": "24/7",
+      "hoursFrom": "public roads",
+      "hoursChecked": "2026-09-25",
+      "booking": false,
+      "priceLevel": 0
     },
     {
       "type": "watch",
@@ -670,9 +754,11 @@
         "weekend",
         "couple",
         "sport",
-        "socialize"
+        "socialize",
+        "afternoon",
+        "evening"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "uniqueness": 4,
       "quality": 4,
       "id": "watch-oracle-park",
@@ -702,7 +788,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/McCovey_Cove_%28767980568%29.jpg/1280px-McCovey_Cove_%28767980568%29.jpg",
       "imageSubject": "McCovey Cove",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Game days only — the schedule is the timetable",
+      "booking": "https://www.mlb.com/giants/tickets",
+      "priceLevel": 2
     },
     {
       "type": "watch",
@@ -718,9 +807,10 @@
         "weekend",
         "couple",
         "sport",
-        "socialize"
+        "socialize",
+        "evening"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "uniqueness": 4,
       "quality": 4,
       "id": "watch-chase-center",
@@ -748,7 +838,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chase_Center_-_July_2019_%287605%29.jpg/1280px-Chase_Center_-_July_2019_%287605%29.jpg",
       "imageSubject": "Chase Center",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Game days only — the schedule is the timetable",
+      "booking": "https://www.chasecenter.com/",
+      "priceLevel": 3
     },
     {
       "type": "watch",
@@ -764,9 +857,10 @@
         "weekend",
         "couple",
         "sport",
-        "socialize"
+        "socialize",
+        "afternoon"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "uniqueness": 4,
       "quality": 4,
       "id": "watch-levis-stadium",
@@ -793,7 +887,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
       "imageSubject": "Levi's Stadium",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Game days only — the schedule is the timetable",
+      "booking": "https://www.49ers.com/tickets/single-game",
+      "priceLevel": 4
     },
     {
       "type": "watch",
@@ -809,9 +906,11 @@
         "weekend",
         "couple",
         "sport",
-        "socialize"
+        "socialize",
+        "afternoon",
+        "evening"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "uniqueness": 4,
       "quality": 4,
       "id": "watch-stanford-stadium",
@@ -840,7 +939,10 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
       "imageSubject": "Stanford Stadium",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Game days only — the schedule is the timetable",
+      "booking": "https://gostanford.com/sports/football/schedule",
+      "priceLevel": 2
     }
   ]
 }

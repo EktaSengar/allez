@@ -31,6 +31,30 @@ const Hours = loadModule('hours.js', 'Hours');
    on and the honest move would be to stop using it. */
 const FLOOR = 0.80;
 
+/* ---------- strings whose meaning is settled ----------
+
+   Coverage says how much the parser reads; these say it reads them
+   right. Each was once read wrongly, so each is a regression test. A
+   comma before a weekday adds to the rules before it rather than
+   replacing them — Darbar's weekday lunch vanished under its dinner
+   rule — and `Su off` alone says nothing about the other six days. */
+const SETTLED = [
+  ['Mo-Fr 11:00-14:30, Sa 11:30-14:30, Su-We 17:00-21:30, Th-Sa 17:00-22:00', new Date(2026, 8, 21, 12, 0), true],
+  ['Mo-Fr 11:00-14:30, Sa 11:30-14:30, Su-We 17:00-21:30, Th-Sa 17:00-22:00', new Date(2026, 8, 21, 16, 0), false],
+  ['Tu-Fr 12:00-13:30, Tu-Sa 19:00-21:30', new Date(2026, 8, 25, 12, 30), true],
+  ['Mo-Sa 10:00-20:00; Su 10:00-13:00', new Date(2026, 8, 27, 12, 0), true],
+  ['Mo-Su 09:00-18:00; We off', new Date(2026, 8, 23, 12, 0), false],
+  ['Fr 20:00-02:00', new Date(2026, 8, 26, 1, 0), true],
+  ['Su off', new Date(2026, 8, 21, 12, 0), null]
+];
+const unsettled = SETTLED.filter(([s, when, want]) => Hours.isOpen(s, when) !== want);
+unsettled.forEach(([s, when, want]) =>
+  console.error(`  ✗ "${s}" at ${when.toString().slice(0, 21)} should be ${want}, reads ${Hours.isOpen(s, when)}`));
+if (unsettled.length) {
+  console.error(`\n✗ ${unsettled.length} settled strings read wrongly — the parser has regressed.\n`);
+  process.exit(1);
+}
+
 const doc = await readDiscovered();
 
 /* Weight by usage: one unreadable string on four hundred bakeries

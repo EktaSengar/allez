@@ -22,7 +22,7 @@
    "area": "Guerrero Street",
    "url": "https://tartinebakery.com/san-francisco/bakery",
    "hours": "Mo-Su 07:30-18:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "tartinebakery.com — closed only on Thanksgiving and Christmas Day",
    "cuisine": null,
    "categories": [
     "food"
@@ -40,7 +40,12 @@
    ],
    "labels": [],
    "source": "James Beard Foundation; SFGate; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-b-patisserie-75576--244882",
@@ -54,7 +59,7 @@
    "area": "California Street",
    "url": "https://www.bpatisserie.com/",
    "hours": "We-Fr 08:00-16:00; Sa-Su 08:00-17:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "bpatisserie.com",
    "cuisine": "breakfast",
    "categories": [
     "food"
@@ -72,9 +77,14 @@
    ],
    "labels": [],
    "source": "James Beard Foundation; bpatisserie.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17",
+   "lastVerified": "2026-09-25",
    "i": "8/80/SF_California_Street_USA.jpg",
-   "ik": "c"
+   "ik": "c",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-arizmendi-bakery-75527--244933",
@@ -88,7 +98,7 @@
    "area": "9th Avenue",
    "url": "https://www.arizmendibakery.com/",
    "hours": "Tu-Su 07:30-18:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "arizmendibakery.com",
    "cuisine": null,
    "categories": [
     "food"
@@ -102,11 +112,17 @@
    "quality": 4,
    "uniqueness": 4,
    "goodFor": [
+    "morning",
     "afternoon"
    ],
    "labels": [],
    "source": "arizmendibakery.com; Wikipedia; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-good-mong-kok-bakery-75591--244817",
@@ -120,7 +136,7 @@
    "area": "Stockton Street",
    "url": "https://goodmongkokbakery.com/",
    "hours": "Mo-Su 07:00-18:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "openstreetmap; the same on Tripadvisor and Corner",
    "cuisine": null,
    "categories": [
     "food"
@@ -140,9 +156,14 @@
     "cheap"
    ],
    "source": "The San Francisco Standard; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17",
+   "lastVerified": "2026-09-25",
    "i": "7/74/Stockton_Street_from_Broadway_70.JPG",
-   "ik": "c"
+   "ik": "c",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 15,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-ritual-coffee-roasters-75513--244842",
@@ -154,9 +175,9 @@
     -122.42125
    ],
    "area": "Valencia Street",
-   "url": "https://ritualroasters.com/",
+   "url": "https://ritualcoffee.com/locations/",
    "hours": "Mo-Th 06:30-19:00; Fr-Su 06:30-20:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "ritualcoffee.com",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -174,9 +195,14 @@
    ],
    "labels": [],
    "source": "Wikipedia; ritualcoffee.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17",
+   "lastVerified": "2026-09-25",
    "i": "a/ab/933–951_Valencia_Street,_San_Francisco.jpg",
-   "ik": "c"
+   "ik": "c",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-andytown-coffee-roasters-75483--245010",
@@ -188,9 +214,9 @@
     -122.50518
    ],
    "area": "Taraval Street",
-   "url": null,
+   "url": "https://andytownsf.com/pages/locations",
    "hours": "Mo-Th 08:00-15:00; Fr-Su 08:00-17:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "andytownsf.com",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -208,7 +234,12 @@
    ],
    "labels": [],
    "source": "SF Weekly; andytownsf.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-ferry-plaza-farmers-market-75591--244785",
@@ -222,7 +253,7 @@
    "area": null,
    "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/",
    "hours": "Tu 10:00-14:00; Th 10:00-14:00; Sa 08:00-14:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "foodwise.org",
    "cuisine": null,
    "categories": [
     "food"
@@ -245,7 +276,12 @@
    ],
    "labels": [],
    "source": "foodwise.org; ferrybuildingmarketplace.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 90,
+   "priceLevel": 1,
+   "indoor": false,
+   "booking": false
   },
   {
    "id": "osm-alemany-farmers-market-75472--244820",
@@ -280,7 +316,14 @@
     "cheap"
    ],
    "source": "foodwise.org; San Francisco Chronicle; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17"
+   "lastVerified": "2026-09-25",
+   "hours": "Sa 07:00-14:00",
+   "hoursFrom": "sf.gov",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 60,
+   "priceLevel": 1,
+   "indoor": false,
+   "booking": false
   },
   {
    "id": "osm-swan-oyster-depot-75582--244842",
@@ -292,9 +335,9 @@
     -122.42092
    ],
    "area": "Polk Street",
-   "url": "https://swanoysterdepot.net/",
+   "url": null,
    "hours": "Mo-Sa 08:00-14:30",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "openstreetmap; the same on Tripadvisor and Corner — Swan has no website",
    "cuisine": null,
    "categories": [
     "food"
@@ -313,9 +356,14 @@
    ],
    "labels": [],
    "source": "SFGate; Tripadvisor listing; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17",
+   "lastVerified": "2026-09-25",
    "i": "3/35/AnNeoplanOnThe19InSanFrancisco.jpg",
-   "ik": "c"
+   "ik": "c",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 60,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-la-taqueria-75502--244836",
@@ -327,9 +375,9 @@
     -122.41816
    ],
    "area": "Mission Street",
-   "url": "https://lataqueriasf.com/",
-   "hours": "Mo-Tu off; We-Sa 11:00-20:45; Su 11:00-19:45",
-   "hoursFrom": "openstreetmap",
+   "url": null,
+   "hours": "We-Th 11:00-20:45; Fr-Sa 11:00-20:15; Su 11:00-19:15",
+   "hoursFrom": "lataqueriasf.net, which presents itself as the restaurant’s site",
    "cuisine": "mexican",
    "categories": [
     "food"
@@ -349,9 +397,14 @@
     "cheap"
    ],
    "source": "James Beard Foundation 2017; Mission Local; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17",
+   "lastVerified": "2026-09-25",
    "i": "3/30/Mission_District_San_Francisco.jpg",
-   "ik": "c"
+   "ik": "c",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-tommaso-s-ristorante-italiano-75596--244811",
@@ -364,8 +417,8 @@
    ],
    "area": "Kearny Street",
    "url": "https://www.tommasos.com/",
-   "hours": "Tu-Sa 17:00-22:30; Su 16:00-21:30",
-   "hoursFrom": "openstreetmap",
+   "hours": "We-Th 17:00-21:00; Fr-Sa 17:00-22:00; Su 17:00-21:00",
+   "hoursFrom": "tommasos.com",
    "cuisine": "italian",
    "categories": [
     "food"
@@ -383,9 +436,14 @@
    ],
    "labels": [],
    "source": "San Francisco Chronicle; Pizza Hall of Fame; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17",
+   "lastVerified": "2026-09-25",
    "i": "4/4d/Kearny_Street_(53825865272).jpg",
-   "ik": "c"
+   "ik": "c",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 90,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-green-apple-books-75566--244929",
@@ -399,7 +457,7 @@
    "area": "Clement Street",
    "url": "https://www.greenapplebooks.com/",
    "hours": "Mo-Su 10:00-21:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "greenapplebooks.com",
    "cuisine": null,
    "categories": [
     "books"
@@ -417,9 +475,14 @@
    ],
    "labels": [],
    "source": "greenapplebooks.com store history; Wikipedia; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17",
+   "lastVerified": "2026-09-25",
    "i": "f/ff/Sfrichmonddistrict_ggbridge.jpg",
-   "ik": "c"
+   "ik": "c",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 60,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-kepler-s-books-74907--244364",
@@ -431,9 +494,9 @@
     -122.18222
    ],
    "area": "El Camino Real",
-   "url": "https://www.keplers.com/",
-   "hours": "Mo-Sa 09:00-22:00; Su 09:00-19:00",
-   "hoursFrom": "openstreetmap",
+   "url": "https://keplers.com/",
+   "hours": "Su-Mo 10:00-18:00; Tu-Sa 10:00-21:00",
+   "hoursFrom": "keplers.com",
    "cuisine": null,
    "categories": [
     "books"
@@ -451,7 +514,12 @@
    ],
    "labels": [],
    "source": "keplers.com; Wikipedia; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-zareen-s-74854--244288",
@@ -464,8 +532,8 @@
    ],
    "area": "South California Avenue",
    "url": "https://www.zareensrestaurant.com/",
-   "hours": "Mo-Th 11:30-21:00; Fr 11:30-22:00; Sa 11:30-15:00,17:00-22:00; Su 11:30-15:00,17:00-21:00",
-   "hoursFrom": "openstreetmap",
+   "hours": "Mo-Su 11:00-23:59",
+   "hoursFrom": "zareensrestaurant.com — takeaway only after 11pm",
    "cuisine": "pakistani",
    "categories": [
     "food"
@@ -484,7 +552,15 @@
    ],
    "labels": [],
    "source": "Michelin Guide; The Stanford Daily; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "diet": [
+    "halal"
+   ]
   },
   {
    "id": "osm-manresa-bread-74877--244317",
@@ -498,7 +574,7 @@
    "area": "El Camino Real",
    "url": "https://www.manresabread.com/",
    "hours": "Mo-Su 08:00-18:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "manresabread.toast.site — opens daily at 8am, closes at 6pm",
    "cuisine": null,
    "categories": [
     "food"
@@ -516,7 +592,12 @@
    ],
    "labels": [],
    "source": "San Francisco Chronicle; manresabread.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-lake-merced-park-75440--244987",
@@ -549,7 +630,14 @@
     "free"
    ],
    "source": "AllTrails; TrailLink; SFGate; existence and position confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-17"
+   "lastVerified": "2026-09-25",
+   "hours": "05:00-24:00",
+   "hoursFrom": "San Francisco Park Code §3.21 — city parks close from midnight to 5am",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 90,
+   "priceLevel": 0,
+   "indoor": false,
+   "booking": false
   },
   {
    "id": "osm-coupa-cafe-74857--244351",
@@ -557,13 +645,13 @@
    "type": "cafe",
    "zone": "palo-alto",
    "coords": [
-    37.42833,
-    -122.17559
+    37.44478,
+    -122.16158
    ],
-   "area": "Via Ortega Street",
-   "url": null,
-   "hours": "Mo-Fr 07:30-17:30",
-   "hoursFrom": "openstreetmap",
+   "area": "538 Ramona Street",
+   "url": "https://www.coupacafe.com/Locations/Palo-Alto-Ramona/",
+   "hours": "Mo-Su 07:00-20:00",
+   "hoursFrom": "coupacafe.com",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -582,7 +670,13 @@
    ],
    "labels": [],
    "source": "Palo Alto Online (twenty years, 2024); coupacafe.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-22"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "coordsFrom": "osm, Coupa Cafe at 538 Ramona Street — the record had matched the campus kiosk on Via Ortega"
   },
   {
    "id": "osm-oklava-74890--244326",
@@ -593,8 +687,8 @@
     37.44493,
     -122.16279
    ],
-   "area": "University Avenue",
-   "url": null,
+   "area": "205 University Avenue",
+   "url": "https://www.oklavacafe.com/",
    "cuisine": null,
    "categories": [
     "food"
@@ -613,7 +707,14 @@
    ],
    "labels": [],
    "source": "Verde Magazine; Punch Magazine; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-22"
+   "lastVerified": "2026-09-25",
+   "hours": "Su-Th 08:00-22:00; Fr-Sa 08:00-23:00",
+   "hoursFrom": "oklavacafe.com",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 40,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-palo-alto-farmer-s-market-74891--244318",
@@ -627,7 +728,7 @@
    "area": null,
    "url": "https://www.pafarmersmarket.org/",
    "hours": "Sa 08:00-12:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "pafarmersmarket.org — every Saturday, with a short break over the holidays",
    "cuisine": null,
    "categories": [
     "food"
@@ -648,7 +749,12 @@
    ],
    "labels": [],
    "source": "pafarmersmarket.org; Punch Magazine; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-22"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 60,
+   "priceLevel": 1,
+   "indoor": false,
+   "booking": false
   },
   {
    "id": "osm-palo-alto-creamery-74888--244324",
@@ -660,9 +766,9 @@
     -122.16177
    ],
    "area": "Emerson Street",
-   "url": "http://www.paloaltocreamery.com",
+   "url": "https://www.paloaltocreamery.com/",
    "hours": "Mo-Th,Su 08:00-21:00; Fr-Sa 08:00-22:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "paloaltocreamery.com",
    "cuisine": null,
    "categories": [
     "food"
@@ -681,7 +787,12 @@
    ],
    "labels": [],
    "source": "Verde Magazine (centennial); Nob Hill Gazette; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-22"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 60,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-ramen-nagi-74891--244321",
@@ -694,8 +805,8 @@
    ],
    "area": "Bryant Street",
    "url": "https://ramennagiusa.com/",
-   "hours": "Mo-Sa 11:00-20:00",
-   "hoursFrom": "openstreetmap",
+   "hours": "Mo-Su 11:00-14:30,17:00-21:00",
+   "hoursFrom": "ramennagiusa.com",
    "cuisine": "japanese",
    "categories": [
     "food"
@@ -714,7 +825,12 @@
    ],
    "labels": [],
    "source": "The Infatuation; Ramen Club; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-22"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 60,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-tane-vegan-izakaya-74890--244326",
@@ -726,9 +842,9 @@
     -122.16308
    ],
    "area": "Emerson Street",
-   "url": "https://www.tanevegan.com/",
-   "hours": "Mo off; Tu-Th,Su 17:00-21:00; Fr-Sa 16:30-21:30",
-   "hoursFrom": "openstreetmap",
+   "url": "https://www.tanevegan.com/locations/palo-alto",
+   "hours": "Su-Th 17:00-21:30; Fr-Sa 16:30-22:00",
+   "hoursFrom": "tanevegan.com",
    "cuisine": "sushi",
    "categories": [
     "food"
@@ -746,7 +862,16 @@
    ],
    "labels": [],
    "source": "HappyCow; trybayarea.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-22"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "booking": "https://www.yelp.com/reservations/tane-vegan-izakaya-palo-alto-2",
+   "durationMin": 90,
+   "priceLevel": 2,
+   "indoor": true,
+   "diet": [
+    "vegan",
+    "vegetarian"
+   ]
   },
   {
    "id": "osm-bistro-maxine-74889--244323",
@@ -758,9 +883,9 @@
     -122.16137
    ],
    "area": "Ramona Street",
-   "url": null,
+   "url": "https://bistromaxine.com/",
    "hours": "Tu-Fr 07:00-14:00; Sa-Su 08:00-14:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "openstreetmap; the same on Tripadvisor and Yelp",
    "cuisine": "french",
    "categories": [
     "food"
@@ -770,7 +895,7 @@
     "zone": "palo-alto",
     "type": "restaurant"
    },
-   "why": "A crêperie on Ramona, open since 2009, that began as the smallest restaurant in Palo Alto with a liquor licence. Order a savoury galette, then the crêpe Suzette, which is flambéed. The sidewalk tables are the closest thing downtown has to a Paris café.",
+   "why": "A crêperie on Ramona, open since 2006, that began as the smallest restaurant in Palo Alto with a liquor licence. Order a savoury galette, then the crêpe Suzette, which is flambéed. The sidewalk tables are the closest thing downtown has to a Paris café.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
@@ -782,7 +907,12 @@
     "outdoor"
    ],
    "source": "bistromaxine.com; OpenTable; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-22"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 60,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-scoop-microcreamery-74890--244326",
@@ -794,9 +924,9 @@
     -122.16282
    ],
    "area": "University Avenue",
-   "url": null,
-   "hours": "Su-Th 12:00-22:00; Fr,Sa 12:00-23:00",
-   "hoursFrom": "openstreetmap",
+   "url": "https://scoopmicrocreamery.com/",
+   "hours": "Mo 12:00-20:00; Tu-Th 12:00-22:00; Fr-Sa 12:00-23:00; Su 12:00-22:00",
+   "hoursFrom": "scoopmicrocreamery.com",
    "cuisine": "ice_cream",
    "categories": [
     "food"
@@ -814,7 +944,12 @@
    ],
    "labels": [],
    "source": "The Stanford Daily (April 2026); Palo Alto Online; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-22"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-blue-bottle-coffee-74895--244319",
@@ -822,13 +957,13 @@
    "type": "cafe",
    "zone": "palo-alto",
    "coords": [
-    37.44752,
-    -122.1594
+    37.44889,
+    -122.15908
    ],
-   "area": "University Avenue",
+   "area": "525 University Avenue",
    "url": "https://bluebottlecoffee.com/cafes/palo-alto",
-   "hours": "Mo-Su 06:00-19:00",
-   "hoursFrom": "openstreetmap",
+   "hours": "Mo-We 06:00-19:00; Th 06:00-15:30; Fr-Su 06:00-19:00",
+   "hoursFrom": "bluebottlecoffee.com",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -847,7 +982,13 @@
    ],
    "labels": [],
    "source": "bluebottlecoffee.com; LAist; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "coordsFrom": "osm, Blue Bottle Coffee at 525 University Avenue, where the café now is"
   },
   {
    "id": "osm-elizabeth-f-gamble-garden-74880--244297",
@@ -859,7 +1000,7 @@
     -122.14837
    ],
    "area": null,
-   "url": null,
+   "url": "https://www.gamblegarden.org/",
    "cuisine": null,
    "categories": [
     "park"
@@ -883,7 +1024,15 @@
     "hiddengem"
    ],
    "source": "gamblegarden.org; SFGate; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hours": "sunrise-sunset",
+   "hoursFrom": "gamblegarden.org — \"open daily during daylight hours\"",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 45,
+   "priceLevel": 0,
+   "indoor": false,
+   "booking": false,
+   "hoursNote": "Sunrise to sunset"
   },
   {
    "id": "osm-rodin-sculpture-garden-74865--244342",
@@ -895,7 +1044,7 @@
     -122.17099
    ],
    "area": null,
-   "url": null,
+   "url": "https://museum.stanford.edu/exhibitions/b-gerald-cantor-rodin-sculpture-garden",
    "cuisine": null,
    "categories": [
     "park"
@@ -917,12 +1066,19 @@
     "hiddengem"
    ],
    "source": "The Stanford Daily; Cantor Arts Center; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hours": "24/7",
+   "hoursFrom": "museum.stanford.edu — open all day, every day, since 1985",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 45,
+   "priceLevel": 0,
+   "indoor": false,
+   "booking": false
   },
   {
    "id": "osm-lucy-evans-baylands-nature-inter-74919--244213",
    "title": "Baylands Nature Preserve",
-   "type": "museum",
+   "type": "park",
    "zone": "east-palo-alto",
    "coords": [
     37.45963,
@@ -930,11 +1086,12 @@
    ],
    "area": "Embarcadero Road",
    "url": "https://www.cityofpaloalto.org/gov/depts/csd/parks/preserves/baylands.asp",
-   "hours": "Mo-Fr off; Sa 12:00-15:00; Su 10:00-15:00",
-   "hoursFrom": "openstreetmap",
+   "hours": "08:00-sunset",
+   "hoursFrom": "paloalto.gov — open space hours, 8am to sunset; the interpretive centre itself opens Sa 12–3, Su 10–3",
    "cuisine": null,
    "categories": [
-    "museum"
+    "park",
+    "outdoors"
    ],
    "match": {
     "name": "Lucy Evans Baylands Nature Interpretive Center",
@@ -952,7 +1109,13 @@
     "outdoor"
    ],
    "source": "KQED; Santa Clara Valley Bird Alliance; Wikipedia; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 90,
+   "priceLevel": 0,
+   "indoor": false,
+   "booking": false,
+   "hoursNote": "8am to sunset"
   },
   {
    "id": "osm-pacific-art-league-74888--244320",
@@ -964,7 +1127,7 @@
     -122.16007
    ],
    "area": "Ramona Street",
-   "url": null,
+   "url": "https://www.pacificartleague.org/",
    "cuisine": null,
    "categories": [
     "art",
@@ -981,13 +1144,22 @@
    "uniqueness": 3,
    "goodFor": [
     "learn",
-    "indoor"
+    "indoor",
+    "morning",
+    "afternoon"
    ],
    "labels": [
     "learn"
    ],
    "source": "pacificartleague.org; Wikipedia; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hours": "Tu-Fr 10:00-17:00",
+   "hoursFrom": "pacificartleague.org — gallery and office",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 180,
+   "priceLevel": 4,
+   "indoor": true,
+   "booking": "https://www.pacificartleague.org/"
   },
   {
    "id": "osm-the-penny-ice-creamery-74877--244318",
@@ -999,9 +1171,9 @@
     -122.15897
    ],
    "area": null,
-   "url": null,
-   "hours": "11:00-21:00",
-   "hoursFrom": "openstreetmap",
+   "url": "https://www.thepennyicecreamery.com/",
+   "hours": "Mo-Su 11:00-21:00",
+   "hoursFrom": "thepennyicecreamery.com",
    "cuisine": null,
    "categories": [
     "food",
@@ -1021,7 +1193,12 @@
    ],
    "labels": [],
    "source": "thepennyicecreamery.com; Verde Magazine; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-rick-s-ice-cream-74837--244218",
@@ -1033,9 +1210,9 @@
     -122.10925
    ],
    "area": "Middlefield Road",
-   "url": "http://www.ricksicecream.com/",
-   "hours": "Mo-Th 11:30-21:00; Fr-Su 11:00-21:30",
-   "hoursFrom": "openstreetmap",
+   "url": "https://www.ricksicecream.com/",
+   "hours": "Mo 14:00-21:00; Tu-Th 12:00-21:00; Fr-Sa 12:00-21:30; Su 12:00-21:00",
+   "hoursFrom": "ricksicecream.com",
    "cuisine": "ice_cream",
    "categories": [
     "food",
@@ -1054,7 +1231,12 @@
    ],
    "labels": [],
    "source": "Palo Alto Online (January 2026); ricksicecream.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-marvel-cake-74890--244323",
@@ -1065,8 +1247,8 @@
     37.44507,
     -122.16164
    ],
-   "area": null,
-   "url": null,
+   "area": "250 University Avenue",
+   "url": "https://marvelcake.com/",
    "cuisine": null,
    "categories": [
     "food",
@@ -1085,7 +1267,14 @@
    ],
    "labels": [],
    "source": "Yelp; Wanderlog; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hours": "Tu-Th 10:00-19:00; Fr-Sa 10:00-20:00; Su 10:00-19:00",
+   "hoursFrom": "the joe coffee listing; Yelp agrees",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-susie-cakes-74905--244368",
@@ -1097,7 +1286,7 @@
     -122.18387
    ],
    "area": "Santa Cruz Avenue",
-   "url": null,
+   "url": "https://susiecakes.com/locations/menlo-park",
    "cuisine": null,
    "categories": [
     "food",
@@ -1116,7 +1305,14 @@
    ],
    "labels": [],
    "source": "susiecakes.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hours": "Mo-Sa 10:00-19:00; Su 11:00-18:00",
+   "hoursFrom": "susiecakes.com",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 15,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-caffe-trieste-75597--244815",
@@ -1130,7 +1326,7 @@
    "area": "Vallejo Street",
    "url": "https://caffetrieste.com/",
    "hours": "Mo-Su 07:00-22:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "caffetrieste.com",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -1151,7 +1347,12 @@
     "hiddengem"
    ],
    "source": "Wikipedia; caffetrieste.com; 7x7; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-sightglass-coffee-75554--244817",
@@ -1165,7 +1366,7 @@
    "area": "7th Street",
    "url": "https://sightglasscoffee.com/",
    "hours": "Mo-Fr 06:30-17:00; Sa-Su 07:00-17:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "openstreetmap; the same on Tripadvisor and SF Station",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -1185,7 +1386,12 @@
    ],
    "labels": [],
    "source": "sightglasscoffee.com; Food GPS; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 40,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-four-barrel-coffee-75534--244844",
@@ -1197,7 +1403,7 @@
     -122.42193
    ],
    "area": "Valencia Street",
-   "url": null,
+   "url": "https://www.fourbarrelcoffee.com/pages/visit-us",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -1216,9 +1422,16 @@
    ],
    "labels": [],
    "source": "Wikipedia; fourbarrelcoffee.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23",
+   "lastVerified": "2026-09-25",
    "i": "a/ab/933–951_Valencia_Street,_San_Francisco.jpg",
-   "ik": "c"
+   "ik": "c",
+   "hours": "Mo-Su 07:00-17:00",
+   "hoursFrom": "fourbarrelcoffee.com",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-the-coffee-movement-75590--244821",
@@ -1231,8 +1444,8 @@
    ],
    "area": "Washington Street",
    "url": "https://www.thecoffeemovement.com/",
-   "hours": "Mo-Su 07:00-16:00",
-   "hoursFrom": "openstreetmap",
+   "hours": "Mo-Fr 07:00-14:00; Sa-Su 07:00-16:00",
+   "hoursFrom": "thecoffeemovement.com",
    "cuisine": "coffee_shop",
    "categories": [
     "food"
@@ -1250,11 +1463,16 @@
    ],
    "labels": [],
    "source": "Eater SF (January 2026); Food & Wine; Filter Notes; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-kopiku-75602--244851",
-   "title": "Kopiku",
+   "title": "Kopi Kita",
    "type": "cafe",
    "zone": "russian-hill",
    "coords": [
@@ -1263,8 +1481,8 @@
    ],
    "area": "Lombard Street",
    "url": "https://www.beanekacoffee.com/pages/our-location",
-   "hours": "Tu-Fr 06:30-14:30; Sa, Su 07:00-15:00",
-   "hoursFrom": "openstreetmap",
+   "hours": "Mo-Fr 06:30-17:00; Sa-Su 07:00-17:00",
+   "hoursFrom": "beanekacoffee.com",
    "cuisine": "indonesian",
    "categories": [
     "food"
@@ -1274,7 +1492,7 @@
     "zone": "russian-hill",
     "type": "cafe"
    },
-   "why": "San Francisco's first Indonesian coffee shop, on Lombard. The beans come from small Indonesian farms through the owners' own roastery, Beaneka. Order the pandan latte, which is just sweet and tastes faintly of vanilla. The avocado coffee is the adventurous one. Pineapple tarts go with either.",
+   "why": "San Francisco's first Indonesian coffee shop, on Lombard, which opened as Kopiku and is now Kopi Kita. The beans come from small Indonesian farms through the owners' own roastery, Beaneka. Order the pandan latte, which is just sweet and tastes faintly of vanilla. The avocado coffee is the adventurous one. Pineapple tarts go with either.",
    "quality": 4,
    "uniqueness": 5,
    "goodFor": [
@@ -1283,7 +1501,12 @@
    ],
    "labels": [],
    "source": "San Francisco Chronicle; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   },
   {
    "id": "osm-turtle-tower-75568--244836",
@@ -1296,8 +1519,8 @@
    ],
    "area": "220 California Street, Financial District",
    "url": "https://turtletowersf.com/",
-   "hours": "09:00-16:00",
-   "hoursFrom": "openstreetmap",
+   "hours": "Mo-Su 11:00-21:30",
+   "hoursFrom": "turtletowersf.com",
    "cuisine": "vietnamese",
    "categories": [
     "food"
@@ -1319,7 +1542,12 @@
     "cheap"
    ],
    "source": "The Infatuation; SF Standard; SFGate; moved from its old address on Larkin Street, where the map still has it",
-   "lastVerified": "2026-09-23"
+   "lastVerified": "2026-09-25",
+   "hoursChecked": "2026-09-25",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   }
  ]
 }

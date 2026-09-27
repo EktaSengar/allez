@@ -655,12 +655,48 @@ const App = (() => {
     return bits.filter(Boolean).join(' · ');
   }
 
+  /* Today's opening, read from the record's own hours — the same hours
+     the "open now" gate acts on, said out loud. Empty where the spec
+     cannot be read, so the line falls through to what the record says
+     in words instead: a music hall's "open for shows", a preserve's
+     "sunrise to sunset". */
+  const clock = m => `${String(Math.floor(m / 60) % 24).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
+  function hoursToday(item) {
+    const ranges = item.hours ? Hours.on(item.hours, TODAY.getDay()) : null;
+    if (!ranges) return '';
+    if (!ranges.length) return 'Closed today';
+    if (ranges.length === 1 && ranges[0][0] === 0 && ranges[0][1] === 1440) return 'Open all day today';
+    return 'Open today ' + ranges.map(([a, b]) => `${clock(a)}–${clock(b)}`).join(', ');
+  }
+
   function whenLine(item) {
     if (item.times) return item.times;
     if (item.start && item.end) return `Until ${fmtShort(new Date(item.end + 'T12:00:00'))}`;
+    const open = hoursToday(item);
+    if (open) return open;
+    if (item.hoursNote) return item.hoursNote;
     if (item.startTime) return `Best started around ${item.startTime}`;
     return 'Open year round';
   }
+
+  /* ---------- when somebody last looked ----------
+
+     A written record carries the date it was checked. A name on the map
+     has only the year a mapper stood there and said it was still there,
+     or failing that the year anybody touched the record at all. Both are
+     worth printing: a reader can weigh an old date, and cannot weigh
+     silence. */
+  const fmtDay = s => new Date(s + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  function checkedLine(item) {
+    if (item.lastVerified) return `Checked ${fmtDay(item.lastVerified)}`;
+    if (item.checked) return `A mapper confirmed it was here in ${item.checked}`;
+    if (item.edited) return `Last edited on the map in ${item.edited}`;
+    return '';
+  }
+
+  /* The booking page, where there is one — never the same link twice. */
+  const bookLink = item => item.booking && item.booking !== item.url
+    ? `<a href="${esc(item.booking)}" target="_blank" rel="noopener">Book</a>` : '';
 
   function durText(m) {
     if (!m) return '';
@@ -816,6 +852,10 @@ const App = (() => {
 
     const near = (item.nearby || []).map(n => `<div>${n.emoji} ${esc(n.text)}</div>`).join('');
 
+    /* Where it came from and when somebody last looked, on one line. */
+    const sourced = [item.source ? `Source: ${esc(item.source)}` : '', esc(checkedLine(item))]
+      .filter(Boolean).join(' · ');
+
     return `<div class="detail">
       <div class="facts">
         <div>${esc(whenLine(item))}</div>
@@ -830,6 +870,7 @@ const App = (() => {
       ${pairings(item)}
       ${item.spectator ? `<p class="fx-spec"><b>Where to stand.</b> ${esc(item.spectator)}</p>` : ''}
       <div class="links">
+        ${bookLink(item)}
         ${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">Official site</a>` : ''}
         <a href="${mapsLink(item)}" target="_blank" rel="noopener">Directions</a>
       </div>
@@ -839,7 +880,7 @@ const App = (() => {
       </div>
       <p class="credit">
         ${provenanceLine(item)}
-        ${item.source ? `Source: ${esc(item.source)}${item.lastVerified ? ` · checked ${item.lastVerified}` : ''}<br>` : ''}
+        ${sourced ? `${sourced}<br>` : ''}
         ${item.image ? `Photo: ${esc(item.imageSubject || '')} — ${esc(item.imageCredit || 'Wikimedia Commons')}` : ''}
       </p>
     </div>`;
@@ -989,6 +1030,7 @@ const App = (() => {
         <p class="trip-meta">${esc([item.transit, item.priceNote].filter(Boolean).join(' · '))}</p>
         <p class="trip-why">${esc(item.why || '')}</p>
         <div class="links">
+          ${bookLink(item)}
           ${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">Official site</a>` : ''}
           <a href="${mapsLink(item)}" target="_blank" rel="noopener">Directions</a>
         </div>

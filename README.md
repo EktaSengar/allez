@@ -151,10 +151,13 @@ scripts/
   editorial.mjs resolve hand-written records against real places
   draft.mjs     start a handwritten note, id and all
   check-location.mjs  does moving change the answers, and are they any good
-  check-hours.mjs     how much of the city's opening hours can we actually read
+  check-hours.mjs     how much of the city's opening hours can we actually read,
+                      and are the settled cases still read right
   check-plan.mjs      does the weekend plan still come back in the shape the
                       app and the MCP server read
   check-taste.mjs     does the taste engine still fade, listen and look outward
+  check-packs.mjs     does every city pack hold up its end — and, for the Bay
+                      Area, every ★ and researched record its fields
   check-perf.mjs      how long does the page make somebody wait, and has that got worse
   shim.mjs      run a js/ module in Node, so scripts share the browser's rules
   geocode.mjs   give every curated record real coordinates
@@ -560,6 +563,11 @@ record and fails the build rather than shipping a broken one.
 The evergreen half of the data — bakeries, parks, walks, day trips — does not
 expire, which is why the site is still useful on a quiet week.
 
+Every card says when it was last checked, in its details: the date on a
+written record, and on a name from the map the year a mapper last confirmed it
+was there. The same details show today's opening hours and a booking link where
+there is one.
+
 ### Taste
 
 `Store.tasteWeights()` in `js/state.js` turns three things into the weights
@@ -610,6 +618,27 @@ returns both days' stops in order, each with:
 plus each day's total spend, and the five picks under "And if you want one
 thing". `Plan.day()` does one day; `Plan.weekendOf()` says which weekend a date
 belongs to. `scripts/check-plan.mjs` holds the shape in CI.
+
+### What every Bay Area recommendation states
+
+`scripts/check-packs.mjs` fails the build if any ★ or researched Bay Area
+record is missing one of these:
+
+| field | what it holds |
+|---|---|
+| `lastVerified` | the date somebody last checked it |
+| `hours` | opening hours in the OpenStreetMap format `js/hours.js` reads — or `startTime` for something that starts, or `hoursNote` saying in words why there are none |
+| `goodFor` | at least one of `morning`, `afternoon`, `evening` — the Weekend tab's slot tests read them |
+| `durationMin` | how long a visit takes |
+| `priceLevel` | 0 free to 4 very dear, per person, on the bands in the city pack's `money.levels` |
+| `indoor` | `true` or `false` |
+| `booking` | the page where you book — or `false` where there is nothing to book |
+
+Missing is not the same as not applying: a walk says `booking: false` and a
+music hall says `hoursNote`, because an empty field cannot be told apart from
+one nobody checked. Hours carry `hoursFrom` and `hoursChecked` too, saying
+whose they are and when. `check-records.mjs` reports the same completeness for
+every city without failing.
 
 ### The layout
 
