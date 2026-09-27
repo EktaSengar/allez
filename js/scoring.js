@@ -143,6 +143,23 @@ const Rank = (() => {
     return item.seasonal.includes(seasonOf(dateStr)) ? 3 : -6;
   }
 
+  /* --- what it costs, as a level ---
+
+     0 free to 4 very dear, per person. A stated level is taken at its
+     word; a stated price is placed by the pack's own bands, since $20 and
+     ₹20 are not the same lunch; a record stating neither has no level,
+     which is not the same as cheap. */
+  function priceLevel(item) {
+    const lv = item.priceLevel;
+    if (Number.isInteger(lv) && lv >= 0 && lv <= 4) return lv;
+    if (typeof item.price !== 'number') return null;
+    if (item.price === 0) return 0;
+    const upTo = City.money.levels && City.money.levels.upTo;
+    if (!upTo) return null;
+    const n = upTo.findIndex((cap, i) => i > 0 && item.price <= cap);
+    return n === -1 ? 4 : n;
+  }
+
   /* --- the main event --- */
 
   function score(item, ctx) {
@@ -271,5 +288,5 @@ const Rank = (() => {
   }
 
   return { score, rank, isLive, isOpenOn, openRightNow, urgency, daysBetween, iso, parse,
-           seasonOf, LABEL_TEXT, HOLIDAYS };
+           seasonOf, weatherFit, seasonFit, priceLevel, LABEL_TEXT, HOLIDAYS };
 })();

@@ -208,5 +208,14 @@ const Hours = (() => {
     return out;
   }
 
-  return { parse, isOpen, openAfter, closedDays };
+  /* One weekday's opening as [from, to] minute pairs — `to` at or before
+     `from` runs past midnight — or null where the spec cannot be read.
+     For saying when, not for deciding whether: the gates use the two
+     above. */
+  function on(spec, dow) {
+    const rules = parse(spec);
+    return rules ? rangesOn(rules, dow).map(r => r.slice()) : null;
+  }
+
+  return { parse, isOpen, openAfter, closedDays, on };
 })();

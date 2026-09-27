@@ -116,6 +116,7 @@ js/
   state.js      what the site remembers about you (localStorage only)
   weather.js    Open-Meteo — no key, no account, coordinates rounded to the neighbourhood
   scoring.js    the ranking engine — is this good today
+  plan.js       the weekend as a sequence of stops — see "The plan" below
   app.js        loading and rendering
 data/
   events.json         time-sensitive; expires and is pruned automatically
@@ -150,6 +151,8 @@ scripts/
   draft.mjs     start a handwritten note, id and all
   check-location.mjs  does moving change the answers, and are they any good
   check-hours.mjs     how much of the city's opening hours can we actually read
+  check-plan.mjs      does the weekend plan still come back in the shape the
+                      app and the MCP server read
   check-perf.mjs      how long does the page make somebody wait, and has that got worse
   shim.mjs      run a js/ module in Node, so scripts share the browser's rules
   geocode.mjs   give every curated record real coordinates
@@ -554,6 +557,27 @@ record and fails the build rather than shipping a broken one.
 
 The evergreen half of the data — bakeries, parks, walks, day trips — does not
 expire, which is why the site is still useful on a quiet week.
+
+### The plan
+
+The Weekend tab draws its two-day plan from `Plan.weekend(pool, ctx)` in
+`js/plan.js`, which knows nothing about the page. The app and the MCP server
+call it too. Given a pool of records, an origin (`{ lat, lon }`) and a date, it
+returns both days' stops in order, each with:
+
+- `travel` — minutes from the previous stop (from the origin, for the first),
+  by the same reach model as `minutesFromHome`, or `null` where a record has no
+  position to measure from
+- `open` — when it is open that day (`from`, `to`, `basis`: `hours`, `start`
+  or `unknown`) and whether that covers the slot (`fits`)
+- `reasons` — codes, strongest first: `wanted`, `market-day`, `ends-soon`,
+  `weather`, `season`, `close`, `not-done`. Whatever shows the plan words them.
+- `spend` — per person, from the record's price or its price level; `null` when
+  it states neither
+
+plus each day's total spend, and the five picks under "And if you want one
+thing". `Plan.day()` does one day; `Plan.weekendOf()` says which weekend a date
+belongs to. `scripts/check-plan.mjs` holds the shape in CI.
 
 ### The layout
 
