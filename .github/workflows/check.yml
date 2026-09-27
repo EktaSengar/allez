@@ -89,6 +89,11 @@ jobs:
       - name: The weekend plan keeps its shape
         run: node scripts/check-plan.mjs
 
+      # The taste engine's promises: fading, stated preferences, novelty,
+      # and no weights at all until somebody rates or says something.
+      - name: Taste learns what it should
+        run: node scripts/check-taste.mjs
+
       # How complete the records the guide vouches for are — coordinates,
       # hours, a link to act on, a source and a checked date, a photo.
       # Reported, not enforced: the targets are coverage, and a failing

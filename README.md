@@ -113,7 +113,8 @@ js/
   invaders.js   the mosaic hunt: what is near you, routed missions, progress
   nearby.js     retrieval and the provenance ladder: what exists nearby, and
                 how much anybody knows about it
-  state.js      what the site remembers about you (localStorage only)
+  state.js      what the site remembers about you (localStorage only), and
+                the taste weights learned from it — see "Taste" below
   weather.js    Open-Meteo — no key, no account, coordinates rounded to the neighbourhood
   scoring.js    the ranking engine — is this good today
   plan.js       the weekend as a sequence of stops — see "The plan" below
@@ -153,6 +154,7 @@ scripts/
   check-hours.mjs     how much of the city's opening hours can we actually read
   check-plan.mjs      does the weekend plan still come back in the shape the
                       app and the MCP server read
+  check-taste.mjs     does the taste engine still fade, listen and look outward
   check-perf.mjs      how long does the page make somebody wait, and has that got worse
   shim.mjs      run a js/ module in Node, so scripts share the browser's rules
   geocode.mjs   give every curated record real coordinates
@@ -546,7 +548,7 @@ Nothing is shown in file order. Every candidate is scored against:
 - intrinsic quality and how unlikely you are to find it yourself
 - whether you have already been
 - **what you have told it you like** — rate things and the labels you
-  favour gradually get weighted up
+  favour gradually get weighted up; see "Taste" below
 
 ### Freshness
 
@@ -557,6 +559,36 @@ record and fails the build rather than shipping a broken one.
 
 The evergreen half of the data — bakeries, parks, walks, day trips — does not
 expire, which is why the site is still useful on a quiet week.
+
+### Taste
+
+`Store.tasteWeights()` in `js/state.js` turns three things into the weights
+`js/scoring.js` reads:
+
+- **What was rated.** Loving or liking something counts towards its labels and
+  categories, and fades by half every 180 days, so last spring's verdict weighs
+  less than last week's. Ratings saved before they carried a date are dated the
+  first time the new code sees them.
+- **What was said.** Diet, company, how far you will go, what you will spend,
+  what you are into. No screen asks yet — the app's onboarding will. Until
+  then, in the browser console on a city page:
+
+  ```js
+  Store.setPrefs({ diet: ['vegetarian'], company: 'couple', reach: 25,
+                   budget: 2, interests: ['jazz', 'outdoors'], novelty: 1 })
+  ```
+
+  `company` is one of `solo`, `couple`, `friends`, `family`; `reach` is
+  minutes; `budget` is the most you want to spend as a price level, 0–4;
+  `interests` are the site's own words — labels, categories and `goodFor`
+  values such as `jazz`, `hike`, `outdoors`, `learn`. Anything else is
+  dropped rather than stored.
+- **What was not tried.** Once you have rated anything, a kind of place you
+  have not rated gets a small bump, so the page does not narrow into more of
+  the same. `novelty` is the dial: 0 turns it off, 2 doubles it.
+
+`Store.weigh()` is the same calculation with the ratings passed in, which is
+what the app and the MCP server call.
 
 ### The plan
 

@@ -160,6 +160,24 @@ const Rank = (() => {
     return n === -1 ? 4 : n;
   }
 
+  /* --- does it feed somebody who said what they eat? ---
+
+     Only on evidence: a record's own `diet` list, the map's vegetarian
+     tag, or a cuisine that is the diet. A place that says nothing about
+     it is not assumed to fail it. */
+  function suitsDiet(item, taste) {
+    if (!taste['@diet']) return false;
+    for (const k in taste) {
+      if (k.slice(0, 5) !== 'diet:') continue;
+      const d = k.slice(5);
+      if ((item.diet || []).includes(d)) return true;
+      // the map's tag is vegetarian *or* vegan, so it only vouches for the first
+      if (d === 'vegetarian' && item.veg) return true;
+      if (String(item.cuisine || '').split(';').includes(d)) return true;
+    }
+    return false;
+  }
+
   /* --- the main event --- */
 
   function score(item, ctx) {
@@ -230,11 +248,29 @@ const Rank = (() => {
     // somewhere you have not been — your own arrondissement is not "new"
     if (item.zone && !exploredZones.includes(item.zone) && item.zone !== homeZone) s += 3;
 
-    // learned taste
+    // learned taste, and what the reader has said about themselves —
+    // the weights come from Store.weigh, which explains each key
     let tasteBump = 0;
     (item.labels || []).forEach(l => { tasteBump += (taste[l] || 0); });
     (item.categories || []).forEach(c => { tasteBump += (taste['cat:' + c] || 0) * 0.6; });
+    (item.goodFor || []).forEach(g => { tasteBump += (taste['good:' + g] || 0); });
+    if (suitsDiet(item, taste)) tasteBump += 3;
     s += Math.min(10, tasteBump * 0.9);
+
+    // a kind of place not tried yet — the counterweight to learning
+    if (taste['@novelty'] && !taste['tried:' + item.type]) s += taste['@novelty'];
+
+    // stated limits. Past them costs points rather than a place on the
+    // page: somebody who said "twenty minutes" may still cross town for
+    // the right thing, and the reach curve above already prefers close.
+    if (taste['@budget'] != null) {
+      const lv = priceLevel(item);
+      if (lv != null && lv > taste['@budget']) s -= 4 * (lv - taste['@budget']);
+    }
+    const far = item.minutesFromHome;
+    if (taste['@reach'] != null && far != null && far > taste['@reach']) {
+      s -= Math.min(12, (far - taste['@reach']) / 3);
+    }
 
     // your own verdicts
     if (rating === 'want')  s += 14;

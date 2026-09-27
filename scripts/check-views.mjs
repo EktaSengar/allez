@@ -134,8 +134,11 @@ function forecast() {
    code, and the views must come out identical.
 
    Ratings are spread across all four verdicts because `tasteWeights()`
-   only counts loved and good, and `isDone()` counts three of them; a
-   fixture that used one verdict would leave both paths unmeasured. */
+   learns only from loved and good, counts meh as tried for its novelty
+   weight, and `isDone()` counts three of them; a fixture that used one
+   verdict would leave those paths unmeasured. The fixture's ratings carry
+   no dates, so they are dated on load as a store from before fading
+   would be — which keeps every weight at full strength. */
 
 const FIXTURE = {
   store: {
