@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26",
+  "generated": "2026-09-27",
   "window": null,
   "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the team's or organiser's own schedule on the date given.",
   "items": [
@@ -49,48 +49,6 @@
       "hoursNote": "First pitch Friday 7:15pm, Saturday 1:05pm, Sunday 12:05pm",
       "booking": "https://www.mlb.com/giants/tickets",
       "priceLevel": 3
-    },
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "indoor": false,
-      "weatherSensitive": true,
-      "goodFor": [
-        "sport",
-        "weekend",
-        "evening"
-      ],
-      "lastVerified": "2026-09-25",
-      "quality": 4,
-      "uniqueness": 3,
-      "id": "stanford-georgia-tech-2026",
-      "title": "Stanford v Georgia Tech",
-      "emoji": "🏈",
-      "coords": [
-        37.43453,
-        -122.16199
-      ],
-      "zone": "palo-alto",
-      "area": "Stanford Stadium",
-      "coordsFrom": "osm relation/18564360",
-      "start": "2026-09-26",
-      "end": "2026-09-26",
-      "durationMin": 240,
-      "priceNote": "Cheap",
-      "why": "An ACC Saturday at Stanford Stadium, a walk from downtown Palo Alto.",
-      "categories": [
-        "sport",
-        "football"
-      ],
-      "url": "https://gostanford.com/sports/football/schedule",
-      "source": "Stanford Athletics 2026 schedule",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
-      "imageSubject": "Stanford Stadium",
-      "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons",
-      "startTime": "19:30",
-      "booking": "https://gostanford.com/sports/football/schedule",
-      "priceLevel": 2
     },
     {
       "type": "event",
