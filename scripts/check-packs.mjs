@@ -25,9 +25,10 @@
    everything the engine asks, and fails loudly on anything missing —
    before a browser has to.
 
-   It is deliberately cheap. No network, no browser, no data files beyond
-   each city's own home.json. It runs in a second and belongs on every
-   pull request.
+   It is deliberately cheap. No network, no browser, and no data files
+   beyond each city's own home.json — except for a city held to the
+   record contract at the bottom, whose records it builds the way the
+   page does. It runs in a few seconds and belongs on every pull request.
 
    Usage:  node scripts/check-packs.mjs [--verbose]
    --------------------------------------------------------- */
@@ -35,7 +36,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadCity, cityIds, dataDir } from './shim.mjs';
+import { loadCity, cityIds, dataDir, loadModuleFor, readDiscovered } from './shim.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const VERBOSE = process.argv.includes('--verbose');
@@ -220,6 +221,16 @@ function checkPack(id) {
     want(id, Number.isFinite(City.money.cheap), 'money.cheap is a number');
   } catch (e) { bad(id, `money.format threw: ${e.message}`); }
 
+  /* What a price level means here. js/scoring.js places a stated price on
+     the scale with `upTo`, and js/plan.js adds up a day with `about`, so
+     both have to exist, rise, and start at free. */
+  const lv = City.money?.levels;
+  const rises = a => Array.isArray(a) && a.every((x, n) => Number.isFinite(x) && (n === 0 || x > a[n - 1]));
+  want(id, !!lv && rises(lv.upTo) && lv.upTo.length === 4 && lv.upTo[0] === 0,
+    `money.levels.upTo is four rising caps from 0 — ${JSON.stringify(lv?.upTo)}`);
+  want(id, !!lv && rises(lv.about) && lv.about.length === 5 && lv.about[0] === 0,
+    `money.levels.about is five rising spends from 0 — ${JSON.stringify(lv?.about)}`);
+
   /* ---------- views, and the nav that shows them ----------
 
      Two lists on purpose — the tabs are markup so the header is its full
@@ -286,11 +297,94 @@ function checkPack(id) {
   }
 }
 
+/* ---------- the records the guide vouches for ----------
+
+   The Weekend tab's slot tests, the plan builder in js/plan.js and the
+   MCP server all read the same few fields off a recommendation, and a
+   record without them fails quietly rather than loudly: no hours and
+   "open now" cannot be said; no duration and every café is an
+   afternoon; no price and a day's spend is a guess; no checked date and
+   nobody can tell a fresh card from a stale one.
+
+   check-records.mjs reports how complete every city is, and does not
+   fail, because for most cities the honest target is coverage. A pack
+   listed here has reached the target and is held to it: a ★ or
+   researched record missing one of these fails the build. Adding a city
+   is the commitment, so it is a list rather than a default.
+
+   Missing is not the same as not applying. A walk has nothing to book
+   and a music hall has no opening hours, and each record says so —
+   `booking: false`, an `hoursNote` — rather than leaving the field
+   empty, because an empty field cannot be told apart from one nobody
+   checked. */
+
+const HELD = new Set(['bay-area']);
+
+const FILES = ['events', 'places', 'nightlife', 'sports', 'food', 'itineraries', 'daytrips',
+               'civic', 'notable', 'editorial', 'notes', 'events-city', 'practices', 'conferences'];
+/* The kinds that have a door, and so opening hours js/hours.js must be
+   able to read. The same list check-records.mjs grades against. */
+const DOORS = new Set(['cafe', 'bakery', 'restaurant', 'deli', 'dessert', 'market', 'bar', 'jazz',
+                       'comedy', 'venue', 'club', 'nightlife', 'museum', 'gallery', 'books', 'shop', 'culture']);
+const SLOT_WORDS = ['morning', 'afternoon', 'evening'];
+const TODAY = new Date().toISOString().slice(0, 10);
+
+async function checkRecords(id) {
+  const noStore = { getItem: () => null, setItem: () => {}, removeItem: () => {} };
+  const Loc   = loadModuleFor(id, 'location.js', 'Loc', { localStorage: noStore, navigator: {}, Store: {} });
+  const Rec   = loadModuleFor(id, 'record.js', 'Rec', { Loc });
+  const Hours = loadModuleFor(id, 'hours.js', 'Hours');
+  const Near  = loadModuleFor(id, 'nearby.js', 'Near', { Hours });
+  const Rank  = loadModuleFor(id, 'scoring.js', 'Rank', { Near, Hours, Store: { rating: () => null } });
+
+  const read = f => {
+    try { return JSON.parse(fs.readFileSync(path.join(dataDir(id), f + '.json'), 'utf8')); }
+    catch { return { items: [] }; }
+  };
+  const D = Object.fromEntries(FILES.map(f => [f, read(f)]));
+  D.discovered = await readDiscovered(path.join(dataDir(id), 'places'));
+  const { all, discovered } = Rec.build(D, TODAY);
+  const vouched = [...all, ...discovered].filter(i => ['personal', 'editorial'].includes(i.provenance));
+
+  const isTime = t => /^([01]\d|2[0-3]):[0-5]\d$/.test(t || '');
+  const said = s => typeof s === 'string' && s.trim().length > 0;
+
+  const RULES = [
+    ['a checked date', i => /^\d{4}-\d{2}-\d{2}$/.test(i.lastVerified || '') && i.lastVerified <= TODAY],
+    /* Hours js/hours.js can read, for anything with a door. A dated event
+       needs the time it starts. Anything else may state hours the parser
+       refuses — "sunrise-sunset" is true, and "we cannot read it" is an
+       answer the site already handles — or its start. Or a sentence
+       saying why there are none. */
+    ['when it is open', i => said(i.hoursNote) || (DOORS.has(i.type) ? Hours.parse(i.hours) !== null
+      : i.start ? isTime(i.startTime) : (said(i.hours) || isTime(i.startTime)))],
+    ['a part of the day it suits', i => (i.goodFor || []).some(g => SLOT_WORDS.includes(g))],
+    ['how long it takes', i => Number.isFinite(i.durationMin) && i.durationMin > 0],
+    /* A stated price has to land on the level stated, or the budget
+       preference and the day's spend would disagree about the same card. */
+    ['a price level', i => Number.isInteger(i.priceLevel) && i.priceLevel >= 0 && i.priceLevel <= 4
+      && (typeof i.price !== 'number' || Rank.priceLevel({ price: i.price }) === i.priceLevel)],
+    ['indoors or out', i => typeof i.indoor === 'boolean'],
+    ['a booking link, or false', i => i.booking === false || /^https:\/\/\S+$/.test(i.booking || '')]
+  ];
+
+  want(id, vouched.length > 0, `${vouched.length} records the guide vouches for`);
+  for (const [what, ok] of RULES) {
+    const missing = vouched.filter(i => !ok(i));
+    const list = missing.slice(0, 6).map(i => i.title).join(', ') + (missing.length > 6 ? ', …' : '');
+    want(id, missing.length === 0,
+      `every ★ and researched record states ${what}${missing.length ? ` — ${missing.length} do not: ${list}` : ''}`);
+  }
+}
+
 /* ---------- run ---------- */
 
 const ids = cityIds();
 console.log(`\nChecking ${ids.length} city packs: ${ids.join(', ')}\n`);
-for (const id of ids) checkPack(id);
+for (const id of ids) {
+  checkPack(id);
+  if (HELD.has(id)) await checkRecords(id);
+}
 
 console.log('');
 if (failures) {

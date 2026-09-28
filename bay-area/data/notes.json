@@ -26,7 +26,15 @@
       "image": "img/thumb/osm-verve-coffe-roasters-74888--244326/500px-osm-verve-coffe-roasters-74888--244326.jpg",
       "imageSubject": "A Verve coffee on the parklet bench",
       "imageKind": "subject",
-      "imageCredit": "Our own photograph"
+      "imageCredit": "Our own photograph",
+      "hours": "Mo-Su 07:00-18:00",
+      "hoursFrom": "the joe coffee listing; the note says the same",
+      "hoursChecked": "2026-09-25",
+      "lastVerified": "2026-09-25",
+      "durationMin": 45,
+      "priceLevel": 1,
+      "indoor": true,
+      "booking": false
     },
     "osm-goodthing-74890--244323": {
       "title": "Goodthing Coffee",
@@ -44,11 +52,18 @@
       ],
       "area": "532 Ramona Street",
       "url": "https://goodthing.coffee/",
-      "hours": "Mo-Su 08:00-18:00",
+      "hours": "Mo 08:00-17:00; Tu-Su 08:00-18:00",
       "image": "img/thumb/osm-goodthing-74890--244323/500px-osm-goodthing-74890--244323.jpg",
       "imageSubject": "An iced coffee outside Goodthing Coffee",
       "imageKind": "subject",
-      "imageCredit": "Our own photograph"
+      "imageCredit": "Our own photograph",
+      "hoursFrom": "the joe coffee listing; Yelp agrees",
+      "hoursChecked": "2026-09-25",
+      "lastVerified": "2026-09-25",
+      "durationMin": 60,
+      "priceLevel": 1,
+      "indoor": true,
+      "booking": false
     },
     "osm-salt-straw-74891--244324": {
       "title": "Salt & Straw",
@@ -63,7 +78,7 @@
         "afternoon",
         "evening"
       ],
-      "area": "University Avenue",
+      "area": "250 University Avenue",
       "url": "https://saltandstraw.com/products/sea-salt-with-caramel-ribbons",
       "categories": [
         "food",
@@ -72,7 +87,15 @@
       "image": "img/thumb/osm-salt-straw-74891--244324/500px-osm-salt-straw-74891--244324.jpg",
       "imageSubject": "Salt & Straw, University Avenue",
       "imageKind": "subject",
-      "imageCredit": "Our own photograph"
+      "imageCredit": "Our own photograph",
+      "hours": "Mo-Su 11:00-23:00",
+      "hoursFrom": "saltandstraw.com",
+      "hoursChecked": "2026-09-25",
+      "lastVerified": "2026-09-25",
+      "durationMin": 20,
+      "priceLevel": 1,
+      "indoor": true,
+      "booking": false
     },
     "osm-ghirardelli-ice-cream-chocolate--75612--244845": {
       "title": "Ghirardelli Ice Cream & Chocolate Shop",
@@ -90,7 +113,17 @@
         "evening",
         "couple"
       ],
-      "area": "Ghirardelli Square, North Point Street"
+      "area": "Ghirardelli Square, North Point Street",
+      "hours": "Mo-Th 09:00-23:00; Fr-Sa 09:00-24:00; Su 09:00-23:00",
+      "hoursFrom": "ghirardelli.com",
+      "hoursChecked": "2026-09-25",
+      "url": "https://www.ghirardelli.com/stores/sf-original",
+      "phone": "+1 415-567-8317",
+      "lastVerified": "2026-09-25",
+      "durationMin": 40,
+      "priceLevel": 1,
+      "indoor": true,
+      "booking": false
     },
     "osm-capital-one-360-cafe-75578--244808": {
       "title": "Capital One Café",
@@ -106,7 +139,15 @@
         "work"
       ],
       "area": "101 Post Street, at Kearny",
-      "url": "https://www.capitalone.com/local/sanfrancisco-unionsquare/"
+      "url": "https://www.capitalone.com/local/sanfrancisco-unionsquare/",
+      "hours": "Mo-Fr 07:00-18:00; Sa-Su 09:00-17:00",
+      "hoursFrom": "the Tripadvisor, SF Station and LiquidSpace listings",
+      "hoursChecked": "2026-09-25",
+      "lastVerified": "2026-09-25",
+      "durationMin": 60,
+      "priceLevel": 1,
+      "indoor": true,
+      "booking": false
     },
     "osm-namaste-74852--244290": {
       "title": "Namaste Indian Cuisine",
@@ -121,7 +162,15 @@
       ],
       "area": "447 California Avenue",
       "url": "https://namasteindiabistro.com/palo-alto",
-      "cuisine": "indian"
+      "cuisine": "indian",
+      "hours": "Mo-Th 11:30-14:30,17:00-21:00; Fr-Sa 11:30-14:30,17:00-21:30; Su 11:30-14:30,17:00-21:00",
+      "hoursFrom": "namasteindiabistro.com",
+      "hoursChecked": "2026-09-25",
+      "booking": "https://www.opentable.com/r/namaste-indian-cuisine-palo-alto",
+      "lastVerified": "2026-09-25",
+      "durationMin": 75,
+      "priceLevel": 2,
+      "indoor": true
     },
     "osm-darbar-indian-cuisine-74890--244330": {
       "title": "Darbar Indian Cuisine",
@@ -137,7 +186,15 @@
         "cheap"
       ],
       "area": "129 Lytton Avenue",
-      "cuisine": "indian"
+      "cuisine": "indian",
+      "hours": "Mo-We 11:00-14:30,17:00-21:30; Th-Fr 11:00-14:30,17:00-22:00; Sa 11:30-14:30,17:00-22:00; Su 17:00-21:30",
+      "hoursFrom": "openstreetmap, rewritten so a lunch cannot be lost to a dinner rule; Tripadvisor agrees",
+      "hoursChecked": "2026-09-25",
+      "lastVerified": "2026-09-25",
+      "durationMin": 60,
+      "priceLevel": 1,
+      "indoor": true,
+      "booking": false
     },
     "osm-ramen-nagi-74891--244321": {
       "title": "Ramen Nagi",

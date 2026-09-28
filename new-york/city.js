@@ -809,7 +809,13 @@ const City = (() => {
 
   const shutsOnHoliday = ['bakery', 'cafe', 'shop', 'market'];
 
-  const money = { symbol: '$', cheap: 30, format: n => `$${n}` };
+  /* What a price level means, per person: the most each of the first
+     three runs to, and what to count each as when adding up a day. $ is
+     a slice or a bagel, $$ a casual dinner, $$$ a night out, $$$$ a
+     tasting menu. Rough on purpose — it is for a plan that says "about
+     this much", not a bill. */
+  const money = { symbol: '$', cheap: 30, format: n => `$${n}`,
+                  levels: { upTo: [0, 20, 40, 80], about: [0, 15, 30, 60, 120] } };
 
   /* ---------- Luma ----------
 

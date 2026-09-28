@@ -46,7 +46,9 @@ const hasDoor = i => DOORS.has(i.type);
 
 const FIELDS = [
   ['where',   () => true,                       i => Array.isArray(i.coords) && i.coords.length === 2],
-  ['hours',   hasDoor,                          i => !!i.hours],
+  /* A music hall has no opening hours, and saying so in `hoursNote` is an
+     answer — the same rule check-packs.mjs holds the Bay Area to. */
+  ['hours',   hasDoor,                          i => !!(i.hours || i.hoursNote)],
   ['how',     () => true,                       i => !!(i.url || i.booking)],
   ['proof',   i => i.provenance === 'editorial', i => !!(i.source && i.lastVerified)],
   ['picture', () => true,                       i => !!i.image]

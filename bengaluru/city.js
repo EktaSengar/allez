@@ -293,7 +293,13 @@ const City = (() => {
   /* A judgement about this city, not a conversion from the euro. Five
      hundred rupees is a cheap evening out in Bengaluru; the figure is
      Ekta's to set, not arithmetic's. */
-  const money = { symbol: '₹', cheap: 500, format: n => `₹${n}` };
+  /* What a price level means, per person: the most each of the first
+     three runs to, and what to count each as when adding up a day. ₹ is
+     a darshini breakfast, ₹₹ a sit-down meal, ₹₹₹ a night out, ₹₹₹₹ a
+     hotel restaurant. Rough on purpose — it is for a plan that says
+     "about this much", not a bill. */
+  const money = { symbol: '₹', cheap: 500, format: n => `₹${n}`,
+                  levels: { upTo: [0, 300, 800, 2000], about: [0, 200, 550, 1300, 3000] } };
 
   /* ---------- which views this city has ----------
 

@@ -29,6 +29,7 @@ evidence rather than taste.
 17. [The city pack loads before every module that reads it](#17)
 18. [The tabs are markup, not a render](#18)
 19. [A shard is a bucket, not a zone](#19)
+20. [Two scripts are deferred, and must stay so](#20)
 
 ---
 
@@ -572,3 +573,32 @@ fill is a no-op there, which is the correct answer rather than a bug.
 An index written before shards carried `b` falls back to a quarter of the
 budget per shard, which reproduces the old count-of-four rather than
 fetching the city.
+
+<a id="20"></a>
+## 20. Two scripts are deferred, and must stay so
+
+Every script above `<main>` is parser-blocking on purpose (§1): the header
+lines are written while the parser waits, so nothing shifts. Two scripts
+added on 25 September 2026 are not, and each carries `defer`:
+
+- `js/plan.js`, beside the others, because nothing reads `Plan` until the
+  first render — and the first render is in `init()`, on
+  `DOMContentLoaded`, which a deferred script always runs before. It is
+  5 KB gzipped that the header has no reason to wait for.
+- `js/count.js`, at the very end of `<body>`, because it writes nothing the
+  first paint needs, and a visit count is never worth a moment of it. It
+  sends its one request after the `load` event, when the browser is idle.
+
+**If `app.js` ever reads `Plan` at evaluation time** — a top-level
+`Plan.something` rather than one inside a function — the deferred order
+breaks it with a `Plan is not defined` on load. Keep the references inside
+functions, or take the `defer` off and accept the cost.
+
+**Measured** against `main` on the same machine on 25 September 2026,
+median of five, simulated throttling: two more requests and 12.2 KB more
+JavaScript over the wire in both Paris and the Bay Area (and 4.1 KB more
+data in the Bay Area, from the fields its records now carry). Every timing
+moved by 3% or less, in both directions — LCP +112 / +138 ms, FCP −41 /
++40 ms, TBT +39 / +49 ms, INP +8 ms — which at that machine load is noise.
+Neither script is on the path to the first paint. If the bytes are ever
+wanted back, the lever is §16's: both files are about 45% comment.

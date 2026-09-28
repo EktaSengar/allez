@@ -72,22 +72,18 @@ const App = (() => {
 
   const HOLIDAYS = Rank.HOLIDAYS;
 
+  /* Which weekend is decided in js/plan.js, which builds it. The dates
+     come back as ISO strings, and the Date objects are for printing. */
   function weekend() {
-    const dow = TODAY.getDay();
-    let sat;
-    if (dow === 6) sat = TODAY;
-    else if (dow === 0) sat = addDays(TODAY, -1);
-    else sat = addDays(TODAY, 6 - dow);
-    return { sat, sun: addDays(sat, 1), satISO: iso(sat), sunISO: iso(addDays(sat, 1)) };
+    const { sat, sun } = Plan.weekendOf(TODAY_ISO);
+    const at = s => new Date(s + 'T12:00:00');
+    return { sat: at(sat), sun: at(sun), satISO: sat, sunISO: sun };
   }
 
   function ctxFor(dateISO) {
     const wx = WX && WX.byDate[dateISO];
     return Object.assign({}, CTX, { today: dateISO, weatherMode: wx ? wx.mode : CTX.weatherMode });
   }
-
-  const isEdible = i =>
-    ['bakery', 'cafe', 'market'].includes(i.type) || (i.labels || []).includes('foodmission');
 
   /* Broad — used by the filter, because almost everything here suits two people. */
   const isForTwo = i =>
@@ -127,22 +123,6 @@ const App = (() => {
     const start = new Date(TODAY.getFullYear(), 0, 0);
     const day = Math.floor((TODAY - start) / 86400000);
     return EPIGRAPHS[day % EPIGRAPHS.length];
-  }
-
-  /* Best across the weekend, each candidate judged under the weather of
-     whichever day it is actually open. */
-  function bestForWeekend(pool, satISO, sunISO, filter) {
-    const satCtx = ctxFor(satISO), sunCtx = ctxFor(sunISO);
-    let best = null, top = -Infinity;
-    pool.forEach(i => {
-      if (filter && !filter(i)) return;
-      const oSat = Rank.isOpenOn(i, satISO), oSun = Rank.isOpenOn(i, sunISO);
-      if (!oSat && !oSun) return;
-      const s = Math.max(oSat ? Rank.score(i, satCtx) : -Infinity,
-                         oSun ? Rank.score(i, sunCtx) : -Infinity);
-      if (Number.isFinite(s) && s > top) { top = s; best = i; }
-    });
-    return best;
   }
 
   /* ---------- load ----------
@@ -675,12 +655,48 @@ const App = (() => {
     return bits.filter(Boolean).join(' · ');
   }
 
+  /* Today's opening, read from the record's own hours — the same hours
+     the "open now" gate acts on, said out loud. Empty where the spec
+     cannot be read, so the line falls through to what the record says
+     in words instead: a music hall's "open for shows", a preserve's
+     "sunrise to sunset". */
+  const clock = m => `${String(Math.floor(m / 60) % 24).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
+  function hoursToday(item) {
+    const ranges = item.hours ? Hours.on(item.hours, TODAY.getDay()) : null;
+    if (!ranges) return '';
+    if (!ranges.length) return 'Closed today';
+    if (ranges.length === 1 && ranges[0][0] === 0 && ranges[0][1] === 1440) return 'Open all day today';
+    return 'Open today ' + ranges.map(([a, b]) => `${clock(a)}–${clock(b)}`).join(', ');
+  }
+
   function whenLine(item) {
     if (item.times) return item.times;
     if (item.start && item.end) return `Until ${fmtShort(new Date(item.end + 'T12:00:00'))}`;
+    const open = hoursToday(item);
+    if (open) return open;
+    if (item.hoursNote) return item.hoursNote;
     if (item.startTime) return `Best started around ${item.startTime}`;
     return 'Open year round';
   }
+
+  /* ---------- when somebody last looked ----------
+
+     A written record carries the date it was checked. A name on the map
+     has only the year a mapper stood there and said it was still there,
+     or failing that the year anybody touched the record at all. Both are
+     worth printing: a reader can weigh an old date, and cannot weigh
+     silence. */
+  const fmtDay = s => new Date(s + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  function checkedLine(item) {
+    if (item.lastVerified) return `Checked ${fmtDay(item.lastVerified)}`;
+    if (item.checked) return `A mapper confirmed it was here in ${item.checked}`;
+    if (item.edited) return `Last edited on the map in ${item.edited}`;
+    return '';
+  }
+
+  /* The booking page, where there is one — never the same link twice. */
+  const bookLink = item => item.booking && item.booking !== item.url
+    ? `<a href="${esc(item.booking)}" target="_blank" rel="noopener">Book</a>` : '';
 
   function durText(m) {
     if (!m) return '';
@@ -836,6 +852,10 @@ const App = (() => {
 
     const near = (item.nearby || []).map(n => `<div>${n.emoji} ${esc(n.text)}</div>`).join('');
 
+    /* Where it came from and when somebody last looked, on one line. */
+    const sourced = [item.source ? `Source: ${esc(item.source)}` : '', esc(checkedLine(item))]
+      .filter(Boolean).join(' · ');
+
     return `<div class="detail">
       <div class="facts">
         <div>${esc(whenLine(item))}</div>
@@ -850,6 +870,7 @@ const App = (() => {
       ${pairings(item)}
       ${item.spectator ? `<p class="fx-spec"><b>Where to stand.</b> ${esc(item.spectator)}</p>` : ''}
       <div class="links">
+        ${bookLink(item)}
         ${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">Official site</a>` : ''}
         <a href="${mapsLink(item)}" target="_blank" rel="noopener">Directions</a>
       </div>
@@ -859,7 +880,7 @@ const App = (() => {
       </div>
       <p class="credit">
         ${provenanceLine(item)}
-        ${item.source ? `Source: ${esc(item.source)}${item.lastVerified ? ` · checked ${item.lastVerified}` : ''}<br>` : ''}
+        ${sourced ? `${sourced}<br>` : ''}
         ${item.image ? `Photo: ${esc(item.imageSubject || '')} — ${esc(item.imageCredit || 'Wikimedia Commons')}` : ''}
       </p>
     </div>`;
@@ -1009,6 +1030,7 @@ const App = (() => {
         <p class="trip-meta">${esc([item.transit, item.priceNote].filter(Boolean).join(' · '))}</p>
         <p class="trip-why">${esc(item.why || '')}</p>
         <div class="links">
+          ${bookLink(item)}
           ${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">Official site</a>` : ''}
           <a href="${mapsLink(item)}" target="_blank" rel="noopener">Directions</a>
         </div>
@@ -1822,34 +1844,6 @@ const App = (() => {
   const weekendPool = () =>
     ALL.concat(DISCOVERED.filter(i => Near.tierOf(i) !== 'found' && i.tells));
 
-/* ---------- the same Saturday, six weekends running ----------
-
-     Simulated across six consecutive weekends, the morning slot returned
-     "Hunt Space Invaders" six times out of six. The planner takes the top
-     of each slot and the top does not move, so widening the pool cannot
-     fix it.
-
-     Rotation must be stable *within* a weekend and differ *between* them.
-     Marking each pick as seen and demoting what has been seen cannot be
-     used: this runs on every repaint, so one render's marks feed the next
-     and the plan changes under the reader. The date is the one input
-     nothing can feed back into.
-
-     Only genuine contenders rotate — within four points of the leader is
-     a coin toss the ranking has no opinion about, and a clear winner
-     stays one every week. */
-
-  const WEEK_MS = 604800000;
-  const weekIndex = iso => Math.floor(Date.parse(iso + 'T12:00:00') / WEEK_MS);
-  const CONTENDER = 4;
-
-  function rotate(ranked, iso, ctx) {
-    if (ranked.length < 2) return ranked[0] || null;
-    const lead = Rank.score(ranked[0], ctx);
-    const near = ranked.filter(i => lead - Rank.score(i, ctx) <= CONTENDER).slice(0, 6);
-    return near[weekIndex(iso) % near.length];
-  }
-
 /* ---------- the reason to open it again ----------
 
      Six slots against a hundred and sixty-six hand-written places means
@@ -1878,7 +1872,7 @@ const App = (() => {
     const contenders = Rank.rank(DISCOVERED, c, ok).slice(0, 60);
     if (contenders.length < 2) return '';
 
-    const turn = (weekIndex(dISO) * 4) % contenders.length;
+    const turn = (Plan.weekIndex(dISO) * 4) % contenders.length;
     const seen = new Set();
     const out = [];
     for (let n = 0; n < contenders.length && out.length < 4; n++) {
@@ -1896,59 +1890,46 @@ const App = (() => {
       + rows(out, null, true);
   }
 
+  /* The plan is chosen in js/plan.js, where the app and the MCP server can
+     ask for it too. This draws it: the stops, the day's weather, and the
+     picks. What each stop also carries — the journey from the one before,
+     why it is there, when it is open, what it costs — is not printed here
+     yet. */
+  const SLOT_LABEL = { morning: 'Morning', afternoon: 'Afternoon', evening: 'Evening' };
+  const PICK_LABEL = { free: 'Best free', food: 'Best food', unusual: 'Most unusual', daytrip: 'Best day trip' };
+
   function renderWeekend(w) {
-    const pool = weekendPool();
-    const used = new Set();
-    const pick = (label, filter) => {
-      const it = bestForWeekend(pool, w.satISO, w.sunISO, i => !used.has(i.id) && (!filter || filter(i)));
-      if (!it) return null;
-      used.add(it.id);
-      return { label, it };
-    };
+    const plan = Plan.weekend(weekendPool(), {
+      sat: w.satISO, sun: w.sunISO,
+      origin: Loc.active(),
+      rank: CTX,
+      weather: WX ? WX.byDate : null,
+      done: Store.isDone,
+      rating: Store.rating
+    });
+    const best = plan.picks.find(p => p.key === 'best');
+    const rest = plan.picks.filter(p => p.key !== 'best');
 
-    const best = pick('Best overall');
-    const rest = [
-      pick('Best free',     i => !i.price),
-      pick('Best food',     isEdible),
-      pick('Most unusual',  i => (i.uniqueness || 0) >= 5),
-      pick('Best day trip', i => i.type === 'daytrip')
-    ].filter(Boolean);
+    const day = (d, p) => {
+      const wx = p.weather;
+      const slots = p.stops.map(s => `<div class="slot"><div class="t">${SLOT_LABEL[s.slot]}</div>
+          <div class="s"><b>${esc(s.item.title)}</b>${esc((s.item.why || '').split('. ')[0])}.</div></div>`).join('');
 
-    // Two days, each ranked against its own forecast, never repeating.
-    const planned = new Set();
-    const isEvening = i => (i.labels || []).includes('afterwork') || (i.goodFor || []).includes('evening');
-    const isMorning = i => (i.goodFor || []).includes('morning') || (i.categories || []).includes('market');
-    const isDay     = i => !isEvening(i) && (i.durationMin ?? 120) >= 90;
-
-    const day = (d, dISO) => {
-      const c = ctxFor(dISO);
-      const wx = WX && WX.byDate[dISO];
-      const slots = [['Morning', isMorning], ['Afternoon', isDay], ['Evening', isEvening]].map(([when, test]) => {
-        const ranked = Rank.rank(pool, c, i =>
-          Rank.isOpenOn(i, dISO) && !planned.has(i.id) && !Store.isDone(i.id) && test(i));
-        const it = rotate(ranked, dISO, c);
-        if (!it) return '';
-        planned.add(it.id);
-        return `<div class="slot"><div class="t">${when}</div>
-          <div class="s"><b>${esc(it.title)}</b>${esc((it.why || '').split('. ')[0])}.</div></div>`;
-      }).join('');
-
-      const holiday = HOLIDAYS[dISO];
       return `<div class="day">
         <h3>${d.toLocaleDateString('en-GB', { weekday: 'long' })}</h3>
-        <p class="when">${fmtShort(d)}${wx ? ` · ${wx.tmax}°, ${esc(wx.label.toLowerCase())}${wx.rain >= 40 ? `, ${wx.rain}% rain` : ''}` : ''}${holiday ? ` · ${esc(holiday)}, shops shut` : ''}</p>
+        <p class="when">${fmtShort(d)}${wx ? ` · ${wx.tmax}°, ${esc(wx.label.toLowerCase())}${wx.rain >= 40 ? `, ${wx.rain}% rain` : ''}` : ''}${p.holiday ? ` · ${esc(p.holiday)}, shops shut` : ''}</p>
         ${slots || '<p class="empty">Keep it open.</p>'}
       </div>`;
     };
 
-    return (best && hasRealPhoto(best.it) ? hero(best.it) : '')
+    return (best && hasRealPhoto(best.item) ? hero(best.item) : '')
       + stripHead('How the two days could go')
-      + `<div class="plan">${day(w.sat, w.satISO)}${day(w.sun, w.sunISO)}</div>`
+      + `<div class="plan">${day(w.sat, plan.days[0])}${day(w.sun, plan.days[1])}</div>`
       + somewhereNew(w.satISO)
       + stripHead('And if you want one thing')
       + `<div class="list">${rest.map(p => {
-          const r = row(p.it);
-          return r.replace('<p class="row-meta">', `<p class="row-meta"><b class="pick-label">${esc(p.label)}</b> · `);
+          const r = row(p.item);
+          return r.replace('<p class="row-meta">', `<p class="row-meta"><b class="pick-label">${esc(PICK_LABEL[p.key])}</b> · `);
         }).join('')}</div>`;
   }
 
@@ -3341,6 +3322,7 @@ const App = (() => {
     document.addEventListener('click', e => {
       const t = e.target.closest('.tab, .tab-link'); if (!t) return;
       VIEW = t.dataset.view;
+      if (typeof Count !== 'undefined') Count.view(VIEW);    // js/count.js; counts nothing unless configured
       render();
       window.scrollTo({ top: $('#main').offsetTop - 60, behavior: 'smooth' });
       if (!isComplete()) {
@@ -3771,7 +3753,7 @@ const App = (() => {
      draw from. Kept deliberately small: a pack composes the same rows,
      cards and headings every built-in view does, or it does not match. */
   const ui = {
-    esc, rows, row, card, stripHead, img, MARK,
+    esc, rows, row, card, stripHead, img, MARK, toast,
     /* The two tiers, live rather than copied — a view is built after the
        fill, and a snapshot taken at registration would be empty. */
     records: () => ({ all: ALL, discovered: DISCOVERED, ctx: CTX })

@@ -437,7 +437,13 @@ const City = (() => {
      A city whose name takes an article says what it wants instead. */
   const hiddenHeading = 'Hidden corners';
 
-  const money = { symbol: '$', cheap: 30, format: n => `$${n}` };
+  /* What a price level means, per person: the most each of the first
+     three runs to, and what to count each as when adding up a day. $ is
+     a burrito or a pastry and a coffee, $$ a casual dinner, $$$ a night
+     out, $$$$ a tasting menu. Rough on purpose — it is for a plan that
+     says "about this much", not a bill. */
+  const money = { symbol: '$', cheap: 30, format: n => `$${n}`,
+                  levels: { upTo: [0, 20, 40, 80], about: [0, 15, 30, 60, 120] } };
 
   const views = {
     main: [

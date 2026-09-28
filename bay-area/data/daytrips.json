@@ -7,7 +7,7 @@
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "filoli",
       "title": "Filoli",
       "emoji": "🌷",
@@ -26,7 +26,9 @@
         "couple",
         "weekend",
         "outdoors",
-        "culture"
+        "culture",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "couple",
@@ -44,7 +46,12 @@
       "minutesFrom": {
         "city": 35,
         "peninsula": 20
-      }
+      },
+      "hours": "Mo-Su 10:00-17:00",
+      "hoursFrom": "filoli.org — open daily, admission 10am to 5pm",
+      "hoursChecked": "2026-09-25",
+      "booking": "https://filoli.org/visit/opening-times/",
+      "priceLevel": 2
     },
     {
       "type": "daytrip",
@@ -69,7 +76,9 @@
         "outdoors",
         "weekend",
         "relax",
-        "couple"
+        "couple",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "outdoor",
@@ -85,7 +94,10 @@
       "minutesFrom": {
         "city": 45,
         "peninsula": 40
-      }
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 0,
+      "booking": false
     },
     {
       "type": "daytrip",
@@ -108,7 +120,9 @@
       "goodFor": [
         "outdoors",
         "weekend",
-        "couple"
+        "couple",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "weekend",
@@ -124,14 +138,17 @@
       "minutesFrom": {
         "city": 80,
         "peninsula": 50
-      }
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "muir-woods",
       "title": "Muir Woods",
       "emoji": "🌲",
@@ -148,7 +165,9 @@
       "goodFor": [
         "outdoors",
         "weekend",
-        "couple"
+        "couple",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "weekend",
@@ -166,7 +185,13 @@
       "minutesFrom": {
         "city": 35,
         "peninsula": 75
-      }
+      },
+      "hours": "08:00-sunset",
+      "hoursFrom": "nps.gov — 8am to around sunset, every day",
+      "hoursChecked": "2026-09-25",
+      "booking": "https://gomuirwoods.com/",
+      "priceLevel": 2,
+      "hoursNote": "8am to sunset"
     },
     {
       "type": "daytrip",
@@ -189,7 +214,9 @@
       "goodFor": [
         "food",
         "couple",
-        "weekend"
+        "weekend",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "couple",
@@ -207,7 +234,10 @@
       "minutesFrom": {
         "city": 70,
         "peninsula": 105
-      }
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours; most wineries want a tasting booked ahead",
+      "priceLevel": 4,
+      "booking": false
     },
     {
       "type": "daytrip",
@@ -232,7 +262,9 @@
         "couple",
         "weekend",
         "outdoors",
-        "culture"
+        "culture",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "couple",
@@ -249,14 +281,17 @@
       "minutesFrom": {
         "city": 130,
         "peninsula": 100
-      }
+      },
+      "hoursNote": "A day of two places — the aquarium sells timed tickets, and Point Lobos keeps state-park daylight hours",
+      "booking": "https://www.montereybayaquarium.org/visit/admission-tickets",
+      "priceLevel": 3
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "point-reyes",
       "title": "Point Reyes",
       "emoji": "🦭",
@@ -273,7 +308,9 @@
       "goodFor": [
         "outdoors",
         "couple",
-        "weekend"
+        "weekend",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "weekend",
@@ -289,7 +326,12 @@
       "minutesFrom": {
         "city": 75,
         "peninsula": 120
-      }
+      },
+      "hours": "06:00-24:00",
+      "hoursFrom": "nps.gov — the seashore is open 6am to midnight",
+      "hoursChecked": "2026-09-25",
+      "priceLevel": 0,
+      "booking": false
     },
     {
       "type": "daytrip",
@@ -312,7 +354,9 @@
       "goodFor": [
         "outdoors",
         "couple",
-        "weekend"
+        "weekend",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "couple",
@@ -330,7 +374,10 @@
       "minutesFrom": {
         "city": 170,
         "peninsula": 150
-      }
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours; check Highway 1 before you set off",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "type": "daytrip",
@@ -353,7 +400,9 @@
       "goodFor": [
         "outdoors",
         "weekend",
-        "couple"
+        "couple",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "weekend",
@@ -369,14 +418,17 @@
       "minutesFrom": {
         "city": 210,
         "peninsula": 240
-      }
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 4,
+      "booking": false
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "yosemite",
       "title": "Yosemite Valley",
       "emoji": "⛰️",
@@ -391,7 +443,9 @@
       "why": "Granite walls three thousand feet high: El Capitan, Half Dome, and waterfalls that run hardest in late spring. It needs a weekend. Book somewhere to sleep well ahead, because the valley fills up. The park has used entry reservations at peak times in recent years, so check nps.gov for your dates before you go.",
       "goodFor": [
         "outdoors",
-        "weekend"
+        "weekend",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "weekend",
@@ -409,7 +463,12 @@
       "minutesFrom": {
         "city": 240,
         "peninsula": 240
-      }
+      },
+      "hours": "24/7",
+      "hoursFrom": "nps.gov — open all day, every day; no entry reservation in 2026",
+      "hoursChecked": "2026-09-25",
+      "priceLevel": 3,
+      "booking": false
     },
     {
       "type": "daytrip",
@@ -438,7 +497,9 @@
         "outdoors",
         "couple",
         "weekend",
-        "relax"
+        "relax",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "hiddengem",
@@ -452,7 +513,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Colorful_Venetian_Hotel_on_the_Beach_in_Capitola_%288038026675%29_%28cropped%29.jpg/1280px-Colorful_Venetian_Hotel_on_the_Beach_in_Capitola_%288038026675%29_%28cropped%29.jpg",
       "imageSubject": "Capitola, California",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 0,
+      "booking": false
     },
     {
       "type": "daytrip",
@@ -481,7 +545,9 @@
         "couple",
         "weekend",
         "outdoors",
-        "culture"
+        "culture",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "couple",
@@ -493,14 +559,17 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Carmel_Mission_Church.jpg/1280px-Carmel_Mission_Church.jpg",
       "imageSubject": "Carmel-by-the-Sea, California",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "sausalito",
       "title": "Sausalito by ferry",
       "emoji": "⛴️",
@@ -521,7 +590,9 @@
         "couple",
         "outdoors",
         "weekend",
-        "relax"
+        "relax",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "couple",
@@ -529,18 +600,21 @@
       ],
       "uniqueness": 3,
       "quality": 4,
-      "url": "https://www.goldengateferry.org/",
+      "url": "https://www.goldengate.org/ferry/",
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Sausalito.jpg/1280px-Sausalito.jpg",
       "imageSubject": "Sausalito, California",
       "imageKind": "subject",
-      "imageCredit": "en:User:Squirrel 22 · Public domain"
+      "imageCredit": "en:User:Squirrel 22 · Public domain",
+      "hoursNote": "The ferry runs to a timetable — goldengate.org/ferry has it",
+      "priceLevel": 2,
+      "booking": false
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "ano-nuevo",
       "title": "Año Nuevo elephant seals",
       "emoji": "🦭",
@@ -559,7 +633,9 @@
       "why": "The largest mainland breeding colony of elephant seals in the world, on a windswept point down the coast. In winter the bulls fight on the beach and the pups are born. From December 15 to March 31 you can only go on a docent-led walk of three to four miles, and those book out, so reserve on ReserveCalifornia the day they open. From April to November you can walk out on your own.",
       "goodFor": [
         "outdoors",
-        "weekend"
+        "weekend",
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "hiddengem",
@@ -574,14 +650,17 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/A%C3%B1o_Nuevo_State_Reserve.JPG",
       "imageSubject": "Año Nuevo State Park",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "The seals are seen on guided walks only, 15 December to 31 March, booked on ReserveCalifornia up to 56 days ahead",
+      "booking": "https://www.reservecalifornia.com/Web/Activities/ProgramsAndTours.aspx",
+      "priceLevel": 1
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "id": "fitzgerald-marine-reserve",
       "title": "Fitzgerald tide pools",
       "emoji": "🦀",
@@ -601,7 +680,8 @@
       "why": "Some of the richest tide pooling on the California coast, in Moss Beach. Time it to a low tide of one foot or less, best an hour or two before the lowest point. Then the reef is uncovered and full of giant green anemones, purple sea stars, urchins and hermit crabs, with harbour seals on the rocks. Check a tide table before you go, wear shoes with grip, and bring a jacket. Volunteer naturalists are there at weekends.",
       "goodFor": [
         "outdoors",
-        "morning"
+        "morning",
+        "afternoon"
       ],
       "labels": [
         "hiddengem",
@@ -613,7 +693,13 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Anemone%2C_Fitzgerald_Marine_Reserve%2C_CA.jpg",
       "imageSubject": "Fitzgerald Marine Reserve",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hours": "08:00-sunset",
+      "hoursNote": "Opens at 8am every day and closes between 5pm and 8pm with the season; go at low tide",
+      "hoursFrom": "smcgov.org",
+      "hoursChecked": "2026-09-25",
+      "priceLevel": 0,
+      "booking": false
     }
   ]
 }
