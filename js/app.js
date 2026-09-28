@@ -30,10 +30,10 @@ const App = (() => {
                  'invaders', 'notes'];
   /* `practices` is behind the first paint on purpose. It feeds one
      section of one tab, so nothing the reader sees first is waiting on
-     it, and putting it in CORE would take bandwidth from the files that
-     are. Same reasoning as civic and notable, and it holds for
+     are. `regulars` is the hand-researched half of the same tab and
+     waits with it. Same reasoning as civic and notable, and it holds for
      `conferences` too: a few dozen records that feed Events' Tech group. */
-  const LATER = ['civic', 'notable', 'practices', 'conferences'];
+  const LATER = ['civic', 'notable', 'practices', 'regulars', 'conferences'];
   const FILES = [...FIRST, ...CORE, ...LATER];
   const D = {};
   let ALL = [];
@@ -1884,8 +1884,11 @@ const App = (() => {
      Not the map layer. A weekend plan is a recommendation, and twenty-two
      thousand names nobody has vouched for are the one thing it must never
      be built from. */
+  /* A choir you have to join, or a twelve-week course, is not a
+     Saturday afternoon. Those stay on Regulars; a drop-in can be planned. */
   const weekendPool = () =>
-    ALL.concat(DISCOVERED.filter(i => Near.tierOf(i) !== 'found' && i.tells));
+    ALL.filter(i => !(i.mode === 'do' && (i.commitment === 'term' || i.commitment === 'member')))
+      .concat(DISCOVERED.filter(i => Near.tierOf(i) !== 'found' && i.tells));
 
 /* ---------- the reason to open it again ----------
 
@@ -2744,21 +2747,32 @@ const App = (() => {
      So the vocabulary is explicit, and the groups are verbs, because
      what these have in common is that you go and do them. */
   const REG_GROUPS = [
-    ['read',  '📖', 'Read',  'books, writing, clubs',   ['books'], 'books'],
-    ['make',  '🎨', 'Make',  'art, craft, photography', ['art', 'craft', 'design', 'photography']],
-    ['move',  '💃', 'Move',  'dance and circus',        ['dance', 'circus']],
-    ['stage', '🎭', 'Stage', 'theatre and comedy',      ['theatre', 'comedy']],
-    ['sing',  '🎤', 'Sing',  'choirs and voice',        ['music', 'singing']],
-    ['taste', '🍷', 'Taste', 'cooking and wine',        ['food']]
+    ['read',   '📖', 'Read',   'books, writing, clubs',   ['books'], 'books'],
+    ['learn',  '🗣️', 'Learn',  'languages, talks, skies', ['language', 'lecture', 'course', 'science']],
+    ['make',   '🎨', 'Make',   'art, craft, clay',        ['art', 'craft', 'design', 'photography']],
+    ['move',   '💃', 'Move',   'dance and circus',        ['dance', 'circus']],
+    ['stage',  '🎭', 'Stage',  'theatre, comedy, film',   ['theatre', 'comedy', 'film']],
+    ['sing',   '🎤', 'Sing',   'choirs and music',        ['music', 'singing', 'choir']],
+    ['taste',  '🍷', 'Taste',  'cooking and wine',        ['food']],
+    ['grow',   '🌱', 'Grow',   'gardens and nature',      ['garden', 'nature']],
+    ['gather', '♟️', 'Gather', 'chess, games, meetups',   ['games', 'chess']],
+    ['give',   '🤝', 'Give',   'volunteering and repair', ['volunteer', 'repair']]
   ];
 
-  /* Sing is declared and, today, empty. The city's feed has no choir in
-     it — six records mention singing and five of them are a permaculture
-     work site and two birdsong walks — so the group is wired and simply
-     never drawn. A subsection appears when something fills it and not
-     before, which is the same reason none of these is hard-coded into
-     the markup: the tab grows itself as the data does, and an empty
-     category is worse than a missing one. */
+  /* Learn, Grow, Gather and Give arrived with the hand-researched
+     `regulars.json` in every city. The municipal feed could never have
+     filled them: a community garden, a repair café or a chess table is
+     not an event and never appears in a listing, and those are exactly
+     the things people who live somewhere actually go back to. Sport is
+     not here on purpose — it has its own tab, and a running club listed
+     twice is a running club nobody trusts either copy of. */
+
+  /* A subsection appears when something fills it and not before, which
+     is why none of these is hard-coded into the markup: the tab grows
+     itself as the data does, and an empty category is worse than a
+     missing one. Sing sat declared and invisible for months — the city's
+     feed has no choir in it, only a permaculture site and two birdsong
+     walks that mention singing — until the researched choirs arrived. */
 
   const groupOf = i => {
     const cats = i.categories || [];
@@ -2784,7 +2798,62 @@ const App = (() => {
      every record in it, in all five cities, is a single evening or a
      two-day hackathon, and none of them repeats. They belong to Events,
      which holds them back until a licensed source supplies them. */
-  const isRegular = i => i.mode === 'do' && !(i.categories || []).includes('tech');
+  const isRegular = i => i.mode === 'do'
+    && !(i.categories || []).some(c => c === 'tech' || c === 'sport');
+
+  /* ---------- how often, and what it takes to start ----------
+
+     Two questions everybody asks before taking something up, and the
+     two the old tab could not answer. It split by "has weekdays or not",
+     which put a monthly Thursday writing workshop under "on a rhythm"
+     beside a weekly choir, and said nothing about whether you can simply
+     turn up.
+
+     `rhythm` is how often it runs. A researched record states it; a
+     record from the city's feed is a dated run of sessions, because
+     that is what the feed can actually vouch for.
+
+     `commitment` is what it asks of you to begin:
+       dropin   turn up
+       book     book each session or slot
+       term     sign up for a term or season
+       member   join first, then it is yours
+     and `firstStep`, where there is one, says it in the record's own
+     words — "first rehearsal free", "trial class on 8 October". */
+  const RHYTHMS = [
+    ['weekly',  'Every week',            'A standing date — the kind you build a week around'],
+    ['monthly', 'Once or twice a month', 'Enough to become a habit without owning your diary'],
+    ['anytime', 'Whenever you like',     'Open most days — go when the mood takes you'],
+    ['occasional', 'A few times a year', 'Not a weekly habit — a date worth putting in the diary each time it comes round'],
+    ['short',   'Dated runs',            'A set number of sessions, from the city\'s own listings — the dates are on the link']
+  ];
+  const rhythmOf = i => RHYTHMS.some(r => r[0] === i.rhythm) ? i.rhythm : 'short';
+
+  const COMMIT = {
+    dropin: 'Just turn up',
+    book:   'Book a place each time',
+    term:   'Sign up for a term',
+    member: 'Join first'
+  };
+  const easyStart = i => i.commitment === 'dropin' || i.commitment === 'book';
+
+  const DAY_NAMES = ['Sundays', 'Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Saturdays'];
+  function cadenceOf(i) {
+    if (i.cadence) return i.cadence;
+    if (Array.isArray(i.days) && i.days.length && i.days.length < 7)
+      return i.days.map(d => DAY_NAMES[d]).join(', ');
+    return RHYTHMS.find(r => r[0] === rhythmOf(i))[1];
+  }
+
+  /* The row every other list uses, with the rhythm where the eye lands
+     first and the way in underneath it. */
+  function regRow(i) {
+    const start = i.firstStep || COMMIT[i.commitment] || '';
+    return row(i)
+      .replace('<p class="row-meta">', `<p class="row-meta"><b class="pick-label">${esc(cadenceOf(i))}</b> · `)
+      .replace('<p class="row-why">', `${start ? `<p class="row-start">${esc(start)}</p>` : ''}<p class="row-why">`);
+  }
+  const regRows = items => `<div class="list">${items.map(regRow).join('')}</div>`;
 
   function capPerSubject(items, per, limit) {
     const seen = {};
@@ -2803,7 +2872,7 @@ const App = (() => {
 
   function regularsLede() {
     const here = Loc.displayName(Loc.active());
-    return `Things you go back to, not things that are on once. What is within reach of ${here}, and how often it runs.`;
+    return `Things to take up rather than attend once: a choir, a book group, a studio, a garden, a table of chess. How often each one runs and what it takes to start, from ${here}.`;
   }
 
   /* Only the groups that have something. Six buttons where two of them
@@ -2815,14 +2884,16 @@ const App = (() => {
 
   function renderRegulars() {
     const pool = ALL.filter(isRegular);
-    /* Three cities had only tech here, all of it from Luma, and it has
-       left — see UNLICENSED in js/record.js. */
     if (!pool.length) {
       return `<p class="empty">Nothing that repeats is collected here yet.</p>`;
     }
 
     const groups = liveGroups(pool);
     if (!groups.some(([k]) => k === REG_MODE)) REG_MODE = 'all';
+    /* A researched record names its group. A book group run in Italian
+       is about reading and about a language, and the writer knows which
+       of the two somebody would look for it under. */
+    if (i.group && REG_GROUPS.some(g => g[0] === i.group)) return i.group;
 
     const tabs = [['all', '🔁', 'Near you', 'a bit of everything'], ...groups];
     const modeBar = `<div class="mode mode-wide" id="reg-mode">
@@ -2836,24 +2907,35 @@ const App = (() => {
     return modeBar + (REG_MODE === 'all' ? regularsAll() : regularsGroup(REG_MODE));
   }
 
-  /* The overview keeps the per-subject cap. Without it one subject can
-     take every row — the tech evenings did, before they moved to Events,
-     because they are collected from a source that skews central and this
-     flat is central, and the first version came out reading as a list
-     about AI. */
+  /* The overview is split by the question somebody is really asking
+     when they open it — can I start this week, or is this something to
+     sign up for — and keeps the per-subject cap inside each half.
+     Without the cap one subject takes every row: the tech evenings did,
+     before they moved to Events, and the first version read as a list
+     about AI. The dated runs from the city's own listings go last,
+     because they end, and the two above them do not. */
   function regularsAll() {
-    const near = Near.pick(isRegular, {
-      rings: Near.RINGS.out, want: 6, limit: 40, exclude: notWanted
-    });
-    const items = capPerSubject(near.items, 2, 10);
-    if (!items.length) return `<p class="empty">Nothing within reach right now.</p>`;
-
-    return stripHead('A bit of everything', radiusNote(near.radius, items, near.widened))
-      + rows(items);
+    const section = (match, title, lede, limit) => {
+      const near = Near.pick(i => isRegular(i) && match(i), {
+        rings: Near.RINGS.out, want: 4, limit: 40, exclude: notWanted
+      });
+      const items = capPerSubject(near.items, 2, limit);
+      return items.length
+        ? stripHead(title, `${lede} · ${near.radius == null ? 'anywhere in reach' : `within about ${near.radius} minutes`}`) + regRows(items)
+        : '';
+    };
+    const out =
+        section(i => rhythmOf(i) !== 'short' && easyStart(i), 'Start this week',
+                'No sign-up — turn up, or book the one session', 8)
+      + section(i => rhythmOf(i) !== 'short' && !easyStart(i), 'Worth signing up for',
+                'A term, a season or a membership — the ones that become part of the week', 8)
+      + section(i => rhythmOf(i) === 'short', 'Dated runs nearby',
+                'A few sessions each, from the city\'s own listings', 6);
+    return out || `<p class="empty">Nothing within reach right now.</p>`;
   }
 
   function regularsGroup(key) {
-    const [, , label, , ] = REG_GROUPS.find(g => g[0] === key);
+    const [, , label] = REG_GROUPS.find(g => g[0] === key);
     const here = Loc.displayName(Loc.active());
 
     /* Deliberately a wide reach and no cap. Somebody who has opened
@@ -2861,41 +2943,38 @@ const App = (() => {
        "where can I dance" is every class we know of in order of
        distance — not four of them because a rule elsewhere was trying to
        keep a mixed list mixed. */
-    const near = Near.pick(i => isRegular(i) && groupOf(i) === key, {
-      rings: Near.RINGS.out, want: 4, limit: 24, exclude: notWanted
+    const near = Near.pick(mine, {
+      rings: Near.RINGS.out, want: 4, limit: 30, exclude: notWanted
     });
 
     if (!near.items.length) {
       return `<p class="empty">Nothing in ${esc(label.toLowerCase())} within reach of ${esc(here)} yet.</p>`;
     }
 
-    /* Everything here repeats, so the useful split is how often — a
-       weekly class you could build a term around, against a two-session
-       workshop you could try once. */
-    const often = near.items.filter(i => Array.isArray(i.days) && i.days.length);
-    const rest  = near.items.filter(i => !(Array.isArray(i.days) && i.days.length));
+    /* Everything here repeats, so the useful split is how often: a
+       weekly choir you build the week around, a monthly book group, a
+       studio that is open whenever you are, and the runs of dated
+       sessions that end. The first strip carries the radius. */
+    let first = true;
+    const strips = RHYTHMS.map(([r, title, note]) => {
+      const items = near.items.filter(i => rhythmOf(i) === r);
+      if (!items.length) return '';
+      const head = stripHead(title, first ? `${note} · ${radiusNote(near.radius, items, near.widened)}` : note);
+      first = false;
+      return head + regRows(items);
+    }).join('');
 
     /* A radius stops as soon as it has enough, which is right for "what
        is near me" and wrong here: the cookery school on the far side of
        the 15th is a place you would happily cross Paris for once, and
        from the 10th it never appeared at all. Same answer Eat already
        reached — draw the circle, then say what is just outside it. */
-    const further = Near.beyond(i => isRegular(i) && groupOf(i) === key,
-                                near.radius, { exclude: notWanted });
+    const further = Near.beyond(mine, near.radius, { exclude: notWanted });
 
-    return (often.length
-        ? stripHead(`${label} — on a rhythm`, radiusNote(near.radius, often, near.widened))
-          + rows(often)
-        : '')
-      + (rest.length
-          ? stripHead(often.length ? 'Shorter runs' : `${label} around ${here}`,
-                      often.length ? 'A few sessions rather than a standing date'
-                                   : radiusNote(near.radius, rest, near.widened))
-            + rows(rest)
-          : '')
+    return strips
       + (further.length
           ? stripHead('Worth the trip', `Further than ${near.radius} minutes, and still worth it`)
-            + rows(further)
+            + regRows(further)
           : '')
       + placesStrip(groupPlaces(key), here);
   }
@@ -2917,6 +2996,7 @@ const App = (() => {
         ['The walk', f.walk], ['Hidden gem', f.hidden]
       ].filter(([, v]) => v);
 
+    const mine = i => isRegular(i) && groupOf(i) === key;
       /* The prose above is written once and stays true; this is retrieved
          from the map every load, so the dossier for an arrondissement
          nobody has written much about still names real places in it. */

@@ -1,0 +1,528 @@
+{
+  "generated": "2026-09-28",
+  "note": "Things to take up rather than attend once — a studio, a choir, a book group, a garden, a table of chess. Hand-researched: every record was checked against the organisation's own page on `lastVerified`, and none of them is sport, which has its own tab. `rhythm` is how often it runs (weekly, monthly, anytime, occasional); `commitment` is what it asks of you to start (dropin, book, term, member); `firstStep` says how to begin in the organisation's own terms. Read by the Regulars tab in js/app.js.",
+  "items": [
+    {
+      "id": "art-students-league-open-sketch",
+      "title": "Open sketch at the Art Students League",
+      "emoji": "✏️",
+      "type": "class",
+      "mode": "do",
+      "group": "make",
+      "zone": "midtown-times-square",
+      "coords": [
+        40.76623,
+        -73.9806
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "art",
+        "learn"
+      ],
+      "rhythm": "weekly",
+      "commitment": "book",
+      "cadence": "Weekdays 5.05–6.35pm · weekend mornings and afternoons",
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "times": "Monday to Friday 5.05pm to 6.35pm ($15); Friday 7pm to 10.15pm ($18); Saturday and Sunday 8.45am to 12.30pm and 1pm to 4.45pm ($22)",
+      "firstStep": "Buy a ticket at the registration office 10 minutes before — your first three sessions skip the $100 annual fee",
+      "area": "215 West 57th Street, Midtown",
+      "price": 15,
+      "priceNote": "$15 a weekday session · $22 at weekends",
+      "indoor": true,
+      "url": "https://www.artstudentsleague.org/open-sessions",
+      "source": "Art Students League of New York",
+      "lastVerified": "2026-09-28",
+      "why": "The school on 57th Street where Pollock, Rothko and O’Keeffe studied still runs open sketch sessions every day: a live model, short poses or long, and a room of people drawing in silence. There is no teacher and no course, so it fits around anything — an hour and a half after work on a weekday, or a whole weekend morning. Bring your own materials, or buy them at the League’s art supply store.",
+      "goodFor": [
+        "solo",
+        "rainy",
+        "evening",
+        "morning",
+        "afternoon"
+      ],
+      "quality": 5,
+      "uniqueness": 5,
+      "hoursNote": "Monday to Friday 5.05pm to 6.35pm ($15); Friday 7pm to 10.15pm ($18); Saturday and Sunday 8.45am to 12.30pm and 1pm to 4.45pm ($22)",
+      "durationMin": 90,
+      "priceLevel": 1,
+      "booking": false
+    },
+    {
+      "id": "high-line-stargazing",
+      "title": "Stargazing on the High Line",
+      "emoji": "🔭",
+      "type": "class",
+      "mode": "do",
+      "group": "learn",
+      "zone": "west-village",
+      "coords": [
+        40.74226,
+        -74.00807
+      ],
+      "coordsFrom": "hand-placed (the High Line at West 14th Street)",
+      "categories": [
+        "science",
+        "nature",
+        "free"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Tuesdays after sunset, April to October",
+      "days": [
+        2
+      ],
+      "times": "Every Tuesday from sunset to park closing, 7 April to 27 October 2026; cancelled if overcast",
+      "firstStep": "Free, no RSVP — the last of the season is 27 October",
+      "area": "The High Line, near West 14th Street",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": false,
+      "weatherSensitive": true,
+      "url": "https://www.thehighline.org/events/stargazing/",
+      "source": "The High Line · Amateur Astronomers Association",
+      "lastVerified": "2026-09-28",
+      "why": "Every Tuesday from spring to the end of October, the Amateur Astronomers Association sets up big telescopes on the High Line and shows passers-by Saturn’s rings and the Moon’s craters above the lights of the West Side. They have done it since 2009, it is free, and nobody asks you to sign anything. A good standing Tuesday for the warm half of the year.",
+      "goodFor": [
+        "couple",
+        "free",
+        "evening",
+        "outdoor"
+      ],
+      "quality": 4,
+      "uniqueness": 5,
+      "end": "2026-10-27",
+      "hoursNote": "Every Tuesday from sunset to park closing, 7 April to 27 October 2026; cancelled if overcast",
+      "durationMin": 120,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "id": "marshall-chess-club",
+      "title": "The Marshall Chess Club",
+      "emoji": "♟️",
+      "type": "class",
+      "mode": "do",
+      "group": "gather",
+      "zone": "greenwich-village",
+      "coords": [
+        40.73412,
+        -73.99664
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "chess",
+        "games"
+      ],
+      "rhythm": "anytime",
+      "commitment": "dropin",
+      "cadence": "Most afternoons and evenings",
+      "hoursNote": "Monday and Wednesday to Friday 2pm to midnight; Saturday and Sunday 9am to midnight; Tuesday for events and classes",
+      "firstStep": "Visitors welcome; adult beginner classes need no membership",
+      "area": "23 West 10th Street, Greenwich Village",
+      "priceNote": "Classes and tournaments priced individually",
+      "indoor": true,
+      "url": "https://www.marshallchessclub.org/",
+      "source": "Marshall Chess Club",
+      "lastVerified": "2026-09-28",
+      "why": "A Village townhouse that has been a chess club for a century, with game rooms up the stairs and tournaments for every level from beginner to grandmaster norm. You do not need to be a member to take a beginner class or play most of the non-member events, which makes it easy to try — and the Saturday and Sunday hours start at nine.",
+      "goodFor": [
+        "solo",
+        "rainy",
+        "evening",
+        "afternoon"
+      ],
+      "quality": 5,
+      "uniqueness": 5,
+      "durationMin": 180,
+      "priceLevel": 2,
+      "booking": "https://www.marshallchessclub.org/"
+    },
+    {
+      "id": "washington-square-chess",
+      "title": "The chess tables in Washington Square Park",
+      "emoji": "♞",
+      "type": "class",
+      "mode": "do",
+      "group": "gather",
+      "zone": "greenwich-village",
+      "coords": [
+        40.7309,
+        -73.9976
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "chess",
+        "games",
+        "free"
+      ],
+      "rhythm": "anytime",
+      "commitment": "dropin",
+      "cadence": "Every day, early till late",
+      "hoursNote": "Games run from early morning until well past midnight",
+      "firstStep": "First come, first served — some players charge by the game, so agree first",
+      "area": "The south-west corner of Washington Square Park",
+      "price": 0,
+      "priceNote": "Free tables · hustlers charge by the game",
+      "indoor": false,
+      "weatherSensitive": true,
+      "url": "https://villagepreservation.org/2015/09/03/checkmate-street-chess-in-the-village/",
+      "source": "Village Preservation",
+      "lastVerified": "2026-09-28",
+      "why": "Fifteen concrete tables in a ring in the south-west corner, where fast blitz chess has been played for decades by everyone from grandmasters to tourists. Some of the regulars play for money and some teach for it, so settle the terms before the clock starts. Come back at the same time each week and you will start being recognised, which is the whole of the membership.",
+      "goodFor": [
+        "solo",
+        "free",
+        "outdoor",
+        "afternoon"
+      ],
+      "quality": 4,
+      "uniqueness": 5,
+      "durationMin": 60,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "id": "fixers-collective",
+      "title": "Fixers' Collective repair sessions",
+      "emoji": "🔧",
+      "type": "class",
+      "mode": "do",
+      "group": "give",
+      "zone": "park-slope",
+      "coords": [
+        40.67931,
+        -73.98753
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "repair",
+        "volunteer",
+        "free"
+      ],
+      "rhythm": "monthly",
+      "commitment": "dropin",
+      "cadence": "Regular sessions in Brooklyn and Manhattan",
+      "times": "Sessions announced on the mailing list and events page; recent ones at Proteus Gowanus, Hack Manhattan, Westbeth and Brooklyn libraries",
+      "firstStep": "Bring something broken early, or just come and watch",
+      "area": "Proteus Gowanus, 543 Union Street, and other venues",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": true,
+      "url": "https://www.fixerscollective.org/category/events/",
+      "source": "Fixers' Collective",
+      "lastVerified": "2026-09-28",
+      "why": "A band of volunteer tinkerers who meet around the city to mend what people bring — lamps, radios, clothes, small appliances — and to show them how it was done. Anybody is welcome, whether to fix, to be fixed for, or just to watch. Get on the mailing list and it becomes a monthly evening of doing something useful with your hands.",
+      "goodFor": [
+        "free",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "hoursNote": "Sessions announced on the mailing list and events page; recent ones at Proteus Gowanus, Hack Manhattan, Westbeth and Brooklyn libraries",
+      "durationMin": 180,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "id": "nyc-community-chorus",
+      "title": "New York City Community Chorus",
+      "emoji": "🎶",
+      "type": "class",
+      "mode": "do",
+      "group": "sing",
+      "zone": "chelsea-hudson-yards",
+      "coords": [
+        40.74935,
+        -73.99897
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "choir",
+        "music"
+      ],
+      "rhythm": "weekly",
+      "commitment": "term",
+      "cadence": "Mondays at 6.30pm",
+      "days": [
+        1
+      ],
+      "times": "Weekly rehearsals; the fall season began on 14 September 2026",
+      "firstStep": "No audition — join by 5 October for the fall season, or from 25 January for spring",
+      "area": "Church of the Holy Apostles, 296 Ninth Avenue at 28th Street",
+      "priceNote": "Per season — see the site",
+      "indoor": true,
+      "url": "https://www.nycccha.org/",
+      "source": "New York City Community Chorus",
+      "lastVerified": "2026-09-28",
+      "why": "A non-audition chorus that rehearses every Monday evening in a Chelsea church and means it when it says every voice belongs. You do not need to read music or to have sung since school. A season builds to a concert, and the weekly rehearsal is the fixed point that makes the rest of the week feel less like work.",
+      "goodFor": [
+        "solo",
+        "evening",
+        "socialize"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "Weekly rehearsals; the fall season began on 14 September 2026",
+      "durationMin": 120,
+      "priceLevel": 2,
+      "booking": "https://www.nycccha.org/"
+    },
+    {
+      "id": "mark-morris-drop-in",
+      "title": "Drop-in classes at the Mark Morris Dance Center",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "group": "move",
+      "zone": "fort-greene",
+      "coords": [
+        40.68688,
+        -73.97888
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "dance"
+      ],
+      "rhythm": "anytime",
+      "commitment": "dropin",
+      "cadence": "Classes every day",
+      "times": "Adult drop-in classes through the week, nearly all with live music",
+      "firstStep": "Pay $22 for a single class — no term needed",
+      "area": "3 Lafayette Avenue, Fort Greene",
+      "price": 22,
+      "priceNote": "$22 a class · $20 students and seniors",
+      "indoor": true,
+      "url": "https://markmorrisdancegroup.org/dance-center/adult-classes/",
+      "source": "Mark Morris Dance Group",
+      "lastVerified": "2026-09-28",
+      "why": "The home of one of America’s great modern dance companies opens its studios to adults every day: dance and movement classes, most of them with live music rather than a playlist. Beginners have their own classes, and you pay by the class, so it is easy to find the one that fits your week and just keep turning up.",
+      "goodFor": [
+        "solo",
+        "rainy",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "hoursNote": "Adult drop-in classes through the week, nearly all with live music",
+      "durationMin": 90,
+      "priceLevel": 2,
+      "booking": "https://markmorrisdancegroup.org/dance-center/adult-classes/"
+    },
+    {
+      "id": "the-pit-drop-in",
+      "title": "Improv drop-ins at The PIT",
+      "emoji": "🎭",
+      "type": "class",
+      "mode": "do",
+      "group": "stage",
+      "zone": "midtown-south-flatiron-union-square",
+      "coords": [
+        40.74736,
+        -73.9923
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "theatre",
+        "comedy"
+      ],
+      "rhythm": "anytime",
+      "commitment": "book",
+      "cadence": "Every day · evenings on Fridays and Sundays",
+      "times": "Monday to Friday 1.30pm to 3.30pm; Friday 6.30pm to 8.30pm; Saturday 3.30pm to 5.30pm; Sunday 11am to 1pm and 6pm to 8pm",
+      "firstStep": "Reserve a spot online — they sell out; 18 and over",
+      "area": "154 West 29th Street, Chelsea",
+      "priceNote": "Per session — price when you reserve",
+      "indoor": true,
+      "url": "https://thepit-nyc.com/drop-in-classes/",
+      "source": "The Peoples Improv Theater",
+      "lastVerified": "2026-09-28",
+      "why": "Improv without signing up for eight weeks: The PIT runs two-hour drop-in sessions every day, so you can see whether you like it on a Friday evening and come back on Sunday if you do. Beginners are the point, and people use them to meet others as much as to learn. When a regular slot starts to feel like yours, the full courses are there too.",
+      "goodFor": [
+        "solo",
+        "evening",
+        "socialize",
+        "afternoon"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "Monday to Friday 1.30pm to 3.30pm; Friday 6.30pm to 8.30pm; Saturday 3.30pm to 5.30pm; Sunday 11am to 1pm and 6pm to 8pm",
+      "durationMin": 120,
+      "priceLevel": 2,
+      "booking": "https://thepit-nyc.com/drop-in-classes/"
+    },
+    {
+      "id": "brooklyn-brainery",
+      "title": "Classes at Brooklyn Brainery",
+      "emoji": "🗣️",
+      "type": "class",
+      "mode": "do",
+      "group": "learn",
+      "zone": "prospect-heights",
+      "coords": [
+        40.67491,
+        -73.96701
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "course",
+        "learn"
+      ],
+      "rhythm": "anytime",
+      "commitment": "book",
+      "cadence": "New classes every week",
+      "times": "Short classes of one or two sessions on anything from pickling to linguistics, plus free events",
+      "firstStep": "Pick one class from the calendar",
+      "area": "Prospect Heights, Brooklyn",
+      "priceNote": "Kept as cheap as the rent allows",
+      "indoor": true,
+      "url": "https://brooklynbrainery.com/courses",
+      "source": "Brooklyn Brainery",
+      "lastVerified": "2026-09-28",
+      "why": "A community classroom where the curriculum is whatever people want to learn and teach: one-night and two-week classes, priced to cover the room, plus a steady run of free events. It is the rare place where taking up something new costs one evening and not a semester, and people end up collecting them.",
+      "goodFor": [
+        "couple",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "Short classes of one or two sessions on anything from pickling to linguistics, plus free events",
+      "durationMin": 120,
+      "priceLevel": 2,
+      "booking": "https://brooklynbrainery.com/courses"
+    },
+    {
+      "id": "film-forum-membership",
+      "title": "Film Forum, as a member",
+      "emoji": "🎞️",
+      "type": "class",
+      "mode": "do",
+      "group": "stage",
+      "zone": "soho-little-italy-hudson-square",
+      "coords": [
+        40.72839,
+        -74.00439
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "film"
+      ],
+      "rhythm": "anytime",
+      "commitment": "member",
+      "cadence": "Screenings every day",
+      "times": "New independent films and repertory seasons daily",
+      "firstStep": "A $75 membership brings tickets to $12 — $9 with an IDNYC card",
+      "area": "209 West Houston Street, South Village",
+      "priceNote": "$75 a year · member tickets $12 instead of $18",
+      "indoor": true,
+      "url": "https://filmforum.org/membership",
+      "source": "Film Forum",
+      "lastVerified": "2026-09-28",
+      "why": "New York’s nonprofit cinema on Houston Street, with new independent films on one side of the programme and deep repertory seasons on the other. Membership pays for itself in a handful of visits, and a cheaper ticket is what turns a cinema into a habit: you go to the thing you were not sure about, and it becomes the best film of your month.",
+      "goodFor": [
+        "solo",
+        "couple",
+        "rainy",
+        "evening"
+      ],
+      "quality": 5,
+      "uniqueness": 4,
+      "hoursNote": "New independent films and repertory seasons daily",
+      "durationMin": 120,
+      "priceLevel": 1,
+      "booking": "https://filmforum.org/"
+    },
+    {
+      "id": "center-for-fiction-reading-groups",
+      "title": "Reading groups at The Center for Fiction",
+      "emoji": "📚",
+      "type": "class",
+      "mode": "do",
+      "group": "read",
+      "zone": "fort-greene",
+      "coords": [
+        40.68693,
+        -73.97858
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "books"
+      ],
+      "rhythm": "monthly",
+      "commitment": "member",
+      "cadence": "A free members’ group monthly · more by the season",
+      "times": "A monthly afternoon group led by the head librarian, the long-running Thursday-afternoon Literarians, and seasonal groups and workshops",
+      "firstStep": "Join ($150 a year) for the free monthly group and discounts on the rest",
+      "area": "15 Lafayette Avenue, Fort Greene",
+      "priceNote": "$150 a year",
+      "indoor": true,
+      "url": "https://centerforfiction.org/membership/",
+      "source": "The Center for Fiction",
+      "lastVerified": "2026-09-28",
+      "why": "A bookshop, café, bar and members’ library devoted entirely to fiction, in Downtown Brooklyn. Membership buys a free monthly reading group led by the librarian, a quiet floor to read on, and cheaper places in the paid groups — among them the Literarians, one of the oldest book clubs in the city. It is the bookish New York habit in one building.",
+      "goodFor": [
+        "solo",
+        "rainy",
+        "afternoon"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "hoursNote": "A monthly afternoon group led by the head librarian, the long-running Thursday-afternoon Literarians, and seasonal groups and workshops",
+      "durationMin": 90,
+      "priceLevel": 1,
+      "booking": "https://centerforfiction.org/membership/"
+    },
+    {
+      "id": "liz-christy-garden",
+      "title": "Liz Christy Community Garden",
+      "emoji": "🌱",
+      "type": "class",
+      "mode": "do",
+      "group": "grow",
+      "zone": "greenwich-village",
+      "coords": [
+        40.72424,
+        -73.99215
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "garden",
+        "nature",
+        "volunteer",
+        "free"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Sat and Sun 12–4pm · Tue and Thu 6–8pm, April to October",
+      "hoursNote": "April to October: Sunday and Saturday 12pm to 4pm; Tuesday and Thursday 6pm to 8pm",
+      "firstStep": "Visit during open hours and ask to help — volunteers welcome on open days",
+      "area": "110 East Houston Street, between the Bowery and Second Avenue",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": false,
+      "weatherSensitive": true,
+      "url": "https://www.nycgovparks.org/opportunities/volunteer/group/liz-christy-garden",
+      "source": "NYC Parks",
+      "lastVerified": "2026-09-28",
+      "why": "New York’s first community garden, started on a rubble lot in 1973 and the reason there are now more than five hundred and fifty of them. The gate is open four times a week in the growing season, and anybody who turns up can roll up their sleeves beside the members. If you want one nearer home, the city’s GreenThumb map lists them all.",
+      "goodFor": [
+        "free",
+        "outdoor",
+        "afternoon",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 5,
+      "durationMin": 60,
+      "priceLevel": 0,
+      "booking": false
+    }
+  ]
+}

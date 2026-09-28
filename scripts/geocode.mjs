@@ -42,7 +42,7 @@ const ZONE = {
 };
 
 const FILES = ['events.json','places.json','nightlife.json','sports.json',
-               'food.json','itineraries.json','daytrips.json'];
+               'food.json','itineraries.json','daytrips.json','regulars.json'];
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const norm = s => (s || '').toLowerCase()

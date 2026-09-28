@@ -670,6 +670,13 @@ picture { display: contents; }
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
 .row.open .row-why { -webkit-line-clamp: unset; overflow: visible; }
+/* Regulars: what it takes to start, under the rhythm. */
+.row-start {
+  grid-column: 1 / -1;
+  margin: .2rem 0 0; font-size: .8rem; color: var(--ink, inherit); font-weight: 500;
+}
+.row-start::before { content: '→ '; color: var(--accent); }
+.row.has-thumb .row-start { grid-column: 2 / -1; }
 .row .detail { grid-column: 1 / -1; }
 .row.open .detail { display: block; }
 

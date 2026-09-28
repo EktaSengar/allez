@@ -488,7 +488,8 @@ const Rec = (() => {
        reason attached — so the OSM copy is dropped rather than competing
        with itself under the same name. */
     const curated = [].concat(D.events?.items || [], D.places?.items || [],
-      D.nightlife?.items || [], D.sports?.items || [], D.food?.items || []);
+      D.nightlife?.items || [], D.sports?.items || [], D.food?.items || [],
+      D.regulars?.items || []);
 
     /* Only for records with no position. A named, placed record is
        matched to its map copy by `dropDuplicates` below — same name within
@@ -610,6 +611,10 @@ const Rec = (() => {
          forty of Paris's were being marked ★, read as somewhere one of
          you had been, and ranked above the editorial tier. */
       .concat((D.practices?.items || []).map(i => Object.assign({ provenance: 'sourced' }, i)))
+      /* Regulars are researched against each organisation's own page and
+         checked on a date — nobody here has been to all of them, so they
+         say `editorial`, never the default `personal`. */
+      .concat((D.regulars?.items || []).map(i => Object.assign({ provenance: 'editorial' }, i)))
       /* Tech conferences from two open lists — see scripts/conferences.mjs.
          A file of their own because their licences differ from the
          city feeds'. */

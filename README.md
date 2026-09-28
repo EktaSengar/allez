@@ -425,21 +425,43 @@ first version of it read as a list about AI meetups with a dance class hidden
 underneath.
 
 Subsections are the navigation, the same component Eat uses: **Read**,
-**Make**, **Move**, **Stage**, **Sing**, **Taste**, **Tech**, behind a mixed
-"Near you" that caps each subject at two so no one of them owns the overview.
-The groups are verbs because the thing they share is that you go and do them.
+**Learn**, **Make**, **Move**, **Stage**, **Sing**, **Taste**, **Grow**,
+**Gather** and **Give**, behind a mixed "Near you". The groups are verbs because
+the thing they share is that you go and do them. Sport is deliberately absent:
+it has its own tab, and a running club listed twice is one nobody trusts.
 
-**A subsection is drawn only when something fills it.** Sing is declared and
-currently invisible — the city's feed has no choir in it, and six records that
-mention singing turn out to be a permaculture work site and two birdsong
-walks. An empty category is worse than a missing one, and this way the tab
-grows itself as the data does rather than needing markup per hobby.
+**A subsection is drawn only when something fills it.** An empty category is
+worse than a missing one, and this way the tab grows itself as the data does
+rather than needing markup per hobby.
 
-Inside a subsection the split is by cadence rather than subject: what runs on
-a rhythm, then shorter runs, then what is worth the trip. Somebody who opened
-Move has already said what they want, so those lists are uncapped and reach
-wide — the honest answer to "where can I dance" is every class we know of,
-nearest first.
+**Where the records come from.** The city's feed (`practices.json`) can only
+ever supply dated runs of classes, and in three cities it supplied nothing that
+was not tech. So every city also has a hand-researched `regulars.json`: the
+studio, the choir, the book group, the community garden, the chess tables, the
+repair café — the things people who live somewhere actually go back to, none
+of which ever appears in an events listing. Each record was checked against the
+organisation's own page on its `lastVerified` date and ranks as `editorial`.
+Researched classes that already live in `places.json` or `nightlife.json`
+(Impro Academy, the Friday Night Waltz, Chabot's telescopes) carry the same
+fields and are not duplicated.
+
+Every regular answers the two questions somebody asks before taking something
+up:
+
+- **How often?** `rhythm` — `weekly`, `monthly`, `anytime` (open most days) or
+  `occasional` (a few times a year). `cadence` says it in words. Records from
+  the feed have no rhythm of their own and read as *dated runs*.
+- **What does it take to start?** `commitment` — `dropin`, `book` (one session
+  at a time), `term` or `member` — and `firstStep`, in the organisation's own
+  terms: "first rehearsal free", "trial class on 8 October".
+
+The overview splits on the second question — **Start this week** (drop in or
+book one session), **Worth signing up for** (a term or a membership), then the
+dated runs — keeping the two-per-subject cap inside each so no one subject owns
+it. Inside a subsection the split is by rhythm, then what is worth the trip.
+Somebody who opened Move has already said what they want, so those lists are
+uncapped and reach wide. A term or a membership never goes into the weekend
+plan; a drop-in can.
 
 Read carries one thing the others do not. Reading is the one of these that is
 also a *place*: a writing workshop is something you turn up to on a Tuesday,

@@ -53,6 +53,9 @@ const FILES = {
   'places.json':        { timeSensitive: false, required: ['id', 'title', 'why', 'url'] },
   'nightlife.json':     { timeSensitive: false, required: ['id', 'title', 'why', 'url'] },
   'sports.json':        { timeSensitive: false, required: ['id', 'title', 'why', 'url'] },
+  /* Hand-researched things to take up. Not dated, but every one was
+     checked against its own page, so the date and the source are required. */
+  'regulars.json':      { timeSensitive: false, required: ['id', 'title', 'why', 'url', 'lastVerified', 'source', 'rhythm', 'commitment'] },
   'food.json':          { timeSensitive: false, required: ['id', 'title', 'why', 'url'] },
   'itineraries.json':   { timeSensitive: false, required: ['id', 'title', 'why', 'stops'] },
   'daytrips.json':      { timeSensitive: false, required: ['id', 'title', 'why', 'url', 'transit'] },
