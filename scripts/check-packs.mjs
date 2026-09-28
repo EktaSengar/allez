@@ -321,7 +321,7 @@ function checkPack(id) {
 const HELD = new Set(['bay-area']);
 
 const FILES = ['events', 'places', 'nightlife', 'sports', 'food', 'itineraries', 'daytrips',
-               'civic', 'notable', 'editorial', 'notes', 'events-city', 'practices', 'conferences'];
+               'civic', 'notable', 'editorial', 'notes', 'events-city', 'practices', 'regulars', 'conferences'];
 /* The kinds that have a door, and so opening hours js/hours.js must be
    able to read. The same list check-records.mjs grades against. */
 const DOORS = new Set(['cafe', 'bakery', 'restaurant', 'deli', 'dessert', 'market', 'bar', 'jazz',

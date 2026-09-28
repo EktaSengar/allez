@@ -1,0 +1,562 @@
+{
+  "generated": "2026-09-28",
+  "note": "Things to take up rather than attend once — a studio, a choir, a book group, a garden, a table of chess. Hand-researched: every record was checked against the organisation's own page on `lastVerified`, and none of them is sport, which has its own tab. `rhythm` is how often it runs (weekly, monthly, anytime, occasional); `commitment` is what it asks of you to start (dropin, book, term, member); `firstStep` says how to begin in the organisation's own terms. Read by the Regulars tab in js/app.js.",
+  "items": [
+    {
+      "id": "grande-chaumiere-atelier-libre",
+      "title": "Life drawing at the Académie de la Grande Chaumière",
+      "emoji": "✏️",
+      "type": "class",
+      "mode": "do",
+      "group": "make",
+      "zone": 15,
+      "coords": [
+        48.84346,
+        2.32073
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "art",
+        "learn"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Mon, Tue, Thu · 2–4.30pm",
+      "days": [
+        1,
+        2,
+        4
+      ],
+      "times": "Monday, Tuesday and Thursday, 2pm to 4.30pm, from Monday 5 October 2026",
+      "firstStep": "Just turn up from 5 October — no booking, no level",
+      "area": "Chemin du Montparnasse, 21 avenue du Maine (its temporary home)",
+      "priceNote": "Pay per session — rates on the Académie's site",
+      "indoor": true,
+      "url": "https://en.academiegrandechaumiere.com/",
+      "source": "Académie de la Grande Chaumière",
+      "lastVerified": "2026-09-28",
+      "why": "The studio where Modigliani, Miró and Lempicka drew is still run the way it was in 1904: a model on the stand, easels in a ring, and no teacher and no lesson. You arrive, you work, you leave. While it is away from its old address the afternoon sessions have moved to the Chemin du Montparnasse, the ivy-covered alley of artists' studios off the avenue du Maine.",
+      "goodFor": [
+        "solo",
+        "rainy",
+        "afternoon"
+      ],
+      "quality": 5,
+      "uniqueness": 5,
+      "hoursNote": "Monday, Tuesday and Thursday, 2pm to 4.30pm, from Monday 5 October 2026",
+      "durationMin": 150,
+      "priceLevel": 1,
+      "booking": false
+    },
+    {
+      "id": "some-voices-paris",
+      "title": "Some Voices, a choir with no audition",
+      "emoji": "🎶",
+      "type": "class",
+      "mode": "do",
+      "group": "sing",
+      "zone": 9,
+      "coords": [
+        48.87372,
+        2.33982
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "choir",
+        "music"
+      ],
+      "rhythm": "weekly",
+      "commitment": "term",
+      "cadence": "Wednesdays in the 9th · Thursdays in the 19th",
+      "days": [
+        3,
+        4
+      ],
+      "times": "Weekly rehearsals in three terms: September to December, January to April, May to July",
+      "firstStep": "First rehearsal free; join mid-term if there's space",
+      "area": "Paroisse Luthérienne de la Rédemption (Wednesdays) · Sainte-Claire-d'Assise, 19e (Thursdays)",
+      "priceNote": "£29 a month, 30 days' notice to stop",
+      "indoor": true,
+      "url": "https://somevoices.co.uk/paris",
+      "source": "Some Voices",
+      "lastVerified": "2026-09-28",
+      "why": "A London choir that crossed the Channel, and it works the same way here: no audition, no sheet music, and new arrangements of pop songs taught by ear. Each term has its own theme and ends in a performance. Pick the night that suits you — Wednesday in a Lutheran church in the 9th, or Thursday up in the 19th — and try the first rehearsal before you pay anything.",
+      "goodFor": [
+        "solo",
+        "socialize",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "Weekly rehearsals in three terms: September to December, January to April, May to July",
+      "durationMin": 120,
+      "priceLevel": 2,
+      "booking": "https://somevoices.co.uk/paris"
+    },
+    {
+      "id": "shake-that-swing",
+      "title": "Lindy hop with Shake That Swing",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "group": "move",
+      "zone": 11,
+      "coords": [
+        48.85932,
+        2.38096
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "dance"
+      ],
+      "rhythm": "weekly",
+      "commitment": "term",
+      "cadence": "Weekly classes, September to June",
+      "times": "32 weekly classes a year across nine studios, plus after-work socials and weekend jams",
+      "firstStep": "Start with the beginners' term, September to December (€160–190)",
+      "area": "Studio STS, 25 rue Pétion, and eight other studios across Paris",
+      "priceNote": "From €390 a year for an hour a week · beginners' term €160–190",
+      "indoor": true,
+      "url": "https://www.shakethatswing.com/tarifs-inscription/",
+      "source": "Shake That Swing",
+      "lastVerified": "2026-09-28",
+      "why": "Paris has around fifteen swing schools, and this is one of the biggest: lindy hop, charleston and solo jazz across seven levels, taught in studios from the 3rd to the 20th. The year's fee buys more than the class — forty-odd social evenings and weekend jams come with it, which is where the dancing actually happens. The beginners' term is the low-risk way to find out whether you like it.",
+      "goodFor": [
+        "couple",
+        "socialize",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "32 weekly classes a year across nine studios, plus after-work socials and weekend jams",
+      "durationMin": 75,
+      "priceLevel": 2,
+      "booking": "https://www.shakethatswing.com/tarifs-inscription/"
+    },
+    {
+      "id": "american-library-book-groups",
+      "title": "Book groups at the American Library in Paris",
+      "emoji": "📚",
+      "type": "class",
+      "mode": "do",
+      "group": "read",
+      "zone": 7,
+      "coords": [
+        48.8589,
+        2.29905
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "books"
+      ],
+      "rhythm": "monthly",
+      "commitment": "member",
+      "cadence": "Once a month, September to July",
+      "times": "Groups meet monthly at the library; new groups run for four months on a theme, a region or an author",
+      "firstStep": "Become a member, then apply for up to three groups online",
+      "area": "10 rue du Général Camou, near the Eiffel Tower",
+      "priceNote": "Library membership; the groups cost nothing on top",
+      "indoor": true,
+      "url": "https://americanlibraryinparis.org/book-groups/",
+      "source": "American Library in Paris",
+      "lastVerified": "2026-09-28",
+      "why": "The largest English-language lending library on the continent, a hundred thousand books and members from sixty countries, and a clutch of reading groups that meet in its rooms once a month. They fill up and keep waiting lists, and they ask you to come every time rather than dip in — which is the point. A standing monthly date with the same dozen readers.",
+      "goodFor": [
+        "solo",
+        "rainy",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "hoursNote": "Groups meet monthly at the library; new groups run for four months on a theme, a region or an author",
+      "durationMin": 90,
+      "priceLevel": 1,
+      "booking": "https://americanlibraryinparis.org/book-groups/"
+    },
+    {
+      "id": "shakespeare-and-company-readings",
+      "title": "Evening readings at Shakespeare and Company",
+      "emoji": "📖",
+      "type": "class",
+      "mode": "do",
+      "group": "read",
+      "zone": 5,
+      "coords": [
+        48.85257,
+        2.34711
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "books"
+      ],
+      "rhythm": "monthly",
+      "commitment": "dropin",
+      "cadence": "Author evenings through the season",
+      "times": "Dates and times on the events calendar; the shop sometimes closes early for them",
+      "firstStep": "Free and first come, first served — arrive early",
+      "area": "37 rue de la Bûcherie, across the river from Notre-Dame",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": true,
+      "url": "https://www.shakespeareandcompany.com/events",
+      "source": "Shakespeare and Company",
+      "lastVerified": "2026-09-28",
+      "why": "The English-language bookshop on the Left Bank has hosted writers since 1951, and its readings are still free and open to anybody who gets there in time. Places run out, so the regulars come early and browse first. Check the calendar, pick the authors you would cross town for, and it becomes a habit by the third one.",
+      "goodFor": [
+        "solo",
+        "couple",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 5,
+      "hoursNote": "Dates and times on the events calendar; the shop sometimes closes early for them",
+      "durationMin": 90,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "id": "cours-adultes-de-paris",
+      "title": "Cours d'Adultes de Paris — the city's evening classes",
+      "emoji": "🗣️",
+      "type": "class",
+      "mode": "do",
+      "group": "learn",
+      "zone": 4,
+      "coords": [
+        48.85643,
+        2.35253
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "language",
+        "course",
+        "learn"
+      ],
+      "rhythm": "weekly",
+      "commitment": "term",
+      "cadence": "Weekly, 28 September 2026 to 28 June 2027",
+      "times": "Annual or single-semester courses, mostly on weekday evenings, in schools across the city",
+      "firstStep": "Next sign-up window: 5–25 January 2027, for the spring semester",
+      "area": "Classrooms in every arrondissement",
+      "priceNote": "€75–280 a course",
+      "indoor": true,
+      "url": "https://www.paris.fr/en/pages/adult-classes-in-paris-36121",
+      "source": "Ville de Paris",
+      "lastVerified": "2026-09-28",
+      "why": "The city runs more than seven hundred adult courses at a fraction of private prices: eleven foreign languages, French for newcomers, sign language, and a long tail of arts, computing and trades. It is a real commitment — a set night a week for a semester or a year — which is exactly what makes it stick. Autumn places filled in September; the spring semester opens for sign-up in January.",
+      "goodFor": [
+        "solo",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "Annual or single-semester courses, mostly on weekday evenings, in schools across the city",
+      "durationMin": 120,
+      "priceLevel": 1,
+      "booking": "https://www.paris.fr/en/pages/adult-classes-in-paris-36121"
+    },
+    {
+      "id": "le-telescope-ivry",
+      "title": "Friday night at the Le Télescope astronomy club",
+      "emoji": "🔭",
+      "type": "class",
+      "mode": "do",
+      "group": "learn",
+      "zone": 13,
+      "coords": [
+        48.81141,
+        2.38458
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "science",
+        "nature"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Fridays from 9pm",
+      "days": [
+        5
+      ],
+      "times": "Every Friday from 9pm; telescopes on the terrace when the sky allows",
+      "firstStep": "Free, no booking — \"come as you are\"",
+      "area": "103 avenue Georges-Gosnat, Ivry-sur-Seine",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": false,
+      "weatherSensitive": true,
+      "url": "https://www.letelescope.fr/",
+      "source": "Club d'astronomie Le Télescope",
+      "lastVerified": "2026-09-28",
+      "why": "Just over the boundary from the 13th, an amateur club opens its roof terrace every Friday night and lets anybody look through its telescopes: planets, star clusters, and, through a camera-assisted scope, galaxies in colour. On a cloudy night the door is still open and the talk goes on inside. It is free, it needs no booking, and the members are very glad to see you.",
+      "goodFor": [
+        "evening",
+        "couple",
+        "free"
+      ],
+      "quality": 4,
+      "uniqueness": 5,
+      "hoursNote": "Every Friday from 9pm; telescopes on the terrace when the sky allows",
+      "durationMin": 120,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "id": "cinematheque-libre-pass",
+      "title": "The Cinémathèque française, on a Libre Pass",
+      "emoji": "🎞️",
+      "type": "class",
+      "mode": "do",
+      "group": "stage",
+      "zone": 12,
+      "coords": [
+        48.83729,
+        2.38264
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "film"
+      ],
+      "rhythm": "anytime",
+      "commitment": "member",
+      "cadence": "Screenings every day",
+      "times": "Daily screenings, talks and retrospectives; unlimited on the pass",
+      "firstStep": "Subscribe online — a twelve-month minimum, paid monthly",
+      "area": "51 rue de Bercy, in Frank Gehry's building by the Parc de Bercy",
+      "priceNote": "€11.90 a month · €10 under 26 · €19 for two",
+      "indoor": true,
+      "url": "https://www.cinematheque.fr/abonnement-libre-pass.html",
+      "source": "La Cinémathèque française",
+      "lastVerified": "2026-09-28",
+      "why": "One of the great film archives in the world, screening from it every day in a Frank Gehry building on the edge of Bercy. The Libre Pass turns it from an outing into a habit: every film, talk and exhibition for less than two tickets a month, so you start going to things you would never have paid for singly. The screens are back after the summer's renovation.",
+      "goodFor": [
+        "solo",
+        "couple",
+        "rainy",
+        "evening",
+        "afternoon"
+      ],
+      "quality": 5,
+      "uniqueness": 4,
+      "hoursNote": "Daily screenings, talks and retrospectives; unlimited on the pass",
+      "durationMin": 150,
+      "priceLevel": 1,
+      "booking": "https://www.cinematheque.fr/abonnement-libre-pass.html"
+    },
+    {
+      "id": "les-ceramistes-open-studio",
+      "title": "Pottery at Les Céramistes",
+      "emoji": "🏺",
+      "type": "class",
+      "mode": "do",
+      "group": "make",
+      "zone": 8,
+      "coords": [
+        48.88154,
+        2.32699
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "craft",
+        "learn"
+      ],
+      "rhythm": "anytime",
+      "commitment": "member",
+      "cadence": "Mon–Sat, 10am–10pm",
+      "hoursNote": "Monday to Saturday, 10am to 10pm",
+      "firstStep": "Beginners start with a weekly course or an initiation; open-studio slots come with a plan",
+      "area": "73 rue d'Amsterdam, by Saint-Lazare",
+      "priceNote": "Plans and course prices on the site",
+      "indoor": true,
+      "url": "https://lesceramistes.com/",
+      "source": "Les Céramistes",
+      "lastVerified": "2026-09-28",
+      "why": "A hundred square metres of wheels and kilns near Saint-Lazare, open twelve hours a day, six days a week. It suits both ends of the habit: weekly courses and short initiations for somebody who has never touched clay, and bookable open-studio time once you can throw on your own. The late closing means it fits after work.",
+      "goodFor": [
+        "solo",
+        "rainy",
+        "evening",
+        "afternoon"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "durationMin": 180,
+      "priceLevel": 2,
+      "booking": "https://lesceramistes.com/"
+    },
+    {
+      "id": "blitz-society",
+      "title": "Chess at Blitz Society",
+      "emoji": "♟️",
+      "type": "class",
+      "mode": "do",
+      "group": "gather",
+      "zone": 6,
+      "coords": [
+        48.85284,
+        2.33139
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "chess",
+        "games"
+      ],
+      "rhythm": "anytime",
+      "commitment": "dropin",
+      "cadence": "Evenings, with tournaments on the calendar",
+      "firstStep": "Walk in; a €5 chess fee buys you a board",
+      "area": "4 rue du Sabot, Saint-Germain-des-Prés",
+      "price": 5,
+      "priceNote": "€5 to play, drinks on top",
+      "indoor": true,
+      "url": "https://www.blitzsociety.fr/en",
+      "source": "Blitz Society",
+      "lastVerified": "2026-09-28",
+      "why": "A bar built around chess, a few streets from Saint-Germain-des-Prés, where the tables are boards and a beginner can sit across from somebody far better. There are tournaments and events on the calendar, but the regular thing is simply to come back on the same night each week and play whoever is there. A second, hidden room upstairs from a restaurant in the 1st takes the overflow.",
+      "goodFor": [
+        "couple",
+        "evening",
+        "socialize"
+      ],
+      "quality": 4,
+      "uniqueness": 5,
+      "durationMin": 120,
+      "priceLevel": 1,
+      "booking": false
+    },
+    {
+      "id": "luxembourg-chess-tables",
+      "title": "The chess tables in the Jardin du Luxembourg",
+      "emoji": "♞",
+      "type": "class",
+      "mode": "do",
+      "group": "gather",
+      "zone": 6,
+      "coords": [
+        48.84672,
+        2.33641
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "chess",
+        "games",
+        "free"
+      ],
+      "rhythm": "anytime",
+      "commitment": "dropin",
+      "cadence": "Daily, while the garden is open",
+      "hoursNote": "Garden hours — from about 8am until dusk, later in summer",
+      "firstStep": "Bring a set, or wait for a table and ask for a game",
+      "area": "The chess tables, in a corner of the garden",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": false,
+      "weatherSensitive": true,
+      "url": "https://64.place/directory-chess_places/entry/jardin-du-luxembourg/",
+      "source": "64.place chess directory · Sortir à Paris",
+      "lastVerified": "2026-09-28",
+      "why": "About ten boards painted onto tables in a corner of the garden, and on a dry weekend every one of them is taken by the same faces who were there last week. It is the most Parisian way to take up chess: sit down, watch a game, and wait to be asked. Nothing to join and nothing to pay.",
+      "goodFor": [
+        "solo",
+        "free",
+        "outdoor",
+        "afternoon"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "durationMin": 90,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "id": "jardin-nomade",
+      "title": "Jardin Nomade, a shared garden in the 11th",
+      "emoji": "🌱",
+      "type": "class",
+      "mode": "do",
+      "group": "grow",
+      "zone": 11,
+      "coords": [
+        48.85246,
+        2.37909
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "garden",
+        "nature",
+        "free"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Open Thursday and Saturday afternoons",
+      "days": [
+        4,
+        6
+      ],
+      "times": "Gardeners welcome visitors on Thursday and Saturday afternoons",
+      "firstStep": "Visit on an open afternoon; to garden, join the Quartier Saint-Bernard association",
+      "area": "Corner of rue Trousseau and rue Charles-Delescluze",
+      "price": 0,
+      "priceNote": "Free to visit · association membership to garden",
+      "indoor": false,
+      "weatherSensitive": true,
+      "url": "http://www.qsb11.org/nos-activites/le-jardin-partage/",
+      "source": "Association du Quartier Saint-Bernard",
+      "lastVerified": "2026-09-28",
+      "why": "Two hundred and eighty square metres of city land off the Faubourg Saint-Antoine, farmed since 2003 by some sixty neighbours in raised beds, with a compost heap, a tool shed and an insect hotel. It belongs to the city's Main Verte network, which obliges every shared garden to open to the public each week — so you can drop by, and if it takes, join. The association also runs jam-making, meals and reading afternoons in it.",
+      "goodFor": [
+        "solo",
+        "free",
+        "outdoor",
+        "afternoon"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "hoursNote": "Gardeners welcome visitors on Thursday and Saturday afternoons",
+      "durationMin": 90,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "id": "repair-cafe-paris-10",
+      "title": "Repair Café Paris 10e",
+      "emoji": "🔧",
+      "type": "class",
+      "mode": "do",
+      "group": "give",
+      "zone": 10,
+      "coords": [
+        48.87576,
+        2.35428
+      ],
+      "coordsFrom": "Nominatim",
+      "categories": [
+        "repair",
+        "volunteer",
+        "free"
+      ],
+      "rhythm": "monthly",
+      "commitment": "dropin",
+      "cadence": "Roughly once a month — dates on the calendar",
+      "firstStep": "Bring something broken, or offer to be one of the fixers",
+      "area": "Le Pari's des Faubourgs, 12 rue Léon-Schwartzenberg",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": true,
+      "url": "https://www.repaircafeparis.fr/rc-quartier/",
+      "source": "Repair Café Paris",
+      "lastVerified": "2026-09-28",
+      "why": "Volunteers with screwdrivers and soldering irons, a queue of lamps, toasters and torn coats, and the idea that you learn to fix things by watching somebody who can. Repair Café Paris runs sessions in most arrondissements — this is the 10th's, and the network's page lists the rest. Go once with a broken thing; go back as a fixer.",
+      "goodFor": [
+        "solo",
+        "free",
+        "afternoon"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "durationMin": 120,
+      "priceLevel": 0,
+      "booking": false
+    }
+  ]
+}
