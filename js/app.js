@@ -840,6 +840,10 @@ const App = (() => {
     ['never', '✕',  'Never show again']
   ];
 
+  /* Nobody "visits" a concert. Same rating, the words an event needs. */
+  const rateLabel = (item, v, t) =>
+    v === 'want' && (item.type === 'event' || item.type === 'exhibition') ? 'Save event' : t;
+
   function detail(item) {
     const r = Store.rating(item.id);
 
@@ -882,7 +886,7 @@ const App = (() => {
       </div>
       <div class="rate" role="group" aria-label="Rate ${esc(item.title)}">
         ${RATINGS.map(([v, e, t]) =>
-          `<button type="button" data-rate="${v}" title="${t}" aria-label="${t}" class="${r === v ? 'on' : ''}">${e}</button>`).join('')}
+          `<button type="button" data-rate="${v}" title="${rateLabel(item, v, t)}" aria-label="${rateLabel(item, v, t)}" class="${r === v ? 'on' : ''}">${e}</button>`).join('')}
       </div>
       <p class="credit">
         ${provenanceLine(item)}
@@ -2593,6 +2597,39 @@ const App = (() => {
   const EV_BUCKETS = ['Today', 'Tomorrow', 'Later this week', 'This weekend', 'Next week', 'Further ahead'];
 
   let EV_MODE = 'all';
+  let EV_BROWSE = 'recommended';
+  let EV_DATE = 'month';
+  let EV_LIMIT = 24;
+  /* Sections somebody asked to see whole. "4 of 9" with nothing to press
+     is a list that hides the other five. */
+  const EV_OPEN = new Set();
+
+  function evMatchesDate(e) {
+    if (EV_DATE === 'month') return true;
+    const days = EV_DATE === 'today' ? [TODAY_ISO]
+      : EV_DATE === 'tomorrow' ? [iso(addDays(TODAY, 1))]
+      : [weekend().satISO, weekend().sunISO];
+    return days.some(d => d >= TODAY_ISO && d >= e.i.start && d <= e.i.end && Rank.isOpenOn(e.i, d));
+  }
+
+  /* Two ways through the same month: the ranked shortlist, and every
+     record we hold, soonest first. The shortlist is ranked by quality,
+     distance and your ratings — "best first", the words the rest of the
+     site uses, rather than a promise of a personal feed it cannot keep. */
+  function evTools(count) {
+    return `<div class="event-tools">
+      <div class="event-switch" role="group" aria-label="How to list them">
+        ${[['recommended', 'Best first'], ['all', 'Everything']].map(([v, label]) =>
+          `<button type="button" data-evbrowse="${v}" aria-pressed="${EV_BROWSE === v}">${label}</button>`).join('')}
+      </div>
+      <span class="event-count" role="status">${count} ${count === 1 ? 'event' : 'events'}${EV_DATE === 'month' ? ' in the next 30 days' : ''}</span>
+      <div class="event-dates" role="group" aria-label="When to go">
+        ${[['month', 'Next 30 days'], ['today', 'Today'], ['tomorrow', 'Tomorrow'], ['weekend', 'This weekend']].map(([v, label]) =>
+          `<button type="button" data-evdate-button="${v}" aria-pressed="${EV_DATE === v}">${label}</button>`).join('')}
+      </div>
+    </div>`;
+  }
+
 
   function evPool() {
     const out = [];
@@ -2605,11 +2642,99 @@ const App = (() => {
     return out;
   }
 
-  /* The date goes first in the meta line, because on this tab it is the
-     first thing anybody asks. */
+  /* The hour, where the record states one. A hand-written record says
+     `startTime`; the Paris feed says it in French prose, and only a
+     one-day record's prose is safe to read — a run's lists several
+     dates, and picking the wrong one would put a time on the card that
+     is not true of the day it names. */
+  function evTime(i) {
+    if (i.startTime) return { from: i.startTime };
+    if (i.start !== i.end || typeof i.times !== 'string') return null;
+    const m = i.times.match(/\bde (\d{1,2})h(\d{2})?(?: à (\d{1,2})h(\d{2})?)?/);
+    if (!m) return null;
+    const hm = (h, mm) => `${h.padStart(2, '0')}:${mm || '00'}`;
+    return { from: hm(m[1], m[2]), to: m[3] ? hm(m[3], m[4]) : null };
+  }
+
+  /* Price is a claim, as on every other card: stated, or said to be
+     unknown — never assumed to be free. */
+  const evPrice = i => i.priceNote || priceText(i) || 'Price not confirmed';
+
+  /* One way in, named for what it actually does. A booking link on a
+     free event is a registration; on a paid one it sells tickets. With
+     no booking link the honest label is the page the record came from. */
+  function evAction(i) {
+    const ok = u => typeof u === 'string' && /^https?:\/\//i.test(u);
+    if (ok(i.booking)) return [i.booking, i.price === 0 ? 'Reserve a place' : 'Get tickets'];
+    if (ok(i.url)) return [i.url, 'Event page'];
+    return null;
+  }
+
+  /* A photo card, because events are the one thing here that are
+     photogenic. Without a photograph it is the same tinted tile every
+     other card draws — clearly not a picture. A photograph of the street
+     rather than the event says so on the picture itself. */
   function evRow(e, lead) {
-    return row(e.i).replace('<p class="row-meta">',
-      `<p class="row-meta"><b class="pick-label">${esc(lead)}</b> · `);
+    const i = e.i;
+    const saved = Store.rating(i.id) === 'want';
+    const act = evAction(i);
+    const t = evTime(i);
+    const pic = i.image
+      ? `${img(i, 'card')}${i.imageKind === 'context' ? '<span class="event-photo-label">Photo of the area</span>' : ''}`
+      : `<span class="ph-mark">${markFor(i)}</span>`;
+    return `<article class="card event-card ${tierCls(i)} ${Store.isDone(i.id) ? 'done' : ''}" data-id="${esc(i.id)}" data-evday="${e.d}">
+      <div class="shot event-shot ${i.image ? '' : 'ph'}" data-kind="${esc(i.type || '')}">
+        ${pic}
+        <button class="event-save" type="button" data-evsave aria-label="${saved ? 'Unsave' : 'Save'} ${esc(i.title)}" aria-pressed="${saved}" title="${saved ? 'Saved' : 'Save event'}">
+          <svg width="18" height="21" viewBox="0 0 18 21" fill="none" aria-hidden="true"><path d="M3 2h12v17l-6-4-6 4V2Z" stroke="currentColor" stroke-width="1.3"/></svg>
+        </button>
+      </div>
+      <p class="kicker"><b>${esc(lead)}${t && !e.run ? ` · ${t.from}${t.to ? `–${t.to}` : ''}` : ''}</b>${i.minutesFromHome != null ? ` · ${i.minutesFromHome} min` : ''}</p>
+      <h3 class="card-title">${esc(i.title)}</h3>
+      <p class="event-place">${[i.area ? esc(i.area) : (i.zone ? City.zone.tile(i.zone) : ''), esc(evPrice(i))].filter(Boolean).join(' · ')}</p>
+      <p class="why">${esc(blurb(i))}</p>
+      <div class="event-actions">
+        ${act ? `<a class="event-primary" href="${esc(act[0])}" target="_blank" rel="noopener">${act[1]} <span aria-hidden="true">↗</span></a>` : ''}
+        <button type="button" data-evcal>Add to calendar</button>
+        <button type="button" data-evdetails aria-expanded="false">Details</button>
+      </div>
+      ${detail(i)}
+    </article>`;
+  }
+
+  /* The next date it is on, as a calendar file made in the browser. The
+     time is the city's wall clock, so it carries the city's zone and
+     lands right wherever the phone happens to be; without a stated time
+     it is an all-day entry rather than an invented hour. */
+  function evCalendar(i, d) {
+    const day = iso(addDays(TODAY, d)).replace(/-/g, '');
+    const t = evTime(i);
+    const tz = City.weather.tz;
+    const clean = s => String(s || '').replace(/[\\;,]/g, m => '\\' + m).replace(/\n/g, ' ');
+    let when;
+    if (t) {
+      const hhmm = x => x.replace(':', '') + '00';
+      const [h, m] = t.from.split(':').map(Number);
+      const end = t.to || clock(h * 60 + m + (i.durationMin || 120));
+      when = [`DTSTART;TZID=${tz}:${day}T${hhmm(t.from)}`, `DTEND;TZID=${tz}:${day}T${hhmm(end)}`];
+    } else {
+      const next = iso(addDays(TODAY, d + 1)).replace(/-/g, '');
+      when = [`DTSTART;VALUE=DATE:${day}`, `DTEND;VALUE=DATE:${next}`];
+    }
+    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Allez//Events//EN', 'BEGIN:VEVENT',
+      `UID:${clean(i.id)}-${day}@allez.city`,
+      `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
+      ...when,
+      `SUMMARY:${clean(i.title)}`,
+      i.area ? `LOCATION:${clean(i.area)}` : '',
+      i.url ? `URL:${i.url}` : '',
+      `DESCRIPTION:${clean([i.times, i.url].filter(Boolean).join(' — '))}`,
+      'END:VEVENT', 'END:VCALENDAR'].filter(Boolean).join('\r\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+    a.download = `${(i.title || 'event').replace(/[^\w]+/g, '-').slice(0, 60)}.ics`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
   function evWhen(e) {
@@ -2631,6 +2756,7 @@ const App = (() => {
      left instead, since that is the date that matters for them. */
   function evSection(title, entries, cap, per) {
     if (!entries.length) return '';
+    if (EV_OPEN.has(title)) { cap = Infinity; per = 0; }
     const ranked = Rank.rank(entries.map(e => e.i), CTX);
     const byItem = new Map(entries.map(e => [e.i, e]));
     const seen = {};
@@ -2644,16 +2770,15 @@ const App = (() => {
     }
     const when = e => e.run && e.i.start <= TODAY_ISO ? e.i.end : iso(addDays(TODAY, e.d));
     pick.sort((a, b) => when(a).localeCompare(when(b)));
-    const note = entries.length > pick.length
-      ? `${pick.length} of ${entries.length}, best first — the rest are further or less known`
-      : null;
-    return stripHead(title, note)
-      + `<div class="list">${pick.map(e => evRow(e, evWhen(e))).join('')}</div>`;
+    const more = entries.length > pick.length;
+    return stripHead(title, more ? `${pick.length} of ${entries.length}, best first` : null)
+      + `<div class="event-grid">${pick.map(e => evRow(e, evWhen(e))).join('')}</div>`
+      + (more ? `<button type="button" class="event-more" data-evsection="${esc(title)}">See all ${entries.length}</button>` : '');
   }
 
   function eventsLede() {
     const here = Loc.displayName(Loc.active());
-    return `What is on once in the next month, and the runs still worth catching. Best first, nearest breaking ties, from ${here}.`;
+    return `What is on once in the next month, and the runs still worth catching, from ${here}.`;
   }
 
   /* Where the evenings are, when we may not list them. Luma's terms let
@@ -2674,7 +2799,7 @@ const App = (() => {
   function renderEvents() {
     const pool = evPool();
     if (!pool.length && !City.lumaPage) {
-      return `<p class="empty">Nothing dated in the next month yet. <code>scripts/events-city.mjs</code> fills this.</p>`;
+      return `<p class="empty">Nothing dated in the next month yet.</p>`;
     }
 
     /* Only the groups that have something, for the reason Regulars
@@ -2695,16 +2820,27 @@ const App = (() => {
     </div>`;
 
     const all = EV_MODE === 'all';
-    const mine = all ? pool : pool.filter(e => e.g === EV_MODE);
+    const mine = (all ? pool : pool.filter(e => e.g === EV_MODE)).filter(evMatchesDate);
+    const controls = modeBar + evTools(mine.length);
     if (!mine.length) {
-      const why = EV_MODE === 'tech'
+      const why = EV_DATE !== 'month' ? 'Nothing on those days yet — the next 30 days has more.' : EV_MODE === 'tech'
         ? 'No tech conferences in the next month from the two open lists we can show, confs.tech and developers.events.'
         : 'Nothing dated in the next month yet.';
-      return modeBar + `<p class="empty">${why}</p>` + lumaOut();
+      return controls + `<p class="empty">${why}</p>` + lumaOut();
     }
     /* The door goes last: what we can vouch for first, then where to look
        for more. Only on the two views where evenings belong. */
-    return modeBar + (EV_MODE === 'see' ? eventsExhibitions(mine) : eventsByDay(mine, all))
+    if (EV_BROWSE === 'all') {
+      const ordered = [...mine].sort((a, b) => a.d - b.d
+        || (a.i.minutesFromHome ?? Infinity) - (b.i.minutesFromHome ?? Infinity)
+        || a.i.title.localeCompare(b.i.title));
+      const shown = ordered.slice(0, EV_LIMIT);
+      return controls + stripHead('Everything', `${shown.length} of ${mine.length} · soonest first, nearest breaking ties`)
+        + `<div class="event-grid">${shown.map(e => evRow(e, evWhen(e))).join('')}</div>`
+        + (shown.length < mine.length ? `<button type="button" class="event-more" data-evmore>Show ${Math.min(24, mine.length - shown.length)} more</button>` : '')
+        + lumaOut();
+    }
+    return controls + (EV_MODE === 'see' ? eventsExhibitions(mine) : eventsByDay(mine, all))
       + (all || EV_MODE === 'tech' ? lumaOut() : '');
   }
 
@@ -2775,6 +2911,10 @@ const App = (() => {
      walks that mention singing — until the researched choirs arrived. */
 
   const groupOf = i => {
+    /* A researched record names its group. A book group run in Italian
+       is about reading and about a language, and the writer knows which
+       of the two somebody would look for it under. */
+    if (i.group && REG_GROUPS.some(g => g[0] === i.group)) return i.group;
     const cats = i.categories || [];
     const hit = REG_GROUPS.find(([, , , , subjects]) => subjects.some(s => cats.includes(s)));
     return hit ? hit[0] : 'other';
@@ -2890,10 +3030,6 @@ const App = (() => {
 
     const groups = liveGroups(pool);
     if (!groups.some(([k]) => k === REG_MODE)) REG_MODE = 'all';
-    /* A researched record names its group. A book group run in Italian
-       is about reading and about a language, and the writer knows which
-       of the two somebody would look for it under. */
-    if (i.group && REG_GROUPS.some(g => g[0] === i.group)) return i.group;
 
     const tabs = [['all', '🔁', 'Near you', 'a bit of everything'], ...groups];
     const modeBar = `<div class="mode mode-wide" id="reg-mode">
@@ -2937,6 +3073,7 @@ const App = (() => {
   function regularsGroup(key) {
     const [, , label] = REG_GROUPS.find(g => g[0] === key);
     const here = Loc.displayName(Loc.active());
+    const mine = i => isRegular(i) && groupOf(i) === key;
 
     /* Deliberately a wide reach and no cap. Somebody who has opened
        "Move" has already said what they want, and the honest answer to
@@ -2996,7 +3133,6 @@ const App = (() => {
         ['The walk', f.walk], ['Hidden gem', f.hidden]
       ].filter(([, v]) => v);
 
-    const mine = i => isRegular(i) && groupOf(i) === key;
       /* The prose above is written once and stays true; this is retrieved
          from the map every load, so the dossier for an arrondissement
          nobody has written much about still names real places in it. */
@@ -3546,8 +3682,47 @@ const App = (() => {
     document.addEventListener('click', e => {
       const b = e.target.closest('[data-evmode]'); if (!b) return;
       EV_MODE = b.dataset.evmode;
+      EV_LIMIT = 24;
+      EV_OPEN.clear();
       render();
       window.scrollTo({ top: $('#main').offsetTop - 60, behavior: 'smooth' });
+    });
+
+    document.addEventListener('click', e => {
+      const date = e.target.closest('[data-evdate-button]');
+      if (date) { EV_DATE = date.dataset.evdateButton; EV_LIMIT = 24; EV_OPEN.clear(); render(); return; }
+      const browse = e.target.closest('[data-evbrowse]');
+      if (browse) { EV_BROWSE = browse.dataset.evbrowse; EV_LIMIT = 24; render(); return; }
+      if (e.target.closest('[data-evmore]')) { EV_LIMIT += 24; render(); return; }
+      const section = e.target.closest('[data-evsection]');
+      if (section) { EV_OPEN.add(section.dataset.evsection); render(); return; }
+      const cal = e.target.closest('[data-evcal]');
+      if (cal) {
+        const c = cal.closest('[data-id]');
+        const item = ALL.find(x => x.id === c.dataset.id);
+        if (item) evCalendar(item, Number(c.dataset.evday) || 0);
+        return;
+      }
+      const details = e.target.closest('[data-evdetails]');
+      if (details) {
+        const open = details.closest('[data-id]').classList.toggle('open');
+        details.setAttribute('aria-expanded', String(open));
+        details.textContent = open ? 'Less' : 'Details';
+        return;
+      }
+      const save = e.target.closest('[data-evsave]');
+      if (save) {
+        const row = save.closest('[data-id]');
+        const rating = Store.setRating(row.dataset.id, 'want');
+        save.setAttribute('aria-pressed', String(rating === 'want'));
+        save.title = rating === 'want' ? 'Saved' : 'Save event';
+        save.setAttribute('aria-label', `${rating === 'want' ? 'Unsave' : 'Save'} ${row.querySelector('.card-title').textContent}`);
+        row.classList.toggle('done', Store.isDone(row.dataset.id));
+        row.querySelectorAll('[data-rate]').forEach(b => b.classList.toggle('on', b.dataset.rate === rating));
+        buildContext();
+        invalidate();
+        toast(rating === 'want' ? 'Saved to your list.' : 'Removed from your list.');
+      }
     });
 
     // Regulars: subsections, same component as Eat's
@@ -3578,17 +3753,23 @@ const App = (() => {
     document.addEventListener('click', e => {
       const r = e.target.closest('.row'); if (!r) return;
       if (e.target.closest('a, button')) return;
-      r.classList.toggle('open');
+      const open = r.classList.toggle('open');
+      const toggle = r.querySelector('[data-evdetails]');
+      if (toggle) { toggle.setAttribute('aria-expanded', String(open)); toggle.textContent = open ? 'Less' : 'Details'; }
     });
 
     // ratings
     document.addEventListener('click', e => {
       const b = e.target.closest('[data-rate]'); if (!b) return;
-      const c = b.closest('.card');
+      const c = b.closest('[data-id]');
+      if (!c) return;
       const id = c.dataset.id;
       const now = Store.setRating(id, b.dataset.rate);
       c.querySelectorAll('[data-rate]').forEach(x => x.classList.toggle('on', x.dataset.rate === now));
       c.classList.toggle('done', Store.isDone(id));
+      const save = c.querySelector('[data-evsave]');
+      if (save) { save.title = now === 'want' ? 'Saved' : 'Save event'; save.setAttribute('aria-pressed', String(now === 'want')); save.setAttribute('aria-label', `${now === 'want' ? 'Unsave' : 'Save'} ${c.querySelector('.card-title').textContent}`); }
+      invalidate();
       toast({ want: 'Saved to your list.', loved: 'Noted — more like this.', good: 'Noted.',
               meh: 'Fewer like this.', never: 'Hidden from now on.' }[now] || 'Cleared.');
       buildContext();

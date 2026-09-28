@@ -411,6 +411,34 @@ edge so that reads as "more this way" rather than as clipped text.
 Free, For two and Hidden are *filters*, not places, and live in the filter row.
 Quests and Your list are utilities, kept small.
 
+### Events
+
+Two ways through the same month: **Best first**, the ranked shortlist in
+date sections, and **Everything**, every record we hold, soonest first. A
+section that shows 4 of 71 says so and has a *See all 71* under it; a list
+that hides the rest with nothing to press is not a shortlist. Neither view
+promises a personal feed: the ranking is quality, distance and your own
+ratings, and it says "best first" like every other tab.
+
+Every card answers what somebody needs in order to go, without opening it:
+
+- **When**: the day, and the hour where the record states one. The Paris
+  feed gives the hour in French prose, and it is read only for one-day
+  records, because a run's prose lists several dates.
+- **Where and what it costs**: a missing price reads *Price not
+  confirmed*, never *Free*, for the reason `priceText` gives.
+- **One way in**, named for what it does: *Get tickets* or *Reserve a
+  place* when there is a booking link (paid or free), *Event page*
+  otherwise. Then **Add to calendar**, a file made in the browser for the
+  next date it is on. Its time is in the city's own zone, and it is an
+  all-day entry when no time is stated.
+- **Save**, which is the 📍 rating under another name. Nobody "visits" a
+  concert, so on events it reads *Save event*.
+
+With no photograph, a card gets the same tinted tile as every other card.
+A photograph of the street rather than the event is labelled *Photo of the
+area* on the picture itself.
+
 ### Regulars
 
 The other seven answer "what shall we do?" — once, today, this weekend.
