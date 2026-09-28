@@ -805,6 +805,14 @@ picture { display: contents; }
 /* Long transit strings in uppercase are unreadable — keep them as written. */
 .trip-meta { font-size: .82rem; color: var(--faint); margin: 0 0 .7rem; line-height: 1.5; }
 .trip-why { font-size: .93rem; line-height: 1.65; color: var(--soft); margin: 0 0 .8rem; }
+/* The day as a sequence — the same rail the route cards use, a touch
+   tighter because it sits under a paragraph rather than being the card. */
+.trip-plan { margin: 0 0 .8rem; }
+.trip-plan li { font-size: .82rem; padding: .22rem 0 .22rem .9rem; }
+.trip-plan li::before { top: .8rem; }
+.trip-plan .e { margin-right: .15rem; }
+.trip-season { font-size: .8rem; line-height: 1.55; color: var(--faint); margin: 0 0 .8rem; }
+.trip-season b { color: var(--soft); font-weight: 600; }
 
 /* ---------- shared small bits ---------- */
 

@@ -41,7 +41,7 @@ const { all, discovered } = Rec.build(D, TODAY);
    judged on what they are — none of them has a door or opening hours. */
 const vouched = [...all, ...discovered].filter(i => ['personal', 'editorial'].includes(i.provenance));
 const DOORS = new Set(['cafe', 'bakery', 'restaurant', 'deli', 'dessert', 'market', 'bar', 'jazz',
-                       'comedy', 'venue', 'club', 'nightlife', 'museum', 'gallery', 'books', 'shop', 'culture']);
+                       'comedy', 'venue', 'club', 'latenight', 'nightlife', 'museum', 'gallery', 'books', 'shop', 'culture']);
 const hasDoor = i => DOORS.has(i.type);
 
 const FIELDS = [
