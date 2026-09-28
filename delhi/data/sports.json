@@ -1,5 +1,533 @@
 {
-  "generated": "2026-09-14",
-  "note": "Hand-written. Empty.",
-  "items": []
+  "generated": "2026-09-28",
+  "note": "Hand-written. Play is what you can do — courts, a climbing wall, golf and dawn runs; Trails are the ridge forests and a cycle ride through Old Delhi; Watch is where the big fixtures happen. Researched, not visited. Delhi's outdoor season is October to March; the summer is for dawn only.",
+  "items": [
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening",
+        "free",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "run-lodhi-garden",
+      "title": "The Lodhi Garden loop",
+      "emoji": "🏃",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.5963,
+        77.22155
+      ],
+      "coordsFrom": "osm way/359512682 (Nominatim)",
+      "area": "Lodhi Garden, Lodhi Road · about 2.5 km loop · flat",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 40,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 2.5,
+      "startTime": "06:30",
+      "hours": "sunrise-sunset",
+      "hoursFrom": "NDMC — open from dawn into the evening",
+      "url": "https://www.ndmc.gov.in/",
+      "source": "NDMC",
+      "why": "The loop Delhi runs at dawn: about two and a half kilometres of path round a garden laid out among fifteenth-century tombs, past the Bara Gumbad dome and Sikandar Lodi's tomb, with retired judges walking fast and the laughter club laughing. Run it three times before breakfast, then walk to Lodhi Colony's cafés for coffee.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Lodhi_Gardens_on_a_sunny_day.jpg/1280px-Lodhi_Gardens_on_a_sunny_day.jpg",
+      "imageSubject": "Lodhi Gardens",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "run-nehru-park",
+      "title": "Nehru Park",
+      "emoji": "🏃",
+      "zone": "chanakyapuri",
+      "coords": [
+        28.59286,
+        77.19405
+      ],
+      "coordsFrom": "osm way/1238152531 (Nominatim)",
+      "area": "Chanakyapuri · loops of 1 to 3 km on soft paths",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 40,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 3,
+      "hours": "sunrise-sunset",
+      "hoursFrom": "NDMC — open from dawn",
+      "url": "https://www.ndmc.gov.in/",
+      "source": "NDMC",
+      "why": "Eighty acres of lawn and trees in the diplomatic enclave, with soft paths that make it the kindest place in Delhi to run on your knees. It is quieter than Lodhi Garden. Park on Vinay Marg and do the outer loop.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Lenin_nehru_park_viplove.jpg/1280px-Lenin_nehru_park_viplove.jpg",
+      "imageSubject": "Nehru Park",
+      "imageKind": "subject",
+      "imageCredit": "Viplovecomm · CC BY-SA 3.0"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "climbing"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "imf-climbing-wall",
+      "title": "The IMF climbing wall",
+      "emoji": "🧗",
+      "zone": "moti-bagh",
+      "coords": [
+        28.58549,
+        77.17803
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Indian Mountaineering Foundation, Benito Juarez Marg",
+      "price": 300,
+      "priceNote": "₹300 a session",
+      "durationMin": 120,
+      "intent": [
+        "try",
+        "learn"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Tuesday to Sunday in two sessions: 8am–noon and 3–7pm from October to March; 6:30–10:30am and 5–9pm from April",
+      "url": "https://www.indmount.org/IMF/climbingwalls",
+      "source": "Indian Mountaineering Foundation",
+      "why": "The national mountaineering body's outdoor climbing walls on the ridge near Anand Niketan, open to anyone for ₹300 a session, with harnesses, ropes and instructors who will belay you on your first go. Four walls, for beginners to strong climbers. It is the cheapest good climbing in any city on this site.",
+      "labels": [
+        "hiddengem"
+      ],
+      "priceLevel": 4,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Climbing_Wall%2C_Indian_Mountaineering_Federation_center%2C_New_Delhi.jpg/1280px-Climbing_Wall%2C_Indian_Mountaineering_Federation_center%2C_New_Delhi.jpg",
+      "imageSubject": "The IMF climbing wall",
+      "imageKind": "subject",
+      "imageCredit": "Pulakit Singh · CC BY-SA 4.0"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "swim",
+        "tennis"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "siri-fort-pay-play",
+      "title": "Siri Fort Sports Complex",
+      "emoji": "🎾",
+      "zone": "shahpur-jat",
+      "coords": [
+        28.55182,
+        77.21918
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "August Kranti Marg, next to the Siri Fort walls",
+      "priceNote": "Pay-and-play day passes; members pay less",
+      "durationMin": 120,
+      "intent": [
+        "casual",
+        "compete",
+        "learn"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Early morning to late evening — facilities keep their own session times",
+      "url": "https://ddasports.com/SiriFort/index.html",
+      "source": "Delhi Development Authority",
+      "why": "The city's big public sports complex: a fifty-metre pool, clay and hard tennis courts, badminton, squash, a gym, a golf driving range and a running track, run by the DDA. You can buy a day's pay-and-play pass rather than join. The swimming is the best value in South Delhi from April to October.",
+      "labels": [
+        "cheap"
+      ],
+      "booking": false,
+      "priceLevel": 1,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Siri_Fort_wall_at_Panchsheel_Park.jpg",
+      "imageSubject": "Siri Fort",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "golf"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "qutab-golf-course",
+      "title": "Qutab Golf Course",
+      "emoji": "⛳",
+      "zone": "lado-sarai",
+      "coords": [
+        28.52616,
+        77.19958
+      ],
+      "coordsFrom": "osm relation/8801603 (Nominatim)",
+      "area": "Press Enclave Road, Lado Sarai",
+      "price": 1100,
+      "priceNote": "₹1,100 for nine holes on weekdays; more at weekends",
+      "durationMin": 150,
+      "intent": [
+        "casual",
+        "learn"
+      ],
+      "difficulty": "intermediate",
+      "hoursNote": "Tee times from sunrise — book with the course",
+      "url": "https://qutabgolfcourse.in/green-fee/",
+      "source": "DDA Qutab Golf Course",
+      "why": "A public course run by the DDA, with the Qutub Minar standing over the fairways, the most famous tower in Delhi as your line on the tee. Anyone can pay a green fee, and there is a range and a coaching academy. Play nine holes at dawn in winter, when the light comes through the haze.",
+      "labels": [],
+      "priceLevel": 4,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Qutub_Minar_in_Delhi_03-2016.jpg/1280px-Qutub_Minar_in_Delhi_03-2016.jpg",
+      "imageSubject": "Qutb Minar",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cycling",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "ride-delhi-by-cycle",
+      "title": "Old Delhi at dawn by bicycle",
+      "emoji": "🚲",
+      "coords": [
+        28.64126,
+        77.23605
+      ],
+      "coordsFrom": "osm node/938409465 (Nominatim)",
+      "area": "From Delite Cinema, Asaf Ali Road · about 4 hours with breakfast",
+      "price": 2200,
+      "priceNote": "₹2,200 with breakfast",
+      "durationMin": 240,
+      "bookAhead": true,
+      "startTime": "06:30",
+      "hoursNote": "Mornings at 6:30 — book ahead",
+      "url": "https://www.delhibycycle.com/",
+      "booking": "https://www.delhibycycle.com/",
+      "source": "DelhiByCycle",
+      "why": "The only way to see Shahjahanabad without being crushed by it: on a bicycle at half past six, before the traffic, through the lanes of Old Delhi as the markets open, the spice sellers haul sacks and the chai is on. DelhiByCycle, the first cycle-tour company in India, runs it with breakfast in the old city. It is four hours and worth the alarm.",
+      "labels": [
+        "dontmiss",
+        "bookahead"
+      ],
+      "priceLevel": 4,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Chandni_Chowk%2C_2008_%2810%29.JPG/1280px-Chandni_Chowk%2C_2008_%2810%29.JPG",
+      "imageSubject": "Chandni Chowk",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "free",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "hike-sanjay-van",
+      "title": "Sanjay Van",
+      "emoji": "🌳",
+      "zone": "mehrauli",
+      "coords": [
+        28.53249,
+        77.18058
+      ],
+      "coordsFrom": "osm relation/3760983 (Nominatim)",
+      "area": "Mehrauli · trails through ridge forest and ruined walls",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 90,
+      "hours": "sunrise-sunset",
+      "hoursFrom": "DDA — city forest, open daylight hours",
+      "url": "https://dda.gov.in/",
+      "source": "DDA; Delhi Ridge",
+      "why": "Hundreds of acres of scrub forest on the southern ridge, where the walls of Qila Rai Pithora, Delhi's twelfth-century city, run through the trees and peacocks call from the ruins. It is the wildest walk inside the city. Go at dawn with somebody else, stay on the main trails, and look for nilgai.",
+      "labels": [
+        "free",
+        "hiddengem"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Sanjay_Van_December_2025_18.jpg",
+      "imageSubject": "Sanjay Van",
+      "imageKind": "subject",
+      "imageCredit": "Ramanujam Meganathan · CC0"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "free",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "hike-aravalli-biodiversity-park",
+      "title": "Aravalli Biodiversity Park",
+      "emoji": "🦚",
+      "zone": "sector-24",
+      "coords": [
+        28.49122,
+        77.10537
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "MG Road, Gurugram · loops of 2 to 7 km",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 120,
+      "hours": "sunrise-sunset",
+      "hoursFrom": "Municipal Corporation of Gurugram",
+      "url": "https://www.iamgurgaon.org/",
+      "source": "I Am Gurgaon; Municipal Corporation of Gurugram",
+      "why": "A disused mine on the edge of Gurugram that citizens and ecologists turned back into Aravalli forest, planted with native trees, now home to birds and jackals. Its trails run between the towers of Cyber City and the hills. In 2022 it became India's first 'other effective conservation measure' site. Walk it on a winter morning.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Peacock_in_its_habitat.jpg",
+      "imageSubject": "Aravalli Biodiversity Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "hike-asola-bhatti",
+      "title": "Asola Bhatti and Neeli Jheel",
+      "emoji": "💧",
+      "coords": [
+        28.4746,
+        77.23015
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Asola Bhatti Wildlife Sanctuary, off the Mehrauli–Faridabad road",
+      "price": 0,
+      "priceNote": "Free or a small fee",
+      "durationMin": 150,
+      "hours": "sunrise-sunset",
+      "hoursFrom": "Delhi Forest Department",
+      "url": "https://forest.delhi.gov.in/",
+      "source": "Delhi Forest Department",
+      "why": "Delhi's wildlife sanctuary on the southern ridge, where flooded quarries became blue lakes: Neeli Jheel, the blue lake, is the walk to do, down through thorn forest to the water. Leopards have been recorded on camera traps. Go early in the cold months, and take water.",
+      "labels": [],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "zone": "asola",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/The_bank_protruding_into_the_Death_Valley_lake_%2819705915599%29.jpg/1280px-The_bank_protruding_into_the_Death_Valley_lake_%2819705915599%29.jpg",
+      "imageSubject": "Asola Bhatti Wildlife Sanctuary",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cricket"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "watch-arun-jaitley",
+      "title": "Cricket at the Arun Jaitley Stadium",
+      "emoji": "🏏",
+      "coords": [
+        28.6377,
+        77.24311
+      ],
+      "coordsFrom": "osm way/44195469 (Nominatim)",
+      "area": "Arun Jaitley Stadium, Bahadur Shah Zafar Marg",
+      "priceNote": "Tickets from a few hundred rupees",
+      "durationMin": 240,
+      "hoursNote": "Delhi Capitals' IPL home games March to May, and India's international matches when Delhi is given one",
+      "url": "https://www.iplt20.com/teams/delhi-capitals/schedule",
+      "source": "BCCI; IPL",
+      "why": "Delhi's cricket ground, formerly the Feroz Shah Kotla, built beside the ruins of a fourteenth-century citadel. The Delhi Capitals play the IPL here in spring, and the noise under the lights is the reason to go. India plays internationals here when the BCCI gives Delhi one. Take the metro to Delhi Gate.",
+      "labels": [],
+      "booking": false,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Arun_Jaitley_Stadium_during_World_Cup_2023.jpg/1280px-Arun_Jaitley_Stadium_during_World_Cup_2023.jpg",
+      "imageSubject": "Arun Jaitley Cricket Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "athletics",
+        "football"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "watch-jln-stadium",
+      "title": "Jawaharlal Nehru Stadium",
+      "emoji": "🏟️",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.58338,
+        77.23354
+      ],
+      "coordsFrom": "osm way/44278129 (Nominatim)",
+      "area": "Jawaharlal Nehru Stadium, Lodhi Road",
+      "price": 0,
+      "priceNote": "Free to watch the marathon",
+      "durationMin": 180,
+      "hoursNote": "Athletics, football and the Delhi Half Marathon each October — the schedule is the timetable",
+      "url": "https://vedantadelhihalfmarathon.procam.in/",
+      "source": "Sports Authority of India; Procam",
+      "why": "The 1982 Asian Games stadium, rebuilt for the 2010 Commonwealth Games, and the start and finish of the Delhi Half Marathon every October. Watch the elite field finish on the track, or line the course on Lodhi Road with the crowd.",
+      "labels": [],
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Jawaharlal_Nehru_Stadium_CWG_opening_ceremony.jpg/1280px-Jawaharlal_Nehru_Stadium_CWG_opening_ceremony.jpg",
+      "imageSubject": "Jawaharlal Nehru Stadium, Delhi",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

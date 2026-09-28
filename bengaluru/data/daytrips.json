@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24",
+  "generated": "2026-09-28",
   "note": "Driving times are off-peak from Kodihalli and only a guide: leave before seven or the city takes the first hour. The nearer trips are day trips; Coorg, Chikmagalur and Hampi are weekends. Anything that needs a booking says so. Researched, not yet done — rate them as you go.",
   "items": [
     {
@@ -7,7 +7,7 @@
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "nandi-hills",
       "title": "Nandi Hills",
       "emoji": "🌄",
@@ -36,14 +36,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Sunrise_at_Nandi_Hills.jpg/1280px-Sunrise_at_Nandi_Hills.jpg",
       "imageSubject": "Nandi Hills, India",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🌌",
+          "text": "Leave the city by 4:30am"
+        },
+        {
+          "emoji": "🌄",
+          "text": "At the gate for six, then up to Tipu's Drop for sunrise above the cloud"
+        },
+        {
+          "emoji": "🛕",
+          "text": "Bhoga Nandeeshwara temple at the foot of the hill"
+        },
+        {
+          "emoji": "🍳",
+          "text": "Breakfast on the way back"
+        }
+      ],
+      "season": "All year; the cloud is most reliable from October to February. Weekdays are far quieter."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "mysuru",
       "title": "Mysuru",
       "emoji": "👑",
@@ -73,14 +92,41 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Mysore_Palace_Morning.jpg/1280px-Mysore_Palace_Morning.jpg",
       "imageSubject": "Mysore Palace",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "An early train or the expressway"
+        },
+        {
+          "emoji": "🏰",
+          "text": "Mysuru Palace"
+        },
+        {
+          "emoji": "🌺",
+          "text": "Devaraja Market for flowers and sandalwood"
+        },
+        {
+          "emoji": "🍬",
+          "text": "Mysore pak at Guru Sweet Mart"
+        },
+        {
+          "emoji": "⛰️",
+          "text": "Chamundi Hills for the temple and the view"
+        },
+        {
+          "emoji": "💡",
+          "text": "Back at the palace for the illumination at seven, on Sundays and holidays"
+        }
+      ],
+      "season": "October for Dasara, when the palace is lit every night; otherwise October to February."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "srirangapatna",
       "title": "Srirangapatna & Ranganathittu",
       "emoji": "🏰",
@@ -108,14 +154,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Spot-billed_Pelican_Rising_Flight_Ranganathittu_Feb24_D72_26266.jpg/1280px-Spot-billed_Pelican_Rising_Flight_Ranganathittu_Feb24_D72_26266.jpg",
       "imageSubject": "Ranganathittu Bird Sanctuary",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🛕",
+          "text": "Ranganathaswamy temple"
+        },
+        {
+          "emoji": "🎨",
+          "text": "Daria Daulat Bagh, Tipu's painted summer palace"
+        },
+        {
+          "emoji": "🚣",
+          "text": "Ranganathittu by rowing boat"
+        },
+        {
+          "emoji": "🏰",
+          "text": "On to Mysuru, twenty minutes on"
+        }
+      ],
+      "season": "June to November for the nesting birds at Ranganathittu."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "shivanasamudra",
       "title": "Shivanasamudra Falls",
       "emoji": "💧",
@@ -143,14 +208,29 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Gagana_Chukki_%281%29.jpg/1280px-Gagana_Chukki_%281%29.jpg",
       "imageSubject": "Shivanasamudra Falls",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "💦",
+          "text": "Gaganachukki falls from the viewpoint"
+        },
+        {
+          "emoji": "🌊",
+          "text": "Bharachukki, a few kilometres on — coracle rides in season"
+        },
+        {
+          "emoji": "🛕",
+          "text": "Talakad or Somanathapura on the way home"
+        }
+      ],
+      "season": "August to November, after the monsoon. By March the falls can be a trickle."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "somanathapura",
       "title": "Somanathapura",
       "emoji": "🛕",
@@ -177,14 +257,29 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Le_temple_de_Chennakesava_%28Somanathapura%2C_Inde%29_%2814465165685%29.jpg/1280px-Le_temple_de_Chennakesava_%28Somanathapura%2C_Inde%29_%2814465165685%29.jpg",
       "imageSubject": "Chennakesava Temple, Somanathapura",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🛕",
+          "text": "The Keshava temple: walk the star-shaped platform slowly"
+        },
+        {
+          "emoji": "🐘",
+          "text": "The friezes: elephants, horsemen, the epics"
+        },
+        {
+          "emoji": "🏰",
+          "text": "On to Mysuru or Srirangapatna"
+        }
+      ],
+      "season": "All year; October to February is coolest."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "savandurga",
       "title": "Savandurga",
       "emoji": "⛰️",
@@ -211,14 +306,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Savandurga_Hill_02.jpg/1280px-Savandurga_Hill_02.jpg",
       "imageSubject": "Savandurga",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🌅",
+          "text": "Start the climb by seven"
+        },
+        {
+          "emoji": "🪨",
+          "text": "Up the bare rock of Biligudda, the white hill"
+        },
+        {
+          "emoji": "🛕",
+          "text": "The Narasimha temple at the foot"
+        },
+        {
+          "emoji": "🥥",
+          "text": "Tender coconut at the bottom"
+        }
+      ],
+      "season": "October to February. Never in the rain: the rock turns slick."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "lepakshi",
       "title": "Lepakshi",
       "emoji": "🗿",
@@ -246,14 +360,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Veerabhadra_Temple_Tower.JPG/1280px-Veerabhadra_Temple_Tower.JPG",
       "imageSubject": "Veerabhadra Temple, Lepakshi",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🐂",
+          "text": "The monolithic Nandi on the way into the village"
+        },
+        {
+          "emoji": "🛕",
+          "text": "The Veerabhadra temple and its painted ceilings"
+        },
+        {
+          "emoji": "🧣",
+          "text": "Slide a cloth under the hanging pillar"
+        },
+        {
+          "emoji": "🍽️",
+          "text": "Andhra meals in the village"
+        }
+      ],
+      "season": "All year; early morning in summer."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "antara-gange",
       "title": "Antara Gange",
       "emoji": "🪨",
@@ -281,14 +414,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Antharagange.JPG/1280px-Antharagange.JPG",
       "imageSubject": "Antara Gange",
       "imageKind": "subject",
-      "imageCredit": "Vedamurthy J · CC BY-SA 3.0"
+      "imageCredit": "Vedamurthy J · CC BY-SA 3.0",
+      "stops": [
+        {
+          "emoji": "💧",
+          "text": "The spring at the Nandi-mouthed tank"
+        },
+        {
+          "emoji": "🔦",
+          "text": "Scramble up through the caves with a torch"
+        },
+        {
+          "emoji": "🌄",
+          "text": "The view from the top"
+        },
+        {
+          "emoji": "🏘️",
+          "text": "Kolar town on the way back"
+        }
+      ],
+      "season": "October to February; go with someone, and not after rain."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "coorg",
       "title": "Coorg",
       "emoji": "☕",
@@ -317,14 +469,38 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Abbey_Falls_New.jpg/1280px-Abbey_Falls_New.jpg",
       "imageSubject": "Abbey Falls",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "🛕",
+          "text": "Namdroling at Bylakuppe on the way"
+        },
+        {
+          "emoji": "🏡",
+          "text": "Check into an estate homestay"
+        },
+        {
+          "emoji": "💧",
+          "text": "Abbey Falls"
+        },
+        {
+          "emoji": "🐘",
+          "text": "Dubare elephant camp in the morning"
+        },
+        {
+          "emoji": "☕",
+          "text": "Coffee and honey in Madikeri"
+        }
+      ],
+      "season": "October to March. Heavy rain June to September."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "chikmagalur",
       "title": "Chikmagalur",
       "emoji": "🏔️",
@@ -351,14 +527,34 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/A_scenery_from_bababudan_hill.jpg/1280px-A_scenery_from_bababudan_hill.jpg",
       "imageSubject": "Baba Budangiri",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "☕",
+          "text": "An estate stay in the coffee"
+        },
+        {
+          "emoji": "⛰️",
+          "text": "Mullayanagiri, the highest peak in Karnataka, at dawn"
+        },
+        {
+          "emoji": "🕌",
+          "text": "Baba Budangiri"
+        },
+        {
+          "emoji": "🛕",
+          "text": "Belur and Halebidu on the way home"
+        }
+      ],
+      "season": "October to March; the monsoon is beautiful and very wet."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "belur-halebidu",
       "title": "Belur & Halebidu",
       "emoji": "🏛️",
@@ -384,14 +580,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Hoysaleshwara_temple_in_Monsoon.JPG/1280px-Hoysaleshwara_temple_in_Monsoon.JPG",
       "imageSubject": "Hoysaleswara Temple",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🛕",
+          "text": "Chennakeshava at Belur, and its bracket figures"
+        },
+        {
+          "emoji": "🐘",
+          "text": "Hoysaleswara at Halebidu, twenty minutes on"
+        },
+        {
+          "emoji": "🗿",
+          "text": "The Jain bastis beside it"
+        },
+        {
+          "emoji": "☕",
+          "text": "Or on to Chikmagalur for the night"
+        }
+      ],
+      "season": "All year; October to February is coolest."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "hampi",
       "title": "Hampi",
       "emoji": "🏺",
@@ -423,7 +638,285 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Hampi-Old-And-New.jpg/1280px-Hampi-Old-And-New.jpg",
       "imageSubject": "Hampi",
       "imageKind": "subject",
-      "imageCredit": "Bjørn Christian Tørrissen · CC BY-SA 3.0"
+      "imageCredit": "Bjørn Christian Tørrissen · CC BY-SA 3.0",
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "The overnight train to Hosapete"
+        },
+        {
+          "emoji": "🛕",
+          "text": "Virupaksha temple and the bazaar"
+        },
+        {
+          "emoji": "🚲",
+          "text": "By bicycle to the Vittala temple and the stone chariot"
+        },
+        {
+          "emoji": "👑",
+          "text": "The Royal Enclosure and the Queen's Bath"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Sunset from Hemakuta or Matanga hill"
+        }
+      ],
+      "season": "October to February. By April the heat is punishing."
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "food"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "couple",
+        "culture",
+        "food",
+        "morning",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "pondicherry",
+      "title": "Pondicherry",
+      "emoji": "🏖️",
+      "minutesFromHome": 390,
+      "durationMin": 540,
+      "priceNote": "Lodging is the cost",
+      "transit": "About 6 h 30 min by road through Krishnagiri — a weekend; overnight buses too",
+      "why": "A French town on the Bay of Bengal: mustard-yellow villas with bougainvillea, streets still named in French, and a sea promenade closed to traffic in the evenings. Stay in the White Town, eat Creole-Tamil food, and spend a morning at Auroville's Matrimandir, the golden sphere in the forest. It is the easiest weekend by the sea from Bengaluru.",
+      "labels": [
+        "weekend",
+        "couple"
+      ],
+      "url": "https://www.pondytourism.in/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚶",
+          "text": "Walk the White Town's grid of French streets in the morning"
+        },
+        {
+          "emoji": "🌊",
+          "text": "The Promenade at sunset, car-free in the evenings"
+        },
+        {
+          "emoji": "🍽️",
+          "text": "Creole-Tamil dinner in a courtyard restaurant"
+        },
+        {
+          "emoji": "🌕",
+          "text": "Next morning, Auroville and the Matrimandir viewing point — the inner chamber by booking"
+        },
+        {
+          "emoji": "🏖️",
+          "text": "Serenity or Paradise Beach before the drive home"
+        }
+      ],
+      "season": "November to February is the best. The north-east monsoon brings heavy rain in October and November some years.",
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/French_War_memorial.JPG/1280px-French_War_memorial.JPG",
+      "imageSubject": "Pondicherry",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "relax",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "gokarna",
+      "title": "Gokarna",
+      "emoji": "🌊",
+      "minutesFromHome": 540,
+      "durationMin": 540,
+      "priceNote": "Beach shacks and guesthouses",
+      "transit": "The overnight train to Gokarna Road, or about 9 h by road — a long weekend",
+      "why": "A temple town on the Karnataka coast with a string of beaches beyond it that you reach on foot over the headlands: Kudle, Om, Half Moon and Paradise, each smaller and emptier than the last. It is what Goa was before Goa. Take the night train, walk the beach trek, and sleep in a hut above the sand.",
+      "labels": [
+        "weekend",
+        "outdoor"
+      ],
+      "url": "https://karnatakatourism.org/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🛕",
+          "text": "Mahabaleshwar temple and the town beach in the morning"
+        },
+        {
+          "emoji": "🥾",
+          "text": "The beach trek over the headlands: Kudle, Om, Half Moon, Paradise"
+        },
+        {
+          "emoji": "🚤",
+          "text": "A boat back from Paradise Beach"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Sunset from the cliffs above Om Beach"
+        }
+      ],
+      "season": "October to March. The monsoon, June to September, closes the beaches and the sea is dangerous.",
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/PXL_20260103_101009613_People_and_Beach_Om_Beach_Gokarna%2C_Karnataka_08.jpg/1280px-PXL_20260103_101009613_People_and_Beach_Om_Beach_Gokarna%2C_Karnataka_08.jpg",
+      "imageSubject": "Om Beach, Gokarna",
+      "imageKind": "subject",
+      "imageCredit": "Sourabh.biswas003 · CC BY-SA 4.0"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "couple",
+        "morning",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "kabini",
+      "title": "Kabini",
+      "emoji": "🐘",
+      "minutesFromHome": 240,
+      "durationMin": 540,
+      "priceNote": "Lodges and forest safaris; book ahead",
+      "transit": "Through Mysuru and HD Kote, about 4 h — a weekend",
+      "why": "The southern edge of Nagarhole, where the Kabini reservoir draws herds of elephants to its banks in the dry months, one of the largest gatherings of Asian elephants anywhere. It is also where the black panther is seen. Go on a jeep safari in the morning and a boat on the backwaters in the evening. Book early; it is not cheap and it is worth it.",
+      "labels": [
+        "weekend",
+        "bookahead",
+        "outdoor"
+      ],
+      "url": "https://www.junglelodges.com/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 4,
+      "booking": "https://www.junglelodges.com/",
+      "stops": [
+        {
+          "emoji": "🚙",
+          "text": "A dawn jeep safari into Nagarhole"
+        },
+        {
+          "emoji": "🐘",
+          "text": "The elephants on the reservoir banks in the afternoon"
+        },
+        {
+          "emoji": "🚤",
+          "text": "An evening boat safari on the backwaters"
+        },
+        {
+          "emoji": "🐆",
+          "text": "A second morning drive, for the leopard and the panther"
+        }
+      ],
+      "season": "October to June; March to May, when the reservoir recedes, is the elephant season. The monsoon closes some routes.",
+      "bookAhead": true,
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Kabani_River.jpg/1280px-Kabani_River.jpg",
+      "imageSubject": "Kabini River",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "couple",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "ooty-nilgiri-railway",
+      "title": "Ooty by the Nilgiri Mountain Railway",
+      "emoji": "🚂",
+      "minutesFromHome": 330,
+      "durationMin": 540,
+      "priceNote": "The toy train is cheap; book seats ahead",
+      "transit": "About 5 h 30 min by road to Mettupalayam, then the toy train up — a weekend",
+      "why": "Up the Nilgiris on the rack railway, a World Heritage line from 1908 that climbs from Mettupalayam through tunnels and tea gardens at walking pace. The steam-hauled section to Coonoor is the one to ride. Stay in Coonoor rather than Ooty, walk the tea estates, and come down through the forests of Mudumalai.",
+      "labels": [
+        "weekend",
+        "couple",
+        "bookahead"
+      ],
+      "url": "https://www.irctc.co.in/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": "https://www.irctc.co.in/",
+      "stops": [
+        {
+          "emoji": "🚂",
+          "text": "The morning train from Mettupalayam to Coonoor, behind a steam engine"
+        },
+        {
+          "emoji": "🍃",
+          "text": "Tea estates around Coonoor, and a factory visit"
+        },
+        {
+          "emoji": "🌸",
+          "text": "Sim's Park in Coonoor"
+        },
+        {
+          "emoji": "🏞️",
+          "text": "Dolphin's Nose viewpoint"
+        },
+        {
+          "emoji": "🐘",
+          "text": "Home through Mudumalai and Bandipur, watching for elephants on the road"
+        }
+      ],
+      "season": "October to March is clear and cool; April and May are crowded. The railway can be suspended after monsoon landslides.",
+      "bookAhead": true,
+      "overnight": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Nilgiri_Hills_Bahn.jpg",
+      "imageSubject": "Nilgiri Mountain Railway",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }

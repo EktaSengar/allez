@@ -1,55 +1,8 @@
 {
-  "generated": "2026-09-27",
+  "generated": "2026-09-28",
   "window": null,
   "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the team's or organiser's own schedule on the date given.",
   "items": [
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "indoor": false,
-      "weatherSensitive": true,
-      "goodFor": [
-        "sport",
-        "weekend",
-        "afternoon",
-        "evening"
-      ],
-      "lastVerified": "2026-09-25",
-      "quality": 4,
-      "uniqueness": 3,
-      "id": "giants-dodgers-2026-09",
-      "title": "Giants v Dodgers — the last home series",
-      "emoji": "⚾",
-      "coords": [
-        37.77861,
-        -122.38947
-      ],
-      "zone": "south-beach",
-      "area": "Oracle Park, 24 Willie Mays Plaza",
-      "coordsFrom": "osm relation/7325085",
-      "start": "2026-09-25",
-      "end": "2026-09-27",
-      "durationMin": 210,
-      "priceNote": "From the bleachers up",
-      "times": "Friday to Sunday, the final weekend of the season",
-      "why": "The oldest rivalry in the game, and the last three home games of the season. Giants against Dodgers is the series Oracle Park fills for. Sunday is the regular season's final day.",
-      "categories": [
-        "sport",
-        "baseball"
-      ],
-      "labels": [
-        "couple"
-      ],
-      "url": "https://www.mlb.com/giants/schedule",
-      "source": "MLB / San Francisco Giants schedule",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/McCovey_Cove_%28767980568%29.jpg/1280px-McCovey_Cove_%28767980568%29.jpg",
-      "imageSubject": "McCovey Cove",
-      "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons",
-      "hoursNote": "First pitch Friday 7:15pm, Saturday 1:05pm, Sunday 12:05pm",
-      "booking": "https://www.mlb.com/giants/tickets",
-      "priceLevel": 3
-    },
     {
       "type": "event",
       "provenance": "editorial",
@@ -60,7 +13,7 @@
         "weekend",
         "evening"
       ],
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "quality": 4,
       "uniqueness": 3,
       "id": "valkyries-playoffs-2026",
@@ -77,7 +30,7 @@
       "end": "2026-10-02",
       "durationMin": 180,
       "priceNote": "Tickets online only",
-      "why": "The Valkyries clinched a home playoff game in only their second season, after one of the best regular seasons the WNBA has seen. The playoffs start on September 27, and the exact home dates depend on the final seeding. Buy tickets online the moment they are set, because Chase Center has sold out for this team.",
+      "why": "The Valkyries won their first playoff game on Sunday, 104 to 80 over Dallas in front of a roaring Chase Center, in only their second season. The first round is best of three: Game 2 is in Dallas on Wednesday, and if it goes to a Game 3 it is back at Chase Center on Friday 2 October. Tickets go the moment it is confirmed.",
       "categories": [
         "sport",
         "basketball"
@@ -87,14 +40,58 @@
         "couple"
       ],
       "url": "https://valkyries.wnba.com/tickets",
-      "source": "Golden State Valkyries; CBS San Francisco; SF Standard",
+      "source": "Golden State Valkyries; NBC Bay Area; SF Standard",
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chase_Center_-_July_2019_%287605%29.jpg/1280px-Chase_Center_-_July_2019_%287605%29.jpg",
       "imageSubject": "Chase Center",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons",
-      "hoursNote": "Game 1 on Sunday 27 September at 6pm; a Game 3, if needed, on Friday 2 October, time not yet set",
+      "hoursNote": "A Game 3, if needed, on Friday 2 October at Chase Center — time set by the WNBA",
       "booking": "https://valkyries.wnba.com/tickets",
       "priceLevel": 3
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "hockey"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "sharks-opener-2026",
+      "title": "Sharks home opener v Panthers",
+      "emoji": "🏒",
+      "coords": [
+        37.33274,
+        -121.90102
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "SAP Center, San Jose",
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$40; the street festival is free",
+      "why": "The first home game of the Sharks' season, against the Florida Panthers, both Tkachuk brothers included. Puck drop is at seven. Before it, the streets outside SAP Center become a free festival with food stalls, player interviews and giveaways, so come early even without a ticket. Caltrain to Diridon is across the road.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://www.nhl.com/sharks/news/sharks-announce-opening-weekend-celebration-and-opening-night-street-festival",
+      "source": "San Jose Sharks; The Hockey News",
+      "booking": "https://www.ticketmaster.com/san-jose-sharks-tickets/artist/806018?home_away=home",
+      "priceLevel": 3,
+      "startTime": "19:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/SAP_Center_%2816609288898%29.jpg/1280px-SAP_Center_%2816609288898%29.jpg",
+      "imageSubject": "SAP Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -106,7 +103,7 @@
         "weekend",
         "afternoon"
       ],
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "quality": 4,
       "uniqueness": 3,
       "id": "49ers-broncos-2026",
@@ -122,7 +119,7 @@
       "end": "2026-10-04",
       "durationMin": 300,
       "priceNote": "NFL prices",
-      "why": "A Sunday home game at Levi's. Take the train.",
+      "why": "A Sunday home game at Levi's, kick-off 1:25. Do not drive: take Caltrain to Mountain View and the VTA light rail to Great America, which is on the stadium's doorstep. The lots open hours ahead for tailgating, and the sun is fierce in the east stands, so sit on the west side if you can.",
       "categories": [
         "sport",
         "football"
@@ -200,7 +197,7 @@
         "weekend",
         "afternoon"
       ],
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "quality": 4,
       "uniqueness": 3,
       "id": "stanford-elon-2026",
@@ -217,7 +214,7 @@
       "end": "2026-10-17",
       "durationMin": 240,
       "priceNote": "Cheap",
-      "why": "Homecoming weekend at Stanford: the campus is at its liveliest, and the stadium fills with alumni.",
+      "why": "Homecoming weekend at Stanford: the campus at its liveliest, the stadium full of alumni, and the band on the field. Kick-off is 4:30. Tickets are cheap, and you can walk from downtown Palo Alto up Palm Drive.",
       "categories": [
         "sport",
         "football"
@@ -235,6 +232,11 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
       "indoor": false,
       "weatherSensitive": true,
       "goodFor": [
@@ -242,7 +244,90 @@
         "weekend",
         "evening"
       ],
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "earthquakes-nashville-2026",
+      "title": "Earthquakes v Nashville",
+      "emoji": "⚽",
+      "coords": [
+        37.35125,
+        -121.92505
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "PayPal Park, San Jose",
+      "start": "2026-10-17",
+      "end": "2026-10-17",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$30",
+      "why": "A Saturday-night MLS game at PayPal Park, with the season's playoff places being decided. Get there early for the huge open-air bar behind one goal, and stand with the supporters if you want to sing.",
+      "labels": [],
+      "url": "https://www.sjearthquakes.com/",
+      "source": "San Jose Earthquakes 2026 schedule",
+      "booking": "https://www.ticketmaster.com/san-jose-earthquakes-tickets/artist/806017?home_away=home",
+      "priceLevel": 2,
+      "startTime": "19:30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Avaya_Stadium%2C_1-7-15.jpg/1280px-Avaya_Stadium%2C_1-7-15.jpg",
+      "imageSubject": "PayPal Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "bayfc-thorns-2026",
+      "title": "Bay FC v Portland Thorns",
+      "emoji": "⚽",
+      "coords": [
+        37.35125,
+        -121.92505
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "PayPal Park, San Jose",
+      "start": "2026-10-18",
+      "end": "2026-10-18",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$25",
+      "why": "The Bay's women's team against Portland, the NWSL's best-supported club, on a Sunday afternoon at two. Bay FC is only in its third season and the crowd is young, loud and growing. It is the next-to-last home game of the regular season.",
+      "labels": [
+        "couple"
+      ],
+      "url": "https://bayfc.com/schedule/",
+      "source": "Bay FC 2026 NWSL schedule",
+      "booking": "https://bayfc.com/tickets/single-match-tickets/",
+      "priceLevel": 2,
+      "startTime": "14:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Avaya_Stadium%2C_1-7-15.jpg/1280px-Avaya_Stadium%2C_1-7-15.jpg",
+      "imageSubject": "PayPal Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
       "quality": 4,
       "uniqueness": 3,
       "id": "49ers-commanders-2026",
@@ -258,7 +343,7 @@
       "end": "2026-10-19",
       "durationMin": 300,
       "priceNote": "NFL prices",
-      "why": "A Monday night home game, with Keena Turner inducted into the 49ers Hall of Fame at half-time.",
+      "why": "Monday Night Football at Levi's, with Keena Turner inducted into the 49ers Hall of Fame at half-time. Kick-off is 5:15, so leave work early and take VTA light rail from Mountain View rather than joining the traffic on 101.",
       "categories": [
         "sport",
         "football"
@@ -283,7 +368,7 @@
         "weekend",
         "evening"
       ],
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "quality": 4,
       "uniqueness": 3,
       "id": "warriors-opener-2026",
@@ -300,7 +385,7 @@
       "end": "2026-10-23",
       "durationMin": 180,
       "priceNote": "Expensive — the opener is the hardest ticket of the year",
-      "why": "The first home game of the Warriors' season at Chase Center, against Memphis.",
+      "why": "The first home game of the Warriors' season, against Memphis, at seven. It is the hardest ticket of the year at Chase Center, with the banners and the introductions before tip-off. Take Muni's T line to the Chase Center stop, or walk from the Caltrain at 4th and King in fifteen minutes.",
       "categories": [
         "sport",
         "basketball"
@@ -360,6 +445,185 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "earthquakes-colorado-2026",
+      "title": "Earthquakes v Colorado",
+      "emoji": "⚽",
+      "coords": [
+        37.35125,
+        -121.92505
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "PayPal Park, San Jose",
+      "start": "2026-10-28",
+      "end": "2026-10-28",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$30",
+      "why": "A Wednesday-night game at PayPal Park, and the cheapest way into a Quakes match all season. Caltrain to Santa Clara and a short walk.",
+      "labels": [],
+      "url": "https://www.sjearthquakes.com/",
+      "source": "San Jose Earthquakes 2026 schedule",
+      "booking": "https://www.ticketmaster.com/san-jose-earthquakes-tickets/artist/806017?home_away=home",
+      "priceLevel": 2,
+      "startTime": "19:30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Avaya_Stadium%2C_1-7-15.jpg/1280px-Avaya_Stadium%2C_1-7-15.jpg",
+      "imageSubject": "PayPal Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "volleyball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "stanford-volleyball-cal-2026",
+      "title": "Stanford v Cal volleyball",
+      "emoji": "🏐",
+      "zone": "palo-alto",
+      "coords": [
+        37.43053,
+        -122.16054
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Maples Pavilion, Stanford",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "durationMin": 180,
+      "priceNote": "Cheap — if you can get one",
+      "why": "The rivalry match in one of the best women's volleyball programmes in the country, on a Friday night at Maples. It is the home match that sells out first, so buy as soon as single tickets go on sale. Stanford also plays Virginia Tech and Virginia at home on 2 and 3 October if this one is gone.",
+      "labels": [
+        "cheap"
+      ],
+      "url": "https://gostanford.com/news/2026/06/18/cardinal-announces-2026-schedule",
+      "source": "Stanford Athletics 2026 schedule",
+      "booking": "https://tickets.gostanford.com/",
+      "priceLevel": 1,
+      "startTime": "19:00",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Maples_Pavilion.jpg",
+      "imageSubject": "Maples Pavilion",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "warriors-lakers-2026",
+      "title": "Warriors v Lakers",
+      "emoji": "🏀",
+      "zone": "pier-70",
+      "coords": [
+        37.7679,
+        -122.38742
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Chase Center, Mission Bay",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "durationMin": 180,
+      "priceNote": "Expensive",
+      "why": "The Lakers at Chase Center a week into the season, and a game that counts in the NBA Cup group stage. It is the biggest regular-season ticket of the autumn.",
+      "labels": [],
+      "url": "https://www.chasecenter.com/",
+      "source": "Golden State Warriors 2026–27 schedule",
+      "booking": "https://www.ticketmaster.com/golden-state-warriors-tickets/artist/805946?home_away=home",
+      "priceLevel": 4,
+      "hoursNote": "Friday night — tip-off time set with the NBA Cup schedule",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chase_Center_-_July_2019_%287605%29.jpg/1280px-Chase_Center_-_July_2019_%287605%29.jpg",
+      "imageSubject": "Chase Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "earthquakes-rsl-2026",
+      "title": "Earthquakes v Real Salt Lake — the home finale",
+      "emoji": "⚽",
+      "coords": [
+        37.35125,
+        -121.92505
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "PayPal Park, San Jose",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$30",
+      "why": "The last home game of the regular season, on Halloween, so expect costumes in the stands. If the Quakes are in the playoff hunt this is the one to go to.",
+      "labels": [],
+      "url": "https://www.sjearthquakes.com/",
+      "source": "San Jose Earthquakes 2026 schedule",
+      "booking": "https://www.ticketmaster.com/san-jose-earthquakes-tickets/artist/806017?home_away=home",
+      "priceLevel": 2,
+      "hoursNote": "Saturday, Halloween — kick-off time to be confirmed",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Avaya_Stadium%2C_1-7-15.jpg/1280px-Avaya_Stadium%2C_1-7-15.jpg",
+      "imageSubject": "PayPal Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
       "indoor": false,
       "weatherSensitive": true,
       "goodFor": [
@@ -367,7 +631,45 @@
         "weekend",
         "afternoon"
       ],
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "bayfc-wave-2026",
+      "title": "Bay FC v San Diego Wave",
+      "emoji": "⚽",
+      "coords": [
+        37.35125,
+        -121.92505
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "PayPal Park, San Jose",
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$25",
+      "why": "Bay FC's last home game of the regular season, a California derby against San Diego on a Sunday afternoon.",
+      "labels": [],
+      "url": "https://bayfc.com/schedule/",
+      "source": "Bay FC 2026 NWSL schedule",
+      "booking": "https://bayfc.com/tickets/single-match-tickets/",
+      "priceLevel": 2,
+      "startTime": "14:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Avaya_Stadium%2C_1-7-15.jpg/1280px-Avaya_Stadium%2C_1-7-15.jpg",
+      "imageSubject": "PayPal Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
       "quality": 4,
       "uniqueness": 3,
       "id": "49ers-raiders-2026",
@@ -383,7 +685,7 @@
       "end": "2026-11-08",
       "durationMin": 300,
       "priceNote": "NFL prices",
-      "why": "The old Bay Area rivalry, now that the Raiders play in Las Vegas. It is a Sunday afternoon game.",
+      "why": "The old Bay Area rivalry, now that the Raiders play in Las Vegas, and the loudest regular-season game at Levi's. It is a Sunday at 1:05. Take the train: Caltrain to Mountain View, then VTA light rail to Great America.",
       "categories": [
         "sport",
         "football"
@@ -401,6 +703,50 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "big-game-2026",
+      "title": "The Big Game: Cal v Stanford",
+      "emoji": "🪓",
+      "coords": [
+        37.87095,
+        -122.25086
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "California Memorial Stadium, Berkeley",
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "durationMin": 180,
+      "priceNote": "Tickets ~$40–120",
+      "why": "The 129th Big Game, one of the oldest rivalries in college football, played since 1892 for a trophy that is literally a hatchet: the Stanford Axe. It is Cal's turn to host, in the stadium in Strawberry Canyon. Take BART to Downtown Berkeley and walk up with the crowd. Wear red or blue, not both.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://gostanford.com/biggame",
+      "source": "Cal Athletics; Stanford Athletics; SF Chronicle",
+      "booking": "https://calbears.com/",
+      "priceLevel": 4,
+      "hoursNote": "Saturday — kick-off time is set by TV a couple of weeks before",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/California_Memorial_Stadium_aerial.jpg",
+      "imageSubject": "California Memorial Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
       "goodFor": [
@@ -409,7 +755,7 @@
         "afternoon",
         "evening"
       ],
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "quality": 4,
       "uniqueness": 3,
       "id": "stanford-smu-2026",
@@ -426,7 +772,7 @@
       "end": "2026-11-28",
       "durationMin": 240,
       "priceNote": "Cheap",
-      "why": "The last home game of Stanford's season, on Thanksgiving Saturday.",
+      "why": "The last home game of Stanford's season, on Thanksgiving Saturday, when the campus is empty and the stadium is not. Cheap tickets, a walk up Palm Drive, and a good way to get out of the house after Thursday.",
       "categories": [
         "sport",
         "football"
@@ -451,7 +797,7 @@
         "weekend",
         "afternoon"
       ],
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "quality": 4,
       "uniqueness": 3,
       "id": "49ers-seahawks-2026",
@@ -467,7 +813,7 @@
       "end": "2026-11-29",
       "durationMin": 300,
       "priceNote": "NFL prices",
-      "why": "The division rival, at home on the Sunday after Thanksgiving.",
+      "why": "The division rival, at home on the Sunday after Thanksgiving at 1:25. It often decides the division. Caltrain and VTA light rail to Great America, as for every game here.",
       "categories": [
         "sport",
         "football"
@@ -481,6 +827,50 @@
       "startTime": "13:25",
       "booking": "https://www.49ers.com/tickets/single-game",
       "priceLevel": 4
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "hockey"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "pwhl-san-jose-opener-2026",
+      "title": "PWHL San Jose's first home game",
+      "emoji": "🏒",
+      "coords": [
+        37.33274,
+        -121.90102
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "SAP Center, San Jose",
+      "start": "2026-12-05",
+      "end": "2026-12-05",
+      "durationMin": 180,
+      "priceNote": "Tickets on sale through the PWHL",
+      "why": "The first home game of the Bay Area's first professional women's hockey team: the new San Jose side against the Minnesota Frost, the league's first two champions, at four on a Saturday. The PWHL has sold out arenas in its other cities. Be there for the first one.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://www.thepwhl.com/en/teams/san-jose/news/2026/september/28/pwhl-san-jose-announce-historic-home-opener-december-5-at-sap-center",
+      "source": "PWHL, announced 28 September 2026",
+      "booking": "https://www.thepwhl.com/en/teams/san-jose",
+      "priceLevel": 2,
+      "startTime": "16:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/SAP_Center_%2816609288898%29.jpg/1280px-SAP_Center_%2816609288898%29.jpg",
+      "imageSubject": "SAP Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }

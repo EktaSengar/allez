@@ -1,61 +1,11 @@
 {
-  "generated": "2026-09-27",
+  "generated": "2026-09-28",
   "window": {
     "from": "2026-08-13",
     "to": "2026-10-31"
   },
   "note": "Time-sensitive entries. Anything past its `end` date is pruned automatically by scripts/refresh.mjs. Verify prices and times at the official URL before travelling.",
   "items": [
-    {
-      "id": "jeu-de-paume-photo-2026",
-      "title": "Two Photography Retrospectives — Jeu de Paume",
-      "emoji": "📷",
-      "type": "exhibition",
-      "categories": [
-        "photography",
-        "art",
-        "culture",
-        "indoor"
-      ],
-      "zone": 1,
-      "area": "Jeu de Paume, Jardin des Tuileries",
-      "price": 12,
-      "priceNote": "~€12",
-      "start": "2026-06-01",
-      "end": "2026-09-27",
-      "durationMin": 90,
-      "minutesFromHome": 22,
-      "transit": "M8 to Concorde",
-      "why": "Jeu de Paume is the serious photography house in Paris and it is small enough to do properly in 90 minutes without museum fatigue. Two retrospectives running at once until late September. Then walk out into the Tuileries and stay for the cauldron at sunset.",
-      "goodFor": [
-        "couple",
-        "culture",
-        "indoor",
-        "weekend"
-      ],
-      "indoor": true,
-      "labels": [
-        "couple",
-        "indoor"
-      ],
-      "uniqueness": 4,
-      "quality": 5,
-      "pairsWith": [
-        "olympic-cauldron-2026"
-      ],
-      "source": "Jeu de Paume",
-      "url": "https://jeudepaume.org/",
-      "lastVerified": "2026-08-13",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Le_Jeu_de_Paume%2C_1_place_de_la_Concorde_%C3%A0_Paris%2C_juillet_2021.jpg/500px-Le_Jeu_de_Paume%2C_1_place_de_la_Concorde_%C3%A0_Paris%2C_juillet_2021.jpg",
-      "imageSubject": "Galerie nationale du Jeu de Paume",
-      "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject",
-      "coords": [
-        48.8626,
-        2.3363
-      ],
-      "coordsFrom": "arr-centroid"
-    },
     {
       "id": "musee-maillol-versace-2026",
       "title": "Gianni Versace Retrospective — Musée Maillol",
@@ -104,54 +54,48 @@
       "coordsFrom": "arr-centroid"
     },
     {
-      "id": "theatre-verdure-shakespeare-2026",
-      "title": "Open-Air Theatre — Jardin Shakespeare",
-      "emoji": "🎭",
       "type": "event",
+      "provenance": "editorial",
       "categories": [
-        "theatre",
-        "outdoor",
-        "culture"
-      ],
-      "zone": 16,
-      "area": "Pré Catelan, Bois de Boulogne",
-      "price": 15,
-      "priceNote": "Free to €25 depending on the show",
-      "start": "2026-05-01",
-      "end": "2026-09-27",
-      "durationMin": 150,
-      "minutesFromHome": 45,
-      "transit": "M1 to Les Sablons, then a walk through the Bois",
-      "why": "A green amphitheatre hidden inside the Bois de Boulogne, planted with every species Shakespeare mentions, staging open-air theatre all summer. Very few Parisians have been. It is far, so treat it as a whole afternoon: walk in the Bois, then the show.",
-      "goodFor": [
-        "couple",
-        "weekend",
-        "outdoor",
-        "culture",
-        "romantic"
+        "sport",
+        "football"
       ],
       "indoor": false,
       "weatherSensitive": true,
-      "labels": [
-        "hiddengem",
-        "romantic",
-        "outdoor",
-        "couple"
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
       ],
-      "uniqueness": 5,
-      "quality": 4,
-      "source": "Secrets of Paris",
-      "url": "https://www.paris.fr/lieux/jardin-shakespeare-2358",
-      "lastVerified": "2026-08-13",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/GOUDEAU%26VIDAL_-_Vacherie_du_Pr%C3%A9-Catelan.jpg/500px-GOUDEAU%26VIDAL_-_Vacherie_du_Pr%C3%A9-Catelan.jpg",
-      "imageSubject": "Pré Catelan",
-      "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject",
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "france-italy-2026",
+      "title": "France v Italy",
+      "emoji": "⚽",
       "coords": [
-        48.8637,
-        2.2769
+        48.92446,
+        2.36015
       ],
-      "coordsFrom": "arr-centroid"
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Stade de France, Saint-Denis",
+      "start": "2026-10-02",
+      "end": "2026-10-02",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~€30",
+      "why": "Les Bleus against Italy in the Nations League, on a Friday night at the Stade de France. It will be full and loud. Take the RER D or B to Saint-Denis and give yourself an hour to get in.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://www.stadefrance.com/en/tickets/football",
+      "source": "Stade de France; FFF",
+      "booking": "https://www.stadefrance.com/en/tickets/football",
+      "priceLevel": 2,
+      "startTime": "20:45",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/StadeFranceNationsLeague2018.jpg/1280px-StadeFranceNationsLeague2018.jpg",
+      "imageSubject": "Stade de France",
+      "imageKind": "subject",
+      "imageCredit": "Darthvadrouw · CC BY-SA 4.0"
     },
     {
       "id": "prix-arc-triomphe-2026",
@@ -205,6 +149,48 @@
         2.2769
       ],
       "coordsFrom": "arr-centroid"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "rugby"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "stade-francais-oct-2026",
+      "title": "Stade Français at Jean-Bouin",
+      "emoji": "🏉",
+      "coords": [
+        48.84346,
+        2.25287
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Stade Jean-Bouin, 16e",
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~€15",
+      "why": "A Top 14 afternoon at Jean-Bouin, the pink club's home, a white concrete lattice of a stadium next to the Parc des Princes. Rugby crowds are friendly, the tickets are cheap next to football, and the club's pink kit is its own reason to go. Check the opponent on the club's calendar.",
+      "labels": [],
+      "url": "https://billetterie.stade.fr/fr/calendrier",
+      "source": "Stade Français",
+      "booking": "https://billetterie.stade.fr/fr/",
+      "priceLevel": 1,
+      "startTime": "14:30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Stade_Jean_Bouin_-_Paris_XVI_%28FR75%29_-_2021-12-05_-_1.jpg/1280px-Stade_Jean_Bouin_-_Paris_XVI_%28FR75%29_-_2021-12-05_-_1.jpg",
+      "imageSubject": "Stade Jean-Bouin",
+      "imageKind": "subject",
+      "imageCredit": "Chabe01 · CC BY-SA 4.0"
     },
     {
       "id": "20km-de-paris-2026",
@@ -262,6 +248,92 @@
       "coordsFrom": "arr-centroid"
     },
     {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "paris-basketball-virtus-2026",
+      "title": "Paris Basketball v Virtus Bologna",
+      "emoji": "🏀",
+      "coords": [
+        48.89622,
+        2.40247
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Adidas Arena, Porte de la Chapelle, 18e",
+      "start": "2026-10-14",
+      "end": "2026-10-14",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~€15",
+      "why": "EuroLeague basketball in the arena built for the 2024 Olympics at Porte de la Chapelle, against one of Italy's great clubs. Paris Basketball are the young, fast team that got the city into the EuroLeague, and the arena is new, steep and loud.",
+      "labels": [],
+      "url": "https://parisbasketball.com/en/category/adidas-arena-en/",
+      "source": "Paris Basketball",
+      "booking": "https://billetterie.parisbasketball.com/fr/",
+      "priceLevel": 1,
+      "hoursNote": "Wednesday evening — tip-off time on the club site",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Paris_Basketball_SQBB_match.jpg/1280px-Paris_Basketball_SQBB_match.jpg",
+      "imageSubject": "Adidas Arena",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "psg-ucl-oct-2026",
+      "title": "PSG — a Champions League night",
+      "emoji": "⚽",
+      "coords": [
+        48.84144,
+        2.25303
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Parc des Princes, 16e",
+      "start": "2026-10-20",
+      "end": "2026-10-20",
+      "durationMin": 180,
+      "priceNote": "Hard to get — resale only close to the day",
+      "why": "A Tuesday Champions League night at the Parc des Princes, which for European games is the loudest stadium in France: the Virage Auteuil sings for the whole ninety minutes. Tickets go to members first and the official resale is the honest way in. The opponent is on the club's calendar.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://billetterie.psg.fr/en/schedule",
+      "source": "Paris Saint-Germain",
+      "booking": "https://billetterie.psg.fr/en/schedule",
+      "priceLevel": 4,
+      "startTime": "21:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Paris_Parc_des_Princes_1.jpg/1280px-Paris_Parc_des_Princes_1.jpg",
+      "imageSubject": "Parc des Princes",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
       "id": "rolex-paris-masters-2026",
       "title": "Rolex Paris Masters",
       "emoji": "🎾",
@@ -303,71 +375,6 @@
       "imageSubject": "La Défense",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons"
-    },
-    {
-      "id": "gymnastics-championships-2026",
-      "title": "French International Gymnastics Championships",
-      "emoji": "🤸",
-      "type": "event",
-      "categories": [
-        "sport",
-        "gymnastics"
-      ],
-      "intent": [
-        "watch"
-      ],
-      "zone": 12,
-      "area": "Accor Arena, Bercy",
-      "price": 30,
-      "priceNote": "From ~€20",
-      "start": "2026-09-24",
-      "end": "2026-09-27",
-      "times": "Late September — confirm the exact days on the venue site",
-      "durationMin": 180,
-      "minutesFromHome": 30,
-      "transit": "M5 or M14 to Bercy",
-      "why": "Gymnastics is the best live sport nobody thinks to buy tickets for: six things happen at once, the crowd gasps in unison, and a €20 seat at Bercy is closer to the floor than a €90 football ticket is to the pitch. Bercy is on line 5 and line 14. Sit high rather than ringside — you want to see all the apparatus at the same time, which is the whole pleasure of it.",
-      "spectator": "Go for a qualification session rather than the final: half the price, twice the length, and all four apparatus running simultaneously.",
-      "goodFor": [
-        "weekend",
-        "couple",
-        "sport",
-        "evening"
-      ],
-      "indoor": true,
-      "bookAhead": true,
-      "labels": [
-        "trynew",
-        "couple",
-        "bookahead",
-        "indoor"
-      ],
-      "uniqueness": 4,
-      "quality": 4,
-      "pairings": [
-        {
-          "emoji": "🌳",
-          "text": "Parc de Bercy before, 5 min",
-          "id": null
-        },
-        {
-          "emoji": "🍷",
-          "text": "Bercy Village for a drink after",
-          "id": null
-        }
-      ],
-      "source": "Ville de Paris sporting calendar",
-      "url": "https://www.accorarena.com/",
-      "lastVerified": "2026-08-15",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Gymnastics_%28artistic%29_pictogram.svg/500px-Gymnastics_%28artistic%29_pictogram.svg.png",
-      "imageSubject": "Gymnastique artistique",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons",
-      "coords": [
-        48.8351,
-        2.4212
-      ],
-      "coordsFrom": "arr-centroid"
     },
     {
       "id": "paris-marathon-2027",

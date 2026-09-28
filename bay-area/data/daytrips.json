@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-23",
-  "note": "Driving times are off-peak and only a guide: the Bay Bridge, 101 and Highway 17 can double them. Each trip carries a time from both bases — North Beach and Palo Alto — and the site shows the one nearer to wherever you are. Anything with a booking says so. Researched, not yet done — rate them as you go.",
+  "generated": "2026-09-28",
+  "note": "Driving times are off-peak and only a guide: the Bay Bridge, 101 and Highway 17 can double them. Each trip carries a time from both bases — North Beach and Palo Alto — and the site shows the one nearer to wherever you are. Each says what to do there, in order, and when it is worth going; the ones marked overnight are weekends, not days. Anything with a booking says so. Researched, not yet done — rate them as you go.",
   "items": [
     {
       "type": "daytrip",
@@ -58,7 +58,7 @@
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-28",
       "id": "half-moon-bay",
       "title": "Half Moon Bay & the coast",
       "emoji": "🌊",
@@ -97,14 +97,33 @@
       },
       "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
       "priceLevel": 0,
-      "booking": false
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🥾",
+          "text": "The Coastal Trail along the bluffs"
+        },
+        {
+          "emoji": "🌊",
+          "text": "Pillar Point, looking out at the Mavericks break"
+        },
+        {
+          "emoji": "🐟",
+          "text": "Fish straight off the boats at Pillar Point Harbor"
+        },
+        {
+          "emoji": "🍺",
+          "text": "Half Moon Bay Brewing on the harbour for the view"
+        }
+      ],
+      "season": "Autumn is the clearest. Avoid the Art & Pumpkin Festival weekend in mid-October unless that is the plan."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-28",
       "id": "santa-cruz",
       "title": "Santa Cruz",
       "emoji": "🎢",
@@ -141,14 +160,33 @@
       },
       "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
       "priceLevel": 1,
-      "booking": false
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🎢",
+          "text": "The Boardwalk and the 1924 Giant Dipper"
+        },
+        {
+          "emoji": "🏄",
+          "text": "West Cliff Drive to Steamer Lane to watch the surfers"
+        },
+        {
+          "emoji": "🦭",
+          "text": "Natural Bridges at the end of West Cliff, for tide pools"
+        },
+        {
+          "emoji": "🌲",
+          "text": "Henry Cowell redwoods on the way home, ten minutes inland"
+        }
+      ],
+      "season": "All year. Monarch butterflies winter at Natural Bridges from October to February."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "id": "muir-woods",
       "title": "Muir Woods",
       "emoji": "🌲",
@@ -191,14 +229,33 @@
       "hoursChecked": "2026-09-25",
       "booking": "https://gomuirwoods.com/",
       "priceLevel": 2,
-      "hoursNote": "8am to sunset"
+      "hoursNote": "8am to sunset",
+      "stops": [
+        {
+          "emoji": "🎟️",
+          "text": "Reserve parking or the shuttle at gomuirwoods.com first"
+        },
+        {
+          "emoji": "🌲",
+          "text": "The boardwalk loop along Redwood Creek"
+        },
+        {
+          "emoji": "🥾",
+          "text": "Up the Ben Johnson trail to get away from the crowd"
+        },
+        {
+          "emoji": "🍺",
+          "text": "The Pelican Inn at Muir Beach, ten minutes down the road"
+        }
+      ],
+      "season": "All year. Winter brings spawning salmon to Redwood Creek; weekday mornings are quietest."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": false,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-28",
       "id": "napa-valley",
       "title": "Napa Valley",
       "emoji": "🍷",
@@ -227,24 +284,47 @@
       "uniqueness": 4,
       "quality": 4,
       "url": "https://www.visitnapavalley.com/",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/TTB_Map_Napa_Valley_AVA.png",
-      "imageSubject": "Napa Valley AVA",
-      "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons",
       "minutesFrom": {
         "city": 70,
         "peninsula": 105
       },
       "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours; most wineries want a tasting booked ahead",
       "priceLevel": 4,
-      "booking": false
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚗",
+          "text": "Leave by nine. From the city, over the Golden Gate and through Sonoma, about 75 min"
+        },
+        {
+          "emoji": "🍷",
+          "text": "A first tasting at ten or eleven, booked — Yountville or Oakville"
+        },
+        {
+          "emoji": "🥪",
+          "text": "Lunch at Oxbow Public Market in Napa, or Oakville Grocery on 29"
+        },
+        {
+          "emoji": "🛣️",
+          "text": "One more tasting, reached by the Silverado Trail when 29 is jammed"
+        },
+        {
+          "emoji": "♨️",
+          "text": "Or finish at the top of the valley in Calistoga, with a mud bath at the hot springs"
+        }
+      ],
+      "season": "Harvest, late August to October, is the best and busiest. January to March is mustard season: yellow between the vines, quiet and cheaper.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Robert_Mondavi_winery.jpg/1280px-Robert_Mondavi_winery.jpg",
+      "imageSubject": "Oakville, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-28",
       "id": "monterey-carmel",
       "title": "Monterey & Point Lobos",
       "emoji": "🐙",
@@ -284,14 +364,33 @@
       },
       "hoursNote": "A day of two places — the aquarium sells timed tickets, and Point Lobos keeps state-park daylight hours",
       "booking": "https://www.montereybayaquarium.org/visit/admission-tickets",
-      "priceLevel": 3
+      "priceLevel": 3,
+      "stops": [
+        {
+          "emoji": "🐙",
+          "text": "Monterey Bay Aquarium when it opens — the kelp forest feeding and the otters first"
+        },
+        {
+          "emoji": "🐟",
+          "text": "Lunch on Cannery Row or Fisherman's Wharf"
+        },
+        {
+          "emoji": "🦦",
+          "text": "Point Lobos: the Cypress Grove and Sea Lion Point trails — check reservations"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Sunset on Carmel Beach, five minutes on"
+        }
+      ],
+      "season": "All year. Autumn is the clearest and warmest on the coast; summer is often foggy."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "id": "point-reyes",
       "title": "Point Reyes",
       "emoji": "🦭",
@@ -331,14 +430,37 @@
       "hoursFrom": "nps.gov — the seashore is open 6am to midnight",
       "hoursChecked": "2026-09-25",
       "priceLevel": 0,
-      "booking": false
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🦪",
+          "text": "Hog Island or the Marshall Store on Tomales Bay for oysters at the water"
+        },
+        {
+          "emoji": "🧀",
+          "text": "Point Reyes Station, the one-street town, for bread and cheese for the day"
+        },
+        {
+          "emoji": "🗼",
+          "text": "Out to the lighthouse and down the 300-odd steps — closed in high wind"
+        },
+        {
+          "emoji": "🦭",
+          "text": "Chimney Rock for elephant seals, December to March"
+        },
+        {
+          "emoji": "🦌",
+          "text": "Or north to Tomales Point for the tule elk"
+        }
+      ],
+      "season": "All year. Winter has the seals and grey whales; spring the wildflowers on Chimney Rock."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-28",
       "id": "big-sur",
       "title": "Big Sur",
       "emoji": "🌉",
@@ -377,14 +499,34 @@
       },
       "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours; check Highway 1 before you set off",
       "priceLevel": 1,
-      "booking": false
+      "booking": false,
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "🌉",
+          "text": "Bixby Bridge, the famous view, from the turnout on the north side"
+        },
+        {
+          "emoji": "🌲",
+          "text": "Pfeiffer Big Sur State Park for a redwood walk and lunch"
+        },
+        {
+          "emoji": "💧",
+          "text": "McWay Falls at Julia Pfeiffer Burns, a short walk from the car park"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Sunset from Nepenthe's terrace, then a night in the woods"
+        }
+      ],
+      "season": "Spring and autumn. Winter landslides close Highway 1 most years — check Caltrans before you leave."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-28",
       "id": "lake-tahoe",
       "title": "Lake Tahoe",
       "emoji": "🏔️",
@@ -421,14 +563,34 @@
       },
       "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
       "priceLevel": 4,
-      "booking": false
+      "booking": false,
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "🏞️",
+          "text": "Emerald Bay from the overlook on Highway 89, then down to Vikingsholm"
+        },
+        {
+          "emoji": "🥾",
+          "text": "The Rubicon Trail along the shore to D.L. Bliss"
+        },
+        {
+          "emoji": "🏖️",
+          "text": "Sand Harbor on the Nevada side for the clearest water"
+        },
+        {
+          "emoji": "⛷️",
+          "text": "In winter: a day at Palisades, Northstar or Heavenly instead"
+        }
+      ],
+      "season": "Summer for the lake, December to April for skiing. Carry chains in winter."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "id": "yosemite",
       "title": "Yosemite Valley",
       "emoji": "⛰️",
@@ -468,7 +630,31 @@
       "hoursFrom": "nps.gov — open all day, every day; no entry reservation in 2026",
       "hoursChecked": "2026-09-25",
       "priceLevel": 3,
-      "booking": false
+      "booking": false,
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "💧",
+          "text": "Lower Yosemite Fall, a flat mile from the valley floor"
+        },
+        {
+          "emoji": "🥾",
+          "text": "The Mist Trail to Vernal Fall — steep, wet, and the best half-day in the park"
+        },
+        {
+          "emoji": "🧗",
+          "text": "El Capitan Meadow, looking for climbers on the wall"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Tunnel View at sunset"
+        },
+        {
+          "emoji": "🏔️",
+          "text": "Glacier Point next morning, when the road is open"
+        }
+      ],
+      "season": "Late spring for the waterfalls, autumn for fewer people. Tioga and Glacier Point roads close in winter; check reservations for peak dates."
     },
     {
       "type": "daytrip",
@@ -700,6 +886,567 @@
       "hoursChecked": "2026-09-25",
       "priceLevel": 0,
       "booking": false
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-28",
+      "id": "solvang",
+      "title": "Solvang and the Santa Ynez Valley",
+      "emoji": "🥞",
+      "categories": [
+        "daytrip",
+        "food",
+        "culture"
+      ],
+      "minutesFromHome": 245,
+      "durationMin": 540,
+      "priceNote": "Free to walk; tastings ~$25–40",
+      "transit": "US-101 south the whole way, about 4 hours from Palo Alto — a weekend",
+      "why": "A Danish village in the Santa Ynez Valley, founded in 1911 by Danish-Americans who wanted a folk school in the sun: half-timbered houses, windmills, and bakeries selling kringle. It sounds like a theme park and is actually a real town. The valley around it is wine country, the one in the film Sideways, and the reason to stay the night. Pair it with Santa Barbara, forty minutes over the pass.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "food",
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "weekend",
+        "couple"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "url": "https://solvangusa.com/",
+      "minutesFrom": {
+        "city": 280,
+        "peninsula": 245
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🥞",
+          "text": "Æbleskiver from the outdoor window at Solvang Restaurant on Alisal Road"
+        },
+        {
+          "emoji": "🥐",
+          "text": "Kringle and a cardamom bun at one of the Copenhagen Drive bakeries"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "Elverhøj Museum, a Danish farmhouse built by hand — Thursday to Monday, 11 to 5, $5"
+        },
+        {
+          "emoji": "⛪",
+          "text": "Mission Santa Inés, founded 1804, at the edge of town"
+        },
+        {
+          "emoji": "🍷",
+          "text": "Ten minutes up the road: the tasting rooms of Los Olivos, a one-street town"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Sunset in the vineyards on Foxen Canyon Road"
+        }
+      ],
+      "season": "All year. Danish Days, the third weekend of September, is the big one; December brings the Julefest lights. Spring is green and summer is hot inland.",
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Tivoli_Square_Solvang.jpg/1280px-Tivoli_Square_Solvang.jpg",
+      "imageSubject": "Solvang, California",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-28",
+      "id": "paso-robles",
+      "title": "Paso Robles",
+      "emoji": "🍇",
+      "categories": [
+        "daytrip",
+        "food",
+        "outdoors"
+      ],
+      "minutesFromHome": 170,
+      "durationMin": 540,
+      "priceNote": "Tastings ~$25–50; Field of Light from ~$71",
+      "transit": "US-101 south through Salinas, about 2h50 from Palo Alto — a weekend",
+      "why": "Napa before it was Napa: two hundred wineries in the oak hills halfway to Los Angeles, most of them run by the people pouring, and tastings that cost half as much. Go for the reds, the Rhône grapes and the zinfandel. The town square is a proper small-town park ringed with places to eat. Stay a night, because the best thing here happens after dark.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "food",
+        "afternoon",
+        "evening"
+      ],
+      "labels": [
+        "weekend",
+        "couple",
+        "bookahead"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.travelpaso.com/",
+      "minutesFrom": {
+        "city": 200,
+        "peninsula": 170
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 3,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🏭",
+          "text": "Tin City: a dozen small wineries, a brewery and a cidery in corrugated-iron warehouses — walk between them"
+        },
+        {
+          "emoji": "🥪",
+          "text": "Lunch on the downtown square"
+        },
+        {
+          "emoji": "🍷",
+          "text": "An afternoon tasting out on Highway 46 West, booked"
+        },
+        {
+          "emoji": "💡",
+          "text": "Sensorio's Field of Light after dark: 58,800 solar-lit glass spheres on a hillside — book the time slot"
+        },
+        {
+          "emoji": "🌊",
+          "text": "Next morning, 40 minutes over the hill to the coast at Cambria"
+        }
+      ],
+      "season": "Harvest in September and October is the best time. Summer days are hot, well over 90°F. Winter is quiet and cheaper.",
+      "bookAhead": true,
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Paso_Robles_AVA_vineyards_at_Justin.jpg/1280px-Paso_Robles_AVA_vineyards_at_Justin.jpg",
+      "imageSubject": "Vineyards in the Paso Robles AVA",
+      "imageKind": "subject",
+      "imageCredit": "Agne27 · CC BY-SA 3.0"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-28",
+      "id": "cambria-hearst-castle",
+      "title": "Hearst Castle and Cambria",
+      "emoji": "🏰",
+      "categories": [
+        "daytrip",
+        "culture",
+        "outdoors"
+      ],
+      "minutesFromHome": 210,
+      "durationMin": 540,
+      "price": 35,
+      "priceNote": "Grand Rooms tour ~$35; the seals are free",
+      "transit": "US-101 to Paso Robles, then Highway 46 to the coast, about 3h30 — a weekend",
+      "why": "William Randolph Hearst's hilltop palace above the sea, built from 1919 to 1947 and filled with ceilings and choir stalls bought from Spanish monasteries. You can only see it on a tour, and the Grand Rooms tour takes seventy minutes, up about 140 steps. Book it ahead. The coast road below has an elephant seal beach and the pine-wooded village of Cambria for the night.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "culture",
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "weekend",
+        "couple",
+        "bookahead"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://hearstcastle.org/",
+      "minutesFrom": {
+        "city": 235,
+        "peninsula": 210
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": "https://hearstcastle.org/reserve/tour-hearst-castle/",
+      "stops": [
+        {
+          "emoji": "🏰",
+          "text": "The Grand Rooms tour: the Assembly Room, the Refectory, the Neptune Pool from above — book up to 60 days ahead"
+        },
+        {
+          "emoji": "🦭",
+          "text": "Piedras Blancas, ten minutes north: thousands of elephant seals on the beach below the boardwalk, free"
+        },
+        {
+          "emoji": "🧀",
+          "text": "Harmony, pop. 18, for a coffee on the way back"
+        },
+        {
+          "emoji": "🚶",
+          "text": "Moonstone Beach boardwalk in Cambria at sunset"
+        },
+        {
+          "emoji": "🛣️",
+          "text": "Drive home up Highway 1 through Big Sur, if the road is open"
+        }
+      ],
+      "season": "All year. The elephant seal pups are born in January and February, when the beach is fullest. The castle is decorated for the holidays in December.",
+      "bookAhead": true,
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Hearst_Castle_Casa_Grande_September_2012_panorama_2.jpg/1280px-Hearst_Castle_Casa_Grande_September_2012_panorama_2.jpg",
+      "imageSubject": "Hearst Castle",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-28",
+      "id": "sonoma-healdsburg",
+      "title": "Sonoma and Healdsburg",
+      "emoji": "🍷",
+      "categories": [
+        "daytrip",
+        "food",
+        "culture"
+      ],
+      "minutesFromHome": 95,
+      "durationMin": 540,
+      "priceNote": "Tastings ~$30–60; the plazas are free",
+      "transit": "Over the Golden Gate and up 101, about an hour to Sonoma from the city",
+      "why": "The easier wine country. The town of Sonoma is built round a leafy plaza where California briefly declared itself a republic in 1846, and the last of the missions stands on one corner. Healdsburg, an hour north, is the other plaza, with the best food in the county and the Russian River and Dry Creek valleys at the end of every street. Do one or the other, not both, and book tastings.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "food",
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "couple",
+        "weekend",
+        "bookahead"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.sonomacounty.com/",
+      "minutesFrom": {
+        "city": 60,
+        "peninsula": 95
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 3,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "⛪",
+          "text": "Sonoma Plaza and Mission San Francisco Solano, the last of the 21 missions, 1823"
+        },
+        {
+          "emoji": "🧀",
+          "text": "Picnic from the cheese shops on the plaza"
+        },
+        {
+          "emoji": "🍷",
+          "text": "One tasting in the Sonoma Valley, booked"
+        },
+        {
+          "emoji": "🚗",
+          "text": "Or skip on to Healdsburg: lunch off the plaza, then Dry Creek Valley zinfandel"
+        },
+        {
+          "emoji": "🏞️",
+          "text": "A swim or a paddle in the Russian River in summer"
+        }
+      ],
+      "season": "Harvest, August to October, is the prettiest and busiest. Spring has the mustard and the wildflowers.",
+      "bookAhead": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Sonoma_Plaza_west_lawn_%28cropped%29.jpg/1280px-Sonoma_Plaza_west_lawn_%28cropped%29.jpg",
+      "imageSubject": "Sonoma Plaza",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-28",
+      "id": "mendocino",
+      "title": "Mendocino and Fort Bragg",
+      "emoji": "🌲",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 230,
+      "durationMin": 540,
+      "priceNote": "The headlands are free; the Skunk Train is extra",
+      "transit": "US-101 to Cloverdale, then Highway 128 through Anderson Valley, about 3h15 from the city — a weekend",
+      "why": "A New England fishing village on a headland over the Pacific, with water towers, picket fences and the whole town inside a state park. The drive up is part of it: Highway 128 through the vineyards of Anderson Valley and a redwood tunnel to the sea. Stay two nights. Fort Bragg, ten miles north, has the railway and the glass beach.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "outdoors",
+        "relax",
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "weekend",
+        "couple",
+        "outdoor"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://www.visitmendocino.com/",
+      "minutesFrom": {
+        "city": 195,
+        "peninsula": 230
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🍎",
+          "text": "Anderson Valley on the way up: apple stands and Alsatian-style wine in Philo"
+        },
+        {
+          "emoji": "🌊",
+          "text": "Walk the cliffs of Mendocino Headlands State Park, all around the town"
+        },
+        {
+          "emoji": "🗼",
+          "text": "Point Cabrillo Light Station, a mile of path to a lighthouse from 1909"
+        },
+        {
+          "emoji": "🚂",
+          "text": "The Skunk Train from Fort Bragg into the redwoods, or the railbikes along Pudding Creek — book ahead"
+        },
+        {
+          "emoji": "🟢",
+          "text": "Glass Beach in Fort Bragg: sea-worn glass from an old dump. Look, don't take — it is a state park"
+        }
+      ],
+      "season": "All year. Whales pass from December to April. Summer is foggy on the coast and hot 20 minutes inland.",
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Mendocino_California.jpg/1280px-Mendocino_California.jpg",
+      "imageSubject": "Mendocino, California",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-28",
+      "id": "santa-barbara",
+      "title": "Santa Barbara",
+      "emoji": "🌴",
+      "categories": [
+        "daytrip",
+        "culture",
+        "food",
+        "outdoors"
+      ],
+      "minutesFromHome": 280,
+      "durationMin": 540,
+      "priceNote": "Mostly free; the Funk Zone tasting rooms extra",
+      "transit": "US-101 south, about 4h40 from Palo Alto — a weekend, or pair with Solvang",
+      "why": "A Spanish-colonial town between the mountains and the sea, rebuilt in white stucco and red tile after the 1925 earthquake. It is a different California from the Bay: warmer, slower, and in bloom. Climb the courthouse tower, walk the wharf, and spend the evening in the Funk Zone, where the wineries have tasting rooms in old warehouses a block from the beach.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "culture",
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "weekend",
+        "couple"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://santabarbaraca.com/",
+      "minutesFrom": {
+        "city": 315,
+        "peninsula": 280
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🏛️",
+          "text": "The County Courthouse: free, and the clock tower has the view over the whole town"
+        },
+        {
+          "emoji": "⛪",
+          "text": "Old Mission Santa Barbara, \"Queen of the Missions\", on the hill"
+        },
+        {
+          "emoji": "🌊",
+          "text": "Stearns Wharf and the beach path along Cabrillo Boulevard"
+        },
+        {
+          "emoji": "🍷",
+          "text": "The Funk Zone at dusk: the Urban Wine Trail, a dozen tasting rooms on foot"
+        },
+        {
+          "emoji": "🥞",
+          "text": "Next morning, Solvang for breakfast on the way home"
+        }
+      ],
+      "season": "All year; it is warmer than the Bay in every month. June is cool and grey here too.",
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Santa_Barbara_County_Courthouse.jpg/1280px-Santa_Barbara_County_Courthouse.jpg",
+      "imageSubject": "Santa Barbara County Courthouse",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-28",
+      "id": "pinnacles",
+      "title": "Pinnacles National Park",
+      "emoji": "🦅",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "minutesFromHome": 105,
+      "durationMin": 480,
+      "priceNote": "$30 a car for seven days",
+      "transit": "US-101 to Gilroy, then Highway 25 to the east entrance, about 1h45",
+      "why": "The remains of an ancient volcano, torn in half by the San Andreas Fault: rock spires, talus caves you walk through with a torch, and California condors riding the thermals overhead. It is the nearest national park and the least visited. It is too hot in summer; go between October and May. Use the east entrance, because the two sides do not connect by road.",
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "outdoor",
+        "weekend"
+      ],
+      "uniqueness": 5,
+      "quality": 5,
+      "url": "https://www.nps.gov/pinn/",
+      "minutesFrom": {
+        "city": 135,
+        "peninsula": 105
+      },
+      "hoursNote": "Open all day — the east entrance is the one for the caves and the High Peaks",
+      "priceLevel": 1,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚗",
+          "text": "Start early at the east entrance; the Bear Gulch lot fills by ten at weekends"
+        },
+        {
+          "emoji": "🔦",
+          "text": "Bear Gulch Cave: a scramble through boulders in the dark — bring a torch, and check it is open (it closes for bats)"
+        },
+        {
+          "emoji": "💧",
+          "text": "Bear Gulch Reservoir, above the cave"
+        },
+        {
+          "emoji": "🦅",
+          "text": "The High Peaks trail: steps cut into the rock and handrails, and the best chance of condors"
+        },
+        {
+          "emoji": "🍒",
+          "text": "Home via Hollister, or the fruit stands on 25 in summer"
+        }
+      ],
+      "season": "October to May. Spring brings wildflowers; summer is regularly over 100°F. Check the cave status on nps.gov before you go.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Pinnacles_National_Park_-_Flickr_-_Joe_Parks.jpg/1280px-Pinnacles_National_Park_-_Flickr_-_Joe_Parks.jpg",
+      "imageSubject": "Pinnacles National Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-28",
+      "id": "angel-island",
+      "title": "Angel Island",
+      "emoji": "⛴️",
+      "categories": [
+        "daytrip",
+        "outdoors",
+        "culture"
+      ],
+      "minutesFromHome": 90,
+      "durationMin": 360,
+      "priceNote": "Ferry ~$15 each way",
+      "transit": "Golden Gate Ferry from the Ferry Building, about 30 min — or the short ferry from Tiburon",
+      "why": "The biggest island in the bay, a state park you can only reach by boat. A five-mile road loops round it with a view of the Golden Gate, the city, Alcatraz and Mount Tam in turn. On the far side is the Immigration Station, where from 1910 to 1940 Chinese immigrants were held, sometimes for months, and carved poems into the barracks walls. They are still there. Check the ferry times first: there are only a few sailings a day.",
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "couple",
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "hiddengem",
+        "outdoor",
+        "couple"
+      ],
+      "uniqueness": 5,
+      "quality": 4,
+      "url": "https://www.parks.ca.gov/?page_id=468",
+      "minutesFrom": {
+        "city": 45,
+        "peninsula": 90
+      },
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 1,
+      "booking": "https://angelislandferry.com/",
+      "stops": [
+        {
+          "emoji": "⛴️",
+          "text": "Ferry to Ayala Cove — from the Ferry Building, or from Tiburon"
+        },
+        {
+          "emoji": "🚲",
+          "text": "Walk or cycle the Perimeter Road, 5 miles, with the whole bay in turn"
+        },
+        {
+          "emoji": "📜",
+          "text": "The Immigration Station and its poems, on the north-east side"
+        },
+        {
+          "emoji": "⛰️",
+          "text": "Or climb Mount Livermore, 788 feet, for the view from the middle of the bay"
+        },
+        {
+          "emoji": "🧺",
+          "text": "Picnic back at Ayala Cove before the last boat"
+        }
+      ],
+      "season": "All year, weekends especially. The Blue & Gold boat from Pier 41 is suspended in 2026, so use the Ferry Building or Tiburon.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Angel_Island_%28California%29.jpg/1280px-Angel_Island_%28California%29.jpg",
+      "imageSubject": "Angel Island (California)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }

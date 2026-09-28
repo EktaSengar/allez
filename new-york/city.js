@@ -901,11 +901,23 @@ const City = (() => {
 
   const serviceWorker = false;
 
+  /* The lines under the Nights headings. */
+  const nightNotes = {
+    afterdark:   'A free ferry past the statue, the bridge at midnight, and the Met after five',
+    venue:       'The rooms bands play on the way up, and the hall everyone has heard of',
+    jazz:        'The Vanguard at eight and ten, and Smalls until the sun comes up',
+    comedy:      'The basement on MacDougal where the famous drop in unannounced',
+    club:        'Bushwick warehouses, a leafy yard in Ridgewood, and a circus on the dance floor',
+    bar:         'Murals at the Carlyle, sawdust at McSorley\'s, and a door in a phone booth',
+    nightmarket: 'Saturday nights in Flushing Meadows, until the end of October',
+    latenight:   'Pastrami all weekend, and pierogi at three in the morning'
+  };
+
   /* What discover.mjs asks OpenStreetMap for, beyond the base layers.
      `buildings`: places drawn as a building outline as well as a pin. */
   const discover = { buildings: true };
 
-  return { id, name, searchRegion, ua, bbox, discover, serviceWorker, zone, reach, centre, views,
+  return { id, name, searchRegion, ua, bbox, discover, serviceWorker, nightNotes, zone, reach, centre, views,
            holidays, shutsOnHoliday, money, weather, luma, conferences, lumaPage, events, practices };
 })();
 

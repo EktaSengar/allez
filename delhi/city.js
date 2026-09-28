@@ -755,6 +755,17 @@ const City = (() => {
      and sw.js deserves splitting rather than copying. */
   const serviceWorker = false;
 
+  /* The lines under the Nights headings. */
+  const nightNotes = {
+    afterdark:   'Qawwali on a Thursday, and the Red Fort lit up after dark',
+    venue:       'Concerts and talks by Lodhi Garden, many of them free',
+    jazz:        'A proper jazz room in Safdarjung Enclave',
+    comedy:      'Stand-up up five floors in Shahpur Jat, and a theatre built of brick and courtyards',
+    bar:         'Cocktails with Indian spirits, a phone-booth speakeasy, and rooftops over a medieval lake',
+    nightmarket: 'Every state in one bazaar, open until ten',
+    latenight:   'Mughlai past midnight by Jama Masjid, and paranthas under a flyover'
+  };
+
   /* ---------- what counts as notable here ----------
 
      Extra Wikidata classes for scripts/notable.mjs, on top of the cafés
@@ -832,7 +843,7 @@ const City = (() => {
     ]
   };
 
-  return { id, name, ua, bbox, serviceWorker, zone, air, seasons, reach, notable, luma, conferences, lumaPage, practices, discover,
+  return { id, name, ua, bbox, serviceWorker, nightNotes, zone, air, seasons, reach, notable, luma, conferences, lumaPage, practices, discover,
            centre, views, holidays, shutsOnHoliday, money, weather };
 })();
 

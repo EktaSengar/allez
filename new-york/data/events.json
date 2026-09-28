@@ -1,5 +1,489 @@
 {
-  "generated": "2026-09-27",
-  "note": "Hand-written dated events. Empty.",
-  "items": []
+  "generated": "2026-09-28",
+  "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the team's or organiser's own schedule on the date given.",
+  "items": [
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "jack-o-lantern-blaze-2026",
+      "title": "The Great Jack O'Lantern Blaze",
+      "emoji": "🎃",
+      "coords": [
+        41.1914,
+        -73.87725
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Van Cortlandt Manor, Croton-on-Hudson",
+      "start": "2026-09-18",
+      "end": "2026-11-08",
+      "durationMin": 90,
+      "priceNote": "From ~$24; advance tickets only",
+      "why": "More than seven thousand carved pumpkins lit up after dark in the grounds of an eighteenth-century manor up the Hudson, arranged into dinosaurs, a carousel and a bridge, and set to music. Metro-North to Croton-Harmon, then a short taxi. Tickets are sold only in advance, by time slot, and October weekends go first.",
+      "labels": [
+        "bookahead",
+        "couple"
+      ],
+      "url": "https://www.pumpkinblaze.org/plan-your-visit/",
+      "source": "Historic Hudson Valley",
+      "booking": "https://pumpkinblaze.org/blaze-ticket-options/",
+      "priceLevel": 2,
+      "price": 24,
+      "hoursNote": "Every night in October, and selected nights in September and November, by timed ticket",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Van-cortland-manor.jpg/1280px-Van-cortland-manor.jpg",
+      "imageSubject": "Van Cortlandt Manor",
+      "imageKind": "context",
+      "imageCredit": "Dmadeo · CC BY-SA 4.0"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "liberty-lynx-g2-2026",
+      "title": "Liberty v Lynx — playoffs, Game 2",
+      "emoji": "🏀",
+      "coords": [
+        40.68265,
+        -73.97512
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Barclays Center, Brooklyn",
+      "start": "2026-09-29",
+      "end": "2026-09-29",
+      "durationMin": 180,
+      "priceNote": "Playoff prices",
+      "why": "The Liberty's one home game of their first-round series, as the eighth seed against the top-seeded Lynx, a rematch of the 2024 final. It is best of three, so this could be the night they stay alive. Barclays will be loud.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://www.barclayscenter.com/events/detail/new-york-liberty-vs-minnesota-lynx-playoffs-2026",
+      "source": "Barclays Center; FOX 9",
+      "booking": "https://www.barclayscenter.com/events/detail/new-york-liberty-vs-minnesota-lynx-playoffs-2026",
+      "priceLevel": 3,
+      "startTime": "19:30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Barclays_Center_-_2026_%2855268559424%29.jpg/1280px-Barclays_Center_-_2026_%2855268559424%29.jpg",
+      "imageSubject": "Barclays Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "baseball"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "yankees-red-sox-wild-card-2026",
+      "title": "Yankees v Red Sox — the Wild Card Series",
+      "emoji": "⚾",
+      "coords": [
+        40.82963,
+        -73.92617
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Yankee Stadium, the Bronx",
+      "start": "2026-09-29",
+      "end": "2026-10-01",
+      "durationMin": 180,
+      "priceNote": "Playoff prices",
+      "why": "The oldest rivalry in baseball, in the postseason, in the Bronx. All three games of the best-of-three series are at Yankee Stadium. Take the 4 or the D, and get there early for batting practice.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://www.mlb.com/news/yankees-2026-postseason-faq",
+      "source": "MLB; NBC Sports",
+      "booking": "https://www.mlb.com/yankees/tickets",
+      "priceLevel": 4,
+      "hoursNote": "Game 1 Tuesday 29 September, Game 2 Wednesday; a Game 3, if needed, on Thursday 1 October",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Yankee_Stadium_overhead_2010.jpg/1280px-Yankee_Stadium_overhead_2010.jpg",
+      "imageSubject": "Yankee Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "hockey"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "rangers-opener-2026",
+      "title": "Rangers home opener v Lightning",
+      "emoji": "🏒",
+      "coords": [
+        40.75052,
+        -73.99345
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Madison Square Garden",
+      "start": "2026-10-01",
+      "end": "2026-10-01",
+      "durationMin": 180,
+      "priceNote": "Expensive",
+      "why": "The Rangers' first game at the Garden this season, against Tampa Bay, with the introductions and the organ at full volume.",
+      "labels": [],
+      "url": "https://www.nhl.com/rangers/tickets/single-game-tickets",
+      "source": "New York Rangers; Sports Illustrated",
+      "booking": "https://www.nhl.com/rangers/tickets/single-game-tickets",
+      "priceLevel": 4,
+      "hoursNote": "Thursday evening — puck drop time on the Rangers site",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Madison_Square_Garden_%28MSG%29_-_Full_%2848124330357%29.jpg/1280px-Madison_Square_Garden_%28MSG%29_-_Full_%2848124330357%29.jpg",
+      "imageSubject": "Madison Square Garden",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "gotham-angel-city-2026",
+      "title": "Gotham FC v Angel City",
+      "emoji": "⚽",
+      "coords": [
+        40.73682,
+        -74.15027
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Sports Illustrated Stadium, Harrison, NJ",
+      "start": "2026-10-04",
+      "end": "2026-10-04",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$25",
+      "why": "Gotham's second-to-last home game of the regular season, a Sunday afternoon match with Gotham chasing the NWSL Shield. The upper bowl is open, so tickets are there. PATH to Harrison.",
+      "labels": [],
+      "url": "https://www.gothamfc.com/news/update-gotham-fc-match-against-angel-city-changes-time-upper-bowl-open",
+      "source": "Gotham FC",
+      "booking": "https://www.gothamfc.com/tickets",
+      "priceLevel": 2,
+      "startTime": "13:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/NYRB_vs._D.C._United_at_Red_Bull_Arena_%2820180827131153%29.jpg/1280px-NYRB_vs._D.C._United_at_Red_Bull_Arena_%2820180827131153%29.jpg",
+      "imageSubject": "Sports Illustrated Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "knicks-banner-night-2026",
+      "title": "Knicks opening night: the banner goes up",
+      "emoji": "🏆",
+      "coords": [
+        40.75052,
+        -73.99345
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Madison Square Garden",
+      "start": "2026-10-20",
+      "end": "2026-10-20",
+      "durationMin": 180,
+      "priceNote": "The hardest ticket in town",
+      "why": "The Knicks get their championship rings and raise the franchise's first title banner in 53 years before tipping off against the 76ers. Tickets are near impossible and absurdly priced; if you do not have one, watch it in any bar in the city, which will be louder.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://abc7ny.com/post/knicks-2026-2027-schedule-released-nba-new-york-open-philadelphia-76ers/19674103/",
+      "source": "ABC7 New York; Yahoo Sports",
+      "booking": "https://www.ticketmaster.com/new-york-knicks-tickets/artist/805988?home_away=home",
+      "priceLevel": 4,
+      "hoursNote": "Tuesday evening — tip-off time on the NBA schedule",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Madison_Square_Garden_%28MSG%29_-_Full_%2848124330357%29.jpg/1280px-Madison_Square_Garden_%28MSG%29_-_Full_%2848124330357%29.jpg",
+      "imageSubject": "Madison Square Garden",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "nets-opener-2026",
+      "title": "Nets home opener v Hornets",
+      "emoji": "🏀",
+      "coords": [
+        40.68265,
+        -73.97512
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Barclays Center, Brooklyn",
+      "start": "2026-10-21",
+      "end": "2026-10-21",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$30",
+      "why": "The Nets open the season at home against Charlotte, the night after the Knicks' banner. It is the affordable way to see the first NBA game of the year in New York.",
+      "labels": [],
+      "url": "https://sports.yahoo.com/articles/brooklyn-nets-open-season-home-192121020.html",
+      "source": "Brooklyn Nets; Yahoo Sports",
+      "booking": "https://www.ticketmaster.com/brooklyn-nets-tickets/artist/805983",
+      "priceLevel": 2,
+      "startTime": "19:30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Barclays_Center_-_2026_%2855268559424%29.jpg/1280px-Barclays_Center_-_2026_%2855268559424%29.jpg",
+      "imageSubject": "Barclays Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "nycfc-atlanta-2026",
+      "title": "NYCFC v Atlanta United at Citi Field",
+      "emoji": "⚽",
+      "coords": [
+        40.75707,
+        -73.84582
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Citi Field, Queens",
+      "start": "2026-10-28",
+      "end": "2026-10-28",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$25",
+      "why": "A midweek MLS game in the Mets' ballpark, one of NYCFC's last two home games of the regular season.",
+      "labels": [],
+      "url": "https://www.oursportscentral.com/services/releases/new-york-city-fc-announce-schedule-updates-for-final-regular-season-home-matches/n-6413551",
+      "source": "New York City FC",
+      "booking": "https://www.ticketmaster.com/new-york-city-fc-tickets/artist/1991293?home_away=home",
+      "priceLevel": 2,
+      "hoursNote": "Wednesday evening",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Citi_Field_from_the_south_2025.jpg/1280px-Citi_Field_from_the_south_2025.jpg",
+      "imageSubject": "Citi Field",
+      "imageKind": "subject",
+      "imageCredit": "Jeffme · CC0"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "nycfc-montreal-2026",
+      "title": "NYCFC v CF Montréal — the home finale",
+      "emoji": "⚽",
+      "coords": [
+        40.75707,
+        -73.84582
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Citi Field, Queens",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~$25",
+      "why": "The last home game of NYCFC's regular season, on Halloween, at Citi Field.",
+      "labels": [],
+      "url": "https://www.oursportscentral.com/services/releases/new-york-city-fc-announce-schedule-updates-for-final-regular-season-home-matches/n-6413551",
+      "source": "New York City FC",
+      "booking": "https://www.ticketmaster.com/new-york-city-fc-tickets/artist/1991293?home_away=home",
+      "priceLevel": 2,
+      "hoursNote": "Saturday, Halloween",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Citi_Field_from_the_south_2025.jpg/1280px-Citi_Field_from_the_south_2025.jpg",
+      "imageSubject": "Citi Field",
+      "imageKind": "subject",
+      "imageCredit": "Jeffme · CC0"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "free",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "village-halloween-parade-2026",
+      "title": "The Village Halloween Parade",
+      "emoji": "🎭",
+      "coords": [
+        40.72234,
+        -74.00488
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Sixth Avenue, from Canal Street north",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "durationMin": 180,
+      "priceNote": "Free — or march in costume",
+      "why": "The biggest Halloween parade in the country, up Sixth Avenue from Canal Street: giant puppets, bands and tens of thousands of people in costume. Anyone in costume can march, by lining up on Sixth Avenue below Canal. Watching from the side is a crush, so marching is the better way to see it.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "url": "https://halloween-nyc.com/",
+      "source": "Village Halloween Parade",
+      "booking": false,
+      "priceLevel": 0,
+      "price": 0,
+      "startTime": "19:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Greenwich_Village_Halloween_Parade_%286451249051%29.jpg/1280px-Greenwich_Village_Halloween_Parade_%286451249051%29.jpg",
+      "imageSubject": "Village Halloween Parade",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "morning"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "nyc-marathon-2026",
+      "title": "The New York City Marathon",
+      "emoji": "🏃",
+      "coords": [
+        40.80285,
+        -73.95162
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "First Avenue, the Bronx, Fifth Avenue and Central Park",
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "durationMin": 180,
+      "priceNote": "Free to watch",
+      "why": "Fifty thousand runners through all five boroughs, on the fiftieth anniversary of the first five-borough race. The best place to watch is First Avenue in the East 60s to 90s, where the runners come off the Queensboro Bridge into a wall of noise, or Fifth Avenue in Harlem at mile 23, where they need you most. Bring a sign with a stranger's name on it.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "url": "https://www.nyrr.org/tcsnycmarathon",
+      "source": "New York Road Runners",
+      "booking": false,
+      "priceLevel": 0,
+      "price": 0,
+      "startTime": "09:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Verrazano_Bridge2.jpg/1280px-Verrazano_Bridge2.jpg",
+      "imageSubject": "Verrazzano-Narrows Bridge",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

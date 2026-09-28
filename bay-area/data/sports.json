@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-14",
-  "note": "Hand-written. Empty.",
+  "generated": "2026-09-28",
+  "note": "Hand-written. Play is what you can do — lessons, pools, courts, gyms and group runs; Trails are hikes and rides; Watch is where the teams play, with dated fixtures in events.json. Researched, not visited.",
   "items": [
     {
       "id": "stanford-dish-loop",
@@ -943,6 +943,1346 @@
       "hoursNote": "Game days only — the schedule is the timetable",
       "booking": "https://gostanford.com/sports/football/schedule",
       "priceLevel": 2
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "afternoon",
+        "weekend",
+        "free",
+        "couple",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "lawn-bowling-ggp",
+      "title": "Lawn bowling in Golden Gate Park",
+      "emoji": "🎳",
+      "zone": "cole-valley",
+      "coords": [
+        37.76861,
+        -122.45898
+      ],
+      "coordsFrom": "osm way/66644315 (Nominatim)",
+      "area": "Bowling Green Drive, Golden Gate Park",
+      "price": 0,
+      "priceNote": "Free lessons",
+      "durationMin": 90,
+      "intent": [
+        "try",
+        "learn",
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "times": "Free lessons Wednesday and Saturday at noon",
+      "startTime": "12:00",
+      "hours": "We,Sa 12:00-13:00",
+      "hoursFrom": "sflbc.org — free lessons Wednesday and Saturday at noon",
+      "url": "https://www.sflbc.org/",
+      "source": "San Francisco Lawn Bowling Club; SF Rec & Park",
+      "pairings": [
+        {
+          "emoji": "🌷",
+          "text": "Conservatory of Flowers, ten minutes east",
+          "id": null
+        },
+        {
+          "emoji": "🍵",
+          "text": "Japanese Tea Garden",
+          "id": null
+        }
+      ],
+      "why": "The oldest public lawn bowling club in the country, founded in 1901 on a green in Golden Gate Park. Members teach anyone who turns up, free, on Wednesdays and Saturdays at noon, and the lesson takes about an hour. Wear flat-soled shoes, because heels ruin the green. It is gentle, oddly competitive, and nobody you know has done it.",
+      "labels": [
+        "free",
+        "hiddengem",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Lawn_Bowling_-_Tim_Mason1.jpg/1280px-Lawn_Bowling_-_Tim_Mason1.jpg",
+      "imageSubject": "Lawn bowls",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "swim",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "aquatic-park-swim",
+      "title": "Swim in the bay at Aquatic Park",
+      "emoji": "🏊",
+      "zone": "fisherman-s-wharf",
+      "coords": [
+        37.80778,
+        -122.42135
+      ],
+      "coordsFrom": "osm way/288391828 (Nominatim)",
+      "area": "Dolphin Club or South End Rowing Club, Jefferson Street",
+      "price": 7,
+      "priceNote": "About $6.50 a day",
+      "durationMin": 90,
+      "intent": [
+        "try",
+        "casual"
+      ],
+      "difficulty": "intermediate",
+      "times": "Public days Tuesday to Saturday, 10am to 6pm, alternating between the two clubs",
+      "hours": "Tu-Sa 10:00-18:00",
+      "hoursFrom": "Dolphin Club and South End Rowing Club — public days Tuesday to Saturday, 10am to 6pm",
+      "url": "https://serc.com/swimming-aquatic-park",
+      "source": "South End Rowing Club; Dolphin Club; Openwaterpedia",
+      "pairings": [
+        {
+          "emoji": "☕",
+          "text": "Buena Vista for an Irish coffee after",
+          "id": null
+        },
+        {
+          "emoji": "🎡",
+          "text": "Musée Mécanique on Pier 45",
+          "id": null
+        }
+      ],
+      "why": "Two rowing and swimming clubs from the 1870s share the beach at Aquatic Park, and on public days, Tuesday to Saturday, anyone can pay the day fee and use the sauna, showers and the cove. The water is about 55 to 62°F all year, and the regulars swim in it without wetsuits. Sign the waiver, swim along the buoys inside the breakwater, and sit in the sauna after. Check which club has the public day before you go.",
+      "labels": [
+        "hiddengem"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Dolphin_club_front.jpg/1280px-Dolphin_club_front.jpg",
+      "imageSubject": "Dolphin Club (San Francisco)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "surf"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "surf-linda-mar",
+      "title": "Learn to surf at Linda Mar",
+      "emoji": "🏄",
+      "zone": "pacifica",
+      "coords": [
+        37.59588,
+        -122.50246
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Pacifica State Beach (Linda Mar), Pacifica",
+      "price": 94,
+      "priceNote": "Group lessons ~$94, board and wetsuit included",
+      "durationMin": 150,
+      "intent": [
+        "try",
+        "learn"
+      ],
+      "difficulty": "beginner",
+      "bookAhead": true,
+      "times": "Lessons most mornings — book ahead",
+      "hoursNote": "Lessons are booked for a time, usually mornings, when the wind is lighter",
+      "url": "https://norcalsurfshop.com/surf-lessons/",
+      "booking": "https://norcalsurfshop.com/surf-lessons/",
+      "source": "Nor-Cal Surf Shop; Visit Pacifica",
+      "pairings": [
+        {
+          "emoji": "🌮",
+          "text": "Taco Bell Cantina on the sand, famously",
+          "id": null
+        },
+        {
+          "emoji": "🥾",
+          "text": "Mori Point for a walk after",
+          "id": null
+        }
+      ],
+      "why": "The gentlest surf near the city: a long, sandy cove at the south end of Pacifica, twenty minutes from San Francisco, where the waves break slowly and the bottom is sand. Nor-Cal Surf Shop, across the highway, runs lessons with the board and a thick wetsuit included. Two hours and most people stand up. Mornings are calmer; afternoons bring wind and fog.",
+      "labels": [
+        "bookahead"
+      ],
+      "priceLevel": 4,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Pacifica_state_beach.jpg/1280px-Pacifica_state_beach.jpg",
+      "imageSubject": "Pacifica State Beach",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "climbing"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "climb-movement-belmont",
+      "title": "Climbing at Movement Belmont",
+      "emoji": "🧗",
+      "zone": "belmont",
+      "coords": [
+        37.52893,
+        -122.2876
+      ],
+      "coordsFrom": "osm way/99824892 (Nominatim)",
+      "area": "The old Belmont Theatre, 100 El Camino Real, Belmont",
+      "price": 33,
+      "priceNote": "Day pass ~$33; shoes to rent",
+      "durationMin": 120,
+      "intent": [
+        "try",
+        "casual",
+        "group"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Open early to late every day — check the gym for class times",
+      "url": "https://movementgyms.com/belmont/",
+      "source": "Movement Climbing",
+      "why": "A climbing gym inside the old Belmont movie theatre, with walls going up where the screen was: about 19,000 square feet of bouldering and ropes, including real crack climbs. It is half an hour up from Palo Alto and the Peninsula's best place to start. Take the intro class, which teaches you to belay, and you can climb ropes with a friend on your own after that. Movement also has gyms in Sunnyvale, Mountain View, Santa Clara and San Francisco.",
+      "labels": [
+        "indoor"
+      ],
+      "priceLevel": 2,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Grimpeurs_Voiron_2b.jpg/1280px-Grimpeurs_Voiron_2b.jpg",
+      "imageSubject": "Climbing wall",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "climbing"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "climb-mission-cliffs",
+      "title": "Climbing at Mission Cliffs",
+      "emoji": "🧗",
+      "zone": "mission",
+      "coords": [
+        37.76068,
+        -122.41241
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "2295 Harrison Street, the Mission",
+      "price": 30,
+      "priceNote": "Day pass ~$30; shoes to rent",
+      "durationMin": 120,
+      "intent": [
+        "try",
+        "casual",
+        "group"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Open early to late every day — check the gym for class times",
+      "url": "https://touchstoneclimbing.com/mission-cliffs/",
+      "source": "Touchstone Climbing",
+      "why": "San Francisco's big old climbing gym, in a warehouse in the Mission: tall roped walls, a bouldering cave and a weights room. It is sociable in the evenings, when half the city's climbers come after work. Book the intro to top-rope class, and after that a day pass is all you need.",
+      "labels": [
+        "indoor"
+      ],
+      "priceLevel": 2,
+      "booking": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Bouldering.jpg",
+      "imageSubject": "Bouldering",
+      "imageKind": "context",
+      "imageCredit": "Ram Sripracha (talk · contribs) · CC BY-SA 4.0"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "tennis",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening",
+        "weekend",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "goldman-tennis-center",
+      "title": "Tennis at the Golden Gate Park courts",
+      "emoji": "🎾",
+      "zone": "inner-richmond",
+      "coords": [
+        37.77011,
+        -122.45921
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Goldman Tennis Center, east end of Golden Gate Park",
+      "price": 16,
+      "priceNote": "Courts from ~$16 an hour",
+      "durationMin": 90,
+      "intent": [
+        "casual",
+        "compete",
+        "learn"
+      ],
+      "difficulty": "intermediate",
+      "hoursNote": "Courts by reservation — book online; SF residents can book further ahead",
+      "url": "https://www.lifetimeactivities.com/san-francisco/",
+      "booking": "https://www.lifetimeactivities.com/san-francisco/court-reservations-policies/",
+      "source": "Lifetime Activities; Mission Local",
+      "why": "Seventeen courts in Golden Gate Park, rebuilt in 2021 with a clubhouse and lights for evening play. You book a court by the hour rather than queue for one, which is the whole difference from the free park courts. Clinics and lessons run for every level, if you want to start again properly.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Golden_Gate_Park_and_The_Panhandle_%285189323840%29.jpg/1280px-Golden_Gate_Park_and_The_Panhandle_%285189323840%29.jpg",
+      "imageSubject": "Golden Gate Park",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "golf",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "baylands-golf-links",
+      "title": "Baylands Golf Links",
+      "emoji": "⛳",
+      "coords": [
+        37.45729,
+        -122.11883
+      ],
+      "coordsFrom": "osm way/23631855 (Nominatim)",
+      "area": "1875 Embarcadero Road, Palo Alto",
+      "price": 55,
+      "priceNote": "~$30–55 a round; cheaper for residents",
+      "durationMin": 240,
+      "intent": [
+        "casual",
+        "compete"
+      ],
+      "difficulty": "intermediate",
+      "hoursNote": "Tee times from dawn — book online",
+      "url": "https://www.paloalto.gov/Residents/Recreation/Baylands-Golf-Links",
+      "booking": "https://baylands.quick18.com/",
+      "source": "City of Palo Alto; Yelp",
+      "why": "Palo Alto's municipal course, rebuilt in 2018 as a links on the edge of the Baylands: no trees, marsh grass, wind off the bay and egrets on the fairways. It is fully public, and the green fees are low for the Peninsula, lower still with a Palo Alto or Bay Area ID. There is a driving range, and the Baylands trails start next door.",
+      "labels": [],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Palo_Alto_Baylands_January_2013_005.jpg/1280px-Palo_Alto_Baylands_January_2013_005.jpg",
+      "imageSubject": "Palo Alto Baylands Nature Preserve",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cycling",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "hellyer-velodrome",
+      "title": "Ride the Hellyer Velodrome",
+      "emoji": "🚴",
+      "coords": [
+        37.28808,
+        -121.81268
+      ],
+      "coordsFrom": "osm relation/9048125 (Nominatim)",
+      "area": "Hellyer County Park, San Jose",
+      "priceNote": "Beginner sessions and rental bikes — check the schedule",
+      "durationMin": 120,
+      "intent": [
+        "try",
+        "learn"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Beginner sessions on Saturday mornings",
+      "url": "https://hellyervelodrome.com/",
+      "source": "Hellyer Velodrome; Santa Clara County Parks",
+      "why": "A banked concrete cycling track in a county park in south San Jose, built in 1962. On Saturday mornings supervisors run beginner sessions for people who have never ridden a fixed-gear track bike, and they will lend you one. The first lap on the banking, up near the rail, is frightening and then wonderful.",
+      "labels": [
+        "hiddengem"
+      ],
+      "priceLevel": 1,
+      "booking": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Hellyerparkvelo.jpg",
+      "imageSubject": "Hellyer Park Velodrome",
+      "imageKind": "subject",
+      "imageCredit": "Travis Crawford · CC BY-SA 2.0"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "paddle"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "weekend",
+        "couple",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "city-kayak-mccovey",
+      "title": "Kayak to McCovey Cove",
+      "emoji": "🛶",
+      "zone": "south-beach",
+      "coords": [
+        37.78021,
+        -122.3858
+      ],
+      "coordsFrom": "osm node/358804881 (Nominatim)",
+      "area": "South Beach Harbor, by Oracle Park",
+      "priceNote": "Rentals and short guided trips",
+      "durationMin": 120,
+      "intent": [
+        "try",
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Rentals and tours from the harbour — book a slot",
+      "url": "https://citykayak.com/",
+      "booking": "https://webreserv.com/citykayakca",
+      "source": "City Kayak; Paddling Magazine",
+      "why": "A kayak rental on the South Beach Harbor docks, ten minutes' paddle from McCovey Cove behind Oracle Park and up Mission Creek past the houseboats. Beginners go on the short guided trips; anyone who has paddled before can rent and go. On Giants days people float in the cove waiting for a home run to land in the water.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/McCovey_Cove_%28767980568%29.jpg/1280px-McCovey_Cove_%28767980568%29.jpg",
+      "imageSubject": "McCovey Cove",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "paddle"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "sea-trek-sausalito",
+      "title": "Kayak or paddleboard from Sausalito",
+      "emoji": "🛶",
+      "coords": [
+        37.86573,
+        -122.49774
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Schoonmaker Point Marina, Sausalito",
+      "price": 35,
+      "priceNote": "Rentals ~$35 an hour; intro class ~$125",
+      "durationMin": 150,
+      "intent": [
+        "try",
+        "learn",
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Rentals daily from the marina — mornings are calmest",
+      "url": "https://www.seatrek.com/rentals-sausalito/",
+      "booking": "https://www.seatrek.com/kayak-sup-rentals/",
+      "source": "Sea Trek; Visit Marin",
+      "why": "Paddle out from a sheltered beach in Sausalito and along Richardson Bay, past the floating houseboats and the harbour seals, with the city across the water. Rentals go by the hour and there is an intro class if you have never been in a kayak. Go in the morning: the wind comes up through the Golden Gate after lunch.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Richardson_Bay_4.jpg/1280px-Richardson_Bay_4.jpg",
+      "imageSubject": "Richardson Bay",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "swim",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "rinconada-pool",
+      "title": "Rinconada Pool",
+      "emoji": "🏊",
+      "zone": "palo-alto",
+      "coords": [
+        37.44395,
+        -122.14099
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "777 Embarcadero Road, Palo Alto",
+      "price": 6,
+      "priceNote": "About $6 a swim",
+      "durationMin": 60,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "hours": "Mo-Fr 06:00-16:00; Sa 06:00-17:00",
+      "hoursFrom": "Palo Alto Swim — lap swim weekdays 6am to 4pm, Saturday to 5pm",
+      "url": "https://paloaltoswim.com/community-swimming/lap-swim/",
+      "source": "Palo Alto Swim; City of Palo Alto",
+      "why": "Palo Alto's outdoor pool in Rinconada Park: a big heated outdoor pool, open for lap swimming from six in the morning. It is the cheapest good exercise in town and the best way to start a hot day. Pay at the desk and share a lane. Check the schedule in winter, when hours shorten.",
+      "labels": [
+        "cheap"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG/1280px-Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG",
+      "imageSubject": "Palo Alto, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "free",
+        "group"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "november-project-sf",
+      "title": "November Project",
+      "emoji": "🌄",
+      "zone": "fisherman-s-wharf",
+      "coords": [
+        37.80628,
+        -122.42899
+      ],
+      "coordsFrom": "osm way/82207054 (Nominatim)",
+      "area": "Fort Mason or Alta Plaza, early mornings",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 60,
+      "intent": [
+        "group",
+        "try"
+      ],
+      "difficulty": "beginner",
+      "startTime": "06:29",
+      "times": "Monday and Wednesday at 6:29am; Friday hills at the Golden Gate",
+      "hoursNote": "Monday and Wednesday at 6:29am, Fort Mason or Alta Plaza; Friday on the hills — check the group for the week",
+      "url": "https://november-project.com/san-francisco-ca/",
+      "source": "November Project; SF Funcheap",
+      "why": "A free, loud, early workout that started in Boston and is now in dozens of cities. In San Francisco the group meets at 6:29 on Monday and Wednesday mornings, at Fort Mason or Alta Plaza, for stairs, hills and bodyweight circuits, and on the hills near the bridge on Fridays. You just show up. Somebody will hug you. It is the fastest way to meet people who run.",
+      "labels": [
+        "free"
+      ],
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/FortMasonWharves.JPG/1280px-FortMasonWharves.JPG",
+      "imageSubject": "Fort Mason",
+      "imageKind": "context",
+      "imageCredit": "Original uploader was SuperJumbo at en.wikipedia · CC BY-SA 3.0"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "afternoon",
+        "weekend",
+        "free",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 3,
+      "uniqueness": 4,
+      "id": "ggp-disc-golf",
+      "title": "Disc golf in Golden Gate Park",
+      "emoji": "🥏",
+      "coords": [
+        37.77098,
+        -122.48941
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Marx Meadow, western Golden Gate Park",
+      "price": 0,
+      "priceNote": "Free; bring or buy a disc",
+      "durationMin": 90,
+      "intent": [
+        "try",
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "hours": "sunrise-sunset",
+      "hoursFrom": "SF Rec & Park — park hours",
+      "url": "https://sfrecpark.org/",
+      "source": "SF Rec & Park; PDGA course directory",
+      "why": "Eighteen holes among the cypress and eucalyptus of western Golden Gate Park, free and open to anyone. It is golf with a frisbee: a par three is a throw between the trees to a chain basket. Any sports shop sells a starter disc for a few dollars. Weekends are busy, so let faster groups through.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Disc_golf.jpg",
+      "imageSubject": "Disc golf",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening",
+        "free",
+        "spontaneous",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "run-crissy-field",
+      "title": "The Crissy Field run",
+      "emoji": "🏃",
+      "zone": "cow-hollow",
+      "coords": [
+        37.8066,
+        -122.43912
+      ],
+      "coordsFrom": "osm way/16761472 (Nominatim)",
+      "area": "Marina Green to Fort Point and back",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 50,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 8,
+      "startTime": "07:30",
+      "hours": "24/7",
+      "hoursFrom": "Golden Gate National Recreation Area — open every day",
+      "url": "https://www.parksconservancy.org/parks/crissy-field",
+      "source": "Golden Gate National Parks Conservancy",
+      "stops": [
+        {
+          "emoji": "🚪",
+          "text": "Start at the Marina Green, by the yacht harbour",
+          "walk": "0 km"
+        },
+        {
+          "emoji": "🏖️",
+          "text": "Along the Crissy Field promenade, flat and on the water",
+          "walk": "1.5 km"
+        },
+        {
+          "emoji": "☕",
+          "text": "Past the Warming Hut",
+          "walk": "3 km"
+        },
+        {
+          "emoji": "🌉",
+          "text": "Touch the fence at Fort Point, right under the bridge",
+          "walk": "4 km"
+        },
+        {
+          "emoji": "↩️",
+          "text": "Turn and run back with the city in front of you",
+          "walk": "8 km"
+        }
+      ],
+      "pairings": [
+        {
+          "emoji": "☕",
+          "text": "Warming Hut at the turnaround",
+          "id": null
+        },
+        {
+          "emoji": "🥐",
+          "text": "Chestnut Street bakeries after",
+          "id": null
+        }
+      ],
+      "why": "The best run in San Francisco and one of the flattest: the old airfield along the bay from the Marina to the foot of the Golden Gate. It is four kilometres out on packed gravel, with the bridge getting bigger the whole way, and the tradition is to touch the fence at Fort Point before turning round. Go early before the wind, or at sunset when the bridge goes orange.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Golden_Gate_Bridge_tower_views_07.jpg/1280px-Golden_Gate_Bridge_tower_views_07.jpg",
+      "imageSubject": "Fort Point, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "run-lake-merced",
+      "title": "Lake Merced loop",
+      "emoji": "🏃",
+      "coords": [
+        37.72754,
+        -122.49777
+      ],
+      "coordsFrom": "osm relation/16308125 (Nominatim)",
+      "area": "Lake Merced, south-west San Francisco",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 45,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 7.2,
+      "hours": "24/7",
+      "hoursFrom": "SF Rec & Park",
+      "url": "https://sfrecpark.org/",
+      "source": "SF Rec & Park",
+      "why": "A paved path all the way round the city's biggest lake, 4.5 miles with no traffic lights and almost no hills. It is where the city's runners go to do a steady long run, and one lap is a clean seven kilometres. Fog sits on it most mornings. Park on Lake Merced Boulevard and run it anticlockwise, so the lake is on your right.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Lake_Merced_at_SFSU.jpg/1280px-Lake_Merced_at_SFSU.jpg",
+      "imageSubject": "Lake Merced",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "free",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "run-embarcadero",
+      "title": "The Embarcadero run",
+      "emoji": "🏃",
+      "zone": "fisherman-s-wharf",
+      "coords": [
+        37.80985,
+        -122.41035
+      ],
+      "coordsFrom": "osm way/128240121 (Nominatim)",
+      "area": "Pier 39 to Oracle Park along the water",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 40,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 6.5,
+      "startTime": "07:00",
+      "hours": "24/7",
+      "hoursFrom": "Port of San Francisco",
+      "url": "https://sfport.com/",
+      "source": "Port of San Francisco",
+      "stops": [
+        {
+          "emoji": "🦭",
+          "text": "Start at Pier 39 — sea lions on the docks",
+          "walk": "0 km"
+        },
+        {
+          "emoji": "🕰️",
+          "text": "Past the Ferry Building clock tower",
+          "walk": "1.8 km"
+        },
+        {
+          "emoji": "🌉",
+          "text": "Under the Bay Bridge, by Rincon Park",
+          "walk": "2.6 km"
+        },
+        {
+          "emoji": "⚾",
+          "text": "Turn at Oracle Park",
+          "walk": "3.3 km"
+        }
+      ],
+      "why": "Flat, wide and ten minutes from North Beach: the promenade along the piers from Pier 39 to the ballpark and back, about six and a half kilometres. Go before eight, while it is joggers and delivery trucks rather than crowds. On a Saturday, finish at the Ferry Building farmers' market.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/San_Francisco_Ferry_at_night.jpg",
+      "imageSubject": "The Embarcadero (San Francisco)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "run-stanford-perimeter",
+      "title": "Stanford Perimeter Trail",
+      "emoji": "🏃",
+      "coords": [
+        37.41979,
+        -122.17392
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Around the Stanford campus, from Stanford Avenue or Junipero Serra",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 40,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 5.5,
+      "hours": "24/7",
+      "hoursFrom": "Stanford University — public trail",
+      "url": "https://lbre.stanford.edu/",
+      "source": "Stanford Land, Buildings & Real Estate",
+      "why": "A soft-surfaced trail on the edge of the campus, along Stanford Avenue and Junipero Serra, that most Palo Alto runners use because it is flat and shaded in places and there are no cars. It is about three and a half miles, and it joins the Dish loop if you want the hills. Run it in the evening, when the foothills catch the sun.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Stanford_University_Main_Quad_-_7_June_2009.jpg/1280px-Stanford_University_Main_Quad_-_7_June_2009.jpg",
+      "imageSubject": "Main Quad (Stanford University)",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "zone": "palo-alto"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "free",
+        "couple",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "hike-lands-end",
+      "title": "Lands End Coastal Trail",
+      "emoji": "🥾",
+      "coords": [
+        37.77976,
+        -122.5116
+      ],
+      "coordsFrom": "osm way/250216260 (Nominatim)",
+      "area": "Lands End Lookout, 680 Point Lobos Ave · 3.4 mi loop · rolling, with stairs",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 90,
+      "hours": "sunrise-sunset",
+      "hoursFrom": "Golden Gate National Recreation Area; visitor centre 9 to 5",
+      "url": "https://www.parksconservancy.org/parks/lands-end",
+      "source": "Golden Gate National Parks Conservancy; AllTrails",
+      "why": "The wild edge of the city: a cliff-top trail through cypress from the ruins of the Sutro Baths towards the Golden Gate, with shipwrecks below at low tide. Take the steps down to the stone labyrinth on the point and to Mile Rock Beach. The loop is about 3.4 miles with a few hundred steps. Start at the Lookout and finish with the sunset over the baths.",
+      "labels": [
+        "free",
+        "dontmiss",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Coastal_Trail_and_Golden_Gate_Bridge%2C_April_2019.JPG/1280px-Coastal_Trail_and_Golden_Gate_Bridge%2C_April_2019.JPG",
+      "imageSubject": "Lands End (San Francisco)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "couple",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "hike-mount-tam-east-peak",
+      "title": "Mount Tam — East Peak",
+      "emoji": "⛰️",
+      "coords": [
+        37.92858,
+        -122.57834
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "East Peak lot · 0.7 mi paved loop, then the Plank Trail to the lookout",
+      "price": 8,
+      "priceNote": "$8 parking, cash",
+      "durationMin": 90,
+      "hours": "07:00-sunset",
+      "hoursFrom": "Mount Tamalpais State Park — 7am to sunset, gates locked after",
+      "url": "https://www.parks.ca.gov/?page_id=471",
+      "source": "California State Parks; AllTrails",
+      "why": "The summit of the Bay without the climb: drive up Panoramic Highway to the East Peak lot and walk the Verna Dunshee loop, a flat, paved path round the top with the whole Bay, the Farallones and Mount Diablo in view. Then take the steps and the Plank Trail up to the Gardner fire lookout at the peak. Go in the afternoon, when fog often fills the valleys below you. Parking is $8, cash only.",
+      "labels": [
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Mt._Tamalpais%2C_viewed_from_the_south.jpg/1280px-Mt._Tamalpais%2C_viewed_from_the_south.jpg",
+      "imageSubject": "Mount Tamalpais",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "hike-big-basin",
+      "title": "Big Basin — the Redwood Loop",
+      "emoji": "🌲",
+      "coords": [
+        37.17223,
+        -122.22246
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Park headquarters · 0.6 mi loop, or on to Sempervirens Falls · parking by reservation",
+      "price": 10,
+      "priceNote": "Parking by reservation, ~$10",
+      "durationMin": 150,
+      "bookAhead": true,
+      "hours": "08:00-sunset",
+      "hoursFrom": "California State Parks — day use 8am to sunset, reservation encouraged",
+      "url": "https://www.parks.ca.gov/NewsRelease/1104",
+      "booking": "https://www.reservecalifornia.com/",
+      "source": "California State Parks; Reimagining Big Basin",
+      "why": "California's oldest state park, which burned in the 2020 fire and is coming back. The old-growth giants around the headquarters survived. The Redwood Loop is a flat 0.6 miles past Mother of the Forest, and newly reopened trail goes on to Sempervirens Falls. Book parking online first. The long trails, Skyline-to-the-Sea included, are still closed, so do not plan on them.",
+      "labels": [
+        "bookahead"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Waddell_Creek.jpg/1280px-Waddell_Creek.jpg",
+      "imageSubject": "Big Basin Redwoods State Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "free",
+        "couple",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "hike-devils-slide",
+      "title": "Devil's Slide Trail",
+      "emoji": "🌊",
+      "coords": [
+        37.57368,
+        -122.51403
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Between Pacifica and Montara · 1.3 mi each way · paved, bikes welcome",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 75,
+      "hours": "08:00-sunset",
+      "hoursFrom": "San Mateo County Parks — opens at 8am, closes around sunset",
+      "url": "https://www.smcgov.org/parks/devils-slide-trail",
+      "source": "San Mateo County Parks",
+      "why": "A stretch of the old Highway 1 above the ocean, closed to cars when the tunnels opened in 2013 and now a paved path for walkers and bikes. It hangs on a cliff over the Pacific with seabirds nesting on the rocks below. It is flat enough for anyone and dramatic enough for everyone. Walk out to the old bunker lookout, and bring binoculars from December to April for grey whales.",
+      "labels": [
+        "free",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Cliffs_at_devils_slide_california.jpg/1280px-Cliffs_at_devils_slide_california.jpg",
+      "imageSubject": "Devil's Slide (California)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "hockey"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "watch-sap-center",
+      "title": "Sharks and PWHL San Jose at SAP Center",
+      "emoji": "🏒",
+      "coords": [
+        37.33286,
+        -121.90122
+      ],
+      "coordsFrom": "osm way/24169210 (Nominatim)",
+      "area": "SAP Center, downtown San Jose",
+      "priceNote": "Upper bowl from ~$40",
+      "durationMin": 180,
+      "hoursNote": "Game nights, October to April — the schedule is the timetable",
+      "url": "https://www.nhl.com/sharks/schedule",
+      "booking": "https://www.ticketmaster.com/san-jose-sharks-tickets/artist/806018?home_away=home",
+      "source": "San Jose Sharks; PWHL",
+      "why": "The Bay's hockey arena, called the Shark Tank, by the Caltrain station in downtown San Jose. The Sharks play here from October to April, and from December the PWHL's new San Jose team plays its first professional women's hockey here too. Take Caltrain to Diridon and walk across the road. The upper bowl is loud and cheap.",
+      "labels": [],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/SAP_Center_%2816609288898%29.jpg/1280px-SAP_Center_%2816609288898%29.jpg",
+      "imageSubject": "SAP Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "watch-paypal-park",
+      "title": "Earthquakes and Bay FC at PayPal Park",
+      "emoji": "⚽",
+      "coords": [
+        37.35131,
+        -121.92467
+      ],
+      "coordsFrom": "osm way/329840159 (Nominatim)",
+      "area": "PayPal Park, by San Jose airport",
+      "priceNote": "Tickets from ~$30",
+      "durationMin": 150,
+      "hoursNote": "Match days, March to November — the schedule is the timetable",
+      "url": "https://www.sjearthquakes.com/",
+      "booking": "https://bayfc.com/tickets/single-match-tickets/",
+      "source": "San Jose Earthquakes; Bay FC",
+      "why": "An 18,000-seat football stadium with the stands right on the pitch and the largest outdoor bar in North America behind one goal. The Earthquakes play MLS here and Bay FC, the women's NWSL side, plays here too, usually Saturday or Sunday afternoons. The Caltrain stop at Santa Clara is a short walk. Stand with the supporters' groups behind the goal if you want to sing.",
+      "labels": [],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Avaya_Stadium%2C_1-7-15.jpg/1280px-Avaya_Stadium%2C_1-7-15.jpg",
+      "imageSubject": "PayPal Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "volleyball",
+        "basketball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "watch-maples-pavilion",
+      "title": "Stanford volleyball and basketball at Maples",
+      "emoji": "🏐",
+      "coords": [
+        37.42952,
+        -122.16058
+      ],
+      "coordsFrom": "osm way/232715640 (Nominatim)",
+      "area": "Maples Pavilion, Stanford campus",
+      "priceNote": "Tickets ~$10–30",
+      "durationMin": 150,
+      "hoursNote": "Volleyball September to November, basketball November to March — the schedule is the timetable",
+      "url": "https://gostanford.com/",
+      "booking": "https://tickets.gostanford.com/",
+      "source": "Stanford Athletics",
+      "why": "Stanford's indoor arena, where the women's volleyball team, one of the most successful in the country, plays through the autumn, and both basketball teams play the winter. It seats about 7,000 and the student section makes it feel like more. Tickets are cheap next to anything professional. The Cal match sells out first.",
+      "labels": [
+        "cheap"
+      ],
+      "priceLevel": 1,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Maples_Pavilion.jpg",
+      "imageSubject": "Maples Pavilion",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "afternoon",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "watch-memorial-stadium",
+      "title": "Cal football at Memorial Stadium",
+      "emoji": "🏈",
+      "coords": [
+        37.87099,
+        -122.25074
+      ],
+      "coordsFrom": "osm way/24025053 (Nominatim)",
+      "area": "California Memorial Stadium, Berkeley hills",
+      "priceNote": "Tickets ~$30–100",
+      "durationMin": 240,
+      "hoursNote": "Home games, September to November — the schedule is the timetable",
+      "url": "https://calbears.com/sports/football/schedule",
+      "booking": "https://calbears.com/",
+      "source": "Cal Athletics",
+      "why": "A 1923 stadium set into Strawberry Canyon in the Berkeley hills, with the bay and the Golden Gate behind the west stands. Take BART to Downtown Berkeley and walk up through campus with everyone else. The game to go to is the Big Game against Stanford, which Cal hosts in even years.",
+      "labels": [],
+      "priceLevel": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/California_Memorial_Stadium_aerial.jpg",
+      "imageSubject": "California Memorial Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }

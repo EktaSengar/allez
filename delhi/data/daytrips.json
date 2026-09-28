@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24",
+  "generated": "2026-09-28",
   "note": "Times are from GK-1 and only a guide: the way out of Delhi can take as long as the road beyond it, and in winter fog closes the expressways at dawn. Where a train is faster, the card says so. Gurugram and Noida are zones, not day trips. Researched, not yet done — rate them as you go.",
   "items": [
     {
@@ -7,7 +7,7 @@
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "agra",
       "title": "Agra and the Taj",
       "emoji": "🕌",
@@ -46,14 +46,37 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg/1280px-Taj_Mahal%2C_Agra%2C_India_edit3.jpg",
       "imageSubject": "Taj Mahal",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "The Gatimaan Express from Hazrat Nizamuddin at eight"
+        },
+        {
+          "emoji": "🕌",
+          "text": "The Taj Mahal — sunrise if you stay over, otherwise straight from the station"
+        },
+        {
+          "emoji": "🏰",
+          "text": "Agra Fort, where Shah Jahan was kept, looking across at the Taj"
+        },
+        {
+          "emoji": "💎",
+          "text": "Itimad-ud-Daulah, the 'baby Taj', across the river"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Sunset at Mehtab Bagh, facing the Taj from the far bank"
+        }
+      ],
+      "season": "October to March. Closed Fridays. Full-moon night viewings are held a few nights a month by booking."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "fatehpur-sikri",
       "title": "Fatehpur Sikri",
       "emoji": "🏯",
@@ -80,14 +103,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg/1280px-Fatehput_Sikiri_Buland_Darwaza_gate_2010.jpg",
       "imageSubject": "Buland Darwaza",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🏛️",
+          "text": "The palace courtyards: the Diwan-i-Khas and its carved central pillar"
+        },
+        {
+          "emoji": "🕌",
+          "text": "Through the Buland Darwaza to the Jama Masjid"
+        },
+        {
+          "emoji": "🧵",
+          "text": "Salim Chishti's marble tomb — tie a thread for a wish"
+        },
+        {
+          "emoji": "🏰",
+          "text": "On to Agra if you started early"
+        }
+      ],
+      "season": "October to March; midday in summer is punishing on the red stone."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "jaipur",
       "title": "Jaipur",
       "emoji": "🌸",
@@ -116,14 +158,38 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg/1280px-20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg",
       "imageSubject": "Amer Fort",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "🏰",
+          "text": "Amber Fort first thing, before the coaches"
+        },
+        {
+          "emoji": "🌊",
+          "text": "Jal Mahal from the road on the way back"
+        },
+        {
+          "emoji": "🔭",
+          "text": "The City Palace and Jantar Mantar"
+        },
+        {
+          "emoji": "🪟",
+          "text": "Hawa Mahal from a rooftop café opposite"
+        },
+        {
+          "emoji": "🌇",
+          "text": "Sunset from Nahargarh, and dinner at LMB in Johari Bazaar"
+        }
+      ],
+      "season": "October to March. The Jaipur Literature Festival is in late January."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "abhaneri",
       "title": "Chand Baori, Abhaneri",
       "emoji": "🪜",
@@ -150,14 +216,29 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Chand_Baori.png/1280px-Chand_Baori.png",
       "imageSubject": "Chand Baori",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🪜",
+          "text": "Chand Baori, the thirteen-storey stepwell — early, for the shadows"
+        },
+        {
+          "emoji": "🛕",
+          "text": "Harshat Mata temple across the lane"
+        },
+        {
+          "emoji": "🏰",
+          "text": "On to Jaipur, an hour and a half on"
+        }
+      ],
+      "season": "October to March."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "neemrana",
       "title": "Neemrana Fort-Palace",
       "emoji": "🏰",
@@ -186,14 +267,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Neemrana_Fort_Palace_terrace_and_the_town_below.jpg/1280px-Neemrana_Fort_Palace_terrace_and_the_town_below.jpg",
       "imageSubject": "Neemrana",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🏰",
+          "text": "Arrive for lunch on the terraces"
+        },
+        {
+          "emoji": "🧗",
+          "text": "The zipline over the fort and the hills"
+        },
+        {
+          "emoji": "🪜",
+          "text": "The stepwell in the village below"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Sunset from the ramparts, or stay the night"
+        }
+      ],
+      "season": "October to March."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "sultanpur",
       "title": "Sultanpur & Farrukhnagar",
       "emoji": "🦢",
@@ -221,14 +321,29 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Sultanpur_National_Park_on_a_foggy_morning.jpg/1280px-Sultanpur_National_Park_on_a_foggy_morning.jpg",
       "imageSubject": "Sultanpur National Park",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🌅",
+          "text": "Arrive at opening, binoculars ready"
+        },
+        {
+          "emoji": "🦆",
+          "text": "The loop round the lake: bar-headed geese, pintails, cranes"
+        },
+        {
+          "emoji": "🪜",
+          "text": "Farrukhnagar on the way back for the Ghaus Ali Shah baoli"
+        }
+      ],
+      "season": "Mid-October to March for the migrants; it is dry and empty in summer."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "keoladeo",
       "title": "Keoladeo, Bharatpur",
       "emoji": "🦩",
@@ -257,14 +372,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Sheet_of_glass.jpg/1280px-Sheet_of_glass.jpg",
       "imageSubject": "Keoladeo National Park",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🚲",
+          "text": "Hire a bicycle, or a trained rickshaw-guide, at the gate"
+        },
+        {
+          "emoji": "🦩",
+          "text": "The main causeway past the painted stork colonies"
+        },
+        {
+          "emoji": "🦉",
+          "text": "Ask the guide for the owls and the pythons"
+        },
+        {
+          "emoji": "🕌",
+          "text": "On to Agra or Mathura"
+        }
+      ],
+      "season": "November to February for the migrants; the storks nest from August to October."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": false,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "mathura-vrindavan",
       "title": "Mathura & Vrindavan",
       "emoji": "🪈",
@@ -291,14 +425,33 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Banke_Bihari_Vrindavan.jpg/1280px-Banke_Bihari_Vrindavan.jpg",
       "imageSubject": "Banke Bihari Temple",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🛕",
+          "text": "Krishna Janmabhoomi in Mathura"
+        },
+        {
+          "emoji": "🙏",
+          "text": "Banke Bihari in Vrindavan — the curtain opens and shuts"
+        },
+        {
+          "emoji": "🌊",
+          "text": "Keshi Ghat on the Yamuna at dusk for the aarti"
+        },
+        {
+          "emoji": "🥛",
+          "text": "Lassi and peda in the lanes"
+        }
+      ],
+      "season": "October to March; Holi in March and Janmashtami in August are unforgettable and overwhelming."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "rishikesh-haridwar",
       "title": "Haridwar & Rishikesh",
       "emoji": "🌊",
@@ -327,14 +480,38 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Evening_view_of_Har-ki-Pauri%2C_Haridwar.jpg",
       "imageSubject": "Har Ki Pauri",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "The morning Shatabdi to Haridwar"
+        },
+        {
+          "emoji": "🔥",
+          "text": "The evening aarti at Har Ki Pauri"
+        },
+        {
+          "emoji": "🌉",
+          "text": "Next day, Rishikesh: walk across the Ram Jhula bridge"
+        },
+        {
+          "emoji": "🎵",
+          "text": "The Beatles Ashram, painted and ruined, in Rajaji park"
+        },
+        {
+          "emoji": "🛶",
+          "text": "Rafting on the Ganga, September to June"
+        }
+      ],
+      "season": "September to November and February to April. Rafting stops in the monsoon."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "landour",
       "title": "Landour",
       "emoji": "🌲",
@@ -362,14 +539,38 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Kellogg_Memorial_Church%2C_Landour.jpg/1280px-Kellogg_Memorial_Church%2C_Landour.jpg",
       "imageSubject": "Landour",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Train to Dehradun, taxi up the hill"
+        },
+        {
+          "emoji": "🥞",
+          "text": "Pancakes at Char Dukan"
+        },
+        {
+          "emoji": "🌲",
+          "text": "The Chakkar loop round the top of the hill, through the deodars"
+        },
+        {
+          "emoji": "🍯",
+          "text": "Jam and peanut butter at Prakash Stores"
+        },
+        {
+          "emoji": "📚",
+          "text": "Cambridge Book Depot on the Mall in Mussoorie, for Ruskin Bond"
+        }
+      ],
+      "season": "October and November are clearest for the Himalaya; spring for the rhododendrons. Avoid the summer crowds."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "chandigarh",
       "title": "Chandigarh",
       "emoji": "📐",
@@ -395,14 +596,37 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Chandigarh_Rock_Garden_4.jpg/1280px-Chandigarh_Rock_Garden_4.jpg",
       "imageSubject": "Rock Garden of Chandigarh",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "The morning Shatabdi"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "The Capitol Complex by guided tour — book, and bring ID"
+        },
+        {
+          "emoji": "🗿",
+          "text": "Nek Chand's Rock Garden"
+        },
+        {
+          "emoji": "🚣",
+          "text": "Sukhna Lake at sunset"
+        },
+        {
+          "emoji": "🍽️",
+          "text": "Dinner in Sector 17 before the train back"
+        }
+      ],
+      "season": "October to March."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "sariska",
       "title": "Sariska & Bhangarh",
       "emoji": "🐅",
@@ -432,14 +656,30 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Sariska_Tiger_Reserve%2C_Alwar.jpg",
       "imageSubject": "Sariska Tiger Reserve",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "overnight": true,
+      "stops": [
+        {
+          "emoji": "🚙",
+          "text": "A dawn jeep safari, booked"
+        },
+        {
+          "emoji": "🏚️",
+          "text": "Bhangarh, the ruined town, in the afternoon — locked at sunset"
+        },
+        {
+          "emoji": "🏰",
+          "text": "Alwar City Palace on the way back"
+        }
+      ],
+      "season": "October to June; the park closes to safaris in the monsoon."
     },
     {
       "type": "daytrip",
       "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
-      "lastVerified": "2026-09-24",
+      "lastVerified": "2026-09-28",
       "id": "mangar-bani",
       "title": "Mangar Bani",
       "emoji": "🌳",
@@ -468,7 +708,283 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Aravalli.jpg/1280px-Aravalli.jpg",
       "imageSubject": "Aravalli Range",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons · CC BY-SA 2.5"
+      "imageCredit": "Wikimedia Commons · CC BY-SA 2.5",
+      "stops": [
+        {
+          "emoji": "🌅",
+          "text": "Start at dawn from Mangar village"
+        },
+        {
+          "emoji": "🌳",
+          "text": "The grove trails through the dhau forest"
+        },
+        {
+          "emoji": "⛰️",
+          "text": "The ridge above for the view over the Aravallis"
+        },
+        {
+          "emoji": "🥛",
+          "text": "Chai in the village on the way out"
+        }
+      ],
+      "season": "October to March, early mornings only. There is no water on the trail."
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "food"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "food",
+        "morning",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "amritsar",
+      "title": "Amritsar and the Golden Temple",
+      "emoji": "🛕",
+      "minutesFromHome": 360,
+      "durationMin": 540,
+      "priceNote": "The temple and its kitchen are free; the border ceremony is free",
+      "transit": "The Shatabdi from New Delhi, about 6 h — a weekend",
+      "why": "The holiest place of the Sikhs, a gilded temple in a pool of water that is open to everybody, day and night, and whose kitchen feeds tens of thousands of people a day for free, at the same floor, whoever they are. See it at night when it glows, and at dawn when the holy book is carried in. Then the kulcha, and the flag ceremony at the Pakistan border.",
+      "labels": [
+        "weekend",
+        "dontmiss"
+      ],
+      "url": "https://www.goldentempleamritsar.org/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 1,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🛕",
+          "text": "The Golden Temple at night: cover your head, leave your shoes, walk the marble around the pool"
+        },
+        {
+          "emoji": "🍛",
+          "text": "Sit on the floor for langar in the free kitchen — and help with the dishes if you like"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "Jallianwala Bagh, a few minutes away, and the Partition Museum in the Town Hall"
+        },
+        {
+          "emoji": "🫓",
+          "text": "Amritsari kulcha for lunch in the old city"
+        },
+        {
+          "emoji": "🇮🇳",
+          "text": "The Beating Retreat at the Attari–Wagah border, an hour out, in the late afternoon"
+        }
+      ],
+      "season": "October to March. Summers are over 40°C. The temple is at its most beautiful on Gurpurab and Diwali.",
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/The_Golden_Temple_of_Amrithsar_7.jpg/1280px-The_Golden_Temple_of_Amrithsar_7.jpg",
+      "imageSubject": "Golden Temple",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "morning"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "corbett",
+      "title": "Jim Corbett National Park",
+      "emoji": "🐅",
+      "minutesFromHome": 360,
+      "durationMin": 540,
+      "priceNote": "Jeep safaris by booking; lodging is the cost",
+      "transit": "About 6 h by road to Ramnagar; trains run overnight to Ramnagar",
+      "why": "India's oldest national park, founded in 1936, in the Himalayan foothills along the Ramganga river, with one of the densest tiger populations anywhere. You go on jeep safaris at dawn and dusk into sal forest and grassland, and see elephants, deer, crocodiles and, with luck, a tiger. Book safaris on the official site when they open, weeks ahead.",
+      "labels": [
+        "weekend",
+        "bookahead",
+        "outdoor"
+      ],
+      "url": "https://corbettgov.org/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 3,
+      "booking": "https://corbettgov.org/",
+      "stops": [
+        {
+          "emoji": "🚙",
+          "text": "A dawn jeep safari from Ramnagar — book the zone ahead"
+        },
+        {
+          "emoji": "🐘",
+          "text": "Dhikala, deep in the park, for elephants on the grassland (from mid-November)"
+        },
+        {
+          "emoji": "🏞️",
+          "text": "The Ramganga at Garjia temple on its rock in the river"
+        },
+        {
+          "emoji": "🚙",
+          "text": "An afternoon safari in a second zone"
+        }
+      ],
+      "season": "Most zones open 15 October; Dhikala from 15 November; the core closes in the monsoon. Winter mornings are cold — bring layers.",
+      "bookAhead": true,
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Corbett_View.jpg/1280px-Corbett_View.jpg",
+      "imageSubject": "Jim Corbett National Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "ranthambore",
+      "title": "Ranthambore",
+      "emoji": "🐯",
+      "minutesFromHome": 330,
+      "durationMin": 540,
+      "priceNote": "Safaris by booking; lodging is the cost",
+      "transit": "Trains to Sawai Madhopur in about 5 h — a weekend",
+      "why": "The place tigers are photographed from a few metres away, lying in the ruins of a thousand-year-old fort on a hill in the middle of the jungle. The park is dry deciduous forest with lakes and old pavilions, and its tigers are famously unbothered by jeeps. Take the train, book two safaris, and climb the fort.",
+      "labels": [
+        "weekend",
+        "bookahead",
+        "outdoor"
+      ],
+      "url": "https://fmdss.forest.rajasthan.gov.in/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 3,
+      "booking": "https://fmdss.forest.rajasthan.gov.in/",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Train to Sawai Madhopur"
+        },
+        {
+          "emoji": "🚙",
+          "text": "A dawn safari by gypsy — book the zone on the forest department site"
+        },
+        {
+          "emoji": "🏰",
+          "text": "Ranthambore Fort, a World Heritage site, and the Ganesh temple at its top"
+        },
+        {
+          "emoji": "🚙",
+          "text": "An afternoon safari"
+        },
+        {
+          "emoji": "🎨",
+          "text": "Dastkar, the women's craft project on the park road"
+        }
+      ],
+      "season": "October to June; the core zones close in the monsoon. The hot months, April to June, are best for sightings and hardest to bear.",
+      "bookAhead": true,
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Ranthambore_Fort_Chhatri%2C_Raj._%282%29_03.jpg/1280px-Ranthambore_Fort_Chhatri%2C_Raj._%282%29_03.jpg",
+      "imageSubject": "Ranthambore National Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "couple",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "shimla-toy-train",
+      "title": "Shimla by the toy train",
+      "emoji": "🚂",
+      "minutesFromHome": 480,
+      "durationMin": 540,
+      "priceNote": "The toy train is cheap; book seats ahead",
+      "transit": "Shatabdi to Kalka, about 4 h, then the narrow-gauge train up, about 5 h — a weekend",
+      "why": "The summer capital of the Raj, reached the old way: the Kalka–Shimla railway, a World Heritage narrow-gauge line from 1903 that climbs through more than a hundred tunnels and over arched bridges into the pines. It takes five hours to go ninety-six kilometres, and that is the point. At the top, the Mall, Christ Church and the monkeys of Jakhu.",
+      "labels": [
+        "weekend",
+        "couple",
+        "bookahead"
+      ],
+      "url": "https://www.irctc.co.in/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": "https://www.irctc.co.in/",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "The early Shatabdi to Kalka"
+        },
+        {
+          "emoji": "🚂",
+          "text": "The toy train up: sit on the valley side, and change at Barog for breakfast"
+        },
+        {
+          "emoji": "⛪",
+          "text": "The Mall and the Ridge, and Christ Church at dusk"
+        },
+        {
+          "emoji": "🐒",
+          "text": "Next morning, up to Jakhu temple — hold on to your glasses"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "The Viceregal Lodge, now the Institute of Advanced Study, by tour"
+        }
+      ],
+      "season": "October and November are clear and cool; December to February can bring snow. Avoid May and June, when the hill is packed.",
+      "bookAhead": true,
+      "overnight": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/KSR_Steam_special_at_Taradevi_05-02-13_56.jpeg",
+      "imageSubject": "Kalka–Shimla railway",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }

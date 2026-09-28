@@ -1,5 +1,888 @@
 {
- "generated": "2026-09-18",
- "note": "Play vs watch. Hand-written. Empty.",
- "items": []
+  "generated": "2026-09-28",
+  "note": "Hand-written. Play is what you can do — runs, rides, courts and ranges; Trails are hikes and rides up the Hudson; Watch is where the teams play, with dated fixtures in events.json. Researched, not visited.",
+  "items": [
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening",
+        "free",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "run-central-park-reservoir",
+      "title": "The Central Park reservoir loop",
+      "emoji": "🏃",
+      "zone": "central-park",
+      "coords": [
+        40.78525,
+        -73.96222
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Jacqueline Kennedy Onassis Reservoir · 1.58 mi loop · soft track",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 20,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 2.5,
+      "startTime": "07:00",
+      "hours": "06:00-01:00",
+      "hoursFrom": "Central Park Conservancy — park hours",
+      "url": "https://www.centralparknyc.org/locations/jacqueline-kennedy-onassis-reservoir",
+      "source": "Central Park Conservancy",
+      "why": "The loop every New York runner knows: 1.58 miles of soft cinder track round the reservoir, with the skyline reflected in the water on every side. Run it anticlockwise, as the signs ask. One lap is a warm-up, three is a run. Early morning in autumn, with the leaves turning, is as good as the city gets.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Jacqueline_Kennedy_Onassis_Reservoir.jpg/1280px-Jacqueline_Kennedy_Onassis_Reservoir.jpg",
+      "imageSubject": "Jacqueline Kennedy Onassis Reservoir",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "cycling",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "run-central-park-full-loop",
+      "title": "The full Central Park loop",
+      "emoji": "🏃",
+      "zone": "central-park",
+      "coords": [
+        40.76807,
+        -73.98189
+      ],
+      "coordsFrom": "osm way/109269254 (Nominatim)",
+      "area": "The park drives from Columbus Circle · 6.1 mi loop · rolling, car-free",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 60,
+      "intent": [
+        "casual",
+        "compete"
+      ],
+      "difficulty": "intermediate",
+      "distanceKm": 9.8,
+      "hours": "06:00-01:00",
+      "hoursFrom": "Central Park Conservancy — park hours; the drives have been car-free since 2018",
+      "url": "https://www.centralparknyc.org/",
+      "source": "Central Park Conservancy; NYC DOT",
+      "stops": [
+        {
+          "emoji": "🚪",
+          "text": "Start at Columbus Circle and run north on the West Drive",
+          "walk": "0 km"
+        },
+        {
+          "emoji": "🌳",
+          "text": "Past the Great Lawn and the reservoir",
+          "walk": "3 km"
+        },
+        {
+          "emoji": "⛰️",
+          "text": "Harlem Hill at the top: the park's one real climb",
+          "walk": "5.5 km"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "Down the East Drive past the Met",
+          "walk": "7.5 km"
+        },
+        {
+          "emoji": "🏁",
+          "text": "Cat Hill, then home to Columbus Circle",
+          "walk": "9.8 km"
+        }
+      ],
+      "why": "The six-mile loop of the park drives, car-free since 2018 and the last miles of the marathon route. It rolls all the way, with one real climb at Harlem Hill at the top. Runners stay in the inside lane, cyclists in the outside one. On a weekend morning half the city is out on it.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Southwest_corner_of_Central_Park%2C_looking_east%2C_NYC.jpg/1280px-Southwest_corner_of_Central_Park%2C_looking_east%2C_NYC.jpg",
+      "imageSubject": "Central Park",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "run-prospect-park",
+      "title": "The Prospect Park loop",
+      "emoji": "🏃",
+      "zone": "prospect-heights",
+      "coords": [
+        40.6749,
+        -73.97087
+      ],
+      "coordsFrom": "osm node/5106080606 (Nominatim)",
+      "area": "From Grand Army Plaza · 3.35 mi loop",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 35,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 5.4,
+      "hours": "05:00-01:00",
+      "hoursFrom": "Prospect Park Alliance — park hours",
+      "url": "https://www.prospectpark.org/",
+      "source": "Prospect Park Alliance",
+      "why": "Brooklyn's loop: 3.35 miles round the drive of the park Olmsted and Vaux thought was better than Central Park, past the Long Meadow and the lake. It is one gentle hill and a lot of dogs. The Saturday Grand Army Plaza farmers' market is at the start, for after.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Prospect_Park_New_York_October_2015_003.jpg/1280px-Prospect_Park_New_York_October_2015_003.jpg",
+      "imageSubject": "Prospect Park (Brooklyn)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cycling",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "free",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "ride-hudson-greenway",
+      "title": "The Hudson River Greenway",
+      "emoji": "🚲",
+      "zone": "financial-district-battery-park-city",
+      "coords": [
+        40.70371,
+        -74.01713
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "The Battery to the George Washington Bridge · about 11 mi · car-free, flat",
+      "price": 0,
+      "priceNote": "Free; Citi Bike along the way",
+      "durationMin": 150,
+      "hours": "24/7",
+      "hoursFrom": "NYC Parks — the greenway is always open",
+      "url": "https://www.nycgovparks.org/",
+      "source": "NYC Parks; Hudson River Park",
+      "why": "The busiest bike path in America, and the best ride in the city: a separated path up the west side of Manhattan from the Battery to the George Washington Bridge, with the Hudson beside you the whole way. It is flat and car-free. Ride to the Little Red Lighthouse under the bridge, eleven miles, and take the A train home if your legs say so.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/HRPKsep2021.png/1280px-HRPKsep2021.png",
+      "imageSubject": "The Hudson River Park path",
+      "imageKind": "subject",
+      "imageCredit": "Andymii · CC BY-SA 4.0"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cycling",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "afternoon",
+        "weekend",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "ride-governors-island",
+      "title": "Cycle Governors Island",
+      "emoji": "🚲",
+      "zone": "financial-district-battery-park-city",
+      "coords": [
+        40.70099,
+        -74.01165
+      ],
+      "coordsFrom": "osm way/169362470 (Nominatim)",
+      "area": "Ferry from the Battery Maritime Building · a car-free island",
+      "priceNote": "Ferry ~$5 return; bikes to hire on the island",
+      "durationMin": 180,
+      "hoursNote": "The island opens daily from early morning; ferries run from the Battery Maritime Building",
+      "url": "https://www.govisland.com/",
+      "source": "The Trust for Governors Island",
+      "why": "A car-free island in the harbour, seven minutes by ferry from Manhattan, with hammocks, lawns and a hill made of rubble with a view of the Statue of Liberty. Hire a bike and ride the promenade round the edge, about two miles, with Manhattan, Brooklyn and the statue in turn. On a quiet weekday you have it to yourself.",
+      "labels": [
+        "couple",
+        "hiddengem"
+      ],
+      "priceLevel": 1,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Governors_Island_from_One_World_Observatory_2017.jpg/1280px-Governors_Island_from_One_World_Observatory_2017.jpg",
+      "imageSubject": "Governors Island",
+      "imageKind": "subject",
+      "imageCredit": "Antony-22 · CC BY-SA 4.0"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "golf"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "chelsea-piers-golf",
+      "title": "The Golf Club at Chelsea Piers",
+      "emoji": "⛳",
+      "zone": "chelsea-hudson-yards",
+      "coords": [
+        40.7467,
+        -74.00998
+      ],
+      "coordsFrom": "osm relation/20800244 (Nominatim)",
+      "area": "Pier 59, Chelsea Piers",
+      "priceNote": "Buckets of balls by the number",
+      "durationMin": 60,
+      "intent": [
+        "try",
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Open from early morning until late — check the day",
+      "url": "https://www.chelseapiers.com/golf/",
+      "source": "Chelsea Piers",
+      "why": "A four-storey driving range sticking out into the Hudson, with balls teed up for you automatically and a net 200 yards out over the river. You hit into the sunset over New Jersey. No experience needed, clubs to borrow, and it is open late, so it works as an evening out as well as practice.",
+      "labels": [
+        "couple"
+      ],
+      "booking": false,
+      "priceLevel": 2,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Chelsea_Piers.jpg",
+      "imageSubject": "Chelsea Piers",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "skating"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "wollman-rink",
+      "title": "Skating at Wollman Rink",
+      "emoji": "⛸️",
+      "zone": "central-park",
+      "coords": [
+        40.76797,
+        -73.97451
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Central Park, near 59th Street and Sixth Avenue",
+      "priceNote": "Admission plus skate hire",
+      "durationMin": 90,
+      "intent": [
+        "try",
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "The winter season usually opens in late October — book a session online",
+      "url": "https://www.wollmanskatingrink.com/",
+      "source": "NYC Parks",
+      "why": "Skating in the south end of Central Park, with the towers of Central Park South standing over the trees. It is the rink from every New York Christmas film, and less crowded than Rockefeller Center. Book a time slot online, go at dusk, and hire skates there.",
+      "labels": [
+        "couple"
+      ],
+      "booking": false,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Central_Park_Wollman_Rink.jpg/1280px-Central_Park_Wollman_Rink.jpg",
+      "imageSubject": "Wollman Rink",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "free",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "brooklyn-bridge-park-courts",
+      "title": "Pick-up games at Brooklyn Bridge Park",
+      "emoji": "🏀",
+      "zone": "brooklyn-heights",
+      "coords": [
+        40.69951,
+        -73.9989
+      ],
+      "coordsFrom": "osm way/424974230 (Nominatim)",
+      "area": "Pier 2, Brooklyn Bridge Park",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 90,
+      "intent": [
+        "casual",
+        "compete",
+        "group"
+      ],
+      "difficulty": "intermediate",
+      "hours": "06:00-23:00",
+      "hoursFrom": "Brooklyn Bridge Park — Pier 2 hours",
+      "url": "https://www.brooklynbridgepark.org/",
+      "source": "Brooklyn Bridge Park",
+      "why": "Basketball, handball, bocce and shuffleboard on a covered pier under the Brooklyn Bridge, free and first come, first served. The pick-up basketball is good and friendly, and you play with the Manhattan skyline across the water behind the hoop. In summer there is a roller rink on the same pier.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Brooklyn_Bridge_Park_and_Manhattan.jpg/1280px-Brooklyn_Bridge_Park_and_Manhattan.jpg",
+      "imageSubject": "Brooklyn Bridge Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "free",
+        "group"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "evening",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "nyrr-open-run",
+      "title": "NYRR Open Run",
+      "emoji": "🏃",
+      "zone": "prospect-park",
+      "coords": [
+        40.66177,
+        -73.97109
+      ],
+      "coordsFrom": "osm relation/9760157 (Nominatim)",
+      "area": "Free weekly 5Ks in parks across the five boroughs",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 60,
+      "intent": [
+        "group",
+        "compete",
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Weekly, on a set day and time for each park — check the NYRR site",
+      "url": "https://www.nyrr.org/run/open-run",
+      "source": "New York Road Runners",
+      "why": "Free, timed 5K runs every week in parks in all five boroughs, organised by New York Road Runners and run by volunteers. Sign up once, bring a barcode, and you get a time and a place in the results. It is the easiest way into the city's running scene, and the pace ranges from walkers to people training for the marathon.",
+      "labels": [
+        "free"
+      ],
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Prospect_Park_New_York_October_2015_003.jpg/1280px-Prospect_Park_New_York_October_2015_003.jpg",
+      "imageSubject": "Prospect Park (Brooklyn)",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "hike-mount-beacon",
+      "title": "Mount Beacon",
+      "emoji": "⛰️",
+      "coords": [
+        41.49298,
+        -73.95786
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Mount Beacon Park, Route 9D · about 2 mi up and back · very steep",
+      "price": 0,
+      "priceNote": "Free; Metro-North to Beacon",
+      "durationMin": 150,
+      "hours": "sunrise-sunset",
+      "hoursFrom": "Scenic Hudson — Mount Beacon Park is open dawn to dusk",
+      "url": "https://www.scenichudson.org/viewfinder/mount-beacon-park/",
+      "source": "Scenic Hudson",
+      "why": "With Breakneck Ridge closed until 2027, this is the hard short hike up the Hudson you can still do from a train: a long flight of steps and a steep path up to the ruins of an old incline railway's casino, then on to a fire tower with the Hudson Highlands spread out below. It is about a mile and a half from Beacon station. Pair it with Dia Beacon.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Beacon_Mountain.jpg",
+      "imageSubject": "Mount Beacon",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "weekend",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "hike-anthonys-nose",
+      "title": "Anthony's Nose",
+      "emoji": "🥾",
+      "coords": [
+        41.32121,
+        -73.97631
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Route 9D by the Bear Mountain Bridge · about 2 mi up and back",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 120,
+      "hours": "sunrise-sunset",
+      "hoursFrom": "Hudson Highlands State Park — day use",
+      "url": "https://parks.ny.gov/parks/hudsonhighlands/",
+      "source": "NY State Parks; NY-NJ Trail Conference",
+      "why": "A short, steep climb on the Appalachian Trail to a rock ledge high over the Hudson, looking straight down on the Bear Mountain Bridge. It is an hour up, and the view is the best reward for the effort anywhere near the city. Parking on 9D is tight, so go early, especially in October.",
+      "labels": [
+        "free",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Bear_Mountain_Bridge%2C_NY_from_river_level_loking_East.JPG/1280px-Bear_Mountain_Bridge%2C_NY_from_river_level_loking_East.JPG",
+      "imageSubject": "Anthony's Nose (Westchester County, New York)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cycling",
+        "outdoors",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "ride-old-croton-aqueduct",
+      "title": "The Old Croton Aqueduct Trail",
+      "emoji": "🚲",
+      "coords": [
+        40.93764,
+        -73.88782
+      ],
+      "coordsFrom": "osm way/339675351 (Nominatim)",
+      "area": "Yonkers to Croton · about 26 mi · dirt, gentle",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 240,
+      "hours": "sunrise-sunset",
+      "hoursFrom": "NY State Parks",
+      "url": "https://parks.ny.gov/parks/96/",
+      "source": "NY State Parks; Friends of the Old Croton Aqueduct",
+      "why": "A grass-and-dirt path along the top of the 1842 aqueduct that brought water to Manhattan, running up the Hudson through Yonkers, Dobbs Ferry and Tarrytown. It is almost level and passes through every river town's back gardens. Ride a stretch and take Metro-North back from whichever station you reach.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Old_Croton_Aqueduct_Trail_in_High_Bridge_Park.jpg/500px-Old_Croton_Aqueduct_Trail_in_High_Bridge_Park.jpg",
+      "imageSubject": "The Old Croton Aqueduct Trail",
+      "imageKind": "subject",
+      "imageCredit": "Iragersh · CC0"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball",
+        "hockey"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "watch-msg",
+      "title": "Knicks and Rangers at Madison Square Garden",
+      "emoji": "🏀",
+      "zone": "chelsea-hudson-yards",
+      "coords": [
+        40.75051,
+        -73.99352
+      ],
+      "coordsFrom": "osm way/138141251 (Nominatim)",
+      "area": "Madison Square Garden, over Penn Station",
+      "priceNote": "Expensive — upper levels from ~$80",
+      "durationMin": 180,
+      "hoursNote": "Game nights, October to April — the schedule is the timetable",
+      "url": "https://www.msg.com/madison-square-garden",
+      "booking": "https://www.msg.com/calendar",
+      "source": "Madison Square Garden",
+      "why": "The arena on top of Penn Station, and the loudest room in sport when the Knicks are good, which after 2026 they are. The Rangers play here too, so from October to April there is a game most nights. The cheap seats in the upper bowl have the better atmosphere. Tickets are expensive, and cheapest on weeknights.",
+      "labels": [],
+      "priceLevel": 4,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Madison_Square_Garden_%28MSG%29_-_Full_%2848124330357%29.jpg/1280px-Madison_Square_Garden_%28MSG%29_-_Full_%2848124330357%29.jpg",
+      "imageSubject": "Madison Square Garden",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "watch-barclays",
+      "title": "Nets and Liberty at Barclays Center",
+      "emoji": "🏀",
+      "zone": "prospect-heights",
+      "coords": [
+        40.68251,
+        -73.97525
+      ],
+      "coordsFrom": "osm relation/8610205 (Nominatim)",
+      "area": "Barclays Center, Atlantic Avenue, Brooklyn",
+      "priceNote": "Tickets from ~$30",
+      "durationMin": 180,
+      "hoursNote": "Nets October to April, Liberty May to September — the schedule is the timetable",
+      "url": "https://www.barclayscenter.com/",
+      "booking": "https://www.barclayscenter.com/events",
+      "source": "Barclays Center",
+      "why": "Brooklyn's arena, over the Atlantic Avenue station where nine subway lines meet. The Nets play the winter; the Liberty, WNBA champions in 2024 and the city's most exciting team to watch, play the summer and fill it. A Nets ticket is one of the cheaper ways to see the NBA in New York.",
+      "labels": [],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Barclays_Center_-_2026_%2855268559424%29.jpg/1280px-Barclays_Center_-_2026_%2855268559424%29.jpg",
+      "imageSubject": "Barclays Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "baseball"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "watch-yankee-stadium",
+      "title": "Yankees at Yankee Stadium",
+      "emoji": "⚾",
+      "zone": "yankee-stadium-macombs-dam-park",
+      "coords": [
+        40.82958,
+        -73.92652
+      ],
+      "coordsFrom": "osm way/24801630 (Nominatim)",
+      "area": "Yankee Stadium, the Bronx",
+      "priceNote": "Bleachers from ~$20",
+      "durationMin": 210,
+      "hoursNote": "Game days, April to October — the schedule is the timetable",
+      "url": "https://www.mlb.com/yankees",
+      "booking": "https://www.mlb.com/yankees/tickets",
+      "source": "New York Yankees",
+      "why": "The Bronx, the 4 train, and the most famous team in baseball. Sit in the right-field bleachers with the Bleacher Creatures, who start every game with the roll call and will not stop until each player waves back. Walk out to Monument Park before the game to see the plaques.",
+      "labels": [],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Yankee_Stadium_overhead_2010.jpg/1280px-Yankee_Stadium_overhead_2010.jpg",
+      "imageSubject": "Yankee Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "baseball"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "watch-citi-field",
+      "title": "Mets at Citi Field",
+      "emoji": "⚾",
+      "zone": "flushing-willets-point",
+      "coords": [
+        40.75703,
+        -73.84576
+      ],
+      "coordsFrom": "osm way/604023701 (Nominatim)",
+      "area": "Citi Field, Flushing, Queens",
+      "priceNote": "Tickets from ~$20",
+      "durationMin": 210,
+      "hoursNote": "Game days, April to September — NYCFC plays some matches here too",
+      "url": "https://www.mlb.com/mets",
+      "booking": "https://www.mlb.com/mets/tickets",
+      "source": "New York Mets; NYCFC",
+      "why": "The Mets' ballpark in Queens, at the end of the 7 train, with the best food of any stadium in the country, from Queens as much as from the grill. The home-run apple still rises out in centre field. NYCFC plays some of its soccer here while its own stadium is built next door.",
+      "labels": [],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Citi_Field_from_the_south_2025.jpg/1280px-Citi_Field_from_the_south_2025.jpg",
+      "imageSubject": "Citi Field",
+      "imageKind": "subject",
+      "imageCredit": "Jeffme · CC0"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "watch-si-stadium",
+      "title": "Red Bulls and Gotham FC in Harrison",
+      "emoji": "⚽",
+      "coords": [
+        40.73689,
+        -74.15026
+      ],
+      "coordsFrom": "osm way/75692796 (Nominatim)",
+      "area": "Sports Illustrated Stadium, Harrison, New Jersey",
+      "priceNote": "Tickets from ~$25",
+      "durationMin": 150,
+      "hoursNote": "Match days, March to November — the schedule is the timetable",
+      "url": "https://www.gothamfc.com/tickets",
+      "booking": "https://www.gothamfc.com/tickets",
+      "source": "Gotham FC; New York Red Bulls",
+      "why": "A proper football stadium, with the stands tight to the pitch and a roof that holds the noise in, twenty minutes from the World Trade Center on the PATH to Harrison. The Red Bulls play MLS here, and Gotham FC, the NWSL champions of 2023 and 2025, play here too.",
+      "labels": [],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/NYRB_vs._D.C._United_at_Red_Bull_Arena_%2820180827131153%29.jpg/1280px-NYRB_vs._D.C._United_at_Red_Bull_Arena_%2820180827131153%29.jpg",
+      "imageSubject": "Sports Illustrated Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "tennis"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "watch-usta-billie-jean-king",
+      "title": "The US Open at Flushing Meadows",
+      "emoji": "🎾",
+      "zone": "flushing-meadows-corona-park",
+      "coords": [
+        40.74958,
+        -73.84654
+      ],
+      "coordsFrom": "osm way/663795041 (Nominatim)",
+      "area": "USTA Billie Jean King National Tennis Center, Queens",
+      "priceNote": "Grounds passes early in the tournament are the bargain",
+      "durationMin": 360,
+      "hoursNote": "The US Open, late August into September — the public courts are open the rest of the year",
+      "url": "https://www.usopen.org/",
+      "source": "USTA",
+      "why": "The last Grand Slam of the year, over the two weeks either side of Labor Day, at the end of the 7 train. A grounds pass in the first week gets you onto every outer court, a few feet from top players, and the night sessions in Arthur Ashe are a party. The rest of the year the indoor and outdoor courts are open to the public to book.",
+      "labels": [],
+      "booking": false,
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/USTA_Billie_Jean_King_National_Tennis_Center_%2848613535076%29.jpg/1280px-USTA_Billie_Jean_King_National_Tennis_Center_%2848613535076%29.jpg",
+      "imageSubject": "USTA Billie Jean King National Tennis Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }
