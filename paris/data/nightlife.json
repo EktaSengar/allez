@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15",
+  "generated": "2026-09-28",
   "note": "Evergreen night places — jazz rooms, live venues, clubs and bars. These do not expire, but programmes change nightly: the link goes to the venue's own calendar. Dated concerts live in events.json instead, so nothing here can go stale.",
   "items": [
     {
@@ -1357,6 +1357,191 @@
         2.33198
       ],
       "coordsFrom": "nominatim"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "culture",
+        "art"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "orsay-thursday-nights",
+      "title": "Musée d'Orsay on Thursday nights",
+      "emoji": "🖼️",
+      "zone": 7,
+      "coords": [
+        48.85992,
+        2.32658
+      ],
+      "coordsFrom": "osm way/63178753 (Nominatim)",
+      "area": "Rue de la Légion d’Honneur, 7e",
+      "price": 12,
+      "priceNote": "€12 from 6pm",
+      "durationMin": 150,
+      "hours": "Th 18:00-21:45",
+      "hoursFrom": "musee-orsay.fr — open until 9:45pm on Thursdays",
+      "url": "https://www.musee-orsay.fr/en/visit",
+      "booking": "https://billetterie.musee-orsay.fr/",
+      "source": "Musée d'Orsay; Sortiraparis",
+      "why": "Every Thursday the old railway station stays open until quarter to ten, and after six the entry drops to twelve euros and the tour groups have gone. Go straight up to the Impressionists on the fifth floor, then stand behind the great station clock, lit from outside, looking across the Seine to the Louvre. Works run until 2028, so some rooms move around.",
+      "labels": [
+        "couple",
+        "dontmiss"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Paris_-_Mus%C3%A9e_d%27Orsay_-_big_clock_seen_from_the_interior.jpg/1280px-Paris_-_Mus%C3%A9e_d%27Orsay_-_big_clock_seen_from_the_interior.jpg",
+      "imageSubject": "The great clock of the Musée d'Orsay",
+      "imageKind": "subject",
+      "imageCredit": "Roman Eisele · CC BY-SA 4.0"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "culture",
+        "art"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "louvre-nocturnes",
+      "title": "The Louvre after six",
+      "emoji": "🔺",
+      "zone": 1,
+      "coords": [
+        48.86115,
+        2.33803
+      ],
+      "coordsFrom": "osm relation/7515426 (Nominatim)",
+      "area": "Rue de Rivoli, 1er",
+      "priceNote": "Standard ticket (higher for visitors from outside the EU); the first Friday evening of the month is free",
+      "durationMin": 180,
+      "hours": "We,Fr 18:00-21:00",
+      "hoursFrom": "louvre.fr — late openings on Wednesday and Friday until 9pm",
+      "url": "https://www.louvre.fr/expositions-et-evenements/evenements-activites/les-nocturnes-du-mercredi-et-du-vendredi",
+      "booking": "https://ticket.louvre.fr/",
+      "source": "Musée du Louvre",
+      "why": "On Wednesday and Friday nights the Louvre stays open until nine, and the second half of the evening is the calmest the museum ever is. On the first Friday of the month, except in summer, the evening is free by booking. Skip the Mona Lisa scrum and walk the Denon sculpture galleries and Napoleon III's apartments, lit up and nearly empty.",
+      "labels": [
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Louvre_museum_01.jpg/1280px-Louvre_museum_01.jpg",
+      "imageSubject": "Pyramide du Louvre",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "free",
+        "view"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "free",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "eiffel-sparkle",
+      "title": "The Eiffel Tower sparkling",
+      "emoji": "✨",
+      "zone": 16,
+      "coords": [
+        48.86208,
+        2.28854
+      ],
+      "coordsFrom": "osm way/51259547 (Nominatim)",
+      "area": "Best from the Trocadéro or the Pont de Bir-Hakeim",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 30,
+      "hoursNote": "Five minutes of sparkle on the hour, every hour after dark, until the tower goes dark late at night",
+      "url": "https://www.toureiffel.paris/en",
+      "source": "Société d’Exploitation de la Tour Eiffel",
+      "why": "On the hour, every hour after nightfall, twenty thousand bulbs on the tower flicker for five minutes, and the whole of the Trocadéro gasps as if it had never happened before. Watch it from the steps of the Trocadéro, or better, from the middle of the Pont de Bir-Hakeim with the metro rumbling overhead. It is corny and it works every time.",
+      "labels": [
+        "free",
+        "couple"
+      ],
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/1280px-Tour_Eiffel_Wikimedia_Commons.jpg",
+      "imageSubject": "Eiffel Tower",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "latenight",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "restaurant"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "au-pied-de-cochon",
+      "title": "Au Pied de Cochon",
+      "emoji": "🐷",
+      "zone": 1,
+      "coords": [
+        48.86349,
+        2.3438
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "6 rue Coquillière, by Saint-Eustache, 1er",
+      "price": 35,
+      "priceNote": "Onion soup ~€12; mains €25–40",
+      "durationMin": 60,
+      "hours": "24/7",
+      "hoursFrom": "Au Pied de Cochon — open day and night",
+      "url": "https://www.pieddecochon.com/",
+      "source": "Au Pied de Cochon; Néorestauration",
+      "why": "The brasserie by the old Les Halles market that has served round the clock since just after the war, when it fed the porters of the market at dawn. At four in the morning have the onion soup gratinée, which is what everybody who ever stayed out too late in Paris has had here. The pig's trotter is for the brave. Saint-Eustache is lit up outside.",
+      "labels": [],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 2,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/St.-Eustache.jpg/1280px-St.-Eustache.jpg",
+      "imageSubject": "Saint-Eustache, Paris",
+      "imageKind": "context",
+      "imageCredit": "Pavel Krok · CC BY-SA 2.5"
     }
   ]
 }

@@ -328,7 +328,9 @@ const City = (() => {
     jazz:   'Two sets a night, most nights',
     venue:  'Check the listing, then buy blind',
     club:   'Doors at midnight — earlier is a beginner’s error',
-    bar:    'Wine, cocktails, and one taqueria with a secret door'
+    bar:    'Wine, cocktails, and one taqueria with a secret door',
+    afterdark: 'Museums open late, and the tower sparkling on the hour',
+    latenight: 'Onion soup at four in the morning, by Saint-Eustache'
   };
 
   /* What discover.mjs asks OpenStreetMap for, beyond the base layers.

@@ -1,6 +1,53 @@
 {
   "generated": "2026-09-28",
   "window": null,
-  "note": "Hand-written dated events. Empty.",
-  "items": []
+  "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the organiser's own schedule on the date given.",
+  "items": [
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "morning"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "delhi-half-marathon-2026",
+      "title": "The Delhi Half Marathon",
+      "emoji": "🏃",
+      "coords": [
+        28.58281,
+        77.23428
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "From Jawaharlal Nehru Stadium, Lodhi Road",
+      "start": "2026-10-18",
+      "end": "2026-10-18",
+      "durationMin": 180,
+      "priceNote": "Free to watch",
+      "why": "Delhi's big race, a World Athletics-labelled half marathon through Lutyens' Delhi, past India Gate and back to JLN Stadium. The elite men run under an hour. Watch on Kartavya Path near India Gate, early, while the city's roads are closed and quiet.",
+      "labels": [
+        "free"
+      ],
+      "url": "https://vedantadelhihalfmarathon.procam.in/",
+      "source": "Procam; India Sports Hub",
+      "booking": false,
+      "priceLevel": 0,
+      "price": 0,
+      "startTime": "06:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Jawaharlal_Nehru_Stadium_CWG_opening_ceremony.jpg/1280px-Jawaharlal_Nehru_Stadium_CWG_opening_ceremony.jpg",
+      "imageSubject": "Jawaharlal Nehru Stadium, Delhi",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

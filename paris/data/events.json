@@ -54,6 +54,50 @@
       "coordsFrom": "arr-centroid"
     },
     {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "france-italy-2026",
+      "title": "France v Italy",
+      "emoji": "⚽",
+      "coords": [
+        48.92446,
+        2.36015
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Stade de France, Saint-Denis",
+      "start": "2026-10-02",
+      "end": "2026-10-02",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~€30",
+      "why": "Les Bleus against Italy in the Nations League, on a Friday night at the Stade de France. It will be full and loud. Take the RER D or B to Saint-Denis and give yourself an hour to get in.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://www.stadefrance.com/en/tickets/football",
+      "source": "Stade de France; FFF",
+      "booking": "https://www.stadefrance.com/en/tickets/football",
+      "priceLevel": 2,
+      "startTime": "20:45",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/StadeFranceNationsLeague2018.jpg/1280px-StadeFranceNationsLeague2018.jpg",
+      "imageSubject": "Stade de France",
+      "imageKind": "subject",
+      "imageCredit": "Darthvadrouw · CC BY-SA 4.0"
+    },
+    {
       "id": "prix-arc-triomphe-2026",
       "title": "Qatar Prix de l'Arc de Triomphe",
       "emoji": "🏇",
@@ -105,6 +149,48 @@
         2.2769
       ],
       "coordsFrom": "arr-centroid"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "rugby"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "stade-francais-oct-2026",
+      "title": "Stade Français at Jean-Bouin",
+      "emoji": "🏉",
+      "coords": [
+        48.84346,
+        2.25287
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Stade Jean-Bouin, 16e",
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~€15",
+      "why": "A Top 14 afternoon at Jean-Bouin, the pink club's home, a white concrete lattice of a stadium next to the Parc des Princes. Rugby crowds are friendly, the tickets are cheap next to football, and the club's pink kit is its own reason to go. Check the opponent on the club's calendar.",
+      "labels": [],
+      "url": "https://billetterie.stade.fr/fr/calendrier",
+      "source": "Stade Français",
+      "booking": "https://billetterie.stade.fr/fr/",
+      "priceLevel": 1,
+      "startTime": "14:30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Stade_Jean_Bouin_-_Paris_XVI_%28FR75%29_-_2021-12-05_-_1.jpg/1280px-Stade_Jean_Bouin_-_Paris_XVI_%28FR75%29_-_2021-12-05_-_1.jpg",
+      "imageSubject": "Stade Jean-Bouin",
+      "imageKind": "subject",
+      "imageCredit": "Chabe01 · CC BY-SA 4.0"
     },
     {
       "id": "20km-de-paris-2026",
@@ -160,6 +246,92 @@
         2.312
       ],
       "coordsFrom": "arr-centroid"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "paris-basketball-virtus-2026",
+      "title": "Paris Basketball v Virtus Bologna",
+      "emoji": "🏀",
+      "coords": [
+        48.89622,
+        2.40247
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Adidas Arena, Porte de la Chapelle, 18e",
+      "start": "2026-10-14",
+      "end": "2026-10-14",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~€15",
+      "why": "EuroLeague basketball in the arena built for the 2024 Olympics at Porte de la Chapelle, against one of Italy's great clubs. Paris Basketball are the young, fast team that got the city into the EuroLeague, and the arena is new, steep and loud.",
+      "labels": [],
+      "url": "https://parisbasketball.com/en/category/adidas-arena-en/",
+      "source": "Paris Basketball",
+      "booking": "https://billetterie.parisbasketball.com/fr/",
+      "priceLevel": 1,
+      "hoursNote": "Wednesday evening — tip-off time on the club site",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Paris_Basketball_SQBB_match.jpg/1280px-Paris_Basketball_SQBB_match.jpg",
+      "imageSubject": "Adidas Arena",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "psg-ucl-oct-2026",
+      "title": "PSG — a Champions League night",
+      "emoji": "⚽",
+      "coords": [
+        48.84144,
+        2.25303
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Parc des Princes, 16e",
+      "start": "2026-10-20",
+      "end": "2026-10-20",
+      "durationMin": 180,
+      "priceNote": "Hard to get — resale only close to the day",
+      "why": "A Tuesday Champions League night at the Parc des Princes, which for European games is the loudest stadium in France: the Virage Auteuil sings for the whole ninety minutes. Tickets go to members first and the official resale is the honest way in. The opponent is on the club's calendar.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://billetterie.psg.fr/en/schedule",
+      "source": "Paris Saint-Germain",
+      "booking": "https://billetterie.psg.fr/en/schedule",
+      "priceLevel": 4,
+      "startTime": "21:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Paris_Parc_des_Princes_1.jpg/1280px-Paris_Parc_des_Princes_1.jpg",
+      "imageSubject": "Parc des Princes",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "id": "rolex-paris-masters-2026",

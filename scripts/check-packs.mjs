@@ -325,7 +325,7 @@ const FILES = ['events', 'places', 'nightlife', 'sports', 'food', 'itineraries',
 /* The kinds that have a door, and so opening hours js/hours.js must be
    able to read. The same list check-records.mjs grades against. */
 const DOORS = new Set(['cafe', 'bakery', 'restaurant', 'deli', 'dessert', 'market', 'bar', 'jazz',
-                       'comedy', 'venue', 'club', 'nightlife', 'museum', 'gallery', 'books', 'shop', 'culture']);
+                       'comedy', 'venue', 'club', 'latenight', 'nightlife', 'museum', 'gallery', 'books', 'shop', 'culture']);
 const SLOT_WORDS = ['morning', 'afternoon', 'evening'];
 const TODAY = new Date().toISOString().slice(0, 10);
 

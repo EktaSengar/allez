@@ -1,5 +1,563 @@
 {
-  "generated": "2026-09-14",
-  "note": "Hand-written. Empty.",
-  "items": []
+  "generated": "2026-09-28",
+  "note": "Night places that do not expire — a qawwali, a fort lit up, jazz, comedy, cocktail bars, a night bazaar and late-night food. Researched, not visited: every record says so. Programmes change nightly, so the link goes to the venue's own page.",
+  "items": [
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "culture",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "free",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "nizamuddin-qawwali",
+      "title": "Thursday qawwali at Nizamuddin",
+      "emoji": "🕌",
+      "zone": "nizamuddin",
+      "coords": [
+        28.59133,
+        77.24188
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Hazrat Nizamuddin Dargah, through the lanes of Nizamuddin Basti",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 120,
+      "hoursNote": "Thursday evenings, from after the sunset prayer for two or three hours",
+      "url": "https://www.nizamuddinaulia.org/",
+      "source": "Dargah Hazrat Nizamuddin Aulia",
+      "why": "Every Thursday after the sunset prayer, qawwals sit in the marble courtyard of the fourteenth-century Sufi shrine and sing, as they have for seven hundred years, with the crowd pressed in around them among the rose petals and incense. Walk in through the narrow lanes of the basti past the kebab stalls, leave your shoes at the stand, and cover your head. Arrive before sunset to get a place. It is free and it is the most moving night in Delhi.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Nizamuddin_Dargah_and_Jamaat_Khana_Masjid%2C_Delhi.jpg/1280px-Nizamuddin_Dargah_and_Jamaat_Khana_Masjid%2C_Delhi.jpg",
+      "imageSubject": "Hazrat Nizamuddin Dargah",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "red-fort-jai-hind",
+      "title": "Jai Hind at the Red Fort",
+      "emoji": "🏰",
+      "zone": "chandni-chowk",
+      "coords": [
+        28.65608,
+        77.2408
+      ],
+      "coordsFrom": "osm way/264863907 (Nominatim)",
+      "area": "Red Fort, Netaji Subhash Marg, Old Delhi",
+      "priceNote": "A separate evening ticket; book online",
+      "durationMin": 60,
+      "hoursNote": "Tuesday to Sunday after dark: a Hindi show and then an English one — about 7 and 8:30pm in autumn, earlier in winter",
+      "url": "https://sabhyatafoundation.com/red-fort-delhi-light-sound-show-tickets/",
+      "booking": "https://sabhyatafoundation.com/red-fort-delhi-light-sound-show-tickets/",
+      "source": "Sabhyata Foundation; Delhi Tourism",
+      "why": "The Mughal fort after dark, when the walls and pavilions are lit and projected on for an hour-long show of Delhi's history, from Shah Jahan to 1947 and the flag raised here on Independence Day. There is a Hindi show and then an English one. The fort is shut on Mondays. Eat in Chandni Chowk first, across the road.",
+      "labels": [],
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Delhi_fort.jpg/1280px-Delhi_fort.jpg",
+      "imageSubject": "Red Fort",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "culture",
+        "film"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "india-habitat-centre",
+      "title": "India Habitat Centre",
+      "emoji": "🎭",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.58974,
+        77.22501
+      ],
+      "coordsFrom": "osm way/287659125 (Nominatim)",
+      "area": "Lodhi Road, next to Lodhi Garden",
+      "price": 0,
+      "priceNote": "Many events free; some ticketed",
+      "durationMin": 120,
+      "hoursNote": "Concerts, films, talks and plays most evenings — the calendar is the timetable",
+      "url": "https://www.indiahabitat.org/",
+      "booking": "https://www.indiahabitat.org/",
+      "source": "India Habitat Centre",
+      "why": "The best free evening in South Delhi: a red-brick campus by Lodhi Garden that puts on concerts, films, plays and talks almost every night, many of them free. The classical music series is excellent. Check the calendar in the morning, walk Lodhi Garden at dusk, then go in.",
+      "labels": [
+        "free"
+      ],
+      "priceLevel": 0,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/India_Habitat_centre_-_panoramio.jpg/1280px-India_Habitat_centre_-_panoramio.jpg",
+      "imageSubject": "India Habitat Centre",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "jazz",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "piano-man-jazz-club",
+      "title": "The Piano Man Jazz Club",
+      "emoji": "🎹",
+      "zone": "safdarjung-enclave",
+      "coords": [
+        28.55949,
+        77.19686
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "B-6 Market, Safdarjung Enclave, opposite Deer Park",
+      "priceNote": "Cover some nights, plus food and drinks",
+      "durationMin": 150,
+      "hours": "Mo-Su 13:00-01:00",
+      "hoursFrom": "thepianoman.in — open daily, with a night set at about 9pm",
+      "url": "https://www.thepianoman.in/",
+      "booking": "https://www.thepianoman.in/",
+      "source": "The Piano Man; Time Out Delhi",
+      "why": "Delhi's proper jazz club: a small, dark room in Safdarjung Enclave market, with live music every night and the best Indian and visiting players on a stage you could touch. The night set is at about nine. Book a table on the weekend and listen, because this is a room where people do.",
+      "labels": [
+        "dontmiss",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 3
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "comedy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "happy-high",
+      "title": "Happy High",
+      "emoji": "🎙️",
+      "zone": "shahpur-jat",
+      "coords": [
+        28.5492,
+        77.21247
+      ],
+      "coordsFrom": "osm node/7813966771 (Nominatim)",
+      "area": "Sishan House, 5th floor, Shahpur Jat",
+      "priceNote": "Tickets from a few hundred rupees",
+      "durationMin": 120,
+      "hoursNote": "A bar on weekdays; the full comedy line-up at weekends — check the listings",
+      "url": "https://www.timeout.com/delhi/clubs/best-comedy-clubs",
+      "source": "Time Out Delhi",
+      "why": "A fifty-odd-seat comedy room up five floors in Shahpur Jat, run by comics rather than promoters, with bare brick walls and the stage close enough to heckle. The weekend shows are where Delhi's new stand-ups try their sets. Tickets are cheap. Make an evening of the lanes of Shahpur Jat first.",
+      "labels": [],
+      "booking": false,
+      "priceLevel": 2,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Siri_Fort_wall_at_Panchsheel_Park.jpg",
+      "imageSubject": "Siri Fort",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "comedy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "laughter-nation",
+      "title": "Laughter Nation",
+      "emoji": "🎙️",
+      "zone": "hauz-khas",
+      "coords": [
+        28.55425,
+        77.19425
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Above Lake View Bistro, Hauz Khas Village",
+      "priceNote": "Tickets from a few hundred rupees",
+      "durationMin": 120,
+      "hoursNote": "Shows most evenings — check the listings",
+      "url": "https://www.timeout.com/delhi/clubs/best-comedy-clubs",
+      "source": "Time Out Delhi",
+      "why": "A stand-up room upstairs in Hauz Khas Village, over the lake, with shows most nights from open mics to headliners. It is the easy comedy night if you are already in HKV for a drink.",
+      "labels": [],
+      "booking": false,
+      "priceLevel": 2,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sunset_at_Hauz_Khas_Lake_2.jpg",
+      "imageSubject": "Hauz Khas lake",
+      "imageKind": "context",
+      "imageCredit": "Garimasingh1992610 · CC BY-SA 4.0"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "theatre",
+        "comedy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "akshara-theatre",
+      "title": "Akshara Theatre",
+      "emoji": "🎭",
+      "zone": "raisina-hill",
+      "coords": [
+        28.62598,
+        77.20327
+      ],
+      "coordsFrom": "osm node/5338584665 (Nominatim)",
+      "area": "11-B Baba Kharak Singh Marg, near RML Hospital",
+      "priceNote": "Tickets vary",
+      "durationMin": 120,
+      "hoursNote": "Plays, comedy and puppetry most weekends — the calendar is the timetable",
+      "url": "https://www.aksharatheatre.com/",
+      "source": "Time Out Delhi; Akshara Theatre",
+      "why": "A small theatre complex off Connaught Place, built by a family of theatre people in the early 1970s out of brick, stone and courtyards. It puts on plays, comedy, music and puppet shows. The building alone is worth the ticket. Look at the weekend programme.",
+      "labels": [
+        "hiddengem"
+      ],
+      "booking": false,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Skyline_at_Rajiv_Chowk.JPG/1280px-Skyline_at_Rajiv_Chowk.JPG",
+      "imageSubject": "Connaught Place, New Delhi",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "sidecar-delhi",
+      "title": "Sidecar",
+      "emoji": "🍸",
+      "zone": "greater-kailash",
+      "coords": [
+        28.53118,
+        77.24193
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "M Block Market, Greater Kailash II",
+      "priceNote": "Cocktails ~₹900–1,300",
+      "durationMin": 90,
+      "hoursNote": "Open every evening until late — book at weekends",
+      "url": "https://www.theworlds50best.com/discovery/Establishments/India/New-Delhi/Sidecar.html",
+      "source": "50 Best Discovery; Robb Report India",
+      "why": "The cocktail bar that put Delhi on the world's list: a small upstairs room in GK-2's M Block market that has championed Indian spirits and ingredients, and which ranked eighteenth in Asia in 2023. The menu changes and the bartenders are the reason to sit at the bar. Book on a weekend.",
+      "labels": [
+        "couple",
+        "dontmiss"
+      ],
+      "booking": false,
+      "priceLevel": 4
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "pco-delhi",
+      "title": "PCO",
+      "emoji": "☎️",
+      "zone": "vasant-vihar",
+      "coords": [
+        28.55978,
+        77.16047
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "D-4, D Block Market, Vasant Vihar",
+      "priceNote": "Cocktails ~₹900+",
+      "durationMin": 90,
+      "hoursNote": "Evenings until late — you need the passcode, sent when you book",
+      "url": "https://www.30bestbarsindia.in/bar/pco/",
+      "source": "30 Best Bars India; 50 Best Discovery",
+      "why": "Delhi's first speakeasy, reached through a telephone booth in Vasant Vihar where you dial a code to be let in. Behind it is a dim Prohibition-style bar with good classic cocktails. Book to get the code. It is a bit of theatre, and it works.",
+      "labels": [
+        "couple"
+      ],
+      "booking": false,
+      "priceLevel": 4
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 3,
+      "uniqueness": 4,
+      "id": "hauz-khas-village-night",
+      "title": "Hauz Khas Village after dark",
+      "emoji": "🌙",
+      "zone": "hauz-khas",
+      "coords": [
+        28.55412,
+        77.19453
+      ],
+      "coordsFrom": "osm node/12070225127 (Nominatim)",
+      "area": "Hauz Khas Village, above the lake and the medieval madrasa",
+      "priceNote": "Drinks and dinner",
+      "durationMin": 180,
+      "hoursNote": "The bars open from the afternoon and run late; the ruins close at sunset",
+      "url": "https://delhitourism.gov.in/",
+      "source": "Delhi Tourism",
+      "why": "A lane of bars, cafés and rooftops built into an old village next to the ruins of a fourteenth-century madrasa and a deer park lake. Go before sunset to walk the ruins and watch the light over the water, then climb to a rooftop for a drink. It is loud and young at weekends. Weeknights are gentler.",
+      "labels": [
+        "couple"
+      ],
+      "booking": false,
+      "priceLevel": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sunset_at_Hauz_Khas_Lake_2.jpg",
+      "imageSubject": "Hauz Khas lake at sunset",
+      "imageKind": "subject",
+      "imageCredit": "Garimasingh1992610 · CC BY-SA 4.0"
+    },
+    {
+      "type": "nightmarket",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "market",
+        "shop"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "cheap",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "dilli-haat-ina",
+      "title": "Dilli Haat at night",
+      "emoji": "🏮",
+      "zone": "kidwai-nagar",
+      "coords": [
+        28.57365,
+        77.20759
+      ],
+      "coordsFrom": "osm node/6453544487 (Nominatim)",
+      "area": "Opposite INA Market, Aurobindo Marg",
+      "price": 30,
+      "priceNote": "₹30 entry; food stalls ₹150–400",
+      "durationMin": 120,
+      "hours": "Mo-Su 10:30-22:00",
+      "hoursFrom": "Delhi Tourism — open daily, 10:30am to 10pm",
+      "url": "https://delhitourism.gov.in/tourist_place/dilli_haat_INA.html",
+      "source": "Delhi Tourism",
+      "why": "An open-air crafts bazaar with stalls from every state, and food counters run by different states cooking their own dishes. It is lit up and busiest in the evening, when the day's heat has gone. Walk the craft stalls, then eat your way round India. INA metro is across the road.",
+      "labels": [
+        "cheap"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 2,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Dilli_Haat_-_INA.jpg/1280px-Dilli_Haat_-_INA.jpg",
+      "imageSubject": "Dilli Haat",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "latenight",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "restaurant"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "karims",
+      "title": "Karim's",
+      "emoji": "🍢",
+      "zone": "chandni-chowk",
+      "coords": [
+        28.64943,
+        77.23374
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Gali Kababian, off the south gate of Jama Masjid",
+      "price": 600,
+      "priceNote": "~₹400–800 a head",
+      "durationMin": 60,
+      "hoursNote": "Open daily until about half past midnight",
+      "url": "https://www.karimhoteldelhi.com/",
+      "source": "Restaurant India",
+      "why": "The Mughlai kitchen in the lane below Jama Masjid, cooking mutton korma, seekh kebabs and nihari since 1913, by a family that says it descends from the royal cooks. It stays open past midnight, and the lanes around it are the one part of Delhi where food goes on through the night, especially in Ramzan. Come by metro to Jama Masjid, and walk.",
+      "labels": [
+        "dontmiss"
+      ],
+      "priceLevel": 4,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Jama_Masjid_-_In_the_Noon.jpg/1280px-Jama_Masjid_-_In_the_Noon.jpg",
+      "imageSubject": "Jama Masjid, Delhi",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "latenight",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "restaurant"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "cheap",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "moolchand-paranthe",
+      "title": "Moolchand paranthas",
+      "emoji": "🫓",
+      "zone": "andrews-ganj",
+      "coords": [
+        28.564,
+        77.23419
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Under the Moolchand flyover, Lala Lajpat Rai Marg",
+      "price": 150,
+      "priceNote": "₹100–200",
+      "durationMin": 30,
+      "hours": "Mo-Su 08:30-23:30",
+      "hoursFrom": "Restaurant India — 8:30am to 11:30pm",
+      "url": "https://www.restaurantindia.in/",
+      "source": "Restaurant India",
+      "why": "A parantha stall under the Moolchand flyover that has fed South Delhi's night drivers and students for decades: paranthas stuffed with potato, cauliflower or paneer, fried in butter and eaten standing by the car. It is open until half past eleven. Order two, with pickle and curd.",
+      "labels": [
+        "cheap"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 4,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/A_man_who_is_cooking_parathas.JPG/1280px-A_man_who_is_cooking_parathas.JPG",
+      "imageSubject": "Paratha",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

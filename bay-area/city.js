@@ -545,11 +545,14 @@ const City = (() => {
 
   /* The lines under the Nights headings. */
   const nightNotes = {
-    comedy: 'Where Robin Williams started, and improv by the bay',
-    jazz:   'A concert hall built for it, and a supper club underground',
-    venue:  'The ballrooms the sixties happened in',
-    club:   'The late ones',
-    bar:    'Beat bars, tiki, and a Chinatown mai tai'
+    comedy: 'Where Robin Williams started, a drag palace, and a circus in North Beach',
+    jazz:   'A concert hall built for it, and supper clubs to hear it at dinner',
+    venue:  'The ballrooms the sixties happened in, and the rooms bands play on the way up',
+    club:   'Funktion-One, roller disco, and an after-hours that has outlasted everyone',
+    bar:    'Beat bars, tiki in a thunderstorm, and a view from the nineteenth floor',
+    afterdark:   'Museums with a bar, a theatre of pure sound, and 48,000 lights on the bridge',
+    nightmarket: 'The monthly Friday nights, from Grant Avenue to the Fort Mason piers',
+    latenight:   'Burritos until three, doughnuts all night — and the one Peninsula kitchen open till twelve'
   };
 
   /* What discover.mjs asks OpenStreetMap for, beyond the base layers.

@@ -245,8 +245,10 @@ const EXPECT = {
     need: 2,
     /* 15 of the 80 pair/kind lists. Every probe reaches the Mission for
        coffee, because that is where the vouched records are. Falls as
-       the editorial tier spreads out. */
-    overshare: 15,
+       the editorial tier spreads out — and it did: 11 on 28 September,
+       once Nights had rooms of its own in North Beach, the Mission,
+       SoMa and Palo Alto rather than one cluster downtown. */
+    overshare: 11,
     /* 137 of 160 on 18 September 2026, the day the editorial tier was
        written. What fails is the Peninsula — San Mateo, Sunnyvale and
        Palo Alto for coffee, bread and markets — which is exactly where
@@ -278,8 +280,17 @@ const EXPECT = {
        23 first committed here was the same unreproducible reading. Then
        28, from six records written in Saket, Dwarka and Gurgaon: Dwarka
        had been sharing four cafés with Connaught Place, twenty
-       kilometres away, for want of any of its own. */
-    overshare: 28,
+       kilometres away, for want of any of its own.
+
+       31 on 28 September, with the first thirteen Nights records, and it
+       is the same admission as the café tier. Before them the nightlife
+       column was answered by bars off the map, which differ everywhere;
+       now the nearest vouched night is one of a handful — the qawwali at
+       Nizamuddin, Karim's, the Habitat Centre, the Piano Man, Hauz Khas —
+       so Connaught Place and Karol Bagh name the same five, and Hauz Khas
+       shares with Saket and Dwarka. It falls with a bar written in Karol
+       Bagh, Saket and Dwarka each, not with more in the middle. */
+    overshare: 31,
     /* Still zero of 160, and worth understanding rather than explaining
        away. Delhi's sourced tier went from 81 records to 267 when the
        pack declared its own Wikidata classes — but those records are
@@ -342,9 +353,13 @@ const EXPECT = {
 
        Which is also why over-sharing *fell* here, 26 to 23, where
        Bengaluru's rose: records written at the edges pull probes apart,
-       records written in the middle pull them together. */
+       records written in the middle pull them together.
+
+       24 on 28 September, with the first Nights and Sport records: the
+       jazz rooms and bars of the West and East Village now answer
+       nightlife for both the Village and Union Square probes. */
     floor: 109,
-    overshare: 23
+    overshare: 24
   },
   bengaluru: {
     probes: ['indiranagar', 'jayanagar', 'malleswaram', 'whitefield', 'koramangala'],
@@ -377,8 +392,15 @@ const EXPECT = {
        retrieval ring widens until it holds *four* known places, so a
        neighbourhood with two of its own still reaches next door for the
        other two. Closing it means four per category per neighbourhood —
-       Paris density, which is years of somebody going out. */
-    overshare: 18,
+       Paris density, which is years of somebody going out.
+
+       21 on 28 September, from the first ten Nights records. Two new
+       pairs share in the nightlife column — Indiranagar with Koramangala,
+       and Jayanagar with Malleswaram — because the city's vouched nights
+       are Toit and Soka in Indiranagar, VV Puram and the old centre, and
+       nothing yet in Koramangala, Jayanagar or Malleswaram of their own.
+       A bar or a late kitchen in each of those closes it. */
+    overshare: 21,
     /* 18 off the notable tier alone; 28 with twelve editorial records;
        62 with four markets and an Iyengar bakery; 120 with ten cafés and
        bakeries, when those two columns had been dead in all forty sampled

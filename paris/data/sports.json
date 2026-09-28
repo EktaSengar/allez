@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15",
+  "generated": "2026-09-28",
   "note": "Places to watch sport, places to play it, and places to run. Evergreen — fixtures change weekly, so cards link to the club's own ticketing rather than pretending to know who is at home in three weeks. Dated fixtures and races live in events.json so they expire on their own.",
   "items": [
     {
@@ -1953,6 +1953,149 @@
       "source": "space-invaders.com; positions from OpenStreetMap",
       "quality": 5,
       "uniqueness": 5
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "hike-franchard",
+      "title": "Fontainebleau — the Gorges de Franchard",
+      "emoji": "🪨",
+      "coords": [
+        48.40812,
+        2.62024
+      ],
+      "coordsFrom": "osm way/189831560 (Nominatim)",
+      "area": "Forêt de Fontainebleau · about 8 km on the blue trail · sand and rocks",
+      "price": 0,
+      "priceNote": "Free; ~€20 return train",
+      "durationMin": 210,
+      "hours": "24/7",
+      "hoursFrom": "ONF — the forest is always open",
+      "url": "https://www.onf.fr/",
+      "source": "Office National des Forêts; Fontainebleau Tourisme",
+      "why": "The forest where bouldering was invented: sand paths among heather and sandstone blocks the size of houses, and the Franchard gorge, a small canyon of rocks and pines, at its heart. Follow the painted blue trail, the old Denecourt paths from the 1840s, round the gorge. Take the train to Fontainebleau-Avon and a taxi or bike to the Carrefour de Franchard. Autumn, when the forest turns, is the best.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Gorges_de_Franchard_29.JPG/1280px-Gorges_de_Franchard_29.JPG",
+      "imageSubject": "Gorges de Franchard",
+      "imageKind": "subject",
+      "imageCredit": "Thesupermat · CC BY-SA 3.0"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "outdoors"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "hike-chevreuse",
+      "title": "The Vallée de Chevreuse",
+      "emoji": "🥾",
+      "coords": [
+        48.7043,
+        2.0758
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "From Saint-Rémy-lès-Chevreuse, the end of RER B · about 12 km loop",
+      "price": 0,
+      "priceNote": "A Navigo pass covers the RER",
+      "durationMin": 240,
+      "hours": "24/7",
+      "hoursFrom": "Parc naturel régional de la Haute Vallée de Chevreuse",
+      "url": "https://www.parc-naturel-chevreuse.fr/",
+      "source": "Parc naturel régional de la Haute Vallée de Chevreuse",
+      "why": "The walk you can reach on a Navigo pass: ride the RER B to the end of the line and step straight onto the GR11 into a regional park of wooded valleys, stone villages and the ruined castle of the Madeleine above Chevreuse. The loop via Chevreuse and the Petits Ponts de Racine takes a morning. Lunch in Chevreuse, then back to the train.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Ch%C3%A2teau_de_la_Madeleine_vu_depuis_Chevreuse.jpg",
+      "imageSubject": "Haute Vallée de Chevreuse Regional Natural Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cycling",
+        "outdoors",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "ride-ourcq-meaux",
+      "title": "Along the Canal de l’Ourcq to Meaux",
+      "emoji": "🚲",
+      "zone": 19,
+      "coords": [
+        48.88434,
+        2.36946
+      ],
+      "coordsFrom": "osm node/2157840443 (Nominatim)",
+      "area": "From the Bassin de la Villette · about 50 km · flat towpath",
+      "price": 0,
+      "priceNote": "Free; the train back to Paris",
+      "durationMin": 300,
+      "hours": "24/7",
+      "hoursFrom": "Ville de Paris — the canal towpath",
+      "url": "https://www.paris.fr/",
+      "source": "Ville de Paris; Seine-et-Marne Tourisme",
+      "why": "Start at the Bassin de la Villette and simply keep going: the canal towpath runs out of Paris through Pantin and Sevran and into forest and farmland, flat and almost entirely car-free, all the way to Meaux. That is about fifty kilometres, and at the end is Brie de Meaux, a cathedral and a train back to Gare de l’Est in twenty-five minutes.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Canal_de_l%27Ourcq_pres_de_Vignely_P1050588.JPG/1280px-Canal_de_l%27Ourcq_pres_de_Vignely_P1050588.JPG",
+      "imageSubject": "The Canal de l'Ourcq",
+      "imageKind": "subject",
+      "imageCredit": "Pline · CC BY-SA 3.0"
     }
   ]
 }

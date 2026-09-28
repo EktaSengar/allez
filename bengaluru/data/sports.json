@@ -1,5 +1,418 @@
 {
-  "generated": "2026-09-13",
-  "note": "Hand-written. Empty.",
-  "items": []
+  "generated": "2026-09-28",
+  "note": "Hand-written. Play is what you can do — a climbing gym and dawn runs in the parks; Trails are the night treks and the rides up to the hills; Watch is where the big teams play. Researched, not visited.",
+  "items": [
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "free"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "run-cubbon-park",
+      "title": "Cubbon Park on a Sunday",
+      "emoji": "🏃",
+      "zone": "gandhinagar",
+      "coords": [
+        12.97425,
+        77.59219
+      ],
+      "coordsFrom": "osm way/22895320 (Nominatim)",
+      "area": "Cubbon Park · loops of 2 to 5 km · car-free on Sundays",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 45,
+      "intent": [
+        "casual",
+        "group"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 4,
+      "startTime": "06:30",
+      "hoursNote": "Open from early morning; the roads inside are closed to traffic on Sundays",
+      "url": "https://horticulture.karnataka.gov.in/",
+      "source": "Deccan Herald; Karnataka Horticulture Department",
+      "why": "Three hundred acres of old trees in the middle of the city, and on Sundays its roads belong to runners, walkers and running clubs, with the traffic shut out. Start at the bandstand, loop past the red Attara Kacheri and the State Central Library, and finish at the Queen Victoria statue. Half of Bengaluru's running groups meet here at six.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Cubbon_Park_W.jpg/1280px-Cubbon_Park_W.jpg",
+      "imageSubject": "Cubbon Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "run-lalbagh",
+      "title": "Lalbagh at dawn",
+      "emoji": "🌺",
+      "zone": "shanti-nagar",
+      "coords": [
+        12.94886,
+        77.58691
+      ],
+      "coordsFrom": "osm way/15802464 (Nominatim)",
+      "area": "Lalbagh Botanical Garden · about 3 km round the lake and the glasshouse",
+      "priceNote": "Free for early-morning walkers",
+      "durationMin": 40,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 3,
+      "hoursNote": "Early-morning walkers get in free; the day ticket starts later",
+      "url": "https://horticulture.karnataka.gov.in/",
+      "source": "Karnataka Horticulture Department",
+      "why": "The botanical garden Hyder Ali began and Tipu Sultan finished in the eighteenth century, with a glasshouse modelled on the Crystal Palace and a lake at the far end. At dawn it is full of walkers doing laps and yoga groups on the lawns. Climb the Lalbagh Rock, a three-billion-year-old gneiss outcrop with a Kempegowda watchtower on top, for the sunrise.",
+      "labels": [],
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Glasshouse_and_fountain_at_lalbagh.jpg/1280px-Glasshouse_and_fountain_at_lalbagh.jpg",
+      "imageSubject": "Lal Bagh",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "climbing"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "morning",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "equilibrium-climbing",
+      "title": "Equilibrium Climbing Station",
+      "emoji": "🧗",
+      "zone": "indiranagar",
+      "coords": [
+        12.97813,
+        77.6379
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "3rd floor, Chinmaya Mission Hospital Road, Indiranagar",
+      "price": 700,
+      "priceNote": "₹700 a day, shoes included",
+      "durationMin": 120,
+      "intent": [
+        "try",
+        "casual",
+        "group"
+      ],
+      "difficulty": "beginner",
+      "hoursNote": "Open from 7am to 10pm most days",
+      "url": "https://equilibriumclimbing.com/",
+      "booking": "https://equilibriumclimbing.com/pricing",
+      "source": "Equilibrium Climbing",
+      "why": "India's biggest range of indoor bouldering, on a third floor in Indiranagar, with routes reset every week and a speed wall. A day pass includes the shoes, and the intro sessions will get a beginner climbing in an hour. It is the city's climbing community's living room, and a rare thing to do in the monsoon.",
+      "labels": [
+        "indoor"
+      ],
+      "priceLevel": 4,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/Bouldering.jpg",
+      "imageSubject": "Bouldering",
+      "imageKind": "context",
+      "imageCredit": "Ram Sripracha (talk · contribs) · CC BY-SA 4.0"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cycling",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "ride-nandi-hills-dawn",
+      "title": "Cycle up Nandi Hills at dawn",
+      "emoji": "🚴",
+      "coords": [
+        13.38626,
+        77.70093
+      ],
+      "coordsFrom": "Wikipedia (Nandi Hills)",
+      "area": "From the foot of the hill past Devanahalli · 8 km of hairpins",
+      "priceNote": "Small entry fee at the gate",
+      "durationMin": 240,
+      "hoursNote": "The gate at the top opens at six — start the climb in the dark",
+      "url": "https://karnatakatourism.org/",
+      "source": "Karnataka Tourism",
+      "why": "The ride Bengaluru's cyclists do on Sunday: drive or ride out past the airport in the dark, then climb the eight kilometres of hairpins to the top of Nandi Hills as it gets light, often above the cloud. The gate opens at six. It is steep enough to hurt and short enough to finish. Coffee at the top.",
+      "labels": [],
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Sunrise_at_Nandi_Hills.jpg/1280px-Sunrise_at_Nandi_Hills.jpg",
+      "imageSubject": "Nandi Hills, India",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "hike-skandagiri",
+      "title": "The Skandagiri night trek",
+      "emoji": "🌄",
+      "coords": [
+        13.4175,
+        77.68278
+      ],
+      "coordsFrom": "Wikipedia (Skandagiri)",
+      "area": "Near Chikkaballapur · about 3 km up · starts around 2am",
+      "price": 250,
+      "priceNote": "₹250 permit, booked online",
+      "durationMin": 300,
+      "bookAhead": true,
+      "hoursNote": "Night slots start about 2am for the sunrise; book on Aranya Vihaara",
+      "url": "https://aranyavihaara.karnataka.gov.in/",
+      "booking": "https://aranyavihaara.karnataka.gov.in/",
+      "source": "Karnataka Forest Department; Karnataka Tourism",
+      "why": "Climb in the dark with a head torch to the ruined fort on top of Skandagiri, and watch the sun come up over a sea of cloud with Nandi Hills across the valley. Permits are sold online by the forest department and weekends go days ahead. Go with a group, wear real shoes, and take a layer: it is cold at five in the morning.",
+      "labels": [
+        "bookahead"
+      ],
+      "priceLevel": 4,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Skandagiri.jpg/1280px-Skandagiri.jpg",
+      "imageSubject": "Skandagiri",
+      "imageKind": "subject",
+      "imageCredit": "Vijets at English Wikipedia · Public domain"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "hike-makalidurga",
+      "title": "Makalidurga",
+      "emoji": "🚂",
+      "coords": [
+        13.43287,
+        77.5015
+      ],
+      "coordsFrom": "osm node/3988127393 (Nominatim)",
+      "area": "Near Doddaballapur · about 3 km up · the railway runs round its foot",
+      "priceNote": "Permit fee, booked online",
+      "durationMin": 240,
+      "bookAhead": true,
+      "hoursNote": "Day treks from early morning; book on Aranya Vihaara",
+      "url": "https://aranyavihaara.karnataka.gov.in/",
+      "booking": "https://aranyavihaara.karnataka.gov.in/",
+      "source": "Karnataka Forest Department",
+      "why": "A granite hill north of the city with a fort at the top and the Gundamagere lake below, where the train line curves round its base, which is why photographers love it. The climb is rocky and steep in places. Start at first light to beat the heat, and book the permit first.",
+      "labels": [
+        "bookahead"
+      ],
+      "priceLevel": 1,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/43/Railway_trek.JPG",
+      "imageSubject": "Makalidurga",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "free",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 3,
+      "uniqueness": 4,
+      "id": "hike-turahalli",
+      "title": "Turahalli Forest",
+      "emoji": "🌳",
+      "zone": "banashankari-6th-stage",
+      "coords": [
+        12.88275,
+        77.52567
+      ],
+      "coordsFrom": "osm way/96549874 (Nominatim)",
+      "area": "Off Kanakapura Road, south-west Bengaluru",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 120,
+      "hours": "sunrise-sunset",
+      "hoursFrom": "Karnataka Forest Department — daylight hours",
+      "url": "https://aranyavihaara.karnataka.gov.in/",
+      "source": "Karnataka Forest Department",
+      "why": "The last patch of scrub forest on the city's edge, with boulders beginners climb on, trails that cyclists ride at dawn, and peacocks. It is ten minutes from the end of the city and feels an hour away. Go early; by nine it is hot.",
+      "labels": [
+        "free"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Thurahalli%2C_Bengaluru%2C_Karnataka_560062%2C_India_-_panoramio_%282%29.jpg",
+      "imageSubject": "Turahalli Forest",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cricket"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "watch-chinnaswamy",
+      "title": "Cricket at the Chinnaswamy",
+      "emoji": "🏏",
+      "zone": "shivajinagar",
+      "coords": [
+        12.97881,
+        77.59958
+      ],
+      "coordsFrom": "osm way/28126916 (Nominatim)",
+      "area": "M. Chinnaswamy Stadium, MG Road",
+      "priceNote": "Tickets from a few hundred rupees",
+      "durationMin": 240,
+      "hoursNote": "RCB's IPL home games in spring; India's internationals when Bengaluru is given one",
+      "url": "https://www.espn.com/cricket/story/_/id/47638712/chinnaswamy-stadium-gets-government-nod-host-ipl-international-matches",
+      "source": "ESPNcricinfo; KSCA",
+      "why": "The loudest cricket ground in India, in the middle of the city off MG Road, home of Royal Challengers Bengaluru. It closed after the stampede at the 2025 title celebrations, in which eleven people died, and has been cleared to reopen with a reduced capacity and new crowd rules. Follow the stewards' routes in and out, and take the metro to Cubbon Park.",
+      "labels": [],
+      "booking": false,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Chinnaswamy_Stadium.jpg/1280px-Chinnaswamy_Stadium.jpg",
+      "imageSubject": "M. Chinnaswamy Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "watch",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "weekend",
+        "sport"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "watch-kanteerava",
+      "title": "Bengaluru FC at the Kanteerava",
+      "emoji": "⚽",
+      "zone": "richmond-town",
+      "coords": [
+        12.96935,
+        77.59266
+      ],
+      "coordsFrom": "osm way/23029712 (Nominatim)",
+      "area": "Sree Kanteerava Stadium, Kasturba Road",
+      "priceNote": "Tickets from ~₹200",
+      "durationMin": 150,
+      "hoursNote": "Indian Super League home games, October to spring — the schedule is the timetable",
+      "url": "https://www.indiansuperleague.com/clubs/656-bengaluru-fc-profile",
+      "source": "Indian Super League",
+      "why": "Bengaluru FC's home, a city-centre stadium next to Cubbon Park, where the West Block Blues sing for ninety minutes. It is the best football atmosphere in the south, and a ticket costs less than a coffee in Indiranagar. Stand with the Blues.",
+      "labels": [
+        "cheap"
+      ],
+      "booking": false,
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Sree_Kanteerava_Stadium.jpg/1280px-Sree_Kanteerava_Stadium.jpg",
+      "imageSubject": "Sree Kanteerava Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

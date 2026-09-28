@@ -1,5 +1,1098 @@
 {
- "generated": "2026-09-18",
- "note": "Hand-written. Empty.",
- "items": []
+  "generated": "2026-09-28",
+  "note": "Night places that do not expire — things only on after dark, live rooms, jazz, comedy, dancing, bars, the night market and late-night food. Researched, not visited: every record says so. Programmes change nightly, so the link goes to the venue's own calendar; dated nights belong in events.json.",
+  "items": [
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "free",
+        "view"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "free",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "staten-island-ferry-night",
+      "title": "The Staten Island Ferry at night",
+      "emoji": "⛴️",
+      "zone": "financial-district-battery-park-city",
+      "coords": [
+        40.70096,
+        -74.01306
+      ],
+      "coordsFrom": "osm way/38868195 (Nominatim)",
+      "area": "Whitehall Terminal, the southern tip of Manhattan",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 60,
+      "hours": "24/7",
+      "hoursFrom": "NYC DOT — the ferry runs around the clock",
+      "url": "https://www.siferry.com/",
+      "source": "NYC Department of Transportation",
+      "why": "The best free thing in New York, and best after dark: twenty-five minutes across the harbour past the Statue of Liberty, lit up, with the whole of Lower Manhattan shining behind you. It runs every day and all night. Stand on the right-hand side going out for the statue, then turn round and come straight back for the skyline.",
+      "labels": [
+        "free",
+        "couple",
+        "dontmiss"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Spirit_of_America_-_Staten_Island_Ferry.jpg/1280px-Spirit_of_America_-_Staten_Island_Ferry.jpg",
+      "imageSubject": "Staten Island Ferry",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "free",
+        "walk",
+        "view"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "free",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "brooklyn-bridge-night",
+      "title": "Walk the Brooklyn Bridge at night",
+      "emoji": "🌉",
+      "zone": "financial-district-battery-park-city",
+      "coords": [
+        40.71108,
+        -74.00303
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "From City Hall Park to DUMBO · about 1.3 miles",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 60,
+      "hours": "24/7",
+      "hoursFrom": "NYC DOT — the promenade is open all night",
+      "url": "https://www.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+      "source": "NYC DOT",
+      "why": "In daylight it is a crush of selfie sticks; after ten at night it is yours. Walk from Manhattan to Brooklyn, not the other way, so the Manhattan skyline is behind you to turn round for, and the stone towers and cables glow above the boardwalk. Come down into DUMBO and finish with the view back from Brooklyn Bridge Park.",
+      "labels": [
+        "free",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg/1280px-Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg",
+      "imageSubject": "Brooklyn Bridge",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "culture",
+        "art"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "met-friday-nights",
+      "title": "The Met on Friday and Saturday nights",
+      "emoji": "🏛️",
+      "zone": "central-park",
+      "coords": [
+        40.77944,
+        -73.96338
+      ],
+      "coordsFrom": "osm relation/3698894 (Nominatim)",
+      "area": "1000 Fifth Avenue, Upper East Side",
+      "price": 30,
+      "priceNote": "$30; pay-what-you-wish for New York State residents",
+      "durationMin": 150,
+      "hours": "Fr-Sa 17:00-21:00",
+      "hoursFrom": "metmuseum.org — open until 9pm on Friday and Saturday",
+      "url": "https://www.metmuseum.org/plan-your-visit",
+      "booking": "https://www.metmuseum.org/tickets",
+      "source": "The Metropolitan Museum of Art",
+      "why": "The Met stays open until nine on Friday and Saturday, and after five the day's crowds have gone. Walk into the Temple of Dendur with the lights low and Central Park dark behind the glass wall, or have the European paintings almost to yourself. New York State residents pay what they wish. Start at the far end and work back to the Great Hall.",
+      "labels": [
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/1280px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg",
+      "imageSubject": "The Metropolitan Museum of Art",
+      "imageKind": "subject",
+      "imageCredit": "Hugo Schneider · CC BY-SA 2.0"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "view"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "esb-at-night",
+      "title": "The Empire State Building after dark",
+      "emoji": "🏙️",
+      "zone": "midtown-south-flatiron-union-square",
+      "coords": [
+        40.74844,
+        -73.98566
+      ],
+      "coordsFrom": "osm way/34633854 (Nominatim)",
+      "area": "20 West 34th Street, Midtown",
+      "priceNote": "From about $45",
+      "durationMin": 90,
+      "hoursNote": "Open late every night — until midnight or later much of the year; check the day",
+      "url": "https://www.esbnyc.com/",
+      "booking": "https://www.esbnyc.com/buy-tickets",
+      "source": "Empire State Building",
+      "why": "The observation deck on the 86th floor is open late, and at night it is a different building: an open-air terrace in the wind, with the grid of Manhattan lit to every horizon. Go after ten, when the queues have gone. The newer towers are higher, but only this one puts the city's most famous building under your feet.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg",
+      "imageSubject": "Empire State Building",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "bowery-ballroom",
+      "title": "Bowery Ballroom",
+      "emoji": "🎸",
+      "zone": "lower-east-side",
+      "coords": [
+        40.72044,
+        -73.99334
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "6 Delancey Street, Lower East Side",
+      "priceNote": "Tickets ~$25–45",
+      "durationMin": 180,
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "url": "https://www.boweryballroom.com/",
+      "booking": "https://www.boweryballroom.com/",
+      "source": "Bowery Presents",
+      "why": "The best-sounding small rock room in Manhattan: a 1929 building on Delancey with a balcony, room for about 575, and a bar downstairs for between bands. This is where the bands you like play before they are too big for it. Buy tickets when they go on sale, and get there for the opener.",
+      "labels": [],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Bowery_Ballroom_%2855381000744%29.jpg/1280px-Bowery_Ballroom_%2855381000744%29.jpg",
+      "imageSubject": "Bowery Ballroom",
+      "imageKind": "subject",
+      "imageCredit": "Ajay Suresh · CC BY 4.0"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "brooklyn-steel",
+      "title": "Brooklyn Steel",
+      "emoji": "🎤",
+      "zone": "east-williamsburg",
+      "coords": [
+        40.71939,
+        -73.93875
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "319 Frost Street, East Williamsburg",
+      "priceNote": "Tickets ~$35–70",
+      "durationMin": 180,
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "url": "https://www.brooklynsteel.com/",
+      "booking": "https://www.brooklynsteel.com/",
+      "source": "Bowery Presents",
+      "why": "A former steel fabrication plant in East Williamsburg turned into an 1,800-capacity hall, with a sloped floor that means you can see from the back. It gets the bands that have outgrown Bowery Ballroom. The L to Graham Avenue is a ten-minute walk.",
+      "labels": [],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Knickerbocker_north.jpg/1280px-Knickerbocker_north.jpg",
+      "imageSubject": "East Williamsburg, Brooklyn",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "brooklyn-bowl",
+      "title": "Brooklyn Bowl",
+      "emoji": "🎳",
+      "zone": "williamsburg",
+      "coords": [
+        40.72198,
+        -73.95763
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "61 Wythe Avenue, Williamsburg",
+      "priceNote": "Shows ~$20–40; lanes by the hour",
+      "durationMin": 180,
+      "hoursNote": "Open evenings for bowling and shows — the calendar is the timetable",
+      "url": "https://www.brooklynbowl.com/brooklyn",
+      "booking": "https://www.brooklynbowl.com/brooklyn",
+      "source": "Brooklyn Bowl",
+      "why": "A bowling alley and a concert hall in one old Williamsburg ironworks: sixteen lanes on one side, a stage on the other, and fried chicken in between. You can bowl through the set. Book a lane for the start of the night, then go and stand at the front.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 2,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/WilliamsburgBK.jpg",
+      "imageSubject": "Williamsburg, Brooklyn",
+      "imageKind": "context",
+      "imageCredit": "Justicex07 · CC BY-SA 4.0"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "le-poisson-rouge",
+      "title": "Le Poisson Rouge",
+      "emoji": "🐟",
+      "zone": "greenwich-village",
+      "coords": [
+        40.72843,
+        -73.99988
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "158 Bleecker Street, Greenwich Village",
+      "priceNote": "Tickets ~$20–40",
+      "durationMin": 150,
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "url": "https://www.lpr.com/",
+      "booking": "https://www.lpr.com/",
+      "source": "Le Poisson Rouge",
+      "why": "A club on Bleecker, in the basement where the Village Gate stood, that books contemporary classical, jazz, indie and electronic acts on the same stage in the same week. It is the most adventurous room in the Village. Look at the calendar and pick something you have never heard of.",
+      "labels": [],
+      "priceLevel": 2,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Lepoissonrouge.jpg",
+      "imageSubject": "Le Poisson Rouge",
+      "imageKind": "subject",
+      "imageCredit": "Paulespo at en.wikipedia · CC BY-SA 3.0"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "theatre"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "joes-pub",
+      "title": "Joe's Pub",
+      "emoji": "🎙️",
+      "zone": "greenwich-village",
+      "coords": [
+        40.7291,
+        -73.99177
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "The Public Theater, 425 Lafayette Street",
+      "priceNote": "Tickets ~$20–50 plus a minimum",
+      "durationMin": 120,
+      "hoursNote": "Two or three shows a night — the calendar is the timetable",
+      "url": "https://publictheater.org/joes-pub/",
+      "booking": "https://publictheater.org/joes-pub/",
+      "source": "The Public Theater",
+      "why": "A small cabaret room inside the Public Theater, with candlelit tables and a stage a few feet away. It books singers, songwriters, cabaret and comedy, from people just starting to people who could fill arenas and choose not to. It is the most intimate night of music in the city.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Song_of_Return_performing_at_Joe%27s_Pub%2C_New_York_City%2C_11_April_2012.jpg/1280px-Song_of_Return_performing_at_Joe%27s_Pub%2C_New_York_City%2C_11_April_2012.jpg",
+      "imageSubject": "Joe's Pub",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "culture"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "carnegie-hall",
+      "title": "Carnegie Hall",
+      "emoji": "🎻",
+      "zone": "midtown-times-square",
+      "coords": [
+        40.765,
+        -73.97991
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "881 Seventh Avenue at 57th Street",
+      "priceNote": "Balcony seats from ~$30",
+      "durationMin": 150,
+      "hoursNote": "Concerts most nights, October to June — the calendar is the timetable",
+      "url": "https://www.carnegiehall.org/",
+      "booking": "https://www.carnegiehall.org/calendar",
+      "source": "Carnegie Hall",
+      "why": "The concert hall that everybody has heard of, open since 1891 and still with some of the best acoustics in the world. The season runs from October. The cheapest seats are in the balcony, five flights up, and they sound as good as anywhere. Look out for the orchestras on tour from Berlin and Vienna.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Carnegie_Hall_-_Full_%2848155558466%29.jpg/1280px-Carnegie_Hall_-_Full_%2848155558466%29.jpg",
+      "imageSubject": "Carnegie Hall",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "jazz",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "village-vanguard",
+      "title": "Village Vanguard",
+      "emoji": "🎷",
+      "zone": "west-village",
+      "coords": [
+        40.73602,
+        -74.00164
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "178 Seventh Avenue South, West Village",
+      "priceNote": "~$40 cover plus a drink",
+      "durationMin": 90,
+      "hoursNote": "Sets nightly at 8 and 10pm — book ahead",
+      "url": "https://villagevanguard.com/",
+      "booking": "https://villagevanguard.com/",
+      "bookAhead": true,
+      "source": "Village Vanguard; Wikipedia",
+      "why": "The jazz room, down a steep staircase into a wedge-shaped basement where it has been since 1935. Coltrane, Bill Evans and Sonny Rollins recorded live albums here, and the photographs on the walls are of them. There are two sets a night, at eight and ten, and it is small, so book. There is no talking during the music.",
+      "labels": [
+        "dontmiss",
+        "couple"
+      ],
+      "priceLevel": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/The_Village_Vanguard_at_night_1976.jpg",
+      "imageSubject": "Village Vanguard",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "jazz",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "smalls-jazz",
+      "title": "Smalls",
+      "emoji": "🎷",
+      "zone": "west-village",
+      "coords": [
+        40.73438,
+        -74.00273
+      ],
+      "coordsFrom": "osm node/4483787091 (Nominatim)",
+      "area": "183 West 10th Street, West Village",
+      "priceNote": "~$35 cover",
+      "durationMin": 150,
+      "hoursNote": "Sets from early evening into the small hours, with a late-night jam",
+      "url": "https://www.smallslive.com/",
+      "booking": "https://www.smallslive.com/",
+      "source": "Smalls Jazz Club",
+      "why": "A basement jazz club with a few rows of chairs and a piano, where the music goes on into the small hours and the late jam sessions are where the young players come to be heard. It is rougher than the Vanguard and later. Come after midnight, when the city's musicians drift in after their own gigs.",
+      "labels": [
+        "hiddengem"
+      ],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/West_Village_333_Avenue_of_the_Americas_embedded_2019-09-30_17-21.jpg/1280px-West_Village_333_Avenue_of_the_Americas_embedded_2019-09-30_17-21.jpg",
+      "imageSubject": "West Village",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "jazz",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "blue-note-nyc",
+      "title": "Blue Note",
+      "emoji": "🎺",
+      "zone": "greenwich-village",
+      "coords": [
+        40.73083,
+        -74.00073
+      ],
+      "coordsFrom": "osm node/4140567392 (Nominatim)",
+      "area": "131 West 3rd Street, Greenwich Village",
+      "priceNote": "Tickets ~$35–90 plus a minimum",
+      "durationMin": 120,
+      "hoursNote": "Two sets nightly, around 8 and 10:30 — the calendar is the timetable",
+      "url": "https://www.bluenotejazz.com/nyc/",
+      "booking": "https://www.bluenotejazz.com/nyc/",
+      "source": "Blue Note",
+      "why": "The jazz club for the big names, open on West 3rd since 1981. The room is packed with tables, the stage is close, and the headliners are people who fill concert halls elsewhere. It is expensive and it is worth it for the right name. The late set is cheaper and looser.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Blue_Note_Jazz_Club%2C_New_York_City.jpg",
+      "imageSubject": "Blue Note Jazz Club",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "jazz",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "birdland",
+      "title": "Birdland",
+      "emoji": "🎷",
+      "zone": "hell-s-kitchen",
+      "coords": [
+        40.75901,
+        -73.98968
+      ],
+      "coordsFrom": "osm node/3573482095 (Nominatim)",
+      "area": "315 West 44th Street, Theater District",
+      "priceNote": "Cover ~$30–60 plus a minimum",
+      "durationMin": 120,
+      "hoursNote": "Sets nightly, usually at 5:30, 7 and 9:30 — the calendar is the timetable",
+      "url": "https://www.birdlandjazz.com/",
+      "booking": "https://www.birdlandjazz.com/",
+      "source": "Birdland",
+      "why": "Named for Charlie Parker and now in the Theater District, where it is the civilised answer to 'what after the show?': dinner, a big band or a singer, and table service. The regular big-band nights are an institution. It is the easiest of the great clubs to get a seat at.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Birdland_club_entrance.jpg",
+      "imageSubject": "Birdland (New York jazz club)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "comedy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "comedy-cellar",
+      "title": "Comedy Cellar",
+      "emoji": "🎙️",
+      "zone": "greenwich-village",
+      "coords": [
+        40.73019,
+        -74.00056
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "117 MacDougal Street, Greenwich Village",
+      "priceNote": "$15–25 plus a two-item minimum",
+      "durationMin": 120,
+      "hoursNote": "Several shows a night, early evening to late — reserve on the site",
+      "url": "https://www.comedycellar.com/",
+      "booking": "https://www.comedycellar.com/reservations-newyork/",
+      "bookAhead": true,
+      "source": "Comedy Cellar",
+      "why": "The most famous stand-up room in America, a basement on MacDougal Street where the lineup is a secret until the week before and the biggest names drop in unannounced to try new material. Six or seven comics do fifteen minutes each. Reserve on the site when shows are released a month ahead, or join the standby list on West 3rd two hours before.",
+      "labels": [
+        "dontmiss",
+        "bookahead"
+      ],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/The_Comedy_Cellar_%2848072765427%29.jpg/1280px-The_Comedy_Cellar_%2848072765427%29.jpg",
+      "imageSubject": "Comedy Cellar",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "club",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "dance"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "elsewhere-brooklyn",
+      "title": "Elsewhere",
+      "emoji": "🪩",
+      "zone": "bushwick-west",
+      "coords": [
+        40.70952,
+        -73.92326
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "599 Johnson Avenue, Bushwick",
+      "priceNote": "Tickets ~$20–40",
+      "durationMin": 240,
+      "hoursNote": "Open for shows and club nights — the calendar is the timetable",
+      "url": "https://www.elsewherebrooklyn.com/",
+      "booking": "https://www.elsewherebrooklyn.com/",
+      "source": "Elsewhere; Resident Advisor",
+      "why": "A converted warehouse in Bushwick with a big hall, a smaller room, a loft and a rooftop, so a single ticket can be a band, then a DJ, then the roof as the sun comes up. It is the most reliable good night out in Brooklyn. Take the L to Jefferson Street.",
+      "labels": [],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Knickerbocker_south_of_park.jpg/1280px-Knickerbocker_south_of_park.jpg",
+      "imageSubject": "Bushwick, Brooklyn",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "club",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "dance"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "nowadays",
+      "title": "Nowadays",
+      "emoji": "🌿",
+      "coords": [
+        40.69287,
+        -73.9017
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "56-06 Cooper Avenue, Ridgewood, Queens",
+      "priceNote": "Tickets ~$15–35",
+      "durationMin": 300,
+      "hoursNote": "Club nights and long daytime parties — the calendar is the timetable",
+      "url": "https://nowadays.nyc/",
+      "booking": "https://nowadays.nyc/",
+      "source": "Nowadays; Resident Advisor",
+      "why": "A dance club with a big leafy backyard on the Queens side of Bushwick, run by people who care about sound and nothing else: no VIP, no bottle service, a great system and long sets. Its daytime parties spill into the yard. Resident Advisor counts it among the city's best rooms for actually dancing.",
+      "labels": [
+        "hiddengem"
+      ],
+      "priceLevel": 2,
+      "zone": "ridgewood",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/MyrtleAvenue.jpg",
+      "imageSubject": "Ridgewood, Queens",
+      "imageKind": "context",
+      "imageCredit": "EddieSegoura at en.wikipedia · Public domain"
+    },
+    {
+      "type": "club",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "dance",
+        "theatre"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "house-of-yes",
+      "title": "House of Yes",
+      "emoji": "🤹",
+      "zone": "bushwick-west",
+      "coords": [
+        40.70678,
+        -73.92358
+      ],
+      "coordsFrom": "osm way/250424771 (Nominatim)",
+      "area": "2 Wyckoff Avenue, Bushwick",
+      "priceNote": "Tickets ~$20–50",
+      "durationMin": 240,
+      "hoursNote": "Shows and parties most nights — the calendar is the timetable",
+      "url": "https://houseofyes.org/",
+      "booking": "https://houseofyes.org/calendar/",
+      "source": "House of Yes",
+      "why": "Part nightclub, part circus: aerialists over the dance floor, a costume theme most nights, and a crowd that dresses up for it. It is joyful and a bit much, which is the point. Check the theme on the calendar, dress for it, and go with people who will.",
+      "labels": [
+        "dontmiss"
+      ],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Knickerbocker_south_of_park.jpg/1280px-Knickerbocker_south_of_park.jpg",
+      "imageSubject": "Bushwick, Brooklyn",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "bemelmans",
+      "title": "Bemelmans Bar",
+      "emoji": "🍸",
+      "zone": "upper-east-side-carnegie-hill",
+      "coords": [
+        40.77426,
+        -73.96299
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "The Carlyle, 35 East 76th Street, Upper East Side",
+      "priceNote": "Cocktails ~$30 · music cover after 5:30",
+      "durationMin": 90,
+      "hours": "Mo-We 12:00-24:00; Th 12:00-00:30; Fr-Sa 12:00-01:00; Su 12:00-24:00",
+      "hoursFrom": "Rosewood — the Carlyle; live music nightly from about 5:30",
+      "url": "https://www.rosewoodhotels.com/en/the-carlyle-new-york/dining/bemelmans-bar",
+      "source": "Rosewood Hotels; Time Out",
+      "why": "The piano bar in the Carlyle, with murals of Central Park painted on its walls in 1947 by Ludwig Bemelmans, who wrote the Madeline books. Gold-leaf ceiling, small tables, a pianist every night of the year and a trio later on. There is a cover once the music starts. Go early to get a table, and order a martini.",
+      "labels": [
+        "romantic",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "booking": false,
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Bemelmans_Bar.jpg/1280px-Bemelmans_Bar.jpg",
+      "imageSubject": "Bemelmans Bar at the Carlyle",
+      "imageKind": "subject",
+      "imageCredit": "Ɱ · CC BY-SA 4.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "dead-rabbit",
+      "title": "The Dead Rabbit",
+      "emoji": "🐇",
+      "zone": "financial-district-battery-park-city",
+      "coords": [
+        40.70325,
+        -74.01101
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "30 Water Street, Financial District",
+      "priceNote": "Cocktails ~$20",
+      "durationMin": 90,
+      "hours": "Su-Th 11:00-02:00; Fr-Sa 11:00-03:00",
+      "hoursFrom": "thedeadrabbit.com — the Taproom; the Parlor upstairs keeps shorter hours",
+      "url": "https://thedeadrabbit.com/",
+      "booking": "https://resy.com/cities/new-york-ny/venues/the-dead-rabbit",
+      "source": "The Dead Rabbit; Wikipedia",
+      "why": "An Irish bar in a nineteenth-century building by the harbour that was named the world's best bar, and still earns it. Downstairs is the Taproom, sawdust on the floor, Guinness and Irish coffee. Upstairs is the Parlor, with a long cocktail menu in the form of an illustrated comic. Start down, go up.",
+      "labels": [],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/3_floors%2C_different_offerings._Taproom-_Craft_beer%2C_bottled_punch%2C_whiskeys%2C_lunch._Parlor-_Small_plates%2C_punch%2C_72_historically-accurate_cocktails_Occasional_Room-_Holding_Room_for_Parlor%2C_Whisky_Tasting_Station%2C_private_parties.jpg/1280px-thumbnail.jpg",
+      "imageSubject": "The Dead Rabbit",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "please-dont-tell",
+      "title": "Please Don't Tell",
+      "emoji": "📞",
+      "zone": "east-village",
+      "coords": [
+        40.72712,
+        -73.98377
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Through the phone booth in Crif Dogs, 113 St Marks Place",
+      "priceNote": "Cocktails ~$20",
+      "durationMin": 90,
+      "hoursNote": "Opens in the evening — book on the site; walk-ins wait at the phone booth",
+      "url": "https://pdtnyc.com/",
+      "booking": "https://pdtnyc.com/",
+      "bookAhead": true,
+      "source": "PDT",
+      "why": "The speakeasy you enter through a phone booth in a hot-dog shop. Step in, pick up the receiver, and if there is room a wall swings open onto a small dark bar with taxidermy on the walls. It helped start the cocktail revival in 2007. Book ahead, and yes, order a hot dog from next door.",
+      "labels": [
+        "couple",
+        "bookahead"
+      ],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/NYC_-_Greenwich_Village_-_Gay_Street.JPG/1280px-NYC_-_Greenwich_Village_-_Gay_Street.JPG",
+      "imageSubject": "Greenwich Village",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "mcsorleys",
+      "title": "McSorley's Old Ale House",
+      "emoji": "🍺",
+      "zone": "east-village",
+      "coords": [
+        40.72876,
+        -73.9897
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "15 East 7th Street, East Village",
+      "priceNote": "Cheap — ale comes in pairs",
+      "durationMin": 60,
+      "hoursNote": "Open daily from late morning into the night",
+      "url": "https://mcsorleysoldalehouse.nyc/",
+      "source": "McSorley's; Wikipedia",
+      "why": "One of New York's oldest saloons, pouring since the 1850s, with sawdust on the floor and every surface covered in a century and a half of newspaper cuttings and junk. There are two choices, light or dark ale, and they come two mugs at a time. It admitted women only in 1970, under court order. Go on a weekday afternoon.",
+      "labels": [
+        "cheap"
+      ],
+      "booking": false,
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/McSorley%27s_Old_Ale_House_001_crop.jpg/1280px-McSorley%27s_Old_Ale_House_001_crop.jpg",
+      "imageSubject": "McSorley's Old Ale House",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "nightmarket",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "market"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "cheap",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "queens-night-market",
+      "title": "Queens Night Market",
+      "emoji": "🏮",
+      "zone": "corona",
+      "coords": [
+        40.74785,
+        -73.85058
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "New York Hall of Science car park, Flushing Meadows Corona Park",
+      "price": 6,
+      "priceNote": "Free entry; most dishes around $6",
+      "durationMin": 150,
+      "hoursNote": "Saturdays 4pm to midnight, April to October — the last of 2026 is 31 October",
+      "url": "https://queensnightmarket.com/",
+      "source": "Queens Night Market",
+      "why": "A Saturday-night market in Flushing Meadows with around a hundred stalls cooking the food of dozens of countries, most of it at a capped price of about six dollars a dish. It is the food of the most diverse borough in America, in a car park. Go with friends, split everything, and bring cash. It runs until the end of October.",
+      "labels": [
+        "cheap",
+        "dontmiss"
+      ],
+      "priceLevel": 1,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/QueensNightMarket_May2019.jpg/1280px-QueensNightMarket_May2019.jpg",
+      "imageSubject": "Queens Night Market",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "latenight",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "restaurant"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "katzs",
+      "title": "Katz's Delicatessen",
+      "emoji": "🥪",
+      "zone": "lower-east-side",
+      "coords": [
+        40.72234,
+        -73.98735
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "205 East Houston Street, Lower East Side",
+      "price": 30,
+      "priceNote": "Pastrami sandwich ~$28",
+      "durationMin": 45,
+      "hours": "Mo-Th 08:00-23:00; Fr 08:00-24:00; Sa 00:00-24:00; Su 00:00-23:00",
+      "hoursFrom": "katzsdelicatessen.com — all night from Friday morning to Sunday night",
+      "url": "https://katzsdelicatessen.com/",
+      "source": "Katz's Delicatessen",
+      "why": "The deli, on Houston Street since 1888, and open straight through from Friday morning to Sunday night. Take a ticket at the door and do not lose it. Order pastrami on rye at the counter and tip the cutter, who will hand you a slice to taste while he works. It is expensive for a sandwich and worth it at two in the morning.",
+      "labels": [
+        "dontmiss"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 2,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Katzs.jpg/1280px-Katzs.jpg",
+      "imageSubject": "Katz's Delicatessen",
+      "imageKind": "subject",
+      "imageCredit": "Bryan Hong · CC BY-SA 3.0"
+    },
+    {
+      "type": "latenight",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "restaurant"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "morning",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "veselka",
+      "title": "Veselka",
+      "emoji": "🥟",
+      "zone": "east-village",
+      "coords": [
+        40.72898,
+        -73.987
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "144 Second Avenue at 9th Street, East Village",
+      "price": 22,
+      "priceNote": "Pierogi and borscht ~$15–25",
+      "durationMin": 45,
+      "hours": "Mo-Th 09:00-24:00; Fr 09:00-24:00; Sa 00:00-24:00; Su 00:00-23:00",
+      "hoursFrom": "Time Out; EV Grieve — round the clock on Friday and Saturday nights again since April 2026",
+      "url": "https://veselka.com/",
+      "source": "Veselka; Time Out; EV Grieve",
+      "why": "A Ukrainian diner on Second Avenue since 1954, and since April 2026 open all night again on Fridays and Saturdays. Pierogi, borscht and challah French toast, served at three in the morning to everyone leaving everywhere. It raised money for Ukraine from the day of the invasion and has not stopped.",
+      "labels": [
+        "cheap"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 2,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Veselka_%2855380948638%29.jpg/1280px-Veselka_%2855380948638%29.jpg",
+      "imageSubject": "Veselka",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

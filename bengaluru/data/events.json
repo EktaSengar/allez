@@ -1,6 +1,138 @@
 {
   "generated": "2026-09-28",
   "window": null,
-  "note": "Hand-written dated events. Empty until somebody writes one.",
-  "items": []
+  "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the organiser's own schedule on the date given.",
+  "items": [
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "football",
+        "soccer"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "bfc-sc-delhi-2026",
+      "title": "Bengaluru FC v Sporting Club Delhi — the ISL opener",
+      "emoji": "⚽",
+      "coords": [
+        12.96951,
+        77.59303
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Sree Kanteerava Stadium",
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "durationMin": 180,
+      "priceNote": "Tickets from ~₹200",
+      "why": "The first game of Bengaluru FC's season, at home, on a Saturday at five. The Blues' first home match is always the loudest. Get there early and stand with the West Block Blues.",
+      "labels": [
+        "cheap"
+      ],
+      "url": "https://khelnow.com/football/indain-football-isl-2026-27-bengaluru-fc-fixtures",
+      "source": "ISL 2026–27 fixtures; Olympics.com",
+      "booking": "https://www.indiansuperleague.com/clubs/656-bengaluru-fc-profile",
+      "priceLevel": 1,
+      "startTime": "17:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Sree_Kanteerava_Stadium.jpg/1280px-Sree_Kanteerava_Stadium.jpg",
+      "imageSubject": "Sree Kanteerava Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cricket"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "india-wi-t20i-bengaluru-2026",
+      "title": "India v West Indies, fifth T20I",
+      "emoji": "🏏",
+      "coords": [
+        12.97884,
+        77.59955
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "M. Chinnaswamy Stadium",
+      "start": "2026-10-17",
+      "end": "2026-10-17",
+      "durationMin": 180,
+      "priceNote": "Tickets sell out fast",
+      "why": "The first international at the Chinnaswamy since it reopened, the last game of the T20 series, under the lights on a Saturday. Tickets will go in minutes. Use the metro, and follow the new entry routes.",
+      "labels": [
+        "dontmiss"
+      ],
+      "url": "https://www.indianewsnetwork.com/en/chinnaswamy-stadium-host-two-international-matches-2026-27-20260327",
+      "source": "India News Network; ESPNcricinfo",
+      "booking": "https://www.district.in/",
+      "priceLevel": 2,
+      "hoursNote": "Saturday evening — confirm the start time with the ticket seller",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Chinnaswamy_Stadium.jpg/1280px-Chinnaswamy_Stadium.jpg",
+      "imageSubject": "M. Chinnaswamy Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "cricket"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "afternoon",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "india-sl-odi-bengaluru-2026",
+      "title": "India v Sri Lanka, second ODI",
+      "emoji": "🏏",
+      "coords": [
+        12.97884,
+        77.59955
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "M. Chinnaswamy Stadium",
+      "start": "2026-12-16",
+      "end": "2026-12-16",
+      "durationMin": 180,
+      "priceNote": "Tickets from a few hundred rupees",
+      "why": "A fifty-over international at the Chinnaswamy in the cool of December, the best month for cricket in the city.",
+      "labels": [],
+      "url": "https://www.indianewsnetwork.com/en/chinnaswamy-stadium-host-two-international-matches-2026-27-20260327",
+      "source": "India News Network",
+      "booking": "https://www.district.in/",
+      "priceLevel": 2,
+      "hoursNote": "A day-night one-day international — confirm the start time",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Chinnaswamy_Stadium.jpg/1280px-Chinnaswamy_Stadium.jpg",
+      "imageSubject": "M. Chinnaswamy Stadium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

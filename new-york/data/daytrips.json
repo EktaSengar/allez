@@ -1,5 +1,773 @@
 {
- "generated": "2026-09-18",
- "note": "Reachable by train: the Hudson Valley, Beacon, Cold Spring, the Rockaways, Fire Island. Empty.",
- "items": []
+  "generated": "2026-09-28",
+  "note": "By train where possible: Metro-North, the LIRR and Amtrak reach most of these without a car, and each says how. Each says what to do there, in order, and when it is worth going; the ones marked overnight are weekends, not days. Researched, not yet done.",
+  "items": [
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "couple",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "beacon-dia",
+      "title": "Beacon and Dia Beacon",
+      "emoji": "🖼️",
+      "minutesFromHome": 90,
+      "durationMin": 540,
+      "price": 25,
+      "priceNote": "Dia $25; the town is free",
+      "transit": "Metro-North Hudson Line from Grand Central, about 1h30",
+      "why": "The best day out by train from New York. Dia Beacon is a former Nabisco box-printing factory on the river, filled with enormous minimalist art under sawtooth skylights: Richard Serra's steel spirals you walk inside, Louise Bourgeois's spiders. It opens Friday to Monday. Then walk up Main Street, and climb Mount Beacon if you have the legs.",
+      "labels": [
+        "weekend",
+        "couple",
+        "dontmiss"
+      ],
+      "url": "https://www.diaart.org/visit/visit-our-locations-sites/dia-beacon-beacon-united-states",
+      "days": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Metro-North from Grand Central; sit on the left for the river"
+        },
+        {
+          "emoji": "🖼️",
+          "text": "Dia Beacon, two minutes from the station — Serra, Bourgeois, Warhol · Friday to Monday, 10 to 5"
+        },
+        {
+          "emoji": "🥪",
+          "text": "Lunch on Main Street, a mile up the hill"
+        },
+        {
+          "emoji": "⛰️",
+          "text": "Mount Beacon at the east end of town: a steep hour up to the fire tower"
+        },
+        {
+          "emoji": "🍺",
+          "text": "A beer by the river at the station before the train home"
+        }
+      ],
+      "season": "All year; October for the foliage from the train and the mountain. Dia is closed Tuesday to Thursday.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Diabeacon_2006.jpg/1280px-Diabeacon_2006.jpg",
+      "imageSubject": "Dia Beacon",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "couple",
+        "outdoors",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "storm-king",
+      "title": "Storm King Art Center",
+      "emoji": "🗿",
+      "minutesFromHome": 75,
+      "durationMin": 540,
+      "price": 25,
+      "priceNote": "$25; weekend peak pricing in autumn",
+      "transit": "About 1h15 by car up the Palisades Parkway; weekend coach packages from Port Authority",
+      "why": "Five hundred acres of fields and hills in the Hudson Valley with giant sculptures set into the landscape: Andy Goldsworthy's stone wall snaking through the trees and into a pond, Maya Lin's rippling earth waves, Serra's steel plates across a meadow. You walk or cycle between them. Buy tickets ahead; autumn weekends sell out.",
+      "labels": [
+        "weekend",
+        "couple",
+        "bookahead"
+      ],
+      "url": "https://stormking.org/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": "https://stormking.org/tickets/",
+      "stops": [
+        {
+          "emoji": "🎟️",
+          "text": "Book a timed ticket — they are needed for entry and parking"
+        },
+        {
+          "emoji": "🚲",
+          "text": "Hire a bike at the entrance to cover the whole park"
+        },
+        {
+          "emoji": "🧱",
+          "text": "Goldsworthy's Storm King Wall, in the woods to the west"
+        },
+        {
+          "emoji": "🌊",
+          "text": "Maya Lin's Storm King Wavefield, at the north end"
+        },
+        {
+          "emoji": "🧺",
+          "text": "Picnic on the hill by the museum building, with the Catskills behind"
+        }
+      ],
+      "season": "April to mid-December, closed Tuesdays. Autumn is the best and busiest; peak weekend prices run from late September to 8 November.",
+      "bookAhead": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Storm_King_Art_Center_views_08.jpg/1280px-Storm_King_Art_Center_views_08.jpg",
+      "imageSubject": "Storm King Art Center",
+      "imageKind": "subject",
+      "imageCredit": "Ɱ · CC BY-SA 4.0"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "couple",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "cold-spring",
+      "title": "Cold Spring and the Hudson Highlands",
+      "emoji": "🍂",
+      "minutesFromHome": 75,
+      "durationMin": 540,
+      "priceNote": "Free to walk",
+      "transit": "Metro-North Hudson Line, about 1h15",
+      "why": "A nineteenth-century river village where the train drops you at the foot of Main Street: antique shops, a bandstand on the water, and Storm King Mountain directly across the Hudson. Breakneck Ridge and its station are closed for construction until 2027, so hike Bull Hill from the edge of the village instead, for the same view with fewer people.",
+      "labels": [
+        "weekend",
+        "outdoor"
+      ],
+      "url": "https://www.coldspringny.gov/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 1,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Metro-North to Cold Spring"
+        },
+        {
+          "emoji": "🏞️",
+          "text": "The bandstand and dock at the bottom of Main Street, looking at Storm King"
+        },
+        {
+          "emoji": "🥾",
+          "text": "Bull Hill (Mount Taurus) from the Washburn trailhead: a steep 3 to 4 hours round"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "Or Boscobel, a Federal-style house with the best lawn view on the river"
+        },
+        {
+          "emoji": "🍷",
+          "text": "Dinner on Main Street before the train back"
+        }
+      ],
+      "season": "October is peak foliage and very busy; go on a weekday if you can. Breakneck Ridge is closed until mid-2027.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Cold_Spring_New_York_2025.jpg/1280px-Cold_Spring_New_York_2025.jpg",
+      "imageSubject": "Cold Spring, New York",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "couple",
+        "afternoon",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "sleepy-hollow",
+      "title": "Sleepy Hollow and the river towns",
+      "emoji": "🎃",
+      "minutesFromHome": 55,
+      "durationMin": 540,
+      "priceNote": "Mostly free; house tours extra",
+      "transit": "Metro-North to Tarrytown or Philipse Manor, about 50 min",
+      "why": "Washington Irving's village, and in October the most atmospheric place near New York: the Old Dutch Church and its hillside burial ground, where Irving is buried, the bridge from The Legend of Sleepy Hollow, and the old river towns up the Hudson. Stay for dark, when the Jack O'Lantern Blaze lights up a manor at Croton, ten minutes north.",
+      "labels": [
+        "weekend",
+        "couple"
+      ],
+      "url": "https://visitsleepyhollow.com/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 1,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Metro-North to Philipse Manor, the station on the Sleepy Hollow side"
+        },
+        {
+          "emoji": "⛪",
+          "text": "The Old Dutch Church and Sleepy Hollow Cemetery — Irving's grave, and the Rockefellers'"
+        },
+        {
+          "emoji": "🌉",
+          "text": "The Headless Horseman Bridge on the Pocantico River"
+        },
+        {
+          "emoji": "🏡",
+          "text": "Kykuit, the Rockefeller estate, by tour from the visitor centre"
+        },
+        {
+          "emoji": "🎃",
+          "text": "After dark: the Great Jack O'Lantern Blaze at Croton — book it"
+        }
+      ],
+      "season": "October is the whole point: the Blaze, the Horseman, the leaves. Kykuit tours run spring to autumn.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Old_Dutch_Church%2C_Sleepy_Hollow%2C_NY.jpg/1280px-Old_Dutch_Church%2C_Sleepy_Hollow%2C_NY.jpg",
+      "imageSubject": "Old Dutch Church of Sleepy Hollow",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "food"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "food",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "philadelphia",
+      "title": "Philadelphia",
+      "emoji": "🔔",
+      "minutesFromHome": 90,
+      "durationMin": 540,
+      "priceNote": "Train from ~$30 each way; most history is free",
+      "transit": "Amtrak from Moynihan, about 1h20; NJ Transit and SEPTA cost less and take longer",
+      "why": "The city where the Declaration of Independence and the Constitution were signed, an hour and a half away and cheaper than New York in every way. See Independence Hall and the Liberty Bell, eat through Reading Terminal Market, and spend the afternoon at the Barnes, a private collection of Renoirs, Cézannes and Matisses hung exactly as its founder left them.",
+      "labels": [
+        "weekend"
+      ],
+      "url": "https://www.visitphilly.com/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Amtrak to 30th Street Station"
+        },
+        {
+          "emoji": "🔔",
+          "text": "Independence Hall (free timed ticket) and the Liberty Bell across the street"
+        },
+        {
+          "emoji": "🥪",
+          "text": "Reading Terminal Market for lunch: a roast pork sandwich at DiNic's"
+        },
+        {
+          "emoji": "🖼️",
+          "text": "The Barnes Foundation on the Parkway — book"
+        },
+        {
+          "emoji": "🧀",
+          "text": "A cheesesteak in South Philly before the train, and argue about which one"
+        }
+      ],
+      "season": "All year. Spring and autumn are best for walking.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Independence_Hall.jpg/1280px-Independence_Hall.jpg",
+      "imageSubject": "Independence Hall",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "food"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "couple",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "hudson-olana",
+      "title": "Hudson and Olana",
+      "emoji": "🎨",
+      "minutesFromHome": 130,
+      "durationMin": 540,
+      "priceNote": "Train ~$35 each way; Olana grounds free",
+      "transit": "Amtrak from Moynihan to Hudson, about 2 hours along the river",
+      "why": "The train ride up the east bank of the Hudson is among the most beautiful in America, and at the end of it is Hudson: a whaling town turned into a mile of antique shops, galleries and restaurants on Warren Street. Across the river on a hilltop is Olana, the Persian-style house the painter Frederic Church built to look at the view he painted.",
+      "labels": [
+        "weekend",
+        "couple"
+      ],
+      "url": "https://www.olana.org/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Amtrak up the river; sit on the left"
+        },
+        {
+          "emoji": "🛍️",
+          "text": "Walk Warren Street from the river end to the top"
+        },
+        {
+          "emoji": "🍽️",
+          "text": "Lunch on Warren Street"
+        },
+        {
+          "emoji": "🏰",
+          "text": "Olana, ten minutes by taxi: the house by tour, the grounds free"
+        },
+        {
+          "emoji": "🌅",
+          "text": "The Hudson River Skywalk over the bridge to Thomas Cole's house, if there is time"
+        }
+      ],
+      "season": "May to October for the grounds; October for the colour. Olana's house tours need booking.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Olana_WLM_06.jpg/1280px-Olana_WLM_06.jpg",
+      "imageSubject": "Olana State Historic Site",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "food"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "food",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "new-haven",
+      "title": "New Haven",
+      "emoji": "🍕",
+      "minutesFromHome": 120,
+      "durationMin": 540,
+      "priceNote": "Pizza and free museums",
+      "transit": "Metro-North New Haven Line from Grand Central, about 2 hours",
+      "why": "The best pizza in America, argued with a straight face, and two of the best free museums on the East Coast. Queue at Frank Pepe's or Sally's on Wooster Street for coal-fired apizza, the white clam pie at Pepe's. Before it, walk Yale's gothic courtyards and see the Yale University Art Gallery and the Center for British Art, both free.",
+      "labels": [
+        "weekend"
+      ],
+      "url": "https://www.visitnewhaven.com/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 1,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Metro-North to New Haven Union Station"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "Yale University Art Gallery, free: Van Gogh's Night Café"
+        },
+        {
+          "emoji": "🖼️",
+          "text": "The Yale Center for British Art across the street, free, in a Louis Kahn building"
+        },
+        {
+          "emoji": "🏫",
+          "text": "Walk the Old Campus and the courtyards"
+        },
+        {
+          "emoji": "🍕",
+          "text": "Wooster Street: the white clam pie at Frank Pepe's, or Sally's across the road"
+        }
+      ],
+      "season": "All year; weekday lunch is the way round the pizza queues.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/New_Haven%2C_Connecticut_skyline_%28cropped%29.jpg/1280px-New_Haven%2C_Connecticut_skyline_%28cropped%29.jpg",
+      "imageSubject": "New Haven",
+      "imageKind": "subject",
+      "imageCredit": "Quintin Soloviev · CC BY 4.0"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "couple",
+        "relax",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "montauk",
+      "title": "Montauk and the end of Long Island",
+      "emoji": "🗼",
+      "minutesFromHome": 180,
+      "durationMin": 540,
+      "priceNote": "A weekend: lodging is the cost",
+      "transit": "The LIRR or the Hampton Jitney, about 3 hours — a weekend",
+      "why": "The far eastern tip of Long Island, a fishing town with surf beaches rather than the Hamptons' hedges. In summer it is a party; in September and October it is quiet, the water is still warm and the rooms are cheaper. Stand under the lighthouse that George Washington commissioned, surf Ditch Plains, and eat lobster rolls on the dock.",
+      "labels": [
+        "weekend",
+        "couple",
+        "outdoor"
+      ],
+      "url": "https://www.montaukchamber.com/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 3,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "LIRR to Montauk, or the Jitney from Midtown"
+        },
+        {
+          "emoji": "🗼",
+          "text": "Montauk Point Lighthouse, commissioned by Washington, finished 1796"
+        },
+        {
+          "emoji": "🏄",
+          "text": "Ditch Plains for surfing or watching it"
+        },
+        {
+          "emoji": "🦞",
+          "text": "Lobster roll by the harbour"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Sunset from the bluffs at Camp Hero"
+        }
+      ],
+      "season": "September and October are the best: warm water, no crowds. Summer weekends are packed and expensive.",
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Montauk_Lighthouse%2C_New_York.png/1280px-Montauk_Lighthouse%2C_New_York.png",
+      "imageSubject": "Montauk Point Light",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "food",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "food",
+        "couple",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "north-fork",
+      "title": "The North Fork",
+      "emoji": "🍇",
+      "minutesFromHome": 120,
+      "durationMin": 540,
+      "priceNote": "Tastings ~$20–35",
+      "transit": "About 2 hours by car; the LIRR runs to Greenport on a limited timetable",
+      "why": "The quieter fork of Long Island: potato fields turned vineyards, farm stands, and Greenport, an old whaling harbour at the end of the road. Taste at two or three wineries along Route 25, buy apple cider doughnuts and pumpkins at the farm stands, and eat oysters in Greenport. Somebody drives; or take the train and hire bikes.",
+      "labels": [
+        "weekend",
+        "couple"
+      ],
+      "url": "https://www.northforkchamber.org/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 3,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🍷",
+          "text": "Two tastings along Main Road (Route 25)"
+        },
+        {
+          "emoji": "🍩",
+          "text": "A farm stand for cider doughnuts and whatever is being picked"
+        },
+        {
+          "emoji": "⚓",
+          "text": "Greenport harbour and the 1920 carousel"
+        },
+        {
+          "emoji": "🦪",
+          "text": "Oysters in Greenport"
+        },
+        {
+          "emoji": "⛴️",
+          "text": "Or the ferry to Shelter Island and back"
+        }
+      ],
+      "season": "September and October: harvest, pumpkins and the best light. Summer weekends mean traffic on the LIE.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Greenport%2C_New_York.jpg/1280px-Greenport%2C_New_York.jpg",
+      "imageSubject": "Greenport, Suffolk County, New York",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "couple",
+        "relax",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "catskills",
+      "title": "The Catskills: Kaaterskill Falls and Phoenicia",
+      "emoji": "💧",
+      "minutesFromHome": 150,
+      "durationMin": 540,
+      "priceNote": "Free trails; lodging is the cost",
+      "transit": "About 2h30 by car up the Thruway — a weekend",
+      "why": "The mountains the Hudson River School painted, two and a half hours north. Kaaterskill Falls drops 260 feet in two steps and is one of the highest in the state; the view from the platform is the painting. Stay in Phoenicia or Woodstock, eat well, and spend the second day on the fire towers and the creeks.",
+      "labels": [
+        "weekend",
+        "outdoor"
+      ],
+      "url": "https://www.visitthecatskills.com/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "💧",
+          "text": "Kaaterskill Falls from the viewing platform on Laurel House Road — stay on the marked trail"
+        },
+        {
+          "emoji": "🏔️",
+          "text": "North–South Lake for the Escarpment Trail and the view from Artist's Rock"
+        },
+        {
+          "emoji": "🎸",
+          "text": "Woodstock for the evening"
+        },
+        {
+          "emoji": "🥞",
+          "text": "Breakfast in Phoenicia next morning"
+        },
+        {
+          "emoji": "🗼",
+          "text": "A fire-tower hike — Overlook Mountain above Woodstock"
+        }
+      ],
+      "season": "Foliage peaks in the first half of October. The falls are icy and dangerous in winter.",
+      "overnight": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Kaaterskill_Falls.jpg",
+      "imageSubject": "Kaaterskill Falls",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "mohonk-minnewaska",
+      "title": "New Paltz, Mohonk and Minnewaska",
+      "emoji": "🧗",
+      "minutesFromHome": 105,
+      "durationMin": 540,
+      "priceNote": "Mohonk Preserve day pass; state park parking",
+      "transit": "About 1h45 by car; Trailways buses run to New Paltz",
+      "why": "The Shawangunk Ridge, the Gunks: white cliffs that are the East Coast's great climbing crag, and on top a chain of sky lakes. Minnewaska's lake sits in white rock with carriage roads round it that anyone can walk or cycle. Mohonk Preserve has the cliffs, the climbers, and the Victorian tower at Sky Top.",
+      "labels": [
+        "weekend",
+        "outdoor"
+      ],
+      "url": "https://parks.ny.gov/parks/minnewaska/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🧗",
+          "text": "The Trapps at Mohonk Preserve: watch the climbers on the carriage road under the cliffs"
+        },
+        {
+          "emoji": "🏞️",
+          "text": "Minnewaska State Park: the lake loop, and Awosting Falls"
+        },
+        {
+          "emoji": "🍎",
+          "text": "An orchard on Route 299 in apple season"
+        },
+        {
+          "emoji": "🍺",
+          "text": "New Paltz for dinner, on Main Street"
+        }
+      ],
+      "season": "May to October; mid-October for the colour. Minnewaska's lots fill early on autumn weekends.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Lake_Minnewaska_from_cliffs.jpg/1280px-Lake_Minnewaska_from_cliffs.jpg",
+      "imageSubject": "Minnewaska State Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "relax",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "rockaway-beach",
+      "title": "Rockaway Beach",
+      "emoji": "🏖️",
+      "minutesFromHome": 70,
+      "durationMin": 540,
+      "price": 3,
+      "priceNote": "Free; a subway fare",
+      "transit": "The A train, or the NYC Ferry from Wall Street, about an hour",
+      "why": "New York City's surf beach, at the end of the A train: miles of sand and a rebuilt concrete boardwalk, with surf lessons at the designated surfing beaches and taco stands on the boardwalk in summer. It is a subway ride from Manhattan and feels like another town. The ferry from Wall Street is the scenic way.",
+      "labels": [
+        "hiddengem",
+        "outdoor"
+      ],
+      "url": "https://www.nycgovparks.org/parks/rockaway-beach-and-boardwalk",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 1,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "⛴️",
+          "text": "NYC Ferry from Wall Street, or the A train"
+        },
+        {
+          "emoji": "🏄",
+          "text": "The surfing beaches around Beach 90th Street"
+        },
+        {
+          "emoji": "🌮",
+          "text": "Tacos on the boardwalk"
+        },
+        {
+          "emoji": "🌅",
+          "text": "Sunset from Fort Tilden, the wilder beach to the west"
+        }
+      ],
+      "season": "Summer for swimming; September and early October are warm and nearly empty. Lifeguards only in season.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Rockaway_Beach_Queens.JPG/1280px-Rockaway_Beach_Queens.JPG",
+      "imageSubject": "Rockaway Beach, Queens",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

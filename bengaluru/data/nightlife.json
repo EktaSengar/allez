@@ -1,5 +1,434 @@
 {
-  "generated": "2026-09-13",
-  "note": "Hand-written. Empty.",
-  "items": []
+  "generated": "2026-09-28",
+  "note": "Night places that do not expire — a lit-up legislature, concert halls and theatre, jazz with craft beer, comedy, Asia's best cocktail bars, a food street and late-night biryani. Researched, not visited: every record says so. The city's bars close at one.",
+  "items": [
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "free",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "free",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "vidhana-soudha-lit",
+      "title": "Vidhana Soudha lit up",
+      "emoji": "🏛️",
+      "zone": "gandhinagar",
+      "coords": [
+        12.97975,
+        77.59062
+      ],
+      "coordsFrom": "osm relation/5284317 (Nominatim)",
+      "area": "Dr Ambedkar Veedhi, opposite the High Court",
+      "price": 0,
+      "priceNote": "Free — from the road",
+      "durationMin": 45,
+      "hoursNote": "Lit on Sunday evenings and holidays, about 6:30 to 8pm",
+      "url": "https://www.deccanherald.com/india/karnataka/bengaluru/bengaluru-vidhana-soudha-shines-brighter-as-permanent-lighting-system-inaugurated-3480806",
+      "source": "Deccan Herald",
+      "why": "The state legislature, a granite palace from 1956 in the neo-Dravidian style, lit up in gold on Sunday evenings and holidays by a permanent lighting system switched on in 2025. Stand on the road opposite by the High Court's red building and look. Walk on into Cubbon Park while it is still light, and come back as the lights go on.",
+      "labels": [
+        "free"
+      ],
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Vidhana_Soudha_2012.jpg/1280px-Vidhana_Soudha_2012.jpg",
+      "imageSubject": "Vidhana Soudha",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "culture"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "chowdiah-hall",
+      "title": "Chowdiah Memorial Hall",
+      "emoji": "🎻",
+      "zone": "malleswaram",
+      "coords": [
+        13.00671,
+        77.57561
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Gayathri Devi Park Extension, Vyalikaval",
+      "priceNote": "Tickets vary; many concerts cheap",
+      "durationMin": 150,
+      "hoursNote": "Concerts most weekends — the calendar is the timetable",
+      "url": "https://www.chowdiahmemorialhall.in/",
+      "source": "Chowdiah Memorial Hall",
+      "why": "A concert hall built in the shape of a violin, bow and all, in memory of the violinist T. Chowdiah, and the city's home of Carnatic music since 1980. The acoustics are good and the concerts, classical and otherwise, are often cheap. Find a recital in the listings and sit near the front.",
+      "labels": [
+        "hiddengem"
+      ],
+      "booking": false,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Chowdiah_Memorial_Hall.jpg/1280px-Chowdiah_Memorial_Hall.jpg",
+      "imageSubject": "Chowdiah Memorial Hall",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "theatre",
+        "culture"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "ranga-shankara",
+      "title": "Ranga Shankara",
+      "emoji": "🎭",
+      "zone": "jp-nagar",
+      "coords": [
+        12.91161,
+        77.58708
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "8th Cross, JP Nagar 2nd Phase",
+      "priceNote": "Tickets ~₹200–500",
+      "durationMin": 150,
+      "hoursNote": "A play almost every evening except Mondays — the calendar is the timetable",
+      "url": "https://rangashankara.org/",
+      "booking": "https://rangashankara.org/",
+      "source": "Ranga Shankara",
+      "why": "The theatre Bengaluru built for itself: a 300-seat house in JP Nagar founded by Arundhati Nag in 2004, with a play on almost every night of the year in Kannada, English, Hindi and more, at ticket prices set low on purpose. Have akki rotti and filter coffee at the café first. Nothing starts late here: doors close when the play begins.",
+      "labels": [
+        "dontmiss"
+      ],
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Ranga_Shankara%2C_Bangalore_%282024%29_07.jpg/1280px-Ranga_Shankara%2C_Bangalore_%282024%29_07.jpg",
+      "imageSubject": "Ranga Shankara",
+      "imageKind": "subject",
+      "imageCredit": "Gpkp · CC BY-SA 4.0"
+    },
+    {
+      "type": "jazz",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "windmills-craftworks",
+      "title": "Windmills Craftworks",
+      "emoji": "🎷",
+      "zone": "epip-zone",
+      "coords": [
+        12.98253,
+        77.72177
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "EPIP Zone, Whitefield",
+      "priceNote": "Craft beer and dinner; cover for some shows",
+      "durationMin": 150,
+      "hoursNote": "Closed Mondays; live jazz most evenings, best from Wednesday to Saturday",
+      "url": "https://windmills-india.com/",
+      "booking": "https://windmills-india.com/",
+      "source": "Windmills Craftworks; LBB",
+      "why": "A brewery, a library and a jazz theatre in one building in Whitefield: beer brewed on site, walls of books, and a proper small concert room with good sound and serious players, Indian and visiting. It is far from the centre and worth it. Go on a Wednesday to Saturday for the best line-ups.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Farah_Siraj_at_Windmill_Craftworks%2C_Bangalore.jpg",
+      "imageSubject": "A concert at Windmills Craftworks",
+      "imageKind": "subject",
+      "imageCredit": "adivarekar.in, Hari Adivarekar from Bangalore, India · CC BY-SA 2.0"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "comedy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "comedy-theatre-indiranagar",
+      "title": "The Comedy Theatre",
+      "emoji": "🎙️",
+      "zone": "indiranagar",
+      "coords": [
+        12.97037,
+        77.64531
+      ],
+      "coordsFrom": "osm way/691155645 (Nominatim)",
+      "area": "Bayt Towers, 12th Main, HAL 2nd Stage, Indiranagar",
+      "priceNote": "Tickets from a few hundred rupees",
+      "durationMin": 120,
+      "hoursNote": "Several shows most evenings — book on the listing sites",
+      "url": "https://www.district.in/activities/comedy-shows-in-bengaluru",
+      "source": "District; magicpin",
+      "why": "Bengaluru is India's stand-up capital, and this third-floor room on 12th Main is one of the busiest places to see it: several shows a night, from new comics trying an hour to names from the streaming specials testing material. Tickets are cheap. Book, because the good slots sell out.",
+      "labels": [],
+      "booking": false,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Indiranagar_Shopping_Hundred_Feet_Road%2C_Indiranagar_Bangalore_by_night.JPG/1280px-Indiranagar_Shopping_Hundred_Feet_Road%2C_Indiranagar_Bangalore_by_night.JPG",
+      "imageSubject": "Indiranagar by night",
+      "imageKind": "context",
+      "imageCredit": "Indiranagar Seller · CC BY-SA 4.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "soka-bengaluru",
+      "title": "Soka",
+      "emoji": "🍸",
+      "zone": "indiranagar",
+      "coords": [
+        12.96504,
+        77.63838
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "1st Main Road, Indiranagar 2nd Stage",
+      "priceNote": "Cocktails ~₹1,000+",
+      "durationMin": 90,
+      "hoursNote": "Evenings until the city’s 1am closing — book at weekends",
+      "url": "https://www.the50.com/bars/best-in-asia/the-list/soka.html",
+      "source": "Asia's 50 Best Bars 2026",
+      "why": "Ranked eighteenth in Asia's 50 Best Bars in 2026, the highest of any bar in the city. A small room in Indiranagar with a short menu built on local produce, and bartenders who talk you through it. Book, sit at the counter, and let them choose.",
+      "labels": [
+        "dontmiss",
+        "couple"
+      ],
+      "booking": false,
+      "priceLevel": 4,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Indiranagar_Shopping_Hundred_Feet_Road%2C_Indiranagar_Bangalore_by_night.JPG/1280px-Indiranagar_Shopping_Hundred_Feet_Road%2C_Indiranagar_Bangalore_by_night.JPG",
+      "imageSubject": "Indiranagar by night",
+      "imageKind": "context",
+      "imageCredit": "Indiranagar Seller · CC BY-SA 4.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "bar-spirit-forward",
+      "title": "Bar Spirit Forward",
+      "emoji": "🥃",
+      "zone": "richmond-town",
+      "coords": [
+        12.97467,
+        77.59934
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Hotel Southern Star, 40/2 Lavelle Road",
+      "priceNote": "Cocktails ~₹1,000+",
+      "durationMin": 90,
+      "hoursNote": "Evenings until the city’s 1am closing",
+      "url": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-spirit-forward.html",
+      "source": "Asia's 50 Best Bars 2026",
+      "why": "A spirit-forward cocktail bar, as it says, in a hotel on Lavelle Road: stirred drinks, classics done precisely, and a room that feels like a members' club. It climbed to thirtieth in Asia's 50 Best Bars in 2026. Walk down to Church Street afterwards for Empire.",
+      "labels": [
+        "couple"
+      ],
+      "booking": false,
+      "priceLevel": 4
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "toit",
+      "title": "Toit",
+      "emoji": "🍺",
+      "zone": "indiranagar",
+      "coords": [
+        12.97941,
+        77.64063
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "100 Feet Road, Indiranagar",
+      "priceNote": "Beer ~₹350–450 a pint",
+      "durationMin": 120,
+      "hoursNote": "Open from lunch until the city’s 1am closing; expect a wait at weekends",
+      "url": "https://www.zomato.com/bangalore/toit-indiranagar-bangalore",
+      "source": "Zomato",
+      "why": "The brewpub that made Bengaluru India's beer city, on 100 Feet Road since 2010: three floors of brick and wood, beers brewed in the tanks behind the bar, and a crowd that fills it every night. Order the Tintin Toit, a Belgian wit, and the pizza. At weekends put your name down and go for a walk.",
+      "labels": [],
+      "booking": false,
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Toit_Brewpub%2C_Bengaluru_01.jpg/1280px-Toit_Brewpub%2C_Bengaluru_01.jpg",
+      "imageSubject": "Toit",
+      "imageKind": "subject",
+      "imageCredit": "Slyronit · CC BY-SA 4.0"
+    },
+    {
+      "type": "nightmarket",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "market"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "cheap",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "vv-puram-food-street",
+      "title": "VV Puram Food Street",
+      "emoji": "🏮",
+      "zone": "basavanagudi",
+      "coords": [
+        12.94986,
+        77.57419
+      ],
+      "coordsFrom": "hand-placed from the address",
+      "area": "Sajjan Rao Circle, VV Puram",
+      "price": 200,
+      "priceNote": "₹100–300 grazes the street",
+      "durationMin": 90,
+      "hoursNote": "Busiest from about six in the evening until late",
+      "url": "https://en.wikipedia.org/wiki/VV_Puram_Food_Street",
+      "source": "Wikipedia; LBB",
+      "why": "Thindi Beedi, the snack street: a few hundred metres of stalls in old Bengaluru frying and griddling from dusk, almost all of it vegetarian. Eat your way down it: holige with ghee, dosas, gulkand ice cream, and in the cold months the avarebele mela, when everything is made with hyacinth beans. Come hungry, after six, and walk it twice.",
+      "labels": [
+        "cheap",
+        "dontmiss"
+      ],
+      "priceLevel": 4,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Tindi_Beedi%2C_Bangalooru.JPG/1280px-Tindi_Beedi%2C_Bangalooru.JPG",
+      "imageSubject": "VV Puram Food Street",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "latenight",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "restaurant"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "cheap",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "empire-church-street",
+      "title": "Empire, Church Street",
+      "emoji": "🍗",
+      "zone": "shivajinagar",
+      "coords": [
+        12.9754,
+        77.60278
+      ],
+      "coordsFrom": "osm node/1966567931 (Nominatim)",
+      "area": "Church Street, off MG Road",
+      "price": 300,
+      "priceNote": "₹200–400",
+      "durationMin": 45,
+      "hoursNote": "Open until well after midnight — the classic late meal in the city",
+      "url": "https://www.zomato.com/bangalore/empire-restaurant-since-1966-church-street-bangalore",
+      "source": "Zomato; LBB",
+      "why": "Bengaluru's answer to where to eat after the bars shut at one: Empire, since 1966, with ghee rice, kebabs, chicken biryani and parottas served long after every other kitchen has closed. It is fluorescent, fast and full of people who have just left somewhere. The Church Street branch is the one in walking distance of the bars.",
+      "labels": [
+        "cheap"
+      ],
+      "priceLevel": 4,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Church_Street_name_board.jpg/1280px-Church_Street_name_board.jpg",
+      "imageSubject": "Church Street, Bangalore",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    }
+  ]
 }

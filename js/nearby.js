@@ -572,7 +572,8 @@ const Near = (() => {
     museum:     i => ['museum', 'gallery', 'culture'].includes(i.type),
     books:      i => i.type === 'books' || (i.categories || []).includes('books'),
     sport:      i => ['sport', 'play', 'run'].includes(i.type),
-    nightlife:  i => ['nightlife', 'bar', 'jazz', 'venue', 'club', 'comedy'].includes(i.type)
+    nightlife:  i => ['nightlife', 'bar', 'jazz', 'venue', 'club', 'comedy',
+                        'afterdark', 'nightmarket', 'latenight'].includes(i.type)
   };
 
   return { use, pick, beyond, inArr, reach, localScore, ring, RINGS, KIND, HALF,

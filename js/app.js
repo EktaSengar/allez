@@ -554,6 +554,12 @@ const App = (() => {
     return City.money.format(item.price);
   }
 
+  /* Where a line has room for one money word: the number when somebody
+     checked one, else what the record says in words ("NFL prices",
+     "Rentals and short guided trips"). A fixture with neither used to
+     end in a dangling " · ". */
+  const priceLine = item => priceText(item) || item.priceNote || '';
+
   /* ---------- how much anybody knows about this place ----------
 
      Four tiers, one definition, used by every card shape. The reader
@@ -590,7 +596,7 @@ const App = (() => {
     park: '🌳',    museum: '🏛️',  gallery: '🖼️',    books: '📚',   culture: '🎭',
     exhibition: '🖼️', shop: '🛍️', design: '🪑',
     nightlife: '🍸', bar: '🍸',   jazz: '🎷',       venue: '🎤',   club: '🪩',
-    comedy: '🎙️',     dessert: '🍨',
+    comedy: '🎙️',     dessert: '🍨',  afterdark: '🌙', nightmarket: '🏮', latenight: '🌮',
     sport: '🏃',   play: '🤾',    run: '🏃',        watch: '🏟️',
     event: '🎫',   class: '🎓',   walk: '🚶',       itinerary: '🗺️',   hike: '🥾', ride: '🚲',
     mission: '🎯', daytrip: '🚆'
@@ -1019,6 +1025,18 @@ const App = (() => {
     </div>`;
   }
 
+  /* A trip is a destination until it says what to do there. `stops` turns
+     the paragraph into a day you could follow — the same shape a route
+     uses, in order, with the drive between where it matters — and
+     `season` says when it is worth going, which for a coast or a valley
+     is half the decision. Both are optional; a trip without them reads
+     as it always did. */
+  function tripPlan(item) {
+    if (!hasStops(item)) return '';
+    return `<ol class="stops trip-plan">${item.stops.map(s =>
+      `<li>${s.emoji ? `<span class="e">${s.emoji}</span> ` : ''}${esc(s.text)}${s.walk ? ` <span class="w">· ${esc(s.walk)}</span>` : ''}</li>`).join('')}</ol>`;
+  }
+
   function tripBlock(item) {
     return `<article class="trip" data-id="${esc(item.id)}">
       <div class="trip-img">
@@ -1029,6 +1047,8 @@ const App = (() => {
         <h3>${esc(item.title)}</h3>
         <p class="trip-meta">${esc([item.transit, item.priceNote].filter(Boolean).join(' · '))}</p>
         <p class="trip-why">${esc(item.why || '')}</p>
+        ${tripPlan(item)}
+        ${item.season ? `<p class="trip-season"><b>When.</b> ${esc(item.season)}</p>` : ''}
         <div class="links">
           ${bookLink(item)}
           ${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">Official site</a>` : ''}
@@ -1332,7 +1352,10 @@ const App = (() => {
     jazz:   'Sets most nights',
     venue:  'Check the listing, then buy blind',
     club:   'The late ones',
-    bar:    'Somewhere to start the night'
+    bar:    'Somewhere to start the night',
+    afterdark:   'Things that only happen once the lights go down',
+    nightmarket: 'Food stalls and music, on the nights they run',
+    latenight:   'Still serving when everything else has shut'
   };
   const nightNote = k => (City.nightNotes && City.nightNotes[k]) || NIGHT_NOTES[k];
 
@@ -1346,19 +1369,36 @@ const App = (() => {
       .filter(i => isNight(i) && (!i.end || i.end >= TODAY_ISO))
       .sort((a, b) => (a.start || '').localeCompare(b.start || ''));
 
-    const lead = Rank.rank(gigs, CTX, hasRealPhoto)[0];
+    /* The lead is a dated night when one has a real photograph, and
+       otherwise the best room that does — a Nights tab that opens on a
+       heading and a list of names reads as a directory, which is the one
+       thing a night out is not chosen from. */
+    const lead = Rank.rank(gigs, CTX, hasRealPhoto)[0]
+      || Rank.rank(nightlife, CTX, hasRealPhoto)[0];
     const rest = gigs.filter(g => !lead || g.id !== lead.id);
 
     /* A night out is worth a journey in a way a croissant is not, so the
        ring is wide — but it is still a ring, and inside it the nearest
        good room leads. Ordering by reach is the difference between "the
        jazz cellars of Paris" and "the jazz cellars you could be in by
-       ten". */
+       ten".
+
+       Rooms are chosen by what they look like inside, so a group whose
+       records mostly carry a photograph is drawn as cards; one that is
+       mostly names stays a list, where a grid of tinted tiles would only
+       be pretending. The first six take cards and the rest fall to rows,
+       so a long group does not become a wall. */
+    const CARDS = 6;
     const group = (title, note, test) => {
-      const items = Rank.rank(nightlife, CTX, test)
+      const items = Rank.rank(nightlife, CTX, i => test(i) && (!lead || i.id !== lead.id))
         .sort((a, b) => Near.localScore(b) - Near.localScore(a));
       if (!items.length) return '';
-      return stripHead(title, note) + rows(items);
+      const pictured = items.filter(i => i.image).length;
+      if (pictured * 2 < items.length) return stripHead(title, note) + rows(items);
+      const shown = items.slice(0, CARDS), more = items.slice(CARDS);
+      return stripHead(title, note)
+        + `<div class="grid night-grid">${shown.map(i => card(i)).join('')}</div>`
+        + (more.length ? rows(more, null, true) : '');
     };
 
     /* What is open around you tonight that nobody wrote about. "Open" is
@@ -1377,11 +1417,14 @@ const App = (() => {
           ? stripHead('On sale now', 'Dated, and they sell out in this order')
             + `<div class="grid">${rest.slice(0, 6).map(i => card(i)).join('')}</div>`
           : '')
-      + group('Comedy', nightNote('comedy'), i => i.type === 'comedy')
-      + group('Jazz rooms', nightNote('jazz'), i => i.type === 'jazz')
+      + group('Only after dark', nightNote('afterdark'), i => i.type === 'afterdark')
       + group('Live music', nightNote('venue'), i => i.type === 'venue')
-      + group('Late', nightNote('club'), i => i.type === 'club')
+      + group('Jazz rooms', nightNote('jazz'), i => i.type === 'jazz')
+      + group('Comedy and cabaret', nightNote('comedy'), i => i.type === 'comedy')
+      + group('Dancing', nightNote('club'), i => i.type === 'club')
       + group('A drink first', nightNote('bar'), i => i.type === 'bar')
+      + group('Night markets', nightNote('nightmarket'), i => i.type === 'nightmarket')
+      + group('Late-night food', nightNote('latenight'), i => i.type === 'latenight')
       + (localNight.items.length
           ? stripHead(`Open around ${Loc.displayName(Loc.active())}`,
                       radiusNote(localNight.radius, localNight.items, localNight.widened))
@@ -1451,7 +1494,7 @@ const App = (() => {
       return `<div class="slot" data-id="${esc(it.id)}">
         <div class="t">${esc(when)}</div>
         <div class="s"><b><span class="e">${it.emoji || ''}</span>${esc(it.title)}</b>
-          ${durText(it.durationMin) || mins + ' min'} · ${esc(priceText(it))}
+          ${[durText(it.durationMin) || mins + ' min', priceLine(it)].filter(Boolean).map(esc).join(' · ')}
           ${pair ? ` · then ${pair.emoji} ${esc(pair.text)}` : ''}</div>
       </div>`;
     }).join('');
@@ -1712,7 +1755,7 @@ const App = (() => {
           ${featured.image ? `<div class="sotw-img">${img(featured, 'tile', 'loaded')}</div>` : ''}
           <div>
             <h3>${featured.emoji || ''} ${esc(featured.title)}</h3>
-            <p class="sotw-meta">${esc(featured.area || '')} · ${featured.minutesFromHome} min away · ${esc(priceText(featured))}${featured.difficulty ? ` · ${featured.difficulty}` : ''}</p>
+            <p class="sotw-meta">${[featured.area, `${featured.minutesFromHome} min away`, priceLine(featured), featured.difficulty].filter(Boolean).map(esc).join(' · ')}</p>
             <p class="sotw-why">${esc(featured.why || '')}</p>
             ${pairings(featured)}
             <div class="links">
@@ -1775,7 +1818,7 @@ const App = (() => {
       </div>
       <div class="fx-body">
         <h3>${it.emoji || ''} ${esc(it.title)}</h3>
-        <p class="fx-meta">${esc(it.area || '')} · ${it.minutesFromHome} min · ${esc(priceText(it))}</p>
+        <p class="fx-meta">${[it.area, `${it.minutesFromHome} min`, priceLine(it)].filter(Boolean).map(esc).join(' · ')}</p>
         <p class="fx-why">${esc(it.why || '')}</p>
         ${it.spectator ? `<p class="fx-spec"><b>Where to stand.</b> ${esc(it.spectator)}</p>` : ''}
         ${pairings(it)}
@@ -2954,15 +2997,27 @@ const App = (() => {
        reached the top six and sat unread under "Also reachable". They
        are the ones worth being told about, so they get their own strip. */
     const isGem = i => (i.labels || []).includes('hiddengem');
-    const trips = ranked.filter(i => !isGem(i));
+    /* A trip that is only worth it with a night in the middle — Paso
+       Robles, Mendocino, Yosemite — is a different plan from one you do
+       before dinner, and ranking them in one list put a four-hour drive
+       above the tide pools on a Tuesday. A pack marks those `overnight`;
+       one that marks none gets the single list it always had. */
+    const isAway = i => i.overnight === true;
+    const trips = ranked.filter(i => !isGem(i) && !isAway(i));
+    const weekends = ranked.filter(i => !isGem(i) && isAway(i));
     const gems = ranked.filter(isGem);
-    const featured = trips.slice(0, 6);
-    const rest = trips.slice(6);
+    /* Six lead, and so does any trip somebody has written a day for: a
+       plan folded into a one-line row is a plan nobody reads. */
+    const featured = trips.filter((i, n) => n < 6 || hasStops(i));
+    const rest = trips.filter(i => !featured.includes(i));
 
-    return `<div class="trips">${featured.map(tripBlock).join('')}</div>`
+    return (weekends.length ? stripHead('For a day', 'There and back before dark') : '')
+      + `<div class="trips">${featured.map(tripBlock).join('')}</div>`
+      + (rest.length ? stripHead('Also reachable in a day') + rows(rest) : '')
+      + (weekends.length ? stripHead('For a weekend', 'Far enough that a night there is the plan')
+                           + `<div class="trips">${weekends.map(tripBlock).join('')}</div>` : '')
       + (gems.length ? stripHead('Lesser known', 'Closer, quieter, and easy to miss')
-                       + `<div class="trips">${gems.map(tripBlock).join('')}</div>` : '')
-      + (rest.length ? stripHead('Also reachable') + rows(rest) : '');
+                       + `<div class="trips">${gems.map(tripBlock).join('')}</div>` : '');
   }
 
   /* ---------- quests ---------- */

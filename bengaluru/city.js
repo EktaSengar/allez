@@ -400,6 +400,17 @@ const City = (() => {
      serves the wrong city's cached page. Deferred on purpose. */
   const serviceWorker = false;
 
+  /* The lines under the Nights headings. */
+  const nightNotes = {
+    afterdark:   'The legislature lit in gold on a Sunday evening',
+    venue:       'A concert hall shaped like a violin, and a play every night in JP Nagar',
+    jazz:        'Beer brewed on site, a library, and a proper jazz room in Whitefield',
+    comedy:      "The country's stand-up capital, several shows a night",
+    bar:         "Two of Asia's best cocktail bars, and the brewpub that started it all",
+    nightmarket: 'Thindi Beedi: a street of snacks after dark',
+    latenight:   'Ghee rice and kebabs after the bars shut at one'
+  };
+
   /* ---------- what counts as notable here ----------
 
      Extra Wikidata classes for scripts/notable.mjs. The base list found
@@ -473,7 +484,7 @@ const City = (() => {
     ]
   };
 
-  return { id, name, ua, bbox, serviceWorker, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather, notable, luma, conferences, lumaPage, practices, discover };
+  return { id, name, ua, bbox, serviceWorker, nightNotes, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather, notable, luma, conferences, lumaPage, practices, discover };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;

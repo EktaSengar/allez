@@ -1,6 +1,6 @@
 {
-  "generated": "2026-09-14",
-  "note": "Night places that do not expire — jazz rooms, comedy, live venues and bars. Researched, not visited: every record says so. Programmes change nightly, so the link goes to the venue's own calendar; dated concerts belong in events.json.",
+  "generated": "2026-09-28",
+  "note": "Night places that do not expire — things only on after dark, live rooms, jazz, comedy and cabaret, dancing, bars, night markets and late-night food. Researched, not visited: every record says so. Programmes change nightly, so the link goes to the venue's own calendar; dated concerts belong in events.json.",
   "items": [
     {
       "type": "jazz",
@@ -727,10 +727,10 @@
         -122.16596
       ],
       "coordsFrom": "discovery index (OpenStreetMap)",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_Leland_Stanford_Junior_University.svg/1280px-Seal_of_Leland_Stanford_Junior_University.svg.png",
-      "imageSubject": "Stanford University",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Bob_Weir_%26_The_Wolf_Pack_Mickey_Hart%27s_Planet_Drum_%2852070816800%29.jpg/1280px-Bob_Weir_%26_The_Wolf_Pack_Mickey_Hart%27s_Planet_Drum_%2852070816800%29.jpg",
+      "imageSubject": "The lawn at Frost Amphitheater",
+      "imageKind": "subject",
+      "imageCredit": "Bob Aronson from Monterey, CA, US · CC BY-SA 2.0",
       "sameAs": [
         "osm-frost-amphitheatre-74861--244332"
       ],
@@ -776,6 +776,1312 @@
       "hoursNote": "Open for shows — the calendar is the timetable",
       "booking": "https://live.stanford.edu/events/events",
       "priceLevel": 3
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "culture",
+        "learn"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "exploratorium-after-dark",
+      "title": "Exploratorium After Dark",
+      "emoji": "🔭",
+      "zone": "telegraph-hill",
+      "coords": [
+        37.8009,
+        -122.39853
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Pier 15, the Embarcadero",
+      "price": 20,
+      "priceNote": "About $20 · 18+ · book ahead",
+      "durationMin": 180,
+      "hours": "Th 18:00-22:00",
+      "hoursFrom": "exploratorium.edu — After Dark, Thursdays 6 to 10pm, last entry 8:30",
+      "url": "https://www.exploratorium.edu/visit/calendar/after-dark",
+      "booking": "https://www.exploratorium.edu/tickets",
+      "source": "Exploratorium; SF Funcheap",
+      "why": "The science museum on Pier 15 with the children gone and a bar open. Every Thursday from six it is adults only, and the hundreds of hands-on exhibits are yours, down to the glass-walled observatory gallery over the bay. Each night has a theme and a talk or a DJ. It is the best first date in the city. Buy tickets ahead and arrive by eight, because last entry is 8:30.",
+      "labels": [
+        "dontmiss",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Exploratorium_entrance_at_Pier_15%2C_SF_%28Sep_2018%29.jpg/1280px-Exploratorium_entrance_at_Pier_15%2C_SF_%28Sep_2018%29.jpg",
+      "imageSubject": "Exploratorium, Pier 15",
+      "imageKind": "subject",
+      "imageCredit": "Another Believer · CC BY-SA 4.0"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "culture",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "cal-academy-nightlife",
+      "title": "NightLife at the Academy of Sciences",
+      "emoji": "🐧",
+      "zone": "inner-richmond",
+      "coords": [
+        37.76983,
+        -122.46609
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "55 Music Concourse Drive, Golden Gate Park",
+      "price": 20,
+      "priceNote": "About $15–25 · 21+ with photo ID",
+      "durationMin": 180,
+      "hours": "Th 18:00-22:00",
+      "hoursFrom": "calacademy.org — NightLife, Thursdays 6 to 10pm, 21+",
+      "url": "https://www.calacademy.org/nightlife",
+      "booking": "https://www.calacademy.org/buy-tickets",
+      "source": "California Academy of Sciences",
+      "why": "Thursday nights in Golden Gate Park: a four-storey rainforest under a glass dome, a coral reef, the penguins, and DJs and bars between them. It is 21 and over, so bring physical ID. Planetarium seats cost a few dollars more and go first, so reserve them with the ticket. Eat before you come or after; the park is dark and quiet by ten.",
+      "labels": [
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/California-06239_-_California_Academy_of_Sciences_%2820449900470%29.jpg/1280px-California-06239_-_California_Academy_of_Sciences_%2820449900470%29.jpg",
+      "imageSubject": "California Academy of Sciences",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "culture"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "unusual",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "audium",
+      "title": "Audium",
+      "emoji": "🔊",
+      "zone": "polk-gulch",
+      "coords": [
+        37.78842,
+        -122.4242
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "1616 Bush Street, Lower Pacific Heights",
+      "price": 20,
+      "priceNote": "$20, cash · no under-12s",
+      "durationMin": 90,
+      "hours": "Th-Sa 20:00-21:30",
+      "hoursFrom": "audium.org — performances Thursday, Friday and Saturday at 8pm, doors 7:30",
+      "url": "https://www.audium.org/",
+      "booking": "https://www.audium.org/calendar/",
+      "source": "Audium; City Box Office",
+      "why": "The only theatre of its kind in the world: forty-nine seats in a sloping room with 176 speakers in the walls, floor and ceiling, and the lights go out completely. Sound moves past you, over you and under you for about an hour. Stan Shaff began it in the late 1960s, and his son David now performs the pieces. Three nights a week at eight. Some tickets are sold in advance and a few pay-what-you-can seats go at the door from 7:30.",
+      "labels": [
+        "hiddengem",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Audium_door_sign.jpg/1280px-Audium_door_sign.jpg",
+      "imageSubject": "Audium (theater)",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "art",
+        "free",
+        "walk"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "free",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "bay-lights",
+      "title": "The Bay Lights",
+      "emoji": "✨",
+      "zone": "rincon-hill",
+      "coords": [
+        37.79399,
+        -122.39061
+      ],
+      "coordsFrom": "osm way/23605173 (Nominatim)",
+      "area": "Best from Pier 14 or Pier 7, the Embarcadero",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 45,
+      "hours": "sunset-sunrise",
+      "hoursFrom": "illuminate.org — the lights run nightly from dusk to dawn",
+      "url": "https://illuminate.org/projects/thebaylights/",
+      "booking": false,
+      "source": "Illuminate; SF Funcheap",
+      "why": "Forty-eight thousand LEDs on the cables of the Bay Bridge's western span, running patterns that never repeat. The piece went dark in 2023 and was relit on 20 March 2026, with a second strand added so it can be seen from more of the shore. Walk out to the end of Pier 14 or Pier 7 after sunset. It pairs with dinner at the Ferry Building, a ten-minute walk away.",
+      "labels": [
+        "free",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg/1280px-San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
+      "imageSubject": "The Bay Lights on the Bay Bridge",
+      "imageKind": "subject",
+      "imageCredit": "Dllu · CC BY-SA 4.0"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "learn",
+        "free",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "free",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "chabot-telescopes",
+      "title": "Telescope nights at Chabot",
+      "emoji": "🔭",
+      "coords": [
+        37.81846,
+        -122.18069
+      ],
+      "coordsFrom": "osm node/10028418263 (Nominatim)",
+      "area": "10000 Skyline Boulevard, Oakland hills",
+      "price": 0,
+      "priceNote": "Free · weather permitting",
+      "durationMin": 120,
+      "hours": "Fr-Sa 19:30-22:30",
+      "hoursFrom": "chabotspace.org — free telescope viewings Friday and Saturday, 7:30 to 10:30pm",
+      "url": "https://chabotspace.org/programs/free-telescope-viewings/",
+      "booking": false,
+      "source": "Chabot Space & Science Center; NASA Night Sky Network",
+      "why": "Every Friday and Saturday night the observatory domes in the Oakland hills open for free, and you look through real telescopes: a refractor from 1883 named Leah, a 20-inch from 1916 named Rachel, and a 36-inch reflector. Volunteer astronomers point each one at something different and answer questions. If it is cloudy the domes are still open to tour; if it rains, stay home. Bring a layer: it is up in the redwoods.",
+      "labels": [
+        "free",
+        "hiddengem"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 0,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Chabot_SSC_entrance.jpg/1280px-Chabot_SSC_entrance.jpg",
+      "imageSubject": "Chabot Space and Science Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "film"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "castro-theatre",
+      "title": "Castro Theatre",
+      "emoji": "🎬",
+      "zone": "duboce-triangle",
+      "coords": [
+        37.762,
+        -122.43475
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "429 Castro Street, the Castro",
+      "priceNote": "Tickets vary by show",
+      "durationMin": 150,
+      "hoursNote": "Open for shows and screenings — the calendar is the timetable",
+      "url": "https://thecastro.com/",
+      "booking": "https://thecastro.com/calendar/",
+      "source": "SF Chronicle; KQED; Pollstar",
+      "why": "The 1922 movie palace under the neon sign, reopened on 6 February 2026 after a two-year, $41 million restoration. Another Planet now runs it for concerts, films, drag and comedy, with 1,400 seats that can be taken out for standing shows. The ceiling and the Wurlitzer organ are the reasons to go whatever is on. Frameline, the LGBTQ+ film festival, is here every June.",
+      "labels": [
+        "dontmiss"
+      ],
+      "priceLevel": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Castro_Theater_San_Francisc.jpg",
+      "imageSubject": "Castro Theatre",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "bimbos-365",
+      "title": "Bimbo's 365 Club",
+      "emoji": "🎺",
+      "zone": "russian-hill",
+      "coords": [
+        37.80372,
+        -122.41557
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "1025 Columbus Avenue, North Beach",
+      "priceNote": "Tickets vary by show",
+      "durationMin": 150,
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "url": "https://bimbos365club.com/",
+      "booking": "https://bimbos365club.com/",
+      "source": "Bimbo's 365 Club; SF Heritage",
+      "why": "A 1931 supper club at the top of Columbus, still run by the family that opened it, and still one of the best-looking rooms a band can play in this city. The bookings run from indie bands to swing orchestras. It is a ten-minute walk up from Washington Square, and small enough that you will see the stage from anywhere.",
+      "labels": [
+        "couple"
+      ],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Bimbo%27s_Marquee.jpg/1280px-Bimbo%27s_Marquee.jpg",
+      "imageSubject": "Bimbo's 365 Club",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "the-independent",
+      "title": "The Independent",
+      "emoji": "🎸",
+      "zone": "north-of-panhandle",
+      "coords": [
+        37.77553,
+        -122.43764
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "628 Divisadero Street, NoPa",
+      "priceNote": "Tickets ~$25–45",
+      "durationMin": 180,
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "url": "https://www.theindependentsf.com/",
+      "booking": "https://www.theindependentsf.com/",
+      "source": "The Independent; Another Planet Entertainment",
+      "why": "The room where bands play San Francisco on the way up: about five hundred standing, good sound, and nowhere far from the stage. Check the calendar a month out, because the names you will know next year sell it out. Divisadero is full of places to eat before a show, and the doors are usually at seven or eight.",
+      "labels": [],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Divisadero_Street_during_evening_twilight%2C_August_2019.JPG/1280px-Divisadero_Street_during_evening_twilight%2C_August_2019.JPG",
+      "imageSubject": "Divisadero Street",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "bottom-of-the-hill",
+      "title": "Bottom of the Hill",
+      "emoji": "🎸",
+      "zone": "dogpatch",
+      "coords": [
+        37.76493,
+        -122.39641
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "1233 17th Street, Potrero Hill",
+      "priceNote": "Cheap — usually $15–25",
+      "durationMin": 180,
+      "hoursNote": "Open for shows — the calendar is the timetable",
+      "url": "https://www.bottomofthehill.com/",
+      "booking": "https://www.bottomofthehill.com/",
+      "source": "Bottom of the Hill; Wikipedia",
+      "why": "A small rock club at the foot of Potrero Hill, open since 1991, where three bands a night play for a few hundred people and the ticket costs less than a cocktail downtown. A lot of bands that went on to fill arenas played here first. There is a patio out the back for between sets.",
+      "labels": [
+        "cheap"
+      ],
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Bottom_of_the_hill.jpg/1280px-Bottom_of_the_hill.jpg",
+      "imageSubject": "Bottom of the Hill",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "weekend"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "shoreline-amphitheatre",
+      "title": "Shoreline Amphitheatre",
+      "emoji": "🎤",
+      "coords": [
+        37.42687,
+        -122.08081
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "One Amphitheatre Parkway, Mountain View",
+      "priceNote": "Lawn seats are the cheap way in",
+      "durationMin": 240,
+      "hoursNote": "Open for shows, roughly April to October — the calendar is the timetable",
+      "url": "https://www.shorelineamphitheatre.com/",
+      "booking": "https://www.shorelineamphitheatre.com/shows",
+      "source": "Live Nation; Shoreline Amphitheatre",
+      "why": "The Peninsula's big outdoor stage: 22,000 people under a white tent roof and on a grass lawn by the bay in Mountain View. The season runs from spring into October, and this is where the arena tours stop. Buy a lawn ticket and bring a blanket. Leaving takes as long as the encore, so park facing the exit or cycle in on the Stevens Creek Trail.",
+      "labels": [],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Shoreline_Amphitheatre.jpg/1280px-Shoreline_Amphitheatre.jpg",
+      "imageSubject": "Shoreline Amphitheatre",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "jazz",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "keys-jazz-bistro",
+      "title": "Keys Jazz Bistro",
+      "emoji": "🎹",
+      "zone": "telegraph-hill",
+      "coords": [
+        37.79812,
+        -122.40534
+      ],
+      "coordsFrom": "osm way/598020853 (Nominatim)",
+      "area": "498 Broadway at Kearny, North Beach",
+      "priceNote": "Cover plus dinner or drinks",
+      "durationMin": 150,
+      "hours": "We-Sa 17:00-01:00",
+      "hoursFrom": "keysjazzbistro.com — Wednesday to Saturday, 5pm to 1am; sets at 7 and 9, and 11 on Saturday",
+      "url": "https://keysjazzbistro.com/",
+      "booking": "https://keysjazzbistro.com/upcoming-shows/",
+      "source": "Keys Jazz Bistro; SF Examiner",
+      "why": "Jazz back on Broadway, in a 125-seat room built around a Yamaha grand and a Hammond B3 organ. Sets are at seven and nine, with a late one at eleven on Saturday, and dinner is served at the tables. The booking leans to piano, organ trios and singers. It is all-ages, which almost no jazz room is, and two minutes from Vesuvio.",
+      "labels": [
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Broadway%2C_SF%2C_CA%2C_jjron_25.03.2012.jpg/1280px-Broadway%2C_SF%2C_CA%2C_jjron_25.03.2012.jpg",
+      "imageSubject": "Broadway (San Francisco)",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "theatre",
+        "comedy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "dear-san-francisco",
+      "title": "Dear San Francisco at Club Fugazi",
+      "emoji": "🤸",
+      "zone": "north-beach",
+      "coords": [
+        37.79964,
+        -122.41028
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "678 Green Street, North Beach",
+      "priceNote": "Tickets vary by seat",
+      "durationMin": 100,
+      "hoursNote": "Shows most evenings plus weekend matinées — check the calendar",
+      "url": "https://www.clubfugazisf.com/dear-san-francisco",
+      "booking": "https://dearsf.clubfugazisf.com/",
+      "source": "Club Fugazi; The 7 Fingers",
+      "why": "A hundred minutes of circus about San Francisco, in the North Beach hall where Beach Blanket Babylon played for forty-five years. It is made by The 7 Fingers, whose founders grew up here: acrobats on poles and hoops a few feet from the front row, telling the city's story from the gold rush to now. Wine and small plates are sold inside. It is the best thing to take visitors to, and good without them.",
+      "labels": [
+        "dontmiss",
+        "couple"
+      ],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Club_Fugazi_entrance%2C_2017-02-10.jpg/1280px-Club_Fugazi_entrance%2C_2017-02-10.jpg",
+      "imageSubject": "Club Fugazi",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "theatre",
+        "comedy",
+        "dance"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "oasis-sf",
+      "title": "Oasis",
+      "emoji": "👑",
+      "zone": "west-soma",
+      "coords": [
+        37.77191,
+        -122.41444
+      ],
+      "coordsFrom": "osm way/256471158 (Nominatim)",
+      "area": "298 11th Street, SoMa",
+      "priceNote": "Tickets ~$25–45",
+      "durationMin": 150,
+      "hoursNote": "Open for shows and parties — the calendar is the timetable",
+      "url": "https://www.sfoasis.com/",
+      "booking": "https://www.sfoasis.com/",
+      "source": "KQED; ABC7 News",
+      "why": "San Francisco's drag cabaret, in a converted bathhouse on 11th Street, run by D'Arcy Drollinger since 2015. It nearly closed in 2025. A donation let it buy the building, and it reopened on 17 July 2026 with a new gold-tiled box office and pink curtains. There are staged shows early in the evening and dance parties after, and the full-length drag parodies of films and TV sell out first.",
+      "labels": [
+        "dontmiss"
+      ],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Oasis_nightclub_at_night%2C_November_2025.jpg/1280px-Oasis_nightclub_at_night%2C_November_2025.jpg",
+      "imageSubject": "Oasis (San Francisco)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "comedy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "comedy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "rooster-t-feathers",
+      "title": "Rooster T. Feathers",
+      "emoji": "🎙️",
+      "zone": "sunnyvale",
+      "coords": [
+        37.36872,
+        -122.03358
+      ],
+      "coordsFrom": "osm way/219673948 (Nominatim)",
+      "area": "157 W El Camino Real, Sunnyvale",
+      "priceNote": "Tickets plus a drink minimum · 21+",
+      "durationMin": 120,
+      "hoursNote": "Shows most nights — the calendar is the timetable",
+      "url": "https://www.roostertfeathers.com/",
+      "booking": "https://www.roostertfeathers.com/",
+      "source": "Rooster T. Feathers; Eventbrite",
+      "why": "Silicon Valley's comedy club since 1984, on El Camino in Sunnyvale: a low-ceilinged room of small tables where touring headliners work out their hour. It is the one real stand-up room south of the city, so from Palo Alto it is fifteen minutes rather than an hour. Everyone is 21 and over, so bring ID, and buy tickets from the club's own site.",
+      "labels": [],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Historic_Murphy_Avenue%2C_Sunnyvale_%28May_2025%29_%28cropped%29.jpg/1280px-Historic_Murphy_Avenue%2C_Sunnyvale_%28May_2025%29_%28cropped%29.jpg",
+      "imageSubject": "Sunnyvale, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "club",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "dance"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "public-works",
+      "title": "Public Works",
+      "emoji": "🪩",
+      "zone": "mission",
+      "coords": [
+        37.76889,
+        -122.41927
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "161 Erie Street, the Mission",
+      "priceNote": "Tickets ~$15–40",
+      "durationMin": 240,
+      "hoursNote": "Open for club nights, usually Thursday to Saturday from about 9:30pm — the calendar is the timetable",
+      "url": "https://publicsf.com/",
+      "booking": "https://publicsf.com/calendar/",
+      "source": "Public Works; Resident Advisor",
+      "why": "The city's serious dance floor: two rooms down an alley off Mission Street, a Funktion-One sound system, and house and techno DJs from Berlin, Detroit and the Bay on the same bill. It runs by the calendar rather than by the week, so check who is on. Nights start around half past nine and go late.",
+      "labels": [],
+      "priceLevel": 2,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mission_District_San_Francisco.jpg",
+      "imageSubject": "Mission Street",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "club",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music",
+        "dance"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "unusual"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "the-endup",
+      "title": "The EndUp",
+      "emoji": "🌅",
+      "zone": "west-soma",
+      "coords": [
+        37.77727,
+        -122.40384
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "401 6th Street, SoMa",
+      "priceNote": "Cover at the door",
+      "durationMin": 300,
+      "hoursNote": "Open Thursday to Sunday; the Saturday party runs through Sunday morning — check the listings",
+      "url": "https://ra.co/clubs/4005",
+      "booking": false,
+      "source": "Resident Advisor; Wikipedia",
+      "why": "The after-hours club, at the corner of 6th and Harrison since 1973. On Saturday night it keeps going through Sunday morning, and the point is walking out onto the garden patio into daylight. Everybody who stayed up too late in San Francisco for fifty years has ended up here. Go after one in the morning, never before.",
+      "labels": [
+        "hiddengem"
+      ],
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/End_Up.jpg/1280px-End_Up.jpg",
+      "imageSubject": "The EndUp",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "club",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "dance",
+        "music",
+        "bar"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "weekend",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "el-rio",
+      "title": "El Rio",
+      "emoji": "💃",
+      "zone": "bernal-heights",
+      "coords": [
+        37.74675,
+        -122.41933
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "3158 Mission Street, near Cesar Chavez",
+      "priceNote": "Cheap · some nights have a cover",
+      "durationMin": 180,
+      "hoursNote": "Open daily; Salsa Sunday on the second and fourth Sunday from 3pm",
+      "url": "https://www.elriosf.com/",
+      "booking": false,
+      "source": "SF Legacy Business Registry; SF Station",
+      "why": "A queer bar in the outer Mission since 1978, with one of the best back patios in the city: lemon trees, string lights and heaters, and room for a band and a crowd dancing. On the second and fourth Sunday of the month Salsa Sunday starts at three, with live salsa, merengue and cumbia bands. The rest of the week it is drag, karaoke, comedy and dance parties. The city has protected the patio as part of its Legacy Business listing.",
+      "labels": [
+        "cheap"
+      ],
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/El_Rio_40th_Anniversary_Party.jpg/1280px-El_Rio_40th_Anniversary_Party.jpg",
+      "imageSubject": "El Rio (gay bar)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "club",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "dance",
+        "sport"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "unusual",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "church-of-8-wheels",
+      "title": "Church of 8 Wheels",
+      "emoji": "🛼",
+      "zone": "western-addition",
+      "coords": [
+        37.77477,
+        -122.43057
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "554 Fillmore Street, Lower Haight",
+      "price": 20,
+      "priceNote": "$20 cash, skates included",
+      "durationMin": 150,
+      "hours": "Fr-Sa 19:00-23:00",
+      "hoursFrom": "churchof8wheels.com — adult sessions Friday and Saturday, 7 to 11pm",
+      "url": "http://www.churchof8wheels.com/",
+      "booking": false,
+      "source": "Church of 8 Wheels; SF Funcheap",
+      "why": "Roller disco in a deconsecrated church: a skating floor under the stained glass, a DJ and a disco ball. The Friday and Saturday evening sessions, seven to eleven, are for adults. Twenty dollars cash covers the skates. Nobody here is good at it, which is the point.",
+      "labels": [
+        "couple",
+        "hiddengem"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Lower_Haight_San_Francisco.jpg/1280px-Lower_Haight_San_Francisco.jpg",
+      "imageSubject": "Lower Haight, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "unusual",
+        "rainy"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "tonga-room",
+      "title": "Tonga Room & Hurricane Bar",
+      "emoji": "🌴",
+      "zone": "union-square",
+      "coords": [
+        37.79214,
+        -122.41001
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Fairmont Hotel, 950 Mason Street, Nob Hill",
+      "priceNote": "Cocktails ~$20 · cover when the band plays",
+      "durationMin": 120,
+      "hours": "We-Th 17:00-22:00; Fr-Sa 17:00-23:00",
+      "hoursFrom": "fairmont-san-francisco.com — Wednesday and Thursday 5 to 10pm, Friday and Saturday 5 to 11pm",
+      "url": "https://www.fairmont-san-francisco.com/dine/tonga-room-hurricane-bar/",
+      "booking": "https://www.opentable.com/tonga-room-and-hurricane-bar-fairmont-san-francisco",
+      "source": "Fairmont San Francisco; Frommers",
+      "why": "A tiki bar built in 1945 in the Fairmont's old swimming pool. The pool is now a lagoon, a band plays top-forty covers from a thatched barge on it from seven, and every half hour or so a tropical storm rolls through, with thunder, lightning and rain on the water. It is absurd and everyone should go once.",
+      "labels": [
+        "dontmiss",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Tonga_room_restaurant.jpg/1280px-Tonga_room_restaurant.jpg",
+      "imageSubject": "Tonga Room",
+      "imageKind": "subject",
+      "imageCredit": "Jaredzimmerman · CC BY-SA 4.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "music",
+        "view"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "top-of-the-mark",
+      "title": "Top of the Mark",
+      "emoji": "🌃",
+      "zone": "union-square",
+      "coords": [
+        37.79162,
+        -122.41041
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "19th floor, Mark Hopkins Hotel, Nob Hill",
+      "priceNote": "Cocktails ~$20 · $15 cover for the Saturday band",
+      "durationMin": 90,
+      "hours": "Su-Th 16:00-23:00; Fr-Sa 15:00-00:30",
+      "hoursFrom": "topofthemark.com — Sunday to Thursday 4 to 11pm, Friday and Saturday 3pm to 12:30am",
+      "url": "https://www.topofthemark.com/",
+      "booking": "https://www.opentable.com/top-of-the-mark",
+      "source": "Top of the Mark; Wikipedia",
+      "why": "The glass-walled bar on the nineteenth floor of the Mark Hopkins, open since 1939, where sailors shipping out in the Second World War had a last drink looking at the Golden Gate. The view goes all the way round: the bridge, the bay, the Financial District lit up. There is a band on Saturday nights. Come at sunset and take the window seats on the north side.",
+      "labels": [
+        "romantic",
+        "couple"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Top_of_the_Mark_%2816683414895%29.jpg/1280px-Top_of_the_Mark_%2816683414895%29.jpg",
+      "imageSubject": "Top of the Mark",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "specs-twelve-adler",
+      "title": "Specs'",
+      "emoji": "🍺",
+      "zone": "telegraph-hill",
+      "coords": [
+        37.79764,
+        -122.40599
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "12 William Saroyan Place, off Columbus",
+      "priceNote": "Cheap",
+      "durationMin": 90,
+      "hours": "Mo-We 16:00-01:00; Th-Sa 16:00-02:00; Su 16:00-01:00",
+      "hoursFrom": "specsbarsf.com — daily from 4pm, to 2am Thursday to Saturday",
+      "url": "https://www.specsbarsf.com/",
+      "booking": false,
+      "source": "Specs' Twelve Adler Museum Cafe; Wikipedia",
+      "why": "A North Beach bar down a dead-end alley across Columbus from Vesuvio, open since 1968 and full of things sailors and regulars brought back: whale bones, walrus tusks, flags, and a case of oddities by the door. It is dim and argumentative, the way a bar used to be. Order a beer. Ask about anything on the walls.",
+      "labels": [
+        "cheap",
+        "hiddengem"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Specs_Twelve_Adler_Museum_Cafe_%28August_2020%29_-1%29.jpg/1280px-Specs_Twelve_Adler_Museum_Cafe_%28August_2020%29_-1%29.jpg",
+      "imageSubject": "Specs' Twelve Adler Museum Cafe",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "bourbon-and-branch",
+      "title": "Bourbon & Branch",
+      "emoji": "🥃",
+      "zone": "lower-nob-hill",
+      "coords": [
+        37.78591,
+        -122.41316
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "501 Jones Street, the Tenderloin",
+      "priceNote": "Cocktails ~$18–22",
+      "durationMin": 120,
+      "hours": "Su-We 18:00-24:00; Th-Sa 18:00-02:00",
+      "hoursFrom": "bourbonandbranch.com — 6pm to midnight Sunday to Wednesday, to 2am Thursday to Saturday",
+      "url": "https://www.bourbonandbranch.com/",
+      "booking": "https://www.opentable.com/r/bourbon-and-branch-sf-san-francisco",
+      "bookAhead": true,
+      "source": "Bourbon & Branch; OpenTable",
+      "why": "The speakeasy that started San Francisco's cocktail revival in 2006, behind an unmarked door on a Prohibition-era site. Book the main bar and you are sent a password for the night. The Library, at the back, takes walk-ins. The menu is long and the bartenders will make you something off it if you tell them what you like.",
+      "labels": [
+        "couple",
+        "bookahead"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Tenderloin_Street_Chess%2C_SF%2C_CA%2C_jjron_26.03.2012.jpg/1280px-Tenderloin_Street_Chess%2C_SF%2C_CA%2C_jjron_26.03.2012.jpg",
+      "imageSubject": "Tenderloin, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "the-mint-karaoke",
+      "title": "The Mint",
+      "emoji": "🎤",
+      "zone": "duboce-triangle",
+      "coords": [
+        37.77032,
+        -122.42583
+      ],
+      "coordsFrom": "osm way/252220173 (Nominatim)",
+      "area": "1942 Market Street, near Duboce",
+      "priceNote": "Drinks · a small tip per song",
+      "durationMin": 150,
+      "hours": "Mo 17:00-02:00; We-Fr 17:00-02:00; Sa-Su 16:00-02:00",
+      "hoursFrom": "The Mint — 5pm to 2am, from 4pm at weekends, closed Tuesday",
+      "url": "https://www.instagram.com/themintkaraokelounge/",
+      "booking": false,
+      "source": "The Mint Karaoke Lounge; GayCities",
+      "why": "The city's karaoke bar, singing since 1993. There are no private rooms: you sing to the whole bar from a proper stage, and the whole bar cheers. The book has 25,000 songs. Put your name down early, because by eleven on a Friday the wait is an hour. It is closed on Tuesdays.",
+      "labels": [
+        "cheap"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Duboce-Triangle.jpg/1280px-Duboce-Triangle.jpg",
+      "imageSubject": "Duboce Triangle, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons · Public domain"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "the-patio-palo-alto",
+      "title": "The Patio",
+      "emoji": "🍻",
+      "zone": "palo-alto",
+      "coords": [
+        37.44516,
+        -122.16393
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "412 Emerson Street, downtown Palo Alto",
+      "priceNote": "Cheap",
+      "durationMin": 120,
+      "hoursNote": "Opens at 11am every day and runs late at weekends — check the closing time before a late night",
+      "url": "https://www.thepatiopa.com/",
+      "booking": false,
+      "source": "Yelp; The Patio",
+      "why": "Downtown Palo Alto's outdoor bar: three open-air yards, the longest bar in town, and twenty-odd screens for whatever game is on. There is karaoke and trivia in the week. It is not a cocktail bar and does not pretend to be. It is where the Peninsula goes when it wants a loud night without driving to the city.",
+      "labels": [
+        "cheap"
+      ],
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG/1280px-Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG",
+      "imageSubject": "Palo Alto, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "nightmarket",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "market",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "free",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "chinatown-night-market",
+      "title": "Chinatown Night Market",
+      "emoji": "🏮",
+      "zone": "telegraph-hill",
+      "coords": [
+        37.79426,
+        -122.406
+      ],
+      "coordsFrom": "osm node/6366521236 (Nominatim)",
+      "area": "Grant Avenue and Waverly Place, Chinatown",
+      "price": 0,
+      "priceNote": "Free to walk; food from the stalls",
+      "durationMin": 120,
+      "hoursNote": "Second Friday of the month, May to October, 5 to 9pm — the last of 2026 is 9 October",
+      "url": "https://sf.funcheap.com/event-series/sfs-chinatown-night-market-returns/",
+      "booking": false,
+      "source": "SF Funcheap; San Francisco Chinatown Merchants",
+      "why": "Five blocks of Grant Avenue closed to cars on one Friday a month: street food, lion dancers, beer and wine gardens, and the shops staying open under the lanterns. It runs from five to nine, May to October, and 9 October is the last one this year. Start at the Dragon Gate on Bush and walk north, then finish with a mai tai at Li Po.",
+      "labels": [
+        "free"
+      ],
+      "priceLevel": 0,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Grant_Avenue_SF_4.JPG/1280px-Grant_Avenue_SF_4.JPG",
+      "imageSubject": "Grant Avenue",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "nightmarket",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "market",
+        "free",
+        "shop"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "free",
+        "couple"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "fort-mason-night-market",
+      "title": "Fort Mason Night Market",
+      "emoji": "🛍️",
+      "zone": "cow-hollow",
+      "coords": [
+        37.80672,
+        -122.43181
+      ],
+      "coordsFrom": "osm node/358857198 (Nominatim)",
+      "area": "Fort Mason Center, on the waterfront",
+      "price": 0,
+      "priceNote": "Free to enter",
+      "durationMin": 150,
+      "hoursNote": "One Friday a month, May to December, 5 to 10pm — next on 16 October, 6 November and 18 December",
+      "url": "https://fortmason.org/series/fort-mason-night-market-2026/",
+      "booking": false,
+      "source": "Fort Mason Center; Off the Grid; SF Funcheap",
+      "why": "The old army piers on the Marina waterfront on a Friday night: a hundred-odd stalls of food trucks, makers and vintage, live music, and the Golden Gate going dark at the end of the quay. It is free and runs from five to ten on one Friday a month. The rest of 2026 is 16 October, 6 November and a holiday market on 18 December. Eat from the trucks, then have a drink at The Interval by the gate.",
+      "labels": [
+        "free",
+        "couple"
+      ],
+      "priceLevel": 0,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/FortMasonWharves.JPG/1280px-FortMasonWharves.JPG",
+      "imageSubject": "Fort Mason",
+      "imageKind": "context",
+      "imageCredit": "Original uploader was SuperJumbo at en.wikipedia · CC BY-SA 3.0"
+    },
+    {
+      "type": "latenight",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "restaurant"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "cheap",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "el-farolito",
+      "title": "El Farolito",
+      "emoji": "🌯",
+      "zone": "mission",
+      "coords": [
+        37.75264,
+        -122.41831
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "2779 Mission Street at 24th",
+      "price": 14,
+      "priceNote": "Burritos ~$12–16",
+      "durationMin": 30,
+      "hours": "Mo-Th 10:00-02:45; Fr-Sa 10:00-03:45; Su 10:00-02:45",
+      "hoursFrom": "elfarolitosf.com — daily to 2:45am, to 3:45am Friday and Saturday",
+      "url": "https://elfarolitosf.com/",
+      "booking": false,
+      "source": "El Farolito; Yelp",
+      "why": "The Mission burrito the city argues about, and the answer at two in the morning: open until 2:45 every night and 3:45 on Fridays and Saturdays. Order the super carne asada burrito, or the quesadilla suiza if you know. There are fluorescent lights and a queue out of the door after the bars shut, and it is right by the 24th Street BART.",
+      "labels": [
+        "cheap"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mission_District_San_Francisco.jpg",
+      "imageSubject": "Mission Street",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "latenight",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "bakery",
+        "dessert"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "morning",
+        "cheap",
+        "spontaneous"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "bobs-donuts",
+      "title": "Bob's Donuts",
+      "emoji": "🍩",
+      "zone": "polk-gulch",
+      "coords": [
+        37.79275,
+        -122.42098
+      ],
+      "coordsFrom": "osm node/13551029435 (Nominatim)",
+      "area": "1720 Polk Street, Polk Gulch",
+      "price": 4,
+      "priceNote": "A few dollars",
+      "durationMin": 20,
+      "hours": "24/7",
+      "hoursFrom": "bobsdonutssf.com — open 24 hours on Polk Street",
+      "url": "https://www.bobsdonutssf.com/",
+      "booking": false,
+      "source": "Bob's Donuts; Yelp",
+      "why": "A doughnut shop open twenty-four hours, where the fryers never stop and the apple fritter is the size of your face. It moved a few doors up Polk to 1720 but kept the hours, and at three in the morning it is the only warm, lit room on the street. There is a giant doughnut you can try to eat in under three minutes, if the night has gone that way.",
+      "labels": [
+        "cheap"
+      ],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Bob%27s_Donuts_1621_Polk%2C_2019.jpg/1280px-Bob%27s_Donuts_1621_Polk%2C_2019.jpg",
+      "imageSubject": "Bob's Donuts",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "latenight",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food",
+        "restaurant",
+        "indian"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "cheap"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "zareens-palo-alto",
+      "title": "Zareen's",
+      "emoji": "🍛",
+      "coords": [
+        37.42678,
+        -122.14413
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "365 S California Avenue, Palo Alto",
+      "price": 22,
+      "priceNote": "Mains ~$16–26",
+      "durationMin": 60,
+      "hours": "Mo-Su 11:00-24:00",
+      "hoursFrom": "KQED; zareensrestaurant.com — daily 11am to midnight, takeout only after 11pm",
+      "url": "https://www.zareensrestaurant.com/locations",
+      "booking": false,
+      "source": "KQED; Zareen's",
+      "why": "Pakistani and Indian home cooking on California Avenue, and the rare Palo Alto kitchen still going at midnight, every night. It is the only one of Zareen's three restaurants that stays open late. Order the chicken tikka masala and the chapli kebab. It is takeout only after eleven, so eat in before then.",
+      "labels": [],
+      "hoursChecked": "2026-09-28",
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG/1280px-Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG",
+      "imageSubject": "Palo Alto, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "zone": "palo-alto"
     }
   ]
 }

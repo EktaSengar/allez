@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-13",
+  "generated": "2026-09-28",
   "note": "Journey times are from Gare du Nord or Gare de l'Est unless stated — both are a short walk from home, which is a real advantage. Add ~10 min to reach the station. Check times on sncf-connect.com or transilien.com before you go.",
   "items": [
     {
@@ -36,11 +36,34 @@
       "uniqueness": 5,
       "quality": 5,
       "url": "https://chateaudechantilly.fr/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Ch%C3%A2teau_de_Chantilly_2.jpg/500px-Ch%C3%A2teau_de_Chantilly_2.jpg",
       "imageSubject": "Château de Chantilly",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Gare du Nord to Chantilly-Gouvieux, 25 minutes"
+        },
+        {
+          "emoji": "🏰",
+          "text": "The château and the Musée Condé paintings"
+        },
+        {
+          "emoji": "🐎",
+          "text": "The Great Stables and the horse museum"
+        },
+        {
+          "emoji": "🍦",
+          "text": "Crème Chantilly at the Hameau in the park"
+        },
+        {
+          "emoji": "🚣",
+          "text": "A rowing boat on the Grand Canal"
+        }
+      ],
+      "season": "All year; the park is best from April to October. The château is shut on Tuesdays."
     },
     {
       "id": "reims-champagne",
@@ -78,11 +101,34 @@
       "uniqueness": 5,
       "quality": 5,
       "url": "https://www.reims-tourisme.com/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Exterior_view_of_the_west_facade_of_Notre-Dame_Cathedral_in_Reims.jpg/500px-Exterior_view_of_the_west_facade_of_Notre-Dame_Cathedral_in_Reims.jpg",
       "imageSubject": "Cathédrale Notre-Dame de Reims",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚄",
+          "text": "TGV from Gare de l’Est, 46 minutes"
+        },
+        {
+          "emoji": "⛪",
+          "text": "The cathedral of the coronations, and its Chagall windows"
+        },
+        {
+          "emoji": "🍾",
+          "text": "A cellar tour in the chalk — Taittinger or Ruinart, booked"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "The Palais du Tau next to the cathedral"
+        },
+        {
+          "emoji": "🥂",
+          "text": "A last glass on the Place Drouet-d’Erlon"
+        }
+      ],
+      "season": "All year; the harvest is in September, and the cellars are cool in summer."
     },
     {
       "id": "vaux-le-vicomte",
@@ -125,11 +171,30 @@
       "uniqueness": 5,
       "quality": 5,
       "url": "https://vaux-le-vicomte.com/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/0_Maincy_-_Ch%C3%A2teau_de_Vaux-le-Vicomte_%282%29.JPG/500px-0_Maincy_-_Ch%C3%A2teau_de_Vaux-le-Vicomte_%282%29.JPG",
       "imageSubject": "Château de Vaux-le-Vicomte",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Gare de Lyon to Verneuil-l’Étang and the Châteaubus"
+        },
+        {
+          "emoji": "🏰",
+          "text": "The house, and the dome"
+        },
+        {
+          "emoji": "🌳",
+          "text": "The gardens down to the Hercules statue"
+        },
+        {
+          "emoji": "🕯️",
+          "text": "On candlelight Saturdays, stay after dark for the two thousand candles"
+        }
+      ],
+      "season": "Late March to early November. Candlelight evenings are Saturdays from May to early October."
     },
     {
       "id": "provins",
@@ -165,11 +230,34 @@
       "uniqueness": 5,
       "quality": 4,
       "url": "https://www.provins.net/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Provins_-_Mars_2025.jpg/500px-Provins_-_Mars_2025.jpg",
       "imageSubject": "Provins",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Gare de l’Est to Provins, direct"
+        },
+        {
+          "emoji": "🏯",
+          "text": "The ramparts and the Porte Saint-Jean"
+        },
+        {
+          "emoji": "🕳️",
+          "text": "The underground tunnels, by guided visit"
+        },
+        {
+          "emoji": "🗼",
+          "text": "The Tour César at the top of the town"
+        },
+        {
+          "emoji": "🦅",
+          "text": "The falconry show in season"
+        }
+      ],
+      "season": "April to November for the shows; in June the town holds its medieval festival."
     },
     {
       "id": "auvers-sur-oise",
@@ -211,11 +299,34 @@
       "uniqueness": 5,
       "quality": 5,
       "url": "https://www.auvers-sur-oise.com/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Auvers_town_hall.jpg/500px-Auvers_town_hall.jpg",
       "imageSubject": "Auvers-sur-Oise",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🏠",
+          "text": "The Auberge Ravoux and Van Gogh's attic room"
+        },
+        {
+          "emoji": "⛪",
+          "text": "The church from the painting"
+        },
+        {
+          "emoji": "🌾",
+          "text": "The wheatfield of the crows, above the village"
+        },
+        {
+          "emoji": "🪦",
+          "text": "Vincent and Theo's graves side by side"
+        },
+        {
+          "emoji": "🎨",
+          "text": "Daubigny's house and studio"
+        }
+      ],
+      "season": "April to October, when the Van Gogh house is open. Weekends bring direct trains in season."
     },
     {
       "id": "fontainebleau",
@@ -256,11 +367,30 @@
       "uniqueness": 4,
       "quality": 5,
       "url": "https://www.chateaudefontainebleau.fr/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Ch%C3%A2teau_de_Fontainebleau_%28Fontainebleau%29_edited_%282%29.jpg/500px-Ch%C3%A2teau_de_Fontainebleau_%28Fontainebleau%29_edited_%282%29.jpg",
       "imageSubject": "Château de Fontainebleau",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Gare de Lyon to Fontainebleau-Avon, then bus 1"
+        },
+        {
+          "emoji": "🏰",
+          "text": "The château: the Renaissance gallery of François I"
+        },
+        {
+          "emoji": "🌳",
+          "text": "The Jardin anglais and the carp pond"
+        },
+        {
+          "emoji": "🪨",
+          "text": "The forest after lunch — the Gorges de Franchard or the boulders at Bas-Bréau"
+        }
+      ],
+      "season": "All year; autumn in the forest is the best. The château is shut on Tuesdays."
     },
     {
       "id": "giverny",
@@ -303,11 +433,34 @@
       "uniqueness": 4,
       "quality": 5,
       "url": "https://fondation-monet.com/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DJI_0096dxopb.jpg/500px-DJI_0096dxopb.jpg",
       "imageSubject": "Giverny",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Saint-Lazare to Vernon-Giverny, then the shuttle"
+        },
+        {
+          "emoji": "🌸",
+          "text": "Monet's garden when the gates open"
+        },
+        {
+          "emoji": "🌉",
+          "text": "The water garden and the Japanese bridge"
+        },
+        {
+          "emoji": "🖼️",
+          "text": "The Musée des Impressionnismes next door"
+        },
+        {
+          "emoji": "🚲",
+          "text": "Or hire a bike in Vernon and cycle the path to Giverny"
+        }
+      ],
+      "season": "April to the start of November only. May and June for the flowers; September for the light."
     },
     {
       "id": "versailles",
@@ -343,11 +496,34 @@
       "uniqueness": 3,
       "quality": 5,
       "url": "https://www.chateauversailles.fr/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_083.jpg/500px-Vue_a%C3%A9rienne_du_domaine_de_Versailles_par_ToucanWings_-_Creative_Commons_By_Sa_3.0_-_083.jpg",
       "imageSubject": "Château de Versailles",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "RER C to Versailles-Château"
+        },
+        {
+          "emoji": "🌳",
+          "text": "Straight to the gardens"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "The Grand and Petit Trianon"
+        },
+        {
+          "emoji": "🐑",
+          "text": "Marie-Antoinette's hamlet"
+        },
+        {
+          "emoji": "🏰",
+          "text": "The Hall of Mirrors late in the day, when the queue has gone"
+        }
+      ],
+      "season": "April to October for the fountains and gardens; the palace is shut on Mondays."
     },
     {
       "id": "sceaux",
@@ -389,11 +565,30 @@
       "uniqueness": 4,
       "quality": 4,
       "url": "https://domaine-de-sceaux.hauts-de-seine.fr/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Les_parterres_de_Le_N%C3%B4tre_restitu%C3%A9s_%28Domaine_de_Sceaux%29_%289761188032%29.jpg/500px-Les_parterres_de_Le_N%C3%B4tre_restitu%C3%A9s_%28Domaine_de_Sceaux%29_%289761188032%29.jpg",
       "imageSubject": "Parc de Sceaux",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "RER B to Parc de Sceaux"
+        },
+        {
+          "emoji": "🌸",
+          "text": "The cherry orchard in the Bosquet Nord"
+        },
+        {
+          "emoji": "🌊",
+          "text": "The Grandes Cascades and the Octagon"
+        },
+        {
+          "emoji": "🧺",
+          "text": "Picnic on the lawns"
+        }
+      ],
+      "season": "The first two weeks of April for the cherry blossom; any sunny weekend otherwise."
     },
     {
       "id": "senlis",
@@ -435,11 +630,34 @@
         "chantilly"
       ],
       "url": "https://www.senlis-tourisme.fr/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Senlis_-_general_view_003.jpg/500px-Senlis_-_general_view_003.jpg",
       "imageSubject": "Senlis (Oise)",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Gare du Nord to Chantilly, then the bus"
+        },
+        {
+          "emoji": "⛪",
+          "text": "The cathedral of Notre-Dame"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "The Roman walls and the ruined royal castle"
+        },
+        {
+          "emoji": "🏘️",
+          "text": "The cobbled lanes of the old town"
+        },
+        {
+          "emoji": "🏰",
+          "text": "Back via Chantilly"
+        }
+      ],
+      "season": "All year; very good in autumn."
     },
     {
       "id": "meaux",
@@ -475,11 +693,30 @@
       "uniqueness": 4,
       "quality": 4,
       "url": "https://www.paysdemeaux-tourisme.fr/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Cath%C3%A9drale_Saint-Etienne_de_Meaux..JPG/500px-Cath%C3%A9drale_Saint-Etienne_de_Meaux..JPG",
       "imageSubject": "Cathédrale Saint-Étienne de Meaux",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Gare de l’Est, 25 minutes"
+        },
+        {
+          "emoji": "⛪",
+          "text": "The cathedral and the bishop’s palace"
+        },
+        {
+          "emoji": "🧀",
+          "text": "Brie de Meaux at a cheese shop"
+        },
+        {
+          "emoji": "🪖",
+          "text": "The Musée de la Grande Guerre"
+        }
+      ],
+      "season": "All year."
     },
     {
       "id": "saint-germain-en-laye",
@@ -516,11 +753,30 @@
       "uniqueness": 3,
       "quality": 4,
       "url": "https://www.seine-saintgermain.fr/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Ch%C3%A2teau_de_Saint-Germain-en-Laye.jpg/500px-Ch%C3%A2teau_de_Saint-Germain-en-Laye.jpg",
       "imageSubject": "Château de Saint-Germain-en-Laye",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚇",
+          "text": "RER A to the end of the line"
+        },
+        {
+          "emoji": "🏰",
+          "text": "The château and the national archaeology museum"
+        },
+        {
+          "emoji": "🌅",
+          "text": "The Grande Terrasse, looking back over Paris"
+        },
+        {
+          "emoji": "🌳",
+          "text": "The forest behind"
+        }
+      ],
+      "season": "All year; sunset from the terrace is the reason."
     },
     {
       "id": "chartres",
@@ -558,11 +814,348 @@
       "uniqueness": 4,
       "quality": 5,
       "url": "https://www.chartres-tourisme.com/",
-      "lastVerified": "2026-08-13",
+      "lastVerified": "2026-09-28",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Cath%C3%A9drale_Notre_Dame_-_Chartres_%28FR28%29_-_2021-03-14_-_4.jpg/500px-Cath%C3%A9drale_Notre_Dame_-_Chartres_%28FR28%29_-_2021-03-14_-_4.jpg",
       "imageSubject": "Cathédrale Notre-Dame de Chartres",
       "imageCredit": "Wikimedia Commons",
-      "imageKind": "subject"
+      "imageKind": "subject",
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Montparnasse to Chartres"
+        },
+        {
+          "emoji": "⛪",
+          "text": "The cathedral: the blue windows and the labyrinth on the floor"
+        },
+        {
+          "emoji": "🏘️",
+          "text": "Down to the lower town and the river Eure"
+        },
+        {
+          "emoji": "💡",
+          "text": "Stay for Chartres en Lumières after dark, April to early January"
+        }
+      ],
+      "season": "All year; the light shows run from April into winter."
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "couple",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "loire-chateaux",
+      "title": "The Loire châteaux: Chenonceau and Amboise",
+      "emoji": "🏰",
+      "minutesFromHome": 75,
+      "durationMin": 660,
+      "priceNote": "TGV ~€40–80 return; château tickets ~€17–19 each",
+      "transit": "TGV from Montparnasse to Saint-Pierre-des-Corps, about 1 h, then the TER or a hire car",
+      "why": "The Loire valley is an hour from Montparnasse, and two châteaux make a full day: Chenonceau, built across the river Cher on arches, the most beautiful house in France; and Amboise, above the town, where Leonardo da Vinci spent his last years at the manor of Clos Lucé down the street. Chambord, the biggest, is better as a second day.",
+      "labels": [
+        "weekend",
+        "couple",
+        "dontmiss"
+      ],
+      "url": "https://www.loire-chateaux.org/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 3,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚄",
+          "text": "TGV to Saint-Pierre-des-Corps; pick up a car or the train to Chenonceaux"
+        },
+        {
+          "emoji": "🏰",
+          "text": "Chenonceau when it opens — walk the long gallery over the river"
+        },
+        {
+          "emoji": "🍷",
+          "text": "Lunch in Amboise, with a glass of Vouvray"
+        },
+        {
+          "emoji": "🏯",
+          "text": "Château d’Amboise and the chapel where Leonardo is buried"
+        },
+        {
+          "emoji": "💡",
+          "text": "Clos Lucé, his last house, with models of his machines in the garden"
+        }
+      ],
+      "season": "April to October; Chenonceau is lovely in the autumn mist. Book trains early for the cheap fares.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Chenonceau-20050320.jpg/1280px-Chenonceau-20050320.jpg",
+      "imageSubject": "Château de Chenonceau",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons · CC BY-SA 3.0"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "couple",
+        "morning",
+        "evening"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "mont-saint-michel",
+      "title": "Mont-Saint-Michel",
+      "emoji": "⛪",
+      "minutesFromHome": 240,
+      "durationMin": 540,
+      "priceNote": "The abbey ~€13; stay the night on or near the mount",
+      "transit": "TGV to Rennes, about 1 h 30, then the direct coach, about 1 h 10 — a weekend",
+      "why": "An abbey on a rock in a bay whose tide comes in, as Victor Hugo said, at the speed of a galloping horse. By day the one street is a crush; the trick is to sleep there, or nearby, and see it at dusk and dawn with the day-trippers gone. Walk out across the sands only with a certified guide: the quicksand and the tide are real.",
+      "labels": [
+        "weekend",
+        "couple",
+        "dontmiss"
+      ],
+      "url": "https://www.abbaye-mont-saint-michel.fr/en",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 3,
+      "booking": "https://www.abbaye-mont-saint-michel.fr/en",
+      "stops": [
+        {
+          "emoji": "🚄",
+          "text": "TGV to Rennes and the coach to the mount"
+        },
+        {
+          "emoji": "⛪",
+          "text": "The abbey at the top, and the cloister hanging over the bay"
+        },
+        {
+          "emoji": "🍳",
+          "text": "An omelette at La Mère Poulard, if you must"
+        },
+        {
+          "emoji": "🌅",
+          "text": "The mount at dusk from the causeway, when the lights come on"
+        },
+        {
+          "emoji": "👣",
+          "text": "Next morning, a guided walk across the bay at low tide"
+        }
+      ],
+      "season": "All year. The spring and autumn equinox tides are the most dramatic; winter is empty and wild.",
+      "overnight": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Mont_St_Michel_in_the_afternoon.jpg/1280px-Mont_St_Michel_in_the_afternoon.jpg",
+      "imageSubject": "Mont-Saint-Michel",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "outdoors",
+        "couple",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "etretat",
+      "title": "Étretat and the Alabaster Coast",
+      "emoji": "🌊",
+      "minutesFromHome": 150,
+      "durationMin": 660,
+      "priceNote": "Train ~€40–70 return; the cliffs are free",
+      "transit": "Train from Saint-Lazare to Le Havre, about 2 h, then the bus, about 1 h",
+      "why": "The white chalk cliffs Monet painted over and over: a natural arch standing in the sea, a needle of rock beside it, and cliff-top paths on both sides of a pebble beach. Walk up the Falaise d'Aval to look down on the arch, then across to the chapel on the Falaise d'Amont. Pair it with Le Havre, the concrete city Auguste Perret rebuilt, which is a World Heritage site.",
+      "labels": [
+        "weekend",
+        "couple",
+        "outdoor"
+      ],
+      "url": "https://www.lehavre-etretat-tourisme.com/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 3,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Train to Le Havre, then the bus along the coast"
+        },
+        {
+          "emoji": "🧗",
+          "text": "Up the Falaise d'Aval to the arch and the Aiguille"
+        },
+        {
+          "emoji": "⛪",
+          "text": "Across the beach and up the Falaise d'Amont to the chapel"
+        },
+        {
+          "emoji": "🦪",
+          "text": "Moules or oysters on the seafront"
+        },
+        {
+          "emoji": "🏙️",
+          "text": "Le Havre on the way home: the Perret church of Saint-Joseph and the MuMa's Impressionists"
+        }
+      ],
+      "season": "April to October. Check the tides: some of the beach walks are cut off at high water.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Vue_d%27%C3%89tretat.jpg/1280px-Vue_d%27%C3%89tretat.jpg",
+      "imageSubject": "Étretat",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture",
+        "food"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "food",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "lille",
+      "title": "Lille",
+      "emoji": "🍺",
+      "minutesFromHome": 65,
+      "durationMin": 600,
+      "priceNote": "TGV ~€30–70 return",
+      "transit": "TGV from Gare du Nord, about 1 h",
+      "why": "A Flemish city an hour north, and a different country in all but name: gabled brick houses, beer rather than wine, waffles, and a Grand'Place ringed with baroque. The Palais des Beaux-Arts is one of the best museums in France outside Paris. And twenty minutes away by tram, La Piscine in Roubaix is an art museum inside an Art Deco swimming pool.",
+      "labels": [
+        "weekend"
+      ],
+      "url": "https://www.lilletourism.com/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚄",
+          "text": "TGV to Lille-Flandres"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "The Grand'Place and the Vieille Bourse courtyard of second-hand booksellers"
+        },
+        {
+          "emoji": "🧇",
+          "text": "Méert's filled waffles, since 1761"
+        },
+        {
+          "emoji": "🖼️",
+          "text": "The Palais des Beaux-Arts"
+        },
+        {
+          "emoji": "🏊",
+          "text": "La Piscine in Roubaix by tram — the museum in a swimming pool"
+        }
+      ],
+      "season": "All year; the Braderie, Europe's biggest flea market, fills the city on the first weekend of September.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Lille_vue_gd_place.JPG/1280px-Lille_vue_gd_place.JPG",
+      "imageSubject": "Grand-Place de Lille",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "categories": [
+        "daytrip",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "culture",
+        "morning",
+        "afternoon"
+      ],
+      "lastVerified": "2026-09-28",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "rouen",
+      "title": "Rouen",
+      "emoji": "⛪",
+      "minutesFromHome": 75,
+      "durationMin": 540,
+      "priceNote": "~€25–40 return",
+      "transit": "Train from Saint-Lazare, about 1 h 15",
+      "why": "The Norman capital, an hour down the Seine: a whole old town of timber-framed houses, the cathedral Monet painted thirty times at different hours of the day, and the square where Joan of Arc was burned in 1431. It is the best-preserved medieval city centre within easy reach of Paris, and the Musée des Beaux-Arts is free.",
+      "labels": [
+        "weekend"
+      ],
+      "url": "https://www.rouentourisme.com/",
+      "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
+      "priceLevel": 2,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🚆",
+          "text": "Train from Saint-Lazare"
+        },
+        {
+          "emoji": "⛪",
+          "text": "The cathedral — find the spot Monet painted it from"
+        },
+        {
+          "emoji": "🕰️",
+          "text": "Rue du Gros-Horloge, under the great clock"
+        },
+        {
+          "emoji": "🔥",
+          "text": "Place du Vieux-Marché and the modern church of Joan of Arc"
+        },
+        {
+          "emoji": "🖼️",
+          "text": "The Musée des Beaux-Arts, free, with a Monet cathedral inside"
+        }
+      ],
+      "season": "All year; the cathedral is lit with projections on summer nights.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Rouen_Cathedral_as_seen_from_Gros_Horloge_140215_4.jpg/1280px-Rouen_Cathedral_as_seen_from_Gros_Horloge_140215_4.jpg",
+      "imageSubject": "Rouen Cathedral",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }
