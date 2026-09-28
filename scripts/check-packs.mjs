@@ -402,6 +402,10 @@ async function checkFamilyFields(id) {
   const items = [...all, ...discovered];
   const list = a => a.slice(0, 5).map(i => i.title || i.id).join(', ');
 
+  const seen = new Map(); const dupes = [];
+  for (const i of all) { if (seen.has(i.id)) dupes.push(i); seen.set(i.id, true); }
+  want(id, dupes.length === 0, `no two records share an id${dupes.length ? ` — ${list(dupes)}` : ''}`);
+
   const withDogs = items.filter(i => 'dogs' in i);
   const badDogs = withDogs.filter(i => !DOGS.includes(i.dogs));
   want(id, badDogs.length === 0, `every \`dogs\` is one of inside, patio, trail-leash, trail-offleash or false${badDogs.length ? ` — ${list(badDogs)}` : ''}`);

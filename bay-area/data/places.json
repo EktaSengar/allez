@@ -1012,6 +1012,110 @@
       "hoursChecked": "2026-09-28",
       "booking": "https://www.paloaltozoo.org/Visit",
       "priceLevel": 1
+    },
+    {
+      "type": "park",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "outdoor"
+      ],
+      "price": 0,
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "booking": false,
+      "lastVerified": "2026-09-28",
+      "hoursChecked": "2026-09-28",
+      "id": "bedwell-bayfront-park",
+      "title": "Bedwell Bayfront Park",
+      "emoji": "🌇",
+      "categories": [
+        "outdoors",
+        "park",
+        "free"
+      ],
+      "zone": "menlo-park",
+      "area": "1600 Marsh Road",
+      "durationMin": 75,
+      "why": "A flat 160-acre park on the Bay's edge, with a 2.3-mile loop of the Bay Trail through meadows and salt marsh. It's the easy sunset walk on this side of the Peninsula, and the gates stay open until sunset (as late as 9pm in midsummer). Dogs are welcome on a leash. It's one of the few nearby places where they are.",
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "outdoors",
+        "relax",
+        "family"
+      ],
+      "setting": [
+        "sunset"
+      ],
+      "dogs": "trail-leash",
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "Pets on leash and under full control at all times (City of Menlo Park)",
+      "quality": 4,
+      "uniqueness": 3,
+      "url": "https://www.menlopark.gov/Parks/Bedwell-Bayfront-Park",
+      "source": "City of Menlo Park; position from OpenStreetMap way/28570810",
+      "coords": [
+        37.49203,
+        -122.17283
+      ],
+      "coordsFrom": "osm way/28570810",
+      "hours": "07:00-sunset",
+      "hoursFrom": "menlopark.gov — gates open at 7am, closing from 5:30pm in December to 9pm in June and July",
+      "hoursNote": "Gates open at 7am and close at sunset, between 5:30pm in December and 9pm in midsummer"
+    },
+    {
+      "type": "park",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "outdoor"
+      ],
+      "price": 0,
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "booking": false,
+      "lastVerified": "2026-09-28",
+      "id": "mitchell-park-magical-bridge",
+      "title": "Mitchell Park and the Magical Bridge playground",
+      "emoji": "🛝",
+      "categories": [
+        "outdoors",
+        "park",
+        "family",
+        "free"
+      ],
+      "zone": "palo-alto",
+      "area": "600 East Meadow Drive",
+      "durationMin": 90,
+      "why": "Palo Alto's biggest park has the Magical Bridge, an inclusive playground built so children of every ability can play together. Beside it are picnic areas, lawns and a renovated fenced dog park with separate sides for small dogs and mixed sizes. So a family with a dog can do the whole outing here.",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "outdoors",
+        "family",
+        "kids"
+      ],
+      "setting": [
+        "playground",
+        "picnic"
+      ],
+      "kids": true,
+      "dogs": "trail-leash",
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "Dogs on a leash in the park (City of Palo Alto, code 6.16.100); the fenced dog park is the off-leash part",
+      "quality": 4,
+      "uniqueness": 3,
+      "url": "https://www.paloalto.gov/Departments/Community-Services/Parks-Open-Space-Golf-Division/Neighborhood-Parks/Mitchell-Park",
+      "source": "City of Palo Alto; position from OpenStreetMap way/26662981",
+      "coords": [
+        37.4211,
+        -122.11474
+      ],
+      "coordsFrom": "osm way/26662981",
+      "hoursNote": "Open daily; the playground's own hours are on the city's park page"
     }
   ]
 }
