@@ -10,8 +10,12 @@
    So the choosing lives here, beside Rank and Near, and knows nothing
    about the page. The slot tests, the weekly rotation and the five picks
    are the ones the tab always used — moved, not rewritten, and held to
-   the same rendered output by scripts/check-views.mjs. What is new is
-   only what each stop carries.
+   the same rendered output by scripts/check-views.mjs.
+
+   What each stop then carried showed two things wrong with the choosing
+   itself: stops planned into slots they are shut for, and days that
+   crossed the region and came straight back. So the day plan now reads
+   two of its own answers — see `planDay`. The picks are unchanged.
 
      Plan.weekend(pool, ctx)   both days and the five picks
      Plan.day(pool, ctx)       one day, for `ctx.date`
@@ -95,17 +99,38 @@ const Plan = (() => {
 
      Only genuine contenders rotate — within four points of the leader is
      a coin toss the ranking has no opinion about, and a clear winner
-     stays one every week. */
+     stays one every week.
+
+     `cost` is taken off each score before the contenders are drawn up —
+     the leg from the stop before, below — so a far leader can stop being
+     the leader and a close runner-up can become a contender. The turn is
+     still the week's and nothing else: the day's earlier stops are chosen
+     the same way from the same date, so the plan is one plan from Monday
+     to Sunday however often it is drawn.
+
+     `ranked` arrives best first and a cost only ever takes away, so once
+     a score is more than four points under the best one after costs,
+     nothing further down can be a contender and it is not scored. That
+     makes this cheaper than it was before it charged anything — it used
+     to score every candidate to find the same few. */
 
   const WEEK_MS = 604800000;
   const weekIndex = iso => Math.floor(Date.parse(iso + 'T12:00:00') / WEEK_MS);
   const CONTENDER = 4;
 
-  function rotate(ranked, iso, ctx) {
+  function rotate(ranked, iso, ctx, cost = () => 0) {
     if (ranked.length < 2) return ranked[0] || null;
-    const lead = Rank.score(ranked[0], ctx);
-    const near = ranked.filter(i => lead - Rank.score(i, ctx) <= CONTENDER).slice(0, 6);
-    return near[weekIndex(iso) % near.length];
+    const scored = [];
+    let lead = -Infinity;
+    for (const i of ranked) {
+      const raw = Rank.score(i, ctx);
+      if (raw < lead - CONTENDER) break;
+      const s = raw - cost(i);
+      scored.push({ i, s });
+      if (s > lead) lead = s;
+    }
+    const near = scored.filter(x => lead - x.s <= CONTENDER).sort((a, b) => b.s - a.s).slice(0, 6);
+    return near[weekIndex(iso) % near.length].i;
   }
 
   /* ---------- how far from the stop before ----------
@@ -125,6 +150,30 @@ const Plan = (() => {
     return first ? (item.minutesFromHome ?? null) : null;
   }
 
+  /* ---------- a day that does not zig-zag ----------
+
+     Each slot used to take the top of its own ranking with no idea where
+     the stop before it was, and that ranking measures distance from home
+     through a curve that flattens past half an hour — it can barely tell
+     a thirty-minute trip from an hour's drive. From Palo Alto one Sunday
+     went to Fort Mason for coffee (63 min) and straight back to Stanford
+     for the afternoon (64 min).
+
+     So a leg past half an hour costs a point for every three minutes
+     over, charged in `rotate` before the contenders are drawn up. Three
+     is what a reader's own stated reach costs in scoring.js. Unlike that
+     one it is not capped: that is a preference about the whole site, and
+     this is time actually spent getting somewhere on the day. An hour
+     away costs ten, so it must beat the best stop nearby by six points
+     just to be in the rotation — Fleet Week can, a coffee cannot — and a
+     stop that does win is where the next leg is measured from, so the
+     evening stays in the city instead of driving back for dinner.
+
+     Inside half an hour nothing moves, so the rotation keeps its turn,
+     and an unknown leg costs nothing: not knowing is not far. */
+  const LEG_FREE = 30, LEG_RATE = 3;
+  const legCost = m => (Number.isFinite(m) && m > LEG_FREE ? (m - LEG_FREE) / LEG_RATE : 0);
+
   /* ---------- when it is open that day ----------
 
      From the record's own hours where it has readable ones, from its start
@@ -134,8 +183,13 @@ const Plan = (() => {
      answer the reader can act on.
 
      `fits` is whether the opening covers enough of the slot to go: an
-     hour, or the whole visit if that is shorter. Reported, not enforced —
-     the slot tests above are what choose. */
+     hour, or the whole visit if that is shorter. It began as a report,
+     and the report showed the slot tests putting things where they
+     cannot happen — "Saturday morning downtown", which starts at 08:30,
+     filling a Saturday afternoon. So `planDay` now skips a candidate whose
+     block says `false`. Only `false`: `null` means there were no hours to
+     read and no start time, and "we cannot tell" is not "shut" — the rule
+     `Rank.isOpenOn` keeps for whole days. */
   const hhmm = m => `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
   const toMin = t => { const m = /^(\d{1,2}):(\d{2})$/.exec(t || ''); return m ? +m[1] * 60 + +m[2] : null; };
 
@@ -208,7 +262,16 @@ const Plan = (() => {
 
   /* ---------- one day ----------
 
-     `planned` is shared across a weekend so Sunday never repeats Saturday. */
+     `planned` is shared across a weekend so Sunday never repeats Saturday.
+
+     The slots are filled in order, and each reads the one before it. A
+     candidate must be open that day, not planned or done already, the
+     kind of thing the slot is for, and not shut for the slot — the open
+     block, tested last because it costs the most to work out. What
+     passes is ranked as everywhere else on the site, less the cost of
+     its leg from the stop before, and rotated by the week. So the leg a
+     stop reports is the leg it was chosen on, and a slot nothing fits is
+     left empty rather than filled with something shut. */
   function planDay(pool, ctx, iso, planned) {
     const c = dayCtx(ctx, iso);
     const done = ctx.done || (() => false);
@@ -217,13 +280,16 @@ const Plan = (() => {
 
     for (const s of SLOTS) {
       const fits = FITS[s.slot];
+      const when = new Date(`${iso}T${hhmm(s.from)}:00`), first = !stops.length;
+      const leg = i => legMinutes(prev, i, when, first);
       const ranked = Rank.rank(pool, c, i =>
-        Rank.isOpenOn(i, iso) && !planned.has(i.id) && !done(i.id) && fits(i));
-      const item = rotate(ranked, iso, c);
+        Rank.isOpenOn(i, iso) && !planned.has(i.id) && !done(i.id) && fits(i) &&
+        openBlock(i, iso, s).fits !== false);
+      const item = rotate(ranked, iso, c, i => legCost(leg(i)));
       if (!item) continue;
       planned.add(item.id);
 
-      const minutes = legMinutes(prev, item, new Date(`${iso}T${hhmm(s.from)}:00`), !stops.length);
+      const minutes = leg(item);
       const spend = spendOf(item);
       stops.push({
         slot: s.slot,
