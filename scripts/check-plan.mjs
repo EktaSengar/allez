@@ -30,7 +30,7 @@ import { cityIds, dataDir, loadModuleFor, readDiscovered } from './shim.mjs';
 
 const VERBOSE = process.argv.includes('--verbose');
 const FILES = ['events', 'places', 'nightlife', 'sports', 'food', 'itineraries', 'daytrips',
-               'civic', 'notable', 'editorial', 'notes', 'events-city', 'practices', 'conferences'];
+               'civic', 'notable', 'editorial', 'notes', 'events-city', 'practices', 'regulars', 'conferences'];
 /* A Wednesday, well inside every city's data, with a weekend that is not
    a holiday anywhere. */
 const DATE = '2026-09-16';

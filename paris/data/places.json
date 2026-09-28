@@ -1863,7 +1863,12 @@
         48.85485,
         2.35411
       ],
-      "coordsFrom": "nominatim"
+      "coordsFrom": "nominatim",
+      "group": "taste",
+      "rhythm": "anytime",
+      "commitment": "book",
+      "cadence": "Classes most days of the week",
+      "firstStep": "Book a single class — a fortnight ahead for weekends"
     },
     {
       "id": "studio-des-parfums",
@@ -1914,7 +1919,12 @@
         48.8546,
         2.3572
       ],
-      "coordsFrom": "arr-centroid"
+      "coordsFrom": "arr-centroid",
+      "group": "make",
+      "rhythm": "anytime",
+      "commitment": "book",
+      "cadence": "Sessions through the week",
+      "firstStep": "Book a session; your formula is kept so you can come back to it"
     },
     {
       "id": "o-chateau-wine",
@@ -1963,7 +1973,12 @@
         48.86433,
         2.34421
       ],
-      "coordsFrom": "nominatim"
+      "coordsFrom": "nominatim",
+      "group": "taste",
+      "rhythm": "anytime",
+      "commitment": "book",
+      "cadence": "Tastings every day",
+      "firstStep": "Start with the introduction to French wine"
     },
     {
       "id": "ceramics-workshop-paris",
@@ -2013,7 +2028,12 @@
         48.8578,
         2.3792
       ],
-      "coordsFrom": "arr-centroid"
+      "coordsFrom": "arr-centroid",
+      "group": "make",
+      "rhythm": "anytime",
+      "commitment": "book",
+      "cadence": "Tasters most weekends",
+      "firstStep": "Book a two- or three-hour wheel taster"
     },
     {
       "id": "la-chapelle-tamil-quarter",
@@ -2652,7 +2672,12 @@
         48.84624,
         2.35134
       ],
-      "coordsFrom": "nominatim"
+      "coordsFrom": "nominatim",
+      "group": "taste",
+      "rhythm": "anytime",
+      "commitment": "book",
+      "cadence": "Classes through the week",
+      "firstStep": "Book the long format, with the market"
     },
     {
       "id": "cook-n-with-class",
@@ -2694,7 +2719,12 @@
         48.89236,
         2.34726
       ],
-      "coordsFrom": "nominatim"
+      "coordsFrom": "nominatim",
+      "group": "taste",
+      "rhythm": "anytime",
+      "commitment": "book",
+      "cadence": "Classes through the week",
+      "firstStep": "Book the pastry class first"
     },
     {
       "id": "cordon-bleu-workshops",
@@ -2736,7 +2766,12 @@
         48.84041,
         2.27219
       ],
-      "coordsFrom": "nominatim"
+      "coordsFrom": "nominatim",
+      "group": "taste",
+      "rhythm": "anytime",
+      "commitment": "book",
+      "cadence": "Public workshops through the year",
+      "firstStep": "Check the public schedule, then book a single workshop"
     },
     {
       "id": "impro-academy",
@@ -2779,7 +2814,12 @@
         48.86942,
         2.3511
       ],
-      "coordsFrom": "nominatim"
+      "coordsFrom": "nominatim",
+      "group": "stage",
+      "rhythm": "weekly",
+      "commitment": "term",
+      "cadence": "One night a week, for twelve weeks",
+      "firstStep": "Trial classes on 8 and 15 October (€30)"
     },
     {
       "id": "french-english-theatre-workshop",
@@ -2827,7 +2867,12 @@
         48.83531,
         2.3488
       ],
-      "coordsFrom": "nominatim"
+      "coordsFrom": "nominatim",
+      "group": "stage",
+      "rhythm": "weekly",
+      "commitment": "term",
+      "cadence": "Tuesdays or Thursdays",
+      "firstStep": "Twelve evenings for €150 — B2 in both languages"
     },
     {
       "id": "paris-choral-society",
@@ -2872,7 +2917,12 @@
         48.86751,
         2.30094
       ],
-      "coordsFrom": "nominatim"
+      "coordsFrom": "nominatim",
+      "group": "sing",
+      "rhythm": "weekly",
+      "commitment": "term",
+      "cadence": "Mondays, 7.30–9.45pm",
+      "firstStep": "Audition in September or January"
     }
   ]
 }

@@ -175,7 +175,12 @@
       "imageCredit": "Wikimedia Commons",
       "startTime": "19:15",
       "priceLevel": 1,
-      "booking": false
+      "booking": false,
+      "group": "move",
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Fridays · a lesson, then dancing until late",
+      "firstStep": "$15 at the door — no partner needed"
     },
     {
       "id": "palo-alto-art-center",
@@ -225,7 +230,12 @@
       "hoursFrom": "paloalto.gov — the lobby and gallery",
       "hoursChecked": "2026-09-25",
       "booking": "https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Make-Art/Adults",
-      "priceLevel": 4
+      "priceLevel": 4,
+      "group": "make",
+      "rhythm": "weekly",
+      "commitment": "term",
+      "cadence": "Weekly classes by the season",
+      "firstStep": "Register for the season through the City of Palo Alto"
     },
     {
       "id": "adventure-cat-sunset-sail",
