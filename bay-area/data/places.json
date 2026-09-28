@@ -966,6 +966,52 @@
       "durationMin": 45,
       "priceLevel": 1,
       "booking": false
+    },
+    {
+      "id": "junior-museum-zoo",
+      "title": "Palo Alto Junior Museum & Zoo",
+      "emoji": "🦎",
+      "type": "museum",
+      "provenance": "editorial",
+      "categories": [
+        "museum",
+        "kids",
+        "family"
+      ],
+      "zone": "palo-alto",
+      "area": "1451 Middlefield Road",
+      "durationMin": 120,
+      "why": "The city's science museum and small zoo, built for young children: hands-on exhibits, and animals you can watch up close. Book a timed entry online first, because they can't guarantee walk-ins. Parking is free in the lot and on the street nearby.",
+      "goodFor": [
+        "afternoon",
+        "morning",
+        "indoor",
+        "family",
+        "kids"
+      ],
+      "kids": true,
+      "indoor": true,
+      "bookAhead": true,
+      "labels": [
+        "bookahead"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "price": 16,
+      "priceNote": "$16 weekday mornings and weekends, $12 weekday afternoons; $3 income-eligible; under 12 months free",
+      "url": "https://www.paloaltozoo.org/Visit",
+      "source": "paloaltozoo.org/Visit; position from OpenStreetMap way/231246595",
+      "coords": [
+        37.44343,
+        -122.14443
+      ],
+      "coordsFrom": "osm way/231246595",
+      "lastVerified": "2026-09-28",
+      "hours": "Tu-Su 10:00-17:00",
+      "hoursFrom": "paloaltozoo.org — open Tuesday to Sunday, 10am to 5pm",
+      "hoursChecked": "2026-09-28",
+      "booking": "https://www.paloaltozoo.org/Visit",
+      "priceLevel": 1
     }
   ]
 }

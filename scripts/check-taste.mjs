@@ -52,6 +52,13 @@ same(Store.weigh({ ratings: { a: 'good' }, prefs: { novelty: 0 } }, items, T),
 same(Store.weigh({ prefs: { interests: ['Jazz'], company: 'couple', budget: 2, reach: 25, diet: 'vegetarian', bogus: 1 } }, items, T),
      { jazz: 3, 'cat:jazz': 3, 'good:jazz': 3, 'good:couple': 2, 'good:romantic': 2,
        'diet:vegetarian': 1, '@diet': 1, '@budget': 2, '@reach': 25 }, 'stated preferences, cleaned');
+/* A family with a dog is two constraints. A list of company weighs every
+   word in it; the dog and the child's age are constraints, not weights. */
+same(Store.weigh({ prefs: { company: ['family', 'bogus', 'family'], dog: true, kidAge: 6 } }, items, T),
+     { 'good:family': 2, 'good:kids': 2 }, 'company as a list, dog and kidAge weigh nothing');
+same(Store.setPrefs({ company: ['family'], dog: 'yes', kidAge: 40 }), { company: ['family'] }, 'a dog is true or nothing; an age is a child\'s');
+same(Store.setPrefs({ company: ['crowd'], dog: true, kidAge: 4 }), { dog: true, kidAge: 4 }, 'a list of nothing understood is dropped');
+
 same(Store.setPrefs({ budget: 9, company: 'crowd', reach: -3, interests: [] }), {}, 'nonsense is dropped, not stored');
 
 /* A store written before ratings carried dates is dated on load, and

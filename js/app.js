@@ -1221,6 +1221,9 @@ const App = (() => {
      retrieval call so an exclusion means the same thing everywhere. */
   const notWanted = i => Store.rating(i.id) === 'never';
   const spent     = i => notWanted(i) || Store.isDone(i.id);
+  /* Eat and the weekend also honour who is coming: with a dog, only
+     places that say they take one (Rank.suits). Nothing set, nothing out. */
+  const notSuiting = i => notWanted(i) || !Rank.suits(i, Store.prefs());
 
   /* Best answer of a kind within reach — which since the gate went in is
      the same thing as the nearest one. This used to weigh merit against
@@ -1955,7 +1958,8 @@ const App = (() => {
       rank: CTX,
       weather: WX ? WX.byDate : null,
       done: Store.isDone,
-      rating: Store.rating
+      rating: Store.rating,
+      prefs: Store.prefs()
     });
     const best = plan.picks.find(p => p.key === 'best');
     const rest = plan.picks.filter(p => p.key !== 'best');
@@ -2238,11 +2242,11 @@ const App = (() => {
          went out to thirty minutes for a coffee and came back with the
          5th's cafés. Where the guide is thin the honest answer is a short
          list plus the map strip below it, not a wider circle. */
-      rings: [10, 18], want: 8, limit: 12, exclude: notWanted
+      rings: [10, 18], want: 8, limit: 12, exclude: notSuiting
     });
 
     /* Nothing is lost by drawing a radius — the classics move here. */
-    const further = Near.beyond(Near.KIND[type], radius, { exclude: notWanted });
+    const further = Near.beyond(Near.KIND[type], radius, { exclude: notSuiting });
 
     if (!items.length && !further.length) return `<p class="empty">Nothing here yet.</p>`;
 

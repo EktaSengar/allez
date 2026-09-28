@@ -49,7 +49,10 @@
       "hoursChecked": "2026-09-25",
       "booking": false,
       "priceLevel": 0,
-      "hoursNote": "Sunrise to sunset"
+      "hoursNote": "Sunrise to sunset",
+      "dogs": false,
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "No dogs on the Dish trail, service animals excepted (Stanford)"
     },
     {
       "type": "hike",
@@ -67,7 +70,8 @@
         "morning",
         "weekend",
         "outdoors",
-        "sport"
+        "sport",
+        "family"
       ],
       "lastVerified": "2026-09-25",
       "zone": "palo-alto",
@@ -100,7 +104,10 @@
       "hoursChecked": "2026-09-25",
       "booking": false,
       "priceLevel": 0,
-      "hoursNote": "8am to sunset"
+      "hoursNote": "8am to sunset",
+      "dogs": "trail-leash",
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "On a leash, under physical control (City of Palo Alto)"
     },
     {
       "type": "hike",
@@ -149,7 +156,10 @@
       "hoursChecked": "2026-09-25",
       "booking": false,
       "priceLevel": 1,
-      "hoursNote": "8am to sunset"
+      "hoursNote": "8am to sunset",
+      "dogs": false,
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "Dogs on weekdays only — not on weekends or city holidays (City of Palo Alto, Municipal Code 22.04.150)"
     },
     {
       "type": "hike",
@@ -2283,6 +2293,112 @@
       "imageSubject": "California Memorial Stadium",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "outdoor"
+      ],
+      "price": 0,
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "booking": false,
+      "lastVerified": "2026-09-28",
+      "hoursChecked": "2026-09-28",
+      "id": "hike-windy-hill",
+      "title": "Windy Hill",
+      "emoji": "🌅",
+      "zone": "menlo-park",
+      "area": "Portola Road lot, Portola Valley · Spring Ridge lot on Skyline Boulevard for the top",
+      "durationMin": 150,
+      "why": "A grassy ridge above Portola Valley with a 360-degree summit: the Bay on one side, the Pacific on the other, and no trees between you and the sunset. Picnic tables sit by the Spring Ridge car park, so it works for a family evening as well as a hike. Dogs are welcome on a short leash, but only on the marked trails.",
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "outdoors",
+        "sport",
+        "family"
+      ],
+      "setting": [
+        "sunset",
+        "picnic"
+      ],
+      "kids": true,
+      "dogs": "trail-leash",
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "Leash of 6 ft or less, and only on Spring Ridge, Betsy Crowder, Sequoias, Eagle, Meadow, Hamms Gulch and Anniversary trails (Midpen)",
+      "quality": 4.5,
+      "uniqueness": 4,
+      "url": "https://www.openspace.org/preserves/windy-hill",
+      "source": "Midpen (openspace.org); preserve position from OpenStreetMap relation/193017",
+      "coords": [
+        37.36078,
+        -122.23664
+      ],
+      "coordsFrom": "osm relation/193017 (preserve centre)",
+      "hours": "sunrise-sunset",
+      "hoursFrom": "openspace.org — a half-hour before sunrise to a half-hour after sunset",
+      "hoursNote": "Half an hour before sunrise until half an hour after sunset"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "outdoor"
+      ],
+      "price": 0,
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "booking": false,
+      "lastVerified": "2026-09-28",
+      "hoursChecked": "2026-09-28",
+      "id": "hike-pulgas-ridge",
+      "title": "Pulgas Ridge",
+      "emoji": "🐕",
+      "zone": "san-carlos",
+      "area": "Edgewood Road, off Interstate 280 · marked off-leash area",
+      "durationMin": 90,
+      "why": "The Peninsula preserve where the dog can run: every trail is open to dogs, and there is a marked off-leash area (bring a leash, and keep your dog in voice control). Open grassland and oak hills, gentle walking, and the Bay in the distance.",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "outdoors",
+        "sport",
+        "family"
+      ],
+      "kids": true,
+      "dogs": "trail-offleash",
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "All trails open to dogs, with a marked off-leash area; a leash must be carried and dogs kept in voice control (Midpen)",
+      "quality": 3.5,
+      "uniqueness": 3,
+      "url": "https://www.openspace.org/preserves/pulgas-ridge",
+      "source": "Midpen (openspace.org, dog access page); preserve position from OpenStreetMap way/38696291",
+      "coords": [
+        37.47943,
+        -122.29305
+      ],
+      "coordsFrom": "osm way/38696291 (preserve)",
+      "hours": "sunrise-sunset",
+      "hoursFrom": "openspace.org — Midpen preserves are open from a half-hour before sunrise to a half-hour after sunset",
+      "hoursNote": "Half an hour before sunrise until half an hour after sunset"
     }
   ]
 }

@@ -11,7 +11,7 @@ const Weather = (() => {
   const url = () => `https://api.open-meteo.com/v1/forecast`
     + `?latitude=${LAT}&longitude=${LON}`
     + `&current=temperature_2m,weather_code,precipitation`
-    + `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max`
+    + `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,sunset,cloud_cover_mean`
     + `&timezone=${encodeURIComponent(City.weather.tz)}&forecast_days=8`;
 
   // WMO weather interpretation codes
@@ -57,7 +57,10 @@ const Weather = (() => {
       const code = d.daily.weather_code[i];
       const rain = d.daily.precipitation_probability_max[i] ?? 0;
       const [label, icon] = describe(code);
-      return { date, tmax, tmin, code, rain, label, icon, mode: mode(tmax, code, rain) };
+      /* "2026-09-28T18:52" → "18:52", already in the city's own time. */
+      const sunset = /T(\d\d:\d\d)/.exec(d.daily.sunset?.[i] || '')?.[1] ?? null;
+      const cloud = d.daily.cloud_cover_mean?.[i] ?? null;
+      return { date, tmax, tmin, code, rain, label, icon, sunset, cloud, mode: mode(tmax, code, rain) };
     });
 
     const [curLabel, curIcon] = describe(d.current.weather_code);

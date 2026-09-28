@@ -180,6 +180,40 @@ const Rank = (() => {
 
   /* --- the main event --- */
 
+  /* ---------- who is coming ----------
+
+     `dogs` and `kids` are stated on the record by somebody who checked
+     (dogsChecked says when). They are constraints, not tastes, so they
+     filter instead of weighing.
+
+     With a dog, a place must say it takes one: `dogs` set and not false.
+     Silence is not yes — a dog turned away at the door is a failed
+     outing, and most of the guide has never been asked. With a child,
+     only what says it is not for them is out: `kids: false`, or an age
+     range that does not hold theirs. Everything else stays and is
+     ranked by the `family` and `kids` words in goodFor.
+
+     Plain data in, boolean out, so the plan and the MCP server can both
+     call it. No prefs, or none of these, and everything passes. */
+  function suits(item, prefs) {
+    if (!prefs) return true;
+    if (prefs.dog && !item.dogs) return false;
+    if (Number.isInteger(prefs.kidAge) && item.kids != null) {
+      if (item.kids === false) return false;
+      if (Array.isArray(item.kids) && (prefs.kidAge < item.kids[0] || prefs.kidAge > item.kids[1])) return false;
+    }
+    return true;
+  }
+
+  /* A sunset is only worth planning round when there is one to see.
+     `cloud` is the day's mean cover in percent, where the forecast gives
+     it; without it nothing is claimed either way. */
+  const SUNSET_CLEAR = 40;
+  function settingFit(item, cloud) {
+    if (!(item.setting || []).includes('sunset') || !Number.isFinite(cloud)) return 0;
+    return cloud <= SUNSET_CLEAR ? 4 : 0;
+  }
+
   function score(item, ctx) {
     const { today, weatherMode, airMode, taste = {}, exploredZones = [], homeZone = null } = ctx;
 
@@ -241,6 +275,7 @@ const Rank = (() => {
     s += weatherFit(item, (ctx.weatherAt && ctx.weatherAt(item)) || weatherMode);
     s += airFit(item, airMode);
     s += seasonFit(item, today);
+    s += settingFit(item, ctx.cloud);
 
     // suits a couple
     if ((item.goodFor || []).includes('couple')) s += 2;
@@ -324,5 +359,5 @@ const Rank = (() => {
   }
 
   return { score, rank, isLive, isOpenOn, openRightNow, urgency, daysBetween, iso, parse,
-           seasonOf, weatherFit, seasonFit, priceLevel, LABEL_TEXT, HOLIDAYS };
+           seasonOf, weatherFit, seasonFit, suits, settingFit, priceLevel, LABEL_TEXT, HOLIDAYS };
 })();

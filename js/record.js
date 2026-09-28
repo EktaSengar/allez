@@ -60,6 +60,22 @@ const Rec = (() => {
       .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 32)
     + '-' + Math.round(p.lat * 2000) + '-' + Math.round(p.lon * 2000);
 
+  /* ---------- who a place is for (optional, hand-checked) ----------
+
+       dogs         'inside' | 'patio' | 'trail-leash' | 'trail-offleash' | false
+                    where a dog is welcome. Needs `dogsChecked`, an ISO date:
+                    policies change. With a dog in the party, a record
+                    without this is left out — see Rank.suits.
+       kids         true, false, or an age range [from, to]. Out only when
+                    it says it is not for the child.
+       setting      ['sunset', 'picnic', 'playground']. A sunset place also
+                    suits the evening, and is planned to the sunset time.
+       goodFor      'family' where it is true, which is how the taste
+                    engine's "with kids" preference finds it.
+
+     Stated by a person who checked, never inferred. scripts/check-packs.mjs
+     holds the vocabulary. */
+
   const FOOD = ['cafe', 'bakery', 'restaurant', 'market', 'deli'];
 
   /* Sources that let us read their listings but not display them.

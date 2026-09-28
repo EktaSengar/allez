@@ -33,6 +33,11 @@
               `byDate`. Optional; without it the plan ranks unforecast.
      done     id => true for anything already done. Optional.
      rating   id => the reader's verdict. Optional; only 'want' is read.
+     prefs    what the reader said — `dog`, `kidAge`, `company` — as
+              Store.prefs() returns it. Optional. `dog` and `kidAge` keep
+              out what does not suit (Rank.suits); a family also gets a
+              dessert after dinner, and a stop with a sunset setting is
+              given the time to be there by.
    --------------------------------------------------------- */
 
 const Plan = (() => {
@@ -81,7 +86,8 @@ const Plan = (() => {
   function dayCtx(ctx, iso) {
     const base = ctx.rank || {};
     const wx = ctx.weather && ctx.weather[iso];
-    return Object.assign({}, base, { today: iso, weatherMode: wx ? wx.mode : base.weatherMode });
+    return Object.assign({}, base, { today: iso, weatherMode: wx ? wx.mode : base.weatherMode,
+                                     cloud: wx ? wx.cloud : undefined });
   }
 
 /* ---------- the same Saturday, six weekends running ----------
@@ -260,6 +266,38 @@ const Plan = (() => {
     ? { total: t.total, unknown: t.unknown + 1 }
     : { total: t.total + s.spend, unknown: t.unknown }, { total: 0, unknown: 0 });
 
+  /* ---------- ice cream after dinner ----------
+
+     For a family, and only when the evening stop is a dinner: one more
+     stop, the best open dessert place close to it. Judged on the same
+     ranking and the same leg cost as everything else, but it must be
+     near — a walk or a short drive from the table, not a second outing.
+     `kind` says what it is for; the slot stays the evening. */
+  const DESSERT_WITHIN = 15;
+  function dessertAfter(pool, c, ctx, iso, planned, stops, prev) {
+    const last = stops[stops.length - 1];
+    const company = [].concat((ctx.prefs && ctx.prefs.company) || []);
+    if (!last || last.slot !== 'evening' || last.item.type !== 'restaurant' || !company.includes('family')) return null;
+    const s = SLOTS[2], when = new Date(`${iso}T${hhmm(s.from)}:00`);
+    const done = ctx.done || (() => false);
+    const near = i => { const m = legMinutes(prev, i, when, false); return m == null || m <= DESSERT_WITHIN; };
+    const item = Rank.rank(pool, c, i =>
+      (i.categories || []).includes('dessert') && Rank.isOpenOn(i, iso) && !planned.has(i.id) && !done(i.id) &&
+      Rank.suits(i, ctx.prefs) && near(i) && openBlock(i, iso, s).fits !== false)[0];
+    if (!item) return null;
+    planned.add(item.id);
+    const minutes = legMinutes(prev, item, when, false);
+    return {
+      slot: 'evening', kind: 'dessert',
+      window: { from: hhmm(s.from), to: hhmm(s.to) },
+      item,
+      travel: { from: prev.id, minutes },
+      open: openBlock(item, iso, s),
+      reasons: reasonsFor(item, iso, c, minutes, ctx),
+      spend: spendOf(item)
+    };
+  }
+
   /* ---------- one day ----------
 
      `planned` is shared across a weekend so Sunday never repeats Saturday.
@@ -284,14 +322,14 @@ const Plan = (() => {
       const leg = i => legMinutes(prev, i, when, first);
       const ranked = Rank.rank(pool, c, i =>
         Rank.isOpenOn(i, iso) && !planned.has(i.id) && !done(i.id) && fits(i) &&
-        openBlock(i, iso, s).fits !== false);
+        Rank.suits(i, ctx.prefs) && openBlock(i, iso, s).fits !== false);
       const item = rotate(ranked, iso, c, i => legCost(leg(i)));
       if (!item) continue;
       planned.add(item.id);
 
       const minutes = leg(item);
       const spend = spendOf(item);
-      stops.push({
+      const stop = {
         slot: s.slot,
         window: { from: hhmm(s.from), to: hhmm(s.to) },
         item,
@@ -299,9 +337,20 @@ const Plan = (() => {
         open: openBlock(item, iso, s),
         reasons: reasonsFor(item, iso, c, minutes, ctx),
         spend
-      });
+      };
+      /* Somewhere for the sunset is planned to the sunset: the time to be
+         there by is half an hour before it, so there is light to walk in. */
+      const sun = ctx.weather && ctx.weather[iso] && ctx.weather[iso].sunset;
+      if (s.slot === 'evening' && sun && (item.setting || []).includes('sunset')) {
+        stop.sunset = sun;
+        stop.arriveBy = hhmm(Math.max(s.from, toMin(sun) - 30));
+      }
+      stops.push(stop);
       prev = { id: item.id, coords: coordsOf(item) };
     }
+
+    const dessert = dessertAfter(pool, c, ctx, iso, planned, stops, prev);
+    if (dessert) stops.push(dessert);
 
     return {
       date: iso,
@@ -322,6 +371,7 @@ const Plan = (() => {
     let best = null, top = -Infinity;
     pool.forEach(i => {
       if (filter && !filter(i)) return;
+      if (!Rank.suits(i, ctx.prefs)) return;
       const oSat = Rank.isOpenOn(i, sat), oSun = Rank.isOpenOn(i, sun);
       if (!oSat && !oSun) return;
       const s = Math.max(oSat ? Rank.score(i, satCtx) : -Infinity,
