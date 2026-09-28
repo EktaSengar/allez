@@ -74,6 +74,24 @@ const CLASSES = [
    None of that is exotic — it is simply what somebody there would tell
    you to go and see, and the pack is where a city says what it is. */
 
+/* Nightclub is asked about as well, and lets nothing in.
+
+   It is not a kind of bar. Wikidata files the two side by side, under
+   "alcohol drinking establishment", so the `bar` above finds a club only
+   where Wikidata calls it a bar as well. The Condor Club is a restaurant
+   and a strip club to Wikidata, a strip club is a nightclub, and with
+   only `restaurant` recognised it came out as a restaurant — which is how
+   a topless bar becomes somewhere in North Beach to go and eat.
+
+   As a way in it is the wrong door. Asked on 27 September 2026 it
+   returned 60 places across the five cities that nothing above claims,
+   and a good many of them shut long ago — Area, the Tunnel, Plato's
+   Retreat, the hungry i — without the closing date the filter below needs
+   to leave them out. So it only says what kind of place something already
+   here is: see `kindOf`. A pack that does want its clubs in can list the
+   class like any other. */
+const CLUB = 'Q622425';
+
 /* P576 is the date a thing stopped existing. Without this filter the
    query cheerfully returns a hippodrome demolished in 1900, and the site
    recommends an empty plot of land. */
@@ -104,7 +122,7 @@ SELECT ?item ?itemLabel ?desc ?cls ?coord ?article ?heritage ?inception WHERE {
     bd:serviceParam wikibase:cornerEast ${corner(BOX_E, BOX_N)} .
   }
   ?item wdt:P31/wdt:P279* ?cls .
-  VALUES ?cls { ${[...new Set(CLASSES.map(c => c[0]))].join(' ')} }
+  VALUES ?cls { ${[...new Set(CLASSES.map(c => c[0]).concat('wd:' + CLUB))].join(' ')} }
   FILTER NOT EXISTS { ?item wdt:P576 ?dissolved }
   FILTER NOT EXISTS { ?item wdt:P582 ?ended }
   OPTIONAL { ?item wdt:P1435 ?heritage }
@@ -118,6 +136,32 @@ SELECT ?item ?itemLabel ?desc ?cls ?coord ?article ?heritage ?inception WHERE {
 }`;
 
 const CAT_OF = Object.fromEntries(CLASSES.map(([q, c]) => [q.replace('wd:', ''), c]));
+
+/* Which kind of place, when Wikidata says it is more than one.
+
+   This was whichever row the endpoint happened to return first, which is
+   no order at all: of the fifteen places in the five cities that Wikidata
+   calls a bar and a restaurant and nothing else here, eight had come out
+   as the one and seven as the other.
+
+   Somewhere to drink now beats somewhere to eat. Wikidata calls a place a
+   restaurant when food is served in it, and says so of the Condor Club,
+   Buddha-Bar and Max's Kansas City as readily as of a restaurant. The two
+   mistakes are not the same size, either: one sends somebody for a drink
+   at a bar that also does food, the other sends them to dinner at a
+   topless bar. Measured on 27 September 2026 it moves ten records, all
+   of them from restaurant to nightlife, and eight of the ten are called
+   a bar or a club in their own first sentence.
+
+   Everything else still goes by the first row. Café against restaurant
+   is the obvious next case, and there the evidence splits: the Closerie
+   des Lilas is a restaurant that Wikidata also calls a café, Caffe
+   Trieste a café it also calls a restaurant. */
+function kindOf(p) {
+  const drink = p.club || p.cats.includes('nightlife');
+  const kinds = drink ? p.cats.filter(c => c !== 'restaurant') : p.cats;
+  return kinds[0] || 'nightlife';     // a restaurant and a club: the Condor Club
+}
 
 /* Nearest centroid, not point-in-polygon: good enough to print next to a
    name, never used for distance. Literally the same rule as
@@ -183,20 +227,27 @@ async function fromWikidata() {
     const m = /Point\(([-\d.]+) ([-\d.]+)\)/.exec(b.coord?.value || '');
     if (!m) continue;
     const lon = +m[1], lat = +m[2];
-    const cat = CAT_OF[b.cls.value.split('/').pop()];
-    if (!cat) continue;
+    const cls = b.cls.value.split('/').pop();
+    const cat = CAT_OF[cls];
+    if (!cat && cls !== CLUB) continue;
 
     const prev = byId.get(qid);
+    const cats = prev?.cats || [];
     byId.set(qid, {
-      qid, name: label, lat, lon, cat: prev?.cat || cat,
+      qid, name: label, lat, lon,
+      cats: cat && !cats.includes(cat) ? cats.concat(cat) : cats,
+      club: prev?.club || cls === CLUB,
       desc: b.desc?.value || prev?.desc || null,
       article: b.article?.value ? decodeURIComponent(b.article.value.split('/wiki/').pop()) : (prev?.article || null),
       heritage: !!(b.heritage?.value) || prev?.heritage || false,
       inception: b.inception?.value?.slice(0, 4) || prev?.inception || null
     });
   }
-  console.log(`${byId.size} places`);
-  return [...byId.values()];
+  /* A club that nothing else on the list claims stays out — see CLUB. */
+  const list = [...byId.values()].filter(p => p.cats.length);
+  list.forEach(p => { p.cat = kindOf(p); });
+  console.log(`${list.length} places`);
+  return list;
 }
 
 /* ---------- 2. what is true about them ---------- */
