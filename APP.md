@@ -80,3 +80,14 @@ for it:
   deliberately suggesting new things — built as engine code the website, the
   MCP server and the app can all use, not as website UI.
 - **The MCP server** — the same answers, for agents.
+
+*Where that stands, 25 September 2026.* For the Bay Area, every record the
+guide vouches for carries hours, a checked date, a booking link or `false`, a
+duration, a price level and indoors-or-out, and CI fails if one stops. The
+weekend plan is `Plan.weekend()` in `js/plan.js` — ordered stops with the
+journey between them, reason codes, open blocks and a spend — and the taste
+engine fades old ratings, takes stated preferences and weights the untried
+(`Store.tasteWeights()` in `js/state.js`; no screen asks yet). The site counts
+its own use without cookies, which is the baseline for the first measure in
+"How we'd know it works": how often it is opened, which views, and by whom
+outside the household.

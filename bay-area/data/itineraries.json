@@ -24,7 +24,8 @@
         "culture",
         "couple",
         "outdoors",
-        "weekend"
+        "weekend",
+        "afternoon"
       ],
       "indoor": false,
       "weatherSensitive": true,
@@ -66,7 +67,9 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Iris_%26_B._Gerald_Cantor_Center_for_Visual_Arts%2C_Stanford%2C_California_-_20060728.jpg/1280px-Iris_%26_B._Gerald_Cantor_Center_for_Visual_Arts%2C_Stanford%2C_California_-_20060728.jpg",
       "imageSubject": "Cantor Arts Center",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "priceLevel": 0,
+      "booking": false
     },
     {
       "id": "downtown-saturday-morning",
@@ -134,7 +137,9 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG/1280px-Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG",
       "imageSubject": "Palo Alto, California",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "id": "telegraph-hill-steps",
@@ -203,7 +208,9 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Coittower1.jpg",
       "imageSubject": "Coit Tower",
       "imageKind": "context",
-      "imageCredit": "en:user:Kkmd · CC BY-SA 3.0"
+      "imageCredit": "en:user:Kkmd · CC BY-SA 3.0",
+      "priceLevel": 1,
+      "booking": false
     },
     {
       "id": "lands-end-sutro",
@@ -225,7 +232,8 @@
       "goodFor": [
         "walk",
         "outdoors",
-        "couple"
+        "couple",
+        "afternoon"
       ],
       "indoor": false,
       "weatherSensitive": true,
@@ -266,7 +274,9 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Coastal_Trail_and_Golden_Gate_Bridge%2C_April_2019.JPG/1280px-Coastal_Trail_and_Golden_Gate_Bridge%2C_April_2019.JPG",
       "imageSubject": "Lands End (San Francisco)",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "priceLevel": 0,
+      "booking": false
     }
   ]
 }

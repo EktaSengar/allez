@@ -716,7 +716,13 @@ const City = (() => {
 
   const shutsOnHoliday = ['bakery', 'cafe', 'shop', 'market'];
 
-  const money = { symbol: '₹', cheap: 600, format: n => `₹${n}` };
+  /* What a price level means, per person: the most each of the first
+     three runs to, and what to count each as when adding up a day. ₹ is
+     street food or a dhaba, ₹₹ a sit-down meal, ₹₹₹ a night out, ₹₹₹₹ a
+     hotel restaurant. Rough on purpose — it is for a plan that says
+     "about this much", not a bill. */
+  const money = { symbol: '₹', cheap: 600, format: n => `₹${n}`,
+                  levels: { upTo: [0, 300, 800, 2000], about: [0, 200, 600, 1400, 3000] } };
 
   const views = {
     main: [

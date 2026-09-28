@@ -1,88 +1,8 @@
 {
-  "generated": "2026-09-26",
+  "generated": "2026-09-28",
   "window": null,
   "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the team's or organiser's own schedule on the date given.",
   "items": [
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "indoor": false,
-      "weatherSensitive": true,
-      "goodFor": [
-        "sport",
-        "weekend"
-      ],
-      "lastVerified": "2026-09-23",
-      "quality": 4,
-      "uniqueness": 3,
-      "id": "giants-dodgers-2026-09",
-      "title": "Giants v Dodgers — the last home series",
-      "emoji": "⚾",
-      "coords": [
-        37.77861,
-        -122.38947
-      ],
-      "zone": "south-beach",
-      "area": "Oracle Park, 24 Willie Mays Plaza",
-      "coordsFrom": "osm relation/7325085",
-      "start": "2026-09-25",
-      "end": "2026-09-27",
-      "durationMin": 210,
-      "priceNote": "From the bleachers up",
-      "times": "Friday to Sunday, the final weekend of the season",
-      "why": "The oldest rivalry in the game, and the last three home games of the season. Giants against Dodgers is the series Oracle Park fills for. Sunday is the regular season's final day.",
-      "categories": [
-        "sport",
-        "baseball"
-      ],
-      "labels": [
-        "couple"
-      ],
-      "url": "https://www.mlb.com/giants/schedule",
-      "source": "MLB / San Francisco Giants schedule",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/McCovey_Cove_%28767980568%29.jpg/1280px-McCovey_Cove_%28767980568%29.jpg",
-      "imageSubject": "McCovey Cove",
-      "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
-    },
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "indoor": false,
-      "weatherSensitive": true,
-      "goodFor": [
-        "sport",
-        "weekend"
-      ],
-      "lastVerified": "2026-09-23",
-      "quality": 4,
-      "uniqueness": 3,
-      "id": "stanford-georgia-tech-2026",
-      "title": "Stanford v Georgia Tech",
-      "emoji": "🏈",
-      "coords": [
-        37.43453,
-        -122.16199
-      ],
-      "zone": "palo-alto",
-      "area": "Stanford Stadium",
-      "coordsFrom": "osm relation/18564360",
-      "start": "2026-09-26",
-      "end": "2026-09-26",
-      "durationMin": 240,
-      "priceNote": "Cheap",
-      "why": "An ACC Saturday at Stanford Stadium, a walk from downtown Palo Alto.",
-      "categories": [
-        "sport",
-        "football"
-      ],
-      "url": "https://gostanford.com/sports/football/schedule",
-      "source": "Stanford Athletics 2026 schedule",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
-      "imageSubject": "Stanford Stadium",
-      "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
-    },
     {
       "type": "event",
       "provenance": "editorial",
@@ -90,9 +10,10 @@
       "weatherSensitive": false,
       "goodFor": [
         "sport",
-        "weekend"
+        "weekend",
+        "evening"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 3,
       "id": "valkyries-playoffs-2026",
@@ -123,7 +44,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chase_Center_-_July_2019_%287605%29.jpg/1280px-Chase_Center_-_July_2019_%287605%29.jpg",
       "imageSubject": "Chase Center",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Game 1 on Sunday 27 September at 6pm; a Game 3, if needed, on Friday 2 October, time not yet set",
+      "booking": "https://valkyries.wnba.com/tickets",
+      "priceLevel": 3
     },
     {
       "type": "event",
@@ -132,9 +56,10 @@
       "weatherSensitive": true,
       "goodFor": [
         "sport",
-        "weekend"
+        "weekend",
+        "afternoon"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 3,
       "id": "49ers-broncos-2026",
@@ -160,7 +85,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
       "imageSubject": "Levi's Stadium",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "13:25",
+      "booking": "https://www.49ers.com/tickets/single-game",
+      "priceLevel": 4
     },
     {
       "type": "event",
@@ -171,7 +99,8 @@
         "sport",
         "weekend",
         "couple",
-        "outdoors"
+        "outdoors",
+        "afternoon"
       ],
       "lastVerified": "2026-09-23",
       "quality": 5,
@@ -209,7 +138,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Marina_Green.jpg/1280px-Marina_Green.jpg",
       "imageSubject": "Marina Green",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "12:00",
+      "booking": false,
+      "priceLevel": 0
     },
     {
       "type": "event",
@@ -218,9 +150,10 @@
       "weatherSensitive": true,
       "goodFor": [
         "sport",
-        "weekend"
+        "weekend",
+        "afternoon"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 3,
       "id": "stanford-elon-2026",
@@ -247,7 +180,10 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
       "imageSubject": "Stanford Stadium",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "16:30",
+      "booking": "https://gostanford.com/sports/football/schedule",
+      "priceLevel": 2
     },
     {
       "type": "event",
@@ -256,9 +192,10 @@
       "weatherSensitive": true,
       "goodFor": [
         "sport",
-        "weekend"
+        "weekend",
+        "evening"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 3,
       "id": "49ers-commanders-2026",
@@ -284,7 +221,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
       "imageSubject": "Levi's Stadium",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "17:15",
+      "booking": "https://www.49ers.com/tickets/single-game",
+      "priceLevel": 4
     },
     {
       "type": "event",
@@ -293,9 +233,10 @@
       "weatherSensitive": false,
       "goodFor": [
         "sport",
-        "weekend"
+        "weekend",
+        "evening"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 3,
       "id": "warriors-opener-2026",
@@ -322,7 +263,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Chase_Center_-_July_2019_%287605%29.jpg/1280px-Chase_Center_-_July_2019_%287605%29.jpg",
       "imageSubject": "Chase Center",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "19:00",
+      "booking": "https://chasecenter.com/events/20261023-gsw-vs-mem/",
+      "priceLevel": 4
     },
     {
       "type": "event",
@@ -331,9 +275,10 @@
       "weatherSensitive": true,
       "goodFor": [
         "sport",
-        "weekend"
+        "weekend",
+        "evening"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 3,
       "id": "stanford-nc-state-2026",
@@ -347,7 +292,7 @@
       "area": "Stanford Stadium",
       "coordsFrom": "osm relation/18564360",
       "start": "2026-10-23",
-      "end": "2026-10-24",
+      "end": "2026-10-23",
       "durationMin": 240,
       "priceNote": "Cheap",
       "why": "Friday the 23rd or Saturday the 24th — the ACC has not fixed the day yet, so check before you plan around it.",
@@ -360,7 +305,10 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
       "imageSubject": "Stanford Stadium",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "19:30",
+      "booking": "https://gostanford.com/sports/football/schedule",
+      "priceLevel": 2
     },
     {
       "type": "event",
@@ -369,9 +317,10 @@
       "weatherSensitive": true,
       "goodFor": [
         "sport",
-        "weekend"
+        "weekend",
+        "afternoon"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 3,
       "id": "49ers-raiders-2026",
@@ -397,7 +346,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
       "imageSubject": "Levi's Stadium",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "13:05",
+      "booking": "https://www.49ers.com/tickets/single-game",
+      "priceLevel": 4
     },
     {
       "type": "event",
@@ -406,9 +358,11 @@
       "weatherSensitive": true,
       "goodFor": [
         "sport",
-        "weekend"
+        "weekend",
+        "afternoon",
+        "evening"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 3,
       "id": "stanford-smu-2026",
@@ -435,7 +389,10 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Stanford_Stadium_new.jpg",
       "imageSubject": "Stanford Stadium",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "Kick-off not announced yet — the schedule has it once it is",
+      "booking": "https://gostanford.com/sports/football/schedule",
+      "priceLevel": 2
     },
     {
       "type": "event",
@@ -444,9 +401,10 @@
       "weatherSensitive": true,
       "goodFor": [
         "sport",
-        "weekend"
+        "weekend",
+        "afternoon"
       ],
-      "lastVerified": "2026-09-23",
+      "lastVerified": "2026-09-25",
       "quality": 4,
       "uniqueness": 3,
       "id": "49ers-seahawks-2026",
@@ -472,7 +430,10 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Panoramic_view_of_Levi%27s_Stadium.jpg/1280px-Panoramic_view_of_Levi%27s_Stadium.jpg",
       "imageSubject": "Levi's Stadium",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "13:25",
+      "booking": "https://www.49ers.com/tickets/single-game",
+      "priceLevel": 4
     }
   ]
 }
