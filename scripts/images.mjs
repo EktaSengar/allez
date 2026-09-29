@@ -61,6 +61,7 @@ const QUERIES = {
 
   // the Bay Area — day trips, landmarks and hand-placed cards
   'filoli': 'Filoli',
+  'alcatraz': 'Alcatraz Island',
   'half-moon-bay': 'Half Moon Bay, California',
   'santa-cruz': 'Santa Cruz, California',
   'muir-woods': 'Muir Woods National Monument',
