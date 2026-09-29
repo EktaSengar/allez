@@ -126,6 +126,40 @@ const Loc = (() => {
     return item.minutesFromHome ?? null;
   }
 
+  /* ---------- on foot or by bike ----------
+
+     Whether a trip can be done without the car, and how. Not stored on
+     any record: it depends on where the reader is, so it is worked out
+     from the same straight-line distance everything else here uses.
+
+     A person, not a vehicle, so no rush hour: 4.8 km/h walking, 14 km/h
+     on a bike at an easy family pace, and the straight line stretched by
+     a third because streets are not straight. Twenty minutes is the
+     most either is offered for — past that the car wins the argument,
+     and a plan that pretends otherwise gets abandoned at the first leg.
+     A pack may set its own `City.reach.active`; a hilly city would.
+
+     Walk when walking fits, because it asks for nothing; otherwise the
+     bike; otherwise null. */
+  const ACTIVE = { walk: 4.8, bike: 14, detour: 1.33, within: 20 };
+
+  function activeLeg(a, b) {
+    const d = km(a, b);
+    if (!isFinite(d)) return null;
+    const m = Object.assign({}, ACTIVE, City.reach && City.reach.active);
+    const road = d * m.detour;
+    const walk = road / m.walk * 60, bike = road / m.bike * 60;
+    if (walk <= m.within) return { mode: 'walk', minutes: Math.max(1, Math.round(walk)) };
+    if (bike <= m.within) return { mode: 'bike', minutes: Math.max(1, Math.round(bike)) };
+    return null;
+  }
+
+  /* From wherever the reader is, for a record with a position. */
+  function activeTo(item, from = home()) {
+    const c = item.coords || (item.zone && ZONE[item.zone]);
+    return from && c ? activeLeg([from.lat, from.lon], c) : null;
+  }
+
   const kmTo = item => {
     const a = active();
     const c = item.coords || (item.zone && ZONE[item.zone]);
@@ -207,7 +241,7 @@ const Loc = (() => {
 
   return {
     boot, save, active, home, isExploring, setHome, explore, resetToHome, recents,
-    minutes, minutesTo, kmTo, km, displayName, zoneName, zoneCoords, presets,
+    minutes, minutesTo, kmTo, km, activeLeg, activeTo, displayName, zoneName, zoneCoords, presets,
     search, locate, fromZone, ZONE_NAMES, setClock
   };
 })();

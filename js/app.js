@@ -2025,9 +2025,12 @@ const App = (() => {
           `<option value="${v}" ${ageBand(p.kidAge ?? 6) === v ? 'selected' : ''}>${l}</option>`).join('')}</select>` : ''}
         ${chip('dog', !!p.dog, '🐕 A dog')}
       </div>
+      <span class="who-label">Getting about</span>
+      <div class="chips">${chip('carfree', !!p.carFree, '🚲 Car-free')}</div>
       <span class="who-label">Into</span>
       <div class="chips">${INTERESTS.map(([k, l]) => chip('i:' + k, (p.interests || []).includes(k), l)).join('')}</div>
       ${p.dog ? '<p class="who-note">With a dog, only places that say they take one are planned — so the list is short until more are checked.</p>' : ''}
+      ${p.carFree ? '<p class="who-note">Car-free: every stop is a walk or a bike ride of twenty minutes or less from the one before, starting from where you are.</p>' : ''}
     </div>`;
   }
 
@@ -2037,6 +2040,14 @@ const App = (() => {
     Store.setPrefs(p);
     buildContext();
     render();
+  }
+
+  /* How to get to a stop, printed only when the plan was made car-free —
+     the one time the journey is the point rather than a cost. */
+  function legLine(t) {
+    if (!t || !t.mode) return '';
+    const how = t.mode === 'walk' ? `🚶 ${t.minutes} min walk` : `🚲 ${t.minutes} min by bike`;
+    return `<span class="leg">${esc(how)}${t.via ? ` · along ${esc(t.via.title)}` : ''}</span>`;
   }
 
   function renderWeekend(w) {
@@ -2055,7 +2066,7 @@ const App = (() => {
     const day = (d, p) => {
       const wx = p.weather;
       const slots = p.stops.map(s => `<div class="slot"><div class="t">${s.kind === 'dessert' ? 'After dinner' : SLOT_LABEL[s.slot]}</div>
-          <div class="s"><b>${esc(s.item.title)}</b>${esc((s.item.why || '').split('. ')[0])}.${s.arriveBy ? ` <em>Be there by ${esc(s.arriveBy)} — sunset is ${esc(s.sunset)}.</em>` : ''}</div></div>`).join('');
+          <div class="s">${legLine(s.travel)}<b>${esc(s.item.title)}</b>${esc((s.item.why || '').split('. ')[0])}.${s.arriveBy ? ` <em>Be there by ${esc(s.arriveBy)} — sunset is ${esc(s.sunset)}.</em>` : ''}</div></div>`).join('');
 
       return `<div class="day">
         <h3>${d.toLocaleDateString('en-GB', { weekday: 'long' })}</h3>
@@ -3393,6 +3404,32 @@ const App = (() => {
 
   /* ---------- saved ---------- */
 
+  /* ---------- this week, on foot and by bike ----------
+
+     A count, not a goal: what has been marked done since Monday that got
+     somebody moving — hikes, rides, and places a walk from home. There is
+     no target and no streak to break, and nothing is shown in a week with
+     nothing in it. Read from the ratings' own dates (Store.ratedOn), so
+     it is the week somebody said they did it. "A walk from home" is what
+     it was, not how they went: the site cannot know that, and does not
+     ask. */
+  function activeWeek() {
+    const dow = (TODAY.getDay() + 6) % 7;                 // Monday is 0
+    const monday = new Date(TODAY.getTime() - dow * 86400000);
+    const since = new Date(monday.getTime() - monday.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    const done = [...ALL, ...DISCOVERED].filter(i =>
+      ['loved', 'good', 'meh'].includes(Store.rating(i.id)) && (Store.ratedOn(i.id) || '') >= since);
+    const cats = i => i.categories || [];
+    const hikes = done.filter(i => cats(i).includes('hike'));
+    const rides = done.filter(i => !hikes.includes(i) && (i.type === 'ride' || cats(i).includes('cycling')));
+    const walks = done.filter(i => !hikes.includes(i) && !rides.includes(i)
+      && (Loc.activeTo(i) || {}).mode === 'walk');
+    const n = (k, one, many) => k ? `${k} ${k === 1 ? one : many}` : '';
+    const parts = [n(hikes.length, 'hike', 'hikes'), n(rides.length, 'bike ride', 'bike rides'),
+                   n(walks.length, 'place a walk from home', 'places a walk from home')].filter(Boolean);
+    return parts.length ? `<p class="saved-week"><b>Since Monday</b> ${esc(parts.join(' · '))}</p>` : '';
+  }
+
   function renderSaved() {
     const groups = [['Want to visit', 'want'], ['Loved', 'loved'], ['Good', 'good'], ['Not for us', 'meh']];
     /* Discovered places can be rated wherever they are shown, so they have
@@ -3406,7 +3443,7 @@ const App = (() => {
     const dated = savedDated();
     const cal = dated.length ? `<p class="saved-cal"><button class="chip" data-savedcal>Add saved to calendar</button>
       <span>${dated.length} with a date${dated.some(x => reminderOf(x.i)) ? ', some with a reminder to book ahead' : ''} · a file for your phone, nothing sent anywhere</span></p>` : '';
-    return (html && cal + html) || html || `<p class="empty">Nothing marked yet. Open anything and use the buttons — the ranking learns from them.</p>`;
+    return activeWeek() + ((html && cal + html) || html) || `<p class="empty">Nothing marked yet. Open anything and use the buttons — the ranking learns from them.</p>`;
   }
   /* ---------- filters ---------- */
 
@@ -3812,6 +3849,8 @@ const App = (() => {
           if (!p.company.length) delete p.company;
         } else if (k === 'dog') {
           if (p.dog) delete p.dog; else p.dog = true;
+        } else if (k === 'carfree') {
+          if (p.carFree) delete p.carFree; else p.carFree = true;
         } else if (k.startsWith('i:')) {
           const w = k.slice(2), list = p.interests || [];
           p.interests = list.includes(w) ? list.filter(x => x !== w) : [...list, w];

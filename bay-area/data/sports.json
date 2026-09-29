@@ -561,7 +561,12 @@
       "hoursFrom": "San Francisco Park Code §3.21 — city parks close from midnight to 5am",
       "hoursChecked": "2026-09-25",
       "booking": false,
-      "priceLevel": 0
+      "priceLevel": 0,
+      "routeEnd": [
+        37.76947,
+        -122.51022
+      ],
+      "routeEndFrom": "the Beach Chalet at Ocean Beach, osm node/417235672 (Nominatim)"
     },
     {
       "type": "ride",
@@ -610,7 +615,12 @@
       "hoursChecked": "2026-09-25",
       "booking": false,
       "priceLevel": 0,
-      "hoursNote": "Sunrise to sunset"
+      "hoursNote": "Sunrise to sunset",
+      "routeEnd": [
+        37.60173,
+        -122.3924
+      ],
+      "routeEndFrom": "Hillcrest Boulevard, Millbrae, the north trailhead, osm way/464920592 (Nominatim)"
     },
     {
       "type": "ride",
@@ -660,7 +670,68 @@
       "hoursChecked": "2026-09-25",
       "booking": false,
       "priceLevel": 0,
-      "hoursNote": "8am to sunset"
+      "hoursNote": "8am to sunset",
+      "routeEnd": [
+        37.43248,
+        -122.09164
+      ],
+      "routeEndFrom": "Shoreline Lake, osm relation/409589 (Nominatim)"
+    },
+    {
+      "type": "ride",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "cycling"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "weekend",
+        "outdoors",
+        "sport",
+        "family"
+      ],
+      "lastVerified": "2026-09-29",
+      "zone": "mountain-view",
+      "id": "ride-stevens-creek-trail",
+      "title": "The Stevens Creek Trail",
+      "emoji": "🚲",
+      "area": "Crittenden Lane to Yuba Drive, Mountain View · flat · paved, off-street",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 60,
+      "why": "A paved path along Stevens Creek from Shoreline Park south through Mountain View, passing under 101, Middlefield and Highway 85 and over Central Expressway, so you never wait at a junction with cars. It joins the Bay Trail at the top, which makes it the car-free way between downtown Mountain View, Shoreline and the Baylands. The speed limit is 15 mph and bikes give way to people on foot, so it suits a child on their own bike.",
+      "quality": 4,
+      "uniqueness": 3,
+      "labels": [
+        "outdoor",
+        "cheap"
+      ],
+      "url": "https://www.mountainview.gov/our-city/departments/community-services/parks-and-trails/trails-684",
+      "source": "City of Mountain View; Friends of Stevens Creek Trail",
+      "coords": [
+        37.42485,
+        -122.07786
+      ],
+      "coordsFrom": "Crittenden Lane, where it meets Shoreline, osm way/685522097 (Nominatim)",
+      "routeEnd": [
+        37.38045,
+        -122.07105
+      ],
+      "routeEndFrom": "the Yuba Drive trailhead, osm way/8957394 (Nominatim)",
+      "hours": "06:00-sunset",
+      "hoursFrom": "mountainview.gov — trails open 6am to half an hour after sunset",
+      "hoursChecked": "2026-09-29",
+      "hoursNote": "6am to half an hour after sunset; underpasses can close for flooding in winter",
+      "booking": false,
+      "priceLevel": 0,
+      "dogs": "trail-leash",
+      "dogsChecked": "2026-09-29",
+      "kids": true
     },
     {
       "type": "ride",

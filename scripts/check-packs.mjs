@@ -423,6 +423,12 @@ async function checkFamilyFields(id) {
   const loose = items.filter(i => 'dogsNote' in i && !('dogs' in i && typeof i.dogsNote === 'string' && i.dogsNote.trim()));
   want(id, loose.length === 0, `every \`dogsNote\` is a sentence beside a \`dogs\`${loose.length ? ` — ${list(loose)}` : ''}`);
 
+  /* A trail's far end is what lets a car-free leg follow it (js/plan.js),
+     so it has to be a position, and a trail has to have a start too. */
+  const isPos = c => Array.isArray(c) && c.length === 2 && c.every(Number.isFinite);
+  const badEnd = items.filter(i => 'routeEnd' in i && !(isPos(i.routeEnd) && isPos(i.coords)));
+  want(id, badEnd.length === 0, `every \`routeEnd\` is a [lat, lon] on a record with a start${badEnd.length ? ` — ${list(badEnd)}` : ''}`);
+
   const badKids = items.filter(i => 'kids' in i && !(i.kids === true || i.kids === false ||
     (Array.isArray(i.kids) && i.kids.length === 2 && i.kids.every(Number.isInteger) && i.kids[0] >= 0 && i.kids[0] <= i.kids[1] && i.kids[1] <= 17)));
   want(id, badKids.length === 0, `every \`kids\` is true, false or an [from, to] age range${badKids.length ? ` — ${list(badKids)}` : ''}`);
