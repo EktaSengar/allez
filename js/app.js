@@ -3327,8 +3327,8 @@ const App = (() => {
        .map(([e, l]) => `<span class="pair"><span class="e">${e}</span>${esc(l.map(i => i.title).join(' · '))}</span>`);
       const zl = String(City.zone.label(hereArr));
       standing = stripHead(zl === mine.name ? `You are in ${inZone(hereArr)}`
-                                            : `You are in ${inZone(hereArr)} — ${esc(mine.name)}`,
-                           esc(mine.famousFor || ''))
+                                            : `You are in ${inZone(hereArr)} — ${mine.name}`,
+                           mine.famousFor || '')
         + (bits.length ? `<div class="pairs"><div class="pairs-row">${bits.join('')}</div></div>` : '');
     }
 
