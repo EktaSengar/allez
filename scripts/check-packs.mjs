@@ -406,6 +406,11 @@ async function checkFamilyFields(id) {
   for (const i of all) { if (seen.has(i.id)) dupes.push(i); seen.set(i.id, true); }
   want(id, dupes.length === 0, `no two records share an id${dupes.length ? ` — ${list(dupes)}` : ''}`);
 
+  /* `bookAhead` on a dated record only does anything with a link to book
+     through (Rank.bookingDue), so one without is a flag nobody will ever see. */
+  const lost = all.filter(i => i.bookAhead && i.start && !/^https:\/\/\S+$/.test(i.booking || ''));
+  want(id, lost.length === 0, `every dated \`bookAhead\` has a booking link${lost.length ? ` — ${list(lost)}` : ''}`);
+
   const withDogs = items.filter(i => 'dogs' in i);
   const badDogs = withDogs.filter(i => !DOGS.includes(i.dogs));
   want(id, badDogs.length === 0, `every \`dogs\` is one of inside, patio, trail-leash, trail-offleash or false${badDogs.length ? ` — ${list(badDogs)}` : ''}`);

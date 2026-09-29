@@ -1961,8 +1961,8 @@ const App = (() => {
      answer it, so other cities' weekends are exactly what they were. */
   /* ---------- book this week ----------
 
-     What has a date to beat in the next fortnight (Rank.bookingDue): a
-     booking closes, or something that sells out is about to happen. Left
+     What is marked `bookAhead`, can be booked, and happens in the next
+     fortnight (Rank.bookingDue) — the things that sell out. Left
      out entirely when there is none — a strip that is usually empty is
      worse than none — and it honours who is coming, like the plan does. */
   function bookStrip() {
@@ -1971,10 +1971,8 @@ const App = (() => {
       .map(i => ({ i, b: Rank.bookingDue(i, TODAY_ISO) })).filter(x => x.b)
       .sort((a, c) => a.b.days - c.b.days).slice(0, 4);
     if (!due.length) return '';
-    const when = ({ by, days, basis }) => {
-      const on = days === 0 ? 'today' : days === 1 ? 'tomorrow' : fmtShort(new Date(by + 'T12:00:00'));
-      return basis === 'bookBy' ? `Book by ${on}` : `Sells out — on ${on}`;
-    };
+    const when = ({ on, days }) =>
+      `Book ahead — on ${days === 0 ? 'today' : days === 1 ? 'tomorrow' : fmtShort(new Date(on + 'T12:00:00'))}`;
     return stripHead('Book this week', 'Dated, and worth sorting before the day')
       + `<div class="book-list">${due.map(({ i, b }) =>
         `<div class="book"><a class="book-title" href="${esc(i.booking)}" target="_blank" rel="noopener">${esc(i.title)} <span aria-hidden="true">↗</span></a>
@@ -2821,12 +2819,12 @@ const App = (() => {
 
   /* ---------- saved, as one calendar ----------
 
-     Everything marked "want" that has a date goes in one file, and where
-     a record carries a `bookBy` it also gets an all-day "Book" entry on
-     that day with an alert at nine in the morning. The phone's own
-     calendar then does the reminding: no account, no server, nothing
-     sent anywhere. An undated place has nothing to put on a calendar, and
-     a sell-out with no booking date is not given an invented one. */
+     Everything marked "want" that has a date goes in one file. Where it
+     is marked `bookAhead` and can be booked, it also gets an all-day
+     "Book ahead" entry a week before (Rank.bookReminder) with an alert at
+     nine in the morning. The phone's own calendar then does the
+     reminding: no account, no server, nothing sent anywhere. An undated
+     place has nothing to put on a calendar. */
   function savedDated() {
     return [...ALL, ...DISCOVERED].filter(i => Store.rating(i.id) === 'want').flatMap(i => {
       if (!i.start) return [];
@@ -2835,23 +2833,27 @@ const App = (() => {
     });
   }
 
-  function icsBookBy(i) {
-    const ymd = i.bookBy.replace(/-/g, '');
-    const next = iso(addDays(new Date(i.bookBy + 'T12:00:00'), 1)).replace(/-/g, '');
+  const reminderOf = i => Rank.bookReminder(i, TODAY_ISO);
+
+  function icsReminder(i, day) {
+    const ymd = day.replace(/-/g, '');
+    const next = iso(addDays(new Date(day + 'T12:00:00'), 1)).replace(/-/g, '');
     return ['BEGIN:VEVENT',
       `UID:${icsClean(i.id)}-book-${ymd}@allez.city`,
       `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
       `DTSTART;VALUE=DATE:${ymd}`, `DTEND;VALUE=DATE:${next}`,
-      `SUMMARY:${icsClean(`Book: ${i.title}`)}`,
-      i.booking ? `URL:${i.booking}` : '',
-      `DESCRIPTION:${icsClean(`Last day to book. ${i.booking || ''}`.trim())}`,
-      'BEGIN:VALARM', 'ACTION:DISPLAY', `DESCRIPTION:${icsClean(`Book: ${i.title}`)}`, 'TRIGGER:PT9H', 'END:VALARM',
+      `SUMMARY:${icsClean(`Book ahead: ${i.title}`)}`,
+      `URL:${i.booking}`,
+      `DESCRIPTION:${icsClean(`It tends to sell out — worth booking before ${i.start}. ${i.booking}`)}`,
+      'BEGIN:VALARM', 'ACTION:DISPLAY', `DESCRIPTION:${icsClean(`Book ahead: ${i.title}`)}`, 'TRIGGER:PT9H', 'END:VALARM',
       'END:VEVENT'];
   }
 
   function savedCalendar() {
-    const events = savedDated().flatMap(({ i, day }) =>
-      [icsEvent(i, day)].concat(i.bookBy && i.bookBy >= TODAY_ISO ? [icsBookBy(i)] : []));
+    const events = savedDated().flatMap(({ i, day }) => {
+      const remind = reminderOf(i);
+      return [icsEvent(i, day)].concat(remind ? [icsReminder(i, remind)] : []);
+    });
     if (events.length) icsDownload('allez-saved', events);
   }
 
@@ -3376,7 +3378,7 @@ const App = (() => {
     }).join('');
     const dated = savedDated();
     const cal = dated.length ? `<p class="saved-cal"><button class="chip" data-savedcal>Add saved to calendar</button>
-      <span>${dated.length} with a date${dated.some(x => x.i.bookBy) ? ', with a reminder on the day to book' : ''} · a file for your phone, nothing sent anywhere</span></p>` : '';
+      <span>${dated.length} with a date${dated.some(x => reminderOf(x.i)) ? ', some with a reminder to book ahead' : ''} · a file for your phone, nothing sent anywhere</span></p>` : '';
     return (html && cal + html) || html || `<p class="empty">Nothing marked yet. Open anything and use the buttons — the ranking learns from them.</p>`;
   }
   /* ---------- filters ---------- */

@@ -182,25 +182,35 @@ const Rank = (() => {
 
   /* ---------- book it before it goes ----------
 
-     Two different things sit behind "book ahead", and only the dated ones
-     can be counted down to. `bookBy` is a date a person found: the last
-     day registration is open, or the day the tickets go. `bookAhead` on
-     something that starts on a date says it sells out, so the date to
-     beat is the start. Anything undated — a restaurant that fills, a day
-     trip — has nothing to count to and is not listed.
+     `bookAhead` says something sells out or fills. On something that
+     starts on a date, that date is the one to beat. Nobody has a booking
+     deadline for these — a ticket page does not publish one — so none is
+     stored or made up: the count is to the day itself. Anything undated,
+     like a restaurant that fills or a day trip, has nothing to count to
+     and is not listed.
 
      Only what can actually be booked: a record with no booking link has
      nothing to send the reader to. The window is two weeks, the same one
      a weekend plan looks ahead by, and the answer is plain data so the
      app, the calendar feed and the MCP server all say the same thing. */
   const BOOK_WINDOW = 14;
+  const BOOK_LEAD = 7;
+  const bookable = item => item.bookAhead && item.start && /^https:\/\/\S+$/.test(item.booking || '');
+
   function bookingDue(item, today, window = BOOK_WINDOW) {
-    if (!/^https:\/\/\S+$/.test(item.booking || '')) return null;
-    const by = item.bookBy || (item.bookAhead && item.start) || null;
-    if (!by) return null;
-    const days = daysBetween(today, by);
-    if (days < 0 || days > window) return null;
-    return { by, days, basis: item.bookBy ? 'bookBy' : 'start' };
+    if (!bookable(item)) return null;
+    const days = daysBetween(today, item.start);
+    return days < 0 || days > window ? null : { on: item.start, days };
+  }
+
+  /* When to be reminded, for the calendar feed: a week before it starts,
+     or today if that has already gone by. A rule of ours, said as one —
+     the feed calls it a reminder, never a deadline. */
+  function bookReminder(item, today) {
+    if (!bookable(item) || daysBetween(today, item.start) <= 0) return null;
+    const lead = new Date(parse(item.start).getTime() - BOOK_LEAD * DAY_MS);
+    const day = iso(lead);
+    return day > today ? day : today;
   }
 
   /* ---------- who is coming ----------
@@ -382,5 +392,5 @@ const Rank = (() => {
   }
 
   return { score, rank, isLive, isOpenOn, openRightNow, urgency, daysBetween, iso, parse,
-           seasonOf, weatherFit, seasonFit, suits, settingFit, bookingDue, priceLevel, LABEL_TEXT, HOLIDAYS };
+           seasonOf, weatherFit, seasonFit, suits, settingFit, bookingDue, bookReminder, priceLevel, LABEL_TEXT, HOLIDAYS };
 })();
