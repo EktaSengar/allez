@@ -1229,7 +1229,8 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Shoreline_Amphitheatre.jpg/1280px-Shoreline_Amphitheatre.jpg",
       "imageSubject": "Shoreline Amphitheatre",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "zone": "mountain-view"
     },
     {
       "type": "jazz",
@@ -2088,6 +2089,245 @@
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons",
       "zone": "palo-alto"
+    },
+    {
+      "provenance": "editorial",
+      "lastVerified": "2026-09-29",
+      "type": "venue",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "weekend"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "guild-theatre",
+      "title": "The Guild Theatre",
+      "emoji": "🎸",
+      "zone": "menlo-park",
+      "coords": [
+        37.45241,
+        -122.18128
+      ],
+      "coordsFrom": "osm way/111762120 (Nominatim)",
+      "area": "949 El Camino Real, Menlo Park",
+      "priceNote": "Tickets vary by show",
+      "durationMin": 150,
+      "hoursNote": "Open for shows, doors usually 7pm and music at 8 — the calendar is the timetable",
+      "url": "https://www.guildtheatre.com/",
+      "booking": "https://www.guildtheatre.com/calendar",
+      "source": "The Guild Theatre; The Almanac; Cinema Treasures",
+      "why": "Menlo Park’s 1926 cinema, rebuilt inside its old walls and reopened in 2022 as a live-music room run by a non-profit. It holds about 500 standing or 200 seated, so touring bands that fill much bigger halls elsewhere play here at arm’s length. It is on El Camino, so from Palo Alto you are home ten minutes after the encore.",
+      "labels": [],
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Downtown_Menlo_Park_California.jpg/1280px-Downtown_Menlo_Park_California.jpg",
+      "imageSubject": "Downtown Menlo Park",
+      "imageKind": "context",
+      "imageCredit": "LPS.1 · CC0"
+    },
+    {
+      "provenance": "editorial",
+      "lastVerified": "2026-09-29",
+      "type": "venue",
+      "categories": [
+        "nightlife",
+        "theatre",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "family",
+        "weekend",
+        "afternoon"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "mountain-view-cpa",
+      "title": "Mountain View Center for the Performing Arts",
+      "emoji": "🎭",
+      "zone": "mountain-view",
+      "coords": [
+        37.3901,
+        -122.0822
+      ],
+      "coordsFrom": "osm way/148259760 (Nominatim)",
+      "area": "500 Castro Street, Mountain View",
+      "priceNote": "Tickets vary by show",
+      "durationMin": 150,
+      "hoursNote": "Open for performances — the calendar is the timetable",
+      "url": "https://www.mvcpa.com/",
+      "booking": "https://tickets.mvcpa.com/",
+      "source": "City of Mountain View",
+      "why": "Three stages at the top of Castro Street: a 600-seat MainStage, a 200-seat SecondStage and the ParkStage. TheatreWorks Silicon Valley and Peninsula Youth Theatre are the resident companies, and dance, choirs, music and family shows fill the rest of the calendar. Dinner on Castro first and you walk to your seat.",
+      "labels": [],
+      "priceLevel": 3,
+      "kids": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Mountain_View_Center_for_the_Performing_Art_-_panoramio.jpg/1280px-Mountain_View_Center_for_the_Performing_Art_-_panoramio.jpg",
+      "imageSubject": "Mountain View Center for the Performing Arts",
+      "imageKind": "subject",
+      "imageCredit": "Aleh Haiko · CC BY-SA 3.0"
+    },
+    {
+      "provenance": "editorial",
+      "lastVerified": "2026-09-29",
+      "type": "venue",
+      "categories": [
+        "nightlife",
+        "music",
+        "comedy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "free",
+        "solo",
+        "family"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "red-rock-open-mic",
+      "title": "Open Mic Monday at Red Rock Coffee",
+      "emoji": "🎤",
+      "zone": "mountain-view",
+      "coords": [
+        37.39364,
+        -122.07886
+      ],
+      "coordsFrom": "osm node/343135403 (Nominatim)",
+      "area": "Red Rock Coffee, 201 Castro Street, Mountain View (upstairs)",
+      "price": 0,
+      "priceNote": "Free to watch or play",
+      "mode": "do",
+      "group": "stage",
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Mondays 6 to 9.30pm",
+      "days": [
+        1
+      ],
+      "times": "Every Monday, 6 to 9.30pm upstairs; lottery sign-ups 5.45 to 8pm. None on 28 December",
+      "firstStep": "Put your name in the jar from 5.45pm for a five-minute set, or just come and listen",
+      "durationMin": 120,
+      "hoursNote": "Every Monday, 6 to 9.30pm; sign-ups 5.45 to 8pm. None on 28 December",
+      "url": "https://redrockcoffee.com/openmic",
+      "booking": false,
+      "source": "Red Rock Coffee",
+      "why": "One of the Bay Area’s longest-running open mics, upstairs in a Castro Street coffee house every Monday night. Musicians, poets and comics draw five-minute slots by lottery, so nobody needs to queue early. It is kept family-friendly and has no age limit, so it works as a school-night outing with a teenager who plays. Go twice and you will start recognising the regulars.",
+      "labels": [],
+      "priceLevel": 0,
+      "kids": true,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Corner_of_Castro_and_Villa_in_Mountain_View.jpg/1280px-Corner_of_Castro_and_Villa_in_Mountain_View.jpg",
+      "imageSubject": "Castro and Villa, the corner Red Rock Coffee stands on",
+      "imageKind": "context",
+      "imageCredit": "Runner1928 · CC BY-SA 3.0"
+    },
+    {
+      "provenance": "editorial",
+      "lastVerified": "2026-09-29",
+      "type": "jazz",
+      "categories": [
+        "nightlife",
+        "music",
+        "blues"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "club-fox-blues-jam",
+      "title": "Club Fox Blues Jam",
+      "emoji": "🎸",
+      "zone": "redwood-city",
+      "coords": [
+        37.48635,
+        -122.2295
+      ],
+      "coordsFrom": "osm node/1726929774 (Nominatim)",
+      "area": "Club Fox, 2209 Broadway, Redwood City",
+      "priceNote": "Cover at the door",
+      "rhythm": "weekly",
+      "cadence": "Wednesdays from 7pm",
+      "days": [
+        3
+      ],
+      "times": "Every Wednesday from 7pm: a featured band, then the jam",
+      "durationMin": 180,
+      "hoursNote": "Every Wednesday from 7pm",
+      "url": "https://rwcbluesjam.com/",
+      "booking": false,
+      "source": "The Club Fox Blues Jam",
+      "why": "A Wednesday-night blues jam that turned twenty in 2026, in the cabaret room beside Redwood City’s Fox Theatre. A regional or touring rhythm-and-blues band plays a set, then local players take the stage in turns. There are tables and a dance floor. It is the Peninsula’s steadiest weekly night of live music.",
+      "labels": [],
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Fox_Theatre%2C_Redwood_City_front_1.JPG/1280px-Fox_Theatre%2C_Redwood_City_front_1.JPG",
+      "imageSubject": "The Fox Theatre, next door on Broadway",
+      "imageKind": "context",
+      "imageCredit": "BrokenSphere · CC BY-SA 3.0"
+    },
+    {
+      "provenance": "editorial",
+      "lastVerified": "2026-09-29",
+      "type": "bar",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "free"
+      ],
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "hub-rwc-band-jam",
+      "title": "Band Jam Night at The Hub",
+      "emoji": "🥁",
+      "zone": "redwood-city",
+      "coords": [
+        37.48649,
+        -122.23443
+      ],
+      "coordsFrom": "osm way/161727210 (Nominatim)",
+      "area": "The Hub, 2650 Broadway, Redwood City (upstairs)",
+      "price": 0,
+      "priceNote": "No cover · 21+",
+      "mode": "do",
+      "group": "stage",
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Tuesdays 8.30 to 10.30pm",
+      "days": [
+        2
+      ],
+      "times": "Every Tuesday, 8.30 to 10.30pm, on the upstairs stage",
+      "firstStep": "Bring your instrument; the drums, keyboard and PA are there",
+      "durationMin": 120,
+      "hoursNote": "Every Tuesday, 8.30 to 10.30pm",
+      "url": "https://www.thehubrwc.com/jamnight",
+      "booking": false,
+      "source": "The Hub RWC",
+      "why": "A standing Tuesday jam on a proper upstairs stage, with a full PA, drum kit and keyboard. You bring a guitar or a horn and join in with whoever turned up. There is no cover, and it is 21 and over. It is the place for the parent who used to be in a band.",
+      "labels": [],
+      "priceLevel": 0,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Redwood_City_-_Fox_Theatre_-_20150606150320.jpg/1280px-Redwood_City_-_Fox_Theatre_-_20150606150320.jpg",
+      "imageSubject": "Broadway, downtown Redwood City",
+      "imageKind": "context",
+      "imageCredit": "Ramesh lalwani · CC BY-SA 4.0"
     }
   ]
 }

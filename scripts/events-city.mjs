@@ -113,6 +113,36 @@ const TYPES = {
   'Festival':                   ['festival','🎉']
 };
 
+/* The open talks are the Peninsula's tech meetups. Luma carries the
+   evenings but may not be shown (see DATA-LICENSE.md), and Stanford's
+   public calendar has what a meetup is for: a founder at the
+   Entrepreneurial Thought Leaders series on a Wednesday, an HAI seminar,
+   a privacy lecture. They arrive as talks, seminars and symposia, and
+   the last two kinds are dropped above because most of them are
+   somebody's department at work — so they come back in only when the
+   title says they are about technology, and are filed as `tech`, which
+   is the Events tab's Tech group.
+
+   Two things have to agree. The title says it is about technology —
+   the title, not the description, and `AI` in capitals so "said" and
+   "Thai" stay out — and Stanford files it as technology, either by
+   subject or by who runs it (the venture programme behind ETL, HAI,
+   Data Science, Computer Science). The title alone let in a Confucian
+   reading of AI companions, a contemplation workshop "in the era of AI"
+   and a history of Korea's nuclear diplomacy: each true to its words,
+   none of them a meetup. */
+const TECH_TYPES = new Set(['Lecture/Presentation/Talk', 'Class/Seminar', 'Conference/Symposium']);
+const TECH = [/\b(H?AI|LLMs?)\b/, new RegExp('\\b(' + [
+  'artificial intelligence', 'machine learning', 'comput(er|ing|ational)\\w*', 'robot(s|ics)?',
+  'software', 'start-?ups?', 'entrepreneur\\w*', 'cyber\\w*', 'privacy', 'data science',
+  'algorithm\\w*', 'semiconductor\\w*', 'quantum'
+].join('|') + ')\\b', 'i')];
+const TECH_HOSTS = /technology ventures|artificial intelligence|data science|computer science/i;
+const isTech = e => TECH.some(r => r.test(e.title || ''))
+  && ((e.filters && e.filters.event_types) || []).some(t => TECH_TYPES.has(t.name))
+  && (((e.filters && e.filters.event_subject) || []).some(t => t.name === 'Engineering/Technology')
+      || (e.departments || []).some(d => TECH_HOSTS.test(d.name || '')));
+
 /* A university calendar is a workplace noticeboard as well as a
    programme, and the audience tag does not separate the two: "Pediatric
    Grand Rounds (CME)" is filed as General Public because in a literal
@@ -160,8 +190,8 @@ async function stanford(log) {
 
   kept = step('open to the public', kept.filter(e =>
     f(e, 'event_audience').some(a => /general public|everyone/i.test(a))));
-  kept = step('a reason to go, not a kind of admin', kept.filter(e =>
-    f(e, 'event_types').some(t => TYPES[t])));
+  kept = step('a reason to go, not a kind of admin — or a talk about technology', kept.filter(e =>
+    f(e, 'event_types').some(t => TYPES[t]) || isTech(e)));
   kept = step('not somebody at work', kept.filter(e => !SOMEBODY_S_JOB.test(e.title)));
   kept = step('not cancelled', kept.filter(e =>
     e.status !== 'canceled' && !/^\s*\[?cancell?ed\]?/i.test(e.title)));
@@ -179,10 +209,14 @@ async function stanford(log) {
   /* The Cantor alone would otherwise take a dozen rows with its own
      tours. One programme per venue, which is the cap Paris uses and for
      the same reason: a museum's season is a venue, not twelve events. */
+  /* Talks keep their own count and a longer one: the ETL series fills
+     the same auditorium every Wednesday, and four weeks of it is the
+     point, where four weeks of one museum's tours is not. */
   const seen = new Map();
-  kept = step('at most two per venue', kept.filter(e => {
-    const v = e.location_name || e.location || e.id;
-    if ((seen.get(v) || 0) >= 2) return false;
+  kept = step('at most two per venue (four talks)', kept.filter(e => {
+    const tech = isTech(e);
+    const v = (tech ? 'tech:' : '') + (e.location_name || e.location || e.id);
+    if ((seen.get(v) || 0) >= (tech ? 4 : 2)) return false;
     seen.set(v, (seen.get(v) || 0) + 1);
     return true;
   }));
@@ -190,8 +224,9 @@ async function stanford(log) {
   steps.forEach(([n, label]) => log.push([n, label]));
 
   return kept.map(e => {
-    const type = f(e, 'event_types').find(t => TYPES[t]);
-    const [cat, emoji] = TYPES[type];
+    const tech = isTech(e);
+    const type = f(e, 'event_types').find(t => TYPES[t]) || f(e, 'event_types').find(t => TECH_TYPES.has(t));
+    const [cat, emoji] = tech ? ['tech', '🤖'] : TYPES[type];
     const lat = +e.geo.latitude, lon = +e.geo.longitude;
     const start = day(e.first_date), end = day(e.last_date) || start;
     return {
@@ -199,7 +234,7 @@ async function stanford(log) {
       title: unent(e.title).slice(0, 120),
       emoji,
       type: 'event',
-      categories: [cat],
+      categories: tech ? ['tech', 'learn'] : [cat],
       zone: zoneOf(lat, lon),
       area: unent(e.location_name || e.location || '').slice(0, 80) || null,
       coords: [lat, lon],
