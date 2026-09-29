@@ -1913,7 +1913,7 @@ const App = (() => {
     const c = ctxFor(dISO);
     const ok = i => Near.tierOf(i) === 'sourced' && i.tells && !i.touristy
       && Rec.stillStanding(i)
-      && !Store.isDone(i.id) && Store.rating(i.id) !== 'never'
+      && !Store.isDone(i.id) && Store.rating(i.id) !== 'never' && Rank.suits(i, Store.prefs())
       && (i.minutesFromHome ?? 99) <= 30 && Rank.isOpenOn(i, dISO);
 
     /* The best sixty within reach, then a window of four that walks along
@@ -1966,8 +1966,8 @@ const App = (() => {
 
     const day = (d, p) => {
       const wx = p.weather;
-      const slots = p.stops.map(s => `<div class="slot"><div class="t">${SLOT_LABEL[s.slot]}</div>
-          <div class="s"><b>${esc(s.item.title)}</b>${esc((s.item.why || '').split('. ')[0])}.</div></div>`).join('');
+      const slots = p.stops.map(s => `<div class="slot"><div class="t">${s.kind === 'dessert' ? 'After dinner' : SLOT_LABEL[s.slot]}</div>
+          <div class="s"><b>${esc(s.item.title)}</b>${esc((s.item.why || '').split('. ')[0])}.${s.arriveBy ? ` <em>Be there by ${esc(s.arriveBy)} — sunset is ${esc(s.sunset)}.</em>` : ''}</div></div>`).join('');
 
       return `<div class="day">
         <h3>${d.toLocaleDateString('en-GB', { weekday: 'long' })}</h3>
