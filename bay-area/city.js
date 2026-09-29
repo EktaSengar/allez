@@ -561,7 +561,9 @@ const City = (() => {
   const discover = { buildings: true };
 
   return { id, name, searchRegion, ua, bbox, nightNotes, discover, serviceWorker, zone, bases, climate, reach, practices, luma, conferences, lumaPage, events,
-           centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather };
+           centre, views, hiddenHeading, holidays, shutsOnHoliday, money, weather,
+           /* Has the dog, kids and setting data the Weekend's who's-coming row acts on. */
+           prefsRow: true };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;

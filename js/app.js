@@ -1951,6 +1951,47 @@ const App = (() => {
   const SLOT_LABEL = { morning: 'Morning', afternoon: 'Afternoon', evening: 'Evening' };
   const PICK_LABEL = { free: 'Best free', food: 'Best food', unusual: 'Most unusual', daytrip: 'Best day trip' };
 
+  /* ---------- who's coming ----------
+
+     The one place a reader says who they are planning for. It writes
+     Store prefs — on this device, in localStorage, nothing sent anywhere —
+     and the plan, Eat and Somewhere new read them back: a dog is a hard
+     filter (Rank.suits), a child keeps out what is not for their age, and
+     the interests are weights. Shown only where the pack has the data to
+     answer it, so other cities' weekends are exactly what they were. */
+  const KID_AGES = [['0–4', 2], ['5–8', 6], ['9–12', 10], ['13+', 15]];
+  const INTERESTS = [['tech', 'Tech'], ['music', 'Live music'], ['books', 'Books'], ['art', 'Art'],
+                     ['climbing', 'Climbing'], ['hike', 'Hikes'], ['cycling', 'Bike']];
+  const ageBand = a => KID_AGES.reduce((best, [, v]) => (Math.abs(v - a) < Math.abs(best - a) ? v : best), KID_AGES[0][1]);
+
+  function whoRow() {
+    if (!City.prefsRow) return '';
+    const p = Store.prefs();
+    const company = [].concat(p.company || []);
+    const kid = company.includes('family');
+    const chip = (attr, on, label) => `<button class="chip ${on ? 'on' : ''}" data-who="${attr}" aria-pressed="${on}">${label}</button>`;
+    return `<div class="who" id="who">
+      <span class="who-label">Who's coming</span>
+      <div class="chips">
+        ${chip('kid', kid, '🧒 A kid')}
+        ${kid ? `<select id="who-age" aria-label="Their age">${KID_AGES.map(([l, v]) =>
+          `<option value="${v}" ${ageBand(p.kidAge ?? 6) === v ? 'selected' : ''}>${l}</option>`).join('')}</select>` : ''}
+        ${chip('dog', !!p.dog, '🐕 A dog')}
+      </div>
+      <span class="who-label">Into</span>
+      <div class="chips">${INTERESTS.map(([k, l]) => chip('i:' + k, (p.interests || []).includes(k), l)).join('')}</div>
+      ${p.dog ? '<p class="who-note">With a dog, only places that say they take one are planned — so the list is short until more are checked.</p>' : ''}
+    </div>`;
+  }
+
+  function setWho(fn) {
+    const p = Object.assign({}, Store.prefs());
+    fn(p);
+    Store.setPrefs(p);
+    buildContext();
+    render();
+  }
+
   function renderWeekend(w) {
     const plan = Plan.weekend(weekendPool(), {
       sat: w.satISO, sun: w.sunISO,
@@ -1976,7 +2017,8 @@ const App = (() => {
       </div>`;
     };
 
-    return (best && hasRealPhoto(best.item) ? hero(best.item) : '')
+    return whoRow()
+      + (best && hasRealPhoto(best.item) ? hero(best.item) : '')
       + stripHead('How the two days could go')
       + `<div class="plan">${day(w.sat, plan.days[0])}${day(w.sun, plan.days[1])}</div>`
       + somewhereNew(w.satISO)
@@ -3652,6 +3694,30 @@ const App = (() => {
       const b = e.target.closest('[data-mode]'); if (!b) return;
       SPORT_MODE = b.dataset.mode;
       render();
+    });
+
+    // Weekend → who's coming
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-who]'); if (!b) return;
+      const k = b.dataset.who;
+      setWho(p => {
+        const company = [].concat(p.company || []);
+        if (k === 'kid') {
+          if (company.includes('family')) { p.company = company.filter(c => c !== 'family'); delete p.kidAge; }
+          else { p.company = [...company, 'family']; p.kidAge = 6; }
+          if (!p.company.length) delete p.company;
+        } else if (k === 'dog') {
+          if (p.dog) delete p.dog; else p.dog = true;
+        } else if (k.startsWith('i:')) {
+          const w = k.slice(2), list = p.interests || [];
+          p.interests = list.includes(w) ? list.filter(x => x !== w) : [...list, w];
+          if (!p.interests.length) delete p.interests;
+        }
+      });
+    });
+    document.addEventListener('change', e => {
+      if (e.target.id !== 'who-age') return;
+      setWho(p => { p.kidAge = Number(e.target.value); });
     });
 
     // Sport → Trails: hike, ride or both
