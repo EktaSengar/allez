@@ -2281,6 +2281,54 @@
     {
       "provenance": "editorial",
       "lastVerified": "2026-09-29",
+      "type": "jazz",
+      "categories": [
+        "nightlife",
+        "music",
+        "jazz"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "meyhouse-jazz",
+      "title": "Meyhouse Jazz",
+      "emoji": "🎷",
+      "zone": "palo-alto",
+      "coords": [
+        37.4433,
+        -122.16104
+      ],
+      "coordsFrom": "osm way/132397113 (the Meyhouse restaurant)",
+      "area": "Meyhouse, 640 Emerson Street, Palo Alto",
+      "priceNote": "Ticket for the show; dinner and drinks charged separately",
+      "rhythm": "weekly",
+      "cadence": "Most Fridays and Saturdays, two seatings",
+      "days": [
+        5,
+        6
+      ],
+      "times": "Seatings at 5pm (show around 6:30) and 8pm (show around 8:30); each set runs about 75 minutes",
+      "durationMin": 150,
+      "hoursNote": "Most Friday and Saturday nights; seatings at 5pm and 8pm",
+      "url": "https://www.meyhousejazz.com/event-list",
+      "booking": "https://www.meyhousejazz.com/event-list",
+      "source": "meyhousejazz.com; meyhouserestaurant.com",
+      "why": "On most Friday and Saturday nights the Turkish restaurant on Emerson becomes a jazz supper club. The chef-owner books the music himself: touring trios and quartets, singers working through a songbook, and the odd classical Sunday. There are two seatings, at five and at eight, each with a set of about an hour and a quarter, and you eat meze while the band plays. Buy the ticket ahead; food and drink go on a separate bill. Along with the Club Fox jam, it is one of the few regular live rooms on the Peninsula.",
+      "labels": [
+        "couple",
+        "bookahead"
+      ],
+      "bookAhead": true,
+      "priceLevel": 3
+    },
+    {
+      "provenance": "editorial",
+      "lastVerified": "2026-09-29",
       "type": "bar",
       "categories": [
         "nightlife",
