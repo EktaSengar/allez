@@ -603,9 +603,9 @@
       "sameAs": [
         "osm-rose-and-crown-74889--244323"
       ],
-      "hours": "Mo-We 14:00-23:00; Th 14:00-24:00; Fr 14:00-01:00; Sa 13:00-01:00; Su 13:00-23:00",
-      "hoursFrom": "therosepa.com",
-      "hoursChecked": "2026-09-25",
+      "hours": "Mo-We 14:00-23:00; Th 14:00-24:00; Fr 14:00-01:00; Sa 13:00-01:00; Su 11:00-23:00",
+      "hoursFrom": "the pub's posted hours",
+      "hoursChecked": "2026-09-29",
       "priceLevel": 1,
       "booking": false
     },
@@ -2376,6 +2376,88 @@
       "imageSubject": "Broadway, downtown Redwood City",
       "imageKind": "context",
       "imageCredit": "Ramesh lalwani · CC BY-SA 4.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "palo-alto",
+      "indoor": false,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "socialize",
+        "family"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4.5,
+      "uniqueness": 5,
+      "id": "alpine-inn-portola-valley",
+      "title": "Rossotti's Alpine Inn",
+      "emoji": "🍺",
+      "area": "3915 Alpine Road, Portola Valley",
+      "priceNote": "Cheap",
+      "why": "A roadhouse in the foothills that has been pouring drinks since 1852, making it one of the oldest taverns in California and a state historical landmark. Stanford students have been driving up since the university opened; on a sunny weekend the big creekside beer garden fills with them, plus cyclists and families. Burgers, tacos and pitchers, ordered at the window.",
+      "url": "https://www.alpineinnpv.com/history",
+      "source": "alpineinnpv.com; Palo Alto Online (2024); Atlas Obscura; confirmed against OpenStreetMap",
+      "coords": [
+        37.38203,
+        -122.19389
+      ],
+      "coordsFrom": "the map pin for Rossotti's Alpine Inn",
+      "hours": "Tu-Th 11:30-21:00; Fr 11:00-21:30; Sa 10:30-21:30; Su 10:30-21:00",
+      "hoursFrom": "OpenStreetMap",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-854-4004",
+      "booking": false,
+      "durationMin": 120,
+      "priceLevel": 1
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "socialize"
+      ],
+      "labels": [],
+      "quality": 3.5,
+      "uniqueness": 4,
+      "id": "nola-palo-alto",
+      "title": "NOLA",
+      "emoji": "🎺",
+      "area": "535 Ramona Street",
+      "cuisine": "cajun",
+      "priceNote": "Moderate",
+      "why": "A New Orleans restaurant and bar on Ramona, loud and colourful, with a big courtyard hung with lanterns. It's where Stanford groups go for birthdays and team dinners: jambalaya, gumbo, oysters and a long list of cocktails, with brunch at weekends.",
+      "url": "https://www.nolas.com/",
+      "source": "nolas.com; OpenTable; confirmed against OpenStreetMap",
+      "coords": [
+        37.44507,
+        -122.16156
+      ],
+      "coordsFrom": "the map pin for Nola's",
+      "hours": "Tu-Th 11:30-21:00; Fr 11:30-22:00; Sa 11:00-22:00; Su 11:00-20:00",
+      "hoursFrom": "OpenTable",
+      "hoursChecked": "2026-09-29",
+      "booking": "https://www.opentable.com/r/nola-palo-alto",
+      "durationMin": 90,
+      "priceLevel": 2
     }
   ]
 }

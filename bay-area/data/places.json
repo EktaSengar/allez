@@ -1348,6 +1348,628 @@
       ],
       "coordsFrom": "osm way/26662981",
       "hoursNote": "Open daily; the playground's own hours are on the city's park page"
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "couple",
+        "socialize"
+      ],
+      "labels": [
+        "couple"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "saint-michaels-alley-palo-alto",
+      "title": "Saint Michael's Alley",
+      "emoji": "🍷",
+      "area": "140 Homer Avenue",
+      "cuisine": "californian",
+      "priceNote": "Moderate; weekend brunch 10:00–14:00",
+      "why": "Palo Alto's oldest story in a dining room. It opened in 1959 on University Avenue as the first coffeehouse on the Peninsula, where Joan Baez sang early on and the Grateful Dead played, and moved to the corner of Homer and Emerson in 1974. Today it is a relaxed neighbourhood restaurant with seasonal Californian cooking and a dinner menu that changes every three months. Weekend brunch is the local favourite, and the Annex next door on Emerson does it too.",
+      "url": "https://stmikes.com/",
+      "source": "stmikes.com; Palo Alto History (paloaltohistory.org); confirmed against OpenStreetMap",
+      "coords": [
+        37.44147,
+        -122.15976
+      ],
+      "coordsFrom": "the map pin for Saint Michael's Alley",
+      "hours": "Tu-Su 17:00-21:00; Sa-Su 10:00-14:00",
+      "hoursFrom": "stmikes.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-326-2530",
+      "booking": false,
+      "durationMin": 90,
+      "priceLevel": 2
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "food",
+        "family"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 3.5,
+      "uniqueness": 2,
+      "id": "mendocino-farms-palo-alto",
+      "title": "Mendocino Farms",
+      "emoji": "🥪",
+      "area": "167 Hamilton Avenue",
+      "cuisine": "sandwich",
+      "priceNote": "Inexpensive",
+      "why": "A bright, easy sandwich-and-salad counter a block off University, good for a quick lunch that still feels generous. The menu turns over with the seasons, alongside regulars like the chicken pesto sandwich and the chinese chicken salad, and there are plenty of vegetarian options. Two hours of free parking in the High and Hamilton lot behind it.",
+      "url": "https://www.mendocinofarms.com/location-directory/norcal/167-hamilton-ave-palo-alto-ca-94301",
+      "source": "mendocinofarms.com; confirmed against OpenStreetMap (node/13412735438)",
+      "coords": [
+        37.44366,
+        -122.16202
+      ],
+      "coordsFrom": "osm node/13412735438",
+      "hours": "Mo-Su 10:00-21:00",
+      "hoursFrom": "mendocinofarms.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-543-8135",
+      "booking": false,
+      "durationMin": 40,
+      "priceLevel": 1
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "morning",
+        "food",
+        "socialize"
+      ],
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "sweet-maple-palo-alto",
+      "title": "Sweet Maple",
+      "emoji": "🥓",
+      "area": "150 University Avenue",
+      "cuisine": "brunch",
+      "priceNote": "Moderate",
+      "why": "The Palo Alto branch of the Fillmore brunch spot, open since January 2022 and still with a queue on weekends. Everyone comes for the Millionaire's Bacon, thick slabs baked with brown sugar and cayenne, which the restaurant has trademarked; the deep-fried French toast is the other famous plate. Go early or on a weekday to skip the wait.",
+      "url": "https://www.sweetmaplesf.com/",
+      "source": "Palo Alto Online (February 2022); sweetmaplesf.com; confirmed against OpenStreetMap",
+      "coords": [
+        37.44402,
+        -122.16301
+      ],
+      "coordsFrom": "the map pin for Sweet Maple",
+      "hours": "Mo-Su 08:30-14:30",
+      "hoursFrom": "OpenStreetMap",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 75,
+      "priceLevel": 2
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "socialize",
+        "family"
+      ],
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "rangoon-ruby-palo-alto",
+      "title": "Rangoon Ruby",
+      "emoji": "🥗",
+      "area": "445 Emerson Street",
+      "cuisine": "burmese",
+      "priceNote": "Moderate",
+      "why": "Burmese cooking downtown, in a warm room with a good cocktail list. Start with the tea leaf salad, fermented tea leaves with crunchy beans, nuts, tomato and cabbage, mixed at the table; after that, the platha with curry dip, the rainbow salad and the garlic noodles are the usual order. The mains are made for sharing, so bring a few people.",
+      "url": "https://rangoonrubypa.com/",
+      "source": "rangoonrubypa.com; Palo Alto Online review (2014); confirmed against OpenStreetMap",
+      "coords": [
+        37.44513,
+        -122.16306
+      ],
+      "coordsFrom": "the map pin for Rangoon Ruby",
+      "hours": "Su-Th 11:30-14:30,16:30-21:30; Fr-Sa 11:30-14:30,16:30-22:00",
+      "hoursFrom": "OpenStreetMap",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 75,
+      "priceLevel": 2
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "couple",
+        "socialize"
+      ],
+      "labels": [
+        "couple",
+        "bookahead"
+      ],
+      "quality": 4.5,
+      "uniqueness": 4,
+      "id": "zaytinya-stanford",
+      "title": "Zaytinya",
+      "emoji": "🫓",
+      "area": "Stanford Shopping Center",
+      "cuisine": "mediterranean",
+      "priceNote": "Mezze about $10–25 a plate",
+      "bookAhead": true,
+      "why": "José Andrés's mezze restaurant, which began in Washington in 2002 and opened its first Bay Area room at the shopping centre on 1 December 2025, in part of the old Macy's. The menu moves between Turkish, Greek and Lebanese small plates: puffy pita straight from the oven, hummus, crispy brussels afelia and lamb kebabs. Order a lot, share everything, and book ahead for dinner.",
+      "url": "https://www.zaytinya.com/palo-alto/",
+      "source": "zaytinya.com; Palo Alto Online (November 2025); Food Gal (December 2025)",
+      "coords": [
+        37.44319,
+        -122.17092
+      ],
+      "coordsFrom": "the shopping centre (osm way/110163462); the restaurant is not mapped yet",
+      "hours": "Mo-Th 16:00-21:00; Fr-Sa 16:00-22:00; Su 16:00-21:00; We-Su 11:30-15:00",
+      "hoursFrom": "zaytinya.com",
+      "hoursChecked": "2026-09-29",
+      "booking": "https://www.opentable.com/r/zaytinya-palo-alto",
+      "durationMin": 105,
+      "priceLevel": 3
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "family",
+        "socialize"
+      ],
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "delarosa-stanford",
+      "title": "Delarosa",
+      "emoji": "🍕",
+      "area": "136 Stanford Shopping Center",
+      "cuisine": "pizza",
+      "priceNote": "Pizzas $20–25",
+      "why": "Roman-style pizza with a thin, crackly crust from the team behind Wildseed and Super Duper, open since November 2025 where California Pizza Kitchen used to be. Beyond the pizzas there are antipasti, skewers and pasta; try the Capricciosa or the Bartender, with burrata and spicy fennel sausage. Easy with children: there's a kids' menu and crayons on the table.",
+      "url": "https://www.delarosasf.com/location/palo-alto/",
+      "source": "delarosasf.com; Palo Alto Online (July 2025); Metro Silicon Valley",
+      "coords": [
+        37.44336,
+        -122.17226
+      ],
+      "coordsFrom": "the old California Pizza Kitchen pin (the same unit)",
+      "hours": "Mo-Th 11:00-21:00; Fr-Sa 11:00-22:00; Su 11:00-21:00",
+      "hoursFrom": "delarosasf.com",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 75,
+      "priceLevel": 2
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "family"
+      ],
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "dumpling-time-stanford",
+      "title": "Dumpling Time",
+      "emoji": "🥟",
+      "area": "Stanford Shopping Center",
+      "cuisine": "chinese",
+      "priceNote": "Moderate",
+      "why": "The San Francisco dumpling house's first Peninsula branch, open since May 2025. Dumplings are folded by hand where you can watch: soup dumplings, har gow and the pan-fried potstickers are the ones to get, with noodles and bao for the rest of the table. A quick, reliable lunch between shops.",
+      "url": "https://www.simon.com/mall/stanford-shopping-center/stores/dumpling-time",
+      "source": "Palo Alto Online (April 2025); the Stanford Shopping Center directory",
+      "coords": [
+        37.44319,
+        -122.17092
+      ],
+      "coordsFrom": "the shopping centre (osm way/110163462); the restaurant is not mapped yet",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 2,
+      "hours": "Mo-Su 11:00-21:00",
+      "hoursFrom": "dumplingtime.com",
+      "hoursChecked": "2026-09-29"
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "food",
+        "couple"
+      ],
+      "labels": [
+        "couple",
+        "bookahead"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "rh-rooftop-stanford",
+      "title": "RH Rooftop Restaurant",
+      "emoji": "🌿",
+      "area": "180 El Camino Real",
+      "cuisine": "american",
+      "priceNote": "Mains $25–45",
+      "bookAhead": true,
+      "why": "Lunch in a glass box on the third floor of the RH furniture gallery: a skylit courtyard with heritage olive trees, chandeliers and a limestone fountain, with views out to the hills. The food is classic and polished, and the truffle fries, the lobster roll and the crispy artichokes are what people order. It's more about the room than the kitchen, which makes it a good place for a long weekend brunch.",
+      "url": "https://rh.com/us/en/paloalto/restaurant",
+      "source": "rh.com; The Infatuation; SFGate; confirmed against OpenStreetMap",
+      "coords": [
+        37.44497,
+        -122.17219
+      ],
+      "coordsFrom": "the map pin for RH Rooftop Restaurant",
+      "hours": "Mo-Th 11:00-21:00; Fr 11:00-22:00; Sa 10:00-22:00; Su 10:00-21:00",
+      "hoursFrom": "the Stanford Shopping Center directory",
+      "hoursChecked": "2026-09-29",
+      "booking": "https://www.opentable.com/r/rh-rooftop-restaurant-at-rh-palo-alto",
+      "durationMin": 90,
+      "priceLevel": 3
+    },
+    {
+      "id": "la-baguette-stanford",
+      "title": "La Baguette",
+      "emoji": "🥐",
+      "type": "bakery",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "bakery"
+      ],
+      "zone": "palo-alto",
+      "area": "170 Stanford Shopping Center",
+      "why": "A busy French bakery-café in the middle of the shopping centre, with tables outside. Breads and pastries are baked on site every day without preservatives: croissants, pains au chocolat and fruit tarts to go with a coffee, or a sandwich on a fresh baguette for lunch between shops.",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "food"
+      ],
+      "indoor": false,
+      "labels": [
+        "cheap"
+      ],
+      "quality": 3.5,
+      "uniqueness": 2,
+      "url": "https://www.simon.com/mall/stanford-shopping-center/stores/la-baguette",
+      "source": "the Stanford Shopping Center directory; confirmed against OpenStreetMap",
+      "coords": [
+        37.44289,
+        -122.1717
+      ],
+      "coordsFrom": "the map pin for La Baguette",
+      "lastVerified": "2026-09-29",
+      "hours": "Mo-Fr 08:30-19:00; Sa 08:30-19:30; Su 08:30-18:00",
+      "hoursFrom": "the Stanford Shopping Center directory",
+      "hoursChecked": "2026-09-29",
+      "durationMin": 25,
+      "priceLevel": 1,
+      "booking": false
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "family"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "kirks-steakburgers-palo-alto",
+      "title": "Kirk's Steakburgers",
+      "emoji": "🍔",
+      "area": "2680 Middlefield Road",
+      "cuisine": "burger",
+      "priceNote": "Cheap",
+      "why": "Burgers ground by hand every day and grilled over an open charcoal fire, as they have been since the family opened the first Kirk's on El Camino in 1948. Nothing fancy: a thick steakburger, fries and a shake, and a toppings bar to finish it yourself. A Midtown institution for students and families alike.",
+      "url": "https://www.kirks-steakburgers.com/palo-alto-menu",
+      "source": "kirks-steakburgers.com; confirmed against OpenStreetMap",
+      "coords": [
+        37.43353,
+        -122.13006
+      ],
+      "coordsFrom": "the map pin for Kirk's Steakburgers",
+      "hours": "Mo-Th 11:00-20:00; Fr-Sa 11:00-21:00; Su 11:00-20:00",
+      "hoursFrom": "Toast",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 45,
+      "priceLevel": 1
+    },
+    {
+      "type": "cafe",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "cafe"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "food",
+        "work"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "philz-coffee-forest-palo-alto",
+      "title": "Philz Coffee",
+      "emoji": "☕",
+      "area": "101 Forest Avenue",
+      "priceNote": "Coffee $5–7",
+      "why": "The San Francisco chain that makes every cup to order, one pour-over at a time, in a blend you pick from the board. The Forest Avenue shop opens before five in the morning and fills with laptops by nine. Try the Mint Mojito iced coffee, the one everybody orders.",
+      "url": "https://philzcoffee.com/locations",
+      "source": "philzcoffee.com; confirmed against OpenStreetMap",
+      "coords": [
+        37.44207,
+        -122.16154
+      ],
+      "coordsFrom": "the map pin for Philz Coffee",
+      "hours": "Mo-Fr 04:30-18:00; Sa-Su 05:00-18:00",
+      "hoursFrom": "philzcoffee.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-321-2161",
+      "booking": false,
+      "durationMin": 45,
+      "priceLevel": 1
+    },
+    {
+      "type": "cafe",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "cafe"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "food",
+        "work"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "covour-coffee-palo-alto",
+      "title": "Covour Coffee",
+      "emoji": "🍵",
+      "area": "2706 Middlefield Road",
+      "priceNote": "Coffee $5–8",
+      "why": "A small roastery café in Midtown known for pretty, inventive lattes flavoured with ube, pandan and tiramisu, and for its pandan mochi. Calm enough to study in during the week.",
+      "url": "https://covourcoffee.com/",
+      "source": "covourcoffee.com; Yelp; placed by its address point (OpenStreetMap node/2399562224)",
+      "coords": [
+        37.4332,
+        -122.12961
+      ],
+      "coordsFrom": "the address point for 2706 Middlefield Road (osm node/2399562224); the café is not mapped yet",
+      "hours": "Mo-Su 08:00-16:00",
+      "hoursFrom": "covourcoffee.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-279-8503",
+      "booking": false,
+      "durationMin": 45,
+      "priceLevel": 1
+    },
+    {
+      "type": "cafe",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "cafe"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "work"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "yummy-future-palo-alto",
+      "title": "Yummy Future",
+      "emoji": "🤖",
+      "area": "170 University Avenue",
+      "priceNote": "Drinks $6–7.50",
+      "why": "A robot barista makes the drinks at this café, open since October 2025 in the old American Apparel. Order a matcha latte with strawberry cream or a black sesame drink. With about forty seats, charging ports, whiteboards on the walls and hours until nine or ten at night, it has become a late study spot.",
+      "url": "https://www.yummy-future.com/",
+      "source": "Palo Alto Online (November 2025); confirmed against OpenStreetMap",
+      "coords": [
+        37.44438,
+        -122.16296
+      ],
+      "coordsFrom": "the map pin for Yummy Future",
+      "hours": "Mo-Su 08:00-22:00",
+      "hoursFrom": "OpenStreetMap",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 1
+    },
+    {
+      "type": "cafe",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "cafe"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "socialize",
+        "work"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "coho-stanford",
+      "title": "CoHo",
+      "emoji": "🎸",
+      "area": "Tresidder Memorial Union, Stanford",
+      "priceNote": "Cheap",
+      "why": "The Coffee House in Stanford's student union: coffee, beer and wine, sandwiches and a big patio, and the closest thing campus has to a living room. It is busiest on nights with live music or a game on the screens, and it stays open until eleven midweek.",
+      "url": "https://www.cohostanford.com/",
+      "source": "cohostanford.com; confirmed against OpenStreetMap",
+      "coords": [
+        37.42408,
+        -122.17083
+      ],
+      "coordsFrom": "the map pin for CoHo",
+      "hours": "Mo-Tu 08:00-22:00; We-Fr 08:00-23:00; Sa-Su 08:00-20:00",
+      "hoursFrom": "cohostanford.com",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 1
+    },
+    {
+      "type": "museum",
+      "provenance": "editorial",
+      "categories": [
+        "culture",
+        "museum"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "culture",
+        "couple",
+        "family"
+      ],
+      "labels": [
+        "free"
+      ],
+      "quality": 4.5,
+      "uniqueness": 4,
+      "id": "cantor-arts-center",
+      "title": "Cantor Arts Center",
+      "emoji": "🗿",
+      "area": "328 Lomita Drive, Stanford",
+      "priceNote": "Free",
+      "why": "Stanford's art museum, free to everyone, with collections from antiquity to now. Outside is the Rodin Sculpture Garden, one of the largest collections of Rodin bronzes outside Paris, including The Gates of Hell; it's open at all hours and lit at night, which makes it a favourite evening walk. The Anderson Collection of modern American art is next door.",
+      "url": "https://museum.stanford.edu/",
+      "source": "museum.stanford.edu; confirmed against OpenStreetMap",
+      "coords": [
+        37.43302,
+        -122.17091
+      ],
+      "coordsFrom": "the map pin for Cantor Arts Center",
+      "hours": "We-Su 11:00-17:00; Th 11:00-20:00",
+      "hoursFrom": "museum.stanford.edu",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 90,
+      "priceLevel": 0
     }
   ]
 }
