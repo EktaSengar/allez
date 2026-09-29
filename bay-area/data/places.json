@@ -1970,6 +1970,424 @@
       "booking": false,
       "durationMin": 90,
       "priceLevel": 0
+    },
+    {
+      "type": "cafe",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "cafe"
+      ],
+      "zone": "menlo-park",
+      "indoor": false,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "food",
+        "work",
+        "couple"
+      ],
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "cafe-borrone-menlo-park",
+      "title": "Café Borrone",
+      "emoji": "☕",
+      "area": "1010 El Camino Real, Menlo Park",
+      "priceNote": "Inexpensive",
+      "why": "A big European-style café next to Kepler's Books, with a fountain on the patio. It's Menlo Park's meeting place: coffee meetings, founders pitching over breakfast, a slow lunch in the sun. Free parking underground.",
+      "url": "https://www.cafeborrone.com/",
+      "source": "cafeborrone.com; Yelp; confirmed against OpenStreetMap (node/2407184266)",
+      "coords": [
+        37.45367,
+        -122.18231
+      ],
+      "coordsFrom": "osm node/2407184266",
+      "hours": "Mo 07:00-16:00; We-Fr 07:00-20:00; Sa-Su 07:00-16:00",
+      "hoursFrom": "Yelp",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-327-0830",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 1
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "mountain-view",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "socialize"
+      ],
+      "labels": [],
+      "quality": 3.5,
+      "uniqueness": 3,
+      "id": "scratch-mountain-view",
+      "title": "Scratch",
+      "emoji": "🍳",
+      "area": "401 Castro Street, Mountain View",
+      "cuisine": "american",
+      "priceNote": "Moderate",
+      "why": "A comfortable Castro Street restaurant with a patio, doing American comfort food from scratch, as the name says. The weekday happy hour from four to six fills with the tech crowd; weekend brunch is the other draw.",
+      "url": "http://www.scratchmtnview.com/",
+      "source": "scratchmtnview.com; Mountain View Voice; OpenTable",
+      "coords": [
+        37.39119,
+        -122.08074
+      ],
+      "coordsFrom": "the address point for 401 Castro Street (osm way/635376259)",
+      "hours": "Mo-Th 16:00-21:30; Fr 16:00-22:00; Sa 10:00-15:00,16:00-22:00; Su 10:00-15:00,16:00-21:00",
+      "hoursFrom": "scratchmtnview.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-237-3132",
+      "booking": "https://www.opentable.com/scratch-mtn-view",
+      "durationMin": 90,
+      "priceLevel": 2
+    },
+    {
+      "type": "experience",
+      "provenance": "editorial",
+      "categories": [
+        "culture",
+        "food",
+        "free"
+      ],
+      "zone": "mountain-view",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "culture",
+        "family"
+      ],
+      "labels": [
+        "free"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "google-visitor-experience",
+      "title": "Google Visitor Experience",
+      "emoji": "🔵",
+      "area": "2000 North Shoreline Boulevard, Mountain View",
+      "priceNote": "Free to visit",
+      "why": "The one part of Google's campus the public can walk into, at the new Bay View buildings under their curved, scaly solar roof. There is a café open to everyone, a Google shop, a small exhibit and changing art, plus events. Walk on to Shoreline Lake afterwards.",
+      "url": "https://visit.withgoogle.com/",
+      "source": "visit.withgoogle.com; Metro Silicon Valley; confirmed against OpenStreetMap (node/11721651966)",
+      "coords": [
+        37.42192,
+        -122.08033
+      ],
+      "coordsFrom": "osm node/11721651966",
+      "hours": "Mo-Sa 09:00-18:00; Su 10:00-17:00",
+      "hoursFrom": "Yelp",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 0
+    },
+    {
+      "type": "experience",
+      "provenance": "editorial",
+      "categories": [
+        "culture",
+        "food",
+        "free"
+      ],
+      "zone": "cupertino",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "culture",
+        "family"
+      ],
+      "labels": [
+        "free"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "apple-park-visitor-center",
+      "title": "Apple Park Visitor Center",
+      "emoji": "🍎",
+      "area": "10600 North Tantau Avenue, Cupertino",
+      "priceNote": "Free to visit",
+      "why": "The public face of Apple's ring-shaped headquarters, in a glass and stone building by Foster + Partners. There's an Apple Store, an augmented-reality model of the campus, a café, and a roof terrace that looks across to the ring building itself. The campus is closed to visitors, so this is as close as you get.",
+      "url": "https://www.apple.com/retail/appleparkvisitorcenter/",
+      "source": "apple.com; Foster + Partners; confirmed against OpenStreetMap (way/518295584)",
+      "coords": [
+        37.33284,
+        -122.00537
+      ],
+      "coordsFrom": "osm way/518295584",
+      "hours": "Mo-Sa 10:00-19:00; Su 11:00-18:00",
+      "hoursFrom": "apple.com",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 0
+    },
+    {
+      "type": "walk",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "shop",
+        "walk"
+      ],
+      "zone": "cupertino",
+      "indoor": false,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "family",
+        "socialize"
+      ],
+      "labels": [],
+      "quality": 3.5,
+      "uniqueness": 2,
+      "id": "main-street-cupertino",
+      "title": "Main Street Cupertino",
+      "emoji": "🛍️",
+      "area": "19499 Stevens Creek Boulevard, Cupertino",
+      "priceNote": "Varies",
+      "why": "A short outdoor high street of restaurants and shops across from Apple Park's south side, where a lot of Apple lunches and team dinners happen. Lazy Dog, Eureka!, Kula revolving sushi and a row of Asian cafés and dessert shops; a green in the middle has summer events.",
+      "url": "https://mainstreetcupertino.com/directory/",
+      "source": "mainstreetcupertino.com; confirmed against OpenStreetMap (way/390369819)",
+      "coords": [
+        37.32436,
+        -122.01018
+      ],
+      "coordsFrom": "osm way/390369819",
+      "booking": false,
+      "durationMin": 90,
+      "priceLevel": 2,
+      "hours": "Mo-Su 00:00-24:00",
+      "hoursFrom": "public streets; each shop and restaurant keeps its own hours",
+      "hoursChecked": "2026-09-29"
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "cupertino",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "marufuku-ramen-cupertino",
+      "title": "Marufuku Ramen",
+      "emoji": "🍜",
+      "area": "19772 Stevens Creek Boulevard, Cupertino",
+      "cuisine": "ramen",
+      "priceNote": "Inexpensive",
+      "why": "The Cupertino branch of the Japantown ramen shop: Hakata-style tonkotsu, a rich, milky pork broth with thin, firm noodles. A lunchtime favourite near Apple Park, so expect a wait at noon.",
+      "url": "https://www.marufukuramen.com/cupertino",
+      "source": "marufukuramen.com; confirmed against OpenStreetMap (node/3812900207)",
+      "coords": [
+        37.32227,
+        -122.01929
+      ],
+      "coordsFrom": "osm node/3812900207",
+      "hours": "Mo-Th 11:00-14:00,17:00-21:00; Fr 11:00-14:00,17:00-21:30; Sa 11:00-21:30; Su 11:00-21:00",
+      "hoursFrom": "marufukuramen.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-408-982-3028",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 2
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "cupertino",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "socialize",
+        "couple"
+      ],
+      "labels": [
+        "bookahead"
+      ],
+      "quality": 4.5,
+      "uniqueness": 4,
+      "id": "gochi-cupertino",
+      "title": "Gochi Japanese Fusion Tapas",
+      "emoji": "🏮",
+      "area": "19980 East Homestead Road, Cupertino",
+      "cuisine": "japanese",
+      "priceNote": "Moderate",
+      "why": "A Japanese izakaya where you sit shoeless at low tables and share small plates: seared salmon, fried chicken, uni pasta and the famous pizzas on a thin rice crust. One of Cupertino's best-loved dinners, so book.",
+      "url": "https://www.gochifusiontapas.com/cupertino-gochi-fusion-tapas/",
+      "source": "gochifusiontapas.com; OpenTable; confirmed against OpenStreetMap (node/2029160268)",
+      "coords": [
+        37.33689,
+        -122.02274
+      ],
+      "coordsFrom": "osm node/2029160268",
+      "hours": "Tu-Sa 11:15-13:15; Tu-Th 18:00-20:30; Fr-Sa 17:30-21:00; Su 17:30-20:30",
+      "hoursFrom": "gochifusiontapas.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-408-725-0542",
+      "booking": "https://www.opentable.com/r/gochi-japanese-fusion-tapas-cupertino",
+      "durationMin": 90,
+      "priceLevel": 2
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "cupertino",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "mian-cupertino",
+      "title": "Mian Sichuan Noodles & Dumplings",
+      "emoji": "🌶️",
+      "area": "19389 Stevens Creek Boulevard, Cupertino",
+      "cuisine": "chinese",
+      "priceNote": "Cheap",
+      "why": "Chongqing street noodles, fiery and numbing with Sichuan pepper, plus wontons in chilli oil and dan dan noodles. Fast, cheap and good for a weekday lunch near the Apple offices.",
+      "url": "https://mianusa.com/",
+      "source": "mianusa.com; Yelp",
+      "coords": [
+        37.32354,
+        -122.00946
+      ],
+      "coordsFrom": "the address point for 19389 Stevens Creek Boulevard (osm way/387051751)",
+      "phone": "+1-408-564-4961",
+      "booking": false,
+      "durationMin": 45,
+      "priceLevel": 1,
+      "hours": "Mo-Th 11:00-14:30,17:00-21:00; Fr 11:00-14:30,17:00-21:30; Sa 11:00-15:00,16:30-21:30; Su 11:00-15:00,16:30-21:00",
+      "hoursFrom": "Yelp",
+      "hoursChecked": "2026-09-29"
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "woodside",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "food",
+        "family"
+      ],
+      "labels": [
+        "hiddengem"
+      ],
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "bucks-of-woodside",
+      "title": "Buck's of Woodside",
+      "emoji": "🤠",
+      "area": "3062 Woodside Road, Woodside",
+      "cuisine": "american",
+      "priceNote": "Moderate",
+      "why": "The diner where Silicon Valley does its deals: since the 1990s founders have pitched venture capitalists over breakfast here, and Netscape, PayPal, Hotmail and Tesla are among the companies with early meetings at these tables. The room is crammed with oddities hanging from the ceiling. Go for breakfast, and look around.",
+      "url": "https://www.buckswoodside.com/",
+      "source": "buckswoodside.com; Wikipedia; NPR (2010); confirmed against OpenStreetMap (node/423370577)",
+      "coords": [
+        37.42979,
+        -122.25519
+      ],
+      "coordsFrom": "osm node/423370577",
+      "hours": "Mo-Th 08:00-21:00; Fr-Sa 08:00-21:30; Su 08:00-21:00",
+      "hoursFrom": "Yelp",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-851-8010",
+      "booking": false,
+      "durationMin": 75,
+      "priceLevel": 2
+    },
+    {
+      "type": "walk",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "shop",
+        "walk"
+      ],
+      "zone": "santana-row",
+      "indoor": false,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "couple",
+        "socialize",
+        "family"
+      ],
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "santana-row",
+      "title": "Santana Row",
+      "emoji": "🌴",
+      "area": "Santana Row, San José",
+      "priceNote": "Varies",
+      "why": "A European-style outdoor street of about thirty restaurants and fifty shops, the place people across the South Bay go for a night out. Walk it in the evening when the patios fill; Augustine, Suspiro and Meso are among the restaurants to try, and there's a cinema, live music in the park and a Wednesday farmers' market in summer.",
+      "url": "https://santanarow.com/dine/",
+      "source": "santanarow.com; Visit San José; confirmed against OpenStreetMap (way/142697822)",
+      "coords": [
+        37.32098,
+        -121.9486
+      ],
+      "coordsFrom": "osm way/142697822",
+      "booking": false,
+      "durationMin": 120,
+      "priceLevel": 3,
+      "hours": "Mo-Su 00:00-24:00",
+      "hoursFrom": "public streets; each shop and restaurant keeps its own hours",
+      "hoursChecked": "2026-09-29"
     }
   ]
 }

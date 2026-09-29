@@ -50,7 +50,9 @@ const City = (() => {
      `side` is what makes that work, and it is the Bay-specific idea in
      this file: every zone knows whether it is in the city or on the
      Peninsula, because "is it on my side" is the first question anybody
-     asks here and the answer is not a distance.
+     asks here and the answer is not a distance. The towns south of
+     Sunnyvale are a third side, `south-bay`: nobody in Cupertino or
+     San José says they live on the Peninsula.
 
      Eight zones used to sit in these tables that do not belong in this
      pack at all — Fremont, Hayward, Castro Valley, Union City, Newark,
@@ -106,11 +108,14 @@ const City = (() => {
       'bernal-heights': [37.741, -122.41421],
       'brisbane': [37.68717, -122.40279],
       'burlingame': [37.5781, -122.34731],
+      'campbell': [37.28706, -121.94488],
       'cole-valley': [37.76581, -122.44996],
       'cow-hollow': [37.79726, -122.43625],
+      'cupertino': [37.32289, -122.03229],
       'daly-city': [37.69048, -122.47267],
       'diamond-heights': [37.74229, -122.43921],
       'dogpatch': [37.7607, -122.3892],
+      'downtown-san-jose': [37.33593, -121.89109],
       'duboce-triangle': [37.76714, -122.43223],
       'east-palo-alto': [37.46883, -122.14108],
       'fillmore-district': [37.78305, -122.43291],
@@ -131,6 +136,7 @@ const City = (() => {
       'little-hollywood': [37.7117, -122.39912],
       'little-saigon': [37.7838, -122.41759],
       'los-altos': [37.37906, -122.11658],
+      'los-gatos': [37.22661, -121.97468],
       'lower-nob-hill': [37.78842, -122.4152],
       'lower-pacific-heights': [37.78577, -122.4389],
       'menlo-park': [37.45197, -122.17799],
@@ -151,6 +157,7 @@ const City = (() => {
       'parkside': [37.74238, -122.48744],
       'pier-70': [37.76145, -122.38546],
       'polk-gulch': [37.79081, -122.42078],
+      'portola-valley': [37.37363, -122.21905],
       'potrero-terrace': [37.75392, -122.39686],
       'presidio-heights': [37.78875, -122.45303],
       'presidio-terrace': [37.78823, -122.46092],
@@ -162,6 +169,9 @@ const City = (() => {
       'san-bruno': [37.62485, -122.4146],
       'san-carlos': [37.50494, -122.26182],
       'san-mateo': [37.563, -122.32533],
+      'santa-clara': [37.35411, -121.95524],
+      'santana-row': [37.32098, -121.9486],
+      'saratoga': [37.26383, -122.02301],
       'seacliff': [37.78854, -122.48692],
       'silver-terrace': [37.73385, -122.40003],
       'south-beach': [37.77981, -122.39115],
@@ -177,7 +187,9 @@ const City = (() => {
       'west-portal': [37.74034, -122.46637],
       'west-soma': [37.77681, -122.40844],
       'western-addition': [37.77956, -122.42981],
-      'westwood-park': [37.72758, -122.45823]
+      'westwood-park': [37.72758, -122.45823],
+      'willow-glen': [37.30859, -121.90089],
+      'woodside': [37.42806, -122.25074]
     },
 
     names: {
@@ -190,11 +202,14 @@ const City = (() => {
       'bernal-heights': 'Bernal Heights',
       'brisbane': 'Brisbane',
       'burlingame': 'Burlingame',
+      'campbell': 'Campbell',
       'cole-valley': 'Cole Valley',
       'cow-hollow': 'Cow Hollow',
+      'cupertino': 'Cupertino',
       'daly-city': 'Daly City',
       'diamond-heights': 'Diamond Heights',
       'dogpatch': 'Dogpatch',
+      'downtown-san-jose': 'Downtown San José',
       'duboce-triangle': 'Duboce Triangle',
       'east-palo-alto': 'East Palo Alto',
       'fillmore-district': 'Fillmore District',
@@ -215,6 +230,7 @@ const City = (() => {
       'little-hollywood': 'Little Hollywood',
       'little-saigon': 'Little Saigon',
       'los-altos': 'Los Altos',
+      'los-gatos': 'Los Gatos',
       'lower-nob-hill': 'Lower Nob Hill',
       'lower-pacific-heights': 'Lower Pacific Heights',
       'menlo-park': 'Menlo Park',
@@ -235,6 +251,7 @@ const City = (() => {
       'parkside': 'Parkside',
       'pier-70': 'Pier 70',
       'polk-gulch': 'Polk Gulch',
+      'portola-valley': 'Portola Valley',
       'potrero-terrace': 'Potrero Terrace',
       'presidio-heights': 'Presidio Heights',
       'presidio-terrace': 'Presidio Terrace',
@@ -246,6 +263,9 @@ const City = (() => {
       'san-bruno': 'San Bruno',
       'san-carlos': 'San Carlos',
       'san-mateo': 'San Mateo',
+      'santa-clara': 'Santa Clara',
+      'santana-row': 'Santana Row',
+      'saratoga': 'Saratoga',
       'seacliff': 'Seacliff',
       'silver-terrace': 'Silver Terrace',
       'south-beach': 'South Beach',
@@ -261,7 +281,9 @@ const City = (() => {
       'west-portal': 'West Portal',
       'west-soma': 'West SoMa',
       'western-addition': 'Western Addition',
-      'westwood-park': 'Westwood Park'
+      'westwood-park': 'Westwood Park',
+      'willow-glen': 'Willow Glen',
+      'woodside': 'Woodside'
     },
 
     /* city | peninsula */
@@ -275,11 +297,14 @@ const City = (() => {
       'bernal-heights': 'city',
       'brisbane': 'peninsula',
       'burlingame': 'peninsula',
+      'campbell': 'south-bay',
       'cole-valley': 'city',
       'cow-hollow': 'city',
+      'cupertino': 'south-bay',
       'daly-city': 'peninsula',
       'diamond-heights': 'city',
       'dogpatch': 'city',
+      'downtown-san-jose': 'south-bay',
       'duboce-triangle': 'city',
       'east-palo-alto': 'peninsula',
       'fillmore-district': 'city',
@@ -300,6 +325,7 @@ const City = (() => {
       'little-hollywood': 'city',
       'little-saigon': 'city',
       'los-altos': 'peninsula',
+      'los-gatos': 'south-bay',
       'lower-nob-hill': 'city',
       'lower-pacific-heights': 'city',
       'menlo-park': 'peninsula',
@@ -320,6 +346,7 @@ const City = (() => {
       'parkside': 'city',
       'pier-70': 'city',
       'polk-gulch': 'city',
+      'portola-valley': 'peninsula',
       'potrero-terrace': 'city',
       'presidio-heights': 'city',
       'presidio-terrace': 'city',
@@ -331,6 +358,9 @@ const City = (() => {
       'san-bruno': 'peninsula',
       'san-carlos': 'peninsula',
       'san-mateo': 'peninsula',
+      'santa-clara': 'south-bay',
+      'santana-row': 'south-bay',
+      'saratoga': 'south-bay',
       'seacliff': 'city',
       'silver-terrace': 'city',
       'south-beach': 'city',
@@ -346,7 +376,9 @@ const City = (() => {
       'west-portal': 'city',
       'west-soma': 'city',
       'western-addition': 'city',
-      'westwood-park': 'city'
+      'westwood-park': 'city',
+      'willow-glen': 'south-bay',
+      'woodside': 'peninsula'
     }
   };
 
@@ -465,11 +497,13 @@ const City = (() => {
 
   const weather = { lat: 37.79, lon: -122.41, tz: 'America/Los_Angeles' };
 
-  /* SF down to Mountain View. Deliberately not the whole nine counties:
-     the East Bay is a different place with different answers, and
-     pretending otherwise is how a guide ends up being about none of
-     them. */
-  const bbox = '37.33,-122.55,37.84,-121.98';
+  /* SF down through the South Bay — Cupertino, Santana Row, downtown
+     San José, Los Gatos — since September 2026, when the guide started
+     following people to Apple Park and Santana Row. Still deliberately
+     not the whole nine counties: the East Bay is a different place with
+     different answers, and `limitKm` keeps it out of a box that now
+     reaches further east. */
+  const bbox = '37.2,-122.55,37.84,-121.85';
 
   /* ---------- Luma ----------
 
