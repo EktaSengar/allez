@@ -103,7 +103,16 @@ const Store = (() => {
     const out = {};
     const diet = words(p.diet);
     if (diet.length) out.diet = diet;
-    if (COMPANY[p.company]) out.company = p.company;
+    /* One word stays one word, as it always was. A family with a dog is
+       two constraints, so a list is allowed too — and kept as a list. */
+    if (Array.isArray(p.company)) {
+      const c = [...new Set(p.company.filter(k => COMPANY[k]))];
+      if (c.length) out.company = c;
+    } else if (COMPANY[p.company]) out.company = p.company;
+    /* Not weights, but constraints: the dog is hard (see Rank.suits),
+       and a child's age keeps out what says it is not for them. */
+    if (p.dog === true) out.dog = true;
+    if (Number.isInteger(p.kidAge) && p.kidAge >= 0 && p.kidAge <= 17) out.kidAge = p.kidAge;
     if (Number(p.reach) > 0) out.reach = Math.round(Number(p.reach));
     if (Number.isInteger(p.budget) && p.budget >= 0 && p.budget <= 4) out.budget = p.budget;
     const interests = words(p.interests);
@@ -138,7 +147,7 @@ const Store = (() => {
 
     const p = cleanPrefs(prefs);
     (p.interests || []).forEach(k => { add(k, STATED); add('cat:' + k, STATED); add('good:' + k, STATED); });
-    (COMPANY[p.company] || []).forEach(g => add('good:' + g, STATED / 1.5));
+    words(p.company).forEach(c => (COMPANY[c] || []).forEach(g => add('good:' + g, STATED / 1.5)));
     (p.diet || []).forEach(d => { weights['diet:' + d] = 1; weights['@diet'] = 1; });
     if (p.budget != null) weights['@budget'] = p.budget;
     if (p.reach != null) weights['@reach'] = p.reach;

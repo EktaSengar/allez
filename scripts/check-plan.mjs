@@ -100,6 +100,57 @@ for (const id of cityIds()) {
   }
 }
 
+/* ---------- a family with a dog ----------
+
+   Built on a small pool of our own, so the answer is known: with a dog only
+   the places that say they take one are planned, a child of six is not
+   sent somewhere for ages nine and up, a sunset place is planned for the
+   evening with a time to be there by, and a family with dinner planned
+   gets ice cream after it. With nothing said, the same pool plans exactly
+   as before. */
+{
+  const id = 'bay-area';
+  const g = { localStorage: { getItem: () => null, setItem: () => {}, removeItem: () => {} }, navigator: {}, Store: { rating: () => null, isDone: () => false } };
+  const Loc = loadModuleFor(id, 'location.js', 'Loc', g);
+  const Hours = loadModuleFor(id, 'hours.js', 'Hours');
+  const Rec = loadModuleFor(id, 'record.js', 'Rec', { Loc });
+  const Near = loadModuleFor(id, 'nearby.js', 'Near', { Hours });
+  const Rank = loadModuleFor(id, 'scoring.js', 'Rank', { Near, Hours, Store: g.Store });
+  const Plan = loadModuleFor(id, 'plan.js', 'Plan', { Rank, Near, Loc, Hours });
+  Near.use([], []);
+  const c = [37.4479, -122.1601];
+  const mk = (title, extra) => Object.assign({ id: title, title, type: 'cafe', zone: 'palo-alto', coords: c, categories: [], goodFor: ['morning', 'afternoon', 'evening'],
+    durationMin: 90, quality: 4, uniqueness: 3, minutesFromHome: 5, provenance: 'editorial', lastVerified: DATE }, extra);
+  const pool = [
+    mk('Dog trail', { type: 'hike', dogs: 'trail-leash', dogsChecked: DATE, kids: [0, 17] }),
+    mk('No-dog trail', { type: 'hike', dogs: false, dogsChecked: DATE, quality: 5 }),
+    mk('Silent trail', { type: 'hike', quality: 5 }),
+    mk('Teen thing', { dogs: 'patio', dogsChecked: DATE, kids: [9, 17], quality: 5 }),
+    mk('Sunset ridge', { type: 'hike', dogs: 'trail-leash', dogsChecked: DATE, setting: ['sunset'], goodFor: ['evening'], quality: 5, durationMin: 120 }),
+    mk('Dinner', { type: 'restaurant', dogs: 'patio', dogsChecked: DATE, goodFor: ['evening'], quality: 5 }),
+    mk('Gelato', { categories: ['dessert'], dogs: 'patio', dogsChecked: DATE, goodFor: ['evening'], durationMin: 30 })
+  ];
+  const ctx = prefs => ({ date: DATE, origin: { lat: c[0], lon: c[1] }, prefs,
+    weather: Object.fromEntries(['2026-09-19', '2026-09-20'].map(d => [d, { mode: 'fine', sunset: '19:05', cloud: 10 }])),
+    rank: { today: DATE, weatherMode: 'fine', taste: {}, exploredZones: [], homeZone: 'palo-alto' } });
+  const titles = p => p.days.flatMap(d => d.stops.map(s => s.item.title));
+
+  const dog = Plan.weekend(pool, ctx({ dog: true, kidAge: 6, company: ['family'] }));
+  const dogStops = dog.days.flatMap(d => d.stops);
+  want(dogStops.length > 0, 'a family with a dog still gets a plan');
+  want(dogStops.every(s => s.item.dogs), `with a dog, every stop says it takes one (${titles(dog).join(', ')})`);
+  want(!titles(dog).includes('Teen thing'), 'a child of six is not sent somewhere for nine and up');
+  const dusk = dogStops.find(s => s.item.title === 'Sunset ridge');
+  want(!!dusk && dusk.slot === 'evening' && dusk.sunset === '19:05' && dusk.arriveBy === '18:35', 'the sunset place is planned for the evening, with the time to be there by');
+  const dessert = dogStops.filter(s => s.kind === 'dessert');
+  const dinnerDays = dog.days.filter(d => d.stops.some(s => s.item.title === 'Dinner'));
+  want(dinnerDays.length > 0 && dessert.length === dinnerDays.length, 'ice cream follows a planned dinner, only for a family');
+
+  const none = Plan.weekend(pool, ctx({}));
+  want(titles(none).includes('Silent trail') || titles(none).includes('No-dog trail'), 'with nothing said, the dog changes nothing');
+  want(none.days.flatMap(d => d.stops).every(s => s.kind === undefined), 'and no dessert is added');
+}
+
 /* ---------- a daylight-saving night ----------
 
    America's clocks go forward on 14 March 2027 and back on 1 November

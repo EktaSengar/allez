@@ -49,7 +49,10 @@
       "hoursChecked": "2026-09-25",
       "booking": false,
       "priceLevel": 0,
-      "hoursNote": "Sunrise to sunset"
+      "hoursNote": "Sunrise to sunset",
+      "dogs": false,
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "No dogs on the Dish trail, service animals excepted (Stanford)"
     },
     {
       "type": "hike",
@@ -67,7 +70,8 @@
         "morning",
         "weekend",
         "outdoors",
-        "sport"
+        "sport",
+        "family"
       ],
       "lastVerified": "2026-09-25",
       "zone": "palo-alto",
@@ -100,7 +104,10 @@
       "hoursChecked": "2026-09-25",
       "booking": false,
       "priceLevel": 0,
-      "hoursNote": "8am to sunset"
+      "hoursNote": "8am to sunset",
+      "dogs": "trail-leash",
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "On a leash, under physical control (City of Palo Alto)"
     },
     {
       "type": "hike",
@@ -149,7 +156,10 @@
       "hoursChecked": "2026-09-25",
       "booking": false,
       "priceLevel": 1,
-      "hoursNote": "8am to sunset"
+      "hoursNote": "8am to sunset",
+      "dogs": false,
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "Dogs on weekdays only — not on weekends or city holidays (City of Palo Alto, Municipal Code 22.04.150)"
     },
     {
       "type": "hike",
@@ -166,9 +176,10 @@
         "morning",
         "weekend",
         "outdoors",
-        "sport"
+        "sport",
+        "evening"
       ],
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-09-28",
       "id": "hike-windy-hill",
       "title": "Windy Hill — Spring Ridge Trail",
       "emoji": "🥾",
@@ -198,7 +209,14 @@
       "hoursChecked": "2026-09-25",
       "booking": false,
       "priceLevel": 0,
-      "hoursNote": "Half an hour before sunrise to half an hour after sunset"
+      "hoursNote": "Half an hour before sunrise to half an hour after sunset",
+      "dogs": "trail-leash",
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "Leash of 6 ft or less, and only on Spring Ridge, Betsy Crowder, Sequoias, Eagle, Meadow, Hamms Gulch and Anniversary trails (Midpen)",
+      "setting": [
+        "sunset",
+        "picnic"
+      ]
     },
     {
       "type": "hike",
@@ -2283,6 +2301,99 @@
       "imageSubject": "California Memorial Stadium",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "hike",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "outdoors",
+        "hike",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "outdoor"
+      ],
+      "price": 0,
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "booking": false,
+      "lastVerified": "2026-09-28",
+      "hoursChecked": "2026-09-28",
+      "id": "hike-pulgas-ridge",
+      "title": "Pulgas Ridge",
+      "emoji": "🐕",
+      "zone": "san-carlos",
+      "area": "Edgewood Road, off Interstate 280 · marked off-leash area",
+      "durationMin": 90,
+      "why": "The Peninsula preserve where the dog can run: every trail is open to dogs, and there is a marked off-leash area (bring a leash, and keep your dog in voice control). Open grassland and oak hills, gentle walking, and the Bay in the distance.",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "outdoors",
+        "sport",
+        "family"
+      ],
+      "kids": true,
+      "dogs": "trail-offleash",
+      "dogsChecked": "2026-09-28",
+      "dogsNote": "All trails open to dogs, with a marked off-leash area; a leash must be carried and dogs kept in voice control (Midpen)",
+      "quality": 3.5,
+      "uniqueness": 3,
+      "url": "https://www.openspace.org/preserves/pulgas-ridge",
+      "source": "Midpen (openspace.org, dog access page); preserve position from OpenStreetMap way/38696291",
+      "coords": [
+        37.47943,
+        -122.29305
+      ],
+      "coordsFrom": "osm way/38696291 (preserve)",
+      "hours": "sunrise-sunset",
+      "hoursFrom": "openspace.org — Midpen preserves are open from a half-hour before sunrise to a half-hour after sunset",
+      "hoursNote": "Half an hour before sunrise until half an hour after sunset"
+    },
+    {
+      "id": "climb-movement-sunnyvale",
+      "title": "Climbing at Movement Sunnyvale",
+      "emoji": "🧗",
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "climbing"
+      ],
+      "zone": "sunnyvale",
+      "area": "815 Stewart Drive, Sunnyvale",
+      "durationMin": 120,
+      "why": "A 28,000-square-foot climbing gym with more than 280 routes and problems, ropes up to 55 feet and a big bouldering area. It is the one on this side of the Peninsula with proper programmes for children: after-school classes for ages 6 to 8, 9 to 12 and 13 to 17, and a Kid's Climb Time for drop-off. Adults climb the same walls, so both parents can go.",
+      "goodFor": [
+        "evening",
+        "afternoon",
+        "rainy",
+        "family",
+        "kids"
+      ],
+      "kids": true,
+      "indoor": true,
+      "weatherSensitive": false,
+      "price": 35,
+      "priceNote": "Day pass $35 adult, $25 child under 13, $30 student on weekdays before 5pm",
+      "quality": 4,
+      "uniqueness": 3,
+      "url": "https://movementgyms.com/sunnyvale/",
+      "source": "movementgyms.com/sunnyvale and its youth-programs page; position from OpenStreetMap way/41935775",
+      "coords": [
+        37.38442,
+        -122.01055
+      ],
+      "coordsFrom": "osm way/41935775",
+      "lastVerified": "2026-09-28",
+      "hours": "Mo-Fr 06:00-23:00; Sa 08:00-20:00; Su 08:00-18:00",
+      "hoursFrom": "movementgyms.com/sunnyvale",
+      "hoursChecked": "2026-09-28",
+      "booking": "https://movementgyms.com/sunnyvale/climbing/youth-programs/after-school-weekly-programs/",
+      "priceLevel": 2
     }
   ]
 }

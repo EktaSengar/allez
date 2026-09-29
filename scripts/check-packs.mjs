@@ -377,13 +377,64 @@ async function checkRecords(id) {
   }
 }
 
+/* ---------- who a place is for ----------
+
+   `dogs`, `kids` and `setting` (js/record.js) are read as constraints:
+   with a dog in the party a place that does not say it takes one is left
+   out, so a wrong value sends a family to a door that turns them away.
+   Whenever they are present they are held to their vocabulary, and a
+   `dogs` answer carries the date somebody checked it, because policies
+   change and an unchecked one cannot be told from a stale one. */
+
+const DOGS = ['inside', 'patio', 'trail-leash', 'trail-offleash', false];
+const SETTINGS = ['sunset', 'picnic', 'playground'];
+
+async function checkFamilyFields(id) {
+  const noStore = { getItem: () => null, setItem: () => {}, removeItem: () => {} };
+  const Loc = loadModuleFor(id, 'location.js', 'Loc', { localStorage: noStore, navigator: {}, Store: {} });
+  const Rec = loadModuleFor(id, 'record.js', 'Rec', { Loc });
+  const D = Object.fromEntries(FILES.map(f => {
+    try { return [f, JSON.parse(fs.readFileSync(path.join(dataDir(id), f + '.json'), 'utf8'))]; }
+    catch { return [f, { items: [] }]; }
+  }));
+  D.discovered = await readDiscovered(path.join(dataDir(id), 'places'));
+  const { all, discovered } = Rec.build(D, TODAY);
+  const items = [...all, ...discovered];
+  const list = a => a.slice(0, 5).map(i => i.title || i.id).join(', ');
+
+  const seen = new Map(); const dupes = [];
+  for (const i of all) { if (seen.has(i.id)) dupes.push(i); seen.set(i.id, true); }
+  want(id, dupes.length === 0, `no two records share an id${dupes.length ? ` — ${list(dupes)}` : ''}`);
+
+  const withDogs = items.filter(i => 'dogs' in i);
+  const badDogs = withDogs.filter(i => !DOGS.includes(i.dogs));
+  want(id, badDogs.length === 0, `every \`dogs\` is one of inside, patio, trail-leash, trail-offleash or false${badDogs.length ? ` — ${list(badDogs)}` : ''}`);
+  const unchecked = withDogs.filter(i => !(/^\d{4}-\d{2}-\d{2}$/.test(i.dogsChecked || '') && i.dogsChecked <= TODAY));
+  want(id, unchecked.length === 0, `every \`dogs\` carries the date it was checked${unchecked.length ? ` — ${list(unchecked)}` : ''}`);
+  const stray = items.filter(i => i.dogsChecked && !('dogs' in i));
+  want(id, stray.length === 0, `no \`dogsChecked\` without a \`dogs\`${stray.length ? ` — ${list(stray)}` : ''}`);
+
+  const badKids = items.filter(i => 'kids' in i && !(i.kids === true || i.kids === false ||
+    (Array.isArray(i.kids) && i.kids.length === 2 && i.kids.every(Number.isInteger) && i.kids[0] >= 0 && i.kids[0] <= i.kids[1] && i.kids[1] <= 17)));
+  want(id, badKids.length === 0, `every \`kids\` is true, false or an [from, to] age range${badKids.length ? ` — ${list(badKids)}` : ''}`);
+
+  const badSet = items.filter(i => 'setting' in i && !(Array.isArray(i.setting) && i.setting.length > 0 && i.setting.every(t => SETTINGS.includes(t))));
+  want(id, badSet.length === 0, `every \`setting\` is a list drawn from ${SETTINGS.join(', ')}${badSet.length ? ` — ${list(badSet)}` : ''}`);
+
+  /* A sunset stop is planned into the evening, so it has to be one. */
+  const dusk = items.filter(i => (i.setting || []).includes('sunset') && !(i.goodFor || []).includes('evening'));
+  want(id, dusk.length === 0, `every sunset place suits the evening${dusk.length ? ` — ${list(dusk)}` : ''}`);
+  const fam = items.filter(i => Array.isArray(i.kids) || i.kids === true).filter(i => !(i.goodFor || []).some(g => ['family', 'kids'].includes(g)));
+  want(id, fam.length === 0, `every place for kids says so in goodFor${fam.length ? ` — ${list(fam)}` : ''}`);
+}
+
 /* ---------- run ---------- */
 
 const ids = cityIds();
 console.log(`\nChecking ${ids.length} city packs: ${ids.join(', ')}\n`);
 for (const id of ids) {
   checkPack(id);
-  if (HELD.has(id)) await checkRecords(id);
+  if (HELD.has(id)) { await checkRecords(id); await checkFamilyFields(id); }
 }
 
 console.log('');
