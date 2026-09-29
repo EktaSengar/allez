@@ -61,7 +61,7 @@
      cached hard, so a returning reader spends no round trips at all
      being told the file has not changed. -->
 <script>
-  window.__DV = {"civic":"962ebe63","conferences":"baece67f","daytrips":"2eda2a8a","editorial":"7b780528","events":"6baf005b","events-city":"678f2044","food":"cdca552d","home":"8b72f3e3","invaders":"bc425794","itineraries":"1444ac45","neighborhoods":"d35e04cf","nightlife":"ce80ecc0","notable":"7322b18d","notes":"27f8b738","places":"e5b55895","places/g00":"63d3885a","places/g01":"78498766","places/g02":"36122076","places/g03":"f316474f","places/g10":"0961c3f8","places/g11":"5a144213","places/g12":"c703d6b4","places/g13":"6542e54f","places/g20":"82c97771","places/g21":"1eaa32fc","places/g30":"e9d9ee41","places/g31":"e5bf9a5d","places/index":"e51758b8","practices":"66def7eb","quests":"bc844eb9","regulars":"d7246166","sports":"9765f14c"};
+  window.__DV = {"civic":"962ebe63","conferences":"baece67f","daytrips":"c39f2377","editorial":"7b780528","events":"d854229b","events-city":"678f2044","food":"cdca552d","home":"8b72f3e3","invaders":"bc425794","itineraries":"25547698","neighborhoods":"603d8b7d","nightlife":"34c46693","notable":"7322b18d","notes":"27f8b738","places":"69d1229b","places/g01":"54952abb","places/g02":"efa0fa02","places/g03":"1b6326bf","places/g10":"0a19dcda","places/g11":"60cfa5ae","places/g12":"89bf59ad","places/g13":"4798335f","places/g20":"8f9c3ff5","places/g21":"6eb64a4f","places/g22":"0896bef5","places/g30":"eff946fd","places/g31":"c1d52b88","places/index":"e8a94f98","practices":"66def7eb","quests":"bc844eb9","regulars":"d7246166","sports":"3fa2d720"};
   (function () {
     var core = ['home', 'places/index',
                 'events', 'events-city', 'places', 'nightlife', 'sports', 'food',
@@ -171,7 +171,7 @@
      app.js all read `City` as they evaluate, not later. keys.js is
      second for the same reason — it needs City.id to name a key, and
      state.js and location.js need the name as they evaluate. -->
-<script src="city.js?v=0974554d"></script>
+<script src="city.js?v=98f639bc"></script>
 <script src="../js/keys.js?v=e5461a5d"></script>
 <script src="../js/location.js?v=51844a3c"></script>
 <script src="../js/state.js?v=85a844ab"></script>
@@ -184,7 +184,7 @@
 <!-- Deferred: nothing reads Plan until the first render, which waits for
      DOMContentLoaded, so it need not hold up the header. -->
 <script src="../js/plan.js?v=f062d510" defer></script>
-<script src="../js/app.js?v=2fd9252e"></script>
+<script src="../js/app.js?v=36795208"></script>
 <!-- After app.js, because it calls App.defineView. This is what a pack
      shipping its own view looks like: one file, one registration, and
      nothing in the engine that knows it exists. -->
