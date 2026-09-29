@@ -2842,6 +2842,58 @@
       "booking": false,
       "durationMin": 20,
       "priceLevel": 1
+    },
+    {
+      "id": "alcatraz",
+      "title": "Alcatraz",
+      "emoji": "🏝️",
+      "type": "museum",
+      "provenance": "editorial",
+      "categories": [
+        "museum",
+        "culture",
+        "history",
+        "outdoors"
+      ],
+      "zone": "fisherman-s-wharf",
+      "area": "Ferries from Pier 33, the Embarcadero",
+      "durationMin": 210,
+      "why": "The island prison in the middle of the bay, a federal penitentiary from 1934 to 1963 and now part of the Golden Gate National Recreation Area. The only way there is the Alcatraz City Cruises ferry from Pier 33, and tickets sell out weeks ahead, so book first. The cellhouse audio tour, narrated by former guards and prisoners, is included and is the reason to go. Leave time for the rest of the island too: the gardens the guards' families planted, the seabird colonies, and the graffiti from the Native American occupation of 1969 to 1971. The night tour is smaller and quieter, with the city lit up across the water.",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "culture",
+        "family",
+        "outdoors"
+      ],
+      "indoor": false,
+      "bookAhead": true,
+      "labels": [
+        "bookahead",
+        "dontmiss"
+      ],
+      "quality": 4.5,
+      "uniqueness": 5,
+      "price": 48,
+      "priceNote": "About $48 for the day tour and $60 for the night tour, ferry and audio tour included",
+      "url": "https://www.nps.gov/alca/planyourvisit/basicinfo.htm",
+      "source": "nps.gov (Alcatraz Island); alcatrazcitycruises.com; confirmed against OpenStreetMap (relation/20197830)",
+      "coords": [
+        37.82667,
+        -122.42278
+      ],
+      "coordsFrom": "osm relation/20197830",
+      "lastVerified": "2026-09-29",
+      "hours": "Mo-Su 08:45-18:30",
+      "hoursFrom": "nps.gov: first ferry 8:45am; the island closes 6:30pm in summer and 4:30pm the rest of the year; shut on Thanksgiving, Christmas and New Year's Day",
+      "hoursChecked": "2026-09-29",
+      "booking": "https://alcatrazcitycruises.com/",
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Alcatraz_aerial.jpg/500px-Alcatraz_aerial.jpg",
+      "imageSubject": "Alcatraz Island from the air",
+      "imageKind": "subject",
+      "imageCredit": "druchoy · CC BY-SA 2.0",
+      "touristy": true
     }
   ]
 }
