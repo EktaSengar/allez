@@ -418,6 +418,10 @@ async function checkFamilyFields(id) {
   want(id, unchecked.length === 0, `every \`dogs\` carries the date it was checked${unchecked.length ? ` — ${list(unchecked)}` : ''}`);
   const stray = items.filter(i => i.dogsChecked && !('dogs' in i));
   want(id, stray.length === 0, `no \`dogsChecked\` without a \`dogs\`${stray.length ? ` — ${list(stray)}` : ''}`);
+  /* A trip is a day, not a door, so its answer usually needs a clause —
+     "on a lead on the trail, not on the beach" — which `dogsNote` carries. */
+  const loose = items.filter(i => 'dogsNote' in i && !('dogs' in i && typeof i.dogsNote === 'string' && i.dogsNote.trim()));
+  want(id, loose.length === 0, `every \`dogsNote\` is a sentence beside a \`dogs\`${loose.length ? ` — ${list(loose)}` : ''}`);
 
   const badKids = items.filter(i => 'kids' in i && !(i.kids === true || i.kids === false ||
     (Array.isArray(i.kids) && i.kids.length === 2 && i.kids.every(Number.isInteger) && i.kids[0] >= 0 && i.kids[0] <= i.kids[1] && i.kids[1] <= 17)));

@@ -28,7 +28,8 @@
         "outdoors",
         "culture",
         "morning",
-        "afternoon"
+        "afternoon",
+        "family"
       ],
       "labels": [
         "couple",
@@ -51,7 +52,12 @@
       "hoursFrom": "filoli.org — open daily, admission 10am to 5pm",
       "hoursChecked": "2026-09-25",
       "booking": "https://filoli.org/visit/opening-times/",
-      "priceLevel": 2
+      "priceLevel": 2,
+      "dogs": false,
+      "dogsNote": "No pets; service animals only",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "Filoli",
+      "kids": true
     },
     {
       "type": "daytrip",
@@ -78,7 +84,8 @@
         "relax",
         "couple",
         "morning",
-        "afternoon"
+        "afternoon",
+        "family"
       ],
       "labels": [
         "outdoor",
@@ -116,7 +123,12 @@
           "text": "Half Moon Bay Brewing on the harbour for the view"
         }
       ],
-      "season": "Autumn is the clearest. Avoid the Art & Pumpkin Festival weekend in mid-October unless that is the plan."
+      "season": "Autumn is the clearest. Avoid the Art & Pumpkin Festival weekend in mid-October unless that is the plan.",
+      "dogs": "trail-leash",
+      "dogsNote": "On a lead on the Coastside Trail and in the picnic areas; not on the state beaches",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "California State Parks",
+      "kids": true
     },
     {
       "type": "daytrip",
@@ -141,7 +153,8 @@
         "weekend",
         "couple",
         "morning",
-        "afternoon"
+        "afternoon",
+        "family"
       ],
       "labels": [
         "weekend",
@@ -179,7 +192,12 @@
           "text": "Henry Cowell redwoods on the way home, ten minutes inland"
         }
       ],
-      "season": "All year. Monarch butterflies winter at Natural Bridges from October to February."
+      "season": "All year. Monarch butterflies winter at Natural Bridges from October to February.",
+      "dogs": "trail-leash",
+      "dogsNote": "On a lead along West Cliff Drive and on It’s Beach; not in the Boardwalk",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "City of Santa Cruz",
+      "kids": true
     },
     {
       "type": "daytrip",
@@ -248,7 +266,11 @@
           "text": "The Pelican Inn at Muir Beach, ten minutes down the road"
         }
       ],
-      "season": "All year. Winter brings spawning salmon to Redwood Creek; weekday mornings are quietest."
+      "season": "All year. Winter brings spawning salmon to Redwood Creek; weekday mornings are quietest.",
+      "dogs": false,
+      "dogsNote": "No pets in Muir Woods or on the trails around it",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "National Park Service"
     },
     {
       "type": "daytrip",
@@ -685,7 +707,8 @@
         "weekend",
         "relax",
         "morning",
-        "afternoon"
+        "afternoon",
+        "family"
       ],
       "labels": [
         "hiddengem",
@@ -702,7 +725,12 @@
       "imageCredit": "Wikimedia Commons",
       "hoursNote": "A place to spend the day, not a door — what is in it keeps its own hours",
       "priceLevel": 0,
-      "booking": false
+      "booking": false,
+      "dogs": false,
+      "dogsNote": "No dogs on Capitola beach, by city ordinance",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "City of Capitola",
+      "kids": true
     },
     {
       "type": "daytrip",
@@ -839,7 +867,11 @@
       "imageCredit": "Wikimedia Commons",
       "hoursNote": "The seals are seen on guided walks only, 15 December to 31 March, booked on ReserveCalifornia up to 56 days ahead",
       "booking": "https://www.reservecalifornia.com/Web/Activities/ProgramsAndTours.aspx",
-      "priceLevel": 1
+      "priceLevel": 1,
+      "dogs": false,
+      "dogsNote": "No pets anywhere in the park, and not left in the car",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "California State Parks"
     },
     {
       "type": "daytrip",
@@ -867,7 +899,8 @@
       "goodFor": [
         "outdoors",
         "morning",
-        "afternoon"
+        "afternoon",
+        "family"
       ],
       "labels": [
         "hiddengem",
@@ -885,7 +918,83 @@
       "hoursFrom": "smcgov.org",
       "hoursChecked": "2026-09-25",
       "priceLevel": 0,
-      "booking": false
+      "booking": false,
+      "dogs": false,
+      "dogsNote": "No dogs at the tide pools; only on the Coastal Trail above them, on a lead",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "San Mateo County Parks",
+      "kids": true
+    },
+    {
+      "type": "daytrip",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-29",
+      "id": "pescadero",
+      "title": "Pescadero and Pigeon Point",
+      "emoji": "🐐",
+      "categories": [
+        "daytrip",
+        "outdoors",
+        "food"
+      ],
+      "minutesFrom": {
+        "city": 70,
+        "peninsula": 55
+      },
+      "minutesFromHome": 55,
+      "durationMin": 300,
+      "price": 0,
+      "priceNote": "Free, free parking",
+      "transit": "Highway 84 over the hills through La Honda, about 55 min",
+      "why": "A farm town of a few hundred people a mile in from the sea, and the easiest family day on this coast. Buy a warm loaf of artichoke-garlic bread at Arcangeli Grocery, baking here since 1929, and say hello to the goats over the fence at Harley Farms. Then go down to the tide pools at Bean Hollow and on to Pigeon Point, one of the tallest lighthouses on the West Coast. Its tower is closed, but the grounds and the view along the cliffs are open every day.",
+      "goodFor": [
+        "outdoors",
+        "weekend",
+        "family",
+        "couple",
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "hiddengem",
+        "outdoor"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "url": "https://www.parks.ca.gov/?page_id=533",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Pigeon_Point_Lighthouse_%282016%29.jpg/1280px-Pigeon_Point_Lighthouse_%282016%29.jpg",
+      "imageSubject": "Pigeon Point Lighthouse",
+      "imageKind": "subject",
+      "imageCredit": "Frank Schulenburg · CC BY-SA 4.0",
+      "hoursNote": "A place to spend the day, not a door. Harley Farms welcomes visitors 11am to 4pm daily; the lighthouse grounds are open 8am to sunset",
+      "priceLevel": 0,
+      "booking": false,
+      "stops": [
+        {
+          "emoji": "🥖",
+          "text": "Artichoke-garlic bread at Arcangeli Grocery on Stage Road"
+        },
+        {
+          "emoji": "🐐",
+          "text": "The goats over the fence at Harley Farms, and the cheese shop"
+        },
+        {
+          "emoji": "🦀",
+          "text": "Tide pools at Bean Hollow State Beach, down the coast"
+        },
+        {
+          "emoji": "🗼",
+          "text": "Pigeon Point Light Station and the clifftop path"
+        }
+      ],
+      "season": "Any clear day. Go at low tide for Bean Hollow, and from December to April look out for grey whales passing Pigeon Point.",
+      "dogs": "trail-leash",
+      "dogsNote": "On a lead at Bean Hollow and by the pond at Harley Farms; not on Pescadero State Beach, in the marsh, at the goats or on the lighthouse grounds",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "California State Parks; Harley Farms",
+      "kids": true
     },
     {
       "type": "daytrip",
@@ -1377,7 +1486,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Pinnacles_National_Park_-_Flickr_-_Joe_Parks.jpg/1280px-Pinnacles_National_Park_-_Flickr_-_Joe_Parks.jpg",
       "imageSubject": "Pinnacles National Park",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "dogs": false,
+      "dogsNote": "Not on any trail; only on roads, picnic areas and the campground",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "National Park Service"
     },
     {
       "type": "daytrip",
@@ -1446,7 +1559,11 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Angel_Island_%28California%29.jpg/1280px-Angel_Island_%28California%29.jpg",
       "imageSubject": "Angel Island (California)",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "dogs": false,
+      "dogsNote": "No dogs on the island; service animals only",
+      "dogsChecked": "2026-09-29",
+      "dogsFrom": "California State Parks"
     }
   ]
 }

@@ -1041,6 +1041,16 @@ const App = (() => {
       `<li>${s.emoji ? `<span class="e">${s.emoji}</span> ` : ''}${esc(s.text)}${s.walk ? ` <span class="w">· ${esc(s.walk)}</span>` : ''}</li>`).join('')}</ol>`;
   }
 
+  /* A day trip is not filtered by the dog the way a stop in the plan is:
+     leaving the dog at home for Muir Woods is a real choice, and a trip
+     nobody has checked is not a trip that turns dogs away. So with a dog
+     in the party each checked trip says what it allows, in its own words. */
+  function tripDogs(item) {
+    if (!Store.prefs().dog || !('dogs' in item)) return '';
+    const says = item.dogsNote || (item.dogs ? 'Dogs welcome' : 'No dogs');
+    return `<p class="trip-season"><b>${item.dogs ? '🐕 Dogs.' : '🚫 No dogs.'}</b> ${esc(says)}</p>`;
+  }
+
   function tripBlock(item) {
     return `<article class="trip" data-id="${esc(item.id)}">
       <div class="trip-img">
@@ -1053,6 +1063,7 @@ const App = (() => {
         <p class="trip-why">${esc(item.why || '')}</p>
         ${tripPlan(item)}
         ${item.season ? `<p class="trip-season"><b>When.</b> ${esc(item.season)}</p>` : ''}
+        ${tripDogs(item)}
         <div class="links">
           ${bookLink(item)}
           ${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">Official site</a>` : ''}
@@ -1360,6 +1371,7 @@ const App = (() => {
     venue:  'Check the listing, then buy blind',
     club:   'The late ones',
     bar:    'Somewhere to start the night',
+    weekly:      'A standing night — the same room, the same day, the regulars',
     afterdark:   'Things that only happen once the lights go down',
     nightmarket: 'Food stalls and music, on the nights they run',
     latenight:   'Still serving when everything else has shut'
@@ -1396,8 +1408,22 @@ const App = (() => {
        be pretending. The first six take cards and the rest fall to rows,
        so a long group does not become a wall. */
     const CARDS = 6;
+    /* A night that comes round every week is one to follow rather than
+       to catch, so it goes first, with its day where the eye lands, and
+       is left out of the groups below. */
+    const onRhythm = i => i.rhythm === 'weekly' || i.rhythm === 'monthly';
+    const weekly = () => {
+      const items = Rank.rank(nightlife, CTX, i => onRhythm(i) && (!lead || i.id !== lead.id))
+        .sort((a, b) => Near.localScore(b) - Near.localScore(a));
+      if (!items.length) return '';
+      /* Drawn like the other groups, cards when the rooms are pictured,
+         with the day as the card's overline so it is still read first. */
+      const pictured = items.filter(i => i.image).length;
+      return stripHead('Every week', nightNote('weekly')) + (pictured * 2 < items.length ? regRows(items)
+        : `<div class="grid night-grid">${items.map(i => card(i, '', cadenceOf(i))).join('')}</div>`);
+    };
     const group = (title, note, test) => {
-      const items = Rank.rank(nightlife, CTX, i => test(i) && (!lead || i.id !== lead.id))
+      const items = Rank.rank(nightlife, CTX, i => test(i) && !onRhythm(i) && (!lead || i.id !== lead.id))
         .sort((a, b) => Near.localScore(b) - Near.localScore(a));
       if (!items.length) return '';
       const pictured = items.filter(i => i.image).length;
@@ -1424,6 +1450,7 @@ const App = (() => {
           ? stripHead('On sale now', 'Dated, and they sell out in this order')
             + `<div class="grid">${rest.slice(0, 6).map(i => card(i)).join('')}</div>`
           : '')
+      + weekly()
       + group('Only after dark', nightNote('afterdark'), i => i.type === 'afterdark')
       + group('Live music', nightNote('venue'), i => i.type === 'venue')
       + group('Jazz rooms', nightNote('jazz'), i => i.type === 'jazz')
@@ -2583,7 +2610,7 @@ const App = (() => {
     ['see',  '🖼️', 'Exhibitions', 'art, photography, design',  ['exhibition', 'art', 'photography', 'design', 'fashion']],
     ['show', '🎭', 'Shows',       'music, stage, film, talks', ['music', 'theatre', 'dance', 'comedy', 'film', 'books', 'nightlife', 'culture', 'learn']],
     ['out',  '🎪', 'Out & about', 'festivals, markets, walks', ['festival', 'market', 'walk', 'food', 'community']],
-    ['tech', '🤖', 'Tech',        'developer conferences',     ['tech']]
+    ['tech', '🤖', 'Tech',        'conferences and open talks', ['tech']]
   ];
 
   function evGroupOf(i) {
@@ -2944,7 +2971,7 @@ const App = (() => {
     const controls = modeBar + evTools(mine.length);
     if (!mine.length) {
       const why = EV_DATE !== 'month' ? 'Nothing on those days yet — the next 30 days has more.' : EV_MODE === 'tech'
-        ? 'No tech conferences in the next month from the two open lists we can show, confs.tech and developers.events.'
+        ? 'No tech conferences or open talks in the next month from the open lists we can show.'
         : 'Nothing dated in the next month yet.';
       return controls + `<p class="empty">${why}</p>` + lumaOut();
     }

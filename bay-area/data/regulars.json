@@ -439,6 +439,305 @@
       "durationMin": 120,
       "priceLevel": 3,
       "booking": "https://www.afsf.com/french-classes/adults/schedule/"
+    },
+    {
+      "provenance": "editorial",
+      "id": "palo-alto-library-storytime",
+      "title": "Family Storytime at Palo Alto City Library",
+      "emoji": "📖",
+      "type": "class",
+      "mode": "do",
+      "group": "read",
+      "zone": "palo-alto",
+      "coords": [
+        37.42216,
+        -122.11282
+      ],
+      "coordsFrom": "osm way/325147938 (Nominatim)",
+      "categories": [
+        "books",
+        "kids",
+        "free"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Saturdays 10.30am at Mitchell Park · weekday mornings at other branches",
+      "days": [
+        6
+      ],
+      "times": "Saturdays 10.30 to 11am at Mitchell Park Library; Tuesdays at the Children’s Library and Fridays at Downtown Library, both 10.30am; a bilingual storytime at College Terrace on alternate Thursdays",
+      "firstStep": "Just turn up. No registration, and all ages are welcome",
+      "area": "Mitchell Park Library, 3700 Middlefield Road",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": true,
+      "url": "https://library.cityofpaloalto.org/kids-storytimes/",
+      "source": "Palo Alto City Library",
+      "lastVerified": "2026-09-29",
+      "why": "Half an hour of stories, songs and rhymes with a children’s librarian, every Saturday morning at Mitchell Park and on weekday mornings across the other branches. It is free and needs no sign-up. The same faces come back each week, so it is where a small child makes a first friend and a parent meets the other parents on the street. Magical Bridge playground is next door for afterwards.",
+      "goodFor": [
+        "family",
+        "kids",
+        "free",
+        "weekend",
+        "morning"
+      ],
+      "kids": true,
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "Saturdays 10.30 to 11am at Mitchell Park; weekday sessions at the Children’s, Downtown and College Terrace libraries",
+      "durationMin": 30,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "provenance": "editorial",
+      "id": "menlo-park-library-storytime",
+      "title": "Family Storytime at Menlo Park Library",
+      "emoji": "📖",
+      "type": "class",
+      "mode": "do",
+      "group": "read",
+      "zone": "menlo-park",
+      "coords": [
+        37.45408,
+        -122.17974
+      ],
+      "coordsFrom": "osm way/35602842 (Nominatim)",
+      "categories": [
+        "books",
+        "kids",
+        "free"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Six a week · Saturdays 11.15am at the main library",
+      "days": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "times": "Menlo Park Library: Thursdays and Fridays at 10.15am, Saturdays at 11.15am. Belle Haven Library: Tuesdays at 7.15pm, Fridays at 5.15pm, Saturdays at 10.15am. A Global Language Storytime once a month",
+      "firstStep": "Drop in at whichever time and branch suits you",
+      "area": "Menlo Park Library, 800 Alma Street",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": true,
+      "url": "https://www.menlopark.gov/Government/Departments/Library-and-Community-Services/Library/About-the-library/Childrens-services",
+      "source": "City of Menlo Park",
+      "lastVerified": "2026-09-29",
+      "why": "Six drop-in storytimes a week between the main library and Belle Haven, including two in the early evening for parents who work days. Once a month a guest reads in another language: Spanish, Korean, Japanese and Mandarin so far. No sign-up, no fee, so it is an easy weekly fixture to build a Saturday morning around.",
+      "goodFor": [
+        "family",
+        "kids",
+        "free",
+        "weekend",
+        "morning",
+        "evening"
+      ],
+      "kids": true,
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "Main library Thursdays and Fridays 10.15am, Saturdays 11.15am; Belle Haven Tuesdays 7.15pm, Fridays 5.15pm, Saturdays 10.15am",
+      "durationMin": 30,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "provenance": "editorial",
+      "id": "mountain-view-outdoor-storytime",
+      "title": "Outdoor Storytime in Pioneer Park",
+      "emoji": "🌳",
+      "type": "class",
+      "mode": "do",
+      "group": "read",
+      "zone": "mountain-view",
+      "coords": [
+        37.38954,
+        -122.08317
+      ],
+      "coordsFrom": "osm way/166879597 (Nominatim)",
+      "categories": [
+        "books",
+        "kids",
+        "free",
+        "outdoors"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Tuesdays 10.30am, weather permitting",
+      "days": [
+        2
+      ],
+      "times": "Tuesdays 10.30 to 11am in Pioneer Park, beside the library, weather permitting",
+      "firstStep": "Bring a blanket. All ages, no registration",
+      "area": "Pioneer Park, beside Mountain View Public Library, 585 Franklin Street",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": false,
+      "weatherSensitive": true,
+      "url": "https://mountainview.libcal.com/",
+      "source": "Mountain View Public Library",
+      "lastVerified": "2026-09-29",
+      "why": "Mountain View’s children’s librarians take stories, songs and rhymes out onto the grass of Pioneer Park every Tuesday morning. You bring a blanket and sit down. It is free, needs no registration and is open to every age. The library also runs a baby storytime indoors on Wednesdays and a monthly storytime at the Magical Bridge playground.",
+      "goodFor": [
+        "family",
+        "kids",
+        "free",
+        "outdoor",
+        "morning"
+      ],
+      "kids": true,
+      "quality": 4,
+      "uniqueness": 4,
+      "hoursNote": "Tuesdays 10.30 to 11am, weather permitting",
+      "durationMin": 30,
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Pioneer_Memorial_Park%2C_Mountain_View%2C_California%2C_July_2019.jpg/1280px-Pioneer_Memorial_Park%2C_Mountain_View%2C_California%2C_July_2019.jpg",
+      "imageSubject": "Pioneer Park, Mountain View",
+      "imageKind": "subject",
+      "imageCredit": "Steven Baltakatei Sandoval · CC BY-SA 4.0"
+    },
+    {
+      "provenance": "editorial",
+      "id": "palo-alto-library-pageturners",
+      "title": "Pageturners book club",
+      "emoji": "📚",
+      "type": "class",
+      "mode": "do",
+      "group": "read",
+      "zone": "palo-alto",
+      "coords": [
+        37.44498,
+        -122.13907
+      ],
+      "coordsFrom": "osm way/231246596 (Nominatim)",
+      "categories": [
+        "books",
+        "free"
+      ],
+      "rhythm": "monthly",
+      "commitment": "book",
+      "cadence": "Second Thursday of the month, 6.30pm",
+      "times": "Second Thursday of each month at 6.30pm, Rinconada Library: Syou Ishida’s “We’ll Prescribe You a Cat” on 8 October, Ian McEwan’s “What We Can Know” on 12 November",
+      "firstStep": "Register for the next meeting on the library’s events page, then read the book",
+      "area": "Rinconada Library, 1213 Newell Road",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": true,
+      "url": "https://paloalto.bibliocommons.com/v2/events",
+      "source": "Palo Alto City Library",
+      "lastVerified": "2026-09-29",
+      "why": "The city library’s own book club, meeting at Rinconada on the second Thursday of each month. The list runs from new translated fiction to the latest McEwan, so it is a good way to read outside your habits. It is free, but you register for each meeting.",
+      "goodFor": [
+        "solo",
+        "free",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "Second Thursday of each month at 6.30pm",
+      "durationMin": 90,
+      "priceLevel": 0,
+      "booking": "https://paloalto.bibliocommons.com/v2/events"
+    },
+    {
+      "provenance": "editorial",
+      "id": "menlo-park-library-book-groups",
+      "title": "Book groups at Menlo Park Library",
+      "emoji": "📚",
+      "type": "class",
+      "mode": "do",
+      "group": "read",
+      "zone": "menlo-park",
+      "coords": [
+        37.45408,
+        -122.17974
+      ],
+      "coordsFrom": "osm way/35602842 (Nominatim)",
+      "categories": [
+        "books",
+        "free"
+      ],
+      "rhythm": "monthly",
+      "commitment": "dropin",
+      "cadence": "California books, first Sunday at 3pm · five more groups a month",
+      "times": "California Book Group: first Sunday, 3 to 4.15pm, in the library, no registration. Sci-fi and fantasy: fourth Monday at 6.30pm at Belle Haven or on Zoom. Fiction, Mystery and Melanated Women Read meet on Zoom. Teen and middle-grade groups meet in the library on the third Tuesday and third Saturday",
+      "firstStep": "Turn up to the California Book Group on the first Sunday; the Zoom groups need registration",
+      "area": "Menlo Park Library, 800 Alma Street",
+      "price": 0,
+      "priceNote": "Free",
+      "indoor": true,
+      "url": "https://www.menlopark.gov/Government/Departments/Library-and-Community-Services/Library/About-the-library/Book-groups",
+      "source": "City of Menlo Park",
+      "lastVerified": "2026-09-29",
+      "why": "Seven book groups run from one small library. The in-person one reads California writers on the first Sunday afternoon of the month. Others cover fiction, mystery, science fiction and fantasy, and there are groups for middle-grade readers and teens, so a parent and a ten-year-old can each have a group in the same building.",
+      "goodFor": [
+        "solo",
+        "free",
+        "weekend",
+        "afternoon",
+        "evening"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "California Book Group first Sunday 3 to 4.15pm; other groups monthly, mostly on weekday evenings",
+      "durationMin": 75,
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "provenance": "editorial",
+      "id": "palo-alto-art-center-kids",
+      "title": "Kids’ art classes at Palo Alto Art Center",
+      "emoji": "🎨",
+      "type": "class",
+      "mode": "do",
+      "group": "make",
+      "zone": "palo-alto",
+      "coords": [
+        37.44397,
+        -122.139
+      ],
+      "coordsFrom": "osm way/231246592",
+      "categories": [
+        "art",
+        "craft",
+        "kids",
+        "learn"
+      ],
+      "rhythm": "weekly",
+      "commitment": "term",
+      "cadence": "Weekly classes by the term, ages 3 to 18",
+      "times": "Classes run by the season, for children aged 3 to 18, with family workshops as well. The curriculum changes every quarter",
+      "firstStep": "Pick a class in the city’s Enjoy! catalogue and register online",
+      "area": "1313 Newell Road",
+      "priceNote": "Priced per term, in the Enjoy! catalogue",
+      "indoor": true,
+      "rainyDayPick": true,
+      "url": "https://www.paloalto.gov/Departments/Community-Services/Arts-Sciences/Palo-Alto-Art-Center/Make-Art/Classes-for-Youth",
+      "source": "City of Palo Alto",
+      "lastVerified": "2026-09-29",
+      "why": "The city’s art centre teaches children from three to eighteen: drawing, painting, ceramics, fibre arts, sculpture, printmaking and mixed media, with professional teaching artists and small groups. The programme changes every quarter, so a child can keep coming back without repeating a class. There are family workshops too, including three-day ceramics courses you do together.",
+      "goodFor": [
+        "family",
+        "kids",
+        "learn",
+        "indoor",
+        "afternoon"
+      ],
+      "kids": [
+        3,
+        17
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hoursNote": "Weekly classes by the term; times are in the catalogue",
+      "durationMin": 90,
+      "priceLevel": 3,
+      "booking": "https://www.paloalto.gov/Departments/Community-Services/Activities-Programs/Enjoy/Enjoy-Catalog"
     }
   ]
 }

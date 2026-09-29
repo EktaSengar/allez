@@ -72,6 +72,10 @@ const Rec = (() => {
                     suits the evening, and is planned to the sunset time.
        goodFor      'family' where it is true, which is how the taste
                     engine's "with kids" preference finds it.
+       dogsNote     optional sentence beside `dogs`, for a record that is
+                    a whole day rather than one door: "on a lead on the
+                    Coastside Trail; not on the beaches". Shown on Away
+                    when a dog is in the party.
 
      Stated by a person who checked, never inferred. scripts/check-packs.mjs
      holds the vocabulary. */
