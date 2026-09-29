@@ -293,7 +293,7 @@
       ],
       "coordsFrom": "discovery index (OpenStreetMap)",
       "labels": [],
-      "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Great_American_Music_Hall_%28April_1976%29.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Great_American_Music_Hall_%28April_1976%29.jpg/500px-Great_American_Music_Hall_%28April_1976%29.jpg",
       "imageSubject": "Great American Music Hall",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons",
@@ -603,9 +603,9 @@
       "sameAs": [
         "osm-rose-and-crown-74889--244323"
       ],
-      "hours": "Mo-We 14:00-23:00; Th 14:00-24:00; Fr 14:00-01:00; Sa 13:00-01:00; Su 13:00-23:00",
-      "hoursFrom": "therosepa.com",
-      "hoursChecked": "2026-09-25",
+      "hours": "Mo-We 14:00-23:00; Th 14:00-24:00; Fr 14:00-01:00; Sa 13:00-01:00; Su 11:00-23:00",
+      "hoursFrom": "the pub's posted hours",
+      "hoursChecked": "2026-09-29",
       "priceLevel": 1,
       "booking": false
     },
@@ -1064,7 +1064,7 @@
         "dontmiss"
       ],
       "priceLevel": 3,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Castro_Theater_San_Francisc.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Castro_Theater_San_Francisc.jpg/500px-Castro_Theater_San_Francisc.jpg",
       "imageSubject": "Castro Theatre",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
@@ -1439,7 +1439,7 @@
       "why": "The city's serious dance floor: two rooms down an alley off Mission Street, a Funktion-One sound system, and house and techno DJs from Berlin, Detroit and the Bay on the same bill. It runs by the calendar rather than by the week, so check who is on. Nights start around half past nine and go late.",
       "labels": [],
       "priceLevel": 2,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mission_District_San_Francisco.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Mission_District_San_Francisco.jpg/500px-Mission_District_San_Francisco.jpg",
       "imageSubject": "Mission Street",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons"
@@ -1991,7 +1991,7 @@
       ],
       "hoursChecked": "2026-09-28",
       "priceLevel": 1,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/Mission_District_San_Francisco.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Mission_District_San_Francisco.jpg/500px-Mission_District_San_Francisco.jpg",
       "imageSubject": "Mission Street",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons"
@@ -2376,6 +2376,487 @@
       "imageSubject": "Broadway, downtown Redwood City",
       "imageKind": "context",
       "imageCredit": "Ramesh lalwani · CC BY-SA 4.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "palo-alto",
+      "indoor": false,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "socialize",
+        "family"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4.5,
+      "uniqueness": 5,
+      "id": "alpine-inn-portola-valley",
+      "title": "Rossotti's Alpine Inn",
+      "emoji": "🍺",
+      "area": "3915 Alpine Road, Portola Valley",
+      "priceNote": "Cheap",
+      "why": "A roadhouse in the foothills that has been pouring drinks since 1852, making it one of the oldest taverns in California and a state historical landmark. Stanford students have been driving up since the university opened; on a sunny weekend the big creekside beer garden fills with them, plus cyclists and families. Burgers, tacos and pitchers, ordered at the window.",
+      "url": "https://www.alpineinnpv.com/history",
+      "source": "alpineinnpv.com; Palo Alto Online (2024); Atlas Obscura; confirmed against OpenStreetMap",
+      "coords": [
+        37.38203,
+        -122.19389
+      ],
+      "coordsFrom": "the map pin for Rossotti's Alpine Inn",
+      "hours": "Tu-Th 11:30-21:00; Fr 11:00-21:30; Sa 10:30-21:30; Su 10:30-21:00",
+      "hoursFrom": "OpenStreetMap",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-854-4004",
+      "booking": false,
+      "durationMin": 120,
+      "priceLevel": 1
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "socialize"
+      ],
+      "labels": [],
+      "quality": 3.5,
+      "uniqueness": 4,
+      "id": "nola-palo-alto",
+      "title": "NOLA",
+      "emoji": "🎺",
+      "area": "535 Ramona Street",
+      "cuisine": "cajun",
+      "priceNote": "Moderate",
+      "why": "A New Orleans restaurant and bar on Ramona, loud and colourful, with a big courtyard hung with lanterns. It's where Stanford groups go for birthdays and team dinners: jambalaya, gumbo, oysters and a long list of cocktails, with brunch at weekends.",
+      "url": "https://www.nolas.com/",
+      "source": "nolas.com; OpenTable; confirmed against OpenStreetMap",
+      "coords": [
+        37.44507,
+        -122.16156
+      ],
+      "coordsFrom": "the map pin for Nola's",
+      "hours": "Tu-Th 11:30-21:00; Fr 11:30-22:00; Sa 11:00-22:00; Su 11:00-20:00",
+      "hoursFrom": "OpenTable",
+      "hoursChecked": "2026-09-29",
+      "booking": "https://www.opentable.com/r/nola-palo-alto",
+      "durationMin": 90,
+      "priceLevel": 2
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "menlo-park",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "socialize",
+        "couple"
+      ],
+      "labels": [
+        "couple"
+      ],
+      "quality": 3.5,
+      "uniqueness": 3,
+      "id": "menlo-tavern",
+      "title": "Menlo Tavern",
+      "emoji": "🥃",
+      "area": "The Stanford Park Hotel, 100 El Camino Real, Menlo Park",
+      "priceNote": "Cocktails about $18",
+      "why": "The bar at the Stanford Park Hotel, on the Palo Alto line: leather, dark wood and a fire, with seasonal cocktails, local wines and upscale small plates. A polished, quiet place for a work drink that turns into dinner.",
+      "url": "https://www.menlotavern.com/",
+      "source": "menlotavern.com; stanfordparkhotel.com; OpenTable",
+      "coords": [
+        37.44751,
+        -122.17205
+      ],
+      "coordsFrom": "the Stanford Park Hotel (osm way/112257534)",
+      "hours": "Mo-Su 16:00-22:00",
+      "hoursFrom": "stanfordparkhotel.com (the bar)",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-330-2794",
+      "booking": "https://www.opentable.com/r/menlo-tavern-menlo-park",
+      "durationMin": 90,
+      "priceLevel": 3,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Downtown_Menlo_Park_California.jpg/1280px-Downtown_Menlo_Park_California.jpg",
+      "imageSubject": "Menlo Park, California",
+      "imageKind": "context",
+      "imageCredit": "LPS.1 · CC0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "menlo-park",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "socialize",
+        "couple"
+      ],
+      "labels": [
+        "couple"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "bar-loretta-menlo-park",
+      "title": "Bar Loretta",
+      "emoji": "🍸",
+      "area": "639 Santa Cruz Avenue, Menlo Park",
+      "priceNote": "Cocktails about $16",
+      "why": "A small cocktail lounge on Santa Cruz Avenue, open since early 2025 and run with Bistro Vida next door. Classic and seasonal cocktails, wine by the glass, tapas and charcuterie; one of the few proper after-work bars in downtown Menlo Park.",
+      "url": "https://www.opentable.com/r/vida-bar-loretta-menlo-park",
+      "source": "InMenlo (February 2025); OpenTable; confirmed against OpenStreetMap (node/2628201870)",
+      "coords": [
+        37.4526,
+        -122.18355
+      ],
+      "coordsFrom": "osm node/2628201870",
+      "hours": "Mo 16:00-21:00; Tu-Sa 16:00-22:00",
+      "hoursFrom": "Yelp",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-462-1686",
+      "booking": false,
+      "durationMin": 75,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Downtown_Menlo_Park_California.jpg/1280px-Downtown_Menlo_Park_California.jpg",
+      "imageSubject": "Menlo Park, California",
+      "imageKind": "context",
+      "imageCredit": "LPS.1 · CC0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "menlo-park",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "evening",
+        "work",
+        "socialize"
+      ],
+      "labels": [],
+      "quality": 3.5,
+      "uniqueness": 3,
+      "id": "canteenm-citizenm-menlo-park",
+      "title": "canteenM at citizenM",
+      "emoji": "🏨",
+      "area": "2 Meta Way, Menlo Park",
+      "priceNote": "Moderate",
+      "why": "The bar and canteen of the hotel Meta built on the edge of its campus at Willow Village, open since late 2023. It's open around the clock: coffee in the morning, cocktails and beer on tap in the evening, in a bright, bookish lobby full of laptops. The closest drink to Meta's offices.",
+      "url": "https://www.citizenm.com/hotels/america/san-francisco-bay-area/menlo-park-hotel/mpk-canteenm",
+      "source": "citizenm.com; 7x7 (2024); confirmed against OpenStreetMap (way/1266640384)",
+      "coords": [
+        37.48227,
+        -122.16662
+      ],
+      "coordsFrom": "osm way/1266640384",
+      "hours": "Mo-Su 00:00-24:00",
+      "hoursFrom": "citizenm.com",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Downtown_Menlo_Park_California.jpg/1280px-Downtown_Menlo_Park_California.jpg",
+      "imageSubject": "Menlo Park, California",
+      "imageKind": "context",
+      "imageCredit": "LPS.1 · CC0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "mountain-view",
+      "indoor": false,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "socialize"
+      ],
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "steins-beer-garden",
+      "title": "Steins Beer Garden",
+      "emoji": "🍻",
+      "area": "895 Villa Street, Mountain View",
+      "priceNote": "Moderate",
+      "why": "A big beer garden just off Castro Street with dozens of taps, burgers and pretzels, and long tables under heaters. It's the default for a team drink in downtown Mountain View, and full of Googlers on a Thursday.",
+      "url": "https://steinsbeergarden.com/",
+      "source": "steinsbeergarden.com; Yelp; confirmed against OpenStreetMap (way/205809028)",
+      "coords": [
+        37.39395,
+        -122.07994
+      ],
+      "coordsFrom": "osm way/205809028",
+      "hours": "Mo-Su 11:30-21:00",
+      "hoursFrom": "steinsbeergarden.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-386-5505",
+      "booking": false,
+      "durationMin": 90,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Corner_of_Castro_and_Villa_in_Mountain_View.jpg/1280px-Corner_of_Castro_and_Villa_in_Mountain_View.jpg",
+      "imageSubject": "Castro Street at Villa, Mountain View",
+      "imageKind": "context",
+      "imageCredit": "Runner1928 · CC BY-SA 3.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "mountain-view",
+      "indoor": false,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "socialize"
+      ],
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "ludwigs-biergarten-mountain-view",
+      "title": "Ludwig's Biergarten",
+      "emoji": "🥨",
+      "area": "383 Castro Street, Mountain View",
+      "priceNote": "Moderate",
+      "why": "A proper German beer garden on Castro Street: litre steins of Bavarian beer, bratwurst, schnitzel and giant pretzels at communal tables outside. Loud and cheerful, and good for a big group.",
+      "url": "https://ludwigsmv.com/",
+      "source": "ludwigsmv.com; Palo Alto Online (2021); confirmed against OpenStreetMap (way/205718455)",
+      "coords": [
+        37.3914,
+        -122.08016
+      ],
+      "coordsFrom": "osm way/205718455",
+      "hours": "Tu-Th 11:30-22:00; Fr-Sa 11:30-22:30; Su 11:30-22:00",
+      "hoursFrom": "Yelp",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-282-5342",
+      "booking": false,
+      "durationMin": 90,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Corner_of_Castro_and_Villa_in_Mountain_View.jpg/1280px-Corner_of_Castro_and_Villa_in_Mountain_View.jpg",
+      "imageSubject": "Castro Street at Villa, Mountain View",
+      "imageKind": "context",
+      "imageCredit": "Runner1928 · CC BY-SA 3.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife"
+      ],
+      "zone": "mountain-view",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "couple",
+        "socialize"
+      ],
+      "labels": [
+        "couple"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "rootstock-wine-bar-mountain-view",
+      "title": "Rootstock Wine Bar",
+      "emoji": "🍷",
+      "area": "331 Castro Street, Mountain View",
+      "priceNote": "Glasses $12–20",
+      "why": "A relaxed wine bar on Castro with a long list by the glass, from California and beyond, and cheese and charcuterie boards to go with it. Quieter than the beer gardens around it: a good choice when you want to talk.",
+      "url": "https://www.rootstockwinebar.com/mountain-view/",
+      "source": "rootstockwinebar.com; Yelp",
+      "coords": [
+        37.39199,
+        -122.07971
+      ],
+      "coordsFrom": "the address point for 331 Castro Street (osm way/162342031); the bar is not mapped yet",
+      "hours": "Tu-We 15:00-21:00; Th-Fr 15:00-22:00; Sa 13:00-22:00; Su 13:30-21:00",
+      "hoursFrom": "Yelp",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-963-9916",
+      "booking": false,
+      "durationMin": 90,
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Corner_of_Castro_and_Villa_in_Mountain_View.jpg/1280px-Corner_of_Castro_and_Villa_in_Mountain_View.jpg",
+      "imageSubject": "Castro Street at Villa, Mountain View",
+      "imageKind": "context",
+      "imageCredit": "Runner1928 · CC BY-SA 3.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife"
+      ],
+      "zone": "mountain-view",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "socialize"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 3.5,
+      "uniqueness": 3,
+      "id": "molly-magees-mountain-view",
+      "title": "Molly Magee's",
+      "emoji": "☘️",
+      "area": "241 Castro Street, Mountain View",
+      "priceNote": "Cheap",
+      "why": "The Irish pub on Castro and downtown Mountain View's late-night bar: Guinness, pool, darts and a small dance floor, open until two every night.",
+      "url": "https://www.mollysmountainview.com/",
+      "source": "mollysmountainview.com; Yelp; confirmed against OpenStreetMap (node/343267971)",
+      "coords": [
+        37.3933,
+        -122.07905
+      ],
+      "coordsFrom": "osm node/343267971",
+      "hours": "Mo-Fr 15:00-02:00; Sa-Su 14:00-02:00",
+      "hoursFrom": "Yelp",
+      "hoursChecked": "2026-09-29",
+      "booking": false,
+      "durationMin": 120,
+      "priceLevel": 1,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Corner_of_Castro_and_Villa_in_Mountain_View.jpg/1280px-Corner_of_Castro_and_Villa_in_Mountain_View.jpg",
+      "imageSubject": "Castro Street at Villa, Mountain View",
+      "imageKind": "context",
+      "imageCredit": "Runner1928 · CC BY-SA 3.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "menlo-park",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "couple"
+      ],
+      "labels": [
+        "couple",
+        "bookahead"
+      ],
+      "quality": 4.5,
+      "uniqueness": 4,
+      "id": "madera-rosewood-sand-hill",
+      "title": "Madera at Rosewood Sand Hill",
+      "emoji": "🌲",
+      "area": "2825 Sand Hill Road, Menlo Park",
+      "priceNote": "Mains $45–75",
+      "why": "The restaurant and bar of the hotel at the top of Sand Hill Road, where the venture capital firms are, which makes it the investors' quiet alternative to Buck's. Wood-fired Californian cooking, a wine list of well over a thousand bottles and a terrace looking west to the Santa Cruz Mountains. It held a Michelin star until 2022.",
+      "url": "https://www.rosewoodhotels.com/en/sand-hill-menlo-park",
+      "source": "rosewoodhotels.com; SFGate; the Michelin Guide; confirmed against OpenStreetMap (way/384022279)",
+      "coords": [
+        37.41953,
+        -122.21254
+      ],
+      "coordsFrom": "the Rosewood Sand Hill (osm way/384022279)",
+      "phone": "+1-650-561-1500",
+      "booking": "https://www.opentable.com/madera-rosewood-hotel-sand-hill",
+      "durationMin": 120,
+      "priceLevel": 4,
+      "hours": "Mo-Fr 07:00-10:30,11:30-14:00,17:00-21:00; Sa-Su 07:00-10:30,10:30-14:00,17:00-21:00",
+      "hoursFrom": "rosewoodhotels.com",
+      "hoursChecked": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Driving_down_Sandhill_Road.jpg/500px-Driving_down_Sandhill_Road.jpg",
+      "imageSubject": "Sand Hill Road",
+      "imageKind": "context",
+      "imageCredit": "Coolcaesar at en.wikipedia · CC BY-SA 3.0"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "food"
+      ],
+      "zone": "cupertino",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "socialize"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "duke-of-edinburgh-cupertino",
+      "title": "The Duke of Edinburgh",
+      "emoji": "🍺",
+      "area": "10801 North Wolfe Road, Cupertino",
+      "priceNote": "Cheap",
+      "why": "A proper English pub a few minutes from Apple Park, and the Apple crowd's pint after work for decades: dark wood, darts, British beers on tap, and fish and chips in several sizes.",
+      "url": "https://www.theduke.com/",
+      "source": "theduke.com; Tripadvisor; confirmed against OpenStreetMap (node/1976649036)",
+      "coords": [
+        37.33492,
+        -122.01482
+      ],
+      "coordsFrom": "osm node/1976649036",
+      "phone": "+1-408-446-3853",
+      "booking": false,
+      "durationMin": 90,
+      "priceLevel": 1,
+      "hours": "Mo-Su 16:00-02:00",
+      "hoursFrom": "theduke.com",
+      "hoursChecked": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cupertino_City_Center.jpg/500px-Cupertino_City_Center.jpg",
+      "imageSubject": "Cupertino, California",
+      "imageKind": "context",
+      "imageCredit": "Coolcaesar at en.wikipedia · CC BY-SA 3.0"
     }
   ]
 }

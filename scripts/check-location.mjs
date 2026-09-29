@@ -257,8 +257,14 @@ const EXPECT = {
        restaurant column; San Mateo and Sunnyvale are what is left.
        144 on 23 September, with two Palo Alto places visited and
        written up, and the gardens and landmarks around them. 146 the
-       same day, once San Francisco's hidden corners were written. */
-    floor: 146
+       same day, once San Francisco's hidden corners were written.
+       141 on 29 September, and not a regression: the pack went from 81
+       zones to 91 when the South Bay joined, so the evenly spaced sample
+       of 40 moved. It now lands on Campbell, Santa Clara and Saratoga,
+       which have map places and a profile but no café, bakery or market
+       written up yet. 147 the same day, once ten cafés and bakeries were
+       written up across the three. Their market column is still empty. */
+    floor: 147
   },
   delhi: {
     probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],
@@ -357,8 +363,15 @@ const EXPECT = {
 
        24 on 28 September, with the first Nights and Sport records: the
        jazz rooms and bars of the West and East Village now answer
-       nightlife for both the Village and Union Square probes. */
-    floor: 109,
+       nightlife for both the Village and Union Square probes.
+
+       105 on 29 September, and the four cells were never real. Three
+       Wikidata ids in notable.mjs were wrong, and `pastry shop` was
+       "hiking trail": The Great Saunter, a day-long walk round
+       Manhattan, answered "bakery" for the Village, Union Square and
+       Midtown. With the ids fixed it is gone, and so is what it
+       counted for. */
+    floor: 105,
     overshare: 24
   },
   bengaluru: {
