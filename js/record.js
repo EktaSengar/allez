@@ -283,7 +283,38 @@ const Rec = (() => {
      the browser; one shape because to everything downstream they are the
      same kind of thing. */
 
+  /* ---------- a category the name contradicts ----------
+
+     The map's tags are right far more often than not, and where they are
+     wrong the name usually says so. Three kinds came up from one address
+     in South San Francisco: a deli filed as a marketplace (Amal's Deli
+     took the "Market" slot), a grab-and-go "Market" filed as a café
+     (Napa Farms Market took the "Coffee" one), and a factory outlet
+     filed as a bakery. And from Wikidata, a building that houses a
+     restaurant filed as one (the Audiffred Building, which is Boulevard's
+     address). Each is moved to the kind its name says rather than
+     dropped: a deli is still a good place to buy lunch.
+
+     Done here, where every map row becomes a record, so it holds in
+     every city the moment it ships rather than after the next rebuild. */
+  const FOOD_SHOP_NAME = /\b(deli|delicatessen|liquors?|grocery|mini ?mart|food ?mart|convenience)\b/i;
+  /* Only "Building": in Delhi and Bengaluru "hotel" in a name means an
+     eatery — Kake-Da-Hotel is one of Connaught Place's best-known. */
+  const PLACE_NAME     = /\bbuilding$/i;
+  function refile(p) {
+    const c = p.c, n = p.n || '';
+    if (c === 'market' && FOOD_SHOP_NAME.test(n)) return 'deli';
+    /* "Market Cafe" and "Bakery Market Cafe" still say café; only a name
+       that is a market and nothing else is moved. */
+    if (c === 'cafe' && /\bmarket\b/i.test(n) && !/\b(caf[eé]|coffee|bakery|tea)\b/i.test(n)) return 'deli';
+    if (c === 'bakery' && /\boutlet\b/i.test(n)) return 'deli';
+    if ((c === 'restaurant' || c === 'cafe' || c === 'bakery') && PLACE_NAME.test(n)) return 'culture';
+    return c;
+  }
+
   function fromCompact(p) {
+    const type = refile(p);
+    if (type !== p.c) p = { ...p, c: type };
     const kind = NATURE[p.c];
     return withPhoto({
       id: compactId(p),

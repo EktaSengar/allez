@@ -357,8 +357,15 @@ const EXPECT = {
 
        24 on 28 September, with the first Nights and Sport records: the
        jazz rooms and bars of the West and East Village now answer
-       nightlife for both the Village and Union Square probes. */
-    floor: 109,
+       nightlife for both the Village and Union Square probes.
+
+       105 on 29 September, and the four cells were never real. Three
+       Wikidata ids in notable.mjs were wrong, and `pastry shop` was
+       "hiking trail": The Great Saunter, a day-long walk round
+       Manhattan, answered "bakery" for the Village, Union Square and
+       Midtown. With the ids fixed it is gone, and so is what it
+       counted for. */
+    floor: 105,
     overshare: 24
   },
   bengaluru: {
