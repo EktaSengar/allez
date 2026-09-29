@@ -1093,7 +1093,7 @@ const App = (() => {
   defineView('weekend',  c  => renderWeekend(c.weekend), c => weekendLede(c.weekend));
   defineView('eat',      () => renderEat(),      () => eatLede());
   defineView('explore',  () => renderExplore(),  () => exploreLede());
-  defineView('events',   () => renderEvents(),   () => eventsLede());
+  defineView('events',   () => bookStrip() + renderEvents(),   () => eventsLede());
   defineView('regulars', () => renderRegulars(), () => regularsLede());
   defineView('away',     () => renderAway());
   defineView('quests',   () => renderQuests());
@@ -1959,6 +1959,28 @@ const App = (() => {
      filter (Rank.suits), a child keeps out what is not for their age, and
      the interests are weights. Shown only where the pack has the data to
      answer it, so other cities' weekends are exactly what they were. */
+  /* ---------- book this week ----------
+
+     What has a date to beat in the next fortnight (Rank.bookingDue): a
+     booking closes, or something that sells out is about to happen. Left
+     out entirely when there is none — a strip that is usually empty is
+     worse than none — and it honours who is coming, like the plan does. */
+  function bookStrip() {
+    const prefs = Store.prefs();
+    const due = ALL.filter(i => Store.rating(i.id) !== 'never' && !Store.isDone(i.id) && Rank.suits(i, prefs))
+      .map(i => ({ i, b: Rank.bookingDue(i, TODAY_ISO) })).filter(x => x.b)
+      .sort((a, c) => a.b.days - c.b.days).slice(0, 4);
+    if (!due.length) return '';
+    const when = ({ by, days, basis }) => {
+      const on = days === 0 ? 'today' : days === 1 ? 'tomorrow' : fmtShort(new Date(by + 'T12:00:00'));
+      return basis === 'bookBy' ? `Book by ${on}` : `Sells out — on ${on}`;
+    };
+    return stripHead('Book this week', 'Dated, and worth sorting before the day')
+      + `<div class="book-list">${due.map(({ i, b }) =>
+        `<div class="book"><a class="book-title" href="${esc(i.booking)}" target="_blank" rel="noopener">${esc(i.title)} <span aria-hidden="true">↗</span></a>
+          <span class="book-when">${esc(when(b))}</span></div>`).join('')}</div>`;
+  }
+
   const KID_AGES = [['0–4', 2], ['5–8', 6], ['9–12', 10], ['13+', 15]];
   const INTERESTS = [['tech', 'Tech'], ['music', 'Live music'], ['books', 'Books'], ['art', 'Art'],
                      ['climbing', 'Climbing'], ['hike', 'Hikes'], ['cycling', 'Bike']];
@@ -2018,6 +2040,7 @@ const App = (() => {
     };
 
     return whoRow()
+      + bookStrip()
       + (best && hasRealPhoto(best.item) ? hero(best.item) : '')
       + stripHead('How the two days could go')
       + `<div class="plan">${day(w.sat, plan.days[0])}${day(w.sun, plan.days[1])}</div>`
@@ -2752,35 +2775,84 @@ const App = (() => {
      time is the city's wall clock, so it carries the city's zone and
      lands right wherever the phone happens to be; without a stated time
      it is an all-day entry rather than an invented hour. */
-  function evCalendar(i, d) {
-    const day = iso(addDays(TODAY, d)).replace(/-/g, '');
+  const icsClean = s => String(s || '').replace(/[\\;,]/g, m => '\\' + m).replace(/\n/g, ' ');
+
+  /* One calendar file, made in the browser and handed to the phone. */
+  function icsDownload(name, events) {
+    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Allez//Events//EN', ...events.flat(),
+      'END:VCALENDAR'].filter(Boolean).join('\r\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+    a.download = `${(name || 'event').replace(/[^\w]+/g, '-').slice(0, 60)}.ics`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  /* `day` is an ISO date. Its own time where the record states one, an
+     all-day entry where it does not. */
+  function icsEvent(i, day) {
+    const ymd = day.replace(/-/g, '');
     const t = evTime(i);
     const tz = City.weather.tz;
-    const clean = s => String(s || '').replace(/[\\;,]/g, m => '\\' + m).replace(/\n/g, ' ');
     let when;
     if (t) {
       const hhmm = x => x.replace(':', '') + '00';
       const [h, m] = t.from.split(':').map(Number);
       const end = t.to || clock(h * 60 + m + (i.durationMin || 120));
-      when = [`DTSTART;TZID=${tz}:${day}T${hhmm(t.from)}`, `DTEND;TZID=${tz}:${day}T${hhmm(end)}`];
+      when = [`DTSTART;TZID=${tz}:${ymd}T${hhmm(t.from)}`, `DTEND;TZID=${tz}:${ymd}T${hhmm(end)}`];
     } else {
-      const next = iso(addDays(TODAY, d + 1)).replace(/-/g, '');
-      when = [`DTSTART;VALUE=DATE:${day}`, `DTEND;VALUE=DATE:${next}`];
+      const next = iso(addDays(new Date(day + 'T12:00:00'), 1)).replace(/-/g, '');
+      when = [`DTSTART;VALUE=DATE:${ymd}`, `DTEND;VALUE=DATE:${next}`];
     }
-    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Allez//Events//EN', 'BEGIN:VEVENT',
-      `UID:${clean(i.id)}-${day}@allez.city`,
+    return ['BEGIN:VEVENT',
+      `UID:${icsClean(i.id)}-${ymd}@allez.city`,
       `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
       ...when,
-      `SUMMARY:${clean(i.title)}`,
-      i.area ? `LOCATION:${clean(i.area)}` : '',
+      `SUMMARY:${icsClean(i.title)}`,
+      i.area ? `LOCATION:${icsClean(i.area)}` : '',
       i.url ? `URL:${i.url}` : '',
-      `DESCRIPTION:${clean([i.times, i.url].filter(Boolean).join(' — '))}`,
-      'END:VEVENT', 'END:VCALENDAR'].filter(Boolean).join('\r\n');
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
-    a.download = `${(i.title || 'event').replace(/[^\w]+/g, '-').slice(0, 60)}.ics`;
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      `DESCRIPTION:${icsClean([i.times, i.url].filter(Boolean).join(' — '))}`,
+      'END:VEVENT'];
+  }
+
+  function evCalendar(i, d) {
+    icsDownload(i.title, [icsEvent(i, iso(addDays(TODAY, d)))]);
+  }
+
+  /* ---------- saved, as one calendar ----------
+
+     Everything marked "want" that has a date goes in one file, and where
+     a record carries a `bookBy` it also gets an all-day "Book" entry on
+     that day with an alert at nine in the morning. The phone's own
+     calendar then does the reminding: no account, no server, nothing
+     sent anywhere. An undated place has nothing to put on a calendar, and
+     a sell-out with no booking date is not given an invented one. */
+  function savedDated() {
+    return [...ALL, ...DISCOVERED].filter(i => Store.rating(i.id) === 'want').flatMap(i => {
+      if (!i.start) return [];
+      const day = i.start >= TODAY_ISO ? i.start : (i.end && i.end >= TODAY_ISO ? TODAY_ISO : null);
+      return day ? [{ i, day }] : [];
+    });
+  }
+
+  function icsBookBy(i) {
+    const ymd = i.bookBy.replace(/-/g, '');
+    const next = iso(addDays(new Date(i.bookBy + 'T12:00:00'), 1)).replace(/-/g, '');
+    return ['BEGIN:VEVENT',
+      `UID:${icsClean(i.id)}-book-${ymd}@allez.city`,
+      `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
+      `DTSTART;VALUE=DATE:${ymd}`, `DTEND;VALUE=DATE:${next}`,
+      `SUMMARY:${icsClean(`Book: ${i.title}`)}`,
+      i.booking ? `URL:${i.booking}` : '',
+      `DESCRIPTION:${icsClean(`Last day to book. ${i.booking || ''}`.trim())}`,
+      'BEGIN:VALARM', 'ACTION:DISPLAY', `DESCRIPTION:${icsClean(`Book: ${i.title}`)}`, 'TRIGGER:PT9H', 'END:VALARM',
+      'END:VEVENT'];
+  }
+
+  function savedCalendar() {
+    const events = savedDated().flatMap(({ i, day }) =>
+      [icsEvent(i, day)].concat(i.bookBy && i.bookBy >= TODAY_ISO ? [icsBookBy(i)] : []));
+    if (events.length) icsDownload('allez-saved', events);
   }
 
   function evWhen(e) {
@@ -3302,7 +3374,10 @@ const App = (() => {
       if (!items.length) return '';
       return `<div class="list-group"><h3>${label}</h3>${rows(items)}</div>`;
     }).join('');
-    return html || `<p class="empty">Nothing marked yet. Open anything and use the buttons — the ranking learns from them.</p>`;
+    const dated = savedDated();
+    const cal = dated.length ? `<p class="saved-cal"><button class="chip" data-savedcal>Add saved to calendar</button>
+      <span>${dated.length} with a date${dated.some(x => x.i.bookBy) ? ', with a reminder on the day to book' : ''} · a file for your phone, nothing sent anywhere</span></p>` : '';
+    return (html && cal + html) || html || `<p class="empty">Nothing marked yet. Open anything and use the buttons — the ranking learns from them.</p>`;
   }
   /* ---------- filters ---------- */
 
@@ -3793,6 +3868,11 @@ const App = (() => {
         invalidate();
         toast(rating === 'want' ? 'Saved to your list.' : 'Removed from your list.');
       }
+    });
+
+    // Saved → one calendar file
+    document.addEventListener('click', e => {
+      if (e.target.closest('[data-savedcal]')) savedCalendar();
     });
 
     // Regulars: subsections, same component as Eat's

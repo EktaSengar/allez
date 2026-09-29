@@ -180,6 +180,29 @@ const Rank = (() => {
 
   /* --- the main event --- */
 
+  /* ---------- book it before it goes ----------
+
+     Two different things sit behind "book ahead", and only the dated ones
+     can be counted down to. `bookBy` is a date a person found: the last
+     day registration is open, or the day the tickets go. `bookAhead` on
+     something that starts on a date says it sells out, so the date to
+     beat is the start. Anything undated — a restaurant that fills, a day
+     trip — has nothing to count to and is not listed.
+
+     Only what can actually be booked: a record with no booking link has
+     nothing to send the reader to. The window is two weeks, the same one
+     a weekend plan looks ahead by, and the answer is plain data so the
+     app, the calendar feed and the MCP server all say the same thing. */
+  const BOOK_WINDOW = 14;
+  function bookingDue(item, today, window = BOOK_WINDOW) {
+    if (!/^https:\/\/\S+$/.test(item.booking || '')) return null;
+    const by = item.bookBy || (item.bookAhead && item.start) || null;
+    if (!by) return null;
+    const days = daysBetween(today, by);
+    if (days < 0 || days > window) return null;
+    return { by, days, basis: item.bookBy ? 'bookBy' : 'start' };
+  }
+
   /* ---------- who is coming ----------
 
      `dogs` and `kids` are stated on the record by somebody who checked
@@ -359,5 +382,5 @@ const Rank = (() => {
   }
 
   return { score, rank, isLive, isOpenOn, openRightNow, urgency, daysBetween, iso, parse,
-           seasonOf, weatherFit, seasonFit, suits, settingFit, priceLevel, LABEL_TEXT, HOLIDAYS };
+           seasonOf, weatherFit, seasonFit, suits, settingFit, bookingDue, priceLevel, LABEL_TEXT, HOLIDAYS };
 })();
