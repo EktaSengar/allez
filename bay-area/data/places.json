@@ -866,10 +866,10 @@
         -122.16142
       ],
       "coordsFrom": "osm way/132883462",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Old_Tbilisi%2C_Georgian_khachapuri%2C_Georgia.jpg/1280px-Old_Tbilisi%2C_Georgian_khachapuri%2C_Georgia.jpg",
-      "imageSubject": "Khachapuri",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons",
+      "image": "img/thumb/bevri-palo-alto/500px-bevri-palo-alto.jpg",
+      "imageSubject": "Georgian chokha coats at the door of Bevri",
+      "imageKind": "subject",
+      "imageCredit": "Our own photograph",
       "hours": "Mo-Su 11:30-21:00",
       "hoursFrom": "bevri.com",
       "hoursChecked": "2026-09-25",
@@ -966,6 +966,238 @@
       "durationMin": 45,
       "priceLevel": 1,
       "booking": false
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "couple",
+        "socialize"
+      ],
+      "labels": [
+        "couple",
+        "bookahead"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "meyhouse-palo-alto",
+      "title": "Meyhouse",
+      "emoji": "🍢",
+      "area": "640 Emerson Street",
+      "cuisine": "turkish",
+      "priceNote": "Meze $13–19, mains $18–42; chef's tasting menu $95 a head",
+      "bookAhead": true,
+      "why": "A Turkish meyhane on Emerson: a long evening of meze, grilled fish and raki, in the high-ceilinged room that used to be Gordon Biersch. About half the menu is the chef-owner's family recipes, the yogurt is made in-house, and he threw the plates himself. Order the Turkish bread, the grilled octopus on fava purée, the eggplant dishes and the manti dumplings, then künefe to finish. It gets loud when it is full, so book. On most Friday and Saturday nights it is also a jazz supper club, with seatings at five and eight.",
+      "url": "https://www.meyhouserestaurant.com/palo-alto",
+      "source": "meyhouserestaurant.com; Food Gal (2023); OpenTable; confirmed against OpenStreetMap (way/132397113)",
+      "coords": [
+        37.4433,
+        -122.16104
+      ],
+      "coordsFrom": "osm way/132397113",
+      "hours": "Mo-Th 11:45-14:00,17:00-21:30; Fr-Sa 11:45-14:00,17:00-22:00; Su 11:45-14:00,17:00-21:30",
+      "hoursFrom": "OpenTable",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-521-0935",
+      "booking": "https://www.meyhouserestaurant.com/reservations-1",
+      "durationMin": 105,
+      "priceLevel": 3
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "socialize",
+        "family"
+      ],
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "pizzeria-delfina-palo-alto",
+      "title": "Pizzeria Delfina",
+      "emoji": "🍕",
+      "area": "651 Emerson Street",
+      "cuisine": "pizza",
+      "priceNote": "Moderate; 5% surcharge on every check",
+      "why": "The Palo Alto branch of the Mission pizzeria: Neapolitan-style pies from a wood oven, fresh pasta and a seasonal list of antipasti. Reviewers single out the meatballs and the Napoletana, and the panna cotta for dessert. A gluten-free crust is available.",
+      "url": "https://www.pizzeriadelfina.com/location/palo-alto/",
+      "source": "pizzeriadelfina.com; confirmed against OpenStreetMap (way/132527967)",
+      "coords": [
+        37.44344,
+        -122.16039
+      ],
+      "coordsFrom": "osm way/132527967",
+      "image": "img/thumb/pizzeria-delfina-palo-alto/500px-pizzeria-delfina-palo-alto.jpg",
+      "imageSubject": "Pizzeria Delfina on Emerson Street at night",
+      "imageKind": "subject",
+      "imageCredit": "Our own photograph",
+      "hours": "Mo-Tu 17:00-21:00; We-Th 12:00-21:00; Fr-Sa 12:00-22:00; Su 12:00-21:00",
+      "hoursFrom": "pizzeriadelfina.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-353-2208",
+      "booking": "https://www.pizzeriadelfina.com/location/palo-alto/",
+      "durationMin": 75,
+      "priceLevel": 2
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "couple",
+        "special"
+      ],
+      "labels": [
+        "couple",
+        "romantic",
+        "bookahead"
+      ],
+      "quality": 4.5,
+      "uniqueness": 4,
+      "id": "evvia-palo-alto",
+      "title": "Evvia Estiatorio",
+      "emoji": "🔥",
+      "area": "420 Emerson Street",
+      "cuisine": "greek",
+      "priceNote": "Upscale, mains $31–50",
+      "bookAhead": true,
+      "why": "Palo Alto's Greek institution since 1995, and the sister of Kokkari in San Francisco. It is a warm room of wooden beams, copper pots and a wood-burning fireplace, and most of the menu comes off the wood grill. The lamb chops are why people come back. Add the octopus and the grilled vegetable skewers with garlicky yogurt. It is in the Michelin Guide, and dinner books up.",
+      "url": "https://evvia.net/",
+      "source": "evvia.net; Michelin Guide; OpenTable; confirmed against OpenStreetMap (way/132527968)",
+      "coords": [
+        37.44506,
+        -122.16382
+      ],
+      "coordsFrom": "osm way/132527968",
+      "hours": "Mo-Su 11:30-14:00,17:00-21:00",
+      "hoursFrom": "Michelin Guide",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-326-0983",
+      "booking": "https://www.opentable.com/evvia",
+      "durationMin": 105,
+      "priceLevel": 4
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "evening",
+        "food",
+        "couple",
+        "special"
+      ],
+      "labels": [
+        "couple",
+        "bookahead"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "nobu-palo-alto",
+      "title": "Nobu Palo Alto",
+      "emoji": "🍣",
+      "area": "180 Hamilton Avenue",
+      "cuisine": "japanese",
+      "priceNote": "Expensive; Tanoshi hour 3–5 in the lounge is the cheaper way in",
+      "bookAhead": true,
+      "why": "Nobu Matsuhisa's Japanese–Peruvian menu on the ground floor of the Nobu Hotel: black cod with miso, yellowtail with jalapeño, and the rest of the dishes that made the name. The lobby lounge has a Tanoshi hour from 3 to 5 every day, and the garden serves afternoon tea at weekends.",
+      "url": "https://noburestaurants.com/paloalto/home",
+      "source": "noburestaurants.com; OpenTable",
+      "coords": [
+        37.44361,
+        -122.16153
+      ],
+      "coordsFrom": "the Nobu Hotel, still mapped under its old name Epiphany Hotel (osm way/132397111); the restaurant is on its ground floor",
+      "image": "img/thumb/nobu-palo-alto/500px-nobu-palo-alto.jpg",
+      "imageSubject": "Nobu on Hamilton Avenue at night",
+      "imageKind": "subject",
+      "imageCredit": "Our own photograph",
+      "hours": "Mo-Fr 07:00-11:00,12:00-14:30,17:00-22:00; Sa-Su 07:00-14:30,17:00-22:00",
+      "hoursFrom": "noburestaurants.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-798-8396",
+      "booking": "https://www.opentable.com/r/nobu-palo-alto",
+      "durationMin": 105,
+      "priceLevel": 4
+    },
+    {
+      "type": "restaurant",
+      "provenance": "editorial",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "lastVerified": "2026-09-29",
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "food",
+        "socialize"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "marufuku-ramen-palo-alto",
+      "title": "Marufuku Ramen",
+      "emoji": "🍜",
+      "area": "374 University Avenue",
+      "cuisine": "ramen",
+      "priceNote": "Inexpensive",
+      "why": "The San Francisco Japantown ramen shop's Palo Alto branch, opened in early 2026 in the old Starbucks on University. It serves Hakata-style tonkotsu, a milky pork broth that simmers for hours, with thin, firm noodles, and there is beer, sake and cocktails. It seats about fifty, so expect a wait at peak times.",
+      "url": "https://www.marufukuramen.com/paloalto",
+      "source": "marufukuramen.com; Palo Alto Online (December 2025)",
+      "coords": [
+        37.44679,
+        -122.16057
+      ],
+      "coordsFrom": "the address point for 374 University Avenue (osm way/675214190); the restaurant is not mapped yet",
+      "image": "img/thumb/marufuku-ramen-palo-alto/500px-marufuku-ramen-palo-alto.jpg",
+      "imageSubject": "Marufuku Ramen on University Avenue at night",
+      "imageKind": "subject",
+      "imageCredit": "Our own photograph",
+      "hours": "Mo-Fr 11:00-14:00,17:00-21:00; Sa-Su 11:00-21:00",
+      "hoursFrom": "marufukuramen.com",
+      "hoursChecked": "2026-09-29",
+      "phone": "+1-650-494-4693",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 2
     },
     {
       "id": "junior-museum-zoo",
