@@ -1,322 +1,16 @@
 {
   "generated": "2026-09-29",
   "window": {
-    "from": "2026-09-27",
-    "to": "2026-11-26"
+    "from": "2026-09-29",
+    "to": "2026-11-28"
   },
   "source": "NYC Permitted Event Information (data.cityofnewyork.us) · Luma — New York",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "permits": 102,
-    "luma": 27
+    "permits": 88,
+    "luma": 29
   },
   "items": [
-    {
-      "id": "permits-898918",
-      "title": "Forest Hills Greenmarket Sunday",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "forest-hills",
-      "area": "Queens Boulevard, 69th Road to 70th Avenue",
-      "coords": [
-        40.72251,
-        -73.84694
-      ],
-      "start": "2026-09-27",
-      "end": "2026-10-25",
-      "days": [
-        0
-      ],
-      "why": "Farmers Market on Queens Boulevard in Queens, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.72251&mlon=-73.84694#map=18/40.72251/-73.84694",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-899826",
-      "title": "Murray Hill Farmers Market",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "murray-hill-kips-bay",
-      "area": "2nd Avenue, East 32nd Street to East 33rd Street",
-      "coords": [
-        40.74381,
-        -73.9766
-      ],
-      "start": "2026-09-27",
-      "end": "2026-10-25",
-      "days": [
-        0
-      ],
-      "why": "Farmers Market on 2nd Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.74381&mlon=-73.9766#map=18/40.74381/-73.9766",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-893705",
-      "title": "Down to Earth Park Slope Farmers Market",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "park-slope",
-      "area": "4th Street, 5th Avenue to Dead End",
-      "coords": [
-        40.67219,
-        -73.98379
-      ],
-      "start": "2026-09-27",
-      "end": "2026-10-25",
-      "days": [
-        0
-      ],
-      "why": "Farmers Market on 4th Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.67219&mlon=-73.98379#map=18/40.67219/-73.98379",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-898910",
-      "title": "Jackson Heights Greenmarket Sunday",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "jackson-heights",
-      "area": "79th Street, Northern Boulevard to 34th Avenue",
-      "coords": [
-        40.75406,
-        -73.88793
-      ],
-      "start": "2026-09-27",
-      "end": "2026-10-25",
-      "days": [
-        0
-      ],
-      "why": "Farmers Market on 79th Street in Queens, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.75406&mlon=-73.88793#map=18/40.75406/-73.88793",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-898942",
-      "title": "Carroll Gardens Greenmarket Sunday",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "carroll-gardens-cobble-hill-gowanus-red-hook",
-      "area": "Carroll Street, Smith Street to Court Street",
-      "coords": [
-        40.6806,
-        -73.99536
-      ],
-      "start": "2026-09-27",
-      "end": "2026-10-25",
-      "days": [
-        0
-      ],
-      "why": "Farmers Market on Carroll Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.6806&mlon=-73.99536#map=18/40.6806/-73.99536",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-898937",
-      "title": "Cortelyou Greenmarket Sunday",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "flatbush-west-ditmas-park-parkville",
-      "area": "Cortelyou Road, Rugby Road to Argyle Road",
-      "coords": [
-        40.64063,
-        -73.96574
-      ],
-      "start": "2026-09-27",
-      "end": "2026-10-25",
-      "days": [
-        0
-      ],
-      "why": "Farmers Market on Cortelyou Road in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.64063&mlon=-73.96574#map=18/40.64063/-73.96574",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-898922",
-      "title": "Columbia Thursday Sunday Greenmarket",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "morningside-heights",
-      "area": "Broadway, West 113th Street to West 116th Street",
-      "coords": [
-        40.80705,
-        -73.9646
-      ],
-      "start": "2026-09-27",
-      "end": "2026-10-25",
-      "days": [
-        0,
-        4
-      ],
-      "why": "Farmers Market on Broadway in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.80705&mlon=-73.9646#map=18/40.80705/-73.9646",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-923926",
-      "title": "RiseBoro Farmers Markets at Irving Square Park",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "bushwick-west",
-      "area": "Knickerbocker Avenue, Starr Street to Suydam Street",
-      "coords": [
-        40.70239,
-        -73.92464
-      ],
-      "start": "2026-09-27",
-      "end": "2026-10-25",
-      "days": [
-        0
-      ],
-      "why": "Farmers Market on Knickerbocker Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.70239&mlon=-73.92464#map=18/40.70239/-73.92464",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-898386",
-      "title": "Deluxe carnival",
-      "emoji": "🎉",
-      "type": "event",
-      "categories": [
-        "festival"
-      ],
-      "zone": "south-williamsburg",
-      "area": "Taylor Street, Lee Avenue to Bedford Avenue",
-      "coords": [
-        40.70646,
-        -73.96224
-      ],
-      "start": "2026-09-27",
-      "end": "2026-10-01",
-      "days": [
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "why": "Street Festival on Taylor Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.70646&mlon=-73.96224#map=18/40.70646/-73.96224",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-934024",
-      "title": "Tienda de Pueblo",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "jackson-heights",
-      "area": "34th Avenue, 77th Street to 78th Street",
-      "coords": [
-        40.7533,
-        -73.88922
-      ],
-      "start": "2026-09-28",
-      "end": "2026-10-19",
-      "days": [
-        1
-      ],
-      "why": "Open Street Partner Event on 34th Avenue in Queens, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.7533&mlon=-73.88922#map=18/40.7533/-73.88922",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-978290",
-      "title": "Immigrant Culture Month at Avenue C Plaza Extension - September",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "kensington",
-      "area": "Mcdonald Avenue, Avenue C to Church Avenue",
-      "coords": [
-        40.64114,
-        -73.9792
-      ],
-      "start": "2026-09-28",
-      "end": "2026-10-23",
-      "days": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "why": "Plaza Event on Mcdonald Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.64114&mlon=-73.9792#map=18/40.64114/-73.9792",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
     {
       "id": "permits-911525",
       "title": "Ft Washington Greenmarket Tuesday",
@@ -332,14 +26,14 @@
         -73.94215
       ],
       "start": "2026-09-29",
-      "end": "2026-10-20",
+      "end": "2026-10-27",
       "days": [
         2
       ],
       "why": "Farmers Market on Fort Washington Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.84249&mlon=-73.94215#map=18/40.84249/-73.94215",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -359,41 +53,14 @@
         -73.89549
       ],
       "start": "2026-09-29",
-      "end": "2026-10-20",
+      "end": "2026-10-27",
       "days": [
         2
       ],
       "why": "Farmers Market on East 192nd Street in Bronx, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.86417&mlon=-73.89549#map=18/40.86417/-73.89549",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-911520",
-      "title": "Elmhurst Greenmarket Tuesday",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "elmhurst",
-      "area": "41st Avenue, 80th Street to 81st Street",
-      "coords": [
-        40.74585,
-        -73.88501
-      ],
-      "start": "2026-09-29",
-      "end": "2026-10-20",
-      "days": [
-        2
-      ],
-      "why": "Farmers Market on 41st Avenue in Queens, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.74585&mlon=-73.88501#map=18/40.74585/-73.88501",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -413,7 +80,7 @@
         -73.92397
       ],
       "start": "2026-09-29",
-      "end": "2026-10-23",
+      "end": "2026-10-27",
       "days": [
         2,
         5
@@ -421,7 +88,65 @@
       "why": "Farmers Market on East 149th Street in Bronx, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.81771&mlon=-73.92397#map=18/40.81771/-73.92397",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-911520",
+      "title": "Elmhurst Greenmarket Tuesday",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "elmhurst",
+      "area": "41st Avenue, 80th Street to 81st Street",
+      "coords": [
+        40.74585,
+        -73.88501
+      ],
+      "start": "2026-09-29",
+      "end": "2026-10-27",
+      "days": [
+        2
+      ],
+      "why": "Farmers Market on 41st Avenue in Queens, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.74585&mlon=-73.88501#map=18/40.74585/-73.88501",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-978290",
+      "title": "Immigrant Culture Month at Avenue C Plaza Extension - September",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "kensington",
+      "area": "Mcdonald Avenue, Avenue C to Church Avenue",
+      "coords": [
+        40.64114,
+        -73.9792
+      ],
+      "start": "2026-09-29",
+      "end": "2026-10-27",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "why": "Plaza Event on Mcdonald Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.64114&mlon=-73.9792#map=18/40.64114/-73.9792",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -441,14 +166,43 @@
         -73.96467
       ],
       "start": "2026-09-29",
-      "end": "2026-10-20",
+      "end": "2026-10-27",
       "days": [
         2
       ],
       "why": "Plaza Event on Underhill Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.68071&mlon=-73.96467#map=18/40.68071/-73.96467",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-898386",
+      "title": "Deluxe carnival",
+      "emoji": "🎉",
+      "type": "event",
+      "categories": [
+        "festival"
+      ],
+      "zone": "south-williamsburg",
+      "area": "Taylor Street, Lee Avenue to Bedford Avenue",
+      "coords": [
+        40.70646,
+        -73.96224
+      ],
+      "start": "2026-09-29",
+      "end": "2026-10-01",
+      "days": [
+        2,
+        3,
+        4
+      ],
+      "why": "Street Festival on Taylor Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.70646&mlon=-73.96224#map=18/40.70646/-73.96224",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -472,7 +226,7 @@
       "why": "Need to decompress after work? WLAG NYC will be getting together after a long work day to walk and talk it out with special guest Erika Ayers Badan! The plan is to meet at The Pier 62 Carousel at 5pm and walk from there. There is no real end time, so stay as long (or short) as you want. Hosted by Work Like a Girl & 3 o",
       "url": "https://luma.com/gpny4njj",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -495,7 +249,7 @@
       "why": "New Earth Dialogues is a series of conversations exploring our collective future grounded in regeneration and abundance, of the Earth, of humanity, and of spirit. For this new chapter, we continue our partnership with Madame Architect, bringing together voices shaping the future of our built environment. Moderated by J",
       "url": "https://luma.com/another-810j",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -518,7 +272,7 @@
       "why": "An evening of nourishing breathwork, live meditation music, fresh chai, and wonderful people at The Chai Spot in the Lower East Side!! We’ll start with around 45 minutes of guided breathwork + meditation led by Etai Atula (@thugtai). No prior experience or equipment required! Just bring your awesome self. Then Daiela (",
       "url": "https://luma.com/jrmoqspn",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -541,7 +295,7 @@
       "why": "NYFW Debrief New York Fashion Week is about to take over the city, the shows, the street style, the 6am fittings, the group chats blowing up with front row photos. It's a lot. And by the time it's over, everyone needs a minute to actually talk about what happened. That's what this is. Once the tents come down and the l",
       "url": "https://luma.com/ihfgv69o",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -567,7 +321,7 @@
       "why": "Farmers Market on Clarkson Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.65586&mlon=-73.94288#map=18/40.65586/-73.94288",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -594,7 +348,7 @@
       "why": "Farmers Market on Southern Boulevard in Bronx, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.81886&mlon=-73.8936#map=18/40.81886/-73.8936",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -621,7 +375,7 @@
       "why": "Farmers Market on Madison Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.78886&mlon=-73.95298#map=18/40.78886/-73.95298",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -648,7 +402,7 @@
       "why": "Farmers Market on East 125th Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.80483&mlon=-73.9385#map=18/40.80483/-73.9385",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -672,7 +426,7 @@
       "why": "Open Street Partner Event on East 22nd Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.7393&mlon=-73.98632#map=18/40.7393/-73.98632",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -696,7 +450,7 @@
       "why": "Plaza Partner Event on Water Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.70317&mlon=-73.98876#map=18/40.70317/-73.98876",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -720,7 +474,7 @@
       "why": "Hi, Andrew Yeung here. We started the Junto Founder Dinner series two years ago to bring together the top founders + builders. Each month, we invite 24 vetted early-stage founders and CEOs for a 3-hour, multiple-course dinner experience. What to expect: A 3-course meal, courtesy of our partners Conversations with fello",
       "url": "https://luma.com/juntodinnersep30",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -743,7 +497,7 @@
       "why": "🧘‍♀️ NY YOGA CLUB - VINYASA REFRESH + JAZZ SCHMOOZE AFTER 🎶 Flowing vinyasa practice to psychadelic soundtracks + live music after 🌊 Style: All-levels flow (accessible + revivifying) 🙏 No yoga experience needed! Ideal for beginners and experienced yogis. We mean it!! 📣 How to Sign Up Register on Luma and present y",
       "url": "https://luma.com/7aumew1r",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -766,7 +520,7 @@
       "why": "Our panel: The Spectator's US editor Freddy Gray will be joined by Geoff Shepard, Conrad Black and Daniel McCarthy. Known to many as “Tricky Dick,” Richard Nixon has often had his legacy reduced to the scandal that brought his presidency crashing down: a break-in at the Democratic National Committee headquarters, a cri",
       "url": "https://luma.com/nixonrevival",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -792,7 +546,7 @@
       "why": "Farmers Market on East 115th Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.79862&mlon=-73.94374#map=18/40.79862/-73.94374",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -819,7 +573,7 @@
       "why": "Farmers Market on East 104th Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.78978&mlon=-73.94452#map=18/40.78978/-73.94452",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -846,7 +600,35 @@
       "why": "Farmers Market on West 175th Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.84608&mlon=-73.93813#map=18/40.84608/-73.93813",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-898922",
+      "title": "Columbia Thursday Sunday Greenmarket",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "morningside-heights",
+      "area": "Broadway, West 113th Street to West 116th Street",
+      "coords": [
+        40.80705,
+        -73.9646
+      ],
+      "start": "2026-10-01",
+      "end": "2026-10-25",
+      "days": [
+        0,
+        4
+      ],
+      "why": "Farmers Market on Broadway in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.80705&mlon=-73.9646#map=18/40.80705/-73.9646",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -873,7 +655,7 @@
       "why": "Farmers Market on 14th Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.63342&mlon=-73.99021#map=18/40.63342/-73.99021",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -900,7 +682,7 @@
       "why": "Open Street Partner Event on East 4th Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.72664&mlon=-73.99049#map=18/40.72664/-73.99049",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -924,7 +706,7 @@
       "why": "Parade on Nostrand Avenue in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.67819&mlon=-73.94971#map=18/40.67819/-73.94971",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -948,7 +730,7 @@
       "why": "Plaza Event on East 161st Street in Bronx, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.82699&mlon=-73.92307#map=18/40.82699/-73.92307",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -972,7 +754,7 @@
       "why": "Plaza Partner Event on Water Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.70317&mlon=-73.98876#map=18/40.70317/-73.98876",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -996,7 +778,7 @@
       "why": "Ladies Coworking Day at Moxy Chelsea Cowork in a focused but social environment with other remote working women. We can meet on the second floor of Moxy Chelsea. Please buy something from the cafe at Moxy Chelsea to support the venue while coworking ☕️ 🍵 ⏰ Schedule 10am - 10:30am: arrival and informal introductions 👋",
       "url": "https://luma.com/lt8h7qgb",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -1019,7 +801,7 @@
       "why": "It's official, Girls In Growth is coming to New York. We launched Girls in Growth in SF in July with a simple idea: get a bunch of ambitious women early in their sales, marketing, and growth careers together and see what happens. Turns out, quite a lot. 300+ Slack messages - all women helping women solve their growth c",
       "url": "https://luma.com/tslx32jg",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -1042,7 +824,7 @@
       "why": "Nothing you keep is junk. Join Artifact Uprising and the Brownstone Boys for an evening of analog creativity, intentional community, and moodboarding. We'll gather around the table to transform everyday ephemera into journals worth holding onto. Feel free to bring personal mementos to make it yours. Think printed photo",
       "url": "https://luma.com/JunkJournalNight-ArtifactUprising",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -1065,7 +847,7 @@
       "why": "The Third Mind presents Le Rivage, an interpretation of Pakistani flavors through French culinary technique. From the mind of Chef Imad Hasnain, the menu carries the finesse of his work at The Modern, MoMA's two-Michellin-starred restaurant, while being rooted in his Pakistani heritage. Fittingly, Le Rivage, French for",
       "url": "https://luma.com/le.rivage",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -1091,7 +873,7 @@
       "why": "Farmers Market on Lenox Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.8151&mlon=-73.94014#map=18/40.8151/-73.94014",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1118,7 +900,7 @@
       "why": "Farmers Market on Pelham Parkway South in Bronx, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.85732&mlon=-73.84657#map=18/40.85732/-73.84657",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1145,7 +927,7 @@
       "why": "Farmers Market on West 97th Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.79415&mlon=-73.96845#map=18/40.79415/-73.96845",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1172,7 +954,7 @@
       "why": "Farmers Market on Roosevelt Avenue in Queens, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.74989&mlon=-73.86205#map=18/40.74989/-73.86205",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1199,7 +981,7 @@
       "why": "Farmers Market on 2nd Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.78556&mlon=-73.94615#map=18/40.78556/-73.94615",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1223,7 +1005,7 @@
       "why": "Happy Mid-Autumn (中秋节)! Meet us at Gotham Park 10/2, 10/3, or 10/4 from 1pm to 7pm to eat, drink, dance, connect, and reflect together. This year, we're celebrating Mid-Autumn Festival all weekend (Oct 2 to 4), and it's approaching fast so mark your calendars! 🌕 As one of the most celebrated holidays across East & SE ",
       "url": "https://luma.com/mid-autumn-fest-2026",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -1246,88 +1028,7 @@
       "why": "Looking for love? Your dog may be able to help with that. Dog Date Afternoon and Boris & Horton are bringing NYC singles together for a night of speed dating designed with both you and your pup in mind. Our matching experts will curate 3 speed dates based on your Dog Date Afternoon profile, including your interests, fa",
       "url": "https://luma.com/8x6c4laj",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-930759",
-      "title": "East New York Farmers Market",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "east-new-york-new-lots",
-      "area": "Schenck Avenue, New Lots Avenue to Livonia Avenue",
-      "coords": [
-        40.66511,
-        -73.88656
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-17",
-      "days": [
-        6
-      ],
-      "why": "Farmers Market on Schenck Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.66511&mlon=-73.88656#map=18/40.66511/-73.88656",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-893707",
-      "title": "Down to Earth Chelsea Farmers Market",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "chelsea-hudson-yards",
-      "area": "West 23rd Street, 8th Avenue to 9th Avenue",
-      "coords": [
-        40.74591,
-        -73.99991
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-24",
-      "days": [
-        6
-      ],
-      "why": "Farmers Market on West 23rd Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.74591&mlon=-73.99991#map=18/40.74591/-73.99991",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-930120",
-      "title": "HHFM Lenox Avenue Market",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "harlem-south",
-      "area": "Lenox Avenue, West 117th Street to West 118th Street",
-      "coords": [
-        40.80302,
-        -73.94897
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-24",
-      "days": [
-        6
-      ],
-      "why": "Farmers Market on Lenox Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.80302&mlon=-73.94897#map=18/40.80302/-73.94897",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -1353,88 +1054,7 @@
       "why": "Farmers Market on Isham Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.86944&mlon=-73.92061#map=18/40.86944/-73.92061",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-897894",
-      "title": "82 Street Greenmarket Saturday",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "upper-east-side-yorkville",
-      "area": "East 82nd Street, 1st Avenue to York Avenue",
-      "coords": [
-        40.77382,
-        -73.95014
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-24",
-      "days": [
-        6
-      ],
-      "why": "Farmers Market on East 82nd Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.77382&mlon=-73.95014#map=18/40.77382/-73.95014",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-911543",
-      "title": "4th Avenue Sunset Park Greenmarket Saturday",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "sunset-park-central",
-      "area": "60th Street, 3rd Avenue to 4th Avenue",
-      "coords": [
-        40.64156,
-        -74.01961
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-24",
-      "days": [
-        6
-      ],
-      "why": "Farmers Market on 60th Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.64156&mlon=-74.01961#map=18/40.64156/-74.01961",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-949104",
-      "title": "Fulton Stall Market/Seaport Farmers Market",
-      "emoji": "🥕",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "financial-district-battery-park-city",
-      "area": "South Street, Fulton Street to John Street",
-      "coords": [
-        40.70602,
-        -74.0035
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-24",
-      "days": [
-        6
-      ],
-      "why": "Farmers Market on South Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.70602&mlon=-74.0035#map=18/40.70602/-74.0035",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1461,7 +1081,142 @@
       "why": "Farmers Market on Knickerbocker Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.70239&mlon=-73.92464#map=18/40.70239/-73.92464",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-911543",
+      "title": "4th Avenue Sunset Park Greenmarket Saturday",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "sunset-park-central",
+      "area": "60th Street, 3rd Avenue to 4th Avenue",
+      "coords": [
+        40.64156,
+        -74.01961
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-24",
+      "days": [
+        6
+      ],
+      "why": "Farmers Market on 60th Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.64156&mlon=-74.01961#map=18/40.64156/-74.01961",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-949104",
+      "title": "Fulton Stall Market/Seaport Farmers Market",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "financial-district-battery-park-city",
+      "area": "South Street, Fulton Street to John Street",
+      "coords": [
+        40.70602,
+        -74.0035
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-24",
+      "days": [
+        6
+      ],
+      "why": "Farmers Market on South Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.70602&mlon=-74.0035#map=18/40.70602/-74.0035",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-897894",
+      "title": "82 Street Greenmarket Saturday",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "upper-east-side-yorkville",
+      "area": "East 82nd Street, 1st Avenue to York Avenue",
+      "coords": [
+        40.77382,
+        -73.95014
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-24",
+      "days": [
+        6
+      ],
+      "why": "Farmers Market on East 82nd Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.77382&mlon=-73.95014#map=18/40.77382/-73.95014",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-893707",
+      "title": "Down to Earth Chelsea Farmers Market",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "chelsea-hudson-yards",
+      "area": "West 23rd Street, 8th Avenue to 9th Avenue",
+      "coords": [
+        40.74591,
+        -73.99991
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-24",
+      "days": [
+        6
+      ],
+      "why": "Farmers Market on West 23rd Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.74591&mlon=-73.99991#map=18/40.74591/-73.99991",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-930759",
+      "title": "East New York Farmers Market",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "east-new-york-new-lots",
+      "area": "Schenck Avenue, New Lots Avenue to Livonia Avenue",
+      "coords": [
+        40.66511,
+        -73.88656
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-17",
+      "days": [
+        6
+      ],
+      "why": "Farmers Market on Schenck Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.66511&mlon=-73.88656#map=18/40.66511/-73.88656",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1488,7 +1243,7 @@
       "why": "Farmers Market on Nostrand Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.63343&mlon=-73.94772#map=18/40.63343/-73.94772",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1515,7 +1270,34 @@
       "why": "Farmers Market on 10th Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.76945&mlon=-73.98831#map=18/40.76945/-73.98831",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-930120",
+      "title": "HHFM Lenox Avenue Market",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "harlem-south",
+      "area": "Lenox Avenue, West 117th Street to West 118th Street",
+      "coords": [
+        40.80302,
+        -73.94897
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-24",
+      "days": [
+        6
+      ],
+      "why": "Farmers Market on Lenox Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.80302&mlon=-73.94897#map=18/40.80302/-73.94897",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1542,7 +1324,7 @@
       "why": "Open Street Partner Event on Albemarle Road in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.6466&mlon=-73.96639#map=18/40.6466/-73.96639",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1566,7 +1348,7 @@
       "why": "Parade on West 38th Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.75192&mlon=-73.98504#map=18/40.75192/-73.98504",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1590,55 +1372,7 @@
       "why": "Parade on Frederick Douglass Boulevard in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.81651&mlon=-73.94654#map=18/40.81651/-73.94654",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-889098",
-      "title": "USA International Dragon Lion Dance Cultural Festival China Day Asian Mid-Autumn Cultural Parade",
-      "emoji": "🎉",
-      "type": "event",
-      "categories": [
-        "festival"
-      ],
-      "zone": "flushing-willets-point",
-      "area": "Sanford Avenue, Kissena Boulevard to Main Street",
-      "coords": [
-        40.75691,
-        -73.82794
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-03",
-      "why": "Parade on Sanford Avenue in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.75691&mlon=-73.82794#map=18/40.75691/-73.82794",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-917218",
-      "title": "Walk to End Lupus Now - New York City",
-      "emoji": "🎉",
-      "type": "event",
-      "categories": [
-        "festival"
-      ],
-      "zone": "financial-district-battery-park-city",
-      "area": "South Street, Fulton Street to Whitehall Street",
-      "coords": [
-        40.70389,
-        -74.00777
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-03",
-      "why": "Parade on South Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.70389&mlon=-74.00777#map=18/40.70389/-74.00777",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1662,7 +1396,31 @@
       "why": "Parade on Broadway in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.85296&mlon=-73.93431#map=18/40.85296/-73.93431",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-889098",
+      "title": "USA International Dragon Lion Dance Cultural Festival China Day Asian Mid-Autumn Cultural Parade",
+      "emoji": "🎉",
+      "type": "event",
+      "categories": [
+        "festival"
+      ],
+      "zone": "flushing-willets-point",
+      "area": "Sanford Avenue, Kissena Boulevard to Main Street",
+      "coords": [
+        40.75691,
+        -73.82794
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-03",
+      "why": "Parade on Sanford Avenue in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.75691&mlon=-73.82794#map=18/40.75691/-73.82794",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1686,7 +1444,31 @@
       "why": "Parade on Amsterdam Avenue in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.79532&mlon=-73.96943#map=18/40.79532/-73.96943",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-917218",
+      "title": "Walk to End Lupus Now - New York City",
+      "emoji": "🎉",
+      "type": "event",
+      "categories": [
+        "festival"
+      ],
+      "zone": "financial-district-battery-park-city",
+      "area": "South Street, Fulton Street to Whitehall Street",
+      "coords": [
+        40.70389,
+        -74.00777
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-03",
+      "why": "Parade on South Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.70389&mlon=-74.00777#map=18/40.70389/-74.00777",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1710,7 +1492,7 @@
       "why": "Parade on 218th Street in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.68249&mlon=-73.74972#map=18/40.68249/-73.74972",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1734,7 +1516,7 @@
       "why": "Parade on East 54th Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.75688&mlon=-73.96551#map=18/40.75688/-73.96551",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1758,7 +1540,7 @@
       "why": "Plaza Partner Event on 9th Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.73985&mlon=-74.00618#map=18/40.73985/-74.00618",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1782,7 +1564,7 @@
       "why": "Start your Saturday with a 5K! 🏃‍♂️ Join us for a special edition of the Corgi NYC Run Club, in partnership with Aleph. We’ll meet at Pier 34 at 9am for a social 5K along the West Side Highway, finishing at the Corgi Cafe in NoMad (121 E 27th St). After the run, Aleph will be providing smoothies and coffee for everyon",
       "url": "https://luma.com/c2kpq9wb",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -1805,7 +1587,30 @@
       "why": "YOGA JOINT IS TAKING OVER DOMINO PARK Yoga Joint is coming to New York—and we're kicking things off in Brooklyn. Join us Saturday, October 3rd at Flex Field in Domino Park for a FREE 45-minute FIIT workout, our signature full-body strength class that blends high-energy training with low-impact movement—all set to the b",
       "url": "https://luma.com/66r22n7g",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtPJqXlZvwqOzP2xE",
+      "title": "Babylist Walk",
+      "emoji": "🏃",
+      "type": "event",
+      "categories": [
+        "sport"
+      ],
+      "zone": "greenwich-village",
+      "area": "Washington Square Park, New York, NY 10012, USA",
+      "coords": [
+        40.7308838,
+        -73.997332
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-03",
+      "why": "Join us for a Saturday stroll with Babylist! The first 100 people in line with an RSVP will score a $50 gift card. We will be starting our walk at Washington Square Park and ending at the Babylist Showroom in Soho (477 Broadway), where they will be holding their registry event. The showroom is designed as an educationa",
+      "url": "https://luma.com/y3r90o5h",
+      "source": "Luma — New York",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -1828,7 +1633,196 @@
       "why": "Paint & Pups: A Pet Portrait Painting Class Join us for an hour of painting, coffee, and dogs. In this guided class, you'll paint a portrait of your own dog (or your favorite pup, if you don't have one!) on a canvas, step by step — no experience needed. When: Saturday, October 3rd · 2:00 PM · 1 hour 15 min Where: Boris",
       "url": "https://luma.com/66pmpynw",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-898918",
+      "title": "Forest Hills Greenmarket Sunday",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "forest-hills",
+      "area": "Queens Boulevard, 69th Road to 70th Avenue",
+      "coords": [
+        40.72251,
+        -73.84694
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-25",
+      "days": [
+        0
+      ],
+      "why": "Farmers Market on Queens Boulevard in Queens, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.72251&mlon=-73.84694#map=18/40.72251/-73.84694",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-893705",
+      "title": "Down to Earth Park Slope Farmers Market",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "park-slope",
+      "area": "4th Street, 5th Avenue to Dead End",
+      "coords": [
+        40.67219,
+        -73.98379
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-25",
+      "days": [
+        0
+      ],
+      "why": "Farmers Market on 4th Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.67219&mlon=-73.98379#map=18/40.67219/-73.98379",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-898910",
+      "title": "Jackson Heights Greenmarket Sunday",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "jackson-heights",
+      "area": "79th Street, Northern Boulevard to 34th Avenue",
+      "coords": [
+        40.75406,
+        -73.88793
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-25",
+      "days": [
+        0
+      ],
+      "why": "Farmers Market on 79th Street in Queens, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.75406&mlon=-73.88793#map=18/40.75406/-73.88793",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-898942",
+      "title": "Carroll Gardens Greenmarket Sunday",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "carroll-gardens-cobble-hill-gowanus-red-hook",
+      "area": "Carroll Street, Smith Street to Court Street",
+      "coords": [
+        40.6806,
+        -73.99536
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-25",
+      "days": [
+        0
+      ],
+      "why": "Farmers Market on Carroll Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.6806&mlon=-73.99536#map=18/40.6806/-73.99536",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-898937",
+      "title": "Cortelyou Greenmarket Sunday",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "flatbush-west-ditmas-park-parkville",
+      "area": "Cortelyou Road, Rugby Road to Argyle Road",
+      "coords": [
+        40.64063,
+        -73.96574
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-25",
+      "days": [
+        0
+      ],
+      "why": "Farmers Market on Cortelyou Road in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.64063&mlon=-73.96574#map=18/40.64063/-73.96574",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-923926",
+      "title": "RiseBoro Farmers Markets at Irving Square Park",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "bushwick-west",
+      "area": "Knickerbocker Avenue, Starr Street to Suydam Street",
+      "coords": [
+        40.70239,
+        -73.92464
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-25",
+      "days": [
+        0
+      ],
+      "why": "Farmers Market on Knickerbocker Avenue in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.70239&mlon=-73.92464#map=18/40.70239/-73.92464",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-899826",
+      "title": "Murray Hill Farmers Market",
+      "emoji": "🥕",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "murray-hill-kips-bay",
+      "area": "2nd Avenue, East 32nd Street to East 33rd Street",
+      "coords": [
+        40.74381,
+        -73.9766
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-25",
+      "days": [
+        0
+      ],
+      "why": "Farmers Market on 2nd Avenue in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.74381&mlon=-73.9766#map=18/40.74381/-73.9766",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
       "quality": 3,
       "uniqueness": 3
     },
@@ -1851,7 +1845,7 @@
       "why": "Parade on Flatbush Avenue in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.61037&mlon=-73.92312#map=18/40.61037/-73.92312",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1875,79 +1869,7 @@
       "why": "Parade on East 36th Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.74939&mlon=-73.98282#map=18/40.74939/-73.98282",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-937167",
-      "title": "Queens Dominican Parade",
-      "emoji": "🎉",
-      "type": "event",
-      "categories": [
-        "festival"
-      ],
-      "zone": "woodside",
-      "area": "69th Street, 37th Avenue to 34th Avenue",
-      "coords": [
-        40.74952,
-        -73.89614
-      ],
-      "start": "2026-10-04",
-      "end": "2026-10-04",
-      "why": "Parade on 69th Street in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.74952&mlon=-73.89614#map=18/40.74952/-73.89614",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-971382",
-      "title": "31st Annual Mahatma Gandhi Peach March",
-      "emoji": "🎉",
-      "type": "event",
-      "categories": [
-        "festival"
-      ],
-      "zone": "south-richmond-hill",
-      "area": "Liberty Avenue, Lefferts Boulevard to 120th Street",
-      "coords": [
-        40.68642,
-        -73.82371
-      ],
-      "start": "2026-10-04",
-      "end": "2026-10-04",
-      "why": "Parade on Liberty Avenue in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.68642&mlon=-73.82371#map=18/40.68642/-73.82371",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
-      "indoor": false,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "permits-962073",
-      "title": "17th Annual Epiphany Walk",
-      "emoji": "🎉",
-      "type": "event",
-      "categories": [
-        "festival"
-      ],
-      "zone": "gramercy",
-      "area": "East 22nd Street, 2nd Avenue to 3rd Avenue",
-      "coords": [
-        40.7377,
-        -73.98252
-      ],
-      "start": "2026-10-04",
-      "end": "2026-10-04",
-      "why": "Parade on East 22nd Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
-      "url": "https://www.openstreetmap.org/?mlat=40.7377&mlon=-73.98252#map=18/40.7377/-73.98252",
-      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1971,7 +1893,79 @@
       "why": "Parade on South Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.70602&mlon=-74.0035#map=18/40.70602/-74.0035",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-937167",
+      "title": "Queens Dominican Parade",
+      "emoji": "🎉",
+      "type": "event",
+      "categories": [
+        "festival"
+      ],
+      "zone": "woodside",
+      "area": "69th Street, 37th Avenue to 34th Avenue",
+      "coords": [
+        40.74952,
+        -73.89614
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-04",
+      "why": "Parade on 69th Street in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.74952&mlon=-73.89614#map=18/40.74952/-73.89614",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-971382",
+      "title": "31st Annual Mahatma Gandhi Peach March",
+      "emoji": "🎉",
+      "type": "event",
+      "categories": [
+        "festival"
+      ],
+      "zone": "south-richmond-hill",
+      "area": "Liberty Avenue, Lefferts Boulevard to 120th Street",
+      "coords": [
+        40.68642,
+        -73.82371
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-04",
+      "why": "Parade on Liberty Avenue in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.68642&mlon=-73.82371#map=18/40.68642/-73.82371",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-962073",
+      "title": "17th Annual Epiphany Walk",
+      "emoji": "🎉",
+      "type": "event",
+      "categories": [
+        "festival"
+      ],
+      "zone": "gramercy",
+      "area": "East 22nd Street, 2nd Avenue to 3rd Avenue",
+      "coords": [
+        40.7377,
+        -73.98252
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-04",
+      "why": "Parade on East 22nd Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.7377&mlon=-73.98252#map=18/40.7377/-73.98252",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -1995,7 +1989,7 @@
       "why": "Single Block Festival on West 89th Street in Manhattan, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.78902&mlon=-73.97219#map=18/40.78902/-73.97219",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2019,7 +2013,30 @@
       "why": "Join us for our first session of Fall '26! OTWC is an NYC-based writing community for writers to write, exchange ideas, and get inspired. Our sessions look like this: 1. Introduce yourselves and talk about what you plan to write 2. Focused writing session 3. Get together in small groups and discuss how the session went",
       "url": "https://luma.com/otwc-um9s",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtQLwn96az6oo8Bvi",
+      "title": "The Angel Market x Cloud Closet: Jewelry & Accessory Pop-Up",
+      "emoji": "🛍️",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "soho-little-italy-hudson-square",
+      "area": "178 Bleecker St, New York, NY 10012, USA",
+      "coords": [
+        40.728833699999996,
+        -74.00095809999999
+      ],
+      "start": "2026-10-04",
+      "end": "2026-10-04",
+      "why": "Join us at The Angel Market x Cloud Closet: Jewelry Box — an exclusive Angelocal pop-up highlighting emerging jewelry, accessory, and beauty brands in collaboration with Cloud Closet. Discover and shop a curated selection of local, women-owned brands, meet the founders behind them, and connect with fellow lovers of fas",
+      "url": "https://luma.com/hixlp29d",
+      "source": "Luma — New York",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2042,7 +2059,34 @@
       "why": "Join Counterspell Games at Love & Legends Books, as we kick off crafting in spooky season with a dark fantasy twist! We've created a craft night inspired by the vibes of Labyrinth, The Last Unicorn, and Legend. Spend the evening off your screen and step into our magical fantasy world. 🎨 Paint a LEGEND-ary TTRPG mini J",
       "url": "https://luma.com/is12u7ad",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "permits-934024",
+      "title": "Tienda de Pueblo",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "jackson-heights",
+      "area": "34th Avenue, 77th Street to 78th Street",
+      "coords": [
+        40.7533,
+        -73.88922
+      ],
+      "start": "2026-10-05",
+      "end": "2026-10-26",
+      "days": [
+        1
+      ],
+      "why": "Open Street Partner Event on 34th Avenue in Queens, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
+      "url": "https://www.openstreetmap.org/?mlat=40.7533&mlon=-73.88922#map=18/40.7533/-73.88922",
+      "source": "NYC Permitted Event Information — data.cityofnewyork.us",
+      "lastVerified": "2026-09-29",
+      "indoor": false,
       "quality": 3,
       "uniqueness": 3
     },
@@ -2065,7 +2109,7 @@
       "why": "Strangers No More is Unplugged Collective’s signature evening gathering, bringing together brands, creators, and industry leaders for a night built on connection, culture, and shared energy. What begins as a room full of new faces quickly becomes a space where conversations flow, ideas spark, and strangers become somet",
       "url": "https://luma.com/strangersnomore-awny-2026",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2088,7 +2132,7 @@
       "why": "Plaza Partner Event on Water Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.70317&mlon=-73.98876#map=18/40.70317/-73.98876",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2112,7 +2156,7 @@
       "why": "Plaza Partner Event on Water Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.70317&mlon=-73.98876#map=18/40.70317/-73.98876",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2136,7 +2180,7 @@
       "why": "Join us for an exciting night of creativity, writing, and community building! Wattpad and ThingsBook are teaming up for an exclusive night in NYC, bringing together creators, readers, writers, and aspiring storytellers under one roof. Come meet the Wattpad and ThingsBook teams, hear from established Wattpad Creators ab",
       "url": "https://luma.com/hnmmb4t7",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2159,7 +2203,7 @@
       "why": "On view October 8–November 13 at Van Alen Institute, Open Access: Exploring 130 Years of American Design invites five artists and design teams to respond to our archive. Comprising thousands of competition boards, jury records, photographs, and correspondence, it's one of the most significant collections of American ar",
       "url": "https://luma.com/jukhmezs",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2182,7 +2226,7 @@
       "why": "Parade on 4th Avenue in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.63418&mlon=-74.02371#map=18/40.63418/-74.02371",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2206,7 +2250,7 @@
       "why": "Plaza Partner Event on Water Street in Brooklyn, permitted by the Street Activity Permit Office. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.70317&mlon=-73.98876#map=18/40.70317/-73.98876",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2230,7 +2274,7 @@
       "why": "Parade on East River Greenway in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.70612&mlon=-74.00312#map=18/40.70612/-74.00312",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2254,7 +2298,7 @@
       "why": "Parade on Mott Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.71735&mlon=-73.99743#map=18/40.71735/-73.99743",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2278,7 +2322,7 @@
       "why": "Parade on 18th Avenue in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.62028&mlon=-73.98902#map=18/40.62028/-73.98902",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2302,7 +2346,7 @@
       "why": "Parade on Bergen Street in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.67689&mlon=-73.95608#map=18/40.67689/-73.95608",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2326,7 +2370,7 @@
       "why": "Join us for a charity home cafe pop-up, hosted by our friend, Angelina Lee! The theme for this home cafe is \"home is where your people are.\" We'll have an assortment of delicious drinks and pastries as well as activities designed to make you feel right at home. Each ticket will include a hand-crafted cafe drink, and ad",
       "url": "https://luma.com/fotsoct10",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2349,7 +2393,7 @@
       "why": "Parade on Bay Ridge Parkway in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.61411&mlon=-73.99718#map=18/40.61411/-73.99718",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2373,7 +2417,7 @@
       "why": "Parade on 5th Avenue in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.75541&mlon=-73.97947#map=18/40.75541/-73.97947",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2397,7 +2441,7 @@
       "why": "Parade on 7th Avenue in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.67478&mlon=-73.97524#map=18/40.67478/-73.97524",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2421,7 +2465,7 @@
       "why": "Parade on Main Street in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.75016&mlon=-73.8258#map=18/40.75016/-73.8258",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2445,7 +2489,7 @@
       "why": "Parade on East 43rd Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.75383&mlon=-73.97958#map=18/40.75383/-73.97958",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2469,7 +2513,7 @@
       "why": "Parade on Mother Gaston Boulevard in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.66667&mlon=-73.90609#map=18/40.66667/-73.90609",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2493,7 +2537,7 @@
       "why": "Parade on East 26th Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.74311&mlon=-73.98739#map=18/40.74311/-73.98739",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2517,7 +2561,7 @@
       "why": "Serviette Magazine and The Lighthouse present Tasting Notes, a new magazine fair dedicated to independent food publishing. On October 17, more than 25 food-focused publications from across Europe and North America will gather at The Lighthouse Brooklyn, a campus for creators and creatives, bringing together the people ",
       "url": "https://luma.com/the-pfm7",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2540,7 +2584,7 @@
       "why": "Parade on 69th Street in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.74952&mlon=-73.89614#map=18/40.74952/-73.89614",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2564,7 +2608,7 @@
       "why": "Parade on 5th Avenue in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.75886&mlon=-73.97697#map=18/40.75886/-73.97697",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2588,7 +2632,7 @@
       "why": "Parade on East 24th Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.74108&mlon=-73.98642#map=18/40.74108/-73.98642",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2612,7 +2656,30 @@
       "why": "POSTPONED! Due to safety concerns regarding the weather, First Light: AAPI Film Festival will be postponed to Sunday, October 18th, 3 PM - 8 PM at telos.haus For anyone who can no longer attend please update your invite status. We are happy to offer a refund, please see our refund policy below. We hope to see you all o",
       "url": "https://luma.com/2m962gar",
       "source": "Luma — New York",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtheTu9wrNlIirk1G",
+      "title": "Squarespace Circle Day 2026 (In-Person)",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "west-village",
+      "area": "8 Clarkson St, New York, NY 10014, USA",
+      "coords": [
+        40.7292268,
+        -74.0057576
+      ],
+      "start": "2026-10-21",
+      "end": "2026-10-21",
+      "why": "Discover your source of design with Squarespace’s most innovative creators at Circle Day 2026 on Wednesday, October 21. Register to attend in person at Squarespace's NYC HQ, where you’ll make new connections, get inspired, and see what's next from Squarespace. Stay tuned for more information. If you can't attend in per",
+      "url": "https://luma.com/circle-day-2026-in-person",
+      "source": "Luma — New York",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2635,8 +2702,31 @@
       "why": "Parade on South Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.70548&mlon=-74.00431#map=18/40.70548/-74.00431",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtMhu0MM7WcH2hVNl",
+      "title": "Undefined + EvolveDigital / Oct 22nd 2026",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "greenwich-village",
+      "area": "Automattic, 166 Crosby St, New York, NY 10012, USA",
+      "coords": [
+        40.7258728,
+        -73.9954015
+      ],
+      "start": "2026-10-22",
+      "end": "2026-10-22",
+      "why": "A live game show for people who build on the web EvolveDigital and Undefined are teaming up at Automattic's NoHo office ahead of EvolveDigital NYC, the two-day summit happening this coming November. This one's for the people who work on the website: comms and marketing teams, content strategists, designers, developers,",
+      "url": "https://luma.com/undefined-20261022",
+      "source": "Luma — New York",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2659,7 +2749,7 @@
       "why": "Parade on Roosevelt Avenue in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.76001&mlon=-73.82834#map=18/40.76001/-73.82834",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2683,7 +2773,7 @@
       "why": "Parade on Lafayette Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.71414&mlon=-74.00342#map=18/40.71414/-74.00342",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2707,7 +2797,7 @@
       "why": "Parade on Tiffany Street in Bronx, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.82206&mlon=-73.89489#map=18/40.82206/-73.89489",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2731,7 +2821,7 @@
       "why": "Parade on 14th Avenue in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.63956&mlon=-73.98383#map=18/40.63956/-73.98383",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2755,7 +2845,7 @@
       "why": "Parade on 125th Street in Queens, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.69482&mlon=-73.8226#map=18/40.69482/-73.8226",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2779,7 +2869,7 @@
       "why": "Parade on 5th Avenue in Brooklyn, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.63977&mlon=-74.01586#map=18/40.63977/-74.01586",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3
@@ -2803,8 +2893,31 @@
       "why": "Parade on Greenwich Street in Manhattan, permitted by the Police Department. This is the city's permit, not a listing — it says where and when, and nothing about what it is like.",
       "url": "https://www.openstreetmap.org/?mlat=40.71912&mlon=-74.01032#map=18/40.71912/-74.01032",
       "source": "NYC Permitted Event Information — data.cityofnewyork.us",
-      "lastVerified": "2026-09-27",
+      "lastVerified": "2026-09-29",
       "indoor": false,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtQWuLgKMI7BUEUkw",
+      "title": "Maum Market NYC",
+      "emoji": "🛍️",
+      "type": "event",
+      "categories": [
+        "market"
+      ],
+      "zone": "sunset-park-west",
+      "area": "Industry City, 220 36th St, Brooklyn, NY 11232, USA",
+      "coords": [
+        40.6564675,
+        -74.00676059999999
+      ],
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "why": "Join us for a day of discovery, design, and community at Maum Market—our curated marketplace celebrating Asian-owned brands and friends of Maum. Explore beautiful ceramics, stationery, jewelry, home goods, art, and delicious treats from emerging and beloved Asian-owned brands. What to expect Curated lineup of Asian-own",
+      "url": "https://luma.com/kj3cxjqj",
+      "source": "Luma — New York",
+      "lastVerified": "2026-09-29",
       "quality": 3,
       "uniqueness": 3
     }
