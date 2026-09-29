@@ -945,6 +945,30 @@ const App = (() => {
     return head === f.name ? esc(f.name) : `${head} — ${esc(f.name)}`;
   };
 
+  /* ---------- which item leads a view ----------
+
+     The lead used to be simply the best-scoring item with a real
+     photograph, which quietly assumed a city you can cross in twenty
+     minutes. Paris is one. The Bay Area is not: set in South San
+     Francisco, Today led with the Bay Lights twenty-five minutes away,
+     and from Cupertino it led with them at eighty-one, because a free,
+     famous, well-photographed thing outscores anything local once
+     distance is worth at most fourteen points.
+
+     So the lead is looked for ring by ring, nearest first, using the
+     same rings the section lists use: the best pictured thing in the
+     first ring that has one wins. Only when nothing pictured is inside
+     the widest ring does the old rule apply. "Worth going further" is
+     still on the page for what is far and good; it just no longer opens
+     it. */
+  function leadWithin(ranked, rings) {
+    for (const cap of rings) {
+      const hit = ranked.find(i => hasRealPhoto(i) && (i.minutesFromHome ?? Infinity) <= cap);
+      if (hit) return hit;
+    }
+    return ranked.find(hasRealPhoto) || ranked[0] || null;
+  }
+
   function hero(item) {
     const picture = item.image
       ? `<div class="hero-img">${img(item, 'hero', 'loaded', true)}</div>`
@@ -1215,6 +1239,9 @@ const App = (() => {
      than asking the catalogue what it has and hoping some of it is close. */
 
   const NEAR_MIN = 15, WIDER_MIN = 30;
+  /* Fewer written-up places than this nearby, and an Eat list shows the
+     map before the long trips. See the category builder. */
+  const THIN_NEARBY = 5;
 
   const AROUND = [
     ['bakery',     MARK.bakery,     'Bakery'],
@@ -1289,19 +1316,24 @@ const App = (() => {
        than half the city does not say. */
     const now = new Date();
 
+    let furthest = 0;
     for (const [cat, emoji, label] of AROUND) {
       let it = nearestOfKind(cat, NEAR_MIN, now);
       if (it && used.has(it.id)) it = null;
       if (!it) it = nearestOfKind(cat, WIDER_MIN, now);
       if (!it || used.has(it.id)) continue;
       used.add(it.id);
+      furthest = Math.max(furthest, it.minutesFromHome ?? 0);
       picks.push(aroundYouCard(it, label, emoji));
       if (picks.length >= 6) break;
     }
 
     if (!picks.length) return '';
     return stripHead(`Around ${Loc.displayName(loc)}`,
-                     `Within about ${NEAR_MIN} minutes · nothing that says it is shut right now`)
+                     /* The ring widens to WIDER_MIN when a kind has
+                        nothing closer, and the heading has to say so: it
+                        promised fifteen minutes over a deli at twenty-two. */
+                     `Within about ${furthest > NEAR_MIN ? WIDER_MIN : NEAR_MIN} minutes · nothing that says it is shut right now`)
       + `<div class="near-grid">${picks.join('')}</div>`;
   }
 
@@ -1326,8 +1358,9 @@ const App = (() => {
     if (!ranked.length) return `<p class="empty">Nothing scheduled today — try the weekend.</p>`;
 
     const used = new Set();
-    // The lead needs a photograph that is actually of the place.
-    const lead = ranked.find(hasRealPhoto) || ranked[0];
+    // The lead needs a photograph that is actually of the place, and to
+    // be somewhere you would go today — see leadWithin.
+    const lead = leadWithin(ranked, Near.RINGS.near);
     used.add(lead.id);
 
     const evening = Rank.rank(ALL, CTX, i =>
@@ -1392,7 +1425,13 @@ const App = (() => {
        otherwise the best room that does — a Nights tab that opens on a
        heading and a list of names reads as a directory, which is the one
        thing a night out is not chosen from. */
-    const lead = Rank.rank(gigs, CTX, hasRealPhoto)[0]
+    /* Ring by ring, nearest first — see leadWithin — and inside a ring a
+       dated night before a room. */
+    const pictured = (list, cap) =>
+      Rank.rank(list, CTX, i => hasRealPhoto(i) && (i.minutesFromHome ?? Infinity) <= cap)[0];
+    const lead = Near.RINGS.out.reduce((got, cap) =>
+        got || pictured(gigs, cap) || pictured(nightlife, cap), null)
+      || Rank.rank(gigs, CTX, hasRealPhoto)[0]
       || Rank.rank(nightlife, CTX, hasRealPhoto)[0];
     const rest = gigs.filter(g => !lead || g.id !== lead.id);
 
@@ -2384,11 +2423,19 @@ const App = (() => {
           ? stripHead(`${label} around ${here}`, radiusNote(radius, items, widened))
             + rows(rest, null, true)
           : '')
+      /* The map strip is last because it is the weakest claim on the
+         page, and a reader with somewhere to go never needs it. Where the
+         guide has written up fewer than THIN places nearby, that reader
+         does: South San Francisco had three restaurants within eighteen
+         minutes and then Ettan, forty-five minutes away, ahead of a dozen
+         places six minutes away. So there the places on the map come
+         before the trip, and the trip stays on the page below them. */
+      + (items.length < THIN_NEARBY ? foundStrip(found, here) : '')
       + (further.length
           ? stripHead('Worth the trip', `Further than ${radius} minutes, and still worth it`)
             + rows(further, null, true)
           : '')
-      + foundStrip(found, here)
+      + (items.length < THIN_NEARBY ? '' : foundStrip(found, here))
       + (questId ? questBlock(questId) : '');
   }
 
@@ -3327,8 +3374,8 @@ const App = (() => {
        .map(([e, l]) => `<span class="pair"><span class="e">${e}</span>${esc(l.map(i => i.title).join(' · '))}</span>`);
       const zl = String(City.zone.label(hereArr));
       standing = stripHead(zl === mine.name ? `You are in ${inZone(hereArr)}`
-                                            : `You are in ${inZone(hereArr)} — ${esc(mine.name)}`,
-                           esc(mine.famousFor || ''))
+                                            : `You are in ${inZone(hereArr)} — ${mine.name}`,
+                           mine.famousFor || '')
         + (bits.length ? `<div class="pairs"><div class="pairs-row">${bits.join('')}</div></div>` : '');
     }
 
