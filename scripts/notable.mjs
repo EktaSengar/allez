@@ -39,23 +39,31 @@ const LIMIT = (() => { const i = process.argv.indexOf('--limit'); return i === -
 const UA = 'allez/1.0 (https://github.com/EktaSengar/allez)';
 
 /* Wikidata classes worth having, mapped onto the site's own categories.
+
+   Every id here is checked against its label by `node scripts/notable.mjs
+   --check-classes`. Three were wrong until 29 September 2026, and each
+   quietly filled a section with the wrong kind of place: `bistro` was
+   Q2360219, which is "permanent mission", so twenty New York UN missions
+   were restaurants; `pastry shop` was Q2143825, "hiking trail", so a
+   day-long walk round Manhattan was a bakery; and `bookshop` was
+   Q1367454, a moth, so no bookshop ever arrived this way at all.
    Kept deliberately short: this is the layer that risks turning a
    neighbourhood guide into a sightseeing list, so it takes the kinds of
    place the site already has sections for and nothing else. */
 const CLASSES = [
   ['wd:Q30022',   'cafe'],        // café
   ['wd:Q11707',   'restaurant'],  // restaurant
-  ['wd:Q2360219', 'restaurant'],  // bistro
+  ['wd:Q866742',  'restaurant'],  // bistro
   ['wd:Q7075',    'books'],       // library
-  ['wd:Q1367454', 'books'],       // bookshop
+  ['wd:Q200764',  'books'],       // bookstore
   ['wd:Q33506',   'museum'],      // museum
   ['wd:Q207694',  'museum'],      // art museum
   ['wd:Q187456',  'nightlife'],   // bar — Q22687, which sat here, is `bank`
-  ['wd:Q41253',   'culture'],     // movie theatre
+  ['wd:Q41253',   'culture'],     // movie theater
   ['wd:Q24354',   'culture'],     // theatre
   ['wd:Q22698',   'park'],        // park
   ['wd:Q483110',  'sport'],       // stadium
-  ['wd:Q2143825', 'bakery'],      // pastry shop
+  ['wd:Q861651',  'bakery'],      // pâtisserie
   ['wd:Q274393',  'bakery']       // bakery
 ].concat(City.notable?.classes || []);
 
@@ -254,7 +262,7 @@ async function fromWikidata() {
 
 async function summaries(list) {
   process.stdout.write('  Wikipedia summaries… ');
-  let done = 0, tried = 0, failed = 0;
+  let done = 0, tried = 0, failed = 0, redirected = 0;
   for (const p of list) {
     if (!p.article) continue;
     tried++;
@@ -268,6 +276,15 @@ async function summaries(list) {
          and the check after this loop is where that becomes fatal. */
       failed++;
     }
+    /* The summary endpoint follows redirects, and a redirect is often to
+       a different subject: "Pacifica Taco Bell" is a section of the
+       Pacifica State Beach article, so the restaurant was described, and
+       pictured, as a beach. King Cole Bar came back as the St. Regis
+       hotel. When the page that answered is not the one asked for, its
+       text and picture are about something else, and the record keeps
+       its Wikidata description instead. */
+    const same = t => String(t || '').replace(/ /g, '_').replace(/^./, c => c.toUpperCase());
+    if (d && d.titles?.canonical && same(d.titles.canonical) !== same(p.article)) { redirected++; d = null; }
     if (d && d.extract) {
       /* The first sentence or two — enough to say what the place is and
          why anybody wrote it down, and no more. */
@@ -297,7 +314,8 @@ async function summaries(list) {
   if (failed > 20 && failed > tried * 0.1)
     throw new Error(`Wikipedia refused ${failed} of ${tried} summaries — stopping rather than shipping a thin file`);
   console.log(` ${list.filter(p => p.extract).length} with text` +
-              (failed ? ` (${failed} of ${tried} failed)` : ''));
+              (failed ? ` (${failed} of ${tried} failed)` : '') +
+              (redirected ? ` · ${redirected} redirected elsewhere, left without` : ''));
 }
 
 /* ---------- 3. famous, or good? ---------- */
@@ -466,4 +484,39 @@ async function run() {
   console.log(`\n  wrote data/notable.json — ${kb} KB\n`);
 }
 
-run().catch(e => { console.error('\n' + e.message + '\n'); process.exit(1); });
+/* ---------- --check-classes ----------
+
+   Each class line carries its label as a comment. This asks Wikidata
+   what every id is actually called and fails on any that disagree, in
+   this file and in every pack, so a mistyped id is caught the day it is
+   written rather than by somebody finding a moth in the bookshops. */
+async function checkClasses() {
+  const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+  const files = ['scripts/notable.mjs', ...(await fs.readdir(root, { withFileTypes: true }))
+    .filter(d => d.isDirectory()).map(d => `${d.name}/city.js`)];
+  const lines = [];
+  for (const f of files) {
+    const text = await fs.readFile(path.join(root, f), 'utf8').catch(() => null);
+    if (!text) continue;
+    for (const m of text.matchAll(/\['wd:(Q\d+)',\s*'[a-z]+'\][,\s]*\/\/\s*([^\n—]+)/g))
+      lines.push({ f, id: m[1], said: m[2].trim() });
+  }
+  const ids = [...new Set(lines.map(l => l.id))];
+  const q = `SELECT ?c ?l WHERE { VALUES ?c { ${ids.map(i => 'wd:' + i).join(' ')} } ` +
+            `?c rdfs:label ?l FILTER(LANG(?l) = "en") }`;
+  const res = await fetch('https://query.wikidata.org/sparql?format=json&query=' + encodeURIComponent(q),
+    { headers: { 'user-agent': UA, accept: 'application/sparql-results+json' } }).then(r => r.json());
+  const label = new Map(res.results.bindings.map(b => [b.c.value.split('/').pop(), b.l.value]));
+  const flat = t => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z ]/g, '').trim();
+  const bad = lines.filter(l => {
+    const real = flat(label.get(l.id) || '');
+    const said = flat(l.said);
+    return !real || !(real.includes(said) || said.includes(real));
+  });
+  bad.forEach(l => console.log(`  ✗ ${l.f}: ${l.id} is "${label.get(l.id) || '?'}", not "${l.said}"`));
+  console.log(bad.length ? `\n${bad.length} class ids do not match their labels.` : `All ${lines.length} class ids match their labels.`);
+  process.exit(bad.length ? 1 : 0);
+}
+
+if (process.argv.includes('--check-classes')) checkClasses();
+else run().catch(e => { console.error('\n' + e.message + '\n'); process.exit(1); });
