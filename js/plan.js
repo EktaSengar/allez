@@ -37,7 +37,8 @@
               Store.prefs() returns it. Optional. `dog` and `kidAge` keep
               out what does not suit (Rank.suits); a family also gets a
               dessert after dinner, and a stop with a sunset setting is
-              given the time to be there by.
+              given the time to be there by. `carFree` plans a day
+              without the car — see below.
    --------------------------------------------------------- */
 
 const Plan = (() => {
@@ -154,6 +155,59 @@ const Plan = (() => {
     const a = from && from.coords, b = coordsOf(item);
     if (a && b) return City.reach.minutes(Loc.km(a, b), when);
     return first ? (item.minutesFromHome ?? null) : null;
+  }
+
+  /* ---------- without the car ----------
+
+     With `prefs.carFree`, every leg — from home to the first stop and
+     from each stop to the next — has to be one a person can walk or
+     cycle in twenty minutes (Loc.activeLeg). That is a filter on the
+     candidates, not a cost: a stop forty minutes away by bike is not a
+     worse car-free stop, it is not one. A record with no position of its
+     own cannot say how far it is, so it is left out rather than assumed
+     close, and a day trip, which has only a driving time, goes with it.
+
+     A bike leg that runs along one of Sport's trails says which — the
+     Bay Trail from the Baylands to Shoreline, the Stevens Creek Trail
+     into Mountain View — so the ride between two stops is part of the
+     day rather than time lost between them. A trail is a straight line
+     from its start (`coords`) to its other end (`routeEnd`), which is
+     rough but honest for the flat off-street paths this is for: the leg
+     rides it when both ends of the leg are within a kilometre
+     of that line, and at least half the leg is along it. */
+  const VIA_NEAR = 1;
+
+  /* Metres on a local flat projection, which is fine at this scale. */
+  function flat(o, p) {
+    const k = 111.32, c = Math.cos(o[0] * Math.PI / 180);
+    return [(p[1] - o[1]) * k * c, (p[0] - o[0]) * k];
+  }
+  /* Where a point falls along a segment (0 to 1), and how far off it. */
+  function along(a, b, p) {
+    const B = flat(a, b), P = flat(a, p);
+    const len2 = B[0] * B[0] + B[1] * B[1];
+    const t = len2 ? Math.max(0, Math.min(1, (P[0] * B[0] + P[1] * B[1]) / len2)) : 0;
+    return { t, off: Math.hypot(P[0] - t * B[0], P[1] - t * B[1]), len: Math.sqrt(len2) };
+  }
+
+  function viaTrail(trails, from, to) {
+    if (!from || !to) return null;
+    const leg = Loc.km(from, to);
+    for (const tr of trails) {
+      const s = along(tr.coords, tr.routeEnd, from), e = along(tr.coords, tr.routeEnd, to);
+      if (s.off > VIA_NEAR || e.off > VIA_NEAR) continue;
+      if (Math.abs(e.t - s.t) * s.len >= leg / 2) return tr;
+    }
+    return null;
+  }
+
+  const trailsIn = pool => pool.filter(i => i.type === 'ride' && i.coords && i.routeEnd);
+
+  /* The leg, the car-free way: minutes and mode, or null when it cannot
+     be walked or cycled. */
+  function activeLegOf(from, item) {
+    const a = from && from.coords, b = coordsOf(item);
+    return a && b ? Loc.activeLeg(a, b) : null;
   }
 
   /* ---------- a day that does not zig-zag ----------
@@ -280,18 +334,23 @@ const Plan = (() => {
     if (!last || last.slot !== 'evening' || last.item.type !== 'restaurant' || !company.includes('family')) return null;
     const s = SLOTS[2], when = new Date(`${iso}T${hhmm(s.from)}:00`);
     const done = ctx.done || (() => false);
-    const near = i => { const m = legMinutes(prev, i, when, false); return m == null || m <= DESSERT_WITHIN; };
+    const carFree = !!(ctx.prefs && ctx.prefs.carFree);
+    const near = i => {
+      if (carFree) return !!activeLegOf(prev, i);
+      const m = legMinutes(prev, i, when, false); return m == null || m <= DESSERT_WITHIN;
+    };
     const item = Rank.rank(pool, c, i =>
       (i.categories || []).includes('dessert') && Rank.isOpenOn(i, iso) && !planned.has(i.id) && !done(i.id) &&
       Rank.suits(i, ctx.prefs) && near(i) && openBlock(i, iso, s).fits !== false)[0];
     if (!item) return null;
     planned.add(item.id);
-    const minutes = legMinutes(prev, item, when, false);
+    const active = carFree ? activeLegOf(prev, item) : null;
+    const minutes = active ? active.minutes : legMinutes(prev, item, when, false);
     return {
       slot: 'evening', kind: 'dessert',
       window: { from: hhmm(s.from), to: hhmm(s.to) },
       item,
-      travel: { from: prev.id, minutes },
+      travel: active ? { from: prev.id, minutes, mode: active.mode } : { from: prev.id, minutes },
       open: openBlock(item, iso, s),
       reasons: reasonsFor(item, iso, c, minutes, ctx),
       spend: spendOf(item)
@@ -315,25 +374,35 @@ const Plan = (() => {
     const done = ctx.done || (() => false);
     const stops = [];
     let prev = ctx.origin ? { id: null, coords: [ctx.origin.lat, ctx.origin.lon] } : null;
+    const carFree = !!(ctx.prefs && ctx.prefs.carFree);
+    const trails = carFree ? trailsIn(pool) : [];
 
     for (const s of SLOTS) {
       const fits = FITS[s.slot];
       const when = new Date(`${iso}T${hhmm(s.from)}:00`), first = !stops.length;
-      const leg = i => legMinutes(prev, i, when, first);
+      const leg = carFree ? i => (activeLegOf(prev, i) || {}).minutes ?? null
+                          : i => legMinutes(prev, i, when, first);
       const ranked = Rank.rank(pool, c, i =>
         Rank.isOpenOn(i, iso) && !planned.has(i.id) && !done(i.id) && fits(i) &&
-        Rank.suits(i, ctx.prefs) && openBlock(i, iso, s).fits !== false);
+        Rank.suits(i, ctx.prefs) && (!carFree || !!activeLegOf(prev, i)) &&
+        openBlock(i, iso, s).fits !== false);
       const item = rotate(ranked, iso, c, i => legCost(leg(i)));
       if (!item) continue;
       planned.add(item.id);
 
       const minutes = leg(item);
       const spend = spendOf(item);
+      const active = carFree ? activeLegOf(prev, item) : null;
+      const trail = active && active.mode === 'bike' && item.type !== 'ride'
+        ? viaTrail(trails.filter(t => t.id !== item.id), prev.coords, coordsOf(item)) : null;
       const stop = {
         slot: s.slot,
         window: { from: hhmm(s.from), to: hhmm(s.to) },
         item,
-        travel: { from: stops.length ? prev.id : null, minutes },
+        travel: active
+          ? Object.assign({ from: stops.length ? prev.id : null, minutes, mode: active.mode },
+                          trail ? { via: { id: trail.id, title: trail.title } } : {})
+          : { from: stops.length ? prev.id : null, minutes },
         open: openBlock(item, iso, s),
         reasons: reasonsFor(item, iso, c, minutes, ctx),
         spend
@@ -372,6 +441,7 @@ const Plan = (() => {
     pool.forEach(i => {
       if (filter && !filter(i)) return;
       if (!Rank.suits(i, ctx.prefs)) return;
+      if (ctx.prefs && ctx.prefs.carFree && !(ctx.origin && activeLegOf({ coords: [ctx.origin.lat, ctx.origin.lon] }, i))) return;
       const oSat = Rank.isOpenOn(i, sat), oSun = Rank.isOpenOn(i, sun);
       if (!oSat && !oSun) return;
       const s = Math.max(oSat ? Rank.score(i, satCtx) : -Infinity,

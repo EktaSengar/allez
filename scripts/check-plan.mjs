@@ -151,6 +151,60 @@ for (const id of cityIds()) {
   want(none.days.flatMap(d => d.stops).every(s => s.kind === undefined), 'and no dessert is added');
 }
 
+/* ---------- without the car ----------
+
+   From one point: a café a few minutes' walk away, a park a bike ride
+   away, a museum fifteen kilometres off, a place with no position and a
+   day trip. Car-free keeps the first two and nothing else, in the plan
+   and in the picks, and says how each leg is made. A café at the far end
+   of a trail is reached along it. With nothing said, no leg claims a
+   mode. */
+{
+  const id = 'bay-area';
+  const g = { localStorage: { getItem: () => null, setItem: () => {}, removeItem: () => {} }, navigator: {}, Store: { rating: () => null, isDone: () => false } };
+  const Loc = loadModuleFor(id, 'location.js', 'Loc', g);
+  const Hours = loadModuleFor(id, 'hours.js', 'Hours');
+  const Near = loadModuleFor(id, 'nearby.js', 'Near', { Hours });
+  const Rank = loadModuleFor(id, 'scoring.js', 'Rank', { Near, Hours, Store: g.Store });
+  const Plan = loadModuleFor(id, 'plan.js', 'Plan', { Rank, Near, Loc, Hours });
+  Near.use([], []);
+  const c = [37.4479, -122.1601];
+  const at = dLat => [+(c[0] + dLat).toFixed(5), c[1]];
+  const mk = (title, extra) => Object.assign({ id: title, title, type: 'cafe', zone: 'palo-alto', coords: c, categories: [],
+    goodFor: ['morning', 'afternoon', 'evening'], durationMin: 90, quality: 3, uniqueness: 3, minutesFromHome: 5,
+    provenance: 'editorial', lastVerified: DATE }, extra);
+  const pool = [
+    mk('Near café', { coords: at(0.004) }),
+    mk('Bike park', { type: 'park', coords: at(0.027) }),
+    mk('Far museum', { type: 'museum', coords: at(0.14), quality: 5, uniqueness: 5 }),
+    mk('No position', { coords: undefined, zone: undefined, quality: 5, uniqueness: 5 }),
+    mk('Day trip', { type: 'daytrip', coords: undefined, zone: undefined, minutesFromHome: 40, quality: 5, uniqueness: 5 })
+  ];
+  const ctx = prefs => ({ date: DATE, origin: { lat: c[0], lon: c[1] }, prefs, weather: null,
+    rank: { today: DATE, weatherMode: null, taste: {}, exploredZones: [], homeZone: 'palo-alto' } });
+  const titles = p => p.days.flatMap(d => d.stops.map(s => s.item.title));
+
+  const free = Plan.weekend(pool, ctx({ carFree: true }));
+  const legs = free.days.flatMap(d => d.stops.map(s => s.travel));
+  want(titles(free).length > 0 && titles(free).every(t => ['Near café', 'Bike park'].includes(t)),
+    `car-free plans only what can be walked or cycled to (${titles(free).join(', ')})`);
+  want(legs.every(t => ['walk', 'bike'].includes(t.mode) && t.minutes <= 20), 'every car-free leg says walk or bike, twenty minutes at most');
+  want(free.picks.every(p => ['Near café', 'Bike park'].includes(p.item.title)), 'the picks are car-free too — no day trip');
+  const near = Loc.activeLeg(c, at(0.004)), park = Loc.activeLeg(c, at(0.027));
+  want(near && near.mode === 'walk' && park && park.mode === 'bike' && Loc.activeLeg(c, at(0.14)) === null,
+    'a few hundred metres is a walk, three kilometres a ride, fifteen neither');
+
+  const trail = mk('Trail', { type: 'ride', coords: c, routeEnd: at(0.03), goodFor: [], durationMin: 60 });
+  const end = mk('Trail-end café', { coords: [at(0.028)[0], c[1] + 0.002], goodFor: ['morning'] });
+  const day = Plan.day([trail, end], Object.assign(ctx({ carFree: true }), { date: '2026-09-19' }));
+  const via = day.stops.find(s => s.item.title === 'Trail-end café');
+  want(via && via.travel.mode === 'bike' && via.travel.via && via.travel.via.id === 'Trail',
+    'a bike leg along a trail says which trail it follows');
+
+  const any = Plan.weekend(pool, ctx({}));
+  want(legs.length && any.days.flatMap(d => d.stops).every(s => !s.travel.mode), 'with nothing said, no leg claims a mode');
+}
+
 /* ---------- a daylight-saving night ----------
 
    America's clocks go forward on 14 March 2027 and back on 1 November

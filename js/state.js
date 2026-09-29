@@ -112,6 +112,9 @@ const Store = (() => {
     /* Not weights, but constraints: the dog is hard (see Rank.suits),
        and a child's age keeps out what says it is not for them. */
     if (p.dog === true) out.dog = true;
+    /* A way of getting about rather than a taste: the plan keeps only
+       stops that can be walked or cycled to (see js/plan.js). */
+    if (p.carFree === true) out.carFree = true;
     if (Number.isInteger(p.kidAge) && p.kidAge >= 0 && p.kidAge <= 17) out.kidAge = p.kidAge;
     if (Number(p.reach) > 0) out.reach = Math.round(Number(p.reach));
     if (Number.isInteger(p.budget) && p.budget >= 0 && p.budget <= 4) out.budget = p.budget;
@@ -171,6 +174,8 @@ const Store = (() => {
       return data.ratings[id] || null;
     },
     isDone: id => ['loved', 'good', 'meh', 'never'].includes(data.ratings[id]),
+    /* The day a rating was given, as an ISO date. */
+    ratedOn: id => data.rated[id] || null,
     wants: () => Object.keys(data.ratings).filter(k => data.ratings[k] === 'want'),
     doneIds: () => Object.keys(data.ratings).filter(k => ['loved', 'good', 'meh'].includes(data.ratings[k])),
 
