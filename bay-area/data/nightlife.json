@@ -603,9 +603,9 @@
       "sameAs": [
         "osm-rose-and-crown-74889--244323"
       ],
-      "hours": "Mo-We 14:00-23:00; Th 14:00-24:00; Fr 14:00-01:00; Sa 13:00-01:00; Su 13:00-23:00",
-      "hoursFrom": "therosepa.com",
-      "hoursChecked": "2026-09-25",
+      "hours": "Mo-We 14:00-23:00; Th 14:00-24:00; Fr 14:00-01:00; Sa 13:00-01:00; Su 11:00-23:00",
+      "hoursFrom": "the pub's posted hours",
+      "hoursChecked": "2026-09-29",
       "priceLevel": 1,
       "booking": false
     },
@@ -2458,44 +2458,6 @@
       "booking": "https://www.opentable.com/r/nola-palo-alto",
       "durationMin": 90,
       "priceLevel": 2
-    },
-    {
-      "type": "bar",
-      "provenance": "editorial",
-      "categories": [
-        "nightlife"
-      ],
-      "zone": "palo-alto",
-      "indoor": true,
-      "lastVerified": "2026-09-29",
-      "goodFor": [
-        "evening",
-        "socialize"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "quality": 4,
-      "uniqueness": 3,
-      "id": "rose-and-crown-palo-alto",
-      "title": "The Rose & Crown",
-      "emoji": "🎯",
-      "area": "547 Emerson Street",
-      "priceNote": "Cheap",
-      "why": "A small English pub with darts, a long beer list and Palo Alto's best-known pub quiz. Trivia is on Tuesdays at eight; the room is tiny, so it is standing room only by the first round. The winning team drinks a round on the house.",
-      "url": "https://www.therosepa.com/",
-      "source": "therosepa.com; Tripadvisor; confirmed against OpenStreetMap",
-      "coords": [
-        37.44441,
-        -122.16173
-      ],
-      "coordsFrom": "the map pin for Rose and Crown",
-      "booking": false,
-      "durationMin": 120,
-      "priceLevel": 1,
-      "hours": "Mo-We 14:00-23:00; Th 14:00-24:00; Fr 14:00-01:00; Sa 13:00-01:00; Su 11:00-23:00",
-      "hoursFrom": "the pub's posted hours",
-      "hoursChecked": "2026-09-29"
     },
     {
       "type": "bar",
