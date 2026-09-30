@@ -763,6 +763,180 @@
       "priceLevel": 3,
       "booking": false,
       "hoursNote": "An evening; the Din Tai Fung queue is shortest before 6."
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-29",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "booking": false,
+      "id": "mission-broadway-evening",
+      "title": "An Evening on Broadway",
+      "emoji": "🍺",
+      "moods": [
+        "dinner",
+        "walk",
+        "international"
+      ],
+      "zone": "redwood-city",
+      "area": "Three stops along Broadway, downtown Redwood City, within a ten-minute walk",
+      "price": 70,
+      "priceNote": "~$70 for two",
+      "durationMin": 180,
+      "priceLevel": 3,
+      "brief": "Downtown Redwood City does a good evening on one street. Start with a beer and a pretzel in a German beer garden, walk down Broadway to wood-fired pizza, and finish with a scoop of odd ice cream a few doors on.",
+      "test": "The pizza decides it: a blistered, chewy crust that still holds its shape in the middle. The ice cream should taste of what the name says, however strange that is.",
+      "candidates": [
+        {
+          "emoji": "🥨",
+          "name": "Gourmet Haus Staudt",
+          "id": "osm-gourmet-haus-staudt-74972--244467",
+          "order": "A German beer on tap and a soft pretzel with mustard",
+          "note": "The beer garden is out the back; the German grocery at the front is worth a look.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🍕",
+          "name": "Vesta",
+          "id": "osm-vesta-74973--244454",
+          "order": "One pizza from the wood oven and a small plate to share",
+          "note": "Busy at dinner. Closed Sundays.",
+          "walk": "8 min on"
+        },
+        {
+          "emoji": "🍨",
+          "name": "Humphry Slocombe",
+          "id": "osm-humphry-slocombe-74973--244455",
+          "order": "Secret Breakfast — bourbon and cornflakes",
+          "walk": "2 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🏛️",
+          "text": "Sit on the steps of Courthouse Square with the ice cream"
+        },
+        {
+          "emoji": "🍹",
+          "text": "Or a late cocktail at LV Mar, next door to Vesta",
+          "id": "osm-lv-mar-74973--244454"
+        }
+      ],
+      "why": "A proper night out without driving anywhere. Three good places, one street, and each stop sets up the next.",
+      "goodFor": [
+        "food",
+        "evening",
+        "couple",
+        "walk"
+      ],
+      "labels": [
+        "foodmission",
+        "couple"
+      ],
+      "uniqueness": 3,
+      "quality": 4,
+      "hoursNote": "Tuesday to Saturday evening. Vesta is closed Sundays, and the beer garden closes at 8 on Mondays.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg/500px-Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg",
+      "imageSubject": "Neapolitan pizza",
+      "coords": [
+        37.48606,
+        -122.23349
+      ]
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-29",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "booking": false,
+      "id": "mission-cupertino-taiwanese-sunday",
+      "title": "A Taiwanese Sunday in Cupertino",
+      "emoji": "🥟",
+      "moods": [
+        "international",
+        "cheap",
+        "walk"
+      ],
+      "zone": "cupertino",
+      "area": "Stevens Creek Boulevard, from Liang’s Village to De Anza College",
+      "price": 40,
+      "priceNote": "~$40 for two",
+      "durationMin": 180,
+      "priceLevel": 2,
+      "brief": "Cupertino is one of the best places outside Taiwan to eat like you are in Taipei. Start with a Taiwanese breakfast, walk the Sunday farmers market at De Anza College, then finish with a properly brewed tea.",
+      "test": "Breakfast: the fried cruller should be crisp, and the soy milk made in-house. Tea: order the oolong without much sugar, so you can taste whether it was brewed to order.",
+      "candidates": [
+        {
+          "emoji": "🥢",
+          "name": "Liang’s Village",
+          "id": "osm-liang-s-village-74644--244066",
+          "order": "Taiwanese breakfast: warm soy milk, a fried cruller, a scallion pancake",
+          "note": "Breakfast is Friday to Sunday from 8. Beef noodle soup is on from 11.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🥬",
+          "name": "De Anza College Farmers’ Market",
+          "id": "osm-de-anza-college-farmers-market-74641--244085",
+          "step": "One lap first, then Asian greens and whatever fruit is in season",
+          "note": "Sundays 9 to 1.",
+          "walk": "12 min on"
+        },
+        {
+          "emoji": "🧋",
+          "name": "Chicha San Chen",
+          "id": "osm-chicha-san-chen-74645--244070",
+          "order": "An oolong or Dong Ding milk tea, low sugar",
+          "note": "Opens at 11:30. Expect a queue.",
+          "walk": "10 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🍩",
+          "text": "Take a dozen from Donut Wheel home — it never closes",
+          "id": "osm-donut-wheel-74653--244064"
+        },
+        {
+          "emoji": "☕",
+          "text": "Or a proper espresso at Voyager Craft Coffee",
+          "id": "osm-voyager-craft-coffee-74646--244077"
+        }
+      ],
+      "why": "A morning that shows what Cupertino is really good at, and costs very little.",
+      "goodFor": [
+        "food",
+        "morning",
+        "cheap",
+        "walk"
+      ],
+      "labels": [
+        "cheap",
+        "foodmission"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "hoursNote": "Sunday morning only: breakfast from 8, the market 9 to 1, tea from 11:30.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lanzhou_La_Mian.jpg/500px-Lanzhou_La_Mian.jpg",
+      "imageSubject": "Beef noodle soup",
+      "coords": [
+        37.32198,
+        -122.03287
+      ]
     }
   ]
 }
