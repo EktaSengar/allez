@@ -1,5 +1,953 @@
 {
-  "generated": "2026-09-14",
-  "note": "Mission burritos, third wave, dim sum on Clement, the Ferry Building on a Saturday. Hand-written. Empty.",
-  "items": []
+  "generated": "2026-09-29",
+  "note": "Food as missions rather than listings, the Paris shape. Each mission is a small assignment in a particular set of streets — candidates, what to order, how to judge, where to go afterwards. Moods map to missions in js/app.js.",
+  "items": [
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 5,
+      "quality": 5,
+      "lastVerified": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Focaccia_with_Crumb.jpg/500px-Focaccia_with_Crumb.jpg",
+      "imageSubject": "Focaccia",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "id": "mission-north-beach-italian",
+      "title": "An Italian Morning in North Beach",
+      "emoji": "🇮🇹",
+      "moods": [
+        "coffee",
+        "cheap",
+        "walk"
+      ],
+      "zone": "north-beach",
+      "area": "Four old Italian shops within five minutes of Washington Square",
+      "price": 30,
+      "priceNote": "~$30 for two, lunch included",
+      "durationMin": 120,
+      "brief": "North Beach was San Francisco's Little Italy, and a handful of the shops that fed it are still run by the same families. Start early — the focaccia sells out — and eat your way round Washington Square in the order below.",
+      "test": "The focaccia should be soft and oily on the bottom, not bready; the cannoli shell should crack, which means it was filled after you ordered.",
+      "candidates": [
+        {
+          "emoji": "🍞",
+          "name": "Liguria Bakery",
+          "id": "osm-liguria-bakery-75603--244819",
+          "order": "A slab of plain or onion focaccia, wrapped in paper",
+          "note": "Since 1911. Opens early, shuts when the trays are empty — often before noon.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🥪",
+          "name": "Molinari Delicatessen",
+          "id": "osm-molinari-delicatessen-75597--244816",
+          "order": "Take a number. A sandwich on a sweet roll for later",
+          "note": "Since 1896; they cure their own salami.",
+          "walk": "5 min on"
+        },
+        {
+          "emoji": "🧁",
+          "name": "Victoria Pastry Company",
+          "id": "osm-victoria-pastry-company-75603--244822",
+          "order": "A cannoli, filled to order",
+          "note": "Or Stella Pastry on Columbus for the sacripantina.",
+          "walk": "4 min on"
+        },
+        {
+          "emoji": "☕",
+          "name": "Caffe Trieste",
+          "id": "osm-caffe-trieste-75597--244815",
+          "order": "A cappuccino, at a table",
+          "note": "The first espresso house on the West Coast, 1956.",
+          "walk": "5 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🌳",
+          "text": "Eat the sandwich on the grass in Washington Square"
+        },
+        {
+          "emoji": "📚",
+          "text": "Browse City Lights Books on Columbus"
+        }
+      ],
+      "why": "The quickest way to understand what North Beach was, and it still tastes of it. Four shops, a park and a coffee, and nothing on the list is newer than 1956.",
+      "goodFor": [
+        "food",
+        "morning",
+        "couple",
+        "cheap",
+        "walk"
+      ],
+      "labels": [
+        "dontmiss",
+        "cheap",
+        "foodmission"
+      ],
+      "coords": [
+        37.8015,
+        -122.40928
+      ],
+      "priceLevel": 2,
+      "booking": false,
+      "hoursNote": "A morning, Tuesday to Saturday — Liguria is closed Sundays and Mondays and can sell out before noon.",
+      "url": "https://www.themolinarideli.com"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "lastVerified": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/HK_SSP_%E9%95%B7%E6%B2%99%E7%81%A3_Cheung_Sha_Wan_%E6%B7%B1%E7%9B%9B%E8%B7%AF_Sham_Shing_Road_%E6%B3%93%E6%99%AF%E6%BB%99%E5%95%86%E5%A0%B4_Banyan_Mall_shop_%E8%9B%8B%E6%92%BB%E7%8E%8B_King_Bakery_Studio_December_2019_SS2_egg_tarts.jpg/500px-HK_SSP_%E9%95%B7%E6%B2%99%E7%81%A3_Cheung_Sha_Wan_%E6%B7%B1%E7%9B%9B%E8%B7%AF_Sham_Shing_Road_%E6%B3%93%E6%99%AF%E6%BB%99%E5%95%86%E5%A0%B4_Banyan_Mall_shop_%E8%9B%8B%E6%92%BB%E7%8E%8B_King_Bakery_Studio_December_2019_SS2_egg_tarts.jpg",
+      "imageSubject": "Egg tart",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "id": "mission-chinatown-bakeries",
+      "title": "Chinatown, One Bite at a Time",
+      "emoji": "🥮",
+      "moods": [
+        "cheap",
+        "international",
+        "walk"
+      ],
+      "zone": "north-beach",
+      "area": "Stockton Street and Grant Avenue, a ten-minute loop",
+      "price": 25,
+      "priceNote": "~$25 for two — most things are a few dollars",
+      "durationMin": 90,
+      "brief": "The oldest Chinatown in North America is at its best in the morning, when Stockton Street is doing its shopping. Eat standing up, a few dollars at a time, and finish sitting down with tea.",
+      "test": "A good egg tart is still warm and barely set in the middle. Good dim sum to go is steamed that morning and the wrapper is thin enough to see through.",
+      "candidates": [
+        {
+          "emoji": "🥧",
+          "name": "Golden Gate Bakery",
+          "id": "osm-golden-gate-bakery-75593--244814",
+          "order": "Two egg tarts, warm",
+          "note": "Closes without warning for weeks at a time. If there is a queue, join it.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🥟",
+          "name": "Good Mong Kok Bakery",
+          "id": "osm-good-mong-kok-bakery-75591--244817",
+          "order": "Har gow, siu mai and a char siu bao, to take away",
+          "note": "Cash, a queue out the door, priced by the piece.",
+          "walk": "4 min on"
+        },
+        {
+          "emoji": "🍵",
+          "name": "Red Blossom Tea Company",
+          "id": "osm-red-blossom-tea-company-75589--244813",
+          "order": "Ask them to brew an oolong tasting",
+          "note": "A family tea shop on Grant since 1985.",
+          "walk": "6 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🏮",
+          "text": "Walk up Grant Avenue to the Dragon Gate"
+        },
+        {
+          "emoji": "🌳",
+          "text": "Sit in Portsmouth Square with the old men playing cards"
+        }
+      ],
+      "why": "Chinatown rewards the person who eats small and keeps walking. This is the cheapest good morning in San Francisco.",
+      "goodFor": [
+        "food",
+        "morning",
+        "cheap",
+        "walk"
+      ],
+      "labels": [
+        "cheap",
+        "foodmission"
+      ],
+      "coords": [
+        37.79641,
+        -122.40686
+      ],
+      "priceLevel": 2,
+      "booking": false,
+      "hoursNote": "Best in the morning, when Stockton Street is shopping.",
+      "url": "https://goodmongkokbakery.com/"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "lastVerified": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Burrito.JPG/500px-Burrito.JPG",
+      "imageSubject": "Burrito",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "id": "mission-burrito",
+      "title": "Settle the Burrito Argument",
+      "emoji": "🌯",
+      "moods": [
+        "cheap",
+        "international"
+      ],
+      "zone": "mission",
+      "area": "Three taquerias on Mission Street, within a ten-minute walk",
+      "price": 40,
+      "priceNote": "~$40 for two, sharing each",
+      "durationMin": 90,
+      "brief": "The Mission burrito is San Francisco's own dish, and everyone who lives here has a side. Share one burrito at each of three places — the same filling everywhere, carne asada — and decide which side you are on.",
+      "test": "Judge the tortilla (steamed or crisped on the plancha?), the meat (charred at the edges?), and whether it holds together to the last bite. Rice is the argument.",
+      "candidates": [
+        {
+          "emoji": "🌮",
+          "name": "La Taqueria",
+          "id": "osm-la-taqueria-75502--244836",
+          "order": "Carne asada burrito, 'dorado' style — no rice",
+          "note": "The purist. No rice, crisped tortilla, a queue at lunch.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🌯",
+          "name": "Taqueria El Farolito",
+          "order": "Super carne asada burrito",
+          "note": "The heavyweight. Open very late, and enormous.",
+          "walk": "3 min on"
+        },
+        {
+          "emoji": "🌶️",
+          "name": "Taqueria Cancún",
+          "order": "Super burrito, the one with avocado",
+          "note": "The comfortable one, with a salsa bar.",
+          "walk": "12 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🍦",
+          "text": "Walk it off to Bi-Rite Creamery, then Dolores Park"
+        },
+        {
+          "emoji": "🎨",
+          "text": "Balmy Alley murals, five minutes from La Taqueria"
+        }
+      ],
+      "why": "You will not agree with anyone afterwards, but you will know why they think what they think.",
+      "goodFor": [
+        "food",
+        "lunch",
+        "cheap",
+        "couple",
+        "afternoon"
+      ],
+      "labels": [
+        "cheap",
+        "foodmission"
+      ],
+      "coords": [
+        37.75087,
+        -122.41816
+      ],
+      "priceLevel": 2,
+      "booking": false,
+      "hoursNote": "Lunch or dinner; all three open late morning.",
+      "url": "https://en.wikipedia.org/wiki/Mission_burrito"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "lastVerified": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Ferry_Building_San_Francisco_from_Hyatt_Regency_with_R-Evolution_and_Bay_Bridge_2026_dllu.jpg/500px-Ferry_Building_San_Francisco_from_Hyatt_Regency_with_R-Evolution_and_Bay_Bridge_2026_dllu.jpg",
+      "imageSubject": "Ferry Building",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "id": "mission-ferry-saturday",
+      "title": "Saturday at the Ferry Building",
+      "emoji": "⛴️",
+      "moods": [
+        "walk",
+        "special",
+        "coffee"
+      ],
+      "zone": "rincon-hill",
+      "area": "The farmers market around the Ferry Building, on the Embarcadero",
+      "price": 50,
+      "priceNote": "~$50 for two, eating as you go",
+      "durationMin": 150,
+      "brief": "On Saturday mornings the Ferry Plaza Farmers Market wraps round the Ferry Building and the best of Northern California comes to town. Go before ten, graze, buy one thing to cook, and eat lunch on the water.",
+      "test": "Taste before you buy — every stall offers. Buy only what you could not get in a supermarket.",
+      "candidates": [
+        {
+          "emoji": "🥬",
+          "name": "Ferry Plaza Farmers Market",
+          "id": "osm-ferry-plaza-farmers-market-75591--244785",
+          "step": "Walk the stalls once before buying anything; stone fruit in summer, citrus in winter",
+          "note": "Saturdays from 8. Also Tuesdays and Thursdays, smaller.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "☕",
+          "name": "Blue Bottle Coffee, inside the Ferry Building",
+          "order": "A New Orleans iced coffee",
+          "walk": "inside"
+        },
+        {
+          "emoji": "🦪",
+          "name": "Hog Island Oyster Company",
+          "order": "A dozen Sweetwaters at the bar",
+          "note": "Queue before it opens, or eat at the counter outside.",
+          "walk": "inside"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🌉",
+          "text": "Walk the Embarcadero north towards Pier 39 and the sea lions"
+        },
+        {
+          "emoji": "🚋",
+          "text": "Take the F-line streetcar back along the water"
+        }
+      ],
+      "why": "San Francisco is a food city because of what grows within a hundred miles of it. This is where you see that.",
+      "goodFor": [
+        "food",
+        "morning",
+        "couple",
+        "walk"
+      ],
+      "labels": [
+        "dontmiss",
+        "foodmission",
+        "couple"
+      ],
+      "coords": [
+        37.79528,
+        -122.39237
+      ],
+      "priceLevel": 3,
+      "booking": false,
+      "hoursNote": "Saturday, 8 until 2 — go before ten.",
+      "url": "https://foodwise.org/markets/ferry-plaza-farmers-market/"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "lastVerified": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/500px-Croissant-Petr_Kratochvil.jpg",
+      "imageSubject": "Croissant",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "id": "mission-palo-alto-croissant",
+      "title": "The Palo Alto Croissant Test",
+      "emoji": "🥐",
+      "moods": [
+        "french",
+        "coffee"
+      ],
+      "zone": "palo-alto",
+      "area": "Three bakeries between Lytton Avenue and Town & Country",
+      "price": 25,
+      "priceNote": "~$25 for two",
+      "durationMin": 90,
+      "brief": "Palo Alto has quietly got very good at laminated dough. Buy one plain croissant at each — plain, or the test means nothing — and eat them within the hour.",
+      "test": "Does it shatter when torn, is the inside honeycombed rather than bready, and does it taste of butter after you swallow?",
+      "candidates": [
+        {
+          "emoji": "🥐",
+          "name": "Mademoiselle Colette",
+          "id": "mademoiselle-colette-lytton",
+          "order": "Plain croissant, then the almond one",
+          "note": "The French one, on Lytton.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🍞",
+          "name": "Manresa Bread",
+          "id": "osm-manresa-bread-74877--244317",
+          "order": "Plain croissant, and a loaf for later",
+          "note": "From the team behind the Michelin-starred Manresa.",
+          "walk": "15 min on"
+        },
+        {
+          "emoji": "🥖",
+          "name": "La Baguette",
+          "id": "la-baguette-stanford",
+          "order": "Plain croissant",
+          "note": "The one in the Stanford Shopping Center.",
+          "walk": "15 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "☕",
+          "text": "Reset with a coffee at Coupa Café on Ramona",
+          "id": "osm-coupa-cafe-74857--244351"
+        },
+        {
+          "emoji": "🌳",
+          "text": "Eat the winner in the Rodin Sculpture Garden at Stanford"
+        }
+      ],
+      "why": "The same hour you would spend in Paris, and you will come out knowing which bakery is yours.",
+      "goodFor": [
+        "food",
+        "morning",
+        "couple",
+        "cheap"
+      ],
+      "labels": [
+        "foodmission",
+        "couple"
+      ],
+      "coords": [
+        37.4491,
+        -122.16071
+      ],
+      "priceLevel": 2,
+      "booking": false,
+      "hoursNote": "A morning — bakeries run low on croissants by midday.",
+      "url": "https://www.mademoisellecolette.com/palo-alto-menu/"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 3,
+      "quality": 4,
+      "lastVerified": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Vanilla_Ice_Cream_Cone_at_Camp_Manitoulin.jpg/500px-Vanilla_Ice_Cream_Cone_at_Camp_Manitoulin.jpg",
+      "imageSubject": "Ice cream",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "id": "mission-university-scoops",
+      "title": "Three Scoops on University",
+      "emoji": "🍨",
+      "moods": [
+        "cheap",
+        "walk"
+      ],
+      "zone": "palo-alto",
+      "area": "University Avenue and the Stanford Shopping Center, an evening walk",
+      "price": 25,
+      "priceNote": "~$25 for two, sharing",
+      "durationMin": 75,
+      "brief": "Palo Alto takes its ice cream seriously and the good ones are a short walk apart. One small scoop at each, the same flavour family everywhere — something with caramel or pistachio — and a walk in between.",
+      "test": "Judge on texture first (dense and elastic, or light and icy?), then whether the flavour tastes of the thing rather than of sugar.",
+      "candidates": [
+        {
+          "emoji": "🍦",
+          "name": "Scoop Microcreamery",
+          "id": "osm-scoop-microcreamery-74890--244326",
+          "order": "One small scoop, their seasonal flavour",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🍨",
+          "name": "Bacio di Latte",
+          "id": "bacio-di-latte-stanford",
+          "order": "Pistachio gelato",
+          "note": "At the Stanford Shopping Center, a pleasant walk along El Camino.",
+          "walk": "15 min on"
+        },
+        {
+          "emoji": "🍧",
+          "name": "The Penny Ice Creamery",
+          "id": "osm-the-penny-ice-creamery-74877--244318",
+          "order": "Anything with the torched marshmallow",
+          "note": "In Town & Country, across El Camino.",
+          "walk": "12 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🌙",
+          "text": "Walk back down University after dark, when the trees are lit"
+        }
+      ],
+      "why": "An evening walk with a reason to it — and a genuinely different ice cream at each stop.",
+      "goodFor": [
+        "food",
+        "evening",
+        "couple",
+        "cheap",
+        "walk"
+      ],
+      "labels": [
+        "cheap",
+        "foodmission"
+      ],
+      "coords": [
+        37.4449,
+        -122.16282
+      ],
+      "priceLevel": 2,
+      "booking": false,
+      "hoursNote": "An evening, after dinner.",
+      "url": "https://scoopmicrocreamery.com/"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "lastVerified": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/%E9%B6%8F%E5%A4%A9%E3%81%AE%E3%81%86%E3%81%A9%E3%82%93.jpg/500px-%E9%B6%8F%E5%A4%A9%E3%81%AE%E3%81%86%E3%81%A9%E3%82%93.jpg",
+      "imageSubject": "Udon",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "id": "mission-castro-noodles",
+      "title": "Noodles on Castro Street",
+      "emoji": "🍜",
+      "moods": [
+        "international",
+        "cheap",
+        "dinner"
+      ],
+      "zone": "mountain-view",
+      "area": "Castro Street, Mountain View — all within two blocks",
+      "price": 45,
+      "priceNote": "~$45 for two",
+      "durationMin": 120,
+      "brief": "Castro Street is one of the best noodle streets on the Peninsula. Share a bowl at each place across an evening — handmade Japanese udon, then northern Chinese hand-cut noodles and dumplings.",
+      "test": "The noodle is the whole test: bounce and bite, whether it holds the sauce, and whether it was made in the building.",
+      "candidates": [
+        {
+          "emoji": "🍜",
+          "name": "Udon Mugizo",
+          "id": "osm-udon-mugizo-74788--244158",
+          "order": "Mentaiko cream udon, or kake udon with tempura",
+          "note": "Handmade udon. Queue at lunch.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🥢",
+          "name": "Seasons Noodle & Dumpling Garden",
+          "order": "Hand-cut noodles and a plate of dumplings",
+          "walk": "2 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "☕",
+          "text": "Finish at Red Rock Coffee at the top of Castro",
+          "id": "osm-red-rock-coffee-74787--244158"
+        },
+        {
+          "emoji": "🚆",
+          "text": "Caltrain is at the bottom of the street"
+        }
+      ],
+      "why": "The most convincing evidence that the best food in Silicon Valley is on its main streets, not its campuses.",
+      "goodFor": [
+        "food",
+        "evening",
+        "couple",
+        "cheap",
+        "walk"
+      ],
+      "labels": [
+        "foodmission"
+      ],
+      "coords": [
+        37.3942,
+        -122.07898
+      ],
+      "priceLevel": 3,
+      "booking": false,
+      "hoursNote": "An evening; Udon Mugizo has the longest queue at lunch.",
+      "url": "https://www.mugizo-us.com/mountainview"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 4,
+      "quality": 4,
+      "lastVerified": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Farmers_and_Artisans_Market_at_Farmington_-_Michigan.jpg/500px-Farmers_and_Artisans_Market_at_Farmington_-_Michigan.jpg",
+      "imageSubject": "Farmers' market",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "id": "mission-mountain-view-sunday",
+      "title": "Sunday Market, Castro Street Pastry",
+      "emoji": "🧺",
+      "moods": [
+        "coffee",
+        "walk",
+        "french"
+      ],
+      "zone": "mountain-view",
+      "area": "The Caltrain station lot and the top of Castro Street",
+      "price": 40,
+      "priceNote": "~$40 for two",
+      "durationMin": 120,
+      "brief": "On Sunday mornings the Mountain View farmers market fills the Caltrain lot. Walk it first, buy fruit and something hot, then take it up Castro Street for coffee and pastry.",
+      "test": "At the market: buy what is at the peak of its season and nothing else. At Maison Alyzée: the plain croissant decides it.",
+      "candidates": [
+        {
+          "emoji": "🥬",
+          "name": "Mountain View Farmer's Market",
+          "id": "osm-mountain-view-farmer-s-market-74787--244148",
+          "step": "One lap before you buy. Hot food at the far end.",
+          "note": "Sundays, mornings only.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🥐",
+          "name": "Maison Alyzée",
+          "id": "osm-maison-alyzee-74787--244159",
+          "order": "Croissant and a kouign-amann",
+          "walk": "5 min on"
+        },
+        {
+          "emoji": "☕",
+          "name": "Dana Street Roasting Company",
+          "id": "osm-dana-street-roasting-company-74785--244158",
+          "order": "A house espresso, and a bag of beans for the week",
+          "walk": "2 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🌳",
+          "text": "Pioneer Park, behind the library, for a picnic"
+        }
+      ],
+      "why": "A proper Sunday morning without leaving the South Bay.",
+      "goodFor": [
+        "food",
+        "morning",
+        "couple",
+        "walk"
+      ],
+      "labels": [
+        "foodmission",
+        "couple"
+      ],
+      "coords": [
+        37.39338,
+        -122.07406
+      ],
+      "priceLevel": 2,
+      "booking": false,
+      "hoursNote": "Sunday morning — the market packs up around 1.",
+      "url": "https://www.danastreetroasting.com"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 3,
+      "quality": 4,
+      "lastVerified": "2026-09-29",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/A_Xiaolongbao_from_The_Modern_Shanghai.jpg/500px-A_Xiaolongbao_from_The_Modern_Shanghai.jpg",
+      "imageSubject": "Xiaolongbao",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "id": "mission-santana-row-evening",
+      "title": "Dumplings, Then Dessert, at Santana Row",
+      "emoji": "🥟",
+      "moods": [
+        "international",
+        "dinner",
+        "special"
+      ],
+      "zone": "santana-row",
+      "area": "Valley Fair and Santana Row, facing each other across Stevens Creek",
+      "price": 80,
+      "priceNote": "~$80 for two",
+      "durationMin": 150,
+      "brief": "Put your name down at Din Tai Fung in Valley Fair, wander Santana Row across the road while you wait, eat dumplings, then walk the Row for dessert — one thing each, shared.",
+      "test": "Xiao long bao: lift it by the knot without tearing it, and the soup should be hot and clear. Dessert: pick the one you cannot get anywhere else in the South Bay.",
+      "candidates": [
+        {
+          "emoji": "🥟",
+          "name": "Din Tai Fung",
+          "id": "osm-din-tai-fung-74652--243888",
+          "order": "Pork xiao long bao, spicy wontons, the green beans",
+          "note": "Join the waitlist online before you arrive.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🍦",
+          "name": "Smitten Ice Cream",
+          "id": "osm-smitten-ice-cream-74641--243898",
+          "order": "Salted caramel, churned to order",
+          "walk": "8 min on"
+        },
+        {
+          "emoji": "🍰",
+          "name": "Lady M",
+          "id": "osm-lady-m-74649--243889",
+          "order": "A slice of green tea mille crêpes",
+          "walk": "6 min on",
+          "note": "Back in Valley Fair, near Din Tai Fung."
+        },
+        {
+          "emoji": "🐟",
+          "name": "SomiSomi",
+          "id": "osm-somisomi-74650--243895",
+          "order": "Ube soft serve in a taiyaki cone",
+          "note": "The alternative to Lady M.",
+          "walk": "3 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🌙",
+          "text": "Sit by the fire pits in the middle of the Row"
+        }
+      ],
+      "why": "A night out that is easy to plan and hard to get wrong.",
+      "goodFor": [
+        "food",
+        "evening",
+        "couple"
+      ],
+      "labels": [
+        "foodmission",
+        "couple"
+      ],
+      "coords": [
+        37.32616,
+        -121.94415
+      ],
+      "priceLevel": 3,
+      "booking": false,
+      "hoursNote": "An evening; the Din Tai Fung queue is shortest before 6.",
+      "url": "https://dintaifungusa.com/"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-29",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "booking": false,
+      "id": "mission-broadway-evening",
+      "title": "An Evening on Broadway",
+      "emoji": "🍺",
+      "moods": [
+        "dinner",
+        "walk",
+        "international"
+      ],
+      "zone": "redwood-city",
+      "area": "Three stops along Broadway, downtown Redwood City, within a ten-minute walk",
+      "price": 70,
+      "priceNote": "~$70 for two",
+      "durationMin": 180,
+      "priceLevel": 3,
+      "brief": "Downtown Redwood City does a good evening on one street. Start with a beer and a pretzel in a German beer garden, walk down Broadway to wood-fired pizza, and finish with a scoop of odd ice cream a few doors on.",
+      "test": "The pizza decides it: a blistered, chewy crust that still holds its shape in the middle. The ice cream should taste of what the name says, however strange that is.",
+      "candidates": [
+        {
+          "emoji": "🥨",
+          "name": "Gourmet Haus Staudt",
+          "id": "osm-gourmet-haus-staudt-74972--244467",
+          "order": "A German beer on tap and a soft pretzel with mustard",
+          "note": "The beer garden is out the back; the German grocery at the front is worth a look.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🍕",
+          "name": "Vesta",
+          "id": "osm-vesta-74973--244454",
+          "order": "One pizza from the wood oven and a small plate to share",
+          "note": "Busy at dinner. Closed Sundays.",
+          "walk": "8 min on"
+        },
+        {
+          "emoji": "🍨",
+          "name": "Humphry Slocombe",
+          "id": "osm-humphry-slocombe-74973--244455",
+          "order": "Secret Breakfast — bourbon and cornflakes",
+          "walk": "2 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🏛️",
+          "text": "Sit on the steps of Courthouse Square with the ice cream"
+        },
+        {
+          "emoji": "🍹",
+          "text": "Or a late cocktail at LV Mar, next door to Vesta",
+          "id": "osm-lv-mar-74973--244454"
+        }
+      ],
+      "why": "A proper night out without driving anywhere. Three good places, one street, and each stop sets up the next.",
+      "goodFor": [
+        "food",
+        "evening",
+        "couple",
+        "walk"
+      ],
+      "labels": [
+        "foodmission",
+        "couple"
+      ],
+      "uniqueness": 3,
+      "quality": 4,
+      "hoursNote": "Tuesday to Saturday evening. Vesta is closed Sundays, and the beer garden closes at 8 on Mondays.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg/500px-Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg",
+      "imageSubject": "Neapolitan pizza",
+      "coords": [
+        37.48606,
+        -122.23349
+      ],
+      "url": "https://www.gourmethausstaudt.com/"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "lastVerified": "2026-09-29",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "coordsFrom": "first stop",
+      "booking": false,
+      "id": "mission-cupertino-taiwanese-sunday",
+      "title": "A Taiwanese Sunday in Cupertino",
+      "emoji": "🥟",
+      "moods": [
+        "international",
+        "cheap",
+        "walk"
+      ],
+      "zone": "cupertino",
+      "area": "Stevens Creek Boulevard, from Liang’s Village to De Anza College",
+      "price": 40,
+      "priceNote": "~$40 for two",
+      "durationMin": 180,
+      "priceLevel": 2,
+      "brief": "Cupertino is one of the best places outside Taiwan to eat like you are in Taipei. Start with a Taiwanese breakfast, walk the Sunday farmers market at De Anza College, then finish with a properly brewed tea.",
+      "test": "Breakfast: the fried cruller should be crisp, and the soy milk made in-house. Tea: order the oolong without much sugar, so you can taste whether it was brewed to order.",
+      "candidates": [
+        {
+          "emoji": "🥢",
+          "name": "Liang’s Village",
+          "id": "osm-liang-s-village-74644--244066",
+          "order": "Taiwanese breakfast: warm soy milk, a fried cruller, a scallion pancake",
+          "note": "Breakfast is Friday to Sunday from 8. Beef noodle soup is on from 11.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🥬",
+          "name": "De Anza College Farmers’ Market",
+          "id": "osm-de-anza-college-farmers-market-74641--244085",
+          "step": "One lap first, then Asian greens and whatever fruit is in season",
+          "note": "Sundays 9 to 1.",
+          "walk": "12 min on"
+        },
+        {
+          "emoji": "🧋",
+          "name": "Chicha San Chen",
+          "id": "osm-chicha-san-chen-74645--244070",
+          "order": "An oolong or Dong Ding milk tea, low sugar",
+          "note": "Opens at 11:30. Expect a queue.",
+          "walk": "10 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🍩",
+          "text": "Take a dozen from Donut Wheel home — it never closes",
+          "id": "osm-donut-wheel-74653--244064"
+        },
+        {
+          "emoji": "☕",
+          "text": "Or a proper espresso at Voyager Craft Coffee",
+          "id": "osm-voyager-craft-coffee-74646--244077"
+        }
+      ],
+      "why": "A morning that shows what Cupertino is really good at, and costs very little.",
+      "goodFor": [
+        "food",
+        "morning",
+        "cheap",
+        "walk"
+      ],
+      "labels": [
+        "cheap",
+        "foodmission"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "hoursNote": "Sunday morning only: breakfast from 8, the market 9 to 1, tea from 11:30.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lanzhou_La_Mian.jpg/500px-Lanzhou_La_Mian.jpg",
+      "imageSubject": "Beef noodle soup",
+      "coords": [
+        37.32198,
+        -122.03287
+      ],
+      "url": "https://www.liangsvillage.com/"
+    }
+  ]
 }

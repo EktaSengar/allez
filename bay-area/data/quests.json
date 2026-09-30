@@ -1,5 +1,56 @@
 {
-  "generated": "2026-09-14",
-  "note": "The hidden public stairways, the Clarion Alley and Balmy murals, the Peninsula open space preserves.",
-  "items": []
+  "generated": "2026-09-29",
+  "note": "Progress is stored in your browser only. Tick things off as you do them.",
+  "items": [
+    {
+      "id": "quest-coffee",
+      "title": "Coffee Quest",
+      "emoji": "☕",
+      "description": "Ten cafés across the Bay, from the old North Beach espresso bars to the Peninsula roasters. No two in the same town or neighbourhood.",
+      "targets": [
+        "Caffe Trieste (North Beach)",
+        "Réveille Coffee (North Beach)",
+        "Ritual Coffee Roasters (Mission)",
+        "Sightglass Coffee (SoMa)",
+        "Andytown Coffee Roasters (Outer Sunset)",
+        "Coupa Café (Palo Alto)",
+        "Red Rock Coffee (Mountain View)",
+        "Dana Street Roasting (Mountain View)",
+        "Blue Bottle Coffee (Santana Row)",
+        "Red Blossom Tea — the tea one (Chinatown)"
+      ]
+    },
+    {
+      "id": "quest-croissant",
+      "title": "Croissant & Bakery Quest",
+      "emoji": "🥐",
+      "description": "Ten great Bay Area bakeries. Judge on the plain croissant where they make one, and on the thing they are famous for where they do not.",
+      "targets": [
+        "Tartine Bakery — morning bun (Mission)",
+        "b. patisserie — kouign-amann (Lower Pac Heights)",
+        "Arizmendi Bakery (Inner Sunset)",
+        "Liguria Bakery — focaccia (North Beach)",
+        "Golden Gate Bakery — egg tart (Chinatown)",
+        "Victoria Pastry — cannoli (North Beach)",
+        "Mademoiselle Colette (Palo Alto)",
+        "Manresa Bread (Palo Alto)",
+        "Maison Alyzée (Mountain View)",
+        "Uncle Tetsu — cheesecake (Santana Row)"
+      ]
+    },
+    {
+      "id": "quest-markets",
+      "title": "Market Quest",
+      "emoji": "🧺",
+      "description": "Six farmers markets. Buy at least one thing at each that you could not get in a supermarket.",
+      "targets": [
+        "Ferry Plaza, Saturday (Embarcadero)",
+        "Alemany, Saturday (Bernal Heights)",
+        "Palo Alto Farmers Market, Saturday",
+        "Mountain View Farmers Market, Sunday",
+        "Japantown Farmers Market, Sunday (San José)",
+        "Menlo Park Farmers Market, Sunday"
+      ]
+    }
+  ]
 }
