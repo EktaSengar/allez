@@ -1,5 +1,862 @@
 {
-  "generated": "2026-09-14",
-  "note": "The curated tier. Hand-written, and empty is honest.",
-  "items": []
+ "generated": "2026-09-14",
+ "note": "The curated tier. Hand-written, and empty is honest.",
+ "items": [
+  {
+   "id": "olive-bar-kitchen-mehrauli",
+   "title": "Olive Bar & Kitchen",
+   "emoji": "🫒",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "mehrauli",
+   "area": "One Style Mile, Mehrauli",
+   "why": "A whitewashed Mediterranean restaurant in a courtyard facing the Qutub Minar. Book for dinner and ask for a table under the trees.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "url": "https://olivebarandkitchen.com/",
+   "source": "olivebarandkitchen.com; published coverage",
+   "coords": [
+    28.5229,
+    77.1841
+   ],
+   "coordsFrom": "approximate (One Style Mile, Kalka Das Marg)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "qla-mehrauli",
+   "title": "Qla",
+   "emoji": "🍷",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "mehrauli",
+   "area": "Kalka Das Marg, Mehrauli",
+   "why": "A terrace restaurant with a view of the Qutub Minar. Come at sunset for a drink, then stay for dinner.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.5231,
+    77.1847
+   ],
+   "coordsFrom": "approximate (Kalka Das Marg, Mehrauli)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "cafe-dori-chhattarpur",
+   "title": "Cafe Dori",
+   "emoji": "🍝",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "chhattarpur",
+   "area": "Dhan Mill compound, Chhatarpur",
+   "why": "An Italian café in the Dhan Mill compound for pasta, pizza and a long lunch.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "LBB; Zomato",
+   "coords": [
+    28.4998,
+    77.1827
+   ],
+   "coordsFrom": "approximate (Dhan Mill compound)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "potbelly-shahpur-jat",
+   "title": "Potbelly",
+   "emoji": "🍛",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "shahpur-jat",
+   "area": "Shahpur Jat",
+   "why": "A rooftop in Shahpur Jat serving Bihari food. Order litti chokha and the mutton curry.",
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.5422,
+    77.2165
+   ],
+   "coordsFrom": "approximate (Shahpur Jat)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "kampai-samalkha",
+   "title": "Kampai",
+   "emoji": "🍜",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "samalkha",
+   "area": "Worldmark, Aerocity",
+   "why": "A Japanese restaurant in Aerocity's Worldmark for ramen and sushi, with a tatami room.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "EazyDiner; We Are Gurgaon",
+   "coords": [
+    28.551,
+    77.122
+   ],
+   "coordsFrom": "approximate (Worldmark, Aerocity)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "comorin-sector-43",
+   "title": "Comorin",
+   "emoji": "🍸",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "sector-43",
+   "area": "Two Horizon Centre, Golf Course Road",
+   "why": "A modern Indian restaurant and bar on Golf Course Road for inventive small plates and cocktails.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "published coverage",
+   "coords": [
+    28.4509,
+    77.0957
+   ],
+   "coordsFrom": "approximate (Two Horizon Centre)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "house-of-celeste-sector-29",
+   "title": "House of Celeste",
+   "emoji": "🍽️",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "sector-29",
+   "area": "32nd Avenue, Gurugram",
+   "why": "A restaurant in the 32nd Avenue courtyard for Indian food and cocktails.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "We Are Gurgaon; published coverage",
+   "coords": [
+    28.44,
+    77.058
+   ],
+   "coordsFrom": "approximate (32nd Avenue)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "khan-market",
+   "title": "Khan Market",
+   "emoji": "🛍️",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "lodhi-colony",
+   "area": "Khan Market",
+   "why": "Delhi's smartest small market, two rows of shops with cafés upstairs. Start at Bahrisons and Full Circle for books, walk the boutiques, then climb to a café for lunch.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.6003,
+    77.227
+   ],
+   "coordsFrom": "approximate (Khan Market)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "janpath-tibetan-market",
+   "title": "Janpath and the Tibetan Market",
+   "emoji": "📿",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "connaught-place",
+   "area": "Janpath, off Connaught Place",
+   "why": "A long pavement of stalls selling silver jewellery, scarves, embroidered bags and handicrafts, with the Tibetan Market's covered row at its heart. Look at a few stalls before you buy, and bargain with a smile.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.6255,
+    77.2186
+   ],
+   "coordsFrom": "approximate (Janpath, off Connaught Place)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "sarojini-nagar-market",
+   "title": "Sarojini Nagar Market",
+   "emoji": "👕",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "sarojini-nagar",
+   "area": "Sarojini Nagar",
+   "why": "Delhi's bargain market, full of export-surplus clothes at street prices. Go on a weekday morning before the crowds, check seams carefully, and start at half the asking price.",
+   "goodFor": [
+    "morning"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.577,
+    77.197
+   ],
+   "coordsFrom": "approximate (Sarojini Nagar)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "chandni-chowk-bazaars",
+   "title": "Chandni Chowk bazaars",
+   "emoji": "🧵",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "chandni-chowk",
+   "area": "Kinari Bazaar, Dariba Kalan and Katra Neel, Chandni Chowk",
+   "why": "The old city's wedding bazaars: Kinari Bazaar for trims and tinsel, Dariba Kalan for silver, and the katras off the main street for fabric by the metre. Take the metro, go in the morning, and stop for parathas between lanes.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.6562,
+    77.2303
+   ],
+   "coordsFrom": "approximate (Kinari Bazaar, Dariba Kalan and Katra Neel, Chandni Chowk)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "dilli-haat-ina",
+   "title": "Dilli Haat, INA",
+   "emoji": "🧺",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "kidwai-nagar",
+   "area": "Opposite INA Market",
+   "why": "An open-air crafts market where artisans from every state sell handlooms, pottery and metalwork in rotating stalls, with a food court of regional kitchens. Shop in the afternoon, then eat momos from the Northeast stalls.",
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.5733,
+    77.208
+   ],
+   "coordsFrom": "approximate (Opposite INA Market)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "gk-1-m-n-block",
+   "title": "GK I M-Block and N-Block markets",
+   "emoji": "👗",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "greater-kailash",
+   "area": "Greater Kailash I",
+   "why": "Two neighbouring South Delhi markets of fashion labels and Indian-wear stores, with cafés and bars upstairs. Shop in the afternoon, then stay on for dinner.",
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.5498,
+    77.2337
+   ],
+   "coordsFrom": "approximate (Greater Kailash I)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "gk-2-m-block",
+   "title": "GK II M-Block Market",
+   "emoji": "🍽️",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "greater-kailash",
+   "area": "Greater Kailash II",
+   "why": "A smaller, calmer market ringed with restaurants and cafés. Come in the evening for a walk round the block and dinner.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.5363,
+    77.2432
+   ],
+   "coordsFrom": "approximate (Greater Kailash II)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "shahpur-jat-lanes",
+   "title": "Shahpur Jat designer lanes",
+   "emoji": "✂️",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "shahpur-jat",
+   "area": "Shahpur Jat, by Siri Fort",
+   "why": "An urban village whose narrow lanes are full of independent designers' studios for bridal and occasion wear. Wander slowly, look up at the upper floors, and stop for coffee or ramen between shops.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.5448,
+    77.2182
+   ],
+   "coordsFrom": "approximate (Shahpur Jat, by Siri Fort)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "meherchand-market",
+   "title": "Meherchand Market",
+   "emoji": "🏺",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "lodhi-colony",
+   "area": "Lodhi Colony",
+   "why": "A quiet row of concept stores, homeware, and small labels by the Lodhi Colony murals. Pair it with the Lodhi Art District walk and a coffee.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.587,
+    77.2285
+   ],
+   "coordsFrom": "approximate (Lodhi Colony)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "south-extension-market",
+   "title": "South Extension I and II",
+   "emoji": "🥻",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "south-extension",
+   "area": "Ring Road, South Extension",
+   "why": "Long-established fashion and occasion-wear stores on both sides of Ring Road, from saree houses to big labels. Go with a list; it is where Delhi buys for weddings.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.5689,
+    77.2196
+   ],
+   "coordsFrom": "approximate (Ring Road, South Extension)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "kamla-nagar-market",
+   "title": "Kamla Nagar Market",
+   "emoji": "🎒",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "kamla-nagar",
+   "area": "Kamla Nagar, by North Campus",
+   "why": "The student market beside Delhi University's North Campus: cheap clothes, shoes and accessories, with momos, chole bhature and cafés in the lanes. Busiest in the late afternoon.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.681,
+    77.2046
+   ],
+   "coordsFrom": "approximate (Kamla Nagar, by North Campus)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "karol-bagh-ajmal-khan-road",
+   "title": "Karol Bagh and Ajmal Khan Road",
+   "emoji": "💍",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "karol-bagh",
+   "area": "Ajmal Khan Road, Karol Bagh",
+   "why": "A loud, packed shopping street for clothing, wedding outfits and jewellery, with Gaffar Market's electronics nearby. Go on a weekday afternoon; it closes on Mondays.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.6519,
+    77.19
+   ],
+   "coordsFrom": "approximate (Ajmal Khan Road, Karol Bagh)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "galleria-market",
+   "title": "Galleria Market",
+   "emoji": "☕",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "sector-28",
+   "area": "DLF Phase IV, Gurugram",
+   "why": "Gurugram's neighbourhood market, a ring of everyday shops, bakeries and cafés around a courtyard. Come for coffee and an easy errand run.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 2,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.4675,
+    77.0818
+   ],
+   "coordsFrom": "approximate (DLF Phase IV, Gurugram)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "sector-18-atta-market",
+   "title": "Sector 18 and Atta Market",
+   "emoji": "🛒",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "noida",
+   "area": "Sector 18, Noida",
+   "why": "Noida's central shopping district, where Atta Market's budget stalls sit beside the showrooms of Sector 18 and near the big malls. Good for everyday finds and dinner after.",
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 2,
+   "source": "published coverage; Delhi Tourism",
+   "coords": [
+    28.57,
+    77.3219
+   ],
+   "coordsFrom": "approximate (Sector 18, Noida)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "inja-the-manor",
+   "title": "INJA",
+   "emoji": "🍣",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "new-friends-colony",
+   "area": "The Manor, Friends Colony West",
+   "why": "Fine dining that joins Indian and Japanese cooking in a quiet boutique hotel. Take the tasting menu and book ahead.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.567,
+    77.269
+   ],
+   "coordsFrom": "approximate (The Manor, Friends Colony West)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "bukhara-itc-maurya",
+   "title": "Bukhara",
+   "emoji": "🍖",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "chanakyapuri",
+   "area": "ITC Maurya, Chanakyapuri",
+   "why": "The famous tandoor restaurant at ITC Maurya, where you eat with your hands at low wooden tables. Order the dal Bukhara, sikandari raan and a giant naan for the table.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.5973,
+    77.1734
+   ],
+   "coordsFrom": "approximate (ITC Maurya, Chanakyapuri)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "dum-pukht-itc-maurya",
+   "title": "Dum Pukht",
+   "emoji": "🍲",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "chanakyapuri",
+   "area": "ITC Maurya, Chanakyapuri",
+   "why": "Awadhi cooking at ITC Maurya, slow-cooked in sealed pots. Order the dum pukht biryani and the galouti kebab.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.5973,
+    77.1734
+   ],
+   "coordsFrom": "approximate (ITC Maurya, Chanakyapuri)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "baoshuan-the-oberoi",
+   "title": "Baoshuan",
+   "emoji": "🥟",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "nizamuddin",
+   "area": "The Oberoi, Dr. Zakir Hussain Marg",
+   "why": "Upscale Chinese dining at The Oberoi. Come for dim sum and Peking duck on a special night.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.5968,
+    77.2398
+   ],
+   "coordsFrom": "approximate (The Oberoi, Dr. Zakir Hussain Marg)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "kamei-eldeco-centre",
+   "title": "Kaméi",
+   "emoji": "🥢",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "malviya-nagar",
+   "area": "Eldeco Centre, Malviya Nagar",
+   "why": "A contemporary Asian restaurant in Eldeco Centre, good for sushi, small plates and cocktails. Book for dinner.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.5313,
+    77.209
+   ],
+   "coordsFrom": "approximate (Eldeco Centre, Malviya Nagar)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "burma-burma-mall-of-india",
+   "title": "Burma Burma",
+   "emoji": "🍜",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "noida",
+   "area": "DLF Mall of India, Noida",
+   "why": "The Noida branch of the vegetarian Burmese restaurant. Order the tea-leaf salad and khow suey.",
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.5672,
+    77.321
+   ],
+   "coordsFrom": "approximate (DLF Mall of India, Noida)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "lair-basant-lok",
+   "title": "Lair",
+   "emoji": "🥃",
+   "type": "nightlife",
+   "provenance": "editorial",
+   "categories": [
+    "nightlife"
+   ],
+   "zone": "vasant-vihar",
+   "area": "Basant Lok, Vasant Vihar",
+   "why": "A small, dim cocktail bar in Basant Lok with pan-Asian food. Sit at the bar and book on weekends.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.557,
+    77.164
+   ],
+   "coordsFrom": "approximate (Basant Lok, Vasant Vihar)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "serai-at-olive",
+   "title": "Serai at Olive",
+   "emoji": "🍸",
+   "type": "nightlife",
+   "provenance": "editorial",
+   "categories": [
+    "nightlife"
+   ],
+   "zone": "mehrauli",
+   "area": "One Style Mile, Mehrauli",
+   "why": "The cocktail bar and terrace attached to Olive in Mehrauli. Come for a drink at sunset before dinner.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.5229,
+    77.1841
+   ],
+   "coordsFrom": "approximate (One Style Mile, Mehrauli)",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "social-cyber-hub",
+   "title": "Cyber Hub SOCIAL",
+   "emoji": "🍺",
+   "type": "nightlife",
+   "provenance": "editorial",
+   "categories": [
+    "nightlife"
+   ],
+   "zone": "sector-25a",
+   "area": "Cyber Hub, Gurugram",
+   "why": "The big, casual Cyber Hub bar for after-work drinks and group hangouts. Easy, loud and cheap by Gurugram standards.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "afterwork"
+   ],
+   "quality": 3,
+   "uniqueness": 2,
+   "source": "Zomato; published coverage",
+   "coords": [
+    28.4953,
+    77.0888
+   ],
+   "coordsFrom": "approximate (Cyber Hub, Gurugram)",
+   "lastVerified": "2026-09-29"
+  }
+ ]
 }
