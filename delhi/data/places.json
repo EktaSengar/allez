@@ -1,5 +1,1168 @@
 {
-  "generated": "2026-09-14",
-  "note": "The curated tier. Hand-written, and empty is honest.",
-  "items": []
+ "generated": "2026-09-14",
+ "note": "The curated tier. Hand-written, and empty is honest.",
+ "items": [
+  {
+   "id": "olive-bar-kitchen-mehrauli",
+   "title": "Olive Bar & Kitchen",
+   "emoji": "🫒",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "mehrauli",
+   "area": "One Style Mile, Mehrauli",
+   "why": "AD Singh opened Olive Bar and Kitchen in 2003 in a Mehrauli courtyard beside the Qutub, and it became one of Delhi's best-known Mediterranean restaurants. Book dinner under the trees.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "url": "https://olivebarandkitchen.com/",
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5229,
+    77.1841
+   ],
+   "coordsFrom": "approximate (One Style Mile, Kalka Das Marg)",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "potbelly-shahpur-jat",
+   "title": "Potbelly",
+   "emoji": "🍛",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "shahpur-jat",
+   "area": "Shahpur Jat",
+   "why": "A Shahpur Jat rooftop from the Potbelly team, who also run the Bihari restaurant at the Bihar Museum. Order litti chokha.",
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5422,
+    77.2165
+   ],
+   "coordsFrom": "approximate (Shahpur Jat)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Potbelly%2C%20Shahpur%20Jat%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "kampai-samalkha",
+   "title": "Kampai",
+   "emoji": "🍜",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "samalkha",
+   "area": "Worldmark, Aerocity",
+   "why": "A Japanese restaurant in Aerocity's Worldmark with a tatami room for low seating. Order ramen.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.551,
+    77.122
+   ],
+   "coordsFrom": "approximate (Worldmark, Aerocity)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Kampai%2C%20Worldmark%2C%20Aerocity%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "comorin-sector-43",
+   "title": "Comorin",
+   "emoji": "🍸",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "sector-43",
+   "area": "Two Horizon Centre, Golf Course Road",
+   "why": "A Two Horizon Centre restaurant and bar whose menu of comfort dishes and unusual combinations from across India was designed in 2018 by chef Manish Mehrotra of Indian Accent.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.4509,
+    77.0957
+   ],
+   "coordsFrom": "approximate (Two Horizon Centre)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Comorin%2C%20Two%20Horizon%20Centre%2C%20Golf%20Course%20Road%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "khan-market",
+   "title": "Khan Market",
+   "emoji": "🛍️",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "lodhi-colony",
+   "area": "Khan Market",
+   "why": "Named after the Pashtun leader Khan Abdul Jabbar Khan, and built on plots given to refugees from the North-West Frontier after Partition. Now one of the world's most expensive shopping streets, with bookshops, boutiques and cafés upstairs.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.6003,
+    77.227
+   ],
+   "coordsFrom": "approximate (Khan Market)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Khan%20Market%2C%20Khan%20Market%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "janpath-tibetan-market",
+   "title": "Janpath and the Tibetan Market",
+   "emoji": "📿",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "connaught-place",
+   "area": "Janpath, off Connaught Place",
+   "why": "Janpath, Lutyens' old Queen's Way, holds one of New Delhi's best-known tourist markets: a long line of small shops selling handicrafts, garments, curios and Indian-style fashion. Bargain politely.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.6255,
+    77.2186
+   ],
+   "coordsFrom": "approximate (Janpath, off Connaught Place)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Janpath%20and%20the%20Tibetan%20Market%2C%20Janpath%2C%20off%20Connaught%20Place%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "sarojini-nagar-market",
+   "title": "Sarojini Nagar Market",
+   "emoji": "👕",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "sarojini-nagar",
+   "area": "Sarojini Nagar",
+   "why": "A big market in the neighbourhood renamed in the 1970s after freedom fighter Sarojini Naidu. Known for cheap clothes; go on a weekday morning.",
+   "goodFor": [
+    "morning"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.577,
+    77.197
+   ],
+   "coordsFrom": "approximate (Sarojini Nagar)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Sarojini%20Nagar%20Market%2C%20Sarojini%20Nagar%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "chandni-chowk-bazaars",
+   "title": "Chandni Chowk bazaars",
+   "emoji": "🧵",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "chandni-chowk",
+   "area": "Kinari Bazaar, Dariba Kalan and Katra Neel, Chandni Chowk",
+   "why": "Shah Jahan's 1650 market street below the Red Fort, still one of India's largest wholesale markets. Walk into Dariba Kalan, the seventeenth-century lane towards Jama Masjid, and the lanes around it.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.6562,
+    77.2303
+   ],
+   "coordsFrom": "approximate (Kinari Bazaar, Dariba Kalan and Katra Neel, Chandni Chowk)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Chandni%20Chowk%20bazaars%2C%20Kinari%20Bazaar%2C%20Dariba%20Kalan%20and%20Katra%20Neel%2C%20Chandni%20Chowk%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "dilli-haat-ina",
+   "title": "Dilli Haat, INA",
+   "emoji": "🧺",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "kidwai-nagar",
+   "area": "Opposite INA Market",
+   "why": "A permanent open-air craft bazaar and food plaza opposite INA Market, run by Delhi Tourism, with thatched stalls whose sellers rotate every couple of weeks. Small entry fee.",
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5733,
+    77.208
+   ],
+   "coordsFrom": "approximate (Opposite INA Market)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Dilli%20Haat%2C%20INA%2C%20Opposite%20INA%20Market%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "gk-1-m-n-block",
+   "title": "GK I M-Block and N-Block markets",
+   "emoji": "👗",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "greater-kailash",
+   "area": "Greater Kailash I",
+   "why": "The markets of Greater Kailash I, one of the South Delhi neighbourhoods around the Outer Ring Road, full of shops and places to eat. Shop in the afternoon and stay for dinner.",
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5498,
+    77.2337
+   ],
+   "coordsFrom": "approximate (Greater Kailash I)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=GK%20I%20M-Block%20and%20N-Block%20markets%2C%20Greater%20Kailash%20I%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "gk-2-m-block",
+   "title": "GK II M-Block Market",
+   "emoji": "🍽️",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "greater-kailash",
+   "area": "Greater Kailash II",
+   "why": "The M-Block market of Greater Kailash II, lined with restaurants, cafés and bars. Come in the evening.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5363,
+    77.2432
+   ],
+   "coordsFrom": "approximate (Greater Kailash II)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=GK%20II%20M-Block%20Market%2C%20Greater%20Kailash%20II%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "shahpur-jat-lanes",
+   "title": "Shahpur Jat designer lanes",
+   "emoji": "✂️",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "shahpur-jat",
+   "area": "Shahpur Jat, by Siri Fort",
+   "why": "An urban village near Hauz Khas whose narrow lanes have filled with designers' studios, boutiques and cafés. Wander and look up at the upper floors.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5448,
+    77.2182
+   ],
+   "coordsFrom": "approximate (Shahpur Jat, by Siri Fort)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Shahpur%20Jat%20designer%20lanes%2C%20Shahpur%20Jat%2C%20by%20Siri%20Fort%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "meherchand-market",
+   "title": "Meherchand Market",
+   "emoji": "🏺",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "lodhi-colony",
+   "area": "Lodhi Colony",
+   "why": "Set up in 1948 as a refugee market and renamed in 1962 after minister Mehr Chand Khanna, it is now known for designer stores, cafés and the Lodhi Colony street art around it.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.587,
+    77.2285
+   ],
+   "coordsFrom": "approximate (Lodhi Colony)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Meherchand%20Market%2C%20Lodhi%20Colony%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "south-extension-market",
+   "title": "South Extension I and II",
+   "emoji": "🥻",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "south-extension",
+   "area": "Ring Road, South Extension",
+   "why": "South Extension I and II on the Ring Road, near AIIMS, is one of South Delhi's main shopping districts. Go with a list.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5689,
+    77.2196
+   ],
+   "coordsFrom": "approximate (Ring Road, South Extension)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=South%20Extension%20I%20and%20II%2C%20Ring%20Road%2C%20South%20Extension%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "kamla-nagar-market",
+   "title": "Kamla Nagar Market",
+   "emoji": "🎒",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "kamla-nagar",
+   "area": "Kamla Nagar, by North Campus",
+   "why": "One of Delhi's major shopping centres, beside Delhi University's North Campus, busy with students. Go in the late afternoon.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.681,
+    77.2046
+   ],
+   "coordsFrom": "approximate (Kamla Nagar, by North Campus)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Kamla%20Nagar%20Market%2C%20Kamla%20Nagar%2C%20by%20North%20Campus%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "karol-bagh-ajmal-khan-road",
+   "title": "Karol Bagh and Ajmal Khan Road",
+   "emoji": "💍",
+   "type": "market",
+   "provenance": "editorial",
+   "categories": [
+    "market",
+    "shop"
+   ],
+   "zone": "karol-bagh",
+   "area": "Ajmal Khan Road, Karol Bagh",
+   "why": "A Central Delhi neighbourhood known for its shopping streets, Ajmal Khan Road and the Ghaffar Market. Busy and loud; go on a weekday.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.6519,
+    77.19
+   ],
+   "coordsFrom": "approximate (Ajmal Khan Road, Karol Bagh)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Karol%20Bagh%20and%20Ajmal%20Khan%20Road%2C%20Ajmal%20Khan%20Road%2C%20Karol%20Bagh%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "bukhara-itc-maurya",
+   "title": "Bukhara",
+   "emoji": "🍖",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "chanakyapuri",
+   "area": "ITC Maurya, Chanakyapuri",
+   "why": "ITC Maurya's frontier restaurant, open since 1977, where the signatures are the sikandari raan, murgh malai kebab and dal Bukhara. Book ahead.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5973,
+    77.1734
+   ],
+   "coordsFrom": "approximate (ITC Maurya, Chanakyapuri)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Bukhara%2C%20ITC%20Maurya%2C%20Chanakyapuri%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "dum-pukht-itc-maurya",
+   "title": "Dum Pukht",
+   "emoji": "🍲",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "chanakyapuri",
+   "area": "ITC Maurya, Chanakyapuri",
+   "why": "ITC Maurya's Awadhi restaurant, from chef Imtiaz Qureshi, who revived dum pukht slow cooking. Order the dum pukht biryani, kakori kebab and warqi paratha.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5973,
+    77.1734
+   ],
+   "coordsFrom": "approximate (ITC Maurya, Chanakyapuri)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Dum%20Pukht%2C%20ITC%20Maurya%2C%20Chanakyapuri%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "baoshuan-the-oberoi",
+   "title": "Baoshuan",
+   "emoji": "🥟",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "nizamuddin",
+   "area": "The Oberoi, Dr. Zakir Hussain Marg",
+   "why": "A Chinese restaurant at The Oberoi opened in 2018 with London chef Andrew Wong. Book for a special dinner.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5968,
+    77.2398
+   ],
+   "coordsFrom": "approximate (The Oberoi, Dr. Zakir Hussain Marg)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Baoshuan%2C%20The%20Oberoi%2C%20Dr.%20Zakir%20Hussain%20Marg%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "6-ballygunge-place-malviya-nagar",
+   "title": "6 Ballygunge Place",
+   "emoji": "🍽️",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "malviya-nagar",
+   "area": "Eldeco Centre",
+   "why": "A branch of the Kolkata Bengali restaurant chain founded in 2003, focused on traditional Bengali recipes. Order fish and a mutton curry.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5335,
+    77.208
+   ],
+   "coordsFrom": "approximate (Eldeco Centre)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=6%20Ballygunge%20Place%2C%20Eldeco%20Centre%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "bo-tai-mehrauli",
+   "title": "Bo-Tai",
+   "emoji": "🍸",
+   "type": "nightlife",
+   "provenance": "editorial",
+   "categories": [
+    "nightlife"
+   ],
+   "zone": "mehrauli",
+   "area": "Mehrauli",
+   "why": "A Mehrauli Thai restaurant and bar from Zorawar Kalra's restaurant group, with a terrace near the Qutub. Go at sunset.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5229,
+    77.1841
+   ],
+   "coordsFrom": "approximate (Mehrauli)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Bo-Tai%2C%20Mehrauli%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "the-bombay-club-chhattarpur",
+   "title": "The Bombay Club",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "chhattarpur",
+   "area": "Dhan Mill",
+   "why": "A Dhan Mill restaurant cooking Bombay food in the compound's old grain houses: dabeli, keema pav, bun maska with Parsi chai, and coastal stews with appam.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.4998,
+    77.1827
+   ],
+   "coordsFrom": "approximate (Dhan Mill)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=The%20Bombay%20Club%2C%20Dhan%20Mill%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "pa-pa-ya-saket",
+   "title": "Pa Pa Ya",
+   "emoji": "🍽️",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "saket",
+   "area": "Select CITYWALK",
+   "why": "A Select Citywalk branch of Pa Pa Ya, Zorawar Kalra's Asian restaurant brand. Good for sushi and dim sum at dinner.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5286,
+    77.2193
+   ],
+   "coordsFrom": "approximate (Select CITYWALK)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Pa%20Pa%20Ya%2C%20Select%20CITYWALK%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "roasted-by-roseate-samalkha",
+   "title": "Roasted by Roseate",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "samalkha",
+   "area": "Roseate House",
+   "why": "Roseate House's café for pastries, breads and TWG tea, overlooking lawns and water in Aerocity.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.55,
+    77.121
+   ],
+   "coordsFrom": "approximate (Roseate House)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Roasted%20by%20Roseate%2C%20Roseate%20House%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "cafe-pluck-samalkha",
+   "title": "Café Pluck",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "samalkha",
+   "area": "Pullman",
+   "why": "The Pullman's all-day deli-restaurant for European, Italian and Indian dishes, fresh coffee and breakfast. Handy before a flight.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.552,
+    77.122
+   ],
+   "coordsFrom": "approximate (Pullman)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9%20Pluck%2C%20Pullman%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "pret-a-manger-samalkha",
+   "title": "Pret A Manger",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "samalkha",
+   "area": "Worldmark",
+   "why": "The British sandwich chain's shop on the ground floor of Worldmark 1, for fresh sandwiches and organic coffee. Quick breakfast before a flight.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.551,
+    77.122
+   ],
+   "coordsFrom": "approximate (Worldmark)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Pret%20A%20Manger%2C%20Worldmark%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "magnolia-bakery-samalkha",
+   "title": "Magnolia Bakery",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "samalkha",
+   "area": "Worldmark",
+   "why": "The New York bakery's first Delhi shop, in Aerocity. Order the classic banana pudding.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.551,
+    77.122
+   ],
+   "coordsFrom": "approximate (Worldmark)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Magnolia%20Bakery%2C%20Worldmark%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "monsoon-by-cafe-lota-samalkha",
+   "title": "Monsoon by Café Lota",
+   "emoji": "🍽️",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "samalkha",
+   "area": "Aerocity",
+   "why": "An Aerocity restaurant from the team behind Café Lota, cooking regional Indian food with local produce.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.551,
+    77.122
+   ],
+   "coordsFrom": "approximate (Aerocity)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Monsoon%20by%20Caf%C3%A9%20Lota%2C%20Aerocity%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "kanwarji-chandni-chowk",
+   "title": "Kanwarji",
+   "emoji": "🍰",
+   "type": "deli",
+   "provenance": "editorial",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "zone": "chandni-chowk",
+   "area": "Chandni Chowk",
+   "why": "Kanwarji's Bhagirathmal Dalbijiwallah, a Chandni Chowk shop established in the mid-nineteenth century. Buy a packet of dal biji.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.6562,
+    77.2303
+   ],
+   "coordsFrom": "approximate (Chandni Chowk)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Kanwarji%2C%20Chandni%20Chowk%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "cafe-knosh-karkarduma",
+   "title": "Café Knosh",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "karkarduma",
+   "area": "The Leela Ambience Convention Hotel",
+   "why": "The Leela Ambience Convention Hotel's all-day restaurant, known for its breakfast buffet and Sunday feasts.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.656,
+    77.3
+   ],
+   "coordsFrom": "approximate (The Leela Ambience Convention Hotel)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9%20Knosh%2C%20The%20Leela%20Ambience%20Convention%20Hotel%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "cafe-on-3-mayur-vihar",
+   "title": "Café on 3",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "mayur-vihar",
+   "area": "Holiday Inn Mayur Vihar",
+   "why": "Holiday Inn Mayur Vihar's buffet restaurant, with Indian and international spreads at breakfast, lunch and dinner.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.62,
+    77.286
+   ],
+   "coordsFrom": "approximate (Holiday Inn Mayur Vihar)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Caf%C3%A9%20on%203%2C%20Holiday%20Inn%20Mayur%20Vihar%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "dilli-32-karkarduma",
+   "title": "Dilli 32",
+   "emoji": "🍽️",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "karkarduma",
+   "area": "The Leela Ambience Convention Hotel",
+   "why": "The Leela Ambience Convention Hotel's Awadhi and Old Delhi restaurant, for slow-cooked biryanis and kebabs.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.656,
+    77.3
+   ],
+   "coordsFrom": "approximate (The Leela Ambience Convention Hotel)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Dilli%2032%2C%20The%20Leela%20Ambience%20Convention%20Hotel%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "infinity-mayur-vihar",
+   "title": "Infinity",
+   "emoji": "🍽️",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "mayur-vihar",
+   "area": "Crowne Plaza Mayur Vihar",
+   "why": "Crowne Plaza Mayur Vihar's all-day restaurant on the lobby level, with a big buffet and an Italian-leaning à la carte menu.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.62,
+    77.287
+   ],
+   "coordsFrom": "approximate (Crowne Plaza Mayur Vihar)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Infinity%2C%20Crowne%20Plaza%20Mayur%20Vihar%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "wagh-bakri-tea-lounge-noida",
+   "title": "Wagh Bakri Tea Lounge",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "noida",
+   "area": "DLF Mall of India",
+   "why": "The tea lounge of Wagh Bakri, the Ahmedabad tea company whose brand dates from 1934. Order a cup of their chai.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5672,
+    77.321
+   ],
+   "coordsFrom": "approximate (DLF Mall of India)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Wagh%20Bakri%20Tea%20Lounge%2C%20DLF%20Mall%20of%20India%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "made-in-punjab-noida",
+   "title": "Made in Punjab",
+   "emoji": "🍽️",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "noida",
+   "area": "DLF Mall of India",
+   "why": "A DLF Mall of India branch of Made in Punjab, Zorawar Kalra's Punjabi restaurant brand. Order butter chicken and dal.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.5672,
+    77.321
+   ],
+   "coordsFrom": "approximate (DLF Mall of India)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Made%20in%20Punjab%2C%20DLF%20Mall%20of%20India%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "alma-bakery-cafe-sector-104",
+   "title": "Alma Bakery & Café",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "sector-104",
+   "area": "Hajipur",
+   "why": "A café-bakery at ATS One Hamlet with a stone oven for Neapolitan pizza, plus artisan burgers and specialty coffee. Order a pizza.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.542,
+    77.372
+   ],
+   "coordsFrom": "approximate (Hajipur)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Alma%20Bakery%20%26%20Caf%C3%A9%2C%20Hajipur%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "roastery-coffee-house-noida",
+   "title": "Roastery Coffee House",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "noida",
+   "area": "Sector 144",
+   "why": "A Noida branch of Roastery Coffee House, which works with ethically sourced Indian beans. Order a pour-over of an Indian estate.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.499,
+    77.421
+   ],
+   "coordsFrom": "approximate (Sector 144)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Roastery%20Coffee%20House%2C%20Sector%20144%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "roastery-coffee-house-ochre-house-noida",
+   "title": "Roastery Coffee House/Ochre House",
+   "emoji": "☕",
+   "type": "cafe",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "noida",
+   "area": "Sector 116",
+   "why": "Roastery Coffee House's Sector 116 branch, called Ochre House, for Indian specialty coffee in a warm, earth-toned room.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.569,
+    77.398
+   ],
+   "coordsFrom": "approximate (Sector 116)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Roastery%20Coffee%20House/Ochre%20House%2C%20Sector%20116%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "karigari-noida",
+   "title": "Karigari",
+   "emoji": "🍽️",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "noida",
+   "area": "Advant",
+   "why": "A branch of Karigari, the casual-dining chain founded by chef Harpal Singh Sokhi, near the Advant offices. Good for a team lunch.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "coords": [
+    28.501,
+    77.408
+   ],
+   "coordsFrom": "approximate (Advant)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Karigari%2C%20Advant%2C%20Delhi%20NCR"
+  },
+  {
+   "id": "indrawaram-greater-noida",
+   "title": "Indrawaram",
+   "emoji": "🍽️",
+   "type": "restaurant",
+   "provenance": "editorial",
+   "categories": [
+    "food"
+   ],
+   "zone": "greater-noida",
+   "area": "Omega II",
+   "why": "A South Indian vegetarian restaurant by Knowledge Park 2 metro, serving filter coffee, dosa, appam and banana-leaf thalis.",
+   "goodFor": [
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 3,
+   "uniqueness": 3,
+   "source": "the venue's own website; position from OpenStreetMap",
+   "coords": [
+    28.457,
+    77.52
+   ],
+   "coordsFrom": "approximate (Omega II)",
+   "lastVerified": "2026-09-30",
+   "url": "https://www.google.com/maps/search/?api=1&query=Indrawaram%2C%20Omega%20II%2C%20Delhi%20NCR"
+  }
+ ]
 }
