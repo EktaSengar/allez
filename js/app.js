@@ -1433,7 +1433,11 @@ const App = (() => {
         got || pictured(gigs, cap) || pictured(nightlife, cap), null)
       || Rank.rank(gigs, CTX, hasRealPhoto)[0]
       || Rank.rank(nightlife, CTX, hasRealPhoto)[0];
-    const rest = gigs.filter(g => !lead || g.id !== lead.id);
+    /* Dated nights within an hour first, still in date order; one across
+       the region can still fill a slot, but not ahead of one down the road. */
+    const gigReach = g => (g.minutesFromHome ?? Infinity) <= 60 ? 0 : 1;
+    const rest = gigs.filter(g => !lead || g.id !== lead.id)
+      .sort((a, b) => gigReach(a) - gigReach(b));
 
     /* A night out is worth a journey in a way a croissant is not, so the
        ring is wide — but it is still a ring, and inside it the nearest
@@ -1447,13 +1451,36 @@ const App = (() => {
        be pretending. The first six take cards and the rest fall to rows,
        so a long group does not become a wall. */
     const CARDS = 6;
+
+    /* How many rooms a group shows, and how far. Every group used to hold
+       every room in the city, which was fine in Paris — the whole list is
+       inside forty minutes of the canal — and wrong in the Bay Area, where
+       a reader in North Beach was offered twenty-six bars and clubs forty
+       minutes to an hour and a half away, down the Peninsula.
+
+       A group shows NIGHT_COUNT rooms — the same number of cards it has
+       always drawn. Rooms within NIGHT_NEAR fill it first, best first;
+       only when there are not enough does it reach further, nearest
+       first, so Palo Alto still gets a jazz section, from the city. What
+       no group shows is collected in `leftRooms` and offered once,
+       folded, at the foot of the page. */
+    const NIGHT_NEAR = 45, NIGHT_COUNT = CARDS;
+    const leftRooms = new Set();
+    const inReach = items => {
+      const m = i => i.minutesFromHome ?? Infinity;
+      const near = items.filter(i => m(i) <= NIGHT_NEAR);
+      const beyond = items.filter(i => m(i) > NIGHT_NEAR).sort((a, b) => m(a) - m(b));
+      const kept = [...near, ...beyond].slice(0, NIGHT_COUNT);
+      items.forEach(i => { if (!kept.includes(i)) leftRooms.add(i); });
+      return kept;
+    };
     /* A night that comes round every week is one to follow rather than
        to catch, so it goes first, with its day where the eye lands, and
        is left out of the groups below. */
     const onRhythm = i => i.rhythm === 'weekly' || i.rhythm === 'monthly';
     const weekly = () => {
-      const items = Rank.rank(nightlife, CTX, i => onRhythm(i) && (!lead || i.id !== lead.id))
-        .sort((a, b) => Near.localScore(b) - Near.localScore(a));
+      const items = inReach(Rank.rank(nightlife, CTX, i => onRhythm(i) && (!lead || i.id !== lead.id))
+        .sort((a, b) => Near.localScore(b) - Near.localScore(a)));
       if (!items.length) return '';
       /* Drawn like the other groups, cards when the rooms are pictured,
          with the day as the card's overline so it is still read first. */
@@ -1462,8 +1489,8 @@ const App = (() => {
         : `<div class="grid night-grid">${items.map(i => card(i, '', cadenceOf(i))).join('')}</div>`);
     };
     const group = (title, note, test) => {
-      const items = Rank.rank(nightlife, CTX, i => test(i) && !onRhythm(i) && (!lead || i.id !== lead.id))
-        .sort((a, b) => Near.localScore(b) - Near.localScore(a));
+      const items = inReach(Rank.rank(nightlife, CTX, i => test(i) && !onRhythm(i) && (!lead || i.id !== lead.id))
+        .sort((a, b) => Near.localScore(b) - Near.localScore(a)));
       if (!items.length) return '';
       const pictured = items.filter(i => i.image).length;
       if (pictured * 2 < items.length) return stripHead(title, note) + rows(items);
@@ -1477,6 +1504,20 @@ const App = (() => {
        the claim, so a record whose article is about a club that shut —
        the Black Hawk, 1949 to 1963; Keystone Korner, until 1983 — is left
        out here the way somewhereNew already leaves it out. */
+    const farBlock = () => {
+      if (!leftRooms.size) return '';
+      const list = [...leftRooms].sort((a, b) =>
+        (a.minutesFromHome ?? Infinity) - (b.minutesFromHome ?? Infinity));
+      const allFar = list.every(i => (i.minutesFromHome ?? Infinity) > NIGHT_NEAR);
+      return NIGHTS_ALL
+        ? stripHead(allFar ? `Further afield in ${City.name}` : 'More after dark',
+                    allFar ? `More than ${NIGHT_NEAR} minutes away — a night that is a journey` : 'Nearest first')
+          + rows(list, null, true)
+          + `<p class="missions-fold"><button type="button" class="chip" data-nights-all="0">Show fewer</button></p>`
+        : `<p class="missions-fold"><button type="button" class="chip" data-nights-all="1">${
+            list.length} more ${list.length === 1 ? 'place' : 'places'}${allFar ? ' further away' : ''}</button></p>`;
+    };
+
     const localNight = Near.pick(i => i.discovered && Near.KIND.nightlife(i) && Rec.stillStanding(i), {
       rings: Near.RINGS.walk, want: 6, limit: 10, exclude: notWanted
     });
@@ -1503,6 +1544,7 @@ const App = (() => {
                       radiusNote(localNight.radius, localNight.items, localNight.widened))
             + rows(localNight.items, null, false)
           : '')
+      + farBlock()
       + (routes.length
           ? stripHead('Two nights out', 'Follow the order')
             + `<div class="routes">${routes.map(routeCard).join('')}</div>`
@@ -2135,6 +2177,15 @@ const App = (() => {
 
   let MOOD = null;
   let EAT_MODE = 'missions';
+  /* Whether the missions past the trip ring are unfolded. Not persisted:
+     it is a glance, and the next visit should start from the short list. */
+  let MISSIONS_ALL = false;
+  let NIGHTS_ALL = false;     // the same, for the rooms Nights leaves out
+
+  /* Minutes from where you are. See renderMissions for why these are
+     wider than Eat's list rings. */
+  const MISSION_NEAR = 30;
+  const MISSION_COUNT = 6;      // the lead plus five
 
   const MOODS = [
     ['french',        '🥐', 'Something French'],
@@ -2292,16 +2343,54 @@ const App = (() => {
     const ranked = [...pool, ...(mine ? [mine] : [])]
       .sort((a, b) => Near.localScore(b) - Near.localScore(a));
 
-    const lead = ranked[0];
-    const rest = ranked.slice(1);
-    const away = rest.filter(m => !m.generated && (m.minutesFromHome ?? 99) > 20).length;
+    /* How many missions, and how far. Paris never needed this — seven
+       missions, all in the 10th and 11th, all within a quarter of an hour
+       of each other — but the Bay Area has eleven spread over eighty
+       kilometres, and a reader in North Beach was handed a Sunday in
+       Cupertino at full size, eighty minutes away.
+
+       The page shows MISSION_COUNT missions, always the same number.
+       Those within MISSION_NEAR fill it first, best first. Only when there
+       are not enough of them does it reach further, nearest first, under
+       "Worth the trip" — the count is the promise, the distance is the
+       preference. Whatever is left is named in one line and folded away,
+       not deleted, because somebody planning a Saturday may want it. */
+    const mins = m => m.generated ? 0 : (m.minutesFromHome ?? 999);
+    const near = ranked.filter(m => mins(m) <= MISSION_NEAR);
+    const beyond = ranked.filter(m => mins(m) > MISSION_NEAR)
+      .sort((a, b) => mins(a) - mins(b));
+    const shown = [...near, ...beyond].slice(0, MISSION_COUNT);
+
+    const lead = shown[0];
+    const nearRest = shown.filter(m => m !== lead && mins(m) <= MISSION_NEAR);
+    const tripShown = shown.filter(m => m !== lead && mins(m) > MISSION_NEAR);
+    const folded = ranked.filter(m => !shown.includes(m))
+      .sort((a, b) => mins(a) - mins(b));
+    const allFar = folded.every(m => mins(m) > MISSION_NEAR);
+
+    const cards = list => `<div class="missions">${list.map(m => missionCard(m)).join('')}</div>`;
 
     return moodBar
       + (lead ? missionCard(lead, true) : '')
-      + (rest.length
-          ? stripHead(away === rest.length ? `Missions elsewhere in ${City.name}` : 'More missions',
+      + (nearRest.length
+          ? stripHead('More missions nearby',
                       'Written for a particular set of streets — the walk is the point')
-            + `<div class="missions">${rest.map(m => missionCard(m)).join('')}</div>`
+            + cards(nearRest)
+          : '')
+      + (tripShown.length
+          ? stripHead('Worth the trip',
+                      `Further than ${MISSION_NEAR} minutes — the nearest of the rest`)
+            + cards(tripShown)
+          : '')
+      + (folded.length
+          ? (MISSIONS_ALL
+              ? stripHead(allFar ? `Further afield in ${City.name}` : 'The rest',
+                          'Each one belongs to its own neighbourhood')
+                + cards(folded)
+                + `<p class="missions-fold"><button type="button" class="chip" data-missions-all="0">Show fewer</button></p>`
+              : `<p class="missions-fold"><button type="button" class="chip" data-missions-all="1">${
+                  folded.length} more ${folded.length === 1 ? 'mission' : 'missions'}${
+                  allFar ? ' further away' : ''}</button></p>`)
           : '');
   }
 
@@ -4010,6 +4099,20 @@ const App = (() => {
     document.addEventListener('click', e => {
       const b = e.target.closest('[data-mood2]'); if (!b) return;
       MOOD = (MOOD === b.dataset.mood2) ? null : b.dataset.mood2;
+      render();
+    });
+
+    // Nights: unfold or fold the rooms that are further away
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-nights-all]'); if (!b) return;
+      NIGHTS_ALL = b.dataset.nightsAll === '1';
+      render();
+    });
+
+    // Eat: unfold or fold the missions that are further away
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-missions-all]'); if (!b) return;
+      MISSIONS_ALL = b.dataset.missionsAll === '1';
       render();
     });
 
