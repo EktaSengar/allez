@@ -2186,7 +2186,7 @@
     "zone": "lodhi-colony",
     "type": "deli"
    },
-   "why": "A bean-to-bar chocolate café. Order the 55 per cent hot chocolate in winter.",
+   "why": "A bean-to-bar chocolate maker's café, making chocolate from Indian cacao. Order the 55 per cent hot chocolate in winter, and buy a bar to take home.",
    "quality": 4,
    "uniqueness": 4,
    "goodFor": [
@@ -2558,7 +2558,7 @@
     "zone": "chandni-chowk",
     "type": "restaurant"
    },
-   "why": "A small Chandni Chowk stall for dahi bhalla and aloo tikki. Order both.",
+   "why": "A tiny Chandni Chowk stall, open since 1940, for dahi bhalla and crisp aloo tikki. Order both and eat standing at the counter.",
    "quality": 4,
    "uniqueness": 4,
    "goodFor": [
@@ -2662,36 +2662,6 @@
    "lastVerified": "2026-09-29"
   },
   {
-   "id": "osm-roshan-di-kulfi-57289-154244",
-   "title": "Roshan Di Kulfi",
-   "type": "restaurant",
-   "zone": "rajouri-garden",
-   "coords": [
-    28.6444,
-    77.12181
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Roshan Di Kulfi",
-    "zone": "rajouri-garden",
-    "type": "restaurant"
-   },
-   "why": "A kulfi and chhole-tikki shop in Rajouri Garden. End the evening with a kulfi falooda.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
    "id": "osm-chache-di-hatti-57412-154380",
    "title": "Chache Di Hatti",
    "type": "restaurant",
@@ -2748,37 +2718,6 @@
    "uniqueness": 4,
    "goodFor": [
     "afternoon"
-   ],
-   "labels": [],
-   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-kuremal-mahavir-prasad-kulfiwale-57285-154593",
-   "title": "Kuremal Mahavir Prasad Kulfiwale",
-   "type": "deli",
-   "zone": "preet-vihar",
-   "coords": [
-    28.6427,
-    77.29633
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Kuremal Mahavir Prasad Kulfiwale",
-    "zone": "preet-vihar",
-    "type": "deli"
-   },
-   "why": "An East Delhi branch of the Chawri Bazaar kulfi family. Try a fruit-stuffed kulfi.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon",
-    "evening"
    ],
    "labels": [],
    "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
@@ -2864,7 +2803,7 @@
     "zone": "sector-26a",
     "type": "nightlife"
    },
-   "why": "A brewpub in Gurugram. Order a flight of the house beers.",
+   "why": "A big Gurugram brewpub with its own beers brewed on site. Order a flight of the house beers and share some bar snacks.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
@@ -2930,7 +2869,7 @@
     "zone": "sector-26a",
     "type": "cafe"
    },
-   "why": "A popular Gurugram bakery-café for sourdough and breakfast plates.",
+   "why": "A popular Gurugram bakery-café for sourdough, croissants and full breakfast plates. Go early on a weekend, before the brunch crowd.",
    "quality": 4,
    "uniqueness": 3,
    "goodFor": [
@@ -2990,7 +2929,7 @@
     "zone": "noida-city-centre",
     "type": "cafe"
    },
-   "why": "A leafy Noida café and bakery with Neapolitan pizza and specialty coffee.",
+   "why": "A leafy Noida café-bakery with a stone oven for Neapolitan pizza, and specialty coffee. Order a pizza and a coffee at lunch.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
@@ -2998,74 +2937,6 @@
     "afternoon"
    ],
    "labels": [],
-   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-madison-and-pike-56829-154131",
-   "title": "Madison and Pike",
-   "type": "cafe",
-   "zone": "sector-50",
-   "coords": [
-    28.41442,
-    77.06548
-   ],
-   "area": "Nirvana Courtyard, Sector 50",
-   "url": "https://madisonandpike.com/",
-   "hours": "Mo-Su 08:00-22:30",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "cafe",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Madison and Pike",
-    "zone": "sector-50",
-    "type": "cafe"
-   },
-   "why": "A Sector 50 café popular for brunch and coffee.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-blue-tokai-coffee-roasters-56829-154131",
-   "title": "Blue Tokai Coffee Roasters",
-   "type": "cafe",
-   "zone": "sector-50",
-   "coords": [
-    28.41446,
-    77.06557
-   ],
-   "area": "Nirvana Courtyard",
-   "url": "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-nirvana-courtyard-cafe-sector-50-gurugram-436793/Home",
-   "hours": "Mo-Su 07:00-23:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "coffee_shop",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Blue Tokai Coffee Roasters",
-    "zone": "sector-50",
-    "type": "cafe"
-   },
-   "why": "A quiet Sector 50 coffee stop from Delhi's best-known roaster.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [
-    "laptop"
-   ],
    "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
@@ -3130,36 +3001,6 @@
    ],
    "labels": [],
    "source": "laduree.com; published coverage; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-cravity-cafe-57106-154416",
-   "title": "Cravity café",
-   "type": "cafe",
-   "zone": "green-park",
-   "coords": [
-    28.55318,
-    77.20811
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Cravity café",
-    "zone": "green-park",
-    "type": "cafe"
-   },
-   "why": "A small Green Park dessert café for cakes, waffles and shakes. Go in the afternoon.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -3250,37 +3091,6 @@
    "uniqueness": 4,
    "goodFor": [
     "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-getafix-57106-154482",
-   "title": "Getafix",
-   "type": "restaurant",
-   "zone": "greater-kailash",
-   "coords": [
-    28.55298,
-    77.24082
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Getafix",
-    "zone": "greater-kailash",
-    "type": "restaurant"
-   },
-   "why": "A GK café for healthy bowls, smoothies and all-day breakfast.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "morning",
-    "afternoon"
    ],
    "labels": [],
    "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
@@ -3398,7 +3208,7 @@
     "zone": "lado-sarai",
     "type": "cafe"
    },
-   "why": "A small café in the Saidulajab lanes. Stop for coffee between the studios and shops.",
+   "why": "A relaxed Champa Gali coffee spot, good for working or reading.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
@@ -3406,7 +3216,7 @@
     "afternoon"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -3429,14 +3239,14 @@
     "zone": "lado-sarai",
     "type": "cafe"
    },
-   "why": "A café in the Saidulajab lanes. A quiet stop for coffee and a snack.",
+   "why": "A Champa Gali café with a rooftop strung with fairy lights. Best in the evening.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "afternoon"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -3459,14 +3269,14 @@
     "zone": "lado-sarai",
     "type": "restaurant"
    },
-   "why": "A tea-and-snacks stall in Saidulajab. Get a chai and something fried.",
+   "why": "A casual Champa Gali stall for snacks and drinks. Grab a chai while walking the lane.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "afternoon"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -3494,69 +3304,6 @@
    "uniqueness": 2,
    "goodFor": [
     "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-l-opera-57147-154461",
-   "title": "l'Opéra",
-   "type": "bakery",
-   "zone": "defence-colony",
-   "coords": [
-    28.5733,
-    77.23055
-   ],
-   "area": null,
-   "url": null,
-   "hours": "Mo-Su 08:00-20:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "l'Opéra",
-    "zone": "defence-colony",
-    "type": "bakery"
-   },
-   "why": "A French pâtisserie in Defence Colony for macarons, éclairs and a proper croissant.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-wakame-57146-154474",
-   "title": "Wakame",
-   "type": "restaurant",
-   "zone": "defence-colony",
-   "coords": [
-    28.57312,
-    77.2372
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Wakame",
-    "zone": "defence-colony",
-    "type": "restaurant"
-   },
-   "why": "A Japanese restaurant in Defence Colony for sushi and ramen.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
     "evening"
    ],
    "labels": [],
@@ -3616,14 +3363,14 @@
     "zone": "vasant-vihar",
     "type": "restaurant"
    },
-   "why": "A Japanese and pan-Asian restaurant in Basant Lok. Go for dinner.",
+   "why": "A Japanese and pan-Asian restaurant in Basant Lok. Order sushi and a few small plates.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -3658,36 +3405,6 @@
    "lastVerified": "2026-09-29"
   },
   {
-   "id": "osm-monkey-bar-57074-154294",
-   "title": "Monkey Bar",
-   "type": "nightlife",
-   "zone": "vasant-kunj",
-   "coords": [
-    28.53721,
-    77.14713
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "nightlife"
-   ],
-   "match": {
-    "name": "Monkey Bar",
-    "zone": "vasant-kunj",
-    "type": "nightlife"
-   },
-   "why": "A gastropub in Vasant Kunj for beer, cocktails and bar food.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
    "id": "osm-wenger-s-deli-57267-154436",
    "title": "Wenger's Deli",
    "type": "restaurant",
@@ -3707,7 +3424,7 @@
     "zone": "connaught-place",
     "type": "restaurant"
    },
-   "why": "The deli counter of CP's oldest bakery, for sandwiches and quick lunches.",
+   "why": "The deli counter next to Wenger's, CP's oldest bakery, for sandwiches, patties and quick lunches. Grab something to eat in the colonnade.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
@@ -3715,7 +3432,7 @@
     "afternoon"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -3923,74 +3640,14 @@
     "zone": "connaught-place",
     "type": "restaurant"
    },
-   "why": "A restaurant from the family tied to butter chicken and dal makhani. Order both.",
+   "why": "A restaurant from the family of Kundan Lal Gujral, who is credited with inventing butter chicken and dal makhani. Order both, with naan.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-local-57260-154442",
-   "title": "Local",
-   "type": "restaurant",
-   "zone": "connaught-place",
-   "coords": [
-    28.62988,
-    77.22106
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Local",
-    "zone": "connaught-place",
-    "type": "restaurant"
-   },
-   "why": "A big, loud CP bar and restaurant for drinks and bar food.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-tamasha-57259-154444",
-   "title": "Tamasha",
-   "type": "nightlife",
-   "zone": "connaught-place",
-   "coords": [
-    28.62968,
-    77.22201
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "nightlife"
-   ],
-   "match": {
-    "name": "Tamasha",
-    "zone": "connaught-place",
-    "type": "nightlife"
-   },
-   "why": "A large CP bar with a terrace and DJs on weekends.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4013,169 +3670,14 @@
     "zone": "connaught-place",
     "type": "nightlife"
    },
-   "why": "A CP microbrewery. Order a taster of the house beers.",
+   "why": "A big microbrewery in Connaught Place with beers brewed on site. Order a taster of the house beers before choosing a pint.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-my-bar-57261-154440",
-   "title": "My Bar",
-   "type": "nightlife",
-   "zone": "connaught-place",
-   "coords": [
-    28.6306,
-    77.21984
-   ],
-   "area": null,
-   "url": null,
-   "hours": "Mo-Su 10:30-00:30",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "nightlife"
-   ],
-   "match": {
-    "name": "My Bar",
-    "zone": "connaught-place",
-    "type": "nightlife"
-   },
-   "why": "A busy, cheap CP bar. Go for inexpensive drinks with friends.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-l-opera-57218-154459",
-   "title": "L'Opéra",
-   "type": "cafe",
-   "zone": "central-vista",
-   "coords": [
-    28.60903,
-    77.22967
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "french",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "L'Opéra",
-    "zone": "central-vista",
-    "type": "cafe"
-   },
-   "why": "The French pâtisserie near Khan Market. Stop for macarons.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-the-grammar-room-57200-154452",
-   "title": "The Grammar Room",
-   "type": "restaurant",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.60001,
-    77.22623
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "The Grammar Room",
-    "zone": "lodhi-colony",
-    "type": "restaurant"
-   },
-   "why": "A café-restaurant with a leafy courtyard, good for a long brunch.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-la-vie-pizzeria-57202-154455",
-   "title": "La Vie Pizzeria",
-   "type": "restaurant",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.60123,
-    77.22743
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "La Vie Pizzeria",
-    "zone": "lodhi-colony",
-    "type": "restaurant"
-   },
-   "why": "A Lodhi Colony pizzeria for wood-fired pizza.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-out-of-the-box-otb-57200-154452",
-   "title": "Out Of The Box (OTB)",
-   "type": "cafe",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.59977,
-    77.22619
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "mexican",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Out Of The Box (OTB)",
-    "zone": "lodhi-colony",
-    "type": "cafe"
-   },
-   "why": "A Khan Market rooftop café-bar for casual food and drinks.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4229,14 +3731,14 @@
     "zone": "lodhi-colony",
     "type": "restaurant"
    },
-   "why": "A Khan Market pizzeria for thin-crust pizza. Good for a quick dinner.",
+   "why": "A small Khan Market pizzeria known for thin-crust pizzas. Good for a quick, casual dinner after shopping.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4261,7 +3763,7 @@
     "zone": "lodhi-colony",
     "type": "cafe"
    },
-   "why": "A South Indian coffee roaster's shop in Lodhi Colony. Buy freshly ground filter coffee.",
+   "why": "The Lodhi Colony shop of Devan's, South Indian coffee roasters since the 1960s. Buy freshly ground filter coffee and have a cup at the counter.",
    "quality": 4,
    "uniqueness": 4,
    "goodFor": [
@@ -4269,39 +3771,7 @@
     "afternoon"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-kunafa-57169-154453",
-   "title": "Kunafa",
-   "type": "deli",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.5846,
-    77.2267
-   ],
-   "area": null,
-   "url": null,
-   "hours": "Mo-Su 10:00-22:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Kunafa",
-    "zone": "lodhi-colony",
-    "type": "deli"
-   },
-   "why": "A Middle Eastern sweet shop. Order a warm kunafa.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4324,7 +3794,7 @@
     "zone": "lodhi-colony",
     "type": "restaurant"
    },
-   "why": "A South Indian café for podi idli and filter coffee.",
+   "why": "A South Indian café for Karnataka-style breakfasts. Order the ghee podi idli, a set dosa and a filter coffee.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
@@ -4332,7 +3802,7 @@
     "afternoon"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4355,14 +3825,14 @@
     "zone": "lodhi-colony",
     "type": "restaurant"
    },
-   "why": "A Lodhi Colony Asian restaurant for dim sum and cocktails.",
+   "why": "Ping's Café Orient in Lodhi Colony market, for dim sum, Asian small plates and cocktails. Go for dinner.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4415,14 +3885,14 @@
     "zone": "central-vista",
     "type": "restaurant"
    },
-   "why": "A long-running Pandara Road Chinese and Japanese restaurant.",
+   "why": "A Pandara Road restaurant serving Chinese and Japanese food for decades. Good for an old-school Delhi Chinese dinner.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4445,14 +3915,14 @@
     "zone": "central-vista",
     "type": "restaurant"
    },
-   "why": "An old Pandara Road North Indian restaurant for tandoori and curries, open late.",
+   "why": "An old Pandara Road restaurant for North Indian food, open late. Order the butter chicken, dal and tandoori rotis after a night out.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4487,67 +3957,6 @@
    "lastVerified": "2026-09-29"
   },
   {
-   "id": "osm-cafeteria-co-57389-154408",
-   "title": "Cafeteria & Co.",
-   "type": "cafe",
-   "zone": "north-campus",
-   "coords": [
-    28.69428,
-    77.20407
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Cafeteria & Co.",
-    "zone": "north-campus",
-    "type": "cafe"
-   },
-   "why": "A North Campus café in an old-college style, popular with students. Go in the afternoon.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-hudson-cafe-57396-154413",
-   "title": "Hudson Cafe",
-   "type": "cafe",
-   "zone": "north-campus",
-   "coords": [
-    28.6978,
-    77.20666
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Hudson Cafe",
-    "zone": "north-campus",
-    "type": "cafe"
-   },
-   "why": "A Hudson Lane student café for cheap food and coffee.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
    "id": "osm-berco-s-57389-154409",
    "title": "Berco's",
    "type": "restaurant",
@@ -4572,36 +3981,6 @@
    "uniqueness": 2,
    "goodFor": [
     "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-ricos-57358-154416",
-   "title": "Ricos",
-   "type": "cafe",
-   "zone": "kamla-nagar",
-   "coords": [
-    28.67892,
-    77.20798
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Ricos",
-    "zone": "kamla-nagar",
-    "type": "cafe"
-   },
-   "why": "A Kamla Nagar dessert café for shakes and waffles.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "afternoon"
    ],
    "labels": [],
    "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
@@ -4660,7 +4039,7 @@
     "zone": "old-delhi",
     "type": "restaurant"
    },
-   "why": "An Old Delhi restaurant famous for huge stuffed naans and dal. Order an aloo naan.",
+   "why": "An Old Delhi restaurant near Fatehpuri, known for huge stuffed naans and dal makhani. Order an aloo naan with dal to share.",
    "quality": 3,
    "uniqueness": 4,
    "goodFor": [
@@ -4668,7 +4047,7 @@
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4721,7 +4100,7 @@
     "zone": "chandni-chowk",
     "type": "restaurant"
    },
-   "why": "The Chandni Chowk jalebi shop, frying thick jalebis in ghee. Buy them hot by weight.",
+   "why": "The Old Famous Jalebi Wala at the Dariba corner of Chandni Chowk, frying thick jalebis in ghee since 1884. Buy them hot by weight.",
    "quality": 4,
    "uniqueness": 4,
    "goodFor": [
@@ -4729,103 +4108,7 @@
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-puri-bakers-57392-154268",
-   "title": "Puri Bakers",
-   "type": "bakery",
-   "zone": "pitampura",
-   "coords": [
-    28.69623,
-    77.13403
-   ],
-   "area": "Shyamji Krishna Varma Marg, Engineers Enclave, Harsh Vihar",
-   "url": null,
-   "hours": "Mo-Su 10:00-22:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Puri Bakers",
-    "zone": "pitampura",
-    "type": "bakery"
-   },
-   "why": "A Pitampura bakery for cakes and patties.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-culinaria-by-meet-57388-154261",
-   "title": "Culinaria by Meet",
-   "type": "restaurant",
-   "zone": "pitampura",
-   "coords": [
-    28.69395,
-    77.13047
-   ],
-   "area": "66, Shakti Vihar",
-   "url": null,
-   "hours": "Mo-Su 11:00-00:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Culinaria by Meet",
-    "zone": "pitampura",
-    "type": "restaurant"
-   },
-   "why": "A Pitampura café-restaurant for casual food.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-sandoz-b2-57366-154294",
-   "title": "Sandoz B2",
-   "type": "nightlife",
-   "zone": "punjabi-bagh",
-   "coords": [
-    28.68299,
-    77.14694
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "nightlife"
-   ],
-   "match": {
-    "name": "Sandoz B2",
-    "zone": "punjabi-bagh",
-    "type": "nightlife"
-   },
-   "why": "A Punjabi Bagh bar and restaurant for drinks and North Indian food.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -4850,7 +4133,7 @@
     "zone": "rajouri-garden",
     "type": "restaurant"
    },
-   "why": "A South Indian restaurant in Rajouri Garden for dosas and a famous ice-cream sundae.",
+   "why": "The Rajouri Garden branch of the old South Indian restaurant, known for dosas and its ice-cream sundaes. Finish with a sundae.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
@@ -4858,190 +4141,7 @@
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-la-afffair-cafe-and-lounge-57286-154595",
-   "title": "La Afffair Cafe And Lounge",
-   "type": "nightlife",
-   "zone": "karkarduma",
-   "coords": [
-    28.64295,
-    77.29756
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "nightlife"
-   ],
-   "match": {
-    "name": "La Afffair Cafe And Lounge",
-    "zone": "karkarduma",
-    "type": "nightlife"
-   },
-   "why": "A Karkardooma café-lounge for casual food and drinks.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-lord-of-the-drinks-57273-154575",
-   "title": "Lord of the Drinks",
-   "type": "nightlife",
-   "zone": "preet-vihar",
-   "coords": [
-    28.63659,
-    77.28748
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "nightlife"
-   ],
-   "match": {
-    "name": "Lord of the Drinks",
-    "zone": "preet-vihar",
-    "type": "nightlife"
-   },
-   "why": "A big Preet Vihar bar for drinks with a group.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-cakes-and-more-57270-154609",
-   "title": "Cakes and More",
-   "type": "bakery",
-   "zone": "indraprastha-extension",
-   "coords": [
-    28.63488,
-    77.30436
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Cakes and More",
-    "zone": "indraprastha-extension",
-    "type": "bakery"
-   },
-   "why": "An East Delhi bakery for cakes and pastries.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-tablespoon-56992-154177",
-   "title": "Tablespoon",
-   "type": "restaurant",
-   "zone": "sector-25a",
-   "coords": [
-    28.49596,
-    77.08871
-   ],
-   "area": null,
-   "url": "https://tbsp.in/",
-   "hours": "Mo-Su 12:00-23:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "italian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Tablespoon",
-    "zone": "sector-25a",
-    "type": "restaurant"
-   },
-   "why": "A Cyber Hub Italian restaurant for pasta and pizza at lunch.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-cafeteria-co-56991-154177",
-   "title": "Cafeteria & Co",
-   "type": "restaurant",
-   "zone": "sector-25a",
-   "coords": [
-    28.49562,
-    77.08853
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Cafeteria & Co",
-    "zone": "sector-25a",
-    "type": "restaurant"
-   },
-   "why": "A Cyber Hub café for coffee and light meals.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-punjab-grill-56992-154177",
-   "title": "Punjab Grill",
-   "type": "restaurant",
-   "zone": "sector-25a",
-   "coords": [
-    28.49586,
-    77.08866
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "north_indian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Punjab Grill",
-    "zone": "sector-25a",
-    "type": "restaurant"
-   },
-   "why": "Punjabi food in Cyber Hub. Order the tandoori platter.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -5064,107 +4164,14 @@
     "zone": "cyber-city",
     "type": "restaurant"
    },
-   "why": "A dhaba-themed Cyber City restaurant for dal makhani and tandoori.",
+   "why": "Dhaba by Claridges, a roadside-dhaba-themed restaurant for North Indian food. Order the dal, butter chicken and a lassi.",
    "quality": 3,
    "uniqueness": 2,
    "goodFor": [
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-copper-chimney-56991-154177",
-   "title": "Copper Chimney",
-   "type": "restaurant",
-   "zone": "sector-25a",
-   "coords": [
-    28.49567,
-    77.08856
-   ],
-   "area": null,
-   "url": null,
-   "hours": "Mo-Fr 12:00-16:00; Mo-Fi 18:30-23:00; Sa-Su 12:00-23:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "indian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Copper Chimney",
-    "zone": "sector-25a",
-    "type": "restaurant"
-   },
-   "why": "Cyber Hub North Indian food. Order kebabs and dal.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-carnatic-cafe-56932-154149",
-   "title": "Carnatic Cafe",
-   "type": "cafe",
-   "zone": "iffco-chowk",
-   "coords": [
-    28.46624,
-    77.07449
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Carnatic Cafe",
-    "zone": "iffco-chowk",
-    "type": "cafe"
-   },
-   "why": "A South Indian café for podi idli and filter coffee.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-roots-56939-154137",
-   "title": "Roots",
-   "type": "cafe",
-   "zone": "sector-29",
-   "coords": [
-    28.46949,
-    77.06831
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Roots",
-    "zone": "sector-29",
-    "type": "cafe"
-   },
-   "why": "A Sector 29 café with desserts and coffee.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -5187,7 +4194,7 @@
     "zone": "sector-27",
     "type": "cafe"
    },
-   "why": "A Belgian café by Galleria for waffles and coffee.",
+   "why": "A Belgian café and bar near Galleria, for waffles by day and Belgian beer in the evening.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
@@ -5195,7 +4202,7 @@
     "afternoon"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -5218,44 +4225,14 @@
     "zone": "sector-27",
     "type": "cafe"
    },
-   "why": "A café and brewpub near Galleria. Go for beer in the evening.",
+   "why": "A café and brewpub near Galleria with its own beers. Go in the evening for a house brew.",
    "quality": 3,
    "uniqueness": 3,
    "goodFor": [
     "evening"
    ],
    "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-kitchen-of-awadh-56925-154174",
-   "title": "Kitchen of Awadh",
-   "type": "restaurant",
-   "zone": "sector-27",
-   "coords": [
-    28.46251,
-    77.08699
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "indian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Kitchen of Awadh",
-    "zone": "sector-27",
-    "type": "restaurant"
-   },
-   "why": "A Galleria restaurant for Awadhi biryani and kebabs.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
+   "source": "Delhi–NCR area directory (delhi/delhi.md); Zomato; LBB; EazyDiner; published coverage; existence and address confirmed against OpenStreetMap",
    "lastVerified": "2026-09-29"
   },
   {
@@ -5286,127 +4263,6 @@
    "goodFor": [
     "morning",
     "afternoon"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-open-tap-56897-154199",
-   "title": "Open Tap",
-   "type": "nightlife",
-   "zone": "sector-53",
-   "coords": [
-    28.4483,
-    77.09937
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "nightlife"
-   ],
-   "match": {
-    "name": "Open Tap",
-    "zone": "sector-53",
-    "type": "nightlife"
-   },
-   "why": "A Golf Course Road bar for beer and bar food.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-cafe-amaretto-56896-154198",
-   "title": "Cafe Amaretto",
-   "type": "restaurant",
-   "zone": "sector-53",
-   "coords": [
-    28.44817,
-    77.09901
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "italian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Cafe Amaretto",
-    "zone": "sector-53",
-    "type": "restaurant"
-   },
-   "why": "A Golf Course Road Italian café-restaurant for pasta and pizza.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-desi-vibes-57138-154648",
-   "title": "Desi Vibes",
-   "type": "restaurant",
-   "zone": "noida",
-   "coords": [
-    28.56908,
-    77.32394
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "indian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Desi Vibes",
-    "zone": "noida",
-    "type": "restaurant"
-   },
-   "why": "A Noida Sector 18 North Indian restaurant.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29"
-  },
-  {
-   "id": "osm-social-57134-154641",
-   "title": "Social",
-   "type": "restaurant",
-   "zone": "noida",
-   "coords": [
-    28.56721,
-    77.3206
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Social",
-    "zone": "noida",
-    "type": "restaurant"
-   },
-   "why": "The Noida branch of the busy bar-café, for drinks with a group.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
    ],
    "labels": [],
    "source": "Delhi–NCR area directory (delhi/delhi.md); existence and address confirmed against OpenStreetMap",
