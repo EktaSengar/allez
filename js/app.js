@@ -1571,6 +1571,40 @@ const App = (() => {
   let SPORT_MODE = 'play';
   const SPORT_INTENT = new Set();
 
+  /* ---------- a fixed number per section, nearest beyond it ----------
+
+     The rule Missions and Nights already follow, for Sport: a section
+     shows SPORT_COUNT things; those within SPORT_NEAR minutes fill it
+     first, in the order they arrived (which is the ranking); only when
+     there are not enough does it reach further, nearest first. Paris
+     never needed it — its whole list is inside forty minutes — but the
+     Bay Area listed trails, grounds and fixtures an hour and a half down
+     the Peninsula to a reader in North Beach, at full size.
+
+     What a section does not show is folded behind one button per
+     section, not deleted: somebody planning a Saturday may want it. */
+  const SPORT_COUNT = 6, SPORT_NEAR = 45;
+  const FOLDS = new Set();          // which sections are unfolded; not persisted
+  const minsOf = i => i.minutesFromHome ?? Infinity;
+
+  function reachList(items, near = SPORT_NEAR, count = SPORT_COUNT) {
+    const close = items.filter(i => minsOf(i) <= near);
+    const beyond = items.filter(i => minsOf(i) > near).sort((a, b) => minsOf(a) - minsOf(b));
+    const shown = [...close, ...beyond].slice(0, count);
+    const left = items.filter(i => !shown.includes(i)).sort((a, b) => minsOf(a) - minsOf(b));
+    return { shown, left };
+  }
+
+  /* One folded line, or — once opened — the rows and a way to close them. */
+  function foldRows(key, left, noun, near = SPORT_NEAR, draw = l => rows(l, null, true)) {
+    if (!left.length) return '';
+    const far = left.every(i => minsOf(i) > near);
+    const label = `${left.length} more ${noun(left.length)}${far ? ' further away' : ''}`;
+    return FOLDS.has(key)
+      ? draw(left) + `<p class="missions-fold"><button type="button" class="chip" data-fold="${key}">Show fewer</button></p>`
+      : `<p class="missions-fold"><button type="button" class="chip" data-fold="${key}">${label}</button></p>`;
+  }
+
   const INTENTS = [
     ['try',     'Try something new'],
     ['casual',  'Exercise casually'],
@@ -1667,12 +1701,18 @@ const App = (() => {
     const want = TRAIL_KIND === 'hike' ? isHike : TRAIL_KIND === 'ride' ? isRide : () => true;
     const ranked = Rank.rank(trails.filter(want), CTX)
       .sort((a, b) => (a.minutesFromHome ?? 999) - (b.minutesFromHome ?? 999));
-    const near = ranked.filter(i => (i.minutesFromHome ?? 999) <= TRAIL_MORNING);
-    const far = ranked.filter(i => (i.minutesFromHome ?? 999) > TRAIL_MORNING);
+    /* Both halves hold SPORT_COUNT, nearest first: the morning list is
+       already a distance, and a weekend one an hour and a half away is
+       not the next thing to offer while there is one at fifty minutes. */
+    const near = ranked.filter(i => (i.minutesFromHome ?? 999) <= TRAIL_MORNING).slice(0, SPORT_COUNT);
+    const far = ranked.filter(i => (i.minutesFromHome ?? 999) > TRAIL_MORNING).slice(0, SPORT_COUNT);
+    const left = ranked.filter(i => !near.includes(i) && !far.includes(i));
     const here = Loc.displayName(Loc.active());
+    const trailNoun = n => n === 1 ? 'trail' : 'trails';
     return chips
       + (near.length ? stripHead('For a morning', `Within about ${TRAIL_MORNING} minutes of ${here}`) + rows(near, null, true) : '')
       + (far.length ? stripHead('For a weekend', 'Further out, and worth the drive') + rows(far, null, true) : '')
+      + foldRows('trails', left, trailNoun, TRAIL_MORNING)
       + (!ranked.length ? `<p class="empty">Nothing of that kind written up yet.</p>` : '');
   }
 
@@ -1848,8 +1888,9 @@ const App = (() => {
       [...SPORT_INTENT].some(k => (i.intent || []).includes(k));
 
     const allRuns = Rank.rank(play, CTX, i => i.type === 'run' && matches(i));
-    const runs = allRuns.filter(hasStops);
-    const plainRuns = allRuns.filter(i => !hasStops(i));
+    const { shown: runsShown, left: runsLeft } = reachList(allRuns);
+    const runs = runsShown.filter(hasStops);
+    const plainRuns = runsShown.filter(i => !hasStops(i));
 
     /* Both layers, one radius. A pool you can get to beats a climbing gym
        across the city, and the OSM layer is what stops this section being
@@ -1900,9 +1941,18 @@ const App = (() => {
           ? stripHead(`Run ${City.name}`, 'Nearest first, and getting longer')
             + (runs.length ? `<div class="routes">${runs.map(routeCard).join('')}</div>` : '')
             + (plainRuns.length ? rows(plainRuns, null, true) : '')
+            + foldRows('runs', runsLeft, n => n === 1 ? 'run' : 'runs')
           : '')
-      + stripHead('Everything you could play', 'The whole list, wherever it is')
-      + rows(Rank.rank(play, CTX, i => i.type === 'play'), null, true)
+      /* The whole catalogue, wherever it is, is a reference rather than a
+         suggestion — so it is the fold itself, not a list above one. */
+      + (() => {
+          const everything = Rank.rank(play, CTX, i => i.type === 'play');
+          if (!everything.length) return '';
+          return FOLDS.has('play-all')
+            ? stripHead('Everything you could play', 'The whole list, wherever it is')
+              + foldRows('play-all', everything, () => '')
+            : `<p class="missions-fold"><button type="button" class="chip" data-fold="play-all">Everything you could play in ${esc(City.name)} (${everything.length})</button></p>`;
+        })()
       + questBlock('quest-play');
   }
 
@@ -1950,15 +2000,27 @@ const App = (() => {
       ['around',`Elsewhere in ${City.name}`, 'Further out, still worth knowing']
     ];
 
+    /* Each tier keeps its date order and SPORT_COUNT fixtures; the rest
+       of every tier fold together, nearest first. */
+    const fixturesLeft = [];
+    const tierHtml = tiers.map(([k, title, note]) => {
+      const inTier = rest.filter(f => eventTier(f) === k);
+      fixturesLeft.push(...inTier.slice(SPORT_COUNT));
+      const shown = inTier.slice(0, SPORT_COUNT);
+      return shown.length
+        ? stripHead(title, note) + `<div class="fixtures">${shown.map(fixtureRow).join('')}</div>`
+        : '';
+    }).join('');
+    fixturesLeft.sort((a, b) => minsOf(a) - minsOf(b));
+    const venues = reachList(Rank.rank(watch, CTX));
+
     return (big ? hero(big) : '')
-      + tiers.map(([k, title, note]) => {
-          const inTier = rest.filter(f => eventTier(f) === k);
-          return inTier.length
-            ? stripHead(title, note) + `<div class="fixtures">${inTier.map(fixtureRow).join('')}</div>`
-            : '';
-        }).join('')
+      + tierHtml
+      + foldRows('fixtures', fixturesLeft, n => n === 1 ? 'fixture' : 'fixtures', WIDER_MIN,
+                 l => `<div class="fixtures">${l.map(fixtureRow).join('')}</div>`)
       + stripHead('Where sport happens', 'Fixtures change weekly — the link goes to the club')
-      + rows(Rank.rank(watch, CTX), null, true)
+      + rows(venues.shown, null, true)
+      + foldRows('watch', venues.left, n => n === 1 ? 'ground' : 'grounds')
       + questBlock('quest-watch');
   }
 
@@ -4099,6 +4161,14 @@ const App = (() => {
     document.addEventListener('click', e => {
       const b = e.target.closest('[data-mood2]'); if (!b) return;
       MOOD = (MOOD === b.dataset.mood2) ? null : b.dataset.mood2;
+      render();
+    });
+
+    // Sport: unfold or fold one section's remainder
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-fold]'); if (!b) return;
+      const k = b.dataset.fold;
+      FOLDS.has(k) ? FOLDS.delete(k) : FOLDS.add(k);
       render();
     });
 
