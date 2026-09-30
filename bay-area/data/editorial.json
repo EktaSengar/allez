@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-29",
+ "generated": "2026-09-30",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. Written against the holes the generated tiers cannot fill: Wikidata knows of three cafés and two bakeries in the whole Bay Area and no markets at all, and the Peninsula has almost nothing.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -2286,6 +2286,8 @@
    ],
    "area": "Castro Street",
    "url": "https://alexanderspatisserie.com",
+   "hours": "Mo 09:00-21:00; Tu,We 08:00-21:00; Th 08:00-22:00; Fr,Sa 08:00-23:00; Su 08:00-21:00",
+   "hoursFrom": "alexanderspatisserie.com",
    "cuisine": null,
    "categories": [
     "food"
@@ -2313,8 +2315,6 @@
    "imageKind": "context",
    "imageSubject": "Croissant",
    "imageCredit": "Wikimedia Commons",
-   "hours": "Mo 09:00-21:00; Tu,We 08:00-21:00; Th 08:00-22:00; Fr,Sa 08:00-23:00; Su 08:00-21:00",
-   "hoursFrom": "alexanderspatisserie.com",
    "hoursChecked": "2026-09-29"
   },
   {
@@ -3493,6 +3493,561 @@
    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Carinto_manjyu.JPG/500px-Carinto_manjyu.JPG",
    "imageKind": "context",
    "imageSubject": "Manjū",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-mademoiselle-colette-74972--244463",
+   "title": "Mademoiselle Colette",
+   "type": "bakery",
+   "zone": "redwood-city",
+   "coords": [
+    37.48624,
+    -122.2313
+   ],
+   "area": "Broadway",
+   "url": "https://mademoisellecolette.com/",
+   "hours": "Mo-Sa 08:00-16:00; Su 08:00-14:00",
+   "hoursFrom": "mademoisellecolette.com",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Mademoiselle Colette",
+    "zone": "redwood-city",
+    "type": "bakery"
+   },
+   "why": "The Redwood City branch of the French bakery-café, on Broadway at the top of downtown. Croissants and the almond croissant in the morning, quiche and a tartine at lunch.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "mademoisellecolette.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Croissant-Petr_Kratochvil.jpg/500px-Croissant-Petr_Kratochvil.jpg",
+   "imageKind": "context",
+   "imageSubject": "Croissant",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-humphry-slocombe-74973--244455",
+   "title": "Humphry Slocombe",
+   "type": "deli",
+   "zone": "redwood-city",
+   "coords": [
+    37.48644,
+    -122.22772
+   ],
+   "area": "Broadway",
+   "url": null,
+   "hours": "Mo-Th 13:00-22:30; Fr,Sa 12:00-23:00; Su 12:00-22:30",
+   "hoursFrom": "Yelp; humphryslocombe.com",
+   "cuisine": null,
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Humphry Slocombe",
+    "zone": "redwood-city",
+    "type": "deli"
+   },
+   "why": "San Francisco's irreverent ice cream shop, on Broadway. Secret Breakfast — bourbon and cornflakes — is the one it is famous for; there is always something odder beside it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "humphryslocombe.com; SF Chronicle; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-09-29"
+  },
+  {
+   "id": "osm-gourmet-haus-staudt-74972--244467",
+   "title": "Gourmet Haus Staudt",
+   "type": "restaurant",
+   "zone": "redwood-city",
+   "coords": [
+    37.48606,
+    -122.23349
+   ],
+   "area": "Broadway",
+   "url": "https://www.gourmethausstaudt.com/",
+   "cuisine": "german",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Gourmet Haus Staudt",
+    "zone": "redwood-city",
+    "type": "restaurant"
+   },
+   "why": "A German deli and beer garden on Broadway, in the family for decades — imported German beer on tap, bratwurst and pretzels at the long tables out back, and a shop of German groceries at the front.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "gourmethausstaudt.com; Redwood City Pulse; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 75,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hours": "Mo 15:00-20:00; Tu-Th 12:00-22:00; Fr 12:00-23:00; Sa 12:00-22:00; Su 12:00-19:00",
+   "hoursFrom": "gourmethausstaudt.com; Yelp",
+   "hoursChecked": "2026-09-29",
+   "hoursNote": "Biergarten hours; the German market at the front opens at 10.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Hofbraeukeller_5906.JPG/500px-Hofbraeukeller_5906.JPG",
+   "imageKind": "context",
+   "imageSubject": "Biergarten",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-vesta-74973--244454",
+   "title": "Vesta",
+   "type": "restaurant",
+   "zone": "redwood-city",
+   "coords": [
+    37.48673,
+    -122.22679
+   ],
+   "area": "Broadway",
+   "url": "https://www.vestarwc.com/",
+   "hours": "Mo-Sa 11:00-21:00",
+   "hoursFrom": "Yelp; vestarwc.com",
+   "cuisine": "pizza",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Vesta",
+    "zone": "redwood-city",
+    "type": "restaurant"
+   },
+   "why": "Wood-fired pizza on Broadway, blistered and chewy, with small plates and a busy room. One of the Peninsula's best-known pizzerias — expect a wait at dinner.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "labels": [],
+   "source": "vestarwc.com; Palo Alto Online; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 75,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg/500px-Neapolitan_pizza_at_Trappica_%2848701940197%29.jpg",
+   "imageKind": "context",
+   "imageSubject": "Neapolitan pizza",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-lv-mar-74973--244454",
+   "title": "LV Mar",
+   "type": "restaurant",
+   "zone": "redwood-city",
+   "coords": [
+    37.48672,
+    -122.22706
+   ],
+   "area": "Broadway",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "LV Mar",
+    "zone": "redwood-city",
+    "type": "restaurant"
+   },
+   "why": "Latin American tapas and cocktails on Broadway — ceviches, small plates to share, and a lively bar that turns into a party at weekends.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "lvmar.com; The San Francisco Peninsula; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 75,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hours": "Mo-Th 15:00-21:00; Fr,Sa 11:30-01:30; Su 11:30-21:00",
+   "hoursFrom": "lvmar.com; Yelp",
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Cebiche_de_corvina.JPG/500px-Cebiche_de_corvina.JPG",
+   "imageKind": "context",
+   "imageSubject": "Ceviche",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-voyager-craft-coffee-74646--244077",
+   "title": "Voyager Craft Coffee",
+   "type": "cafe",
+   "zone": "cupertino",
+   "coords": [
+    37.32321,
+    -122.03827
+   ],
+   "area": "Stevens Creek Boulevard",
+   "url": "http://voyagercraftcoffee.com",
+   "hours": "Mo-Su 07:00-17:00",
+   "hoursFrom": "joe.coffee; Yelp",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Voyager Craft Coffee",
+    "zone": "cupertino",
+    "type": "cafe"
+   },
+   "why": "The South Bay roaster, with a bright café on Stevens Creek. Carefully made espresso and pour-over, and a menu of inventive seasonal drinks.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "voyagercraftcoffee.com; Yelp; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/500px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
+   "imageKind": "context",
+   "imageSubject": "Espresso",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-donut-wheel-74653--244064",
+   "title": "Donut Wheel",
+   "type": "cafe",
+   "zone": "cupertino",
+   "coords": [
+    37.32637,
+    -122.03192
+   ],
+   "area": "North De Anza Boulevard",
+   "url": null,
+   "cuisine": "donut",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Donut Wheel",
+    "zone": "cupertino",
+    "type": "cafe"
+   },
+   "why": "A Cupertino institution on De Anza Boulevard, frying donuts around the clock. Old-fashioned, glazed and fritters — a late-night or very-early stop.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Yelp; Cupertino Today; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 15,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hours": "24/7",
+   "hoursFrom": "Yelp",
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Glazed-Donut.jpg/500px-Glazed-Donut.jpg",
+   "imageKind": "context",
+   "imageSubject": "Doughnut",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-chicha-san-chen-74645--244070",
+   "title": "Chicha San Chen 吃茶三千",
+   "type": "cafe",
+   "zone": "cupertino",
+   "coords": [
+    37.32248,
+    -122.03477
+   ],
+   "area": "Stevens Creek Boulevard",
+   "url": "https://chichasanchennorcal.com/",
+   "hours": "Mo-Th 11:30-21:30; Fr,Sa 11:30-22:00; Su 11:30-21:30",
+   "hoursFrom": "Yelp",
+   "cuisine": "bubble_tea",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Chicha San Chen",
+    "zone": "cupertino",
+    "type": "cafe"
+   },
+   "why": "The Taiwanese tea chain that brought hour-long queues to Stevens Creek when it opened: each cup brewed to order on an espresso-style machine. The oolongs and the milk teas are the point.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "SF Chronicle; Cupertino Facts; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Oolong_tea_leaf.jpg/500px-Oolong_tea_leaf.jpg",
+   "imageKind": "context",
+   "imageSubject": "Oolong",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-liang-s-village-74644--244066",
+   "title": "Liang's Village",
+   "type": "restaurant",
+   "zone": "cupertino",
+   "coords": [
+    37.32198,
+    -122.03287
+   ],
+   "area": null,
+   "url": null,
+   "hours": "Mo-Th 11:00-20:30; Fr-Su 08:00-20:30",
+   "hoursFrom": "liangsvillage.com",
+   "cuisine": "chinese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Liang's Village",
+    "zone": "cupertino",
+    "type": "restaurant"
+   },
+   "why": "Taiwanese home cooking on Stevens Creek — beef noodle soup, braised pork rice, and a weekend Taiwanese breakfast of soy milk, fried crullers and scallion pancakes.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "lunch",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "liangsvillage.com; Yelp; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 75,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-09-29",
+   "hoursNote": "Taiwanese breakfast from 8 on Friday to Sunday.",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lanzhou_La_Mian.jpg/500px-Lanzhou_La_Mian.jpg",
+   "imageKind": "context",
+   "imageSubject": "Beef noodle soup",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-icicles-74645--244036",
+   "title": "Icicles",
+   "type": "deli",
+   "zone": "cupertino",
+   "coords": [
+    37.32259,
+    -122.01789
+   ],
+   "area": "Stevens Creek Boulevard",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Icicles",
+    "zone": "cupertino",
+    "type": "deli"
+   },
+   "why": "Thai-style rolled ice cream, poured onto a frozen plate and scraped into rolls in front of you. Fun to watch, and a good end to an evening on Stevens Creek.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "iciclescreamroll.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hours": "Mo-Th 13:00-22:00; Fr 13:00-23:00; Sa 12:00-23:00; Su 12:00-22:00",
+   "hoursFrom": "Yelp",
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Rolled_ice_cream.jpg/500px-Rolled_ice_cream.jpg",
+   "imageKind": "context",
+   "imageSubject": "Stir-fried ice cream",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-creekside-farmers-market-74633--244030",
+   "title": "Creekside Farmers' Market",
+   "type": "market",
+   "zone": "cupertino",
+   "coords": [
+    37.31655,
+    -122.01525
+   ],
+   "area": "Miller Avenue",
+   "url": null,
+   "hours": "Fr 08:00-12:00",
+   "hoursFrom": "pcfma.org",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Creekside Farmers' Market",
+    "zone": "cupertino",
+    "type": "market"
+   },
+   "why": "A small year-round market in Creekside Park on Friday mornings — produce, bread and hot food, and a creek path to walk afterwards.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "pcfma.org; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "days": [
+    5
+   ],
+   "durationMin": 60,
+   "priceLevel": 1,
+   "indoor": false,
+   "booking": false,
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Farmers_and_Artisans_Market_at_Farmington_-_Michigan.jpg/500px-Farmers_and_Artisans_Market_at_Farmington_-_Michigan.jpg",
+   "imageKind": "context",
+   "imageSubject": "Farmers' market",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-de-anza-college-farmers-market-74641--244085",
+   "title": "De Anza College Farmers' Market",
+   "type": "market",
+   "zone": "cupertino",
+   "coords": [
+    37.32036,
+    -122.04251
+   ],
+   "area": "Stevens Creek Boulevard",
+   "url": "https://www.wcfma.org/cupertino",
+   "hours": "Su 09:00-13:00",
+   "hoursFrom": "pcfma.org",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "De Anza College Farmers' Market",
+    "zone": "cupertino",
+    "type": "market"
+   },
+   "why": "Sunday mornings in the De Anza College lot, year-round — a good-sized market with Asian greens, stone fruit in season and hot food.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "pcfma.org; deanza.edu; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "days": [
+    0
+   ],
+   "durationMin": 60,
+   "priceLevel": 1,
+   "indoor": false,
+   "booking": false,
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Farmers_and_Artisans_Market_at_Farmington_-_Michigan.jpg/500px-Farmers_and_Artisans_Market_at_Farmington_-_Michigan.jpg",
+   "imageKind": "context",
+   "imageSubject": "Farmers' market",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-coffeebar-74973--244453",
+   "title": "Coffeebar",
+   "type": "cafe",
+   "zone": "redwood-city",
+   "coords": [
+    37.48674,
+    -122.22671
+   ],
+   "area": "Broadway",
+   "url": "https://www.coffeebar.com/pages/locations#redwood-city",
+   "hours": "Mo-Su 07:00-18:00",
+   "hoursFrom": "coffeebar.com; Yelp",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Coffeebar",
+    "zone": "redwood-city",
+    "type": "cafe"
+   },
+   "why": "A Lake Tahoe-born café on Broadway with a big, light room, careful espresso and good pastries — the easiest place downtown to sit for an hour.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "coffeebar.com; Yelp; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-09-29",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/500px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
+   "imageKind": "context",
+   "imageSubject": "Espresso",
    "imageCredit": "Wikimedia Commons"
   }
  ]
