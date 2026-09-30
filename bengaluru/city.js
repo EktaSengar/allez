@@ -406,7 +406,8 @@ const City = (() => {
     venue:       'A concert hall shaped like a violin, and a play every night in JP Nagar',
     jazz:        'Beer brewed on site, a library, and a proper jazz room in Whitefield',
     comedy:      "The country's stand-up capital, several shows a night",
-    bar:         "Two of Asia's best cocktail bars, and the brewpub that started it all",
+    speakeasy:   'Unmarked doors, booked seats, and two of the best bars in Asia',
+    bar:         "One of Asia's best cocktail bars, and the brewpub that started it all",
     nightmarket: 'Thindi Beedi: a street of snacks after dark',
     latenight:   'Ghee rice and kebabs after the bars shut at one'
   };
