@@ -1404,6 +1404,7 @@ const App = (() => {
     venue:  'Check the listing, then buy blind',
     club:   'The late ones',
     bar:    'Somewhere to start the night',
+    speakeasy: 'A hidden door, a short menu, and a booking',
     weekly:      'A standing night — the same room, the same day, the regulars',
     afterdark:   'Things that only happen once the lights go down',
     nightmarket: 'Food stalls and music, on the nights they run',
@@ -1536,6 +1537,7 @@ const App = (() => {
       + group('Jazz rooms', nightNote('jazz'), i => i.type === 'jazz')
       + group('Comedy and cabaret', nightNote('comedy'), i => i.type === 'comedy')
       + group('Dancing', nightNote('club'), i => i.type === 'club')
+      + group('Speakeasy bars', nightNote('speakeasy'), i => i.type === 'speakeasy')
       + group('A drink first', nightNote('bar'), i => i.type === 'bar')
       + group('Night markets', nightNote('nightmarket'), i => i.type === 'nightmarket')
       + group('Late-night food', nightNote('latenight'), i => i.type === 'latenight')

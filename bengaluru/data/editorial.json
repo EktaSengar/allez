@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23",
+ "generated": "2026-09-30",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: Wikidata holds three cafes in the whole of Bengaluru and no open dataset in India describes everyday food. See SOURCES.md.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -901,6 +901,3157 @@
    "labels": [],
    "source": "HappyCow; Bindu Gopal Rao; confirmed against OpenStreetMap",
    "lastVerified": "2026-09-21"
+  },
+  {
+   "id": "osm-kopitiam-lah-25940-155276",
+   "title": "Kopitiam Lah",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.96983,
+    77.63808
+   ],
+   "area": "12th Main Road",
+   "url": "https://www.kopitiamlah.com/",
+   "hours": "Tu-Su 08:30-11:30,12:30-16:30",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "malaysian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Kopitiam Lah",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "A Malaysian-Singaporean coffee shop, which Bengaluru did not have and now queues for. Order kaya toast with soft-boiled eggs and a kopi, or the nasi lemak if it is lunch. Small room, quick turnover, better alone or in pairs than as a group.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-una-hacienda-25949-155199",
+   "title": "Una Hacienda",
+   "type": "nightlife",
+   "zone": "richmond-town",
+   "coords": [
+    12.97474,
+    77.59933
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Una Hacienda",
+    "zone": "richmond-town",
+    "type": "nightlife"
+   },
+   "why": "The agave bar next to Spirit Forward, from the same team: mezcal and tequila taken seriously, with small Mexican plates to keep you upright. Start here, walk ten steps, finish there.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-dali-gala-25950-155206",
+   "title": "Dali & Gala",
+   "type": "nightlife",
+   "zone": "shivajinagar",
+   "coords": [
+    12.97521,
+    77.6029
+   ],
+   "area": "Museum Road",
+   "url": null,
+   "hours": "17:00-01:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Dali & Gala",
+    "zone": "shivajinagar",
+    "type": "nightlife"
+   },
+   "why": "A surrealist-themed cocktail bar on Museum Road where the drinks are as theatrical as the room. Go for one or two and to look around; order whatever the bartender is proudest of.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-yauatcha-25947-155241",
+   "title": "Yauatcha",
+   "type": "restaurant",
+   "zone": "halasuru",
+   "coords": [
+    12.97329,
+    77.62036
+   ],
+   "area": "Mahatma Gandhi Road",
+   "url": "https://yauatcha.com/bengaluru/",
+   "cuisine": "cantonese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Yauatcha",
+    "zone": "halasuru",
+    "type": "restaurant"
+   },
+   "why": "Dim sum done with the precision of the London original. Order the har gau, the crispy duck rolls and one of the macarons at the end. Lunch is the smarter visit — same dumplings, easier table.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-harima-25935-155200",
+   "title": "Harima",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.96762,
+    77.60018
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "japanese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Harima",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "One of the city's longest-running Japanese kitchens, izakaya in spirit: grilled skewers, sashimi, rice bowls and a proper sake list. Sit at the counter if you can.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-comal-25945-155238",
+   "title": "Comal",
+   "type": "restaurant",
+   "zone": "halasuru",
+   "coords": [
+    12.97234,
+    77.61876
+   ],
+   "area": "Mahatma Gandhi Road",
+   "url": null,
+   "hours": "Tu-Su 12:00-15:00,19:00-22:30",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "mexican",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Comal",
+    "zone": "halasuru",
+    "type": "restaurant"
+   },
+   "why": "Mexican cooking that starts from the masa rather than the cheese. Order tacos and whatever is on the comal that day, with a mezcal. A good, loud dinner.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-malgudi-mylari-mane-25875-155235",
+   "title": "Malgudi Mylari Mane",
+   "type": "restaurant",
+   "zone": "koramangala",
+   "coords": [
+    12.93744,
+    77.61765
+   ],
+   "area": null,
+   "url": "http://www.malgudimylari.com/",
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Malgudi Mylari Mane",
+    "zone": "koramangala",
+    "type": "restaurant"
+   },
+   "why": "The Mysore Mylari dosa — small, soft, spongy, served with butter and coconut chutney — brought to Koramangala. Order a plate of two and a filter coffee. Breakfast is the time.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-monkey-bar-25950-155206",
+   "title": "Monkey Bar",
+   "type": "nightlife",
+   "zone": "shivajinagar",
+   "coords": [
+    12.97515,
+    77.60292
+   ],
+   "area": "Museum Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Monkey Bar",
+    "zone": "shivajinagar",
+    "type": "nightlife"
+   },
+   "why": "The gastropub that made bar food with Indian swagger a Bengaluru thing. Beer, a plate of the house snacks to share, and a noisy table of friends is exactly the use.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-bier-library-25878-155253",
+   "title": "The Bier Library",
+   "type": "nightlife",
+   "zone": "koramangala",
+   "coords": [
+    12.93912,
+    77.62625
+   ],
+   "area": "Patel Narayana Reddy Layout",
+   "url": "https://www.thebierlibrary.in/",
+   "hours": "Mo-Su 12:00-1:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "The Bier Library",
+    "zone": "koramangala",
+    "type": "nightlife"
+   },
+   "why": "A Koramangala brewpub with its own beers on tap and food that is better than it needs to be. Order a tasting flight before committing to a pint.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-baan-phad-thai-25940-155275",
+   "title": "Baan Phad Thai",
+   "type": "restaurant",
+   "zone": "indiranagar",
+   "coords": [
+    12.96984,
+    77.63771
+   ],
+   "area": null,
+   "url": null,
+   "hours": "Mo-Su 12:00-01:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "thai",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Baan Phad Thai",
+    "zone": "indiranagar",
+    "type": "restaurant"
+   },
+   "why": "Thai cooking that tastes like Thailand rather than a menu approximation of it. Order the curries and a som tam, and tell them you can take the heat if you can.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-only-place-25946-155207",
+   "title": "The Only Place",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97324,
+    77.60339
+   ],
+   "area": "Museum Road",
+   "url": null,
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Only Place",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "A steakhouse on Museum Road since the 1960s, from when Bengaluru was still a cantonment town. Order the steak with mushroom sauce and the apple pie. Unfussy and unchanged, which is why people keep coming back.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-lupa-25951-155209",
+   "title": "LUPA",
+   "type": "restaurant",
+   "zone": "shivajinagar",
+   "coords": [
+    12.9756,
+    77.60458
+   ],
+   "area": "MG Road",
+   "url": null,
+   "cuisine": "roman",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "LUPA",
+    "zone": "shivajinagar",
+    "type": "restaurant"
+   },
+   "why": "Manu Chandra's big, handsome European dining room on MG Road. Pastas made in-house, a strong bar and a room that works for an occasion. Book for dinner.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-pizza-4p-s-25940-155272",
+   "title": "Pizza 4P's",
+   "type": "restaurant",
+   "zone": "indiranagar",
+   "coords": [
+    12.97005,
+    77.63611
+   ],
+   "area": "12th Main Road",
+   "url": "https://pizza4ps.com",
+   "cuisine": "pizza",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Pizza 4P's",
+    "zone": "indiranagar",
+    "type": "restaurant"
+   },
+   "why": "The Vietnamese-Japanese pizzeria's first Indian outpost. Order the burrata pizza — they make the cheese themselves — and one of the Asian-leaning pies to compare. Expect a wait at weekends.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-23rd-street-pizza-25936-155214",
+   "title": "23rd Street Pizza",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.96806,
+    77.60719
+   ],
+   "area": "Castle Street",
+   "url": null,
+   "hours": "Sa-Su 12:30-16:00,18:30-00:00; Mo,We-Fr 17:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "pizza",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "23rd Street Pizza",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "New York slices on Castle Street: thin, big, foldable, by the slice or the pie. Cheap, fast and open late enough to be the end of the night.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026) and published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-shezan-25947-155197",
+   "title": "Shezan",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97368,
+    77.59871
+   ],
+   "area": "Lavelle Road",
+   "url": null,
+   "cuisine": "indian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Shezan",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "An old-school Lavelle Road dining room, open since 1989, and one of the few places around here that has not been redone for Instagram. The menu is long, from Mughlai to Continental to Chinese. Stick to the Mughlai: kebabs, a curry and rotis. Lunch is the calm time.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026); shezan.in; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-dolphins-25994-155239",
+   "title": "Dolphins",
+   "type": "restaurant",
+   "zone": "frazer-town",
+   "coords": [
+    12.99682,
+    77.6196
+   ],
+   "area": "Wheeler Road, Cox Town",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Dolphins",
+    "zone": "frazer-town",
+    "type": "restaurant"
+   },
+   "why": "A dim, retro bar-restaurant on Wheeler Road in Cox Town. Go for Indo-Chinese with cold beer: chilli chicken, a fried rice and a table of friends. It is not trying to be anything else, and that is why people like it.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Named in a Bengaluru eat-and-drink list (varun760, Instagram, Sept 2026); Zomato; Tripadvisor; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-meghana-foods-25946-155218",
+   "title": "Meghana Foods",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97282,
+    77.60918
+   ],
+   "area": "Field Marshal Cariappa Road",
+   "url": null,
+   "cuisine": "indian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Meghana Foods",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "The Andhra-style biryani Bengaluru argues about, and the Residency Road branch is the central one. Order the boneless chicken biryani and nothing else on the first visit. Expect a queue at lunch and fast, loud service once you are in.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-koko-25921-155296",
+   "title": "KOKO",
+   "type": "restaurant",
+   "zone": "kodihalli",
+   "coords": [
+    12.96039,
+    77.64791
+   ],
+   "area": null,
+   "url": "https://www.kokorestaurants.com/",
+   "cuisine": "asian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "KOKO",
+    "zone": "kodihalli",
+    "type": "restaurant"
+   },
+   "why": "The Mumbai Cantonese-Japanese restaurant's Bengaluru outpost, in Prestige Icon on Old Airport Road: several floors, a lounge bar and a room built for dressing up. Order the dim sum and the black cod, and a cocktail from the bar first.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "kokorestaurants.com; LBB; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-vapour-25939-155282",
+   "title": "Vapour",
+   "type": "nightlife",
+   "zone": "indiranagar",
+   "coords": [
+    12.96943,
+    77.64111
+   ],
+   "area": "100 Feet Road",
+   "url": "https://vapour.in/",
+   "hours": "12:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Vapour",
+    "zone": "indiranagar",
+    "type": "nightlife"
+   },
+   "why": "One of the 100 Feet Road brewpubs that made Indiranagar what it is. Go for the rooftop and a pitcher of the house beer on a warm evening; the food is there to go with the beer.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-iron-hill-bengaluru-25902-155397",
+   "title": "Iron Hill Bengaluru",
+   "type": "nightlife",
+   "zone": "marathahalli",
+   "coords": [
+    12.95089,
+    77.69867
+   ],
+   "area": null,
+   "url": null,
+   "hours": "Mo-Su 12:00-01:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Iron Hill Bengaluru",
+    "zone": "marathahalli",
+    "type": "nightlife"
+   },
+   "why": "A brewery on the Outer Ring Road built to industrial scale: huge, several levels, and beer brewed on site. Come with a group after work and start with a tasting paddle.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-sarjapura-social-25820-155371",
+   "title": "Sarjapura Social",
+   "type": "restaurant",
+   "zone": "doddakannalli",
+   "coords": [
+    12.90989,
+    77.68554
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sarjapura Social",
+    "zone": "doddakannalli",
+    "type": "restaurant"
+   },
+   "why": "Social's Sarjapur Road outpost: a big, loud café-bar that works as an office by day and a bar by night. Cheap cocktails in jars, bar food, and no one minding the noise.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-roxie-25831-155332",
+   "title": "Roxie",
+   "type": "restaurant",
+   "zone": "haralur",
+   "coords": [
+    12.9153,
+    77.66578
+   ],
+   "area": "Haralur Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Roxie",
+    "zone": "haralur",
+    "type": "restaurant"
+   },
+   "why": "A 35,000-square-foot Italian mansion on Haralur Road, built to look like the Amalfi Coast: a courtyard, bougainvillea, a stone bar and a bakery at the door. Order cocktails and small plates, and go at sunset when the courtyard is at its best.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Homegrown; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-biergarten-brewery-kitchen-25860-155371",
+   "title": "Biergarten Brewery & Kitchen",
+   "type": "nightlife",
+   "zone": "bellanduru",
+   "coords": [
+    12.9299,
+    77.68545
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "pizza",
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Biergarten Brewery & Kitchen",
+    "zone": "bellanduru",
+    "type": "nightlife"
+   },
+   "why": "A German-style beer garden with house-brewed wheat beers and lagers and a big open-air deck, handy for the Outer Ring Road crowd after work. Order the hefeweizen and a plate of sausages, and sit outside.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-arbor-brewing-company-25941-155222",
+   "title": "Arbor Brewing Company",
+   "type": "nightlife",
+   "zone": "austin-town",
+   "coords": [
+    12.97031,
+    77.61098
+   ],
+   "area": "Magrath Road",
+   "url": "https://www.arborbrewing.in/",
+   "hours": "12:00-23:30",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Arbor Brewing Company",
+    "zone": "austin-town",
+    "type": "nightlife"
+   },
+   "why": "The Bengaluru branch of the Michigan brewery, on Magrath Road, and one of the city's first brewpubs. The beers are more varied than most — Belgians and sours sit next to the pale ales — so order a flight.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-araku-coffee-25940-155278",
+   "title": "Araku Coffee",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.96991,
+    77.63921
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Araku Coffee",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "The café from the Araku Valley coffee co-operative, where tribal farmers in the Eastern Ghats grow the beans. Order a pour-over of a single-estate lot and compare it with the espresso. It is a calm, bright room for a weekday morning.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "arakucoffee.in; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-6oz-coffee-and-roasters-25975-155242",
+   "title": "6oz Coffee and Roasters",
+   "type": "cafe",
+   "zone": "halasuru",
+   "coords": [
+    12.9876,
+    77.62084
+   ],
+   "area": null,
+   "url": "http://6oz.coffee",
+   "hours": "Mo-Su 09:00-22:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "6oz Coffee and Roasters",
+    "zone": "halasuru",
+    "type": "cafe"
+   },
+   "why": "A small Ulsoor roaster-café where the coffee is the point. Ask what they are roasting this week and have it as a filter or a flat white. Better for one or two people than for a group.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-coffee-mechanics-26068-155277",
+   "title": "Coffee Mechanics",
+   "type": "cafe",
+   "zone": "hennur",
+   "coords": [
+    13.03401,
+    77.63833
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Coffee Mechanics",
+    "zone": "hennur",
+    "type": "cafe"
+   },
+   "why": "The Hennur branch of a local specialty chain, with a long menu of brew methods and cold coffees. A good neighbourhood spot to work from on a slow afternoon.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-milano-ice-cream-25958-155288",
+   "title": "Milano Ice Cream",
+   "type": "deli",
+   "zone": "indiranagar",
+   "coords": [
+    12.97907,
+    77.64401
+   ],
+   "area": null,
+   "url": null,
+   "hours": "Mo-Su,PH 08:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "ice_cream",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Milano Ice Cream",
+    "zone": "indiranagar",
+    "type": "deli"
+   },
+   "why": "Italian-style gelato made in small batches, and one of the city's go-to scoops. Try the seasonal fruit flavours next to a dark chocolate. Best after dinner on a warm night, when there is a queue out the door.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-lick-lavonne-ice-cream-kitchen-25935-155274",
+   "title": "LICK - Lavonne Ice Cream Kitchen",
+   "type": "deli",
+   "zone": "indiranagar",
+   "coords": [
+    12.96768,
+    77.6368
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "ice_cream",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "LICK - Lavonne Ice Cream Kitchen",
+    "zone": "indiranagar",
+    "type": "deli"
+   },
+   "why": "The ice-cream counter from the Lavonne pastry school, so the flavours come with a pastry chef's precision. Order whatever is newest, and pair it with a pastry from Lavonne round the corner.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-glen-s-bakehouse-25958-155281",
+   "title": "Glen's Bakehouse",
+   "type": "bakery",
+   "zone": "indiranagar",
+   "coords": [
+    12.97915,
+    77.64054
+   ],
+   "area": "100 Feet Road",
+   "url": null,
+   "cuisine": "pancake",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Glen's Bakehouse",
+    "zone": "indiranagar",
+    "type": "bakery"
+   },
+   "why": "The 100 Feet Road bakery-café where half of Indiranagar has had a birthday cake. Order the red velvet, or a slice of something from the counter with a coffee. Afternoons are its best time.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-sour-house-25881-155240",
+   "title": "Sour House",
+   "type": "bakery",
+   "zone": "koramangala",
+   "coords": [
+    12.94071,
+    77.62017
+   ],
+   "area": "80 Feet Road",
+   "url": "https://www.sourhouse.in",
+   "hours": "Mo-Sa 10:00-19:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sour House",
+    "zone": "koramangala",
+    "type": "bakery"
+   },
+   "why": "A Koramangala bakery built around sourdough, with a long ferment and a crackling crust. Buy a loaf to take home, and have a sandwich or a morning bun while you are there. Go early, before the bread sells out.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-krumb-kraft-25926-155279",
+   "title": "Krumb Kraft",
+   "type": "bakery",
+   "zone": "kodihalli",
+   "coords": [
+    12.96318,
+    77.63967
+   ],
+   "area": null,
+   "url": "https://krumbkraft.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Krumb Kraft",
+    "zone": "kodihalli",
+    "type": "bakery"
+   },
+   "why": "A small bakery off Old Airport Road with a proper case of croissants, laminated pastries and tarts. Order whatever came out of the oven last. Mornings are best.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-amintiri-25823-155289",
+   "title": "Amintiri",
+   "type": "cafe",
+   "zone": "hsr-layout",
+   "coords": [
+    12.91173,
+    77.64446
+   ],
+   "area": null,
+   "url": "https://amintiri.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Amintiri",
+    "zone": "hsr-layout",
+    "type": "cafe"
+   },
+   "why": "An HSR Layout patisserie making European-style entremets and tarts that look almost too neat to cut into. Order a plated dessert with coffee, and take a box home.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-zed-the-baker-25971-155176",
+   "title": "Zed The Baker",
+   "type": "cafe",
+   "zone": "vasanth-nagar",
+   "coords": [
+    12.98572,
+    77.58793
+   ],
+   "area": "Palace Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Zed The Baker",
+    "zone": "vasanth-nagar",
+    "type": "cafe"
+   },
+   "why": "A bakery-café on Palace Road with a serious bread and viennoiserie counter. Order the croissants or a sandwich on their sourdough, and buy a loaf on the way out.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-rolling-pin-25958-155283",
+   "title": "The Rolling Pin",
+   "type": "bakery",
+   "zone": "indiranagar",
+   "coords": [
+    12.97877,
+    77.64156
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Rolling Pin",
+    "zone": "indiranagar",
+    "type": "bakery"
+   },
+   "why": "An Indiranagar patisserie known for its cakes and dessert jars. Come for a slice of cake in the afternoon, or order a whole one ahead for an occasion.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-mirth-25960-155281",
+   "title": "Mirth",
+   "type": "nightlife",
+   "zone": "indiranagar",
+   "coords": [
+    12.98017,
+    77.64054
+   ],
+   "area": "100 Feet Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Mirth",
+    "zone": "indiranagar",
+    "type": "nightlife"
+   },
+   "why": "A 65-seat cocktail bar on 100 Feet Road, dim and red-lit, with Pan-Asian food that holds up to the drinks. The bar's own advice is to start light and finish strong: begin with something fizzy and fruity, and end on something bold.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Outlook Traveller; Restaurant India; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-travellers-bungalow-25940-155292",
+   "title": "Travellers Bungalow",
+   "type": "restaurant",
+   "zone": "indiranagar",
+   "coords": [
+    12.97023,
+    77.64581
+   ],
+   "area": "12th Main Road, HAL 2nd Stage",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Travellers Bungalow",
+    "zone": "indiranagar",
+    "type": "restaurant"
+   },
+   "why": "Made up to look like an old colonial rest-house — a wooden ceiling, vintage Crompton fans, patterned wallpaper — on 12th Main. The gin cocktails are the draw. The food wanders the world, from khinkali to paella, so order a few small plates to share.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Zee Zest; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-chianti-25867-155244",
+   "title": "Chianti",
+   "type": "restaurant",
+   "zone": "koramangala",
+   "coords": [
+    12.93345,
+    77.62191
+   ],
+   "area": "5th Block, Koramangala",
+   "url": null,
+   "cuisine": "italian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Chianti",
+    "zone": "koramangala",
+    "type": "restaurant"
+   },
+   "why": "The first and smallest Chianti, open in Koramangala 5th Block since 2012 and hardly changed since. The pasta is handmade, and there is a monthly special. Order the pasta over the pizza. It is a small room, so book at weekends.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Brinda S Narayan; Resy; Tripadvisor; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-smoke-house-deli-25943-155197",
+   "title": "Smoke House Deli",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97151,
+    77.59833
+   ],
+   "area": "Lavelle Road",
+   "url": null,
+   "cuisine": "italian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Smoke House Deli",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "The Lavelle Road branch of the all-day European deli, in a bright white room made for a long brunch. Go for weekend brunch, and order the eggs and one of the sandwiches.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-amicii-25961-155282",
+   "title": "Amicii",
+   "type": "nightlife",
+   "zone": "indiranagar",
+   "coords": [
+    12.98062,
+    77.64108
+   ],
+   "area": "100 Feet Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Amicii",
+    "zone": "indiranagar",
+    "type": "nightlife"
+   },
+   "why": "A two-floor pub on 100 Feet Road with a rooftop under a retractable roof, so rain does not cancel the evening. The menu is global comfort food and cocktails, and the calendar runs from karaoke to retro nights. Check what is on before you go.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Restaurant India; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-phurr-25941-155292",
+   "title": "Phurr",
+   "type": "restaurant",
+   "zone": "indiranagar",
+   "coords": [
+    12.97058,
+    77.64584
+   ],
+   "area": "HAL 2nd Stage",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Phurr",
+    "zone": "indiranagar",
+    "type": "restaurant"
+   },
+   "why": "Vegetarian fine dining, and arguably the city's most talked-about. Inventive Indian-fusion plates and mocktails in place of a bar. Take the tasting route, and bring the friend who says vegetarian food is never the main event.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "phurr.co.in; Swiggy Dineout; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-nuage-patisserie-cafe-25940-155282",
+   "title": "Nuage Pâtisserie & Café",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.96996,
+    77.64083
+   ],
+   "area": "1st Cross Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Nuage Pâtisserie & Café",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "A small Indiranagar patisserie-café for French-style pastries and cakes. Order a pastry and a coffee in the afternoon, and take something home in a box.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-hole-in-the-wall-cafe-25870-155251",
+   "title": "The Hole In The Wall Cafe",
+   "type": "cafe",
+   "zone": "koramangala",
+   "coords": [
+    12.93476,
+    77.62549
+   ],
+   "area": "8th Main Road, 4th Block",
+   "url": "https://www.theholeinthewallcafe.org/",
+   "hours": "Tu-Su 08:00-21:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Hole In The Wall Cafe",
+    "zone": "koramangala",
+    "type": "cafe"
+   },
+   "why": "Koramangala's breakfast place since 2009. It started as a 25-seat garage and grew into a villa-like café in a 4th Block lane. It opens at eight. Order the pancakes or waffles, or one of the big breakfast platters, and come on a weekday — weekend mornings mean a queue.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "theholeinthewallcafe.org; LBB; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-truffles-25867-155229",
+   "title": "Truffles",
+   "type": "restaurant",
+   "zone": "koramangala",
+   "coords": [
+    12.93356,
+    77.61432
+   ],
+   "area": "4th B Cross, 5th Block",
+   "url": null,
+   "cuisine": "cake",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Truffles",
+    "zone": "koramangala",
+    "type": "restaurant"
+   },
+   "why": "The Koramangala burger place every student in the city has queued for. American-style burgers, thick shakes and noise. Go on a weekday afternoon, between three and five, to skip the wait.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "LBB; Tripadvisor; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-roastea-25872-155256",
+   "title": "Roastea",
+   "type": "cafe",
+   "zone": "koramangala",
+   "coords": [
+    12.93579,
+    77.62805
+   ],
+   "area": "80 Feet Road, 4th Block",
+   "url": "https://roastea.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Roastea",
+    "zone": "koramangala",
+    "type": "cafe"
+   },
+   "why": "A bungalow café on 80 Feet Road with a garden to sit in, coffee and tea from its own roasting, and vegetarian food. Order a bagel or the handkerchief pasta. It is a good place to work from for a morning.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "roastea.in; LBB; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-nasi-and-mee-25870-155259",
+   "title": "Nasi and Mee",
+   "type": "restaurant",
+   "zone": "koramangala",
+   "coords": [
+    12.93507,
+    77.62928
+   ],
+   "area": "80 Feet Road, 4th Block",
+   "url": "https://www.nasiandmee.co.in/",
+   "cuisine": "asian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Nasi and Mee",
+    "zone": "koramangala",
+    "type": "restaurant"
+   },
+   "why": "A long-running Koramangala spot for Malaysian and Singaporean food. Order the nasi lemak, a char kway teow and the Hainanese chicken rice, and share them.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Tripadvisor; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-daily-sushi-25940-155277",
+   "title": "Daily Sushi",
+   "type": "restaurant",
+   "zone": "indiranagar",
+   "coords": [
+    12.96984,
+    77.63852
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "asian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Daily Sushi",
+    "zone": "indiranagar",
+    "type": "restaurant"
+   },
+   "why": "A casual sushi bar that made maki an everyday lunch in Bengaluru rather than an occasion. Order a couple of rolls and a bowl. Quick, reliable, and priced for a weekday.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-reservoire-25867-155244",
+   "title": "The Reservoire",
+   "type": "nightlife",
+   "zone": "koramangala",
+   "coords": [
+    12.93339,
+    77.62224
+   ],
+   "area": "17th Main Road, 5th Block",
+   "url": "https://www.thereservoire.com",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "The Reservoire",
+    "zone": "koramangala",
+    "type": "nightlife"
+   },
+   "why": "A multi-level cocktail bar on 17th Main that claims to be India's largest, with a menu of more than two hundred cocktails and a rooftop under a retractable roof. Come with a group and work your way down the list.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "thereservoire.com; LBB; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-koramangala-social-25871-155228",
+   "title": "Koramangala Social",
+   "type": "nightlife",
+   "zone": "koramangala",
+   "coords": [
+    12.9356,
+    77.61418
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Koramangala Social",
+    "zone": "koramangala",
+    "type": "nightlife"
+   },
+   "why": "The Social chain's Koramangala outpost: a café-bar that is a place to work by day and a loud, cheap bar by night. Cocktails come in jars, the food is made to share, and nobody minds the noise.",
+   "quality": 2,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-old-madras-baking-company-25939-155201",
+   "title": "Old Madras Baking Company",
+   "type": "bakery",
+   "zone": "richmond-town",
+   "coords": [
+    12.96974,
+    77.60038
+   ],
+   "area": "Saint Mark's Road",
+   "url": null,
+   "hours": "08:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Old Madras Baking Company",
+    "zone": "richmond-town",
+    "type": "bakery"
+   },
+   "why": "A bakery on St Mark's Road with a proper counter of breads, pastries and cakes, and a café to eat them in. Order a croissant and a coffee in the morning, and take a loaf home.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-kind-25841-155370",
+   "title": "The Kind",
+   "type": "cafe",
+   "zone": "bellanduru",
+   "coords": [
+    12.92027,
+    77.68479
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Kind",
+    "zone": "bellanduru",
+    "type": "cafe"
+   },
+   "why": "The Kind Roastery & Brew Room: specialty coffee roasted on site, and a menu that looks after vegan and gluten-free diets without making a fuss about it. Ask what is on the brew bar this week and have it as a pour-over.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-lucky-chan-25840-155369",
+   "title": "Lucky Chan",
+   "type": "restaurant",
+   "zone": "bellanduru",
+   "coords": [
+    12.92016,
+    77.68454
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Lucky Chan",
+    "zone": "bellanduru",
+    "type": "restaurant"
+   },
+   "why": "A lively, neon-lit pan-Asian bar-restaurant. Order dim sum and a bowl of noodles to share, with a cocktail. It is a loud dinner with friends rather than a quiet one.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-pizza-bakery-25841-155369",
+   "title": "The Pizza Bakery",
+   "type": "restaurant",
+   "zone": "bellanduru",
+   "coords": [
+    12.92066,
+    77.68443
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "pizza",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Pizza Bakery",
+    "zone": "bellanduru",
+    "type": "restaurant"
+   },
+   "why": "Wood-fired, thin-crust pizza from a local chain that takes its dough seriously. Order one of the classic pies and a salad. An easy, dependable weeknight dinner.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-kampot-25841-155369",
+   "title": "Kampot",
+   "type": "restaurant",
+   "zone": "bellanduru",
+   "coords": [
+    12.92066,
+    77.68453
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Kampot",
+    "zone": "bellanduru",
+    "type": "restaurant"
+   },
+   "why": "A pan-Asian restaurant named after the Cambodian pepper town, cooking Vietnamese and Cambodian dishes alongside the dim sum. Order something Khmer, and finish with the mango sticky rice.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Zomato; EazyDiner; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-radio-bar-25841-155372",
+   "title": "Radio Bar",
+   "type": "restaurant",
+   "zone": "bellanduru",
+   "coords": [
+    12.92063,
+    77.68605
+   ],
+   "area": null,
+   "url": null,
+   "hours": "12:00-01:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Radio Bar",
+    "zone": "bellanduru",
+    "type": "restaurant"
+   },
+   "why": "The Mumbai bar's first Bengaluru outpost. The walls are covered in cassettes and CDs, there is live music or a DJ most nights, and the drinks are classic cocktails and craft beer. Come for the retro soundtrack and a big table of friends.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Hospibuz; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-bellandur-social-25876-155389",
+   "title": "Bellandur Social",
+   "type": "restaurant",
+   "zone": "panathur",
+   "coords": [
+    12.93777,
+    77.69467
+   ],
+   "area": "Outer Ring Road",
+   "url": null,
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Bellandur Social",
+    "zone": "panathur",
+    "type": "restaurant"
+   },
+   "why": "The Social chain's Outer Ring Road outpost: a place to work from by day and a loud, cheap bar by night, full of the tech parks around it. Cocktails come in jars and the plates are made to share.",
+   "quality": 2,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-biergarten-brewery-kitchen-25867-155228",
+   "title": "Biergarten Brewery & Kitchen",
+   "type": "nightlife",
+   "zone": "koramangala",
+   "coords": [
+    12.93344,
+    77.61412
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "pizza",
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Biergarten Brewery & Kitchen",
+    "zone": "koramangala",
+    "type": "nightlife"
+   },
+   "why": "A German-style beer garden in Koramangala, with house-brewed wheat beers and lagers and a big open-air deck. Order the hefeweizen and a plate of sausages, and sit outside.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-hard-rock-cafe-25952-155203",
+   "title": "Hard Rock Cafe",
+   "type": "restaurant",
+   "zone": "shivajinagar",
+   "coords": [
+    12.97623,
+    77.60148
+   ],
+   "area": "Saint Mark's Road",
+   "url": null,
+   "hours": "Mo-Su 12:00-23:30",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Hard Rock Cafe",
+    "zone": "shivajinagar",
+    "type": "restaurant"
+   },
+   "why": "The St Mark's Road Hard Rock: a big, loud room of rock memorabilia, with live bands on many nights. You know what it is. Go for a gig night, a burger and a pitcher, and do not expect anything quiet.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-hard-rock-cafe-25974-155472",
+   "title": "Hard Rock Cafe",
+   "type": "restaurant",
+   "zone": "pattanduru-agrahara",
+   "coords": [
+    12.98695,
+    77.73608
+   ],
+   "area": "Whitefield",
+   "url": null,
+   "hours": "12:00-24:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Hard Rock Cafe",
+    "zone": "pattanduru-agrahara",
+    "type": "restaurant"
+   },
+   "why": "The Whitefield Hard Rock, closer to the tech parks: the same memorabilia, burgers and live music as the city-centre one, for an after-work night out on the east side.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-oota-bangalore-25965-155443",
+   "title": "Oota Bangalore",
+   "type": "restaurant",
+   "zone": "epip-zone",
+   "coords": [
+    12.9824,
+    77.72171
+   ],
+   "area": "Whitefield, near ITPL",
+   "url": "https://oota.in/",
+   "hours": "Mo-Su 12:00-15:00,19:00-23:00; Sa-Su 08:00-11:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Oota Bangalore",
+    "zone": "epip-zone",
+    "type": "restaurant"
+   },
+   "why": "Karnataka on one menu, from the Windmills team near ITPL. The dishes travel the state: Mangalore buns and ghee roast from the coast, Maddur vade from the south, donne biryani, and food from the Western Ghats and the north. Order across regions and share everything. The bar pours Windmills' own beer.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "LBB; Tripadvisor; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-lavonne-25980-155455",
+   "title": "Lavonne",
+   "type": "cafe",
+   "zone": "hoodi",
+   "coords": [
+    12.9898,
+    77.72766
+   ],
+   "area": "Whitefield",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Lavonne",
+    "zone": "hoodi",
+    "type": "cafe"
+   },
+   "why": "The Whitefield outpost of the Lavonne pastry school's café. Slow-fermented sourdough and croissants that flake properly — the laminated ham-and-cheese is the one to order. Go in the morning, and take a loaf home.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Lavonne; MyReserveTable; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-farmhouse-kitchen-bakery-25915-155466",
+   "title": "The Farmhouse Kitchen & Bakery",
+   "type": "restaurant",
+   "zone": "balagere",
+   "coords": [
+    12.95745,
+    77.73291
+   ],
+   "area": "Lake View Farm, Varthur Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "match": {
+    "name": "The Farmhouse Kitchen & Bakery",
+    "zone": "balagere",
+    "type": "restaurant"
+   },
+   "why": "A bakery-kitchen on a farm off Varthur Road, which is as close to the countryside as Whitefield gets. Go for a slow weekend breakfast outdoors, and buy bread on the way out.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "The Vine Bangalore; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-lakeview-milk-bar-25936-155499",
+   "title": "Lakeview Milk Bar",
+   "type": "deli",
+   "zone": "whitefield",
+   "coords": [
+    12.96813,
+    77.74937
+   ],
+   "area": "Whitefield Main Road",
+   "url": "https://lakeviewmilkbar.in",
+   "hours": "10:30-13:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Lakeview Milk Bar",
+    "zone": "whitefield",
+    "type": "deli"
+   },
+   "why": "The Whitefield branch of the MG Road milk bar that has been making sundaes and thick shakes since 1930. The same menu as the original, without the drive into town.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "lakeviewmilkbar.in; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-corner-house-25961-155502",
+   "title": "Corner House",
+   "type": "deli",
+   "zone": "whitefield",
+   "coords": [
+    12.98039,
+    77.75075
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Corner House",
+    "zone": "whitefield",
+    "type": "deli"
+   },
+   "why": "The east-side branch of Bengaluru's own ice-cream parlour. Order the Death by Chocolate, which is what everyone orders. Best late, after dinner.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-blue-tokai-coffee-roasters-25970-155499",
+   "title": "Blue Tokai Coffee Roasters",
+   "type": "cafe",
+   "zone": "whitefield",
+   "coords": [
+    12.98518,
+    77.74974
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Tokai Coffee Roasters",
+    "zone": "whitefield",
+    "type": "cafe"
+   },
+   "why": "The Whitefield branch of the Delhi roaster that buys directly from Indian estates. Order a pour-over of whichever single estate they are featuring, or a cold brew on a hot afternoon. A reliable place to work from.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "bluetokaicoffee.com; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-veena-stores-26011-155139",
+   "title": "Veena Stores",
+   "type": "restaurant",
+   "zone": "malleswaram",
+   "coords": [
+    13.00567,
+    77.56929
+   ],
+   "area": "15th Cross, Malleshwaram",
+   "url": null,
+   "hours": "Mo-Sa 06:30-12:00, 15:30-21:00; Su 06:30-12:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Veena Stores",
+    "zone": "malleswaram",
+    "type": "restaurant"
+   },
+   "why": "A standing-only breakfast counter on 15th Cross that began as a condiments shop and has been serving since 1977. Order the idli-vada with the thin green chutney, which is unlimited and the reason people come. Eat on the pavement, early.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Karnataka Tourism; Finely Chopped; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-hotel-janatha-25998-155142",
+   "title": "Hotel Janatha",
+   "type": "restaurant",
+   "zone": "malleswaram",
+   "coords": [
+    12.99914,
+    77.57109
+   ],
+   "area": "8th Cross, Malleshwaram",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Hotel Janatha",
+    "zone": "malleswaram",
+    "type": "restaurant"
+   },
+   "why": "A Malleshwaram dosa house going since the 1970s, a few doors from the 8th Cross market. The butter masala dosa comes with a smear of red chutney inside, which is Janatha's own. Quieter than CTR, and many locals prefer it.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "LBB; MetroSaga; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-hallimane-25991-155144",
+   "title": "Hallimane",
+   "type": "restaurant",
+   "zone": "malleswaram",
+   "coords": [
+    12.99553,
+    77.57177
+   ],
+   "area": "Malleshwaram",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Hallimane",
+    "zone": "malleswaram",
+    "type": "restaurant"
+   },
+   "why": "A big, busy self-service vegetarian place built to look like a village house, with Karnataka food at canteen prices. Order the akki rotti and a Mysore-style meal, and pay at the counter first. It is a favourite with IISc students.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "IISc student guides; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-corner-house-26056-155145",
+   "title": "Corner House",
+   "type": "cafe",
+   "zone": "rmv-2nd-stage",
+   "coords": [
+    13.02801,
+    77.57258
+   ],
+   "area": "New BEL Road",
+   "url": null,
+   "cuisine": "ice_cream",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Corner House",
+    "zone": "rmv-2nd-stage",
+    "type": "cafe"
+   },
+   "why": "The New BEL Road branch of Bengaluru's own ice-cream parlour, a short walk from the IISc gates. Order the Death by Chocolate, which is what everyone orders.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-glen-s-bakehouse-26057-155146",
+   "title": "Glen's Bakehouse",
+   "type": "bakery",
+   "zone": "rmv-2nd-stage",
+   "coords": [
+    13.02828,
+    77.5728
+   ],
+   "area": "New BEL Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Glen's Bakehouse",
+    "zone": "rmv-2nd-stage",
+    "type": "bakery"
+   },
+   "why": "The New BEL Road branch of the bakery-café, close to IISc: red velvet, cakes by the slice and a coffee. An easy afternoon stop.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-truffles-26057-155146",
+   "title": "Truffles",
+   "type": "restaurant",
+   "zone": "rmv-2nd-stage",
+   "coords": [
+    13.0283,
+    77.57312
+   ],
+   "area": "New BEL Road",
+   "url": null,
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Truffles",
+    "zone": "rmv-2nd-stage",
+    "type": "restaurant"
+   },
+   "why": "The New BEL Road branch of the burger place Bengaluru's students have queued for since the Koramangala original. American-style burgers and thick shakes, cheap and loud.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "LBB; Tripadvisor; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-kind-roastery-and-brewroom-25821-155179",
+   "title": "The Kind Roastery and Brewroom",
+   "type": "cafe",
+   "zone": "jp-nagar",
+   "coords": [
+    12.91059,
+    77.58961
+   ],
+   "area": null,
+   "url": "https://thekindindia.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Kind Roastery and Brewroom",
+    "zone": "jp-nagar",
+    "type": "cafe"
+   },
+   "why": "The JP Nagar Kind, a short ride from IIM: specialty coffee roasted in-house, and a menu that looks after vegan and gluten-free eaters. Ask what is on the brew bar and have it as a pour-over.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-glen-s-bakehouse-25772-155193",
+   "title": "Glen's Bakehouse",
+   "type": "bakery",
+   "zone": "kothnur",
+   "coords": [
+    12.88586,
+    77.59647
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Glen's Bakehouse",
+    "zone": "kothnur",
+    "type": "bakery"
+   },
+   "why": "The Glen's closest to IIM Bangalore, off Bannerghatta Road. Cakes by the slice, red velvet and a coffee — the standard escape from campus for an afternoon.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-nagarjuna-25809-155203",
+   "title": "Nagarjuna",
+   "type": "restaurant",
+   "zone": "btm-layout",
+   "coords": [
+    12.90473,
+    77.60148
+   ],
+   "area": "Bannerghatta Road",
+   "url": null,
+   "cuisine": "indian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Nagarjuna",
+    "zone": "btm-layout",
+    "type": "restaurant"
+   },
+   "why": "Andhra meals on a banana leaf, from the Residency Road institution. It is refilled until you stop them. Order the meal with the chicken or mutton fry, and have the gunpowder with ghee on the rice. About a kilometre from IIM.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-corner-house-25835-155186",
+   "title": "Corner House",
+   "type": "deli",
+   "zone": "jp-nagar",
+   "coords": [
+    12.91736,
+    77.59317
+   ],
+   "area": "26th Main",
+   "url": "https://cornerhouse.in/",
+   "cuisine": "ice_cream",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Corner House",
+    "zone": "jp-nagar",
+    "type": "deli"
+   },
+   "why": "The Corner House nearest IIM Bangalore, for the Death by Chocolate after dinner.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-uru-brewpark-25811-155202",
+   "title": "URU Brewpark",
+   "type": "nightlife",
+   "zone": "btm-layout",
+   "coords": [
+    12.90573,
+    77.60093
+   ],
+   "area": "Maratt Estate, Bannerghatta Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "URU Brewpark",
+    "zone": "btm-layout",
+    "type": "nightlife"
+   },
+   "why": "A brewery set in a park on Bannerghatta Road: one and a half acres, with a container bar, a bistro, a café and a gin garden where you build your own gin cocktail. It is pet-friendly and best in daylight, so go for a long weekend afternoon.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "urubrewpark.in; LBB; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-beku-25821-155193",
+   "title": "Beku",
+   "type": "restaurant",
+   "zone": "jp-nagar",
+   "coords": [
+    12.91059,
+    77.59664
+   ],
+   "area": "9th Cross, JP Nagar 3rd Phase",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food",
+    "books"
+   ],
+   "match": {
+    "name": "Beku",
+    "zone": "jp-nagar",
+    "type": "restaurant"
+   },
+   "why": "A café, bakery and bookshop in one — beku means 'I want' in Kannada. Order an eggless croissant and the white chocolate and rose latte, then browse the shelves. Good for working from, and there are events in the evenings.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; Bangalore Eats; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-diha-25812-155194",
+   "title": "Diha",
+   "type": "cafe",
+   "zone": "jp-nagar",
+   "coords": [
+    12.90613,
+    77.59711
+   ],
+   "area": "15th Cross, JP Nagar 4th Phase",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Diha",
+    "zone": "jp-nagar",
+    "type": "cafe"
+   },
+   "why": "A specialty coffee bar by day and a wine bar by night, with wood-fired pizza. Come for single-origin coffee in the afternoon, or for a pizza and a glass of something from the short boutique wine list.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "diha.cafe; Curly Tales; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-154-breakfast-club-25813-155185",
+   "title": "154 Breakfast Club",
+   "type": "restaurant",
+   "zone": "jp-nagar",
+   "coords": [
+    12.90656,
+    77.59256
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "154 Breakfast Club",
+    "zone": "jp-nagar",
+    "type": "restaurant"
+   },
+   "why": "An all-day breakfast place: pancakes, eggs any way, and waffles, served whenever you happen to wake up. Go for a late weekend breakfast.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-rameshwaram-cafe-25813-155181",
+   "title": "The Rameshwaram Cafe",
+   "type": "restaurant",
+   "zone": "jp-nagar",
+   "coords": [
+    12.90651,
+    77.59059
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Rameshwaram Cafe",
+    "zone": "jp-nagar",
+    "type": "restaurant"
+   },
+   "why": "The JP Nagar branch of the darshini that turned ghee podi idli and a crisp ghee dosa into a queue at every hour of the day. Order at the counter, eat standing, and have a filter coffee to finish.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-bengaluru-cafe-25878-155168",
+   "title": "Bengaluru Cafe",
+   "type": "restaurant",
+   "zone": "basavanagudi",
+   "coords": [
+    12.93921,
+    77.5839
+   ],
+   "area": "9th Cross, Jayanagar 2nd Block",
+   "url": null,
+   "cuisine": "south_indian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Bengaluru Cafe",
+    "zone": "basavanagudi",
+    "type": "restaurant"
+   },
+   "why": "A Jayanagar 2nd Block breakfast counter where the butter masala dosa is made in front of you and costs almost nothing. Idli and uppittu are just as good. Go early.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Tripadvisor; magicpin; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-basaveshwar-khanavali-25858-155172",
+   "title": "Basaveshwar Khanavali",
+   "type": "restaurant",
+   "zone": "jayanagar",
+   "coords": [
+    12.92884,
+    77.58578
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Basaveshwar Khanavali",
+    "zone": "jayanagar",
+    "type": "restaurant"
+   },
+   "why": "North Karnataka meals in Jayanagar: jolada rotti (jowar flatbread), ennegai brinjal, pulses and chutney powders on a plate that keeps being refilled. Go for lunch, and come hungry.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-taaza-thindi-25845-155186",
+   "title": "Taaza Thindi",
+   "type": "restaurant",
+   "zone": "jayanagar",
+   "coords": [
+    12.92261,
+    77.5932
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "indian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Taaza Thindi",
+    "zone": "jayanagar",
+    "type": "restaurant"
+   },
+   "why": "A tiny, stand-and-eat Jayanagar darshini with a short menu and a long queue. Order the masala dosa and a vada, then a coffee. It is fast, cheap and good.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-blue-tokai-coffee-roasters-25845-155169",
+   "title": "Blue Tokai Coffee Roasters",
+   "type": "cafe",
+   "zone": "jayanagar",
+   "coords": [
+    12.92237,
+    77.5846
+   ],
+   "area": "10th Main Road, Jayanagar",
+   "url": "https://bluetokaicoffee.com/",
+   "hours": "Mo-Su 08:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Tokai Coffee Roasters",
+    "zone": "jayanagar",
+    "type": "cafe"
+   },
+   "why": "The Jayanagar Blue Tokai on 10th Main. Order a pour-over of whichever single estate they are featuring, or a cold brew on a hot afternoon. A dependable place to work from.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "bluetokaicoffee.com; Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-iris-cafe-and-kitchen-25811-155166",
+   "title": "Iris Cafe and Kitchen",
+   "type": "cafe",
+   "zone": "jp-nagar",
+   "coords": [
+    12.9057,
+    77.58318
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Iris Cafe and Kitchen",
+    "zone": "jp-nagar",
+    "type": "cafe"
+   },
+   "why": "A JP Nagar café-kitchen with a relaxed room and a menu for brunch and long lunches. Go on a weekend late morning.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-silaa-the-garden-cafe-26009-155142",
+   "title": "Silaa - The Garden Cafe",
+   "type": "cafe",
+   "zone": "malleswaram",
+   "coords": [
+    13.00439,
+    77.57099
+   ],
+   "area": "Malleshwaram",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Silaa - The Garden Cafe",
+    "zone": "malleswaram",
+    "type": "cafe"
+   },
+   "why": "A café in a garden in Malleshwaram, with tables under the trees, which is exactly the point. Come for a slow breakfast or a long coffee in the afternoon, and sit outside.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-third-wave-coffee-roasters-26017-155160",
+   "title": "Third Wave Coffee Roasters",
+   "type": "cafe",
+   "zone": "sadashivanagar",
+   "coords": [
+    13.0083,
+    77.57983
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Third Wave Coffee Roasters",
+    "zone": "sadashivanagar",
+    "type": "cafe"
+   },
+   "why": "The Sadashivanagar Third Wave, a short ride from IISc: a reliable flat white or pour-over, and plenty of tables to work from.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-smoor-26015-155160",
+   "title": "Smoor",
+   "type": "cafe",
+   "zone": "sadashivanagar",
+   "coords": [
+    13.00774,
+    77.57984
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Smoor",
+    "zone": "sadashivanagar",
+    "type": "cafe"
+   },
+   "why": "The Sadashivanagar Smoor, for chocolate desserts, cakes and a hot chocolate. Order one of the chocolate tarts. It is an easy dessert stop close to IISc.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-1522-the-pub-26066-155138",
+   "title": "1522 - The Pub",
+   "type": "nightlife",
+   "zone": "rmv-2nd-stage",
+   "coords": [
+    13.03295,
+    77.56917
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "1522 - The Pub",
+    "zone": "rmv-2nd-stage",
+    "type": "nightlife"
+   },
+   "why": "A no-frills, budget pub near New BEL Road that IISc students have used for years. Cheap beer, bar snacks and a crowded room. You go for the company, not the décor.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "cheap",
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-corner-house-25872-155230",
+   "title": "Corner House",
+   "type": "deli",
+   "zone": "koramangala",
+   "coords": [
+    12.93605,
+    77.61507
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "ice_cream",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Corner House",
+    "zone": "koramangala",
+    "type": "deli"
+   },
+   "why": "The Corner House nearest Christ University, for the Death by Chocolate after class.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Zomato; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-shiro-25944-155193",
+   "title": "Shiro",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97185,
+    77.59641
+   ],
+   "area": "UB City, Vittal Mallya Road",
+   "url": null,
+   "cuisine": "asian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Shiro",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "UB City's big, dramatic Asian room: a high ceiling, giant statues, and sushi and pan-Asian plates. It is a place for an occasion or a date. Order the sushi and a cocktail, and sit on the terrace if the weather allows.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "LBB; Slurrp; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-toscano-25944-155192",
+   "title": "Toscano",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97179,
+    77.59624
+   ],
+   "area": "UB City, Vittal Mallya Road",
+   "url": null,
+   "cuisine": "italian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Toscano",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "Reliable Tuscan-leaning Italian in UB City, with pastas, thin-crust pizzas and a good tiramisu. A safe choice for a group that cannot agree, and the terrace is pleasant at lunch.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-sanchez-25943-155193",
+   "title": "Sanchez",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97173,
+    77.59635
+   ],
+   "area": "UB City, Vittal Mallya Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sanchez",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "A Mexican cantina in UB City. Order tacos and a margarita, and sit outside on a warm evening.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "LBB; Slurrp; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-farzi-cafe-25944-155191",
+   "title": "Farzi Cafe",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97204,
+    77.59565
+   ],
+   "area": "UB City, Vittal Mallya Road",
+   "url": null,
+   "cuisine": "chinese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Farzi Cafe",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "Zorawar Kalra's modern Indian café, where familiar dishes come with a twist and a bit of theatre on the plate. Order a few small plates to share, and one of the cocktails. It is loud and fun rather than serious.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-laduree-25943-155192",
+   "title": "Laduree",
+   "type": "bakery",
+   "zone": "richmond-town",
+   "coords": [
+    12.97171,
+    77.59618
+   ],
+   "area": "UB City, Vittal Mallya Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Laduree",
+    "zone": "richmond-town",
+    "type": "bakery"
+   },
+   "why": "The Paris macaron house, in UB City. Buy a box of macarons — rose and salted caramel are the classics — and have a tea and a pastry in the salon if you have time.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-cafe-noir-25944-155192",
+   "title": "Cafe Noir",
+   "type": "restaurant",
+   "zone": "richmond-town",
+   "coords": [
+    12.97194,
+    77.59588
+   ],
+   "area": "UB City, Vittal Mallya Road",
+   "url": null,
+   "cuisine": "french",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Cafe Noir",
+    "zone": "richmond-town",
+    "type": "restaurant"
+   },
+   "why": "A French-style café-bistro in UB City for croissants, quiche, crêpes and a proper coffee. A good brunch before a walk in Cubbon Park next door.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-skyye-25943-155193",
+   "title": "Skyye",
+   "type": "nightlife",
+   "zone": "richmond-town",
+   "coords": [
+    12.97153,
+    77.59639
+   ],
+   "area": "UB City, Vittal Mallya Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Skyye",
+    "zone": "richmond-town",
+    "type": "nightlife"
+   },
+   "why": "A rooftop bar at the top of UB City, with the city spread out around you. Come for a drink at sunset, before it turns into a club later in the night.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
+  },
+  {
+   "id": "osm-the-biere-club-25942-155195",
+   "title": "The Biere Club",
+   "type": "nightlife",
+   "zone": "richmond-town",
+   "coords": [
+    12.97096,
+    77.59756
+   ],
+   "area": "Vittal Mallya Road",
+   "url": "http://www.thebiereclub.com/",
+   "hours": "11:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "The Biere Club",
+    "zone": "richmond-town",
+    "type": "nightlife"
+   },
+   "why": "Bengaluru's first microbrewery, open since 2009 just off UB City. It is where the city's craft-beer habit began. Order a taster of the house beers and some bar food to go with them.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Zomato; published coverage; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-29"
   }
  ]
 }

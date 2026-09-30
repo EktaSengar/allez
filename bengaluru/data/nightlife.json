@@ -106,7 +106,7 @@
         "cheap"
       ],
       "lastVerified": "2026-09-28",
-      "quality": 5,
+      "quality": 4,
       "uniqueness": 5,
       "id": "ranga-shankara",
       "title": "Ranga Shankara",
@@ -218,11 +218,12 @@
       "imageCredit": "Indiranagar Seller · CC BY-SA 4.0"
     },
     {
-      "type": "bar",
+      "type": "speakeasy",
       "provenance": "editorial",
       "categories": [
         "nightlife",
-        "bar"
+        "bar",
+        "speakeasy"
       ],
       "indoor": true,
       "weatherSensitive": false,
@@ -231,7 +232,7 @@
         "couple"
       ],
       "lastVerified": "2026-09-28",
-      "quality": 5,
+      "quality": 4,
       "uniqueness": 5,
       "id": "soka-bengaluru",
       "title": "Soka",
@@ -274,7 +275,7 @@
         "couple"
       ],
       "lastVerified": "2026-09-28",
-      "quality": 5,
+      "quality": 4,
       "uniqueness": 4,
       "id": "bar-spirit-forward",
       "title": "Bar Spirit Forward",
@@ -355,7 +356,7 @@
         "couple"
       ],
       "lastVerified": "2026-09-28",
-      "quality": 5,
+      "quality": 4,
       "uniqueness": 5,
       "id": "vv-puram-food-street",
       "title": "VV Puram Food Street",
@@ -429,6 +430,193 @@
       "imageSubject": "Church Street, Bangalore",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "speakeasy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "speakeasy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-29",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "zlb23-leela",
+      "title": "ZLB23",
+      "emoji": "🥃",
+      "zone": "kodihalli",
+      "coords": [
+        12.96102,
+        77.64854
+      ],
+      "coordsFrom": "OpenStreetMap way/30801153 (The Leela Palace)",
+      "area": "The Leela Palace, Old Airport Road",
+      "priceNote": "Cocktails ~₹1,000+",
+      "durationMin": 90,
+      "url": "https://www.theleela.com/the-leela-palace-bengaluru/restaurants/zlb-23",
+      "source": "theleela.com; Asia's 50 Best Bars 2024",
+      "why": "A Kyoto-style speakeasy hidden in the Leela's garden. You book, then get a location pin on the night that tells you where the door is. The cocktails bring in Japanese and Asian flavours, often with live jazz. It was named India's best bar at Asia's 50 Best Bars 2024.",
+      "labels": [
+        "dontmiss",
+        "bookahead"
+      ],
+      "booking": true,
+      "priceLevel": 4
+    },
+    {
+      "type": "speakeasy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "speakeasy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-29",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "cloak-society-ritz",
+      "title": "The Cloak Society",
+      "emoji": "🥃",
+      "zone": "richmond-town",
+      "coords": [
+        12.96771,
+        77.60183
+      ],
+      "coordsFrom": "OpenStreetMap way/331543139 (The Ritz-Carlton)",
+      "area": "3rd floor, The Ritz-Carlton, Residency Road",
+      "priceNote": "Cocktails ~₹1,000+",
+      "durationMin": 90,
+      "url": "https://www.ritzcarlton.com/en/hotels/blrrz-the-ritz-carlton-bangalore/dining/",
+      "source": "ritzcarlton.com; Hey Bengaluru",
+      "why": "Twenty-five seats on the third floor of the Ritz-Carlton, built around theatre: every drink comes with a story and a bit of ritual. Reservations only. Treat it as the evening's main event, not a quick stop.",
+      "labels": [
+        "bookahead"
+      ],
+      "booking": true,
+      "priceLevel": 4
+    },
+    {
+      "type": "speakeasy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "speakeasy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-29",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "403-forbidden-indiranagar",
+      "title": "403 Forbidden",
+      "emoji": "🥃",
+      "zone": "indiranagar",
+      "coords": [
+        12.97038,
+        77.6407
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "12th Main Road, HAL 2nd Stage",
+      "priceNote": "Cocktails ~₹1,000+",
+      "durationMin": 90,
+      "url": "https://403forbiddenbar.com/",
+      "source": "403forbiddenbar.com; Restaurant India; Luxebook",
+      "why": "An Indiranagar bar named after the error code, with a room built to get you off your phone: a double-height bar across two floors, and low light. Order the Picante, or ask for the made-to-order cocktail they build around you.",
+      "labels": [
+        "bookahead"
+      ],
+      "booking": true,
+      "priceLevel": 4
+    },
+    {
+      "type": "speakeasy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "speakeasy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-29",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "bar-wild-indiranagar",
+      "title": "Bar Wild",
+      "emoji": "🥃",
+      "zone": "indiranagar",
+      "coords": [
+        12.97018,
+        77.63851
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "12th A Main Road",
+      "priceNote": "Cocktails ~₹1,000+",
+      "durationMin": 90,
+      "url": "https://www.zomato.com/bangalore/bar-wild-indiranagar-bangalore",
+      "source": "Coqtail; Zomato",
+      "why": "A cocktail bar behind an easy-to-miss door off 12th Main, with drinks built on Indian ingredients. Go for a couple of rounds before dinner in Indiranagar, and ask what is new on the menu.",
+      "labels": [],
+      "booking": false,
+      "priceLevel": 4
+    },
+    {
+      "type": "speakeasy",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "bar",
+        "speakeasy"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "lastVerified": "2026-09-29",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "cahoots-brigade-road",
+      "title": "Cahoots",
+      "emoji": "🥃",
+      "zone": "richmond-town",
+      "coords": [
+        12.97328,
+        77.60752
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Brigade Road",
+      "priceNote": "Cocktails ~₹1,000+",
+      "durationMin": 90,
+      "url": "https://www.zomato.com/bangalore/cahoots-classic-bar-house-brigade-road-bangalore",
+      "source": "Hospitality News; Zomato",
+      "why": "A vintage-style classic bar on Brigade Road: old-fashioned cocktails done properly, and a kitchen that takes food seriously. It is more a hideaway than a hidden bar, and the calmest drink on a loud street.",
+      "labels": [],
+      "booking": false,
+      "priceLevel": 4
     }
   ]
 }
