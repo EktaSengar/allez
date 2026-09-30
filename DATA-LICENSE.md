@@ -35,6 +35,17 @@ card credits its source, and the text stays under the same licence here.
 The facts beside it come from Wikidata, which is
 [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 
+### Researched place descriptions
+
+The `why` text of researched records in `*/data/editorial.json`,
+`*/data/places.json` and `*/data/nightlife.json` is written for this
+site, in its own words, from three kinds of source only: Wikipedia
+(CC BY-SA 4.0), the venue's own website, and OpenStreetMap. Each record
+names its sources in `source`. Where a record draws on Wikipedia, its
+text is offered under CC BY-SA 4.0 as well. Commercial review and
+listing sites (Zomato, Swiggy/District, EazyDiner, LBB, Tripadvisor,
+Time Out, magicpin and the like) and magazines are not used.
+
 ## Tech conferences — MIT and CC BY-NC 4.0
 
 `*/data/conferences.json` (every city) is built by
