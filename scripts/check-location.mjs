@@ -336,7 +336,7 @@ const EXPECT = {
        97 on 23 September, when list de-duplication stopped merging
        same-named places kilometres apart: a bare map entry for one branch
        of a common name had been swallowing the write-up of another. */
-    floor: 97
+    floor: 139
   },
   'new-york': {
     /* One per borough, which is how this city is actually divided, plus
@@ -413,7 +413,7 @@ const EXPECT = {
        are Toit and Soka in Indiranagar, VV Puram and the old centre, and
        nothing yet in Koramangala, Jayanagar or Malleswaram of their own.
        A bar or a late kitchen in each of those closes it. */
-    overshare: 21,
+    overshare: 14,
     /* 18 off the notable tier alone; 28 with twelve editorial records;
        62 with four markets and an Iyengar bakery; 120 with ten cafés and
        bakeries, when those two columns had been dead in all forty sampled
@@ -430,7 +430,7 @@ const EXPECT = {
        described as gone — "was a vegetarian restaurant", "was a film
        theatre". New Krishna Bhavan, The Kitchen of Joy and the Plaza were
        the answer in six cells, and a closed restaurant is no answer. */
-    floor: 114
+    floor: 92
   }
 };
 
