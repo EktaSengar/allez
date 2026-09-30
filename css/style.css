@@ -1043,6 +1043,7 @@ body[data-view="away"]    { --accent: #3f5e7a; --blush: #93add0; }
 .chip.mood { font-size: .84rem; padding: .38rem .85rem; }
 
 .missions { display: grid; grid-template-columns: 1fr; gap: 1.6rem; }
+.missions-fold { margin: 1.4rem 0 0; text-align: center; }
 @media (min-width: 900px) { .missions { grid-template-columns: 1fr 1fr; } }
 
 .mission {
