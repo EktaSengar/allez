@@ -262,6 +262,77 @@
       "durationMin": 180,
       "priceLevel": 0,
       "booking": false
+    },
+    {
+      "id": "goethe-german-courses",
+      "title": "German at Max Müller Bhavan",
+      "emoji": "🇩🇪",
+      "type": "class",
+      "mode": "do",
+      "group": "learn",
+      "zone": "indiranagar",
+      "coords": [
+        12.97833,
+        77.64437
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "categories": [
+        "learn",
+        "language"
+      ],
+      "rhythm": "weekly",
+      "commitment": "course",
+      "cadence": "Term-long courses, several evenings or a weekend block each week",
+      "firstStep": "Book a placement test on the Goethe-Institut Bangalore course page",
+      "area": "716, CMH Road",
+      "priceNote": "Paid course; fees on the course page",
+      "indoor": true,
+      "weatherSensitive": false,
+      "url": "https://www.goethe.de/ins/in/en/sta/ban.html",
+      "source": "goethe.de",
+      "lastVerified": "2026-10-01",
+      "why": "The institute that has taught Bengaluru German since 1961. Courses run for a full term and come with the library and the film programme. It suits someone who wants a fixed evening each week.",
+      "goodFor": [
+        "evening",
+        "learn"
+      ],
+      "quality": 4,
+      "uniqueness": 3
+    },
+    {
+      "id": "indiranagar-sangeetha-sabha-school",
+      "title": "Classical music and dance at Indiranagar Sangeetha Sabha",
+      "emoji": "🎶",
+      "type": "class",
+      "mode": "do",
+      "group": "make",
+      "zone": "indiranagar",
+      "coords": [
+        12.97244,
+        77.64461
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "categories": [
+        "music",
+        "dance",
+        "learn"
+      ],
+      "rhythm": "weekly",
+      "commitment": "course",
+      "cadence": "Weekly lessons through the year",
+      "firstStep": "Call the Sabha office to ask which teachers take adult beginners",
+      "area": "Purandara Bhavana, 8th Main, HAL 2nd Stage",
+      "indoor": true,
+      "weatherSensitive": false,
+      "url": "https://www.isangeethasabha.in/",
+      "source": "isangeethasabha.in; Wikipedia",
+      "lastVerified": "2026-10-01",
+      "why": "The neighbourhood's music school since 1986 teaches Carnatic vocal, instruments and dance. Students perform at the Sabha's own festival. Ask about adult beginners first, because most classes are for children.",
+      "goodFor": [
+        "learn"
+      ],
+      "quality": 3,
+      "uniqueness": 4
     }
   ]
 }

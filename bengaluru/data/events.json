@@ -47,6 +47,80 @@
       "imageSubject": "Sree Kanteerava Stadium",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "culture",
+        "walk"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "morning"
+      ],
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "atta-galatta-storywalk-2026-10-03",
+      "title": "A storywalk through Indiranagar",
+      "emoji": "🚶",
+      "zone": "indiranagar",
+      "coords": [
+        12.9801,
+        77.63937
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Atta Galatta, 178 5th Main Road",
+      "start": "2026-10-03",
+      "end": "2026-10-03",
+      "startTime": "07:00",
+      "durationMin": 120,
+      "priceNote": "Price on the event page",
+      "why": "A walk through Indiranagar's back lanes with the storyteller Vikram Sridhar, covering local folklore, the old village layer under the layout and the trees. It starts and ends at Atta Galatta, so you can get breakfast and a book afterwards.",
+      "url": "https://attagalatta.com/event_page.php?eventid=EVT2145",
+      "source": "attagalatta.com events calendar",
+      "booking": "https://attagalatta.com/event_page.php?eventid=EVT2145",
+      "labels": []
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "categories": [
+        "culture",
+        "food"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "weekend",
+        "morning"
+      ],
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "atta-galatta-brunch-2026-10-03",
+      "title": "Once Upon a Brunch at Atta Galatta",
+      "emoji": "📖",
+      "zone": "indiranagar",
+      "coords": [
+        12.9801,
+        77.63937
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Atta Galatta, 178 5th Main Road",
+      "start": "2026-10-03",
+      "end": "2026-10-03",
+      "startTime": "10:00",
+      "durationMin": 120,
+      "priceNote": "Price on the event page",
+      "why": "A weekend brunch with a storyteller, held in the bookshop. It runs straight after the morning storywalk, so the two make one Saturday morning.",
+      "url": "https://attagalatta.com/event_page.php?eventid=EVT2160",
+      "source": "attagalatta.com events calendar",
+      "booking": "https://attagalatta.com/event_page.php?eventid=EVT2160",
+      "labels": []
     }
   ]
 }

@@ -461,6 +461,460 @@
    ],
    "coordsFrom": "approximate (Hosur Road by Christ University)",
    "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "junys-bakehouse",
+   "title": "Juny's Bakehouse",
+   "emoji": "🍰",
+   "type": "bakery",
+   "categories": [
+    "food",
+    "bakery",
+    "coffee"
+   ],
+   "zone": "jayanagar",
+   "area": "1229, 34th C Cross, 4th T Block East, Jayanagar",
+   "why": "A bakehouse in an old Jayanagar bungalow, with tables out in a green garden under the trees. Order a coffee and the cheesecake, and take your time over them.",
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "couple"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    12.92556,
+    77.5952
+   ],
+   "coordsFrom": "osm (Juny's Bakehouse)",
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "bun-world-malleswaram",
+   "title": "Bun World",
+   "emoji": "🥖",
+   "type": "bakery",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "zone": "malleswaram",
+   "area": "Malleswaram",
+   "why": "A Malleswaram Iyengar-style bakery for buns and bread baked fresh through the day. The sandwiches are the thing to order.",
+   "goodFor": [
+    "morning",
+    "cheap"
+   ],
+   "indoor": true,
+   "labels": [
+    "cheap"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    13.0075,
+    77.56357
+   ],
+   "coordsFrom": "osm (Bun World)",
+   "lastVerified": "2026-10-01",
+   "priceLevel": 1,
+   "booking": false
+  },
+  {
+   "id": "surya-book-stall",
+   "title": "Surya Book Stall",
+   "emoji": "📚",
+   "type": "books",
+   "categories": [
+    "books",
+    "shop"
+   ],
+   "zone": "malleswaram",
+   "area": "Sampige Road, Malleswaram",
+   "why": "A small second-hand bookshop tucked away on Sampige Road, stacked with children's books, novels and much else. Give yourself time to dig, and come out with more than you meant to buy.",
+   "goodFor": [
+    "afternoon",
+    "cheap",
+    "rain"
+   ],
+   "indoor": true,
+   "labels": [
+    "cheap",
+    "hiddengem"
+   ],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    13.00109,
+    77.57124
+   ],
+   "coordsFrom": "osm (Surya Book Stall)",
+   "lastVerified": "2026-10-01",
+   "priceLevel": 1,
+   "booking": false
+  },
+  {
+   "id": "liliyum-patisserie",
+   "title": "Liliyum Patisserie",
+   "emoji": "🎂",
+   "type": "bakery",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "zone": "hsr-layout",
+   "area": "Lakshmi Layout Main Road, Chikkabegur Gate, Hongasandra",
+   "why": "A patisserie whose cakes look as good as they taste, with one for every kind of occasion. This is where to order the birthday cake.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; address from liliyum.com",
+   "coords": [
+    12.89863,
+    77.62867
+   ],
+   "coordsFrom": "approximate — Hongasandra centre (OpenStreetMap); the shop itself is not mapped",
+   "lastVerified": "2026-10-01",
+   "url": "https://liliyum.com/"
+  },
+  {
+   "id": "whitefield-baking-company",
+   "title": "Whitefield Baking Company",
+   "emoji": "☕",
+   "type": "bakery",
+   "categories": [
+    "food",
+    "bakery",
+    "coffee"
+   ],
+   "zone": "epip-zone",
+   "area": "Bengaluru Marriott Hotel Whitefield, 8th Road, EPIP Zone",
+   "why": "The bakery counter at the Whitefield Marriott, with good coffee and a pastry case worth working through. It is the best place in the area for coffee and something sweet.",
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; address from the hotel",
+   "coords": [
+    12.97819,
+    77.72465
+   ],
+   "coordsFrom": "approximate — EPIP Zone centre; the hotel is not mapped in OpenStreetMap",
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "the-bay-ecoworld",
+   "title": "The Bay at Ecoworld",
+   "emoji": "🌳",
+   "type": "restaurant",
+   "categories": [
+    "food"
+   ],
+   "zone": "bellanduru",
+   "area": "The Bay, RMZ Ecoworld, Bellandur",
+   "why": "The open courtyard at the heart of RMZ Ecoworld, lined with cafés, a bakery and restaurants. It is the place to eat in Bellandur, whether it is a weekday lunch or an evening after work. Arrive hungry and walk the whole row before you choose.",
+   "goodFor": [
+    "lunch",
+    "evening",
+    "group"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    12.92062,
+    77.6842
+   ],
+   "coordsFrom": "osm (The Bay, Ecoworld)",
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "magnolia-bakery-bellandur",
+   "title": "Magnolia Bakery",
+   "emoji": "🧁",
+   "type": "bakery",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "zone": "bellanduru",
+   "area": "The Bay, RMZ Ecoworld, Bellandur",
+   "why": "The New York bakery's branch inside the tech park, serving cupcakes, pies and plenty more from the counter. Take a slice of pie back to your desk, or eat a cupcake out in the courtyard.",
+   "goodFor": [
+    "afternoon"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    12.92062,
+    77.68516
+   ],
+   "coordsFrom": "osm (Magnolia Bakery)",
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "nasi-and-mee-bellandur",
+   "title": "Nasi and Mee",
+   "emoji": "🍜",
+   "type": "restaurant",
+   "categories": [
+    "food"
+   ],
+   "zone": "bellanduru",
+   "area": "The Bay, RMZ Ecoworld, Bellandur",
+   "why": "The Ecoworld branch of the Southeast Asian kitchen, serving nasi, noodles, ramen and dim sum. A nasi goreng is the safe order for a quick, filling lunch between meetings.",
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    12.92067,
+    77.68433
+   ],
+   "coordsFrom": "osm (Nasi and Mee)",
+   "lastVerified": "2026-10-01",
+   "cuisine": "asian",
+   "url": "https://www.nasiandmee.co.in/"
+  },
+  {
+   "id": "paper-and-pie-bellandur",
+   "title": "Paper & Pie",
+   "emoji": "☕",
+   "type": "cafe",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "zone": "bellanduru",
+   "area": "The Bay, RMZ Ecoworld, Bellandur",
+   "why": "A Bengaluru café chain, started in Indiranagar in 2022, built for coffee and for working at the table. The menu mixes Indian comfort food with European and Southeast Asian dishes. Come for a coffee, a pie and an hour of work away from the office.",
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "work"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; brand history from paperandpie.in; position from OpenStreetMap",
+   "coords": [
+    12.92071,
+    77.68719
+   ],
+   "coordsFrom": "osm (Paper & Pie)",
+   "lastVerified": "2026-10-01",
+   "url": "https://www.paperandpie.in/"
+  },
+  {
+   "id": "the-kind-bellandur",
+   "title": "The Kind Roastery & Brew Room",
+   "emoji": "☕",
+   "type": "cafe",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "zone": "bellanduru",
+   "area": "The Bay, RMZ Ecoworld, Bellandur",
+   "why": "The Ecoworld outpost of the vegetarian roastery from 12th Main in Indiranagar. Ask what was roasted most recently and have it as a pour-over.",
+   "goodFor": [
+    "morning",
+    "work"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    12.92027,
+    77.68479
+   ],
+   "coordsFrom": "osm (The Kind Roastery & Brew Room)",
+   "lastVerified": "2026-10-01",
+   "url": "https://thekindindia.com/"
+  },
+  {
+   "id": "chianti-the-bay",
+   "title": "Chianti",
+   "emoji": "🍝",
+   "type": "restaurant",
+   "categories": [
+    "food"
+   ],
+   "zone": "bellanduru",
+   "area": "Ground floor, Unit AR 1, The Bay, RMZ Ecoworld",
+   "why": "An Italian restaurant with handmade pasta, at the ground floor of The Bay. It suits a business lunch or an evening that starts quick and runs long. Order the pasta, and ask about the special of the month.",
+   "goodFor": [
+    "lunch",
+    "evening",
+    "couple"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; hours from chiantiristorante.in; position from OpenStreetMap",
+   "coords": [
+    12.92065,
+    77.68465
+   ],
+   "coordsFrom": "osm (Chianti)",
+   "lastVerified": "2026-10-01",
+   "cuisine": "italian",
+   "hours": "Mo-Fr 12:00-22:30; Sa,Su 12:00-23:00",
+   "hoursFrom": "chiantiristorante.in",
+   "url": "https://www.chiantiristorante.in/locations/the-bay-ecoworld"
+  },
+  {
+   "id": "thyme-and-whisk",
+   "title": "Thyme & Whisk",
+   "emoji": "🥗",
+   "type": "restaurant",
+   "categories": [
+    "food"
+   ],
+   "zone": "bellanduru",
+   "area": "Sarjapur Road, Bellandur",
+   "why": "A vegetarian restaurant on Sarjapur Road, and the one to suggest when the table is meat-free or mixed. Go for dinner.",
+   "goodFor": [
+    "evening",
+    "couple",
+    "group"
+   ],
+   "indoor": true,
+   "labels": [
+    "veg"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    12.91617,
+    77.67302
+   ],
+   "coordsFrom": "osm (Thyme & Whisk)",
+   "lastVerified": "2026-10-01",
+   "url": "https://www.thymeandwhisk.com"
+  },
+  {
+   "id": "anand-sweets-sarjapur",
+   "title": "Anand Sweets",
+   "emoji": "🍬",
+   "type": "deli",
+   "categories": [
+    "food",
+    "sweets"
+   ],
+   "zone": "bellanduru",
+   "area": "Sarjapur Road, Bellandur",
+   "why": "The Sarjapur Road branch of the Bengaluru sweet shop. Stop here for a box of mithai before visiting someone, or for a snack on the way home.",
+   "goodFor": [
+    "afternoon",
+    "cheap"
+   ],
+   "indoor": true,
+   "labels": [
+    "cheap",
+    "veg"
+   ],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    12.91666,
+    77.67321
+   ],
+   "coordsFrom": "osm (Anand Sweets)",
+   "lastVerified": "2026-10-01",
+   "hours": "10:00-22:00",
+   "hoursFrom": "openstreetmap",
+   "priceLevel": 1
+  },
+  {
+   "id": "hoot-craftworks",
+   "title": "Hoot Craftworks 2.0",
+   "emoji": "🍺",
+   "type": "nightlife",
+   "categories": [
+    "nightlife",
+    "food"
+   ],
+   "zone": "bellanduru",
+   "area": "2034/69, Sarjapur Main Road, Kaikondrahalli",
+   "why": "A big open-air brewery on Sarjapur Road that brews its own beer and fills up at weekends. Come with a group on a Friday or Saturday night.",
+   "goodFor": [
+    "evening",
+    "group",
+    "weekend"
+   ],
+   "indoor": false,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 3,
+   "source": "Our own visit; position from OpenStreetMap",
+   "coords": [
+    12.91416,
+    77.67862
+   ],
+   "coordsFrom": "osm (The Hoot Cafe & Brewery)",
+   "lastVerified": "2026-10-01",
+   "hours": "Mo-Su 12:30-01:00",
+   "hoursFrom": "openstreetmap"
+  },
+  {
+   "id": "gladia-brewery",
+   "title": "Gladia Brewery & Kitchen",
+   "emoji": "🏛️",
+   "type": "nightlife",
+   "categories": [
+    "nightlife",
+    "food"
+   ],
+   "zone": "doddakannalli",
+   "area": "Sarjapur Main Road, beside Wipro",
+   "why": "A large Roman-themed brewery that brews its own beer on site, from crisp lagers to heavier ales, with a restaurant and an art gallery under the same roof. It suits a big evening out. Order the house beers.",
+   "goodFor": [
+    "evening",
+    "group",
+    "weekend"
+   ],
+   "indoor": true,
+   "labels": [],
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "Our own visit; concept from gladiabrewery.com; position from OpenStreetMap",
+   "coords": [
+    12.91091,
+    77.68499
+   ],
+   "coordsFrom": "osm (Gladia)",
+   "lastVerified": "2026-10-01",
+   "url": "https://www.gladiabrewery.com/"
   }
  ]
 }

@@ -413,6 +413,231 @@
       "imageSubject": "Sree Kanteerava Stadium",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "play",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "fitness"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "morning",
+        "evening"
+      ],
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "academy-of-strength-indiranagar",
+      "title": "Academy of Strength",
+      "emoji": "🏋️",
+      "zone": "indiranagar",
+      "coords": [
+        12.97202,
+        77.64091
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "759, third floor, 100 Feet Road",
+      "intent": [
+        "casual",
+        "group"
+      ],
+      "difficulty": "all levels",
+      "hoursNote": "Sessions run 6.30–9.30am and 5–8pm and rotate across the week",
+      "url": "https://www.academyofstrength.in/",
+      "source": "academyofstrength.in",
+      "booking": "unknown",
+      "why": "A small functional-training studio offering mobility work and Animal Flow, a floor-based bodyweight practice, in group classes for all levels. Call to ask about a trial class before committing to a membership.",
+      "labels": []
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "free"
+      ],
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "run-agara-lake",
+      "title": "A lap of Agara Lake",
+      "emoji": "🏃",
+      "zone": "hsr-layout",
+      "coords": [
+        12.92035,
+        77.64316
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap) — the park at the north end",
+      "area": "Agara Lake · a 2.8 km shoreline loop · park at the north end",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 40,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 2.8,
+      "startTime": "06:00",
+      "hours": "Mo-Su 06:00-10:00,16:00-19:00",
+      "hoursFrom": "openstreetmap",
+      "url": "https://en.wikipedia.org/wiki/Agara_Lake",
+      "source": "Wikipedia (CC BY-SA 4.0); hours and position from OpenStreetMap",
+      "why": "An eighth-century lake between Madiwala and Bellandur that has been restored since 2018, with a constructed wetland at the inflow end. The path goes all the way round, which makes it HSR's flat, shaded morning loop. Go at opening and look for ibis on the far bank.",
+      "labels": [
+        "free"
+      ],
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "type": "run",
+      "provenance": "editorial",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free",
+        "nature"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "free"
+      ],
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 3,
+      "id": "run-saul-kere",
+      "title": "A lap of Saul Kere",
+      "emoji": "🏃",
+      "zone": "bellanduru",
+      "coords": [
+        12.91833,
+        77.67991
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Saul Kere · a 2 km path round the lake · east entrance",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 30,
+      "intent": [
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "distanceKm": 2,
+      "startTime": "06:00",
+      "url": "https://biometrust.org/saul-kere-report/",
+      "source": "Biome Trust; hours and position from OpenStreetMap",
+      "why": "A 23-hectare wetland tucked behind the Sarjapur Road towers, with a 2 km path, benches and herons. It is the green break closest to the Outer Ring Road offices. Bngbirds sometimes leads its free Sunday walks from the east gate.",
+      "labels": [
+        "free"
+      ],
+      "priceLevel": 0,
+      "booking": false,
+      "hours": "Mo-Su 05:30-09:30,16:30-18:30",
+      "hoursFrom": "openstreetmap"
+    },
+    {
+      "type": "run",
+      "provenance": "personal",
+      "categories": [
+        "sport",
+        "running",
+        "outdoor",
+        "free",
+        "nature"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "morning",
+        "weekend",
+        "free"
+      ],
+      "lastVerified": "2026-10-01",
+      "quality": 5,
+      "uniqueness": 4,
+      "id": "run-kaikondrahalli",
+      "title": "Kaikondrahalli Lake",
+      "emoji": "🏃",
+      "zone": "haralur",
+      "coords": [
+        12.9134,
+        77.67278
+      ],
+      "coordsFrom": "discovery index (OpenStreetMap)",
+      "area": "Sarjapur Road, just south of Bellandur · laps of the lake path add up to a weekend 10k",
+      "price": 0,
+      "priceNote": "Free",
+      "durationMin": 70,
+      "intent": [
+        "casual",
+        "training"
+      ],
+      "difficulty": "all levels",
+      "distanceKm": 10,
+      "startTime": "06:00",
+      "url": "https://simple.wikipedia.org/wiki/Kaikondrahalli_Lake",
+      "source": "Our own runs; restoration history from Wikipedia and the Kalpavriksh case study (2016); position from OpenStreetMap",
+      "why": "The best run in this corner of the city. It is a 48-acre lake that residents and the city corporation brought back from a sewage-filled bed from 2008 onwards, and the path round it is flat and shaded and stays busy without being crowded. Do laps for a weekend 10k, starting early before the sun is high.",
+      "labels": [
+        "free",
+        "dontmiss"
+      ],
+      "priceLevel": 0,
+      "booking": false
+    },
+    {
+      "id": "play-arena-sarjapur",
+      "title": "PLaY Arena",
+      "emoji": "🏎️",
+      "type": "play",
+      "categories": [
+        "sport",
+        "play"
+      ],
+      "zone": "haralur",
+      "area": "75, Sarjapur Main Road, Kasavanahalli",
+      "why": "A big leisure complex on Sarjapur Road built around an outdoor go-kart track, with plenty of other games beside it. It is the place for a group outing or a team evening. Race a few laps first, then try the rest.",
+      "goodFor": [
+        "evening",
+        "weekend",
+        "group"
+      ],
+      "indoor": false,
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 3,
+      "source": "Our own visit; position from OpenStreetMap",
+      "coords": [
+        12.91203,
+        77.67579
+      ],
+      "coordsFrom": "osm (Play Arena Go Karting)",
+      "lastVerified": "2026-10-01",
+      "provenance": "personal",
+      "weatherSensitive": false,
+      "intent": [
+        "group",
+        "casual"
+      ],
+      "difficulty": "beginner",
+      "booking": "unknown",
+      "hoursNote": "Open daily from late morning into the evening"
     }
   ]
 }
