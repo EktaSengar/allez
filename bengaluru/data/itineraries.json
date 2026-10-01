@@ -1,6 +1,6 @@
 {
   "generated": "2026-09-13",
-  "note": "Hand-written routes. Empty.",
+  "note": "Hand-written routes.",
   "items": [
     {
       "id": "indiranagar-saturday",
@@ -73,6 +73,130 @@
       "coords": [
         12.9785,
         77.6395
+      ],
+      "coordsFrom": "centre of the stops",
+      "source": "Venue websites; OpenStreetMap",
+      "lastVerified": "2026-10-01"
+    },
+    {
+      "id": "basavanagudi-sunday",
+      "title": "A Sunday morning in Basavanagudi",
+      "emoji": "☕",
+      "type": "itinerary",
+      "categories": [
+        "food",
+        "walk",
+        "shop"
+      ],
+      "zone": "basavanagudi",
+      "price": 300,
+      "priceNote": "~₹300 each",
+      "durationMin": 210,
+      "startTime": "07:00",
+      "why": "Old South Bengaluru before it gets hot. Vidyarthi Bhavan is shut on Fridays and queues from seven on Sundays, so get there first and the rest of the morning is on foot.",
+      "goodFor": [
+        "weekend",
+        "morning",
+        "solo",
+        "couple",
+        "food"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "weekend",
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "stops": [
+        {
+          "emoji": "☕",
+          "text": "Masala dosa and filter coffee at Vidyarthi Bhavan",
+          "id": "osm-vidyarthi-bhavan-25890-155143"
+        },
+        {
+          "emoji": "💐",
+          "text": "Gandhi Bazaar: the flower sellers, the vegetable carts and the old shops along the main road",
+          "walk": "2 min"
+        },
+        {
+          "emoji": "🪨",
+          "text": "Up onto the rocks at Bugle Rock Park",
+          "walk": "5 min",
+          "id": "osm-bugle-rock-park-25884-155138"
+        },
+        {
+          "emoji": "🌳",
+          "text": "Into Lalbagh by the west gate, and round the lake",
+          "walk": "auto, 8 min",
+          "id": "osm-lalbagh-botanical-gardens-25898-155173"
+        }
+      ],
+      "coords": [
+        12.9445,
+        77.5745
+      ],
+      "coordsFrom": "centre of the stops",
+      "source": "Venue websites; OpenStreetMap",
+      "lastVerified": "2026-10-01"
+    },
+    {
+      "id": "green-bengaluru",
+      "title": "Green Bengaluru: Cubbon, IISc and Lalbagh",
+      "emoji": "🌳",
+      "type": "itinerary",
+      "categories": [
+        "walk",
+        "nature"
+      ],
+      "zone": "richmond-town",
+      "price": 400,
+      "priceNote": "~₹400 each with autos and breakfast",
+      "durationMin": 360,
+      "startTime": "06:30",
+      "why": "The city's three big green spaces in one long morning. Start early in Cubbon Park, when the runners are out, and save Lalbagh for last. The IISc campus is open to walk through on foot, but carry ID for the gate.",
+      "goodFor": [
+        "weekend",
+        "morning",
+        "solo",
+        "couple"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "weekend",
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "stops": [
+        {
+          "emoji": "🌳",
+          "text": "Cubbon Park at dawn, from the bandstand to the library",
+          "id": "osm-cubbon-park-25948-155187"
+        },
+        {
+          "emoji": "🎓",
+          "text": "The IISc campus: the avenues of old trees around the Main Building",
+          "walk": "auto, 20 min"
+        },
+        {
+          "emoji": "🥞",
+          "text": "Breakfast at Mavalli Tiffin Rooms on Lalbagh Road",
+          "walk": "auto, 30 min",
+          "id": "osm-mavalli-tiffin-rooms-25910-155171"
+        },
+        {
+          "emoji": "🌺",
+          "text": "Lalbagh: the glasshouse, the lake and the rock",
+          "walk": "5 min",
+          "id": "osm-lalbagh-botanical-gardens-25898-155173"
+        }
+      ],
+      "coords": [
+        12.985,
+        77.58
       ],
       "coordsFrom": "centre of the stops",
       "source": "Venue websites; OpenStreetMap",
