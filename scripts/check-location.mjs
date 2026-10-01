@@ -412,8 +412,18 @@ const EXPECT = {
        and Jayanagar with Malleswaram — because the city's vouched nights
        are Toit and Soka in Indiranagar, VV Puram and the old centre, and
        nothing yet in Koramangala, Jayanagar or Malleswaram of their own.
-       A bar or a late kitchen in each of those closes it. */
-    overshare: 21,
+       A bar or a late kitchen in each of those closes it.
+
+       24 on 1 October, and it is the market column. The 30 September
+       cut of every card drawn from listing sites took sharing down to 14
+       and coverage with it; the three markets written back from
+       Wikipedia — Russel Market, Murphy Town and the Yeshwanthpur APMC
+       yard — are all in the old Cantonment or the north-west, so all
+       five probes now reach for the same three or four. Madiwala,
+       Malleswaram 8th Cross and Jayanagar 9th Block are on the map and
+       have no open source to write them from; a visit to each is what
+       brings this down. */
+    overshare: 24,
     /* 18 off the notable tier alone; 28 with twelve editorial records;
        62 with four markets and an Iyengar bakery; 120 with ten cafés and
        bakeries, when those two columns had been dead in all forty sampled
@@ -429,8 +439,16 @@ const EXPECT = {
        114 on 24 September, when js/record.js stopped admitting places
        described as gone — "was a vegetarian restaurant", "was a film
        theatre". New Krishna Bhavan, The Kitchen of Joy and the Plaza were
-       the answer in six cells, and a closed restaurant is no answer. */
-    floor: 114
+       the answer in six cells, and a closed restaurant is no answer.
+
+       92 on 30 September, and on purpose: Bengaluru lost 110 records
+       when every card drawn from Zomato, LBB and the like came out (see
+       SOURCES.md). The floor was left at 114 so the check stayed red
+       until the gap was closed rather than forgotten. 126 on 1 October,
+       with three markets written from Wikipedia: until then City Market
+       was the only market with a card, so every one of the forty market
+       cells held one known place and needed two. */
+    floor: 126
   }
 };
 
