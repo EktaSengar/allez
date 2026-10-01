@@ -32,6 +32,8 @@
      weather  { [iso]: { mode, … } }, as Weather.load() returns in
               `byDate`. Optional; without it the plan ranks unforecast.
      done     id => true for anything already done. Optional.
+     now      the moment it is planned at; defaults to now. A slot that
+              has ended on the city's clock is not planned that day.
      rating   id => the reader's verdict. Optional; only 'want' is read.
      prefs    what the reader said — `dog`, `kidAge`, `company` — as
               Store.prefs() returns it. Optional. `dog` and `kidAge` keep
@@ -332,7 +334,7 @@ const Plan = (() => {
     const last = stops[stops.length - 1];
     const company = [].concat((ctx.prefs && ctx.prefs.company) || []);
     if (!last || last.slot !== 'evening' || last.item.type !== 'restaurant' || !company.includes('family')) return null;
-    const s = SLOTS[2], when = new Date(`${iso}T${hhmm(s.from)}:00`);
+    const s = SLOTS[2], when = Hours.instant(iso, s.from);
     const done = ctx.done || (() => false);
     const carFree = !!(ctx.prefs && ctx.prefs.carFree);
     const near = i => {
@@ -377,9 +379,15 @@ const Plan = (() => {
     const carFree = !!(ctx.prefs && ctx.prefs.carFree);
     const trails = carFree ? trailsIn(pool) : [];
 
+    /* A day that is already under way in the city plans only what is
+       left of it: a morning slot at three in the afternoon is a stop
+       nobody can make. `now` is the reader's moment, read on the city's
+       clock; checks pass their own. */
+    const at = Hours.clock(ctx.now || new Date());
     for (const s of SLOTS) {
+      if (at.iso === iso && at.mins >= s.to) continue;
       const fits = FITS[s.slot];
-      const when = new Date(`${iso}T${hhmm(s.from)}:00`), first = !stops.length;
+      const when = Hours.instant(iso, s.from), first = !stops.length;
       const leg = carFree ? i => (activeLegOf(prev, i) || {}).minutes ?? null
                           : i => legMinutes(prev, i, when, first);
       const ranked = Rank.rank(pool, c, i =>

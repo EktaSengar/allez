@@ -3058,26 +3058,12 @@ const App = (() => {
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
-  /* A wall-clock time in the city as an instant, written in UTC. A
-     TZID alone needs a VTIMEZONE block to go with it, and calendars that
-     do not know the zone by name (Outlook among them) quietly read the
-     time in the phone's zone instead; a UTC time cannot be misread. The
-     offset is asked of the browser for that date, so summer time is
-     right, and asked twice so a time near the change settles. */
-  function cityUtc(day, minutes) {
-    const tz = City.weather.tz;
-    const [y, mo, d] = day.split('-').map(Number);
-    const wall = Date.UTC(y, mo - 1, d) + minutes * 60000;
-    const offset = at => {
-      const name = new Intl.DateTimeFormat('en-US', { timeZone: tz, timeZoneName: 'longOffset' })
-        .formatToParts(new Date(at)).find(p => p.type === 'timeZoneName').value;
-      const m = name.match(/GMT([+-])(\d{2}):?(\d{2})?/);
-      return m ? (m[1] === '-' ? -1 : 1) * (+m[2] * 60 + +(m[3] || 0)) : 0;
-    };
-    let t = wall - offset(wall) * 60000;
-    t = wall - offset(t) * 60000;
-    return new Date(t).toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
-  }
+  /* A wall-clock time in the city as a UTC time. A TZID alone needs a
+     VTIMEZONE block to go with it, and calendars that do not know the
+     zone by name (Outlook among them) quietly read the time in the
+     phone's zone instead; a UTC time cannot be misread. */
+  const cityUtc = (day, minutes) =>
+    Hours.instant(day, minutes).toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
 
   /* `day` is an ISO date. Its own time where the record states one, an
      all-day entry where it does not. An end at or before the start is

@@ -75,6 +75,24 @@ const Hours = (() => {
     return { dow: WD[v.weekday], mins: +v.hour * 60 + +v.minute, iso: `${v.year}-${v.month}-${v.day}` };
   }
 
+  /* The other direction: a wall-clock time in the city — an ISO date and
+     minutes after midnight — as the instant it is. The offset is asked
+     for that date, so summer time is right, and asked twice so a time
+     near the change settles. Without a pack, the machine's clock. */
+  function instant(day, minutes, tz = cityTz()) {
+    const [y, mo, d] = day.split('-').map(Number);
+    if (!tz) return new Date(y, mo - 1, d, 0, minutes);
+    const wall = Date.UTC(y, mo - 1, d) + minutes * 60000;
+    const offset = at => {
+      const c = clock(new Date(at), tz);
+      const [cy, cm, cd] = c.iso.split('-').map(Number);
+      return (Date.UTC(cy, cm - 1, cd) + c.mins * 60000 - at) / 60000;
+    };
+    let t = wall - offset(wall) * 60000;
+    t = wall - offset(t) * 60000;
+    return new Date(t);
+  }
+
   /* ---------- parsing ---------- */
 
   function parseDays(sel) {
@@ -263,5 +281,5 @@ const Hours = (() => {
     return rules ? rangesOn(rules, dow).map(r => r.slice()) : null;
   }
 
-  return { parse, clock, isOpen, openLaterToday, openAfter, closedDays, on };
+  return { parse, clock, instant, isOpen, openLaterToday, openAfter, closedDays, on };
 })();
