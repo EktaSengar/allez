@@ -221,7 +221,7 @@
     },
     {
       "type": "bar",
-      "provenance": "editorial",
+      "provenance": "personal",
       "categories": [
         "nightlife",
         "bar"
@@ -249,7 +249,7 @@
       "durationMin": 90,
       "hoursNote": "Open every evening until late — book at weekends",
       "url": "https://www.google.com/maps/search/?api=1&query=Sidecar%2C%20M%20Block%20Market%2C%20Greater%20Kailash%20II%2C%20Delhi%20NCR",
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "source": "Our own visit; wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
       "why": "A GK II cocktail bar co-founded in 2018 by bartender Yangdup Lama, which has been named on both Asia's and the World's 50 Best Bars. Book on weekends.",
       "labels": [
         "couple",
@@ -394,6 +394,135 @@
       "imageSubject": "Jama Masjid, Delhi",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "id": "somewhere-nowhere-gk2",
+      "title": "Somewhere Nowhere",
+      "emoji": "🍸",
+      "type": "bar",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "zone": "greater-kailash",
+      "area": "M Block Market, Greater Kailash II",
+      "coords": [
+        28.5344,
+        77.2438
+      ],
+      "coordsFrom": "approximate (M Block Market, GK II)",
+      "why": "A speakeasy pouring Japanese-style craft cocktails.",
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "labels": [
+        "couple"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.instagram.com/somewherenowherebar/",
+      "source": "Our own visit",
+      "provenance": "personal",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "pco-vasant-vihar",
+      "title": "PCO",
+      "emoji": "☎️",
+      "type": "bar",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "zone": "vasant-vihar",
+      "area": "D Block Market, Vasant Vihar",
+      "coords": [
+        28.5651,
+        77.1636
+      ],
+      "coordsFrom": "approximate (D Block Market, Vasant Vihar)",
+      "why": "Another speakeasy. The name stands for \"Pass Code Only\".",
+      "goodFor": [
+        "evening"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "labels": [],
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://www.facebook.com/passcodeonly/",
+      "source": "Our own visit; name from the bar's own page",
+      "provenance": "personal",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "sly-granny-khan-market",
+      "title": "Sly Granny",
+      "emoji": "🍸",
+      "type": "bar",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "zone": "lodhi-colony",
+      "area": "Khan Market (1st and 2nd floor)",
+      "coords": [
+        28.5999,
+        77.2266
+      ],
+      "coordsFrom": "approximate (Khan Market, beside Perch)",
+      "why": "Crafted cocktails in a room full of quirky decor, and there is a patio too.",
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "labels": [
+        "couple"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://slygranny.in/delhi/",
+      "source": "Our own visit; details from the bar's website",
+      "provenance": "personal",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "arts-room-eldeco",
+      "title": "Arts Room",
+      "emoji": "🎨",
+      "type": "bar",
+      "categories": [
+        "nightlife",
+        "bar"
+      ],
+      "zone": "malviya-nagar",
+      "area": "Eldeco Centre, Malviya Nagar (ground floor)",
+      "coords": [
+        28.52842,
+        77.2059
+      ],
+      "coordsFrom": "approximate (Eldeco Centre)",
+      "why": "Drinks on an open patio, with artwork everywhere you look.",
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "couple"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "url": "https://artsroom.in/",
+      "source": "Our own visit; details from the venue's website",
+      "provenance": "personal",
+      "lastVerified": "2026-09-30"
     }
   ]
 }
