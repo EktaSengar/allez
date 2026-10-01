@@ -38,10 +38,13 @@ const FLOOR = 0.80;
    comma before a weekday adds to the rules before it rather than
    replacing them — Darbar's weekday lunch vanished under its dinner
    rule — and `Su off` alone says nothing about the other six days. */
-/* Wall-clock times in Paris, the pack these run against: hours.js reads
+/* Wall-clock times in whichever pack this runs against: hours.js reads
    the city's clock, not the machine's, so a fixture built from the
-   machine's clock would test a different minute on every laptop. */
-const paris = s => new Date(s + ':00+02:00');
+   machine's clock would test a different minute on every laptop — and
+   one pinned to Paris's offset tests a different minute in every other
+   city, which CI runs this for. */
+const paris = s => { const [d, t] = s.split('T'); const [h, m] = t.split(':').map(Number);
+  return Hours.instant(d, h * 60 + m); };
 
 const SETTLED = [
   ['Mo-Fr 11:00-14:30, Sa 11:30-14:30, Su-We 17:00-21:30, Th-Sa 17:00-22:00', paris('2026-09-21T12:00'), true],

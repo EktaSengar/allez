@@ -1,5 +1,82 @@
 {
   "generated": "2026-09-13",
   "note": "Hand-written routes. Empty.",
-  "items": []
+  "items": [
+    {
+      "id": "indiranagar-saturday",
+      "title": "A Saturday in Indiranagar",
+      "emoji": "📚",
+      "type": "itinerary",
+      "categories": [
+        "food",
+        "culture",
+        "walk",
+        "shop"
+      ],
+      "zone": "indiranagar",
+      "price": 1800,
+      "priceNote": "~₹1,800 each with dinner",
+      "durationMin": 600,
+      "startTime": "08:00",
+      "why": "The neighbourhood on foot and in short auto rides, with books in the middle of the day. Two warnings: Chinita is closed on Mondays and should be booked for a Saturday, and the library at Max Müller Bhavan shuts at six.",
+      "goodFor": [
+        "weekend",
+        "couple",
+        "solo",
+        "food",
+        "culture"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "weekend"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "stops": [
+        {
+          "emoji": "🥞",
+          "text": "Breakfast standing up at The Rameshwaram Cafe, 100 Feet Road",
+          "id": "osm-the-rameshwaram-cafe-25964-155282"
+        },
+        {
+          "emoji": "📚",
+          "text": "Indian-language books at Atta Galatta, 5th Main",
+          "walk": "8 min",
+          "id": "osm-atta-galatta-25960-155279"
+        },
+        {
+          "emoji": "📖",
+          "text": "Champaca for the Indian non-fiction shelf, and coffee next door at Copper + Cloves",
+          "walk": "10 min",
+          "id": "osm-champaca-25956-155274"
+        },
+        {
+          "emoji": "🖼️",
+          "text": "Whatever is on at Gallery Manora",
+          "walk": "5 min",
+          "id": "osm-manora-25956-155281"
+        },
+        {
+          "emoji": "🇩🇪",
+          "text": "An afternoon in the Max Müller Bhavan library, or a screening if one is on",
+          "walk": "auto, 5 min",
+          "id": "osm-goethe-institut-max-m-ller-bhavan-25957-155289"
+        },
+        {
+          "emoji": "🌮",
+          "text": "Dinner at Chinita on Double Road (book ahead)",
+          "walk": "auto, 8 min",
+          "id": "osm-chinita-25962-155274"
+        }
+      ],
+      "coords": [
+        12.9785,
+        77.6395
+      ],
+      "coordsFrom": "centre of the stops",
+      "source": "Venue websites; OpenStreetMap",
+      "lastVerified": "2026-10-01"
+    }
+  ]
 }
