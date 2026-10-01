@@ -387,7 +387,7 @@ const Rank = (() => {
      cannot read would hide most of the city. */
   function openRightNow(item, when = new Date()) {
     if (!item.hours) return null;
-    if (!isOpenOn(item, iso(when))) return false;
+    if (!isOpenOn(item, Hours.clock(when).iso)) return false;
     return Hours.isOpen(item.hours, when);
   }
 

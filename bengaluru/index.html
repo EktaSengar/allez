@@ -171,24 +171,20 @@
      app.js all read `City` as they evaluate, not later. keys.js is
      second for the same reason — it needs City.id to name a key, and
      state.js and location.js need the name as they evaluate. -->
-<script src="city.js?v=4cd729a0"></script>
+<script src="city.js?v=20088b77"></script>
 <script src="../js/keys.js?v=e5461a5d"></script>
 <script src="../js/location.js?v=51844a3c"></script>
 <script src="../js/state.js?v=85a844ab"></script>
 <script src="../js/weather.js?v=90cfb650"></script>
-<script src="../js/hours.js?v=9e3f4f1f"></script>
+<script src="../js/hours.js?v=2817965f"></script>
 <script src="../js/record.js?v=07b12b87"></script>
 <script src="../js/invaders.js?v=bc4c1aab"></script>
 <script src="../js/nearby.js?v=eac8de8c"></script>
-<script src="../js/scoring.js?v=3de269b3"></script>
+<script src="../js/scoring.js?v=0472f7e2"></script>
 <!-- Deferred: nothing reads Plan until the first render, which waits for
      DOMContentLoaded, so it need not hold up the header. -->
 <script src="../js/plan.js?v=f062d510" defer></script>
-<script src="../js/app.js?v=38f4fa71"></script>
-<!-- After app.js, because it calls App.defineView. This is what a pack
-     shipping its own view looks like: one file, one registration, and
-     nothing in the engine that knows it exists. -->
-<script src="views/yourside.js?v=07be7943"></script>
+<script src="../js/app.js?v=3a585a21"></script>
 
 <nav class="tabs" id="tabs">
   <div class="wrap tabs-inner">
@@ -199,7 +195,6 @@
       <button class="tab" data-view="events">Events</button>
       <button class="tab" data-view="eat">Eat</button>
       <button class="tab" data-view="sport">Sport</button>
-      <button class="tab" data-view="yourside">Your side</button>
       <button class="tab" data-view="regulars">Regulars</button>
       <button class="tab" data-view="explore">Explore</button>
       <button class="tab" data-view="away">Away</button>

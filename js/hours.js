@@ -47,6 +47,34 @@ const Hours = (() => {
 
   const cache = new Map();
 
+  /* ---------- the city's clock ----------
+
+     Opening hours are written in the city's time, and the browser's clock
+     is the reader's. They agree for someone at home and disagree for
+     anyone planning from elsewhere — a reader in London looking at Delhi
+     at nine in the evening was being told what was open at half past
+     three. So the weekday, the minute and the date are read in the
+     pack's time zone. Without a pack (a Node check), the machine's own
+     clock is the only one there is. */
+  const WD = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  const fmts = new Map();
+  function cityTz() {
+    return (typeof City !== 'undefined' && City.weather && City.weather.tz) || null;
+  }
+  function clock(when = new Date(), tz = cityTz()) {
+    if (!tz) {
+      const p = n => String(n).padStart(2, '0');
+      return { dow: when.getDay(), mins: when.getHours() * 60 + when.getMinutes(),
+               iso: `${when.getFullYear()}-${p(when.getMonth() + 1)}-${p(when.getDate())}` };
+    }
+    if (!fmts.has(tz)) fmts.set(tz, new Intl.DateTimeFormat('en-GB', {
+      timeZone: tz, weekday: 'short', year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }));
+    const v = {};
+    for (const { type, value } of fmts.get(tz).formatToParts(when)) v[type] = value;
+    return { dow: WD[v.weekday], mins: +v.hour * 60 + +v.minute, iso: `${v.year}-${v.month}-${v.day}` };
+  }
+
   /* ---------- parsing ---------- */
 
   function parseDays(sel) {
@@ -186,8 +214,7 @@ const Hours = (() => {
     const rules = parse(spec);
     if (!rules) return null;
 
-    const dow = when.getDay();
-    const mins = when.getHours() * 60 + when.getMinutes();
+    const { dow, mins } = clock(when);
 
     for (const [from, to] of rangesOn(rules, dow)) {
       if (to > from ? (mins >= from && mins < to) : mins >= from) return true;
@@ -197,6 +224,16 @@ const Hours = (() => {
       if (to <= from && mins < to) return true;
     }
     return false;
+  }
+
+  /* Still to come today: open now, or opening later before the day is
+     out. The question behind a "today" list read at three in the
+     afternoon — a lunch counter that shut at half past two is not
+     something to do today, and a bar that opens at six still is. */
+  function openLaterToday(spec, when = new Date()) {
+    if (isOpen(spec, when) !== false) return isOpen(spec, when);
+    const { dow, mins } = clock(when);
+    return rangesOn(parse(spec), dow).some(([from, to]) => to <= from || to > mins);
   }
 
   /* Does it serve past this hour on the day in question? The question
@@ -226,5 +263,5 @@ const Hours = (() => {
     return rules ? rangesOn(rules, dow).map(r => r.slice()) : null;
   }
 
-  return { parse, isOpen, openAfter, closedDays, on };
+  return { parse, clock, isOpen, openLaterToday, openAfter, closedDays, on };
 })();
