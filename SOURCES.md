@@ -217,6 +217,143 @@ browser to show a place's current details — but that needs a key in the page,
 which breaks the rule this site is built on, costs money per view, and
 decorates records we already have rather than finding new ones.
 
+### Writing place cards, and what may go into them
+
+Decided on 29–30 September 2026, after an audit of every researched record
+in Delhi and Bengaluru (PR #48). The first research pass had drawn dish
+picks, descriptions and "known for" lines from Zomato, LBB, EazyDiner,
+Tripadvisor, Time Out, magicpin, Swiggy, magazines and food blogs — often
+from their search-result snippets, reworded. None of that is usable, and
+Delhi lost 239 records and Bengaluru 110 when it came out. This section
+records why, so the next pass does not repeat it.
+
+This is a working summary of the risks as we understand them, not legal
+advice. Where it is unsure, the rule is the cautious one: **if a card
+cannot be written from allowed sources, leave it out rather than make it
+thin.**
+
+#### The legal problems, one by one
+
+1. **Copyright in the text.** A review, a listing description or an
+   article is a literary work under India's Copyright Act, 1957 (and the
+   equivalent law in every other city this site covers). Copying it is
+   infringement. So is a close paraphrase that follows its structure,
+   selection and phrasing — rewording a Zomato blurb "in the site's
+   voice" is still a derivative of that blurb. A search-engine snippet is
+   the same copyrighted text, only shorter; seeing it on Google does not
+   change who owns it.
+
+2. **The facts are free, the selection is not.** Bare facts — a
+   restaurant exists at this address, opens at 8, serves dosa — are not
+   copyrightable. But which places a guide chose, which dish it singled
+   out as the one to order, and how it characterised a place are
+   editorial judgement. Indian courts protect compilations that show a
+   "modicum of creativity" (*Eastern Book Co. v. D.B. Modak*, Supreme
+   Court, 2008), and the EU gives databases a separate right on top
+   (Directive 96/9/EC), which matters for Paris. Rebuilding "LBB's
+   twenty best cafés in Hauz Khas" one fact at a time still copies the
+   list.
+
+3. **Terms of use are a contract.** Zomato, Swiggy/District, EazyDiner,
+   magicpin, Tripadvisor, Time Out, LBB, BookMyShow and Google all forbid
+   scraping, bulk copying, or reusing their content in another listing or
+   directory service. Reading a page by hand and noting facts is
+   ordinary use; harvesting it, or building a rival listing from it, is
+   what their terms prohibit, whether or not copyright would. Google's
+   Maps Platform terms (§3.2.3) add that Places data may not be stored
+   beyond a `place_id`, or used to build a listing at all.
+
+4. **Photographs.** Every photo on those sites belongs to the site, the
+   venue or the user who posted it. None may be copied, hot-linked or
+   "embedded" as a card image. Only our own photographs and Wikimedia
+   Commons files under a stated free licence are used (see the README,
+   *Photographs*).
+
+5. **User reviews and personal data.** Reviews are written by
+   individuals, who hold copyright in them, and carry names and profile
+   data. Quoting them brings in the reviewer's rights and, under India's
+   Digital Personal Data Protection Act, 2023, their personal data.
+   Never quote or attribute a review.
+
+6. **Share-alike obligations on the sources we do use.** Open does not
+   mean unconditional. Wikipedia and Wikivoyage text is CC BY-SA 4.0: it
+   must be credited and whatever we derive from it stays CC BY-SA.
+   OpenStreetMap is ODbL: credited, and the derived database stays ODbL.
+   CC BY-NC material (developers.events) is non-commercial only. Mixing
+   licences in one file is how an obligation gets lost, which is why
+   they live in separate files (DATA-LICENSE.md).
+
+7. **Trademarks and implied endorsement.** A venue's name is fine to use;
+   its logo is not, and nothing on a card may suggest the venue, or a
+   listing site, endorses Allez.
+
+8. **Links pointing at listing sites.** A plain link is not a copy and is
+   lawful, but a card whose only link is a Zomato page is advertising
+   the source we are not allowed to use and usually means the card was
+   built from it. Cards link to the venue's own site, its OSM node, or
+   Google Maps "Look it up" instead.
+
+#### What to use
+
+| source | what it may give | condition |
+|---|---|---|
+| **Your own visits and notes** | anything — the dish, the feel, the hour to go | the strongest source there is; polish the words, keep the meaning |
+| **The venue's own website or menu** | facts: dishes, hours, founding year, what it says it does | take facts, write fresh sentences; never copy its text or photos |
+| **The venue's own Instagram / social page** | facts, as above | same; do not embed or copy posts or photos |
+| **OpenStreetMap** | name, location, cuisine, hours, website | ODbL — credit it; edit OSM to fix gaps rather than working around them |
+| **Wikipedia / Wikivoyage** | history, context, what a place is known for | CC BY-SA 4.0 — credit in `source`; the card text stays CC BY-SA |
+| **Wikidata** | facts, identifiers | CC0 — no conditions |
+| **Wikimedia Commons** | photographs | only files whose licence is stated and free; credit as it asks |
+| **Government open data** | facilities, markets, events | only where a licence is stated (see the tables above); a government page with no licence is research, not a source |
+| **People you know** | recommendations | treat as your own notes; ask before naming them |
+
+#### What not to use
+
+- Commercial review and listing sites: **Zomato, Swiggy / District,
+  EazyDiner, magicpin, Dineout, LBB, Tripadvisor, Time Out, Yelp,
+  Justdial, BookMyShow, Google reviews** — not their text, dish picks,
+  rankings, ratings, photos or "known for" lines, and not reworded.
+- **Magazines, newspapers and food blogs** (Condé Nast Traveller,
+  Hindustan Times, The Hindu, Mint, Eater, personal blogs) — same rule.
+- **Search-engine snippets and AI summaries** of any of the above: they
+  carry the same content and the same rights.
+- **Google Places API data** stored in the repo.
+- **Any `source` field that names one of these.** If it had to be named,
+  it was used.
+
+Using them to *find out that a place exists* — and then writing the card
+from a visit, the venue's own site or OSM — is fine. The test for every
+sentence: could it have been written without having read the forbidden
+page? If not, it goes.
+
+#### How to improve Delhi and Bengaluru from here
+
+The cut left Delhi with 47 editorial, 40 places and 9 nightlife records,
+and Bengaluru with 36, 15 and 8. The ways back up, roughly in order of
+how much they add:
+
+1. **Your own visits.** Cards from places you have been, with your own
+   photograph, are the best records the site has (placed by
+   `scripts/own-photos.mjs`). A short list of places to visit next,
+   chosen from `check-location.mjs`'s weak areas, turns every outing into
+   records at the edges, where they help most.
+2. **Venue-first research.** For a place you have heard of, go straight
+   to its own website, menu PDF or social page and write from that.
+   Many Delhi and Bengaluru institutions (Karim's, MTR, Vidyarthi Bhavan,
+   Indian Coffee House, the gymkhana-era bakeries) publish their own
+   history and menu.
+3. **Wikipedia for the institutions.** Older restaurants, markets and
+   bars often have articles. Credit them and keep the text CC BY-SA.
+4. **Fix OpenStreetMap.** Missing or wrong cuisine, hours and website
+   tags can be added on OSM itself; the next `discover.mjs` run picks
+   them up, and the fix helps everyone.
+5. **Wikivoyage.** `scripts/wikivoyage.mjs` is written and switched off
+   because it crowds the centre (see above). Turn it on per city once
+   the edges are covered.
+6. **Ask for a feed.** A venue, a food walk or a local publication can
+   give written permission for its content; with that on record (and
+   noted in DATA-LICENSE.md), it becomes an allowed source.
+
 ---
 
 ## Everywhere

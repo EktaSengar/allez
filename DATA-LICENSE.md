@@ -45,6 +45,8 @@ names its sources in `source`. Where a record draws on Wikipedia, its
 text is offered under CC BY-SA 4.0 as well. Commercial review and
 listing sites (Zomato, Swiggy/District, EazyDiner, LBB, Tripadvisor,
 Time Out, magicpin and the like) and magazines are not used.
+SOURCES.md, *Writing place cards*, sets out why and lists what may
+and may not be used.
 
 ## Tech conferences — MIT and CC BY-NC 4.0
 
