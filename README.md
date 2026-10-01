@@ -701,7 +701,7 @@ One directory per city at the repo root, which is what the domain serves:
 allez.city/            index.html      the chooser
 allez.city/paris/      paris/          index.html · city.js · data/ · sw.js
 allez.city/delhi/      delhi/
-allez.city/bengaluru/  bengaluru/      + views/yourside.js
+allez.city/bengaluru/  bengaluru/
 allez.city/bay-area/   bay-area/
 allez.city/new-york/   new-york/
                        css/ js/        shared by all five
@@ -757,8 +757,8 @@ matters there.
 useless without something to build with, and a pack that hand-rolled its own
 markup would drift from every other section within a week — so the engine hands
 out `rows`, `card`, `stripHead`, `esc` and the live record pool, and a pack view
-composes exactly what the built-in ones do. `bengaluru/views/yourside.js`
-is the worked example.
+composes exactly what the built-in ones do. Every city currently uses the same
+views as Paris, so nothing ships one yet.
 
 A pack may declare `bases` in its `home.json` where the region has more than
 one centre. The Bay Area has two, fifty kilometres apart, and a list ranked from

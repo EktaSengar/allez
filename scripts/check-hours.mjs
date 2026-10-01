@@ -38,14 +38,19 @@ const FLOOR = 0.80;
    comma before a weekday adds to the rules before it rather than
    replacing them — Darbar's weekday lunch vanished under its dinner
    rule — and `Su off` alone says nothing about the other six days. */
+/* Wall-clock times in Paris, the pack these run against: hours.js reads
+   the city's clock, not the machine's, so a fixture built from the
+   machine's clock would test a different minute on every laptop. */
+const paris = s => new Date(s + ':00+02:00');
+
 const SETTLED = [
-  ['Mo-Fr 11:00-14:30, Sa 11:30-14:30, Su-We 17:00-21:30, Th-Sa 17:00-22:00', new Date(2026, 8, 21, 12, 0), true],
-  ['Mo-Fr 11:00-14:30, Sa 11:30-14:30, Su-We 17:00-21:30, Th-Sa 17:00-22:00', new Date(2026, 8, 21, 16, 0), false],
-  ['Tu-Fr 12:00-13:30, Tu-Sa 19:00-21:30', new Date(2026, 8, 25, 12, 30), true],
-  ['Mo-Sa 10:00-20:00; Su 10:00-13:00', new Date(2026, 8, 27, 12, 0), true],
-  ['Mo-Su 09:00-18:00; We off', new Date(2026, 8, 23, 12, 0), false],
-  ['Fr 20:00-02:00', new Date(2026, 8, 26, 1, 0), true],
-  ['Su off', new Date(2026, 8, 21, 12, 0), null]
+  ['Mo-Fr 11:00-14:30, Sa 11:30-14:30, Su-We 17:00-21:30, Th-Sa 17:00-22:00', paris('2026-09-21T12:00'), true],
+  ['Mo-Fr 11:00-14:30, Sa 11:30-14:30, Su-We 17:00-21:30, Th-Sa 17:00-22:00', paris('2026-09-21T16:00'), false],
+  ['Tu-Fr 12:00-13:30, Tu-Sa 19:00-21:30', paris('2026-09-25T12:30'), true],
+  ['Mo-Sa 10:00-20:00; Su 10:00-13:00', paris('2026-09-27T12:00'), true],
+  ['Mo-Su 09:00-18:00; We off', paris('2026-09-23T12:00'), false],
+  ['Fr 20:00-02:00', paris('2026-09-26T01:00'), true],
+  ['Su off', paris('2026-09-21T12:00'), null]
 ];
 const unsettled = SETTLED.filter(([s, when, want]) => Hours.isOpen(s, when) !== want);
 unsettled.forEach(([s, when, want]) =>

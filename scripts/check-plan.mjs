@@ -97,6 +97,17 @@ for (const id of cityIds()) {
       (bad.length ? ` — not: ${bad.map(s => s.item.title).join(', ')}` : ''));
     want(stops[0].travel.from === null, `${tag} · the first leg is measured from where the day starts`);
     want(plan.picks.length > 0 && plan.picks[0].key === 'best', `${tag} · the picks lead with the best overall`);
+
+    /* Saturday already under way in the city: at half past five
+       there, the morning and afternoon slots are over and only the
+       evening is planned; Sunday is untouched. */
+    const four = Hours.instant(sat, 17 * 60 + 30);
+    const late = Plan.weekend(pool, {
+      date: DATE, origin: b, weather: null, now: four,
+      rank: { today: DATE, weatherMode: null, taste: {}, exploredZones: [], homeZone: b.zone }
+    });
+    want(late.days[0].stops.every(s => s.slot === 'evening'),
+      `${tag} · at 17:30 on ${sat} only the evening is planned that day`);
   }
 }
 

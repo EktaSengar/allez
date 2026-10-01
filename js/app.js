@@ -60,12 +60,19 @@ const App = (() => {
 
   /* ---------- dates ---------- */
 
-  const TODAY = new Date();
+  /* Today is the city's today: a reader in another time zone gets the
+     date the places themselves are living, which is what hours, events
+     and holidays are written against. Held as midday on that date in the
+     reader's own clock, so every getDay, addDays and date heading below
+     reads the city's day without knowing about time zones. Nothing here
+     asks the time of day — the sections that do take a fresh Date and
+     hand it to Hours, which reads it in the city's time. */
+  const TODAY_ISO = Hours.clock(new Date()).iso;
+  const TODAY = new Date(TODAY_ISO + 'T12:00:00');
   const iso = d => {
     const t = new Date(d.getTime() - d.getTimezoneOffset() * 60000);
     return t.toISOString().slice(0, 10);
   };
-  const TODAY_ISO = iso(TODAY);
   const addDays = (d, n) => new Date(d.getTime() + n * 86400000);
   const fmtLong  = d => d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
   const fmtShort = d => d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
@@ -1111,10 +1118,9 @@ const App = (() => {
      used to be the same thing — a fixed row of eight tabs and an
      if/else chain — which is fine with one city and wrong with four.
 
-     Bengaluru will want a *Your side of town* view that Paris has no
-     use for. `defineView` is how a pack adds one: ship a file after
-     this one, call it, and list the id in `City.views`. Nothing here
-     needs to know it happened.
+     A city that ever needs a view of its own adds one with `defineView`:
+     ship a file after this one, call it, and list the id in
+     `City.views`. Nothing here needs to know it happened.
 
      The static line comes from the pack. Four views compute theirs
      from what they just drew, and pass a function instead. */
@@ -1353,7 +1359,13 @@ const App = (() => {
   /* ---------- today ---------- */
 
   function renderToday() {
-    const openNow = i => Rank.isOpenOn(i, TODAY_ISO);
+    /* "Today" from here on, not the whole date: the day-level check
+       keeps out what is shut all day, and the hours keep out what has
+       already closed. Unknown hours stay in — and "open now" is never
+       claimed from this, only "not finished for the day". */
+    const now = new Date();
+    const openNow = i => Rank.isOpenOn(i, TODAY_ISO) &&
+      !(i.hours && Hours.openLaterToday(i.hours, now) === false);
     const ranked = Rank.rank(ALL, CTX, i => openNow(i) && (i.durationMin ?? 120) <= 420);
     if (!ranked.length) return `<p class="empty">Nothing scheduled today — try the weekend.</p>`;
 
@@ -1363,8 +1375,13 @@ const App = (() => {
     const lead = leadWithin(ranked, Near.RINGS.near);
     used.add(lead.id);
 
+    /* "This evening" is a promise about after six, not about the rest of
+       the day: a café that shuts at five is open later today and still
+       no use to anyone leaving work. Where the hours cannot be read the
+       labels are all there is to go on. */
     const evening = Rank.rank(ALL, CTX, i =>
-      openNow(i) && !used.has(i.id) && (i.minutesFromHome ?? 99) <= 40 &&
+      openNow(i) && !(i.hours && Hours.openAfter(i.hours, 18, TODAY.getDay()) === false) &&
+      !used.has(i.id) && (i.minutesFromHome ?? 99) <= 40 &&
       ((i.labels || []).includes('afterwork') ||
        (i.goodFor || []).includes('evening') ||
        (i.goodFor || []).includes('spontaneous'))).slice(0, 3);
@@ -2878,6 +2895,7 @@ const App = (() => {
   function evNext(i) {
     const from = Math.max(0, Rank.daysBetween(TODAY_ISO, i.start));
     for (let d = from; d <= EV_AHEAD; d++) {
+      if (d === 0 && evOverToday(i)) continue;
       if (Rank.isOpenOn(i, iso(addDays(TODAY, d)))) return d;
     }
     return null;
@@ -2961,6 +2979,22 @@ const App = (() => {
     return { from: hm(m[1], m[2]), to: m[3] ? hm(m[3], m[4]) : null };
   }
 
+  /* Today's showing is over: the record states a time, and on the
+     city's clock it has finished — its own end, or the start plus its
+     duration (two hours where it gives none). A run that is on again
+     tomorrow moves to tomorrow; a one-off drops out. Without a stated
+     time nothing is assumed over, because "we cannot tell" is not
+     "it has finished". */
+  function evOverToday(i) {
+    const t = evTime(i);
+    if (!t) return false;
+    const mins = s => { const [h, m] = s.split(':').map(Number); return h * 60 + m; };
+    const from = mins(t.from);
+    let to = t.to ? mins(t.to) : from + (i.durationMin || 120);
+    if (to <= from) to += 1440;                         // runs past midnight
+    return Hours.clock(new Date()).mins >= to;
+  }
+
   /* Price is a claim, as on every other card: stated, or said to be
      unknown — never assumed to be free. */
   const evPrice = i => i.priceNote || priceText(i) || 'Price not confirmed';
@@ -3008,7 +3042,7 @@ const App = (() => {
   }
 
   /* The next date it is on, as a calendar file made in the browser. The
-     time is the city's wall clock, so it carries the city's zone and
+     time is the city's wall clock, written as the instant it is, so it
      lands right wherever the phone happens to be; without a stated time
      it is an all-day entry rather than an invented hour. */
   const icsClean = s => String(s || '').replace(/[\\;,]/g, m => '\\' + m).replace(/\n/g, ' ');
@@ -3024,18 +3058,26 @@ const App = (() => {
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
+  /* A wall-clock time in the city as a UTC time. A TZID alone needs a
+     VTIMEZONE block to go with it, and calendars that do not know the
+     zone by name (Outlook among them) quietly read the time in the
+     phone's zone instead; a UTC time cannot be misread. */
+  const cityUtc = (day, minutes) =>
+    Hours.instant(day, minutes).toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+
   /* `day` is an ISO date. Its own time where the record states one, an
-     all-day entry where it does not. */
+     all-day entry where it does not. An end at or before the start is
+     after midnight, on the next day. */
   function icsEvent(i, day) {
     const ymd = day.replace(/-/g, '');
     const t = evTime(i);
-    const tz = City.weather.tz;
     let when;
     if (t) {
-      const hhmm = x => x.replace(':', '') + '00';
-      const [h, m] = t.from.split(':').map(Number);
-      const end = t.to || clock(h * 60 + m + (i.durationMin || 120));
-      when = [`DTSTART;TZID=${tz}:${ymd}T${hhmm(t.from)}`, `DTEND;TZID=${tz}:${ymd}T${hhmm(end)}`];
+      const mins = x => { const [h, m] = x.split(':').map(Number); return h * 60 + m; };
+      const from = mins(t.from);
+      let to = t.to ? mins(t.to) : from + (i.durationMin || 120);
+      if (to <= from) to += 1440;
+      when = [`DTSTART:${cityUtc(day, from)}`, `DTEND:${cityUtc(day, to)}`];
     } else {
       const next = iso(addDays(new Date(day + 'T12:00:00'), 1)).replace(/-/g, '');
       when = [`DTSTART;VALUE=DATE:${ymd}`, `DTEND;VALUE=DATE:${next}`];

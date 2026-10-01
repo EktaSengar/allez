@@ -303,12 +303,8 @@ const City = (() => {
 
   /* ---------- which views this city has ----------
 
-     Paris's eight, plus one it has no use for. *Your side* is the view
-     this city actually wants: Indiranagar to Whitefield at 6pm is a
-     different city from the same trip at 11am, and no amount of ranking
-     by distance says so. Its builder lives in views/yourside.js and is
-     registered through App.defineView — nothing in the engine knows the
-     file exists. */
+     The same views as Paris, in the same order. The rush hour is not a
+     view of its own — it is in every travel time, through `reach`. */
 
   const views = {
     main: [
@@ -318,7 +314,6 @@ const City = (() => {
       { id: 'events',   label: 'Events' },
       { id: 'eat',      label: 'Eat' },
       { id: 'sport',    label: 'Sport' },
-      { id: 'yourside', label: 'Your side' },
       { id: 'regulars', label: 'Regulars' },
       { id: 'explore',  label: 'Explore' },
       { id: 'away',     label: 'Away' }
@@ -358,10 +353,20 @@ const City = (() => {
   const reach = {
     rush: RUSH,
 
+    /* The weekday and the hour in Bengaluru, not wherever the reader's
+       browser is: rush hour is the city's, and a reader in London at
+       noon is looking at Bengaluru at half past four. hours.js loads
+       after this pack, so it is asked at call time. */
+    at(when) {
+      const c = typeof Hours !== 'undefined'
+        ? Hours.clock(when, weather.tz)
+        : { dow: when.getDay(), mins: when.getHours() * 60 + when.getMinutes() };
+      return { day: c.dow, h: c.mins / 60 };
+    },
+
     isPeak(when) {
-      const day = when.getDay();
+      const { day, h } = this.at(when);
       if (day === 0 || day === 6) return false;
-      const h = when.getHours() + when.getMinutes() / 60;
       return RUSH.some(([a, b]) => h >= a && h < b);
     },
 

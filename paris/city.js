@@ -185,11 +185,9 @@ const City = (() => {
   /* ---------- which views this city has ----------
 
      A fixed row of eight tabs was the last place the engine still
-     assumed Paris. Bengaluru wants a *Your side of town* view that
-     Paris has no use for; the Bay Area will want something about fog.
-     So the pack says which views exist, in what order, what the tab
-     reads and what the line under it says — and the engine supplies a
-     builder for each id it knows, or a pack ships its own.
+     assumed Paris. So the pack says which views exist, in what order,
+     what the tab reads and what the line under it says — and the engine
+     supplies a builder for each id it knows, or a pack ships its own.
 
      `main` is the row of tabs; `utility` is the smaller pair at the
      end. The order here is the order on screen, and it has to agree
