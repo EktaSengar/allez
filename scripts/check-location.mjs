@@ -422,8 +422,16 @@ const EXPECT = {
        five probes now reach for the same three or four. Madiwala,
        Malleswaram 8th Cross and Jayanagar 9th Block are on the map and
        have no open source to write them from; a visit to each is what
-       brings this down. */
-    overshare: 24,
+       brings this down.
+
+       28 on 1 October, by decision, after Indiranagar, Koramangala, HSR,
+       Kodihalli and Bellandur were written up. Coverage rose to 135, but
+       the probes still reach the same few central bookshops and markets:
+       a handful of bookshops have cards in the whole city, so every new
+       one joins all five lists instead of replacing a shared one. Local
+       bookshops and markets in Jayanagar, Malleswaram, Koramangala and
+       Indiranagar are what bring it back down. */
+    overshare: 28,
     /* 18 off the notable tier alone; 28 with twelve editorial records;
        62 with four markets and an Iyengar bakery; 120 with ten cafés and
        bakeries, when those two columns had been dead in all forty sampled
@@ -447,8 +455,10 @@ const EXPECT = {
        until the gap was closed rather than forgotten. 126 on 1 October,
        with three markets written from Wikipedia: until then City Market
        was the only market with a card, so every one of the forty market
-       cells held one known place and needed two. */
-    floor: 126
+       cells held one known place and needed two. 135 on 1 October, with
+       Indiranagar, the south-east and the first personal bakery and
+       bookshop picks written up. */
+    floor: 135
   }
 };
 
