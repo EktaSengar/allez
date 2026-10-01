@@ -540,6 +540,19 @@ const QUERIES = {
   'bfc-sc-delhi-2026': 'Sree Kanteerava Stadium',
   'india-wi-t20i-bengaluru-2026': 'M. Chinnaswamy Stadium',
   'india-sl-odi-bengaluru-2026': 'M. Chinnaswamy Stadium',
+  // bengaluru — concerts, shows and festivals, October 2026: the performer
+  // where the event is them, the neighbourhood where it is a small room
+  'atta-galatta-storywalk-2026-10-03': 'Indiranagar',
+  'atta-galatta-brunch-2026-10-03': 'Indiranagar',
+  'mysuru-dasara-2026': 'Mysore Dasara',
+  'mysuru-jamboo-savari-2026': 'Mysore Dasara',
+  'seedhe-maut-2026-10-04': 'Seedhe Maut',
+  'biswa-inventions-2026': 'Biswa Kalyan Rath',
+  'sonu-nigam-2026-10-24': 'Sonu Nigam',
+  'guns-n-roses-2026-11-14': "Guns N' Roses",
+  'indian-ocean-2026-11-28': 'Indian Ocean (band)',
+  'satinder-sartaaj-2026-11-20': 'Satinder Sartaaj',
+  'fred-again-2026-12-13': 'Fred Again',
   'pondicherry': 'Pondicherry',
   'kabini': 'Kabini River',
   'ooty-nilgiri-railway': 'Nilgiri Mountain Railway',
@@ -611,7 +624,8 @@ const CONTEXT_ONLY = new Set([
   'paname-run-club', 'parkrun-paris', 'ping-pong-parks', 'velib-seine-ride',
   'yoga-outdoor-paris', 'ice-skating-winter', 'gymnastics-championships-2026',
   'tour-de-france-paris-2027',
-  'fete-de-ganesh-2026'
+  'fete-de-ganesh-2026',
+  'atta-galatta-storywalk-2026-10-03', 'atta-galatta-brunch-2026-10-03'
 ]);
 
 const FILES = ['events.json', 'places.json', 'nightlife.json', 'sports.json', 'food.json', 'itineraries.json', 'daytrips.json'];
