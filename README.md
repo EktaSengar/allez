@@ -379,6 +379,7 @@ node scripts/images.mjs --force   # re-resolve everything
 node scripts/images.mjs --resize  # normalise widths, verifying each
 node scripts/photos.mjs           # the generated tiers, from the records themselves
 node scripts/photos.mjs --dry     # what it would resolve, writing nothing
+node scripts/photos-india.mjs     # missing Delhi/Bengaluru curated photos, with verified Commons credits
 ```
 
 ### The layouts
