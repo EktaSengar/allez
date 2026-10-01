@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* Fill curated Delhi/Bengaluru cards from Commons only. Explicit article
-   mappings distinguish a place from its surroundings; chain articles are
+   mappings only, never a neighbourhood stand-in; chain articles are
    deliberately excluded because their photo may show another branch.
    Usage: node scripts/photos-india.mjs [--dry] */
 import fs from 'node:fs/promises';
@@ -8,33 +8,6 @@ import crypto from 'node:crypto';
 import { pageImages } from './images.mjs';
 
 const dry = process.argv.includes('--dry');
-const zones = {
-  delhi: {
-    'connaught-place': 'Connaught Place, New Delhi',
-    'chandni-chowk': 'Chandni Chowk', 'old-delhi': 'Chandni Chowk',
-    'lodhi-colony': 'Lodhi Colony', nizamuddin: 'Nizamuddin East',
-    'lajpat-nagar': 'Lajpat Nagar', 'hauz-khas': 'Hauz Khas',
-    'chittaranjan-park': 'Chittaranjan Park', saket: 'Saket (Delhi)',
-    'malviya-nagar': 'Malviya Nagar, Delhi', 'greater-kailash': 'Greater Kailash',
-    'kamla-nagar': 'Kamla Nagar, New Delhi', 'rajouri-garden': 'Rajouri Garden',
-    'vasant-vihar': 'Vasant Vihar', 'vasant-kunj': 'Vasant Kunj',
-    mehrauli: 'Mehrauli', 'shahpur-jat': 'Shahpur Jat',
-    'sarojini-nagar': 'Sarojini Nagar', 'south-extension': 'South Extension',
-    'karol-bagh': 'Karol Bagh', chanakyapuri: 'Chanakyapuri',
-    'mayur-vihar': 'Mayur Vihar', 'greater-noida': 'Greater Noida',
-    'cyber-city': 'DLF Cyber City'
-  },
-  bengaluru: {
-    basavanagudi: 'Basavanagudi', 'shanti-nagar': 'Shanti Nagar, Bangalore',
-    malleswaram: 'Malleswaram', 'vasanth-nagar': 'Vasanth Nagar',
-    halasuru: 'Ulsoor', chikkapete: 'Chickpet', 'frazer-town': 'Frazer Town, Bangalore',
-    sadashivanagar: 'Sadashivanagar', chamarajapete: 'Chamarajpet',
-    indiranagar: 'Indiranagar', koramangala: 'Koramangala',
-    'hsr-layout': 'HSR Layout', hoodi: 'Hoodi', whitefield: 'Whitefield, Bangalore',
-    'epip-zone': 'International Tech Park, Bangalore', 'jp-nagar': 'J. P. Nagar',
-    banaswadi: 'Banaswadi', hennur: 'Hennur'
-  }
-};
 // Exact subjects only. A park beside a lake is labelled as context below.
 const subjects = {
   "Karim's": "Karim's", 'Lodhi Gardens': 'Lodhi Gardens',
@@ -47,21 +20,19 @@ const subjects = {
   'Lalbagh Botanical Gardens': 'Lal Bagh', 'Cubbon Park': 'Cubbon Park',
   'City Market': 'K. R. Market', 'Blossom Book House': 'Blossom Book House'
 };
+// A photo of the street or market a card is about, where the card is the
+// street or market itself. Never a nearby landmark standing in for a venue.
 const contexts = {
   'janpath-tibetan-market': 'Janpath', 'sarojini-nagar-market': 'Sarojini Nagar',
-  'chandni-chowk-bazaars': 'Chandni Chowk', 'meherchand-market': 'Lodhi Colony',
-  'cameo-map': 'Museum of Art & Photography', 'zlb23-leela': 'The Leela Palace Bangalore',
+  'chandni-chowk-bazaars': 'Chandni Chowk', 'karol-bagh-ajmal-khan-road': 'Karol Bagh',
+  'osm-lajpat-nagar-central-market-57138-154482': 'Lajpat Nagar',
   'osm-ulsoor-lake-park-25971-155244': 'Ulsoor Lake',
-  'osm-blossom-book-house-25950-155210': 'Church Street, Bangalore',
-  'osm-lakeview-milk-bar-25936-155499': 'Whitefield, Bangalore',
-  'lakeview-milk-bar-mg-road': 'Mahatma Gandhi Road, Bangalore',
-  'maverick-farmer-ulsoor': 'Ulsoor',
   'osm-koshy-s-25951-155203': "Koshy's"
 };
 
 const docs = [];
 const wanted = new Map();
-for (const city of Object.keys(zones)) {
+for (const city of ['delhi', 'bengaluru']) {
   for (const tier of ['editorial', 'places', 'nightlife']) {
     const file = new URL(`../${city}/data/${tier}.json`, import.meta.url);
     const doc = JSON.parse(await fs.readFile(file, 'utf8'));
@@ -69,7 +40,7 @@ for (const city of Object.keys(zones)) {
     for (const item of doc.items) {
       if (item.image || item.i) continue;
       const subject = subjects[item.title];
-      const title = subject || contexts[item.id] || zones[city][item.zone];
+      const title = subject || contexts[item.id];
       if (!title) continue;
       if (!wanted.has(title)) wanted.set(title, []);
       wanted.get(title).push({ item, kind: subject ? 'subject' : 'context' });
