@@ -566,6 +566,29 @@ const QUERIES = {
   'dickens-fair-2026': 'Great Dickens Christmas Fair',
   'journey-2026': 'Journey (band)',
   'sf-ballet-nutcracker-2026': 'War Memorial Opera House',
+  // new york — festivals, concerts and holiday shows, October to December 2026
+  'nyff-2026': 'Lincoln Center',
+  'harry-styles-msg-2026': 'Harry Styles',
+  'ny-comic-con-2026': 'New York Comic Con',
+  'nycwff-2026': 'South Street Seaport',
+  'ohny-weekend-2026': 'Open House New York',
+  'radio-city-christmas-2026': 'Radio City Christmas Spectacular',
+  'dave-matthews-msg-2026': 'Dave Matthews Band',
+  'stevie-wonder-msg-2026': 'Stevie Wonder',
+  'macys-parade-2026': "Macy's Thanksgiving Day Parade",
+  'nycb-nutcracker-2026': 'David H. Koch Theater',
+  'rockefeller-tree-lighting-2026': 'Rockefeller Center Christmas Tree',
+  'bocelli-msg-2026': 'Andrea Bocelli',
+  // paris — festivals, fairs and concerts, October to December 2026
+  'fete-des-vendanges-2026': 'Fête des vendanges de Montmartre',
+  'stevie-wonder-paris-2026': 'Stevie Wonder',
+  'the-strokes-paris-2026': 'The Strokes',
+  'art-basel-paris-2026': 'Grand Palais',
+  'duran-duran-paris-2026': 'Duran Duran',
+  'salon-du-chocolat-2026': 'Salon du Chocolat',
+  'niall-horan-paris-2026': 'Niall Horan',
+  'paris-photo-2026': 'Paris Photo',
+  'noah-kahan-paris-2026': 'Noah Kahan',
   'pondicherry': 'Pondicherry',
   'kabini': 'Kabini River',
   'ooty-nilgiri-railway': 'Nilgiri Mountain Railway',
@@ -639,7 +662,8 @@ const CONTEXT_ONLY = new Set([
   'tour-de-france-paris-2027',
   'fete-de-ganesh-2026',
   'atta-galatta-storywalk-2026-10-03', 'atta-galatta-brunch-2026-10-03',
-  'lit-crawl-sf-2026', 'sf-ballet-nutcracker-2026'
+  'lit-crawl-sf-2026', 'sf-ballet-nutcracker-2026',
+  'nyff-2026', 'nycwff-2026', 'nycb-nutcracker-2026', 'art-basel-paris-2026'
 ]);
 
 const FILES = ['events.json', 'places.json', 'nightlife.json', 'sports.json', 'food.json', 'itineraries.json', 'daytrips.json'];
