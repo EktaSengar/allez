@@ -170,7 +170,8 @@
       "goodFor": [
         "weekend",
         "friends",
-        "evening"
+        "evening",
+        "afternoon"
       ],
       "coords": [
         48.8875,
@@ -193,7 +194,9 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Ouverture_du_d%C3%A9fil%C3%A9_de_la_F%C3%AAte_des_Vendanges_%C3%A0_Montmartre.jpg",
       "imageSubject": "Fête des vendanges de Montmartre",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "14:00",
+      "durationMin": 240
     },
     {
       "type": "event",
@@ -376,7 +379,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Stevie_Wonder_June_30%2C_Montreal.jpg",
       "imageSubject": "Stevie Wonder",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 150
     },
     {
       "type": "event",
@@ -461,7 +465,8 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/The_Strokes_by_Roger_Woolman.jpg/1280px-The_Strokes_by_Roger_Woolman.jpg",
       "imageSubject": "The Strokes",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 120
     },
     {
       "type": "event",
@@ -480,7 +485,8 @@
       "weatherSensitive": false,
       "goodFor": [
         "couple",
-        "weekend"
+        "weekend",
+        "afternoon"
       ],
       "coords": [
         48.8661,
@@ -500,7 +506,9 @@
       "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/France-000296_-_Paris%27_Grand_Palais_%2814525102530%29.jpg/1280px-France-000296_-_Paris%27_Grand_Palais_%2814525102530%29.jpg",
       "imageSubject": "Grand Palais",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "11:00",
+      "durationMin": 180
     },
     {
       "type": "event",
@@ -541,7 +549,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Duran_Duran.jpg",
       "imageSubject": "Duran Duran",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 120
     },
     {
       "type": "event",
@@ -562,7 +571,8 @@
       "goodFor": [
         "weekend",
         "family",
-        "friends"
+        "friends",
+        "morning"
       ],
       "coords": [
         48.8322,
@@ -582,7 +592,9 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Salon_chocolat_2008.png",
       "imageSubject": "Salon du Chocolat",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "10:00",
+      "durationMin": 180
     },
     {
       "id": "rolex-paris-masters-2026",
@@ -666,7 +678,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/President_Biden_celebrates_2023_Saint_Patrick%27s_Day_at_the_White_House_%284%29_%28cropped%29.jpg",
       "imageSubject": "Niall Horan",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 120
     },
     {
       "type": "event",
@@ -686,7 +699,8 @@
       "weatherSensitive": false,
       "goodFor": [
         "couple",
-        "weekend"
+        "weekend",
+        "afternoon"
       ],
       "coords": [
         48.8661,
@@ -707,7 +721,9 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Grande_verri%C3%A8re_du_Grand_Palais_lors_de_l%27op%C3%A9ration_La_nef_est_%C3%A0_vous%2C_juin_2018_%2810%29.jpg/1280px-Grande_verri%C3%A8re_du_Grand_Palais_lors_de_l%27op%C3%A9ration_La_nef_est_%C3%A0_vous%2C_juin_2018_%2810%29.jpg",
       "imageSubject": "Grand Palais",
       "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "13:00",
+      "durationMin": 180
     },
     {
       "type": "event",
@@ -748,7 +764,8 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Noah_Kahan_2024_01_%28cropped%29.jpg",
       "imageSubject": "Noah Kahan",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 120
     },
     {
       "id": "paris-marathon-2027",
