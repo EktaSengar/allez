@@ -553,6 +553,19 @@ const QUERIES = {
   'indian-ocean-2026-11-28': 'Indian Ocean (band)',
   'satinder-sartaaj-2026-11-20': 'Satinder Sartaaj',
   'fred-again-2026-12-13': 'Fred Again',
+  // bay area — concerts, festivals and shows, October to December 2026
+  'hardly-strictly-2026': 'Hardly Strictly Bluegrass',
+  'castro-street-fair-2026': 'Castro Street Fair',
+  'chayanne-2026-10-11': 'Chayanne',
+  'half-moon-bay-pumpkin-2026': 'Half Moon Bay Art and Pumpkin Festival',
+  'doja-cat-2026-10-19': 'Doja Cat',
+  'lit-crawl-sf-2026': 'Valencia Street',
+  'phoebe-bridgers-2026': 'Phoebe Bridgers',
+  'dia-de-muertos-sf-2026': 'Day of the Dead San Francisco',
+  'jonas-brothers-2026': 'Jonas Brothers',
+  'dickens-fair-2026': 'Great Dickens Christmas Fair',
+  'journey-2026': 'Journey (band)',
+  'sf-ballet-nutcracker-2026': 'War Memorial Opera House',
   'pondicherry': 'Pondicherry',
   'kabini': 'Kabini River',
   'ooty-nilgiri-railway': 'Nilgiri Mountain Railway',
@@ -625,7 +638,8 @@ const CONTEXT_ONLY = new Set([
   'yoga-outdoor-paris', 'ice-skating-winter', 'gymnastics-championships-2026',
   'tour-de-france-paris-2027',
   'fete-de-ganesh-2026',
-  'atta-galatta-storywalk-2026-10-03', 'atta-galatta-brunch-2026-10-03'
+  'atta-galatta-storywalk-2026-10-03', 'atta-galatta-brunch-2026-10-03',
+  'lit-crawl-sf-2026', 'sf-ballet-nutcracker-2026'
 ]);
 
 const FILES = ['events.json', 'places.json', 'nightlife.json', 'sports.json', 'food.json', 'itineraries.json', 'daytrips.json'];
