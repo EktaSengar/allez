@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01",
+  "generated": "2026-10-02",
   "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the team's or organiser's own schedule on the date given.",
   "items": [
     {
@@ -50,88 +50,84 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "nyff-2026",
+      "title": "New York Film Festival",
+      "emoji": "🎬",
       "categories": [
-        "sport",
-        "baseball"
-      ],
-      "indoor": false,
-      "weatherSensitive": true,
-      "goodFor": [
-        "sport",
-        "weekend",
-        "evening"
-      ],
-      "lastVerified": "2026-09-28",
-      "quality": 5,
-      "uniqueness": 5,
-      "id": "yankees-red-sox-wild-card-2026",
-      "title": "Yankees v Red Sox — the Wild Card Series",
-      "emoji": "⚾",
-      "coords": [
-        40.82963,
-        -73.92617
-      ],
-      "coordsFrom": "hand-placed at the venue",
-      "area": "Yankee Stadium, the Bronx",
-      "start": "2026-09-29",
-      "end": "2026-10-01",
-      "durationMin": 180,
-      "priceNote": "Playoff prices",
-      "why": "The oldest rivalry in baseball, in the postseason, in the Bronx. All three games of the best-of-three series are at Yankee Stadium. Take the 4 or the D, and get there early for batting practice.",
-      "labels": [
-        "dontmiss"
-      ],
-      "url": "https://www.mlb.com/news/yankees-2026-postseason-faq",
-      "source": "MLB; NBC Sports",
-      "booking": "https://www.mlb.com/yankees/tickets",
-      "priceLevel": 4,
-      "hoursNote": "Game 1 Tuesday 29 September, Game 2 Wednesday; a Game 3, if needed, on Thursday 1 October",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Yankee_Stadium_overhead_2010.jpg/1280px-Yankee_Stadium_overhead_2010.jpg",
-      "imageSubject": "Yankee Stadium",
-      "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
-    },
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "categories": [
-        "sport",
-        "hockey"
+        "film",
+        "festival"
       ],
       "indoor": true,
       "weatherSensitive": false,
       "goodFor": [
-        "sport",
-        "weekend",
-        "evening"
+        "evening",
+        "couple"
       ],
-      "lastVerified": "2026-09-28",
-      "quality": 4,
-      "uniqueness": 4,
-      "id": "rangers-opener-2026",
-      "title": "Rangers home opener v Lightning",
-      "emoji": "🏒",
       "coords": [
-        40.75052,
-        -73.99345
+        40.7725,
+        -73.9835
       ],
       "coordsFrom": "hand-placed at the venue",
-      "area": "Madison Square Garden",
-      "start": "2026-10-01",
-      "end": "2026-10-01",
-      "durationMin": 180,
-      "priceNote": "Expensive",
-      "why": "The Rangers' first game at the Garden this season, against Tampa Bay, with the introductions and the organ at full volume.",
-      "labels": [],
-      "url": "https://www.nhl.com/rangers/tickets/single-game-tickets",
-      "source": "New York Rangers; Sports Illustrated",
-      "booking": "https://www.nhl.com/rangers/tickets/single-game-tickets",
-      "priceLevel": 4,
-      "hoursNote": "Thursday evening — puck drop time on the Rangers site",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Madison_Square_Garden_%28MSG%29_-_Full_%2848124330357%29.jpg/1280px-Madison_Square_Garden_%28MSG%29_-_Full_%2848124330357%29.jpg",
-      "imageSubject": "Madison Square Garden",
+      "area": "Lincoln Center and venues across the city",
+      "start": "2026-09-25",
+      "end": "2026-10-12",
+      "priceNote": "Tickets per screening",
+      "priceLevel": 2,
+      "why": "The 64th edition: two and a half weeks of premieres, many with the director on stage afterwards. Main-slate tickets go fast, but standby lines and the Currents strand are where the room still is.",
+      "source": "Film at Lincoln Center",
+      "url": "https://www.filmlinc.org/nyff/nyff64-lineup/",
+      "booking": "https://www.filmlinc.org/nyff/nyff64-lineup/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Lincoln_Center_Overview_%2848047495362%29.jpg/1280px-Lincoln_Center_Overview_%2848047495362%29.jpg",
+      "imageSubject": "Lincoln Center",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "18:00",
+      "durationMin": 150
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "harry-styles-msg-2026",
+      "title": "Harry Styles at the Garden",
+      "emoji": "🎤",
+      "categories": [
+        "music",
+        "concert",
+        "pop"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "coords": [
+        40.7505,
+        -73.9934
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Madison Square Garden, Midtown",
+      "start": "2026-10-02",
+      "end": "2026-10-31",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "A month-long residency, fifteen nights through October with Jamie xx opening. Halloween night is the one people dress up for.",
+      "source": "Madison Square Garden; JamBase",
+      "url": "https://www.msg.com/madison-square-garden",
+      "booking": "https://www.msg.com/madison-square-garden",
+      "startTime": "20:00",
+      "times": "Fifteen nights in October, 8pm",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/HarryStylesWembley170623_%2865_of_93%29_%2852982678051%29_%28cropped_2%29.jpg/1280px-HarryStylesWembley170623_%2865_of_93%29_%2852982678051%29_%28cropped_2%29.jpg",
+      "imageSubject": "Harry Styles",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 180
     },
     {
       "type": "event",
@@ -175,6 +171,135 @@
       "imageSubject": "Sports Illustrated Stadium",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "ny-comic-con-2026",
+      "title": "New York Comic Con",
+      "emoji": "🦸",
+      "categories": [
+        "festival",
+        "culture"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "weekend",
+        "friends",
+        "afternoon"
+      ],
+      "coords": [
+        40.7577,
+        -74.0022
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Javits Center, Hudson Yards",
+      "start": "2026-10-08",
+      "end": "2026-10-11",
+      "priceNote": "Thursday and Sunday tickets left",
+      "priceLevel": 2,
+      "why": "The twentieth edition, with a Coney Island theme. Friday and Saturday are sold out; Thursday afternoon is the quiet way in, and the cosplay alone is worth the trip.",
+      "source": "New York Comic Con",
+      "url": "https://www.newyorkcomiccon.com/",
+      "booking": "https://www.newyorkcomiccon.com/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Cosplay_at_NYCC_%2860421%29.jpg/1280px-Cosplay_at_NYCC_%2860421%29.jpg",
+      "imageSubject": "New York Comic Con",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "10:00",
+      "durationMin": 360
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "nycwff-2026",
+      "title": "New York City Wine & Food Festival",
+      "emoji": "🍷",
+      "categories": [
+        "food",
+        "festival"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "friends",
+        "couple"
+      ],
+      "coords": [
+        40.7063,
+        -74.0036
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "The Seaport and venues across the city",
+      "start": "2026-10-15",
+      "end": "2026-10-18",
+      "priceNote": "Tickets per event",
+      "priceLevel": 3,
+      "why": "Nearly fifty dinners, tastings and walk-around parties over four days, with the proceeds going to fighting hunger. The smaller chef dinners are better value than the big tastings.",
+      "source": "NYC Wine & Food Festival",
+      "url": "https://nycwff.org/",
+      "booking": "https://nycwff.org/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/South_Street_Seaport_002.JPG/1280px-South_Street_Seaport_002.JPG",
+      "imageSubject": "South Street Seaport",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "18:00",
+      "durationMin": 180
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "ohny-weekend-2026",
+      "title": "Open House New York Weekend",
+      "emoji": "🏛️",
+      "categories": [
+        "culture",
+        "walk",
+        "free"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "couple",
+        "friends",
+        "afternoon"
+      ],
+      "coords": [
+        40.7128,
+        -74.006
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Around 300 buildings across the five boroughs",
+      "start": "2026-10-16",
+      "end": "2026-10-18",
+      "priceNote": "Mostly free; some sites ticketed",
+      "priceLevel": 0,
+      "why": "Three days when the city opens doors it usually keeps shut: rooftops, water tunnels, private libraries, studios. Most sites are drop-in; check which need a reservation and book those first.",
+      "source": "Open House New York",
+      "url": "https://ohny.org/activity/2026-ohny-weekend",
+      "booking": false,
+      "times": "10am to 6pm each day",
+      "labels": [
+        "dontmiss"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Lobby_Woolworth_Building_New_York_City_June_2019.jpg/1280px-Lobby_Woolworth_Building_New_York_City_June_2019.jpg",
+      "imageSubject": "Woolworth Building lobby",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "10:00",
+      "durationMin": 240
     },
     {
       "type": "event",
@@ -440,6 +565,306 @@
       "imageSubject": "Verrazzano-Narrows Bridge",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 4,
+      "id": "radio-city-christmas-2026",
+      "title": "Christmas Spectacular with the Rockettes",
+      "emoji": "💃",
+      "categories": [
+        "dance",
+        "theatre",
+        "holiday",
+        "family"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "family",
+        "evening"
+      ],
+      "coords": [
+        40.76,
+        -73.98
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Radio City Music Hall, Midtown",
+      "start": "2026-11-04",
+      "end": "2027-01-04",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "The kickline, the wooden soldiers and a live camel, ninety minutes long and polished to the last step. Weekday matinees in November are the easiest seats to get.",
+      "source": "Rockettes",
+      "url": "https://www.rockettes.com/christmas/",
+      "booking": "https://www.rockettes.com/christmas/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Radio_City_Music_Hall%2C_December_2015.jpg/1280px-Radio_City_Music_Hall%2C_December_2015.jpg",
+      "imageSubject": "Radio City Music Hall",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "19:00",
+      "durationMin": 90
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "dave-matthews-msg-2026",
+      "title": "Dave Matthews Band",
+      "emoji": "🎸",
+      "categories": [
+        "music",
+        "concert",
+        "rock"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "coords": [
+        40.7505,
+        -73.9934
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Madison Square Garden, Midtown",
+      "start": "2026-11-12",
+      "end": "2026-11-13",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "Two nights of long jams, where the setlist changes each night. Go to both if you're a fan.",
+      "source": "Madison Square Garden; JamBase",
+      "url": "https://www.msg.com/madison-square-garden",
+      "booking": "https://www.msg.com/madison-square-garden",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Dave-Matthews-VA.jpg/1280px-Dave-Matthews-VA.jpg",
+      "imageSubject": "Dave Matthews Band",
+      "imageKind": "subject",
+      "imageCredit": "Raj Gupta · CC BY-SA 2.0",
+      "startTime": "19:30",
+      "durationMin": 180
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "stevie-wonder-msg-2026",
+      "title": "Stevie Wonder — Songs in the Key of Life at 50",
+      "emoji": "🎹",
+      "categories": [
+        "music",
+        "concert",
+        "soul"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "coords": [
+        40.7505,
+        -73.9934
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Madison Square Garden, Midtown",
+      "start": "2026-11-19",
+      "end": "2026-11-19",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "The whole double album played for its fiftieth birthday, by the man who made it. A once-only night.",
+      "source": "Madison Square Garden; JamBase",
+      "url": "https://www.msg.com/madison-square-garden",
+      "booking": "https://www.msg.com/madison-square-garden",
+      "labels": [
+        "dontmiss"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Stevie_Wonder_June_30%2C_Montreal.jpg",
+      "imageSubject": "Stevie Wonder",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "20:00",
+      "durationMin": 150
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "macys-parade-2026",
+      "title": "The 100th Macy's Thanksgiving Day Parade",
+      "emoji": "🎈",
+      "categories": [
+        "festival",
+        "free",
+        "family",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "family",
+        "morning"
+      ],
+      "coords": [
+        40.7812,
+        -73.9732
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Central Park West to Herald Square",
+      "start": "2026-11-26",
+      "end": "2026-11-26",
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "why": "The hundredth parade, so expect it bigger than usual. Stake out Central Park West in the Seventies by 6:30am, or go the night before to watch the balloons being inflated near the Natural History Museum.",
+      "source": "Macy's",
+      "url": "https://www.macysinc.com/newsroom/news/news-details/2026/Macys-Kicks-Off-the-100-Day-Countdown-to-the-100th-Macys-Thanksgiving-Day-Parade/default.aspx",
+      "booking": false,
+      "startTime": "08:30",
+      "times": "8:30am to noon",
+      "labels": [
+        "dontmiss"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Santa_Claus_arrives..jpg/1280px-Santa_Claus_arrives..jpg",
+      "imageSubject": "Macy's Thanksgiving Day Parade",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 210
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "nycb-nutcracker-2026",
+      "title": "New York City Ballet — The Nutcracker",
+      "emoji": "🩰",
+      "categories": [
+        "dance",
+        "ballet",
+        "holiday",
+        "family"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "family",
+        "evening",
+        "couple"
+      ],
+      "coords": [
+        40.7725,
+        -73.9835
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "David H. Koch Theater, Lincoln Center",
+      "start": "2026-11-27",
+      "end": "2027-01-03",
+      "priceNote": "Tickets from NYCB",
+      "priceLevel": 3,
+      "why": "Balanchine's version, with the tree that grows to forty feet. Lincoln Center's plaza is lit for the season too, so make an evening of it.",
+      "source": "New York City Ballet",
+      "url": "https://www.nycballet.com/",
+      "booking": "https://www.nycballet.com/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/48/New_York_City_Opera.jpg",
+      "imageSubject": "David H. Koch Theater",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "19:00",
+      "durationMin": 120
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 4,
+      "id": "rockefeller-tree-lighting-2026",
+      "title": "Rockefeller Center Tree Lighting",
+      "emoji": "🎄",
+      "categories": [
+        "festival",
+        "free",
+        "holiday",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "family"
+      ],
+      "coords": [
+        40.7587,
+        -73.9787
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Rockefeller Plaza, Midtown",
+      "start": "2026-12-02",
+      "end": "2026-12-02",
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "why": "The tree is lit live on television after an evening of performers. The crowd is enormous and the view poor, so most New Yorkers go on a weeknight afterwards instead, late, when the plaza is quieter.",
+      "source": "Rockefeller Center",
+      "url": "https://www.rockefellercenter.com/holidays/rockefeller-center-christmas-tree",
+      "booking": false,
+      "startTime": "19:00",
+      "times": "7pm to 10pm",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Rockefeller_Christmas_Tree.jpg/1280px-Rockefeller_Christmas_Tree.jpg",
+      "imageSubject": "Rockefeller Center Christmas Tree",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 180
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "bocelli-msg-2026",
+      "title": "Andrea Bocelli",
+      "emoji": "🎶",
+      "categories": [
+        "music",
+        "concert",
+        "classical"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "coords": [
+        40.7505,
+        -73.9934
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Madison Square Garden, Midtown",
+      "start": "2026-12-16",
+      "end": "2026-12-17",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "Arias and Christmas songs with orchestra and choir, a week before Christmas.",
+      "source": "Madison Square Garden; JamBase",
+      "url": "https://www.msg.com/madison-square-garden",
+      "booking": "https://www.msg.com/madison-square-garden",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Andrea_Bocelli_20190511_017-2_%28cropped%29.jpg/1280px-Andrea_Bocelli_20190511_017-2_%28cropped%29.jpg",
+      "imageSubject": "Andrea Bocelli",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "20:00",
+      "durationMin": 150
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01",
+  "generated": "2026-10-02",
   "window": null,
   "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the team's or organiser's own schedule on the date given.",
   "items": [
@@ -52,46 +52,51 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "hardly-strictly-2026",
+      "title": "Hardly Strictly Bluegrass",
+      "emoji": "🪕",
       "categories": [
-        "sport",
-        "hockey"
+        "music",
+        "festival",
+        "free",
+        "outdoor"
       ],
-      "indoor": true,
-      "weatherSensitive": false,
+      "indoor": false,
+      "weatherSensitive": true,
       "goodFor": [
-        "sport",
         "weekend",
-        "evening"
+        "friends",
+        "outdoors",
+        "afternoon"
       ],
-      "lastVerified": "2026-09-28",
-      "quality": 4,
-      "uniqueness": 4,
-      "id": "sharks-opener-2026",
-      "title": "Sharks home opener v Panthers",
-      "emoji": "🏒",
       "coords": [
-        37.33274,
-        -121.90102
+        37.7695,
+        -122.487
       ],
-      "coordsFrom": "hand-placed at the venue",
-      "area": "SAP Center, San Jose",
-      "start": "2026-10-01",
-      "end": "2026-10-01",
-      "durationMin": 180,
-      "priceNote": "Tickets from ~$40; the street festival is free",
-      "why": "The first home game of the Sharks' season, against the Florida Panthers, both Tkachuk brothers included. Puck drop is at seven. Before it, the streets outside SAP Center become a free festival with food stalls, player interviews and giveaways, so come early even without a ticket. Caltrain to Diridon is across the road.",
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Hellman Hollow, Golden Gate Park",
+      "start": "2026-10-02",
+      "end": "2026-10-04",
+      "priceNote": "Free, no tickets",
+      "priceLevel": 0,
+      "why": "Three days of free music across the meadows of Golden Gate Park, much of it not bluegrass at all. Bring a blanket and walk between stages rather than camping at one; the best sets are often the ones you stumble into.",
+      "source": "Hardly Strictly Bluegrass",
+      "url": "https://hardlystrictlybluegrass.com/info-faq-2026/",
+      "booking": false,
+      "times": "Friday from 11am, weekend from 9am; music ends at 7pm",
       "labels": [
-        "dontmiss"
+        "dontmiss",
+        "outdoor"
       ],
-      "url": "https://www.nhl.com/sharks/news/sharks-announce-opening-weekend-celebration-and-opening-night-street-festival",
-      "source": "San Jose Sharks; The Hockey News",
-      "booking": "https://www.ticketmaster.com/san-jose-sharks-tickets/artist/806018?home_away=home",
-      "priceLevel": 3,
-      "startTime": "19:00",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/SAP_Center_%2816609288898%29.jpg/1280px-SAP_Center_%2816609288898%29.jpg",
-      "imageSubject": "SAP Center",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Hardly_Strictly_Crowd.jpg/1280px-Hardly_Strictly_Crowd.jpg",
+      "imageSubject": "Hardly Strictly Bluegrass",
       "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "11:00",
+      "durationMin": 360
     },
     {
       "type": "event",
@@ -133,6 +138,50 @@
       "startTime": "13:25",
       "booking": "https://www.49ers.com/tickets/single-game",
       "priceLevel": 4
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "castro-street-fair-2026",
+      "title": "Castro Street Fair",
+      "emoji": "🏳️‍🌈",
+      "categories": [
+        "festival",
+        "street-fair",
+        "free",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "friends",
+        "afternoon"
+      ],
+      "coords": [
+        37.7609,
+        -122.435
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Castro, Market and 18th Streets",
+      "start": "2026-10-04",
+      "end": "2026-10-04",
+      "priceNote": "Donation at the gate",
+      "priceLevel": 0,
+      "why": "The neighbourhood fair Harvey Milk started in 1974, with stages, dancing in the street and line dancing outside the Castro Theatre. It is smaller and more local than Pride, and the gate donations go to neighbourhood nonprofits.",
+      "source": "Castro Street Fair",
+      "url": "https://www.castrostreetfair.org/",
+      "booking": false,
+      "startTime": "11:00",
+      "times": "11am to 6pm",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Baycityreds_castrostfair_1975.jpg/1280px-Baycityreds_castrostfair_1975.jpg",
+      "imageSubject": "Castro Street Fair",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 180
     },
     {
       "type": "event",
@@ -186,6 +235,48 @@
       "startTime": "12:00",
       "booking": false,
       "priceLevel": 0
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "chayanne-2026-10-11",
+      "title": "Chayanne",
+      "emoji": "🎤",
+      "categories": [
+        "music",
+        "concert",
+        "latin"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends",
+        "couple"
+      ],
+      "coords": [
+        37.768,
+        -122.3877
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Chase Center, Mission Bay",
+      "start": "2026-10-11",
+      "end": "2026-10-11",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "Four decades of Latin pop ballads and dance numbers from a singer who still does the choreography himself. Expect a crowd that knows every word.",
+      "source": "Chase Center",
+      "url": "https://www.chasecenter.com/events/chayanne-20261011/",
+      "booking": "https://www.chasecenter.com/events/chayanne-20261011/",
+      "startTime": "19:00",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Chayanne_-_Chicago_2010-11-24.jpg",
+      "imageSubject": "Chayanne",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 150
     },
     {
       "type": "event",
@@ -271,6 +362,52 @@
       "imageSubject": "PayPal Park",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "half-moon-bay-pumpkin-2026",
+      "title": "Half Moon Bay Art & Pumpkin Festival",
+      "emoji": "🎃",
+      "categories": [
+        "festival",
+        "free",
+        "outdoor",
+        "family"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "family",
+        "outdoors",
+        "day-trip",
+        "morning"
+      ],
+      "coords": [
+        37.4636,
+        -122.4286
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Main Street, Half Moon Bay",
+      "start": "2026-10-17",
+      "end": "2026-10-18",
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "why": "The coast's big autumn weekend: craft stalls down Main Street, live music and the record pumpkins from the weigh-off the Monday before. Go early or take the shuttle, because Highway 92 jams by late morning.",
+      "source": "Half Moon Bay Art & Pumpkin Festival",
+      "url": "https://hmbpumpkinfest.com/",
+      "booking": false,
+      "times": "9am to 5pm both days",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Bluffs100407_%2828_of_28%29.JPG/1280px-Bluffs100407_%2828_of_28%29.JPG",
+      "imageSubject": "Half Moon Bay Art and Pumpkin Festival",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "09:00",
+      "durationMin": 240
     },
     {
       "type": "event",
@@ -361,6 +498,48 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "doja-cat-2026-10-19",
+      "title": "Doja Cat, with Latto",
+      "emoji": "🎤",
+      "categories": [
+        "music",
+        "concert",
+        "pop",
+        "hip-hop"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "coords": [
+        37.768,
+        -122.3877
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Chase Center, Mission Bay",
+      "start": "2026-10-19",
+      "end": "2026-10-19",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "An arena pop show that leans hard on staging and costume changes, with Latto opening. Worth it if you want spectacle more than intimacy.",
+      "source": "Chase Center",
+      "url": "https://www.chasecenter.com/events/doja-cat-20261019/",
+      "booking": "https://www.chasecenter.com/events/doja-cat-20261019/",
+      "startTime": "19:30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Doja_Cat_x_Amazon1.1.jpg/1280px-Doja_Cat_x_Amazon1.1.jpg",
+      "imageSubject": "Doja Cat",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 180
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
       "indoor": true,
       "weatherSensitive": false,
       "goodFor": [
@@ -442,6 +621,94 @@
       "startTime": "19:30",
       "booking": "https://gostanford.com/sports/football/schedule",
       "priceLevel": 2
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "lit-crawl-sf-2026",
+      "title": "Lit Crawl SF",
+      "emoji": "📚",
+      "categories": [
+        "books",
+        "festival",
+        "free"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends",
+        "couple"
+      ],
+      "coords": [
+        37.759,
+        -122.4212
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Bars, bookshops and galleries across the Mission",
+      "start": "2026-10-24",
+      "end": "2026-10-24",
+      "priceNote": "Mostly free",
+      "priceLevel": 0,
+      "why": "Litquake's closing night: readings in bars, bookshops and laundromats along Valencia, in three short phases. Pick one venue per phase and walk between them, then finish at the afterparty on Valencia.",
+      "source": "Litquake festival schedule",
+      "url": "https://litquake2026.sched.com/",
+      "booking": false,
+      "startTime": "17:00",
+      "times": "From 5pm; afterparty at 9pm",
+      "labels": [
+        "dontmiss"
+      ],
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/933%E2%80%93951_Valencia_Street%2C_San_Francisco.jpg/1280px-933%E2%80%93951_Valencia_Street%2C_San_Francisco.jpg",
+      "imageSubject": "Valencia Street",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 240
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "phoebe-bridgers-2026",
+      "title": "Phoebe Bridgers",
+      "emoji": "🎸",
+      "categories": [
+        "music",
+        "concert",
+        "indie"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple",
+        "friends"
+      ],
+      "coords": [
+        37.768,
+        -122.3877
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Chase Center, Mission Bay",
+      "start": "2026-10-27",
+      "end": "2026-10-28",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "Two nights of quiet, sad songs played to a very loud arena that sings them back. The second night tends to sell slower if the first is gone.",
+      "source": "Chase Center",
+      "url": "https://www.chasecenter.com/events/phoebe-bridgers-20261027/",
+      "booking": "https://www.chasecenter.com/events/phoebe-bridgers-20261027/",
+      "startTime": "19:30",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/BoygeniusKingstonEarly240823_%2829_of_45%29_%2853138924957%29_Cropped.jpg",
+      "imageSubject": "Phoebe Bridgers",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 180
     },
     {
       "type": "event",
@@ -663,6 +930,53 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "dia-de-muertos-sf-2026",
+      "title": "Día de los Muertos in the Mission",
+      "emoji": "🕯️",
+      "categories": [
+        "festival",
+        "culture",
+        "free",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "family",
+        "couple"
+      ],
+      "coords": [
+        37.7527,
+        -122.4119
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Potrero del Sol Park and 24th Street",
+      "start": "2026-11-02",
+      "end": "2026-11-02",
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "why": "Altars at Potrero del Sol through the day, then a candlelit procession led by Aztec dancers from 22nd and Bryant along 24th Street at seven. It is a remembrance, not a costume party; bring a candle or a photo and walk at the back.",
+      "source": "Annual on November 2; procession route from Mission Local",
+      "url": "https://missionlocal.org/2025/10/celebrate-day-of-the-dead-sf/",
+      "booking": false,
+      "startTime": "19:00",
+      "times": "Altars from 8am; procession at 7pm",
+      "labels": [
+        "dontmiss"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Dia_de_los_Muertos_Celebration_in_Mission_District_of_San_Francisco%2C_CA.jpg/1280px-Dia_de_los_Muertos_Celebration_in_Mission_District_of_San_Francisco%2C_CA.jpg",
+      "imageSubject": "Día de los Muertos in the Mission",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 120
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
       "goodFor": [
@@ -748,6 +1062,92 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "jonas-brothers-2026",
+      "title": "Jonas Brothers",
+      "emoji": "🎤",
+      "categories": [
+        "music",
+        "concert",
+        "pop"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "coords": [
+        37.768,
+        -122.3877
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Chase Center, Mission Bay",
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "A singalong of twenty years of pop hits, light on surprises and heavy on nostalgia.",
+      "source": "Chase Center",
+      "url": "https://www.chasecenter.com/events/jonas-brothers-20261121/",
+      "booking": "https://www.chasecenter.com/events/jonas-brothers-20261121/",
+      "startTime": "19:30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Jonas_Brothers_Happiness_Begins_Tour_2019.png/1280px-Jonas_Brothers_Happiness_Begins_Tour_2019.png",
+      "imageSubject": "Jonas Brothers",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 150
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "dickens-fair-2026",
+      "title": "Great Dickens Christmas Fair",
+      "emoji": "🎩",
+      "categories": [
+        "festival",
+        "holiday",
+        "theatre",
+        "family"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "weekend",
+        "family",
+        "friends",
+        "afternoon"
+      ],
+      "coords": [
+        37.7067,
+        -122.4187
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Cow Palace, Daly City",
+      "start": "2026-11-21",
+      "end": "2026-12-20",
+      "priceNote": "Tickets; early bird from October 16",
+      "priceLevel": 2,
+      "why": "Victorian London built inside the Cow Palace halls, with music halls, pubs and hundreds of costumed players who stay in character. Weekends only from November 21, plus the Friday after Thanksgiving; dressing up is half the fun.",
+      "source": "Dickens Fair",
+      "url": "https://dickensfair.com/",
+      "booking": "https://dickensfair.com/tickets/",
+      "times": "Weekends 10am to 6pm",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/At_the_Dickens_Fair.jpg/1280px-At_the_Dickens_Fair.jpg",
+      "imageSubject": "Great Dickens Christmas Fair",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "10:00",
+      "durationMin": 300
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
       "goodFor": [
@@ -791,6 +1191,47 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "journey-2026",
+      "title": "Journey",
+      "emoji": "🎸",
+      "categories": [
+        "music",
+        "concert",
+        "rock"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "coords": [
+        37.768,
+        -122.3877
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Chase Center, Mission Bay",
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "priceNote": "Tickets from the venue",
+      "priceLevel": 3,
+      "why": "The San Francisco band home for Thanksgiving weekend. You know how it ends.",
+      "source": "Chase Center",
+      "url": "https://www.chasecenter.com/events/journey-20261128/",
+      "booking": "https://www.chasecenter.com/events/journey-20261128/",
+      "startTime": "19:30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Journey_band.JPG/1280px-Journey_band.JPG",
+      "imageSubject": "Journey (band)",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 150
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
       "indoor": false,
       "weatherSensitive": true,
       "goodFor": [
@@ -828,6 +1269,49 @@
       "startTime": "13:25",
       "booking": "https://www.49ers.com/tickets/single-game",
       "priceLevel": 4
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "sf-ballet-nutcracker-2026",
+      "title": "San Francisco Ballet — Nutcracker",
+      "emoji": "🩰",
+      "categories": [
+        "dance",
+        "ballet",
+        "holiday",
+        "family"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "family",
+        "couple"
+      ],
+      "coords": [
+        37.7781,
+        -122.421
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "War Memorial Opera House, Civic Center",
+      "start": "2026-12-04",
+      "end": "2026-12-24",
+      "priceNote": "Tickets from SF Ballet",
+      "priceLevel": 3,
+      "why": "America's first full Nutcracker, set in 1915 San Francisco during the world's fair. Matinees suit children; the late Nutcracker Nightcap on opening night is for grown-ups.",
+      "source": "San Francisco Ballet",
+      "url": "https://www.sfballet.org/productions/nutcracker/5912/",
+      "booking": "https://www.sfballet.org/productions/nutcracker/5912/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/War_Memorial_Opera_House_%28San_Francisco%29.JPG/1280px-War_Memorial_Opera_House_%28San_Francisco%29.JPG",
+      "imageSubject": "War Memorial Opera House",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "19:30",
+      "durationMin": 130
     },
     {
       "type": "event",
