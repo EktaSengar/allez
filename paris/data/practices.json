@@ -1,217 +1,12 @@
 {
-  "generated": "2026-10-02",
+  "generated": "2026-10-03",
   "window": {
-    "from": "2026-10-02",
-    "to": "2026-12-31"
+    "from": "2026-10-03",
+    "to": "2027-01-01"
   },
   "source": "Que Faire à Paris · opendata.paris.fr (ODbL) · Luma",
   "note": "Things you take up rather than attend — `mode: \"do\"`. The city feed already carries the repetition in its `occurrences` field and shows it as a date; this reads it as a rhythm, which is the whole point of the file. English lines are assembled from each record's own fields, never translated. Luma covers the tech and AI evenings the city has none of. These are `sourced` records and rank below anything hand-written. The gate lives in scripts/practices.mjs; pruned daily by scripts/refresh.mjs.",
   "items": [
-    {
-      "id": "prac-91152",
-      "title": "Cours de danse de bal — Paris 10e — 1er cours offert",
-      "emoji": "💃",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "dance",
-        "learn"
-      ],
-      "zone": 10,
-      "area": "Ecole du Bal - Studio Rail",
-      "coords": [
-        48.8799869822711,
-        2.36212902812386
-      ],
-      "start": "2026-09-10",
-      "end": "2027-06-24",
-      "days": [
-        4
-      ],
-      "times": "Du jeudi 10 septembre 2026 au jeudi 24 juin 2027 : jeudi de 17h30 à 19h00",
-      "why": "Dance class · weekly, Sep–Jun",
-      "priceNote": "Pas de réservation, vous venez quand vous voulez",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/cours-de-danses-de-bal-avec-paribal-123245",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-5005",
-      "title": "Atelier d'écriture petits papiers",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 12,
-      "area": "L'Atelier sous les Toits",
-      "coords": [
-        48.848590007447,
-        2.37546698300889
-      ],
-      "start": "2026-09-26",
-      "end": "2027-05-01",
-      "days": [
-        6
-      ],
-      "times": "Le samedi 28 novembre 2026 de 14h00 à 18h30 Le samedi 09 janvier 2027 de 14h00 à 18h30 Le samedi 06 mars 2027 de 14h00 à 18h30 Le samedi 01 ",
-      "why": "Writing and reading workshop · 4 dates, Nov–May",
-      "priceNote": "50 euros / atelier ou forfait annuel : 225 euros",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-petits-papiers-11737",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-31393",
-      "title": "Journée d'initiation gravure sur bois",
-      "emoji": "🖼️",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "art",
-        "learn"
-      ],
-      "zone": 15,
-      "area": "Musée Bourdelle",
-      "coords": [
-        48.842975,
-        2.318588
-      ],
-      "start": "2026-11-04",
-      "end": "2026-12-09",
-      "days": [
-        3
-      ],
-      "times": "Le mercredi 09 décembre 2026 de 10h30 à 17h30 Le mercredi 04 novembre 2026 de 10h30 à 17h30",
-      "why": "Art workshop · 2 dates, Nov–Dec",
-      "priceNote": "Plein tarif : 30 € Tarif réduit : 24 €",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/journee-d-initiation-gravure-sur-bois-40859",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-86996",
-      "title": "Ateliers d'écriture à Paris « Écrire en liberté »",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 20,
-      "area": "Couleurs Brazil",
-      "coords": [
-        48.8728000032123,
-        2.39984097070985
-      ],
-      "start": "2026-10-02",
-      "end": "2027-06-06",
-      "times": "Du dimanche 04 octobre 2026 au dimanche 06 juin 2027 : dimanche de 10h00 à 12h30 Du dimanche 04 octobre 2026 au dimanche 06 juin 2027 : dima",
-      "why": "Writing and reading workshop · most days, Oct–Jun",
-      "priceNote": "390 euros / Cycle annuel (un atelier de 3 heures mensuel).",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/ateliers-d-ecriture-a-paris-ecrire-en-liberte-113600",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-85315",
-      "title": "Atelier écriture : la nature comme source d'inspiration",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 17,
-      "area": "Bibliothèque des Batignolles",
-      "coords": [
-        48.884341,
-        2.322094
-      ],
-      "start": "2026-09-24",
-      "end": "2026-11-26",
-      "days": [
-        4
-      ],
-      "times": "Le jeudi 26 novembre 2026 de 10h30 à 12h30 Le jeudi 05 novembre 2026 de 10h30 à 12h30 Le jeudi 15 octobre 2026 de 10h30 à 12h30",
-      "why": "Writing and reading workshop · 3 dates, Oct–Nov",
-      "price": 0,
-      "priceNote": "Free",
-      "labels": [
-        "free",
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/atelier-ecriture-la-nature-comme-source-d-inspiration-111780",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-92792",
-      "title": "Ateliers ImprOse (improvisation et écriture)",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 3,
-      "area": "Maison Etudiante (Bastille)",
-      "coords": [
-        48.8562219817453,
-        2.36739202512771
-      ],
-      "start": "2026-10-11",
-      "end": "2026-10-11",
-      "days": [
-        0
-      ],
-      "times": "Le dimanche 11 octobre 2026 de 16h00 à 17h30 Le dimanche 11 octobre 2026 de 14h00 à 15h30 Le dimanche 11 octobre 2026 de 11h00 à 17h30",
-      "why": "Writing and reading workshop · most days, Oct",
-      "price": 0,
-      "priceNote": "Free",
-      "labels": [
-        "free",
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/ateliers-bien-etre-125058",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
     {
       "id": "prac-91701",
       "title": "Défiez-vous !",
@@ -241,14 +36,14 @@
       ],
       "url": "https://www.paris.fr/evenements/defiez-vous-123866",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
     },
     {
-      "id": "prac-91112",
-      "title": "Atelier d'écriture",
+      "id": "prac-91705",
+      "title": "Apéro littéraire",
       "emoji": "📝",
       "type": "class",
       "mode": "do",
@@ -256,26 +51,62 @@
         "books",
         "learn"
       ],
-      "zone": 14,
-      "area": "La Roche",
+      "zone": 11,
+      "area": "MPAA/Breguet",
       "coords": [
-        48.8323680073174,
-        2.33106502440342
+        48.8576039899409,
+        2.37363000510896
       ],
-      "start": "2026-10-08",
-      "end": "2026-12-17",
+      "start": "2026-12-11",
+      "end": "2027-04-30",
+      "days": [
+        5
+      ],
+      "times": "Le vendredi 30 avril 2027 de 19h30 à 21h30 Le vendredi 11 décembre 2026 de 19h30 à 21h30",
+      "why": "Writing and reading workshop · 2 dates, Dec–Apr",
+      "price": 0,
+      "priceNote": "Free",
+      "labels": [
+        "free",
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/apero-litteraire-123870",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-91152",
+      "title": "Cours de danse de bal — Paris 10e — 1er cours offert",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "dance",
+        "learn"
+      ],
+      "zone": 10,
+      "area": "Ecole du Bal - Studio Rail",
+      "coords": [
+        48.8799869822711,
+        2.36212902812386
+      ],
+      "start": "2026-09-10",
+      "end": "2027-06-24",
       "days": [
         4
       ],
-      "times": "Le jeudi 05 novembre 2026 de 19h00 à 21h00 Le jeudi 12 novembre 2026 de 19h00 à 21h00 Le jeudi 17 décembre 2026 de 19h00 à 21h00 Le jeudi 10",
-      "why": "Writing and reading workshop · weekly, Oct–Dec",
-      "priceNote": "Paid",
+      "times": "Du jeudi 10 septembre 2026 au jeudi 24 juin 2027 : jeudi de 17h30 à 19h00",
+      "why": "Dance class · weekly, Sep–Jun",
+      "priceNote": "Pas de réservation, vous venez quand vous voulez",
       "labels": [
         "learn"
       ],
-      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-123201",
+      "url": "https://www.paris.fr/evenements/cours-de-danses-de-bal-avec-paribal-123245",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -301,8 +132,8 @@
       "days": [
         5
       ],
-      "times": "Le vendredi 06 novembre 2026 de 17h00 à 19h00 Le vendredi 04 décembre 2026 de 17h00 à 19h00 Le vendredi 02 octobre 2026 de 17h00 à 19h00",
-      "why": "Writing and reading workshop · 3 dates, Oct–Dec",
+      "times": "Le vendredi 06 novembre 2026 de 17h00 à 19h00 Le vendredi 04 décembre 2026 de 17h00 à 19h00",
+      "why": "Writing and reading workshop · monthly, Nov–Dec",
       "price": 0,
       "priceNote": "Free",
       "labels": [
@@ -311,112 +142,7 @@
       ],
       "url": "https://www.paris.fr/evenements/ateliers-conversation-clubs-de-lecture-en-italien-114803",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-91189",
-      "title": "Libérez votre créativité dans les ateliers d'écriture de la bibliothèque Sainte-Geneviève",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 5,
-      "area": "Bibliothèque Sainte-Geneviève",
-      "coords": [
-        48.8469670195351,
-        2.34587098581059
-      ],
-      "start": "2026-10-12",
-      "end": "2026-10-15",
-      "days": [
-        1,
-        4
-      ],
-      "times": "Le jeudi 15 octobre 2026 de 17h30 à 19h30 Le lundi 12 octobre 2026 de 18h00 à 20h00",
-      "why": "Writing and reading workshop · several times a week, Oct",
-      "price": 0,
-      "priceNote": "Free",
-      "labels": [
-        "free",
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/liberez-votre-creativite-dans-les-ateliers-d-ecriture-de-la-bibliotheque-sainte-genevieve-123282",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-89348",
-      "title": "Le colporteur est un passeur",
-      "emoji": "🎨",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "art",
-        "learn"
-      ],
-      "zone": 4,
-      "area": "Mémorial de la Shoah",
-      "coords": [
-        48.8548509957524,
-        2.35631399897687
-      ],
-      "start": "2026-11-29",
-      "end": "2026-11-29",
-      "days": [
-        0
-      ],
-      "times": "Le dimanche 29 novembre 2026 de 15h30 à 17h30 Le dimanche 29 novembre 2026 de 11h30 à 13h30",
-      "why": "Painting workshop · most days, Nov",
-      "priceNote": "Tarif: 12€",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/le-colporteur-est-un-passeur-116689",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-92540",
-      "title": "Stage d'oenologie",
-      "emoji": "🍽️",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "food",
-        "learn"
-      ],
-      "zone": 14,
-      "area": "Centre Paris Anim' Marc Sangnier",
-      "coords": [
-        48.825786,
-        2.307201
-      ],
-      "start": "2026-11-10",
-      "end": "2027-06-29",
-      "days": [
-        2
-      ],
-      "times": "Le mardi 29 juin 2027 de 19h30 à 21h30 Le mardi 01 juin 2027 de 19h30 à 21h30 Le mardi 18 mai 2027 de 19h30 à 21h30 Le mardi 30 mars 2027 de",
-      "why": "Cooking workshop · monthly, Nov–Jun",
-      "priceNote": "Selon QF&nbsp; + 108€ de participation aux frais",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/stage-d-oenologie-124777",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -453,247 +179,43 @@
       ],
       "url": "https://www.paris.fr/evenements/ateliers-ecriture-creative-et-reseaux-sociaux-numeriques-115550",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
     },
     {
-      "id": "prac-4175",
-      "title": "Atelier Écriture-Collage",
+      "id": "prac-85315",
+      "title": "Atelier écriture : la nature comme source d'inspiration",
       "emoji": "📝",
       "type": "class",
       "mode": "do",
       "categories": [
         "books",
-        "learn"
-      ],
-      "zone": 12,
-      "area": "L'Atelier sous les toits",
-      "coords": [
-        48.848590007447,
-        2.37546698300889
-      ],
-      "start": "2026-10-17",
-      "end": "2027-06-05",
-      "days": [
-        6
-      ],
-      "times": "Le samedi 21 novembre 2026 de 14h00 à 18h30 Le samedi 17 octobre 2026 de 14h00 à 18h30 Le samedi 05 décembre 2026 de 14h00 à 18h30 Le samedi",
-      "why": "Writing and reading workshop · 7 dates, Oct–Jun",
-      "priceNote": "60 euros / atelier 330 euros / forfait annuel 6 ateliers.",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/atelier-ecriture-collage-10912",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-91256",
-      "title": "Démonstration et dégustation \"Découverte de Mura écovillage japonais\"",
-      "emoji": "🍽️",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "food",
-        "learn"
-      ],
-      "zone": 15,
-      "area": "Maison de la culture du Japon à Paris",
-      "coords": [
-        48.8547789952042,
-        2.28934200587187
-      ],
-      "start": "2026-10-17",
-      "end": "2026-10-17",
-      "days": [
-        6
-      ],
-      "times": "Le samedi 17 octobre 2026 de 15h00 à 16h00 Le samedi 17 octobre 2026 de 13h30 à 14h30 Le samedi 17 octobre 2026 de 11h30 à 12h30",
-      "why": "Cooking workshop · most days, Oct",
-      "priceNote": "20 €&nbsp;",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/demonstration-et-degustation-decouverte-de-mura-ecovillage-japonais-123356",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-92510",
-      "title": "Ateliers d'écriture intergénérationnels sur l'amour",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 18,
-      "area": "Ehpad Oasis",
-      "coords": [
-        48.887863,
-        2.355053
-      ],
-      "start": "2026-10-07",
-      "end": "2026-10-14",
-      "days": [
-        3
-      ],
-      "times": "Le mercredi 14 octobre 2026 de 14h00 à 16h00 Le mercredi 07 octobre 2026 de 15h00 à 17h00",
-      "why": "Writing and reading workshop · weekly, Oct",
-      "price": 0,
-      "priceNote": "Free",
-      "labels": [
-        "free",
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/ateliers-d-ecriture-intergenerationnels-sur-l-amour-124747",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-92856",
-      "title": "Stage orientation et découverte Art et Design",
-      "emoji": "🖼️",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "art",
         "learn"
       ],
       "zone": 17,
-      "area": "École Hourdé",
+      "area": "Bibliothèque des Batignolles",
       "coords": [
-        48.8838390116039,
-        2.32650200013373
+        48.884341,
+        2.322094
       ],
-      "start": "2026-10-19",
-      "end": "2026-10-22",
-      "times": "Du lundi 19 octobre 2026 au jeudi 22 octobre 2026 : lundi, mardi, mercredi, jeudi de 10h00 à 16h00",
-      "why": "Art workshop · most days, Oct",
-      "priceNote": "300 euros, matériel fourni.",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/stage-orientation-et-decouverte-art-et-design-125126",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-89132",
-      "title": "Atelier flamenco « Fiesta por buleria » avec Lori La Armenia",
-      "emoji": "💃",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "dance",
-        "learn"
-      ],
-      "zone": 11,
-      "area": "Flamenco en France",
-      "coords": [
-        48.8672609901369,
-        2.37433198949989
-      ],
-      "start": "2026-10-03",
-      "end": "2026-10-04",
+      "start": "2026-09-24",
+      "end": "2026-11-26",
       "days": [
-        0,
-        6
+        4
       ],
-      "times": "Du samedi 03 octobre 2026 au dimanche 04 octobre 2026 : dimanche de 11h00 à 15h00 samedi de 16h00 à 20h00",
-      "why": "Dance class · most days, Oct",
-      "priceNote": "75 euros : Non-Adhérent.e.s 60 euros : Adhérent.e.s Flamenco",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/atelier-flamenco-fiesta-por-buleria-avec-lori-la-armenia-116458",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-88205",
-      "title": "Atelier tissu Cirque & Danse",
-      "emoji": "🎪",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "circus",
-        "learn"
-      ],
-      "zone": 13,
-      "area": "RueWATT fabrique artistique",
-      "coords": [
-        48.827530014714,
-        2.38098001218447
-      ],
-      "start": "2026-01-16",
-      "end": "2026-12-12",
-      "days": [
-        6
-      ],
-      "times": "Le samedi 12 décembre 2026 de 14h00 à 16h00 Le samedi 21 novembre 2026 de 14h00 à 16h00",
-      "why": "Circus class · 2 dates, Nov–Dec",
-      "priceNote": "28 euros.",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/atelier-tissu-cirque-danse-115007",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-91705",
-      "title": "Apéro littéraire",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 11,
-      "area": "MPAA/Breguet",
-      "coords": [
-        48.8576039899409,
-        2.37363000510896
-      ],
-      "start": "2026-12-11",
-      "end": "2027-04-30",
-      "days": [
-        5
-      ],
-      "times": "Le vendredi 30 avril 2027 de 19h30 à 21h30 Le vendredi 11 décembre 2026 de 19h30 à 21h30",
-      "why": "Writing and reading workshop · 2 dates, Dec–Apr",
+      "times": "Le jeudi 26 novembre 2026 de 10h30 à 12h30 Le jeudi 05 novembre 2026 de 10h30 à 12h30 Le jeudi 15 octobre 2026 de 10h30 à 12h30",
+      "why": "Writing and reading workshop · 3 dates, Oct–Nov",
       "price": 0,
       "priceNote": "Free",
       "labels": [
         "free",
         "learn"
       ],
-      "url": "https://www.paris.fr/evenements/apero-litteraire-123870",
+      "url": "https://www.paris.fr/evenements/atelier-ecriture-la-nature-comme-source-d-inspiration-111780",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -727,7 +249,78 @@
       ],
       "url": "https://www.paris.fr/evenements/bibliocreation-a-paris-18-quand-les-livres-ouvrent-la-voie-a-l-ecriture-et-a-la-rencontre-113360",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-4355",
+      "title": "Atelier d'écriture Buissonnier",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 12,
+      "area": "L'Atelier sous les Toits",
+      "coords": [
+        48.848590007447,
+        2.37546698300889
+      ],
+      "start": "2026-09-22",
+      "end": "2027-06-08",
+      "days": [
+        2
+      ],
+      "times": "Le mardi 08 juin 2027 de 14h00 à 17h00 Le mardi 25 mai 2027 de 14h00 à 17h00 Le mardi 04 mai 2027 de 14h00 à 17h00 Le mardi 20 avril 2027 de",
+      "why": "Writing and reading workshop · 13 dates, Oct–Jun",
+      "priceNote": "32 euros / atelier ou Forfait 9 ateliers ou plus : 29 euros ",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-buissonnier-11090",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-91189",
+      "title": "Libérez votre créativité dans les ateliers d'écriture de la bibliothèque Sainte-Geneviève",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 5,
+      "area": "Bibliothèque Sainte-Geneviève",
+      "coords": [
+        48.8469670195351,
+        2.34587098581059
+      ],
+      "start": "2026-10-12",
+      "end": "2026-10-15",
+      "days": [
+        1,
+        4
+      ],
+      "times": "Le jeudi 15 octobre 2026 de 17h30 à 19h30 Le lundi 12 octobre 2026 de 18h00 à 20h00",
+      "why": "Writing and reading workshop · several times a week, Oct",
+      "price": 0,
+      "priceNote": "Free",
+      "labels": [
+        "free",
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/liberez-votre-creativite-dans-les-ateliers-d-ecriture-de-la-bibliotheque-sainte-genevieve-123282",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -763,7 +356,349 @@
       ],
       "url": "https://www.paris.fr/evenements/workshop-capoeira-angola-124220",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-31393",
+      "title": "Journée d'initiation gravure sur bois",
+      "emoji": "🖼️",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "art",
+        "learn"
+      ],
+      "zone": 15,
+      "area": "Musée Bourdelle",
+      "coords": [
+        48.842975,
+        2.318588
+      ],
+      "start": "2026-11-04",
+      "end": "2026-12-09",
+      "days": [
+        3
+      ],
+      "times": "Le mercredi 09 décembre 2026 de 10h30 à 17h30 Le mercredi 04 novembre 2026 de 10h30 à 17h30",
+      "why": "Art workshop · 2 dates, Nov–Dec",
+      "priceNote": "Plein tarif : 30 € Tarif réduit : 24 €",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/journee-d-initiation-gravure-sur-bois-40859",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-88205",
+      "title": "Atelier tissu Cirque & Danse",
+      "emoji": "🎪",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "circus",
+        "learn"
+      ],
+      "zone": 13,
+      "area": "RueWATT fabrique artistique",
+      "coords": [
+        48.827530014714,
+        2.38098001218447
+      ],
+      "start": "2026-01-16",
+      "end": "2026-12-12",
+      "days": [
+        6
+      ],
+      "times": "Le samedi 12 décembre 2026 de 14h00 à 16h00 Le samedi 21 novembre 2026 de 14h00 à 16h00",
+      "why": "Circus class · 2 dates, Nov–Dec",
+      "priceNote": "28 euros.",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/atelier-tissu-cirque-danse-115007",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-91042",
+      "title": "Atelier d'écriture orienté Clown",
+      "emoji": "😄",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "comedy",
+        "learn"
+      ],
+      "zone": 11,
+      "area": "Hôtel Les Rebelles",
+      "coords": [
+        48.8702540001228,
+        2.37865403405328
+      ],
+      "start": "2026-09-14",
+      "end": "2026-10-26",
+      "days": [
+        1
+      ],
+      "times": "Du lundi 14 septembre 2026 au lundi 26 octobre 2026 : lundi de 15h00 à 17h00",
+      "why": "Comedy workshop · weekly, Sep–Oct",
+      "priceNote": "Pour garantir un meilleur suivi individuel et favoriser les ",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-oriente-clown-123128",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-92540",
+      "title": "Stage d'oenologie",
+      "emoji": "🍽️",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "food",
+        "learn"
+      ],
+      "zone": 14,
+      "area": "Centre Paris Anim' Marc Sangnier",
+      "coords": [
+        48.825786,
+        2.307201
+      ],
+      "start": "2026-11-10",
+      "end": "2027-06-29",
+      "days": [
+        2
+      ],
+      "times": "Le mardi 29 juin 2027 de 19h30 à 21h30 Le mardi 01 juin 2027 de 19h30 à 21h30 Le mardi 18 mai 2027 de 19h30 à 21h30 Le mardi 30 mars 2027 de",
+      "why": "Cooking workshop · monthly, Nov–Jun",
+      "priceNote": "Selon QF&nbsp; + 108€ de participation aux frais",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/stage-d-oenologie-124777",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-86996",
+      "title": "Ateliers d'écriture à Paris « Écrire en liberté »",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 20,
+      "area": "Couleurs Brazil",
+      "coords": [
+        48.8728000032123,
+        2.39984097070985
+      ],
+      "start": "2026-10-02",
+      "end": "2027-06-06",
+      "times": "Du dimanche 04 octobre 2026 au dimanche 06 juin 2027 : dimanche de 10h00 à 12h30 Du dimanche 04 octobre 2026 au dimanche 06 juin 2027 : dima",
+      "why": "Writing and reading workshop · most days, Oct–Jun",
+      "priceNote": "390 euros / Cycle annuel (un atelier de 3 heures mensuel).",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/ateliers-d-ecriture-a-paris-ecrire-en-liberte-113600",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-89348",
+      "title": "Le colporteur est un passeur",
+      "emoji": "🎨",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "art",
+        "learn"
+      ],
+      "zone": 4,
+      "area": "Mémorial de la Shoah",
+      "coords": [
+        48.8548509957524,
+        2.35631399897687
+      ],
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "days": [
+        0
+      ],
+      "times": "Le dimanche 29 novembre 2026 de 15h30 à 17h30 Le dimanche 29 novembre 2026 de 11h30 à 13h30",
+      "why": "Painting workshop · most days, Nov",
+      "priceNote": "Tarif: 12€",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/le-colporteur-est-un-passeur-116689",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-92792",
+      "title": "Ateliers ImprOse (improvisation et écriture)",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 3,
+      "area": "Maison Etudiante (Bastille)",
+      "coords": [
+        48.8562219817453,
+        2.36739202512771
+      ],
+      "start": "2026-10-11",
+      "end": "2026-10-11",
+      "days": [
+        0
+      ],
+      "times": "Le dimanche 11 octobre 2026 de 16h00 à 17h30 Le dimanche 11 octobre 2026 de 14h00 à 15h30 Le dimanche 11 octobre 2026 de 11h00 à 17h30",
+      "why": "Writing and reading workshop · most days, Oct",
+      "price": 0,
+      "priceNote": "Free",
+      "labels": [
+        "free",
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/ateliers-bien-etre-125058",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-91112",
+      "title": "Atelier d'écriture",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 14,
+      "area": "La Roche",
+      "coords": [
+        48.8323680073174,
+        2.33106502440342
+      ],
+      "start": "2026-10-08",
+      "end": "2026-12-17",
+      "days": [
+        4
+      ],
+      "times": "Le jeudi 05 novembre 2026 de 19h00 à 21h00 Le jeudi 12 novembre 2026 de 19h00 à 21h00 Le jeudi 17 décembre 2026 de 19h00 à 21h00 Le jeudi 10",
+      "why": "Writing and reading workshop · weekly, Oct–Dec",
+      "priceNote": "Paid",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-123201",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-92510",
+      "title": "Ateliers d'écriture intergénérationnels sur l'amour",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 18,
+      "area": "Ehpad Oasis",
+      "coords": [
+        48.887863,
+        2.355053
+      ],
+      "start": "2026-10-07",
+      "end": "2026-10-14",
+      "days": [
+        3
+      ],
+      "times": "Le mercredi 14 octobre 2026 de 14h00 à 16h00 Le mercredi 07 octobre 2026 de 15h00 à 17h00",
+      "why": "Writing and reading workshop · weekly, Oct",
+      "price": 0,
+      "priceNote": "Free",
+      "labels": [
+        "free",
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/ateliers-d-ecriture-intergenerationnels-sur-l-amour-124747",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-89132",
+      "title": "Atelier flamenco « Fiesta por buleria » avec Lori La Armenia",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "dance",
+        "learn"
+      ],
+      "zone": 11,
+      "area": "Flamenco en France",
+      "coords": [
+        48.8672609901369,
+        2.37433198949989
+      ],
+      "start": "2026-10-03",
+      "end": "2026-10-04",
+      "days": [
+        0,
+        6
+      ],
+      "times": "Du samedi 03 octobre 2026 au dimanche 04 octobre 2026 : dimanche de 11h00 à 15h00 samedi de 16h00 à 20h00",
+      "why": "Dance class · most days, Oct",
+      "priceNote": "75 euros : Non-Adhérent.e.s 60 euros : Adhérent.e.s Flamenco",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/atelier-flamenco-fiesta-por-buleria-avec-lori-la-armenia-116458",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -799,41 +734,41 @@
       ],
       "url": "https://www.paris.fr/evenements/au-coeur-de-la-mode-et-du-design-parisien-124586",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
     },
     {
-      "id": "prac-91042",
-      "title": "Atelier d'écriture orienté Clown",
-      "emoji": "😄",
+      "id": "prac-91256",
+      "title": "Démonstration et dégustation \"Découverte de Mura écovillage japonais\"",
+      "emoji": "🍽️",
       "type": "class",
       "mode": "do",
       "categories": [
-        "comedy",
+        "food",
         "learn"
       ],
-      "zone": 11,
-      "area": "Hôtel Les Rebelles",
+      "zone": 15,
+      "area": "Maison de la culture du Japon à Paris",
       "coords": [
-        48.8702540001228,
-        2.37865403405328
+        48.8547789952042,
+        2.28934200587187
       ],
-      "start": "2026-09-14",
-      "end": "2026-10-26",
+      "start": "2026-10-17",
+      "end": "2026-10-17",
       "days": [
-        1
+        6
       ],
-      "times": "Du lundi 14 septembre 2026 au lundi 26 octobre 2026 : lundi de 15h00 à 17h00",
-      "why": "Comedy workshop · weekly, Sep–Oct",
-      "priceNote": "Pour garantir un meilleur suivi individuel et favoriser les ",
+      "times": "Le samedi 17 octobre 2026 de 15h00 à 16h00 Le samedi 17 octobre 2026 de 13h30 à 14h30 Le samedi 17 octobre 2026 de 11h30 à 12h30",
+      "why": "Cooking workshop · most days, Oct",
+      "priceNote": "20 €&nbsp;",
       "labels": [
         "learn"
       ],
-      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-oriente-clown-123128",
+      "url": "https://www.paris.fr/evenements/demonstration-et-degustation-decouverte-de-mura-ecovillage-japonais-123356",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -867,7 +802,72 @@
       ],
       "url": "https://www.paris.fr/evenements/ateliers-cirque-aerien-adultes-115192",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-4175",
+      "title": "Atelier Écriture-Collage",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 12,
+      "area": "L'Atelier sous les toits",
+      "coords": [
+        48.848590007447,
+        2.37546698300889
+      ],
+      "start": "2026-10-17",
+      "end": "2027-06-05",
+      "days": [
+        6
+      ],
+      "times": "Le samedi 21 novembre 2026 de 14h00 à 18h30 Le samedi 17 octobre 2026 de 14h00 à 18h30 Le samedi 05 décembre 2026 de 14h00 à 18h30 Le samedi",
+      "why": "Writing and reading workshop · 7 dates, Oct–Jun",
+      "priceNote": "60 euros / atelier 330 euros / forfait annuel 6 ateliers.",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/atelier-ecriture-collage-10912",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-92856",
+      "title": "Stage orientation et découverte Art et Design",
+      "emoji": "🖼️",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "art",
+        "learn"
+      ],
+      "zone": 17,
+      "area": "École Hourdé",
+      "coords": [
+        48.8838390116039,
+        2.32650200013373
+      ],
+      "start": "2026-10-19",
+      "end": "2026-10-22",
+      "times": "Du lundi 19 octobre 2026 au jeudi 22 octobre 2026 : lundi, mardi, mercredi, jeudi de 10h00 à 16h00",
+      "why": "Art workshop · most days, Oct",
+      "priceNote": "300 euros, matériel fourni.",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/stage-orientation-et-decouverte-art-et-design-125126",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -893,7 +893,7 @@
       "why": "Build Next-Generation AI for Legal Work The LLM x Law Hackathon brings together AI builders, machine learning experts, and legal professionals to collaborate on innovative solutions for legal work. Join us for the second edition of the LLM x Law Hackathon in Paris! This event aims to design and deliver working demos or",
       "url": "https://luma.com/zwtvzkvp",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "labels": [
         "learn",
@@ -923,7 +923,7 @@
       "why": "Join us in Paris for an evening in Opéra with Harrison Chase, Co-Founder and CEO at LangChain and engineers from Pigment AI. We will feature talks on what it actually takes to make agents reliable in production. First, Harrison will cover the state of agent development, the agent architectures we are seeing, and why it",
       "url": "https://luma.com/vngzhjjh",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "labels": [
         "learn",
@@ -953,7 +953,37 @@
       "why": "Wivoo, a Wavestone Company t’invite à la 1ère édition d’Inspi’Her : une soirée exclusive pour 50 femmes qui façonnent le Produit, la Data et l'IA. Nous connaissons les statistiques. Nous avons toutes déjà entendu parler du syndrome de l'imposteur. Pour cette première édition, nous avons décidé d'aller plus loin et d'en",
       "url": "https://luma.com/sfqa2y10",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
+      "indoor": true,
+      "labels": [
+        "learn",
+        "afterwork"
+      ],
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evt7qTbbr3TyZxNtSi",
+      "title": "Agents & APIs Paris Developer Meetup",
+      "emoji": "🤖",
+      "type": "event",
+      "mode": "do",
+      "categories": [
+        "tech",
+        "learn"
+      ],
+      "zone": 16,
+      "area": "Microsoft France, 37 Quai du Président Roosevelt, 92130 Issy-les-Moulineaux, Fra",
+      "coords": [
+        48.8337301,
+        2.2651317
+      ],
+      "start": "2026-10-15",
+      "end": "2026-10-15",
+      "why": "Rejoignez-nous pour une nouvelle édition du meetup Agents et APIs, proposé par Postman ! Au programme : de l'IA, des agents, des APIs et tout ce qui se trouve à la croisée de ces deux mondes. Venez apprendre, faire de belles rencontres, assister à des démos et profiter d'un moment convivial autour d'un buffet ! Les pla",
+      "url": "https://luma.com/9co48ity",
+      "source": "Luma — What‘s Happening in Paris",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "labels": [
         "learn",
@@ -983,7 +1013,7 @@
       "why": "Building AI voice products for startups with ElevenLabs Join ElevenLabs for an evening focused on what startups can do to build compelling AI voice products from the ground up. We’ll bring together startup founders and the ElevenLabs team for a practical conversation around product development, voice AI, and the opport",
       "url": "https://luma.com/elevenlabsparis",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "labels": [
         "learn",
@@ -1013,7 +1043,7 @@
       "why": "After a successful first edition, we're hosting the second Signal & Noise machine learning gathering at CFM to bring the French & European scene together ✨ The event is designed as an informal gathering for people working across ML, whether in research, engineering, applications, or simply with an interest in the field",
       "url": "https://luma.com/tybdzrn7",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-10-02",
+      "lastVerified": "2026-10-03",
       "indoor": true,
       "labels": [
         "learn",
