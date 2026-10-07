@@ -1519,11 +1519,12 @@ body[data-view="away"]    { --accent: #3f5e7a; --blush: #93add0; }
 .event-dates button { font-size: .78rem; padding: .3rem 0; }
 .event-dates [aria-pressed="true"] { color: var(--accent); }
 .event-dates [aria-pressed="true"]::before { content: '•'; margin-right: .4rem; }
-.event-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 1.8rem; padding-bottom: 1rem; }
+/* The same grid, frame and type as the Weekend and Sport cards, so an
+   event reads as one more card rather than a bigger kind of thing. */
+.event-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.75rem 1.4rem; padding-bottom: 1rem; }
+@media (min-width: 620px) { .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 940px) { .event-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .event-card { min-width: 0; }
-.event-shot { aspect-ratio: 16 / 9; margin-bottom: 1.1rem; }
-.event-card .card-title { font-size: 1.5rem; line-height: 1.2; margin-bottom: .5rem; }
-.event-card .kicker { font-size: .63rem; letter-spacing: .09em; margin-bottom: .55rem; }
 .event-place { font-size: .77rem; color: var(--soft); margin: 0 0 .6rem; }
 .event-card .why { font-size: .84rem; -webkit-line-clamp: 2; }
 .event-card.open .why { -webkit-line-clamp: unset; }
@@ -1539,8 +1540,6 @@ body[data-view="away"]    { --accent: #3f5e7a; --blush: #93add0; }
 .event-photo-label { position: absolute; bottom: .5rem; left: .65rem; font-size: .6rem; background: var(--bg); color: var(--soft); border-radius: 3px; padding: .1rem .4rem; }
 .event-tools button:focus-visible, .event-actions :focus-visible, .event-save:focus-visible, .event-more:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 @media (max-width: 619px) {
-  .event-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .event-card .card-title { font-size: 1.4rem; }
   .event-count { flex-basis: 100%; margin: 0; }
   .event-tools { margin-bottom: 1.5rem; }
   body[data-view="events"] .strip-head { flex-direction: column; align-items: flex-start; gap: .35rem; }

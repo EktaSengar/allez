@@ -1,15 +1,38 @@
 {
-  "generated": "2026-10-07",
+  "generated": "2026-10-06",
   "window": {
-    "from": "2026-10-01",
-    "to": "2026-11-30"
+    "from": "2026-10-06",
+    "to": "2026-12-05"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 5
+    "luma": 3
   },
   "items": [
+    {
+      "id": "luma-evtDPkizE8IG6drN2U",
+      "title": "M.I.L.F Listening Party - Frappe Ash",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "shahpur-jat",
+      "area": null,
+      "coords": [
+        28.548236952500442,
+        77.21311782502295
+      ],
+      "start": "2026-10-09",
+      "end": "2026-10-09",
+      "why": "MILF: Before everyone else. Join us for the listening party for Frappe Ash's sixth solo project. Entry only with a valid invite and QR code. No exceptions. Hosted by 5.5 Records",
+      "url": "https://luma.com/yyz4oa5k",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-10-06",
+      "quality": 3,
+      "uniqueness": 3
+    },
     {
       "id": "luma-evtxTKPMAqCp57wOsm",
       "title": "Blood on the Clocktower - A Social Deduction Game Evening",
@@ -29,7 +52,30 @@
       "why": "BotC is a game of murder and mystery, lies and logic, deduction and deception for five-to-twenty courageous players and one devious storyteller. A social game played in person, seated in a circle, each player receives either a ‘good’ or ‘evil’ token with their unique character on it. Good players share information to s",
       "url": "https://luma.com/apkhedi5",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-01",
+      "lastVerified": "2026-10-06",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtDKfWAb5Hz9EoIpH",
+      "title": "The Big Aaaaart Club 3.0",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "chhattarpur",
+      "area": null,
+      "coords": [
+        28.493786546001967,
+        77.18356982974836
+      ],
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "why": "If you are registering & not showing up, you are blacklisted for the next three events The Big Aaaaart Club is back again! 🎨 Join us on Sunday, 25th October for an evening of art, conversations, and community as we bring together people who simply love making, discovering, and experiencing art. Think of it as your exc",
+      "url": "https://luma.com/ka6nm2lo",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-10-06",
       "quality": 3,
       "uniqueness": 3
     }

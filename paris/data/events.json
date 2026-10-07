@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07",
+  "generated": "2026-10-06",
   "window": {
     "from": "2026-08-13",
     "to": "2026-10-31"
@@ -52,6 +52,54 @@
         2.312
       ],
       "coordsFrom": "arr-centroid"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "fete-des-vendanges-2026",
+      "title": "Fête des Vendanges de Montmartre",
+      "emoji": "🍇",
+      "categories": [
+        "festival",
+        "free",
+        "food",
+        "music"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "friends",
+        "evening",
+        "afternoon"
+      ],
+      "coords": [
+        48.8875,
+        2.3407
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Montmartre, 18e",
+      "start": "2026-10-07",
+      "end": "2026-10-11",
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "why": "Montmartre's grape-harvest festival, the 93rd, themed on music this year: concerts, choirs, a parade and stalls of food and wine from across France on the streets around the Butte. Saturday evening is the busiest.",
+      "source": "Fête des Vendanges de Montmartre",
+      "url": "https://www.fetedesvendangesdemontmartre.com/",
+      "booking": false,
+      "zone": 18,
+      "labels": [
+        "dontmiss"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/99/Ouverture_du_d%C3%A9fil%C3%A9_de_la_F%C3%AAte_des_Vendanges_%C3%A0_Montmartre.jpg",
+      "imageSubject": "Fête des vendanges de Montmartre",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "14:00",
+      "durationMin": 240
     },
     {
       "type": "event",
@@ -195,6 +243,51 @@
     {
       "type": "event",
       "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "stevie-wonder-paris-2026",
+      "title": "Stevie Wonder — Songs in the Key of Life at 50",
+      "emoji": "🎹",
+      "categories": [
+        "music",
+        "concert",
+        "soul"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "coords": [
+        48.8386,
+        2.3786
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Accor Arena, Bercy",
+      "start": "2026-10-15",
+      "end": "2026-10-15",
+      "priceNote": "Tickets from Live Nation",
+      "priceLevel": 3,
+      "why": "The whole double album played for its fiftieth birthday. A once-only night.",
+      "source": "Live Nation",
+      "url": "https://www.livenation.fr/event/stevie-wonder-songs-in-the-key-of-life-performances-50th-anniversary-tour-paris-tickets-edp1692044",
+      "booking": "https://www.livenation.fr/event/stevie-wonder-songs-in-the-key-of-life-performances-50th-anniversary-tour-paris-tickets-edp1692044",
+      "zone": 12,
+      "startTime": "20:00",
+      "labels": [
+        "dontmiss"
+      ],
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Stevie_Wonder_June_30%2C_Montreal.jpg",
+      "imageSubject": "Stevie Wonder",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 150
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
       "categories": [
         "sport",
         "football"
@@ -235,6 +328,176 @@
       "imageSubject": "Parc des Princes",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "the-strokes-paris-2026",
+      "title": "The Strokes",
+      "emoji": "🎸",
+      "categories": [
+        "music",
+        "concert",
+        "rock"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "coords": [
+        48.8386,
+        2.3786
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Accor Arena, Bercy",
+      "start": "2026-10-22",
+      "end": "2026-10-22",
+      "priceNote": "Tickets from Live Nation",
+      "priceLevel": 3,
+      "why": "Twenty-five years after Is This It, still the band every Paris rock bar plays.",
+      "source": "Live Nation",
+      "url": "https://www.livenation.fr/event/the-strokes-reality-awaits-paris-2026-paris-tickets-edp1666756",
+      "booking": "https://www.livenation.fr/event/the-strokes-reality-awaits-paris-2026-paris-tickets-edp1666756",
+      "zone": 12,
+      "startTime": "20:00",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/The_Strokes_by_Roger_Woolman.jpg/1280px-The_Strokes_by_Roger_Woolman.jpg",
+      "imageSubject": "The Strokes",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 120
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "art-basel-paris-2026",
+      "title": "Art Basel Paris",
+      "emoji": "🖼️",
+      "categories": [
+        "art",
+        "festival"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "couple",
+        "weekend",
+        "afternoon"
+      ],
+      "coords": [
+        48.8661,
+        2.3125
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Grand Palais, 8e",
+      "start": "2026-10-23",
+      "end": "2026-10-25",
+      "priceNote": "Tickets from Art Basel",
+      "priceLevel": 3,
+      "why": "195 galleries under the Grand Palais glass roof. The fair is worth it for the building alone; the free public programme around the city that week costs nothing.",
+      "source": "Art Basel",
+      "url": "https://www.artbasel.com/paris",
+      "booking": "https://www.artbasel.com/paris",
+      "zone": 8,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/France-000296_-_Paris%27_Grand_Palais_%2814525102530%29.jpg/1280px-France-000296_-_Paris%27_Grand_Palais_%2814525102530%29.jpg",
+      "imageSubject": "Grand Palais",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "11:00",
+      "durationMin": 180
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "duran-duran-paris-2026",
+      "title": "Duran Duran",
+      "emoji": "🎤",
+      "categories": [
+        "music",
+        "concert",
+        "pop"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "coords": [
+        48.8386,
+        2.3786
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Accor Arena, Bercy",
+      "start": "2026-10-28",
+      "end": "2026-10-28",
+      "priceNote": "Tickets from Live Nation",
+      "priceLevel": 3,
+      "why": "Eighties hits, played with more energy than you'd expect.",
+      "source": "Live Nation",
+      "url": "https://www.livenation.fr/event/duran-duran-paris-tickets-edp1678404",
+      "booking": "https://www.livenation.fr/event/duran-duran-paris-tickets-edp1678404",
+      "zone": 12,
+      "startTime": "20:00",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Duran_Duran.jpg",
+      "imageSubject": "Duran Duran",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 120
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "salon-du-chocolat-2026",
+      "title": "Salon du Chocolat",
+      "emoji": "🍫",
+      "categories": [
+        "food",
+        "festival",
+        "family"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "weekend",
+        "family",
+        "friends",
+        "morning"
+      ],
+      "coords": [
+        48.8322,
+        2.2875
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Paris Expo Porte de Versailles, 15e",
+      "start": "2026-10-28",
+      "end": "2026-11-01",
+      "priceNote": "Tickets from the salon",
+      "priceLevel": 2,
+      "why": "Five days of chocolatiers, pastry demonstrations and the chocolate-dress fashion show. Go on a weekday morning, before the crowds clear the tasting stands.",
+      "source": "Salon du Chocolat",
+      "url": "https://www.salon-du-chocolat.com/",
+      "booking": "https://www.salon-du-chocolat.com/fr-FR/paris/infos-pratiques/billetterie",
+      "zone": 15,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Salon_chocolat_2008.png",
+      "imageSubject": "Salon du Chocolat",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "10:00",
+      "durationMin": 180
     },
     {
       "id": "rolex-paris-masters-2026",
@@ -278,6 +541,134 @@
       "imageSubject": "La Défense",
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "niall-horan-paris-2026",
+      "title": "Niall Horan",
+      "emoji": "🎤",
+      "categories": [
+        "music",
+        "concert",
+        "pop"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "coords": [
+        48.8386,
+        2.3786
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Accor Arena, Bercy",
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "priceNote": "Tickets from Live Nation",
+      "priceLevel": 3,
+      "why": "Warm, easy pop songs and a crowd that sings every word.",
+      "source": "Live Nation",
+      "url": "https://www.livenation.fr/event/niall-horan-dinner-party-live-on-tour-paris-tickets-edp1655766",
+      "booking": "https://www.livenation.fr/event/niall-horan-dinner-party-live-on-tour-paris-tickets-edp1655766",
+      "zone": 12,
+      "startTime": "20:00",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/President_Biden_celebrates_2023_Saint_Patrick%27s_Day_at_the_White_House_%284%29_%28cropped%29.jpg",
+      "imageSubject": "Niall Horan",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 120
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "paris-photo-2026",
+      "title": "Paris Photo",
+      "emoji": "📷",
+      "categories": [
+        "photography",
+        "art",
+        "festival"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "couple",
+        "weekend",
+        "afternoon"
+      ],
+      "coords": [
+        48.8661,
+        2.3125
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Grand Palais, 8e",
+      "start": "2026-11-12",
+      "end": "2026-11-15",
+      "priceNote": "Tickets from Paris Photo",
+      "priceLevel": 3,
+      "why": "The world's biggest photography fair, in the year photography turns two hundred. More than 220 galleries; the book publishers' section upstairs is where the bargains are.",
+      "source": "Paris Photo",
+      "url": "https://www.parisphoto.com/en-gb/info/next-edition.html",
+      "booking": "https://www.parisphoto.com/en-gb/info/tickets.html",
+      "zone": 8,
+      "times": "1pm to 8pm; Sunday until 7pm",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Grande_verri%C3%A8re_du_Grand_Palais_lors_de_l%27op%C3%A9ration_La_nef_est_%C3%A0_vous%2C_juin_2018_%2810%29.jpg/1280px-Grande_verri%C3%A8re_du_Grand_Palais_lors_de_l%27op%C3%A9ration_La_nef_est_%C3%A0_vous%2C_juin_2018_%2810%29.jpg",
+      "imageSubject": "Grand Palais",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "13:00",
+      "durationMin": 180
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "noah-kahan-paris-2026",
+      "title": "Noah Kahan",
+      "emoji": "🎸",
+      "categories": [
+        "music",
+        "concert",
+        "folk"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "coords": [
+        48.8386,
+        2.3786
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Accor Arena, Bercy",
+      "start": "2026-12-07",
+      "end": "2026-12-07",
+      "priceNote": "Tickets from Live Nation",
+      "priceLevel": 3,
+      "why": "Folk-pop sing-alongs about leaving home, on his first big European tour.",
+      "source": "Live Nation",
+      "url": "https://www.livenation.fr/event/noah-kahan-aus-nz-eu-uk-tour-2026-paris-tickets-edp1665212",
+      "booking": "https://www.livenation.fr/event/noah-kahan-aus-nz-eu-uk-tour-2026-paris-tickets-edp1665212",
+      "zone": 12,
+      "startTime": "20:00",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Noah_Kahan_2024_01_%28cropped%29.jpg",
+      "imageSubject": "Noah Kahan",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "durationMin": 120
     },
     {
       "id": "paris-marathon-2027",

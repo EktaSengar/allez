@@ -386,6 +386,69 @@ async function contextTier(cache, file) {
   return has;
 }
 
+/* ---------- 4. the neighbourhood, when the venue has no photograph ----------
+
+   Most events are in rooms Wikipedia has never heard of — a branch
+   library, a Stanford seminar room, a stretch of Nostrand Avenue closed
+   for a street fair. Every one of them is in a zone, and the zone has an
+   article. Still `context`, so the card says "Photo of the area".
+
+   Bare names are ambiguous across the world (Kensington is in London
+   first), so the qualified forms are asked before the bare one and the
+   first that exists wins. Paris zones are arrondissements, whose articles
+   are named by number. */
+
+const ZONE_ARTICLES = {
+  paris: k => [`${k}${k === '1' ? 'er' : 'e'} arrondissement de Paris`],
+  'new-york': n => {
+    const f = n.split(/-|\s\(/)[0].trim();
+    return ['Manhattan', 'Brooklyn', 'Queens', 'Bronx', 'Staten Island']
+      .map(b => `${f}, ${b}`).concat(f);
+  },
+  'bay-area': n => [`${n}, San Francisco`, `${n}, California`, n]
+};
+
+async function zoneTier(cache, file) {
+  const build = ZONE_ARTICLES[City.id];
+  if (!build) return 0;
+  const doc = await readJson(file);
+  const lang = City.id === 'paris' ? 'fr' : 'en';
+
+  const byZone = new Map();
+  for (const item of doc.items || []) {
+    if (item.i || item.image || item.zone == null) continue;
+    const z = String(item.zone);
+    if (!byZone.has(z)) byZone.set(z, []);
+    byZone.get(z).push(item);
+  }
+
+  const queries = new Map();                       // zone -> [candidates]
+  for (const z of byZone.keys()) {
+    const name = City.id === 'paris' ? z : (City.zone.names?.[z] || '');
+    if (name) queries.set(z, build(name));
+  }
+  const all = [...new Set([...queries.values()].flat())];
+  const fresh = all.filter(q => FORCE || cache.found[`z:${q}`] === undefined);
+  console.log(`\n${file} — ${byZone.size} neighbourhoods for venues without a photo, ${fresh.length} articles not looked up yet`);
+  if (fresh.length) {
+    for (const [q, url] of await pageImages(fresh, lang)) {
+      const f = fileFromUrl(url);
+      if (isPhoto(f)) cache.found[`z:${q}`] = commonsPath(f);
+    }
+    fresh.forEach(q => { if (cache.found[`z:${q}`] === undefined) cache.found[`z:${q}`] = ''; });
+  }
+
+  let has = 0;
+  for (const [z, group] of byZone) {
+    const hit = (queries.get(z) || []).map(q => cache.found[`z:${q}`]).find(Boolean);
+    if (!hit) continue;
+    for (const item of group) { item.i = hit; item.ik = 'c'; has++; }
+  }
+  await writeJson(file, doc);
+  console.log(`  → ${has} more carry a photograph of their neighbourhood`);
+  return has;
+}
+
 async function run() {
   console.log('\nFinding photographs for the generated tiers…\n');
   const cache = await readCache();
@@ -396,6 +459,7 @@ async function run() {
   await sourcedTier(cache, wd);
   await namedTier(cache);
   await contextTier(cache, 'events-city.json');
+  await zoneTier(cache, 'events-city.json');
   await contextTier(cache, 'editorial.json');
 
   if (!DRY) {

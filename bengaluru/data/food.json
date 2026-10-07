@@ -1,5 +1,93 @@
 {
   "generated": "2026-09-13",
   "note": "Hand-written food missions. Darshinis, military hotels, benne masala dosa and filter kaapi belong here.",
-  "items": []
+  "items": [
+    {
+      "id": "mission-indiranagar-morning",
+      "title": "An Indiranagar Morning, Counter to Roaster",
+      "emoji": "☕",
+      "type": "mission",
+      "categories": [
+        "food",
+        "coffee",
+        "mission"
+      ],
+      "moods": [
+        "coffee",
+        "cheap",
+        "walk"
+      ],
+      "zone": "indiranagar",
+      "area": "Four stops, all within a 20-minute walk or a short auto ride of each other",
+      "price": 500,
+      "priceNote": "~₹500 each for the whole thing",
+      "durationMin": 120,
+      "brief": "The neighbourhood has a breakfast for every budget. Start at a tea counter, eat at a darshini, then work up to a roaster, and decide which morning is yours.",
+      "test": "Is the filter coffee at the darshini better or worse than the pour-over at the roaster, and which one would you come back for on a Tuesday?",
+      "candidates": [
+        {
+          "emoji": "🫖",
+          "name": "Sharon Tea Stall",
+          "id": "osm-sharon-tea-stall-25946-155294",
+          "order": "Ginger-cardamom tea",
+          "note": "Standing, on the pavement, before the traffic",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🥞",
+          "name": "The Rameshwaram Cafe",
+          "id": "osm-the-rameshwaram-cafe-25964-155282",
+          "order": "Ghee podi idli, ghee masala dosa, filter coffee",
+          "note": "Pay at the till, collect, eat standing",
+          "walk": "auto, 5 min"
+        },
+        {
+          "emoji": "🥨",
+          "name": "German BrezelHaus",
+          "id": "osm-german-brezelhaus-25965-155277",
+          "order": "A pretzel and a Berliner for later",
+          "note": "Opens at eight on weekends",
+          "walk": "10 min"
+        },
+        {
+          "emoji": "☕",
+          "name": "The Kind",
+          "id": "osm-the-kind-25940-155290",
+          "order": "Whatever came off the roaster this week, as a pour-over",
+          "note": "Roasted on the premises",
+          "walk": "auto, 8 min"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "📚",
+          "text": "An hour with a book at Champaca",
+          "id": "osm-champaca-25956-155274"
+        }
+      ],
+      "why": "A morning that moves from a tea stall to a roastery tells you more about how this part of the city eats than any single restaurant can.",
+      "goodFor": [
+        "morning",
+        "weekend",
+        "cheap",
+        "food"
+      ],
+      "labels": [
+        "foodmission",
+        "cheap"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "indoor": false,
+      "weatherSensitive": true,
+      "coords": [
+        12.9745,
+        77.6415
+      ],
+      "coordsFrom": "centre of the stops",
+      "source": "Venue websites; OpenStreetMap",
+      "lastVerified": "2026-10-01",
+      "url": "https://www.google.com/maps/search/Sharon+Tea+Stall%2C+Indiranagar%2C+Bengaluru"
+    }
+  ]
 }
