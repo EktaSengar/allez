@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Allez",
+    "slug": "allez",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "city.allez.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FBF8F3",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "city.allez.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "scheme": "allez",
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allez uses your location to suggest what is worth going to near you. It stays on your phone."
+        }
+      ],
+      "expo-router",
+      "expo-sharing",
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "color": "#F28C28"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allez uses your photos only to put one on a postcard you make. It stays on your phone.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FBF8F3"
+    },
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

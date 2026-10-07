@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan the weekend · Allez</title>
+<meta name="description" content="Someone wants to plan the weekend with you. Swipe what you'd go to, and send it back.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FBF8F3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<!--
+  The other half of "plan it together" (APP.md, "The weekend").
+
+  The deck arrives in the #fragment, which a browser never sends to a
+  server, so nothing about the cards or the person is logged anywhere.
+  This page swipes it and hands back a link carrying only the deck id and
+  a yes/no for each card. The app does the matching, on its own phone.
+  No account, no app, no cookies.
+-->
+<style>
+  :root {
+    --bg: #FBF8F3; --card: #FFFFFF; --sunk: #F2EDE5; --ink: #1F1D1A; --muted: #8A8580;
+    --line: #E8E2D8; --accent: #F28C28; --on-accent: #FFFFFF; --scrim: rgba(20,18,16,.6);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #191715; --card: #24211E; --sunk: #2C2925; --ink: #F4EFE8; --muted: #A59E95;
+      --line: #36322D; --accent: #F59A3E; --on-accent: #1F1D1A;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font: 17px/1.4 Nunito, ui-rounded, system-ui, -apple-system, sans-serif;
+    display: flex; flex-direction: column; overflow: hidden;
+    padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
+  }
+  h1 { font-size: 26px; font-weight: 800; margin: 0; line-height: 1.2; }
+  .muted { color: var(--muted); }
+  #swipe { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+  .head { max-width: 480px; width: 100%; margin: 0 auto; }
+  .stage { position: relative; flex: 1; max-width: 480px; width: 100%; margin: 12px auto; }
+  .card {
+    position: absolute; inset: 0; border-radius: 22px; overflow: hidden; background: var(--sunk);
+    display: flex; flex-direction: column; justify-content: flex-end; touch-action: pan-y; user-select: none;
+    transition: transform .18s ease-out;
+  }
+  .card.behind { transform: scale(.96); opacity: .6; }
+  .card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .card .emoji { position: absolute; inset: 0; display: grid; place-items: center; font-size: 72px; }
+  .card .text { position: relative; padding: 20px; background: var(--scrim); color: #fff; }
+  .card .t { font-size: 24px; font-weight: 800; line-height: 1.2; }
+  .card .z { font-size: 14px; opacity: .85; }
+  .card .w { margin-top: 8px; }
+  .row { display: flex; gap: 10px; max-width: 480px; width: 100%; margin: 0 auto; }
+  button, .btn {
+    flex: 1; height: 54px; border-radius: 27px; border: 1.5px solid var(--line); background: transparent;
+    color: var(--ink); font: 700 17px Nunito, ui-rounded, system-ui, sans-serif; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; text-decoration: none;
+  }
+  .primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .moment { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; max-width: 420px; margin: 0 auto; gap: 8px; }
+  .moment img { width: 150px; height: 150px; object-fit: contain; }
+  .moment .btn { flex: none; width: 100%; margin-top: 12px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<div id="swipe" hidden>
+  <div class="head">
+    <h1>Plan the weekend</h1>
+    <div class="muted" id="sub">Right if you’d go. Left if not this time.</div>
+  </div>
+  <div class="stage" id="stage"></div>
+  <div class="row">
+    <button id="no">✕&nbsp; Not this time</button>
+    <button id="yes" class="primary">♥&nbsp; I’d go</button>
+  </div>
+</div>
+
+<div id="done" class="moment" hidden>
+  <img src="celebrate.png" alt="">
+  <h1>Lovely. Now send it back.</h1>
+  <div class="muted">They’ll see what you both picked, and the weekend plans itself.</div>
+  <button class="btn primary" id="send">Send it back</button>
+  <div class="muted" id="copied" hidden>Copied. Paste it to them.</div>
+</div>
+
+<div id="reply" class="moment" hidden>
+  <img src="celebrate.png" alt="">
+  <h1>Their answers are in.</h1>
+  <div class="muted">Open this in Allez to see what you both picked.</div>
+  <a class="btn primary" id="open">Open in Allez</a>
+  <button class="btn" id="copy">Copy the link</button>
+</div>
+
+<div id="empty" class="moment" hidden>
+  <img src="hello.png" alt="">
+  <h1>Hello. Nothing to swipe here.</h1>
+  <div class="muted">This page opens a weekend someone has sent you from the Allez app.</div>
+  <a class="btn" href="/">See Allez</a>
+</div>
+
+<script>
+(function () {
+  var q = new URLSearchParams(location.hash.slice(1));
+  var $ = function (id) { return document.getElementById(id); };
+  var show = function (id) { ['swipe', 'done', 'reply', 'empty'].forEach(function (x) { $(x).hidden = x !== id; }); };
+  var id = (q.get('id') || '').replace(/[^a-z0-9]/gi, '').slice(0, 12);
+
+  /* Opened by the person who sent the deck: hand the reply to the app. */
+  if (id && /^[01]+$/.test(q.get('r') || '')) {
+    var deep = 'allez://match?id=' + id + '&r=' + q.get('r');
+    $('open').href = deep;
+    $('copy').onclick = function () { copy(location.href); };
+    return show('reply');
+  }
+
+  var cards = [];
+  try { cards = JSON.parse(q.get('c') || '[]'); } catch (e) {}
+  cards = Array.isArray(cards) ? cards.filter(function (c) { return c && typeof c.t === 'string'; }).slice(0, 20) : [];
+  if (!id || !cards.length) return show('empty');
+
+  var k = 0, bits = '';
+  show('swipe');
+  draw();
+
+  function cardEl(c, behind) {
+    var el = document.createElement('div');
+    el.className = 'card' + (behind ? ' behind' : '');
+    /* Only https photos; everything is set as text, never as markup. */
+    if (typeof c.m === 'string' && /^https:\/\//.test(c.m)) {
+      var img = document.createElement('img'); img.src = c.m; img.alt = ''; el.appendChild(img);
+    } else {
+      var e = document.createElement('div'); e.className = 'emoji'; e.textContent = String(c.e || '📍').slice(0, 4); el.appendChild(e);
+    }
+    var t = document.createElement('div'); t.className = 'text';
+    [['t', c.t], ['z', c.z], ['w', c.w]].forEach(function (p) {
+      if (!p[1]) return;
+      var d = document.createElement('div'); d.className = p[0]; d.textContent = String(p[1]).slice(0, 200); t.appendChild(d);
+    });
+    el.appendChild(t);
+    return el;
+  }
+
+  function draw() {
+    var stage = $('stage'); stage.textContent = '';
+    if (k >= cards.length) return show('done');
+    $('sub').textContent = 'Right if you’d go. Left if not this time.  ' + (k + 1) + '/' + cards.length;
+    if (cards[k + 1]) stage.appendChild(cardEl(cards[k + 1], true));
+    var top = cardEl(cards[k]); stage.appendChild(top); drag(top);
+  }
+
+  function decide(yes) { bits += yes ? '1' : '0'; k++; draw(); }
+  $('yes').onclick = function () { fling(1); };
+  $('no').onclick = function () { fling(-1); };
+
+  function fling(dir) {
+    var top = $('stage').lastChild;
+    if (!top) return;
+    top.style.transform = 'translateX(' + dir * 140 + '%) rotate(' + dir * 12 + 'deg)';
+    setTimeout(function () { decide(dir > 0); }, 160);
+  }
+
+  function drag(el) {
+    var x0 = null, dx = 0;
+    el.addEventListener('pointerdown', function (e) { x0 = e.clientX; el.style.transition = 'none'; el.setPointerCapture(e.pointerId); });
+    el.addEventListener('pointermove', function (e) {
+      if (x0 === null) return;
+      dx = e.clientX - x0;
+      el.style.transform = 'translateX(' + dx + 'px) rotate(' + dx / 20 + 'deg)';
+    });
+    el.addEventListener('pointerup', function () {
+      el.style.transition = '';
+      if (Math.abs(dx) > el.offsetWidth * 0.28) fling(dx > 0 ? 1 : -1);
+      else el.style.transform = '';
+      x0 = null; dx = 0;
+    });
+  }
+
+  $('send').onclick = function () {
+    var url = location.origin + location.pathname + '#v=1&id=' + id + '&r=' + bits;
+    var text = 'Done. Here’s what I’d go to: ' + url;
+    if (navigator.share) navigator.share({ text: text }).catch(function () {});
+    else copy(url);
+  };
+
+  function copy(text) {
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(function () {
+      $('copied').hidden = false;
+    }, function () { prompt('Copy this link', text); });
+  }
+})();
+</script>
+</body>
+</html>
