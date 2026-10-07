@@ -15,6 +15,10 @@
      from a known basis, at least one reason ending in `not-done`, and a
      spend that is a number or null — never undefined
      day totals that add up
+     no stop planned into a slot its own open block says it is shut for,
+     and no day with two legs over 45 minutes back to back — the two
+     things js/plan.js got wrong before 27 September 2026, held across
+     twenty-six weekends from every base
 
    And one date rule that is easy to get wrong and hard to see: the
    weekend of a day must survive a daylight-saving night.
@@ -35,6 +39,13 @@ const FILES = ['events', 'places', 'nightlife', 'sports', 'food', 'itineraries',
    a holiday anywhere. */
 const DATE = '2026-09-16';
 const SLOTS = ['morning', 'afternoon', 'evening'];
+/* A leg past half an hour costs a point for every three minutes over, and
+   past 42 minutes that is more than the four points inside which the
+   weekly rotation treats stops as a tie. So two legs over 45 minutes in a
+   row cannot be a coin toss: it is the day going out and coming back. Two
+   31-minute subway rides in New York are just New York. */
+const WEEKENDS = 26, LONG = 45;
+const addDays = (iso, n) => new Date(Date.parse(iso + 'T12:00:00Z') + n * 86400000).toISOString().slice(0, 10);
 const BASES = ['hours', 'start', 'unknown'];
 
 let failures = 0, checks = 0;
@@ -108,6 +119,32 @@ for (const id of cityIds()) {
     });
     want(late.days[0].stops.every(s => s.slot === 'evening'),
       `${tag} · at 17:30 on ${sat} only the evening is planned that day`);
+
+    /* Twenty-six weekends running, from this base. Before the fix the
+       Bay Area planned 19 stops into slots they were shut for and five
+       days with two long legs in a row; both must stay at none. One long
+       leg is allowed — Fleet Week is worth an hour — but the next stop
+       is then near it, not back where the day began. */
+    const shut = [], zigzag = [];
+    for (let w = 0; w < WEEKENDS; w++) {
+      const date = addDays(DATE, 7 * w);
+      const p = Plan.weekend(pool, {
+        date, origin: b, weather: null, now: Hours.instant(DATE, 0),
+        rank: { today: date, weatherMode: null, taste: {}, exploredZones: [], homeZone: b.zone }
+      });
+      for (const d of p.days) {
+        d.stops.filter(s => s.open.fits === false).forEach(s => shut.push(`${d.date} ${s.slot}: ${s.item.title}`));
+        d.stops.forEach((s, k) => {
+          const prev = d.stops[k - 1];
+          if (k > 0 && s.travel.minutes > LONG && prev.travel.minutes > LONG)
+            zigzag.push(`${d.date}: ${prev.item.title} (${Math.round(prev.travel.minutes)} min), then ${s.item.title} (${Math.round(s.travel.minutes)} min)`);
+        });
+      }
+    }
+    want(shut.length === 0, `${tag} · over ${WEEKENDS} weekends, no stop is planned into a slot it is shut for` +
+      (shut.length ? ` — ${shut.slice(0, 3).join('; ')}` : ''));
+    want(zigzag.length === 0, `${tag} · over ${WEEKENDS} weekends, no day has two legs over ${LONG} minutes in a row` +
+      (zigzag.length ? ` — ${zigzag.slice(0, 3).join('; ')}` : ''));
   }
 }
 
@@ -160,6 +197,61 @@ for (const id of cityIds()) {
   const none = Plan.weekend(pool, ctx({}));
   want(titles(none).includes('Silent trail') || titles(none).includes('No-dog trail'), 'with nothing said, the dog changes nothing');
   want(none.days.flatMap(d => d.stops).every(s => s.kind === undefined), 'and no dessert is added');
+}
+
+/* ---------- the two cases that went wrong ----------
+
+   Both from the Bay Area in September 2026, rebuilt small from the real
+   records so the answer is known and does not hang on this week's data.
+
+   "Saturday morning downtown" starts at 08:30 and is over by eleven.
+   When something better took the morning, it was planned into the
+   afternoon anyway, on its length alone. It belongs in the morning or
+   nowhere.
+
+   From Palo Alto, a Sunday went to Golden Gate Park for the morning,
+   an hour away, and drove an hour back for dinner on Bryant Street. A
+   stop an hour off now has to be clearly better than the best one near —
+   six points — to be worth the drive, so the morning stays local and
+   the day does not go out and come back. */
+{
+  const id = 'bay-area';
+  const g = { localStorage: { getItem: () => null, setItem: () => {}, removeItem: () => {} }, navigator: {}, Store: { rating: () => null, isDone: () => false } };
+  const Loc = loadModuleFor(id, 'location.js', 'Loc', g);
+  const Hours = loadModuleFor(id, 'hours.js', 'Hours');
+  const Near = loadModuleFor(id, 'nearby.js', 'Near', { Hours });
+  const Rank = loadModuleFor(id, 'scoring.js', 'Rank', { Near, Hours, Store: g.Store });
+  const Plan = loadModuleFor(id, 'plan.js', 'Plan', { Rank, Near, Loc, Hours });
+  Near.use([], []);
+  const pa = [37.4479, -122.1601], park = [37.77125, -122.4665];
+  const mk = (title, extra) => Object.assign({ id: title, title, type: 'cafe', zone: 'palo-alto', coords: pa, categories: [],
+    goodFor: [], durationMin: 120, quality: 3, uniqueness: 3, minutesFromHome: 5,
+    provenance: 'editorial', lastVerified: DATE }, extra);
+  const at = date => ({ date, origin: { lat: pa[0], lon: pa[1] }, weather: null, now: Hours.instant(DATE, 0),
+    rank: { today: date, weatherMode: null, taste: {}, exploredZones: [], homeZone: 'palo-alto' } });
+  const slotOf = (d, t) => (d.stops.find(s => s.item.title === t) || {}).slot || null;
+
+  const walk = mk('Saturday morning downtown', { type: 'itinerary', startTime: '08:30', durationMin: 150, days: [6],
+    goodFor: ['morning'], quality: 4 });
+  const market = mk('Market', { type: 'market', categories: ['market'], goodFor: ['morning'], quality: 5, uniqueness: 5 });
+  const garden = mk('Garden', { type: 'park', quality: 2, uniqueness: 2 });
+  const sat = Plan.day([walk, market, garden], at('2026-09-19'));
+  want(slotOf(sat, 'Saturday morning downtown') !== 'afternoon',
+    `a walk over by 11:00 is not planned for the afternoon (afternoon: ${(sat.stops.find(s => s.slot === 'afternoon') || { item: {} }).item.title})`);
+  want(sat.stops.every(s => s.open.fits !== false), 'no stop in the day is shut for its slot');
+
+  const lindy = mk('Lindy in the Park', { type: 'class', zone: 'inner-richmond', coords: park, minutesFromHome: 60,
+    days: [0], goodFor: ['morning'], quality: 5, uniqueness: 5 });
+  /* About five points under Lindy on the ranking: far enough behind that
+     the old planner never weighed it, close enough that an hour's drive
+     — ten points — should. */
+  const corner = mk('Corner coffee', { goodFor: ['morning'], durationMin: 60, quality: 2, uniqueness: 1.5 });
+  const campus = mk('An afternoon at Stanford', { type: 'museum', goodFor: ['afternoon'], quality: 4, uniqueness: 4 });
+  const ettan = mk('Ettan', { type: 'restaurant', goodFor: ['evening'], quality: 5, uniqueness: 5 });
+  const sun = Plan.day([lindy, corner, campus, ettan], at('2026-09-20'));
+  const legs = sun.stops.map(s => Math.round(s.travel.minutes));
+  want(!legs.some((m, k) => k > 0 && m > LONG && legs[k - 1] > LONG),
+    `the day does not go an hour out and an hour back (${sun.stops.map((s, k) => `${s.item.title} ${legs[k]} min`).join(', ')})`);
 }
 
 /* ---------- without the car ----------

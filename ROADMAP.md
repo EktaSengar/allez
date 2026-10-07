@@ -593,3 +593,7 @@ in the planner rather than the data: a morning route can land in the
 afternoon slot (its open block says `fits: false`), and a Sunday can go Palo
 Alto → Fort Mason → Stanford, 63 and then 64 minutes apart, because no slot
 test looks at the journey. Both are visible now that the plan says so.
+*Both fixed 27 September 2026: a stop whose open block says it is shut for the
+slot is skipped, and a leg past half an hour costs a point for every three
+minutes over. `check-plan.mjs` has held both since 2 October, across 26
+weekends from every base and in two small cases rebuilt from these records.*
