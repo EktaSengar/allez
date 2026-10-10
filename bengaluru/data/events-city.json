@@ -1,35 +1,104 @@
 {
-  "generated": "2026-10-09",
+  "generated": "2026-10-10",
   "window": {
-    "from": "2026-10-09",
-    "to": "2026-12-08"
+    "from": "2026-10-10",
+    "to": "2026-12-09"
   },
   "source": "Luma — Bengaluru",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 7
+    "luma": 11
   },
   "items": [
     {
-      "id": "luma-evtBiU3ZDaKNZ32bRE",
-      "title": "Caring for someone with Dementia",
+      "id": "luma-evtkBGSZu1oqsAY4DL",
+      "title": "Read & Tell (R&T) Party",
+      "emoji": "📚",
+      "type": "event",
+      "categories": [
+        "books"
+      ],
+      "zone": "arkavathy-layout",
+      "area": "Zetesis Ventures LLP, 541, 9th Cross Rd, MCECHS Layout, Dr.Shivaram Karanth Naga",
+      "coords": [
+        13.0690596,
+        77.6260059
+      ],
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "why": "Have you read a book and are craving to chitchat about it with someone? Have a favorite book that you think everyone would love, if only they knew about it? Want to see what others are reading and have interesting conversations beyond weather, traffic, and real estate? Then come to the the Read & Tell (R&T) Party and t",
+      "url": "https://luma.com/7fpkmn0i",
+      "source": "Luma — Bengaluru",
+      "lastVerified": "2026-10-10",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtcWsdA04w082V1Xd",
+      "title": "Fundraising for Startups: Panel Conversation with Founders & Investors",
+      "emoji": "🎤",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "koramangala",
+      "area": "Founder Startup House Bangalore, Startup Lane 384, 1st A Main Rd, 7th Block, Kor",
+      "coords": [
+        12.9354607,
+        77.61339459999999
+      ],
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "why": "Founders and investors on what a raise actually takes. Raising money looks like a pitch problem and usually turns out to be a timing, traction, and trust problem. Most of what decides a round happens before and after the actual meeting: whether the timing is right, whether the traction backs the story, and whether the ",
+      "url": "https://luma.com/1kkwtc9p",
+      "source": "Luma — Bengaluru",
+      "lastVerified": "2026-10-10",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtncAh7J8jxRupMIq",
+      "title": "Masterclass: Kevin William David, How to Launch on Product Hunt",
       "emoji": "🫂",
       "type": "event",
       "categories": [
         "community"
       ],
-      "zone": "frazer-town",
-      "area": "Annaswamy Mudaliar General Hospital, Bourdillon Road, Fraser Town, Bengaluru, Ka",
+      "zone": "indiranagar",
+      "area": null,
       "coords": [
-        13.0000292,
-        77.61450049999999
+        12.973569507571167,
+        77.64066355700186
       ],
       "start": "2026-10-10",
       "end": "2026-10-10",
-      "why": "About this session: The knowledge to care with confidence. Who is it for? - For family members and caregivers supporting a person living with dementia. - For those keen to gain practical skills to manage everyday challenges, improve communication, and provide compassionate, person-centred care while looking after their",
-      "url": "https://luma.com/5cy5l29f",
+      "why": "Kevin William David has hunted 4000+ products on Product Hunt and helped 10k+ founders launch, free, for over a decade. He's one of the top 3 hunters on the global leaderboard and has been on the platform since day one. This is not a talk, instead Kevin will put Product Hunt on the screen, pull up a few launches that w",
+      "url": "https://luma.com/0ai8yaz3",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-09",
+      "lastVerified": "2026-10-10",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtSinbKNKmXXi9DMy",
+      "title": "12 angry devs",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "banashankari-6th-stage",
+      "area": null,
+      "coords": [
+        12.815706197675995,
+        77.49169646411991
+      ],
+      "start": "2026-10-10",
+      "end": "2026-10-10",
+      "why": "12 devs. 5 minutes each. zero mercy. then we get in the pool. 12 Angry Devs is coming to Bangalore, straight from San Francisco. It's a demo night for people who can actually take feedback, no sugar-coating, no mercy. A few builders demo what they're working on. Everyone else goes after it, and tells them exactly why i",
+      "url": "https://luma.com/7qvj4oap",
+      "source": "Luma — Bengaluru",
+      "lastVerified": "2026-10-10",
       "quality": 3,
       "uniqueness": 3
     },
@@ -52,7 +121,7 @@
       "why": "Bangalore, you need new friends. Making friends was easy when we were kids. You sat next to someone. Played something stupid. Talked about absolutely nothing. And somehow, you became friends. Somewhere along the way, meeting new people became networking events, LinkedIn connections, awkward introductions and asking eve",
       "url": "https://luma.com/d38ui7vb",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-09",
+      "lastVerified": "2026-10-10",
       "quality": 3,
       "uniqueness": 3
     },
@@ -75,7 +144,30 @@
       "why": "Our lives are extremely chaotic and it gets hard to allocate time to our hobbies. We get it more than any one else! Cool People Create was created so that all of us closeted artists have a dedicated time and space to make art / other things in Bangalore. Every Sunday, we meet for a couple of hours to work on whatever w",
       "url": "https://luma.com/qw3bx72t",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-09",
+      "lastVerified": "2026-10-10",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtxshFGBCaWiF6N6F",
+      "title": "-1 to Swiggy with Nandan Reddy | South Park Commons (BLR)",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "hsr-layout",
+      "area": null,
+      "coords": [
+        12.916297043958988,
+        77.64627845309475
+      ],
+      "start": "2026-10-15",
+      "end": "2026-10-15",
+      "why": "South Park Commons India is excited to host Nandan Reddy, Co-founder of Swiggy, as part of our -1 to Now series. Event Details: 4:30 PM: Doors Open 5:00 PM – 6:00 PM: Fireside Chat + Q&A 6:00 PM – 7:00 PM: Mixer Nandan Reddy is co-founder of Swiggy, the Bengaluru company that grew from a single neighbourhood into one o",
+      "url": "https://luma.com/nandanreddy",
+      "source": "Luma — Bengaluru",
+      "lastVerified": "2026-10-10",
       "quality": 3,
       "uniqueness": 3
     },
@@ -98,7 +190,7 @@
       "why": "Join us for an evening with the CEO of Giottus, one of India's longest-running crypto exchanges, built for Indian traders and investors Giottus secures user funds with BitGo custody, and the two have been long-standing partners. Hear how they built Giottus from scratch, scaled it in India, and how custody works under t",
       "url": "https://luma.com/39txuq8y",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-09",
+      "lastVerified": "2026-10-10",
       "quality": 3,
       "uniqueness": 3
     },
@@ -121,7 +213,7 @@
       "why": "As part of Qiskit Fall Fest 2026, QuantumX is bringing together students, researchers, professionals, and technology enthusiasts for an engaging introduction to the world of quantum computing and Qiskit. This expert talk is designed to provide a clear and accessible starting point for anyone interested in understanding",
       "url": "https://luma.com/hczdve5y",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-09",
+      "lastVerified": "2026-10-10",
       "quality": 3,
       "uniqueness": 3
     },
@@ -144,7 +236,7 @@
       "why": "Get started with quantum programming through a practical, beginner-friendly workshop using Qiskit and IBM Quantum Platform. This event is exclusively for students and is open to participants from all academic institutions. About the Event Ready to move beyond theory and start building with quantum computers? Join the Q",
       "url": "https://luma.com/79i0vamg",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-09",
+      "lastVerified": "2026-10-10",
       "quality": 3,
       "uniqueness": 3
     },
@@ -167,7 +259,7 @@
       "why": "Product Managers Connect is a relaxed, high value networking meetup created exclusively for product managers. The goal is simple: connect, exchange experiences, and build professional relationships with peers in the product community. What to expect A casual, conversation driven environment. Dedicated space to meet fel",
       "url": "https://luma.com/232qy3xn",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-09",
+      "lastVerified": "2026-10-10",
       "quality": 3,
       "uniqueness": 3
     }
