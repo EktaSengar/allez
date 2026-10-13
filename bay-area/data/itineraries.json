@@ -39,22 +39,62 @@
       "stops": [
         {
           "emoji": "🗿",
-          "text": "The Rodin Sculpture Garden — The Gates of Hell, in the open air"
+          "text": "The Rodin Sculpture Garden — The Gates of Hell, in the open air",
+          "at": [
+            37.43229,
+            -122.17099
+          ],
+          "short": "Rodin | SCULPTURE GARDEN",
+          "label": [
+            -16,
+            -22
+          ],
+          "anchor": "end"
         },
         {
           "emoji": "🖼️",
           "text": "The Cantor Arts Center next door, free",
-          "walk": "1 min"
+          "walk": "1 min",
+          "at": [
+            37.43302,
+            -122.17091
+          ],
+          "short": "Cantor | ARTS CENTER",
+          "label": [
+            16,
+            -22
+          ],
+          "anchor": "start"
         },
         {
           "emoji": "⛪",
           "text": "Across the Oval to the Main Quad and Memorial Church",
-          "walk": "10 min"
+          "walk": "10 min",
+          "at": [
+            37.4272,
+            -122.1703
+          ],
+          "short": "Main Quad | MEMORIAL CHURCH",
+          "label": [
+            0,
+            40
+          ],
+          "anchor": "middle"
         },
         {
           "emoji": "🌵",
           "text": "The Arizona Cactus Garden, hidden in the arboretum",
-          "walk": "12 min"
+          "walk": "12 min",
+          "at": [
+            37.43589,
+            -122.17107
+          ],
+          "short": "Arizona | CACTUS GARDEN",
+          "label": [
+            0,
+            40
+          ],
+          "anchor": "middle"
         }
       ],
       "url": "https://museum.stanford.edu/",
@@ -69,7 +109,100 @@
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons",
       "priceLevel": 0,
-      "booking": false
+      "booking": false,
+      "map": {
+        "file": "img/maps/stanford-afternoon.svg",
+        "bbox": [
+          37.425,
+          -122.17435,
+          37.4378,
+          -122.16665
+        ],
+        "title": "An afternoon at Stanford",
+        "subtitle": "Free, about 3 hours",
+        "streets": true,
+        "paths": true,
+        "buildings": true,
+        "cartouche": [
+          560,
+          318
+        ],
+        "decor": [
+          {
+            "kind": "place",
+            "text": "THE OVAL",
+            "at": [
+              37.4298,
+              -122.1688
+            ]
+          },
+          {
+            "kind": "place",
+            "text": "PALM DRIVE ←",
+            "at": [
+              37.4268,
+              -122.1677
+            ]
+          },
+          {
+            "kind": "thinker",
+            "at": [
+              37.4321,
+              -122.1726
+            ],
+            "scale": 1.1
+          },
+          {
+            "kind": "quad",
+            "at": [
+              37.427,
+              -122.1728
+            ],
+            "scale": 1.2
+          },
+          {
+            "kind": "church",
+            "at": [
+              37.4258,
+              -122.1714
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "cactus",
+            "scale": 1.1,
+            "xy": [
+              830,
+              140
+            ]
+          },
+          {
+            "kind": "palm",
+            "at": [
+              37.4282,
+              -122.1682
+            ],
+            "scale": 0.9
+          },
+          {
+            "kind": "palm",
+            "at": [
+              37.4272,
+              -122.168
+            ],
+            "scale": 0.8
+          },
+          {
+            "kind": "compass",
+            "xy": [
+              850,
+              66
+            ],
+            "scale": 0.9
+          }
+        ],
+        "north": "right"
+      }
     },
     {
       "id": "downtown-saturday-morning",
@@ -109,22 +242,58 @@
       "stops": [
         {
           "emoji": "🥕",
-          "text": "The farmers' market on Gilman Street — fruit, bread, cheese, flowers"
+          "text": "The farmers' market on Gilman Street — fruit, bread, cheese, flowers",
+          "at": [
+            37.44536,
+            -122.15903
+          ],
+          "short": "Farmers' market | GILMAN STREET",
+          "label": [
+            18,
+            6
+          ]
         },
         {
           "emoji": "☕",
           "text": "Coffee upstairs at Goodthing on Ramona",
-          "walk": "5 min"
+          "walk": "5 min",
+          "at": [
+            37.44484,
+            -122.16168
+          ],
+          "short": "Coffee | GOODTHING",
+          "label": [
+            -18,
+            6
+          ]
         },
         {
           "emoji": "🥐",
           "text": "An almond croissant at Mademoiselle Colette on Lytton",
-          "walk": "7 min"
+          "walk": "7 min",
+          "at": [
+            37.4491,
+            -122.16071
+          ],
+          "short": "Croissant | MADEMOISELLE COLETTE",
+          "label": [
+            18,
+            6
+          ]
         },
         {
           "emoji": "🏚️",
           "text": "Down to Addison Avenue for the HP Garage, from the sidewalk",
-          "walk": "12 min"
+          "walk": "12 min",
+          "at": [
+            37.44294,
+            -122.15459
+          ],
+          "short": "HP Garage | ADDISON AVENUE",
+          "label": [
+            18,
+            6
+          ]
         }
       ],
       "url": "https://www.pafarmersmarket.org/",
@@ -139,7 +308,81 @@
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons",
       "priceLevel": 1,
-      "booking": false
+      "booking": false,
+      "map": {
+        "file": "img/maps/downtown-saturday-morning.svg",
+        "bbox": [
+          37.4405,
+          -122.1705,
+          37.451,
+          -122.1455
+        ],
+        "title": "Saturday morning downtown",
+        "streets": true,
+        "buildings": true,
+        "cartouche": [
+          34,
+          330
+        ],
+        "decor": [
+          {
+            "kind": "awning",
+            "xy": [
+              478,
+              214
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "cups",
+            "xy": [
+              282,
+              236
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "croissant",
+            "xy": [
+              300,
+              70
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "garage",
+            "xy": [
+              650,
+              330
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "place",
+            "text": "PROFESSORVILLE",
+            "at": [
+              37.4418,
+              -122.1535
+            ]
+          },
+          {
+            "kind": "place",
+            "text": "DOWNTOWN",
+            "at": [
+              37.45,
+              -122.156
+            ]
+          },
+          {
+            "kind": "compass",
+            "xy": [
+              850,
+              66
+            ],
+            "scale": 0.9
+          }
+        ]
+      }
     },
     {
       "id": "telegraph-hill-steps",
@@ -175,27 +418,73 @@
       "stops": [
         {
           "emoji": "📚",
-          "text": "City Lights on Columbus — the Beats, upstairs in the poetry room"
+          "text": "City Lights on Columbus — the Beats, upstairs in the poetry room",
+          "at": [
+            37.79763,
+            -122.40657
+          ],
+          "short": "City Lights | BOOKSELLERS",
+          "label": [
+            18,
+            6
+          ]
         },
         {
           "emoji": "🥟",
           "text": "A box of dim sum from Good Mong Kok on Stockton",
-          "walk": "5 min"
+          "walk": "5 min",
+          "at": [
+            37.79545,
+            -122.40834
+          ],
+          "short": "Dim sum | GOOD MONG KOK",
+          "label": [
+            18,
+            6
+          ]
         },
         {
           "emoji": "⛪",
           "text": "Washington Square, under the church",
-          "walk": "6 min"
+          "walk": "6 min",
+          "at": [
+            37.80085,
+            -122.41012
+          ],
+          "short": "Washington Square",
+          "label": [
+            -18,
+            6
+          ]
         },
         {
           "emoji": "🗼",
           "text": "Up Filbert Street to Coit Tower",
-          "walk": "12 min"
+          "walk": "12 min",
+          "at": [
+            37.80238,
+            -122.40583
+          ],
+          "short": "Coit Tower",
+          "label": [
+            0,
+            -22
+          ],
+          "anchor": "middle"
         },
         {
           "emoji": "🪜",
           "text": "Down the Filbert Steps through the cottage gardens to the bay",
-          "walk": "10 min"
+          "walk": "10 min",
+          "at": [
+            37.80209,
+            -122.40333
+          ],
+          "short": "Filbert Steps | DOWN TO THE BAY",
+          "label": [
+            18,
+            6
+          ]
         }
       ],
       "url": "https://citylights.com/",
@@ -210,7 +499,123 @@
       "imageKind": "context",
       "imageCredit": "en:user:Kkmd · CC BY-SA 3.0",
       "priceLevel": 1,
-      "booking": false
+      "booking": false,
+      "map": {
+        "file": "img/maps/telegraph-hill-steps.svg",
+        "bbox": [
+          37.7915,
+          -122.4215,
+          37.8045,
+          -122.391
+        ],
+        "title": "North Beach and the Filbert Steps",
+        "streets": true,
+        "paths": true,
+        "cartouche": [
+          34,
+          383
+        ],
+        "decor": [
+          {
+            "kind": "place",
+            "text": "NORTH BEACH",
+            "at": [
+              37.799,
+              -122.4125
+            ]
+          },
+          {
+            "kind": "place",
+            "text": "TELEGRAPH HILL",
+            "at": [
+              37.8,
+              -122.4062
+            ]
+          },
+          {
+            "kind": "place",
+            "text": "CHINATOWN",
+            "at": [
+              37.7945,
+              -122.415
+            ]
+          },
+          {
+            "kind": "seaname",
+            "text": "THE BAY",
+            "at": [
+              37.8015,
+              -122.3945
+            ]
+          },
+          {
+            "kind": "books",
+            "at": [
+              37.7968,
+              -122.4085
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "dumplings",
+            "at": [
+              37.7952,
+              -122.4108
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "church",
+            "at": [
+              37.8016,
+              -122.412
+            ],
+            "scale": 1.1
+          },
+          {
+            "kind": "tower",
+            "at": [
+              37.8022,
+              -122.4082
+            ],
+            "scale": 1.2
+          },
+          {
+            "kind": "steps",
+            "at": [
+              37.803,
+              -122.4022
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "parrot",
+            "at": [
+              37.8008,
+              -122.4
+            ],
+            "scale": 1,
+            "caption": "wild parrots",
+            "cy": 36
+          },
+          {
+            "kind": "ship",
+            "at": [
+              37.8028,
+              -122.3935
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "compass",
+            "xy": [
+              60,
+              62
+            ],
+            "scale": 0.9
+          }
+        ]
+      }
     },
     {
       "id": "lands-end-sutro",
@@ -246,22 +651,69 @@
       "stops": [
         {
           "emoji": "🏛️",
-          "text": "Start at the Sutro Baths ruins, below the Lands End lookout"
+          "text": "Start at the Sutro Baths ruins, below the Lands End lookout",
+          "at": [
+            37.78014,
+            -122.5138
+          ],
+          "short": "Sutro Baths | THE RUINS",
+          "label": [
+            -18,
+            -10
+          ],
+          "anchor": "end"
         },
         {
           "emoji": "🌲",
           "text": "East along the Lands End Trail, through the cypress",
-          "walk": "30 min"
+          "walk": "30 min",
+          "at": [
+            37.78413,
+            -122.50929
+          ],
+          "short": "Mile Rock | THROUGH THE CYPRESS",
+          "label": [
+            18,
+            6
+          ]
         },
         {
           "emoji": "🌉",
           "text": "The Golden Gate from the cliff at Eagle’s Point",
-          "walk": "20 min"
+          "walk": "20 min",
+          "at": [
+            37.78673,
+            -122.49481
+          ],
+          "short": "Eagle's Point | THE GOLDEN GATE",
+          "label": [
+            18,
+            6
+          ]
         },
         {
           "emoji": "🌅",
           "text": "Back to the baths for sunset over the Pacific",
-          "walk": "40 min"
+          "walk": "40 min",
+          "at": [
+            37.78014,
+            -122.5138
+          ],
+          "short": "Back for sunset",
+          "label": [
+            18,
+            10
+          ],
+          "nudge": [
+            22,
+            14
+          ],
+          "via": [
+            [
+              37.78413,
+              -122.50929
+            ]
+          ]
         }
       ],
       "url": "https://www.nps.gov/goga/planyourvisit/landsend.htm",
@@ -276,7 +728,487 @@
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons",
       "priceLevel": 0,
-      "booking": false
+      "booking": false,
+      "map": {
+        "file": "img/maps/lands-end-sutro.svg",
+        "bbox": [
+          37.7765,
+          -122.5195,
+          37.7955,
+          -122.4855
+        ],
+        "title": "Lands End to the Sutro Baths",
+        "paths": true,
+        "streets": true,
+        "cartouche": [
+          380,
+          140
+        ],
+        "decor": [
+          {
+            "kind": "seaname",
+            "text": "PACIFIC OCEAN",
+            "at": [
+              37.787,
+              -122.513
+            ]
+          },
+          {
+            "kind": "place",
+            "text": "LINCOLN PARK",
+            "at": [
+              37.7835,
+              -122.4985
+            ]
+          },
+          {
+            "kind": "place",
+            "text": "OUTER RICHMOND",
+            "at": [
+              37.7785,
+              -122.492
+            ]
+          },
+          {
+            "kind": "ruins",
+            "at": [
+              37.779,
+              -122.515
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "sun",
+            "at": [
+              37.7822,
+              -122.5172
+            ],
+            "scale": 1,
+            "caption": "sunset",
+            "cy": 36
+          },
+          {
+            "kind": "cypress",
+            "at": [
+              37.7862,
+              -122.5055
+            ],
+            "scale": 1.2
+          },
+          {
+            "kind": "cypress",
+            "at": [
+              37.7855,
+              -122.503
+            ],
+            "scale": 0.9
+          },
+          {
+            "kind": "lighthouse",
+            "at": [
+              37.79276,
+              -122.51034
+            ],
+            "scale": 1,
+            "caption": "Mile Rock light",
+            "cy": 34
+          },
+          {
+            "kind": "bridge",
+            "xy": [
+              760,
+              70
+            ],
+            "scale": 0.6,
+            "caption": "the Golden Gate →",
+            "cy": 40
+          },
+          {
+            "kind": "waves",
+            "at": [
+              37.79,
+              -122.517
+            ]
+          },
+          {
+            "kind": "waves",
+            "at": [
+              37.792,
+              -122.5
+            ]
+          },
+          {
+            "kind": "waves",
+            "at": [
+              37.7915,
+              -122.4935
+            ]
+          },
+          {
+            "kind": "compass",
+            "xy": [
+              850,
+              520
+            ],
+            "scale": 0.9
+          }
+        ]
+      }
+    },
+    {
+      "id": "sf-sunday-north-shore",
+      "title": "A Sunday on the north shore",
+      "emoji": "☕",
+      "type": "itinerary",
+      "provenance": "personal",
+      "categories": [
+        "walk",
+        "outdoors",
+        "food",
+        "culture"
+      ],
+      "zone": "cow-hollow",
+      "price": 40,
+      "priceNote": "The walk is free; about $40 each for lunch, coffee and a drink to end on",
+      "durationMin": 420,
+      "startTime": "11:00",
+      "why": "A whole Sunday on foot along the bay, about 14,000 steps door to door. A picnic on the Great Meadow at Fort Mason, lunch at the beer hall on the pier, then coffee from Equator carried along Marina Green and onto the sand at Crissy Field, with the Golden Gate getting bigger the whole way. Over the marsh boardwalk, up onto the Tunnel Tops lawns, back down to the Palace of Fine Arts, and a car across town for a drink on a rooftop. In early October it lands on Fleet Week and the Blue Angels fly right over the meadow.",
+      "goodFor": [
+        "walk",
+        "outdoors",
+        "couple",
+        "weekend",
+        "morning",
+        "afternoon"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "couple",
+        "weekend"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "stops": [
+        {
+          "emoji": "🧺",
+          "text": "A picnic on the Great Meadow at Fort Mason, looking out at Alcatraz",
+          "at": [
+            37.80494,
+            -122.43026
+          ],
+          "short": "Picnic | GREAT MEADOW",
+          "label": [
+            16,
+            28
+          ]
+        },
+        {
+          "emoji": "🍺",
+          "text": "Lunch at Radhaus, the beer hall down on the Fort Mason pier",
+          "at": [
+            37.8065,
+            -122.4321
+          ],
+          "short": "Lunch | RADHAUS",
+          "label": [
+            -18,
+            -6
+          ]
+        },
+        {
+          "emoji": "✈️",
+          "text": "Back up the meadow for Fleet Week: the Blue Angels fly low over the bay (early October only; any other Sunday, the view does the job)",
+          "at": [
+            37.80511,
+            -122.42956
+          ],
+          "short": "Fleet Week | THE MEADOW'S EDGE",
+          "label": [
+            18,
+            -8
+          ],
+          "nudge": [
+            14,
+            -14
+          ]
+        },
+        {
+          "emoji": "☕",
+          "text": "Coffee from Equator, to carry rather than sit with",
+          "at": [
+            37.8053,
+            -122.43187
+          ],
+          "short": "Coffee | EQUATOR",
+          "label": [
+            -18,
+            26
+          ]
+        },
+        {
+          "emoji": "🏖️",
+          "text": "West along Marina Green, cup in hand, and onto the sand at Crissy Field's East Beach",
+          "at": [
+            37.8058,
+            -122.4505
+          ],
+          "short": "Crissy Field | EAST BEACH",
+          "label": [
+            -12,
+            -30
+          ]
+        },
+        {
+          "emoji": "🌾",
+          "text": "Over the boardwalk across the Crissy Field marsh",
+          "at": [
+            37.80461,
+            -122.4568
+          ],
+          "short": "The marsh | BOARDWALK",
+          "label": [
+            16,
+            -18
+          ]
+        },
+        {
+          "emoji": "🌉",
+          "text": "Up onto the lawns at Presidio Tunnel Tops, the bridge straight ahead",
+          "at": [
+            37.8029,
+            -122.45629
+          ],
+          "short": "Tunnel Tops",
+          "label": [
+            0,
+            38
+          ],
+          "anchor": "middle"
+        },
+        {
+          "emoji": "🏛️",
+          "text": "Back down to the Palace of Fine Arts and around its lagoon",
+          "at": [
+            37.80292,
+            -122.44839
+          ],
+          "short": "Palace of Fine Arts",
+          "label": [
+            18,
+            6
+          ]
+        },
+        {
+          "emoji": "🍸",
+          "text": "A car across town to KAIYŌ Rooftop in SoMa for a drink as the light goes",
+          "at": [
+            37.77878,
+            -122.39237
+          ],
+          "short": "KAIYŌ Rooftop | BY CAR, SOMA",
+          "by": "car",
+          "label": [
+            -22,
+            -30
+          ],
+          "xy": [
+            812,
+            348
+          ]
+        }
+      ],
+      "map": {
+        "file": "img/maps/sf-sunday-north-shore.svg",
+        "bbox": [
+          37.7985,
+          -122.4615,
+          37.8135,
+          -122.4185
+        ],
+        "title": "A Sunday on the north shore",
+        "subtitle": "5.7 km on foot · about 14,000 steps",
+        "cartouche": [
+          318,
+          26
+        ],
+        "decor": [
+          {
+            "kind": "seaname",
+            "text": "SAN FRANCISCO BAY",
+            "at": [
+              37.8083,
+              -122.443
+            ]
+          },
+          {
+            "kind": "place",
+            "text": "PRESIDIO",
+            "at": [
+              37.7995,
+              -122.452
+            ]
+          },
+          {
+            "kind": "place",
+            "text": "MARINA",
+            "at": [
+              37.8022,
+              -122.4385
+            ]
+          },
+          {
+            "kind": "place",
+            "text": "COW HOLLOW",
+            "at": [
+              37.7998,
+              -122.433
+            ]
+          },
+          {
+            "kind": "bridge",
+            "xy": [
+              112,
+              78
+            ],
+            "scale": 0.62,
+            "caption": "← the Golden Gate, a mile on",
+            "cy": 40
+          },
+          {
+            "kind": "jets",
+            "scale": 0.8,
+            "caption": "Blue Angels",
+            "cx": -24,
+            "cy": 50,
+            "xy": [
+              782,
+              76
+            ]
+          },
+          {
+            "kind": "boat",
+            "scale": 0.8,
+            "xy": [
+              262,
+              72
+            ]
+          },
+          {
+            "kind": "waves",
+            "at": [
+              37.8085,
+              -122.4585
+            ]
+          },
+          {
+            "kind": "waves",
+            "at": [
+              37.8118,
+              -122.449
+            ]
+          },
+          {
+            "kind": "waves",
+            "at": [
+              37.8082,
+              -122.447
+            ]
+          },
+          {
+            "kind": "waves",
+            "at": [
+              37.8095,
+              -122.4365
+            ]
+          },
+          {
+            "kind": "waves",
+            "at": [
+              37.812,
+              -122.4345
+            ]
+          },
+          {
+            "kind": "waves",
+            "at": [
+              37.8085,
+              -122.4515
+            ]
+          },
+          {
+            "kind": "compass",
+            "xy": [
+              850,
+              66
+            ],
+            "scale": 0.9
+          },
+          {
+            "kind": "cups",
+            "at": [
+              37.8066,
+              -122.4392
+            ],
+            "scale": 1,
+            "caption": "coffee in hand",
+            "cy": -30
+          },
+          {
+            "kind": "reeds",
+            "at": [
+              37.8037,
+              -122.4592
+            ],
+            "scale": 0.9
+          },
+          {
+            "kind": "palm",
+            "at": [
+              37.7998,
+              -122.459
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "rotunda",
+            "at": [
+              37.8013,
+              -122.448
+            ],
+            "scale": 1
+          },
+          {
+            "kind": "basket",
+            "at": [
+              37.8042,
+              -122.4238
+            ],
+            "scale": 0.9
+          },
+          {
+            "kind": "stein",
+            "at": [
+              37.8077,
+              -122.4352
+            ],
+            "scale": 0.85
+          }
+        ]
+      },
+      "url": "https://presidio.gov/visit/tunnel-tops",
+      "coords": [
+        37.80494,
+        -122.43026
+      ],
+      "coordsFrom": "osm way/417405358 (Great Meadow)",
+      "lastVerified": "2026-10-12",
+      "priceLevel": 2,
+      "booking": false,
+      "image": "img/thumb/sf-sunday-north-shore/500px-sf-sunday-north-shore.jpg",
+      "imageSubject": "Two Equator coffees held up over the bay at Fort Mason",
+      "imageKind": "subject",
+      "imageCredit": "Our own photograph"
     }
   ]
 }

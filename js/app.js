@@ -734,6 +734,33 @@ const App = (() => {
        i.zone != null ? String(City.zone.tile(i.zone)).replace(/<[^>]*>/g, '') : null,
        City.searchRegion || City.name].filter(Boolean).join(' '))}`;
 
+  /* A walk with stops on the map gets the whole route handed to Google
+     Maps on foot, not a search for its title. Only the walked stops: a
+     leg somebody took by car is theirs to book. */
+  const walkLink = i => {
+    const pts = (i.stops || []).filter(s => Array.isArray(s.at) && !s.by).map(s => s.at.join(','));
+    if (pts.length < 2) return '';
+    const q = new URLSearchParams({ api: '1', origin: pts[0], destination: pts[pts.length - 1], travelmode: 'walking' });
+    if (pts.length > 2) q.set('waypoints', pts.slice(1, -1).slice(0, 9).join('|'));
+    return `https://www.google.com/maps/dir/?${q}`;
+  };
+
+  /* The drawn map scripts/walk-maps.mjs made for a walk. Its height comes
+     from the same bbox arithmetic the drawing used, so the slot is the
+     right shape before the picture arrives. Tapping opens it full size,
+     which is how a phone gets to read the labels. */
+  function walkMap(i) {
+    const m = i.map;
+    if (!m || !m.file || !m.bbox) return '';
+    const [s, w, n, e] = m.bbox;
+    const k = Math.cos(((s + n) / 2) * Math.PI / 180);
+    // a sheet turned with north to the right swaps which span is the width
+    const h = Math.round(m.north === 'right' ? (e - w) * k / (n - s) * 900 : (n - s) / ((e - w) * k) * 900);
+    return `<a class="route-map" href="${esc(m.file)}" target="_blank" rel="noopener">
+      <img src="${esc(m.file)}" width="900" height="${h}" alt="${esc(`Map of the walk: ${(i.stops || []).map(x => (x.short || x.text).split(' | ')[0]).join(', ')}`)}" loading="lazy" decoding="async">
+    </a>`;
+  }
+
   /* Commons renders only a fixed set of thumbnail widths — anything else is a
      400. Keep in sync with THUMB_WIDTHS in scripts/images.mjs. */
   const THUMB_WIDTHS = [250, 500, 960, 1280];
@@ -888,13 +915,15 @@ const App = (() => {
       </div>
       ${prog ? `<div class="prog">${prog}</div>` : ''}
       ${stops ? `<ul class="stops">${stops}</ul>` : ''}
+      ${walkMap(item)}
       ${near ? `<div class="near">${near}</div>` : ''}
       ${pairings(item)}
       ${item.spectator ? `<p class="fx-spec"><b>Where to stand.</b> ${esc(item.spectator)}</p>` : ''}
       <div class="links">
         ${bookLink(item)}
         ${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">Official site</a>` : ''}
-        <a href="${mapsLink(item)}" target="_blank" rel="noopener">Directions</a>
+        ${walkLink(item) ? `<a href="${walkLink(item)}" target="_blank" rel="noopener">Walk it in Google Maps</a>`
+                         : `<a href="${mapsLink(item)}" target="_blank" rel="noopener">Directions</a>`}
       </div>
       <div class="rate" role="group" aria-label="Rate ${esc(item.title)}">
         ${RATINGS.map(([v, e, t]) =>
@@ -1054,7 +1083,7 @@ const App = (() => {
       item.priceNote || (item.price ? City.money.format(item.price) : 'Free')
     ].filter(Boolean).join(' · ');
 
-    return `<div class="route${shot ? ' has-shot' : ''}" data-id="${esc(item.id)}">
+    return `<div class="route${shot ? ' has-shot' : ''}${item.map ? ' has-map' : ''}" data-id="${esc(item.id)}">
       ${shot}
       <div class="route-head">
         <h3>${esc(item.title)}</h3>
@@ -1062,7 +1091,18 @@ const App = (() => {
         <p class="route-why">${esc(item.why || '')}</p>
       </div>
       ${steps ? `<ol class="steps">${steps}</ol>` : ''}
+      ${item.map ? `<div class="route-foot">${walkMap(item)}${walkLink(item)
+        ? `<a class="route-go" href="${walkLink(item)}" target="_blank" rel="noopener">Walk it in Google Maps →</a>` : ''}</div>` : ''}
     </div>`;
+  }
+
+  /* A walk with a drawn map needs the full width to be read, so it gets a
+     row of its own ahead of the rest, and the rest keep their own
+     odd-one-out rule rather than having it thrown by the wide one. */
+  function routeBlock(items) {
+    const mapped = items.filter(i => i.map), rest = items.filter(i => !i.map);
+    return (mapped.length ? `<div class="routes routes-mapped">${mapped.map(routeCard).join('')}</div>` : '')
+      + (rest.length ? `<div class="routes">${rest.map(routeCard).join('')}</div>` : '');
   }
 
   /* A trip is a destination until it says what to do there. `stops` turns
@@ -1572,7 +1612,7 @@ const App = (() => {
       + farBlock()
       + (routes.length
           ? stripHead('Two nights out', 'Follow the order')
-            + `<div class="routes">${routes.map(routeCard).join('')}</div>`
+            + routeBlock(routes)
           : '');
   }
   /* ---------- pairings ----------
@@ -1964,7 +2004,7 @@ const App = (() => {
       + foundStrip(local.found, Loc.displayName(Loc.active()))
       + (allRuns.length
           ? stripHead(`Run ${City.name}`, 'Nearest first, and getting longer')
-            + (runs.length ? `<div class="routes">${runs.map(routeCard).join('')}</div>` : '')
+            + (runs.length ? routeBlock(runs) : '')
             + (plainRuns.length ? rows(plainRuns, null, true) : '')
             + foldRows('runs', runsLeft, n => n === 1 ? 'run' : 'runs')
           : '')
@@ -3745,7 +3785,7 @@ const App = (() => {
       + dossier
       + (walk.items.length
           ? stripHead('Walks and routes', radiusNote(walk.radius, walk.items, walk.widened))
-            + `<div class="routes">${walk.items.map(routeCard).join('')}</div>`
+            + routeBlock(walk.items)
           : '')
       + (gems.items.length
           ? stripHead(City.hiddenHeading || `Hidden ${City.name}`, radiusNote(gems.radius, gems.items, gems.widened))
