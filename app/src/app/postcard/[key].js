@@ -15,7 +15,7 @@ import * as Sharing from 'expo-sharing';
 import { useApp, cityStats } from '../../lib/state';
 import { useTheme, SPACE } from '../../lib/theme';
 import { V } from '../../lib/voice';
-import { Pigeon, Primary, Quiet, T } from '../../components/ui';
+import { Close, Pigeon, Primary, Quiet, T } from '../../components/ui';
 import { Card } from '../../components/postcard';
 
 export default function Postcard() {
@@ -33,13 +33,19 @@ export default function Postcard() {
   const share = async () => {
     try {
       const uri = await captureRef(ref, { format: 'png', quality: 1 });
-      if (await Sharing.isAvailableAsync()) await Sharing.shareAsync(uri, { mimeType: 'image/png', dialogTitle: o.title });
+      if (await Sharing.isAvailableAsync()) {
+        await Sharing.shareAsync(uri, { mimeType: 'image/png', dialogTitle: o.title });
+        /* The share sheet doesn't say whether it went anywhere; opening
+           it with a finished card is what's counted. */
+        app.count('postcardsShared');
+      }
     } catch {}
   };
 
   return (
     <ScrollView style={{ flex: 1, backgroundColor: c.bg }}
       contentContainerStyle={{ padding: SPACE, paddingTop: inset.top + SPACE, paddingBottom: inset.bottom + SPACE * 2, alignItems: 'center' }}>
+      <Close style={{ alignSelf: 'flex-start', marginBottom: SPACE }} />
       {fresh ? (
         <View style={{ alignItems: 'center', marginBottom: SPACE }}>
           <Pigeon pose="celebrate" size={130} />

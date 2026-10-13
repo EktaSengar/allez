@@ -3,7 +3,9 @@
    screen that needs a new kind of box probably has two jobs.
    --------------------------------------------------------- */
 
-import { Image, Pressable, Text, View, StyleSheet } from 'react-native';
+import { useEffect, useState } from 'react';
+import { Animated, Image, Pressable, Text, View, StyleSheet } from 'react-native';
+import { router } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { LinearGradient } from 'expo-linear-gradient';
 import { FONT, RADIUS, SIZE, SPACE, useTheme } from '../lib/theme';
@@ -44,8 +46,8 @@ export function Primary({ label, onPress, style, disabled }) {
 export function Quiet({ label, onPress, style, color }) {
   const c = useTheme();
   return (
-    <Pressable onPress={onPress} hitSlop={8} style={({ pressed }) => [s.quiet, { borderColor: c.line, opacity: pressed ? 0.6 : 1 }, style]}>
-      <T weight="bold" color={color || c.ink}>{label}</T>
+    <Pressable onPress={onPress} hitSlop={8} style={({ pressed }) => [s.quiet, { borderColor: c.edge, opacity: pressed ? 0.6 : 1 }, style]}>
+      <T weight="bold" color={color || c.ink} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.8}>{label}</T>
     </Pressable>
   );
 }
@@ -54,7 +56,7 @@ export function Chip({ label, on, onPress }) {
   const c = useTheme();
   return (
     <Pressable onPress={() => { Haptics.selectionAsync().catch(() => {}); onPress(); }}
-      style={[s.chip, { backgroundColor: on ? c.ink : 'transparent', borderColor: on ? c.ink : c.line }]}>
+      style={[s.chip, { backgroundColor: on ? c.ink : 'transparent', borderColor: on ? c.ink : c.edge }]}>
       <T size="small" weight="bold" color={on ? c.bg : c.ink}>{label}</T>
     </Pressable>
   );
@@ -104,12 +106,52 @@ export function Photo({ item, style, children }) {
   );
 }
 
-/* The text over a photo sits on a soft fall to dark, not a box. */
+/* The text over a photo sits on a soft fall to dark, not a box. Five
+   stops rather than three: with three, a phone screen showed the line
+   where the dark began. Callers give it a tall top padding so the fall
+   starts well above the title. */
 export function Fade({ children, style }) {
   return (
-    <LinearGradient colors={['rgba(20,18,16,0)', 'rgba(20,18,16,0.55)', 'rgba(20,18,16,0.88)']} locations={[0, 0.3, 1]} style={style}>
+    <LinearGradient colors={['rgba(20,18,16,0)', 'rgba(20,18,16,0.18)', 'rgba(20,18,16,0.48)', 'rgba(20,18,16,0.76)', 'rgba(20,18,16,0.9)']}
+      locations={[0, 0.2, 0.45, 0.72, 1]} style={style}>
       {children}
     </LinearGradient>
+  );
+}
+
+/* A way out you can see. Swipe-down and Back work too, but nobody
+   should have to know that. `onPhoto` for when it sits over a picture. */
+export function Close({ onPhoto, style }) {
+  const c = useTheme();
+  return (
+    <Pressable onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))} hitSlop={12}
+      accessibilityRole="button" accessibilityLabel="Close"
+      style={[s.close, { backgroundColor: onPhoto ? 'rgba(20,18,16,0.55)' : c.sunk }, style]}>
+      <T weight="heavy" color={onPhoto ? '#fff' : c.ink}>✕</T>
+    </Pressable>
+  );
+}
+
+/* A word that something was heard, then gone. Give it a fresh `key` to
+   say it again. */
+export function Toast({ text, onDone }) {
+  const c = useTheme();
+  const [a] = useState(() => new Animated.Value(0));
+  useEffect(() => {
+    const run = Animated.sequence([
+      Animated.timing(a, { toValue: 1, duration: 180, useNativeDriver: true }),
+      Animated.delay(1600),
+      Animated.timing(a, { toValue: 0, duration: 220, useNativeDriver: true })
+    ]);
+    run.start(({ finished }) => finished && onDone && onDone());
+    return () => run.stop();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps -- once per key
+  const rise = a.interpolate({ inputRange: [0, 1], outputRange: [8, 0] });
+  return (
+    <Animated.View pointerEvents="none" accessibilityLiveRegion="polite"
+      style={[s.toast, { backgroundColor: c.ink, opacity: a, transform: [{ translateY: rise }] }]}>
+      <T size="small" weight="bold" color={c.bg}>{text}</T>
+    </Animated.View>
   );
 }
 
@@ -119,7 +161,9 @@ const s = StyleSheet.create({
   primary: { height: 54, borderRadius: 27, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 28 },
   quiet: { height: 48, borderRadius: 24, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 20, borderWidth: 1.5 },
   chip: { height: 38, borderRadius: 19, paddingHorizontal: 16, alignItems: 'center', justifyContent: 'center', borderWidth: 1.5, marginRight: 8, marginBottom: 8 },
-  moment: { alignItems: 'center', justifyContent: 'center', paddingHorizontal: SPACE * 2 }
+  moment: { alignItems: 'center', justifyContent: 'center', paddingHorizontal: SPACE * 2 },
+  close: { width: 36, height: 36, borderRadius: 18, alignItems: 'center', justifyContent: 'center' },
+  toast: { position: 'absolute', alignSelf: 'center', top: SPACE, height: 40, borderRadius: 20, paddingHorizontal: 18, alignItems: 'center', justifyContent: 'center' }
 });
 
 export const R = RADIUS;

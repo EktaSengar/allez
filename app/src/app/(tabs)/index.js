@@ -6,7 +6,7 @@
    answer. The last card ends it: "That's today." (APP.md, "Today".)
    --------------------------------------------------------- */
 
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, View } from 'react-native';
 import { router, useFocusEffect } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -16,7 +16,7 @@ import { useApp, todayIso, untilIn } from '../../lib/state';
 import { todayStack, zoneName } from '../../lib/answers';
 import { useTheme, SPACE, RADIUS } from '../../lib/theme';
 import { V } from '../../lib/voice';
-import { Chip, Fade, facts, Photo, Pigeon, PigeonMoment, Primary, Quiet, T } from '../../components/ui';
+import { Chip, Fade, facts, Photo, Pigeon, PigeonMoment, Primary, Quiet, T, Toast } from '../../components/ui';
 
 export default function Today() {
   const app = useApp();
@@ -24,6 +24,7 @@ export default function Today() {
   const inset = useSafeAreaInsets();
   const [h, setH] = useState(0);
   const [now, setNow] = useState(() => new Date());
+  const [note, setNote] = useState(null);
 
   useFocusEffect(useCallback(() => { setNow(new Date()); }, []));
 
@@ -31,6 +32,18 @@ export default function Today() {
     if (!app.ready) return null;
     return todayStack(app.world, { profile: app.saved.profile, outings: app.saved.outings, now });
   }, [app.ready, app.world, app.saved, now]);
+
+  /* Reaching the last card is finishing Today (counted once a day). */
+  const onSeen = useRef(null);
+  useEffect(() => {
+    onSeen.current = ({ viewableItems }) => {
+      if (cards && viewableItems.some(v => v.index === cards.length - 1)) app.count('stackFinished', { daily: true });
+    };
+  });
+  const [seen] = useState(() => ({
+    config: { itemVisiblePercentThreshold: 60 },
+    handler: info => onSeen.current && onSeen.current(info)
+  }));
 
   if (!cards) {
     return <View style={[st.fill, { backgroundColor: c.bg }]}><PigeonMoment pose="walk" line={V.pigeon.looking} /></View>;
@@ -54,23 +67,26 @@ export default function Today() {
             pagingEnabled
             showsVerticalScrollIndicator={false}
             decelerationRate="fast"
+            viewabilityConfig={seen.config}
+            onViewableItemsChanged={seen.handler}
             getItemLayout={(_, i) => ({ length: h, offset: h * i, index: i })}
             renderItem={({ item: card }) => (
               <View style={{ height: h, paddingHorizontal: SPACE, paddingBottom: SPACE }}>
-                <Card card={card} app={app} />
+                <Card card={card} app={app} onLess={() => setNote({ text: V.today.fewer, n: Date.now() })} />
               </View>
             )}
           />
         )}
+        {note ? <Toast key={note.n} text={note.text} onDone={() => setNote(null)} /> : null}
       </View>
     </View>
   );
 }
 
-function Card({ card, app }) {
+function Card({ card, app, onLess }) {
   const c = useTheme();
   switch (card.kind) {
-    case 'pick': return <PickCard card={card} app={app} />;
+    case 'pick': return <PickCard card={card} app={app} onLess={onLess} />;
     case 'how': return <HowCard outing={card.outing} />;
     case 'askHorizon': return <AskHorizon app={app} />;
     case 'askHours': return <AskHours app={app} />;
@@ -93,7 +109,7 @@ function Card({ card, app }) {
   }
 }
 
-function PickCard({ card, app }) {
+function PickCard({ card, app, onLess }) {
   const c = useTheme();
   const w = app.world;
   const item = card.item;
@@ -102,7 +118,7 @@ function PickCard({ card, app }) {
   const zone = zoneName(w, item);
   return (
     <Pressable style={{ flex: 1 }} onPress={() => router.push(`/go/${encodeURIComponent(item.id)}`)}
-      onLongPress={() => { Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {}); app.less(item); }}
+      onLongPress={() => { Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {}); app.less(item); onLess(); }}
       delayLongPress={500}>
       <Photo item={item} style={[st.panel, { justifyContent: 'flex-end' }]}>
         <Fade style={st.scrim}>
@@ -185,7 +201,7 @@ const st = StyleSheet.create({
   fill: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   head: { flexDirection: 'row', alignItems: 'baseline', paddingHorizontal: SPACE, paddingTop: 8, paddingBottom: 12 },
   panel: { flex: 1, borderRadius: RADIUS, overflow: 'hidden' },
-  scrim: { padding: SPACE * 1.25, paddingTop: SPACE * 5 },
+  scrim: { padding: SPACE * 1.25, paddingTop: SPACE * 9 },
   label: { textTransform: 'uppercase', letterSpacing: 1, marginBottom: 4 },
   row: { flexDirection: 'row', alignItems: 'center', marginTop: SPACE }
 });

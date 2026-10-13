@@ -50,7 +50,13 @@ export function untilIn(days) {
 
 export const todayIso = () => new Date().toISOString().slice(0, 10);
 
-const blank = () => ({ profile: { company: [], opens: 0 }, outings: [], decks: {} });
+/* `counts` is what the test report (APP-TASKS 2.3) reads and nothing
+   else: plain tallies, kept on the phone, sent only when the person taps
+   "Send my test notes". Outings, verdicts and postcards are counted from
+   the outings themselves. */
+const blank = () => ({ profile: { company: [], opens: 0 }, outings: [], decks: {}, counts: {} });
+
+const localDay = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
 export function AppProvider({ children }) {
   const [boot, setBoot] = useState(null);         // { storage, data, offline }
@@ -68,6 +74,9 @@ export function AppProvider({ children }) {
       let s = blank();
       try { const raw = await AsyncStorage.getItem(KEY); if (raw) s = Object.assign(blank(), JSON.parse(raw)); } catch {}
       s.profile.opens = (s.profile.opens || 0) + 1;
+      s.counts = s.counts || {};
+      const day = localDay();
+      s.counts.opensByDay = Object.assign({}, s.counts.opensByDay, { [day]: ((s.counts.opensByDay || {})[day] || 0) + 1 });
       setSaved(s);
       setBoot({ storage, data, fetchedAt: c ? c.fetchedAt : null, offline: false });
       AsyncStorage.setItem(KEY, JSON.stringify(s)).catch(() => {});
@@ -100,6 +109,7 @@ export function AppProvider({ children }) {
   /* Every change is a copy, saved behind. */
   const update = useCallback(fn => {
     setSaved(prev => {
+      if (!prev) return prev;   // before launch has read what's saved: never write over it
       const next = fn(JSON.parse(JSON.stringify(prev)));
       AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(() => {});
       return next;
@@ -193,12 +203,37 @@ export function AppProvider({ children }) {
     postcard(key, { line, photo }) {
       update(s => { const x = s.outings.find(y => y.key === key); if (x) { x.line = line || null; x.photo = photo || null; x.postcard = true; } return s; });
     },
+    /* One more of something the test counts. With `daily`, at most once a
+       day: finishing Today's stack twice in one morning is one finish. */
+    count(name, { daily } = {}) {
+      update(s => {
+        const c = s.counts = s.counts || {};
+        if (daily) {
+          const day = localDay();
+          c.last = c.last || {};
+          if (c.last[name] === day) return s;
+          c.last[name] = day;
+        }
+        c[name] = (c[name] || 0) + 1;
+        return s;
+      });
+    },
     setCompany(company) {
       update(s => { s.profile.company = company; return s; });
     },
     saveDeck(id, deck) {
       update(s => { s.decks = { [id]: deck }; return s; });
     },
+    /* Development only (APP-TASKS 1.2): every open outing due now, so
+       "How was it?" can be tried without waiting two hours. Absent from
+       release builds, where __DEV__ is false and this is never defined.
+       Due from when it started rather than from this instant: Today reads
+       the clock when it gains focus, which is always after Go began. */
+    ...(__DEV__ ? {
+      dueNow() {
+        update(s => { s.outings.forEach(o => { if (!o.verdict) o.dueAt = o.startedAt; }); return s; });
+      }
+    } : {}),
     async reset() {
       await Notify.cancelAll();
       boot.storage.clear();

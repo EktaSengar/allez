@@ -33,20 +33,24 @@ Nothing else matters until the app runs on a phone in someone's hand.
 - **Done when:** every screen opens on the phone with no red error screen, and
   a list of what looked or felt wrong is written down (feeds 1.4).
 
-### 1.2 A test switch for "How was it?" · C
+### 1.2 A test switch for "How was it?" · C · *done, 7 October*
 - How was it? normally waits 2 hours, which makes testing slow. Add a hidden
   developer-only option: a long press on "My city" makes every open outing due
   now.
 - **Done when:** the How was it? card appears at the top of Today straight
   after a long press. The option doesn't exist in release builds.
 
-### 1.3 Fix: hot reload breaks the engine import · C
+### 1.3 Fix: hot reload breaks the engine import · C · *done, 7 October*
 - After a live reload in development, `makeWorld` can fail with "boot is not a
   function" (seen in the web preview). A fresh launch works.
 - **Done when:** editing a screen file during `expo start` no longer breaks
   the app.
+- *Cause:* each `city.js` ends by handing `City` to `module.exports` for
+  Node. Inside the generated engine, that replaced `boot` the first time a
+  pack ran, so the next import got a City object. `app-engine.mjs` now gives
+  each pack a `module` of its own.
 
-### 1.4 First-phone fixes · C
+### 1.4 First-phone fixes · C · *the known four done, 7 October; the rest wait on 1.1*
 - Fix whatever 1.1 turns up. Already known:
   - The text over a photo needs a softer, taller fade. Check it on a real
     screen.
@@ -61,12 +65,18 @@ Nothing else matters until the app runs on a phone in someone's hand.
 - Merge `match/` so `allez.city/match/` is live. Then send one real deck to
   one real person and get the reply back.
 - **Done when:** one weekend has been planned for two through a real link.
+- *7 October:* `allez.city/match/` is live. What's left is the real deck.
 
-### 1.6 Chinatown Night Market wrong suggestion · C
+### 1.6 Chinatown Night Market wrong suggestion · C · *done, 7 October*
 - Already flagged as a separate task: records whose dates exist only as a
   sentence are planned on the wrong days. Fix the record and add a CI check.
 - **Done when:** the record isn't planned after 9 October, and CI fails on
   any similar record.
+- *How:* records can now carry `dates`, a list of the days they happen,
+  which `Rank.isLive` honours. The check in `check-packs.mjs` found three
+  more with the same fault (Fort Mason Night Market, the Pageturners book
+  club, Repair Café Palo Alto), now fixed too. Each list runs out, and
+  someone has to add next season's dates.
 
 ---
 
@@ -75,13 +85,18 @@ Nothing else matters until the app runs on a phone in someone's hand.
 Fifteen people: five locals, five new arrivals, five workationers (APP.md,
 *The test*).
 
-### 2.1 Android test build · C + F
+### 2.1 Android test build · C + F · *C's half done, 7 October; waiting on the EAS account*
 - Create an Expo (EAS) account (F) and set up the build profiles (C).
   Produce an APK for internal distribution that installs from a link, with no
   Play account.
 - Turn on the `allez://` link scheme so match replies open the app directly.
 - **Done when:** a tester with an Android phone installs it from a link and
   opens a match reply with one tap.
+- *7 October:* `app/eas.json` has a `preview` profile (an APK, internal
+  distribution) and `production`. The `allez://` scheme was already set.
+  The splash screen moved to the `expo-splash-screen` plugin, because SDK 57
+  no longer reads the top-level `splash`. expo-doctor passes. Next: F makes
+  the account, then `npx eas-cli@latest build -p android --profile preview`.
 
 ### 2.2 iPhone testers · F
 - Decision, not a build task: either enrol in the Apple Developer Program
@@ -90,7 +105,7 @@ Fifteen people: five locals, five new arrivals, five workationers (APP.md,
   Expo Go is the default.
 - **Done when:** decided and written in LAUNCH-SETUP.md.
 
-### 2.3 A one-tap test report · C
+### 2.3 A one-tap test report · C · *built, 7 October; waiting on F's WhatsApp test*
 - At the end of the test, each person sends us what the app counted on their
   phone. Nothing leaves the phone without that tap.
 - A "Send my test notes" row at the bottom of What Allez knows about you
@@ -104,11 +119,15 @@ Fifteen people: five locals, five new arrivals, five workationers (APP.md,
 - It never includes places' names unless the person chooses to.
 - **Done when:** F receives one by WhatsApp from their own phone.
 
-### 2.4 Count what the test needs · C
+### 2.4 Count what the test needs · C · *done, 7 October*
 - Record locally whatever 2.3 reports but nothing counts yet: opens per day,
   Today stack finished (reached the last card), weekend opened, swap tapped,
   deck sent, postcard shared.
 - **Done when:** every number in 2.3 is real, not zero.
+- *How:* tallies live in `counts` in the app's saved state, and
+  `src/lib/report.js` writes the notes. Finishing Today counts once a day.
+  A shared postcard is counted when the share sheet opens, because the
+  sheet doesn't say whether anything was sent.
 
 ### 2.5 Notification check on Android · C
 - Confirm that the Thursday notification and How was it? actually arrive

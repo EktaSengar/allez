@@ -46,13 +46,20 @@
           "cameraPermission": false,
           "microphonePermission": false
         }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "backgroundColor": "#FBF8F3",
+          "imageWidth": 220,
+          "dark": {
+            "image": "./assets/splash-icon-dark.png",
+            "backgroundColor": "#191715"
+          }
+        }
       ]
     ],
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#FBF8F3"
-    },
     "experiments": {
       "typedRoutes": false
     }

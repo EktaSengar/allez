@@ -19,6 +19,7 @@ export default function Match() {
 
   useEffect(() => {
     if (!deck || !r || !/^[01]+$/.test(r)) return;
+    if (!deck.theirs) app.count('decksMatched');
     app.saveDeck(deck.id, Object.assign({}, deck, { theirs: r, result: matches(deck, r) }));
     router.replace(`/weekend?match=${deck.id}`);
   }, [deck, r]); // eslint-disable-line react-hooks/exhaustive-deps

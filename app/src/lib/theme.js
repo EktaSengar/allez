@@ -6,6 +6,9 @@
    only accent, on one action per screen. The beanie orange (`cap`) is
    for the logo and small moments of the pigeon, never a button.
    One rounded typeface in three sizes and two weights.
+
+   `line` divides; `edge` outlines something you can press, and is
+   darker, because a quiet button nobody can find is not quiet but gone.
    --------------------------------------------------------- */
 
 import { useColorScheme } from 'react-native';
@@ -18,6 +21,7 @@ export const PALETTE = {
     ink: '#1F1D1A',
     muted: '#8A8580',
     line: '#E8E2D8',
+    edge: '#D3C9BA',
     accent: '#4E6A8E',
     cap: '#E67E22',
     onAccent: '#FFFFFF',
@@ -30,6 +34,7 @@ export const PALETTE = {
     ink: '#F4EFE8',
     muted: '#A59E95',
     line: '#36322D',
+    edge: '#625A50',
     accent: '#9FB2CC',
     cap: '#E67E22',
     onAccent: '#191715',

@@ -30,6 +30,10 @@ const Rank = (() => {
   function isLive(item, dateStr) {
     if (item.start && dateStr < item.start) return false;
     if (item.end && dateStr > item.end) return false;
+    /* Something on the second Friday of the month is not on every Friday,
+       and no `days` can say so. Such a record lists its next dates, with
+       `start` and `end` around them so it ends like any dated record. */
+    if (Array.isArray(item.dates) && !item.dates.includes(dateStr)) return false;
     return true;
   }
 

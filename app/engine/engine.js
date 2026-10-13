@@ -2,6 +2,7 @@
 /* eslint-disable */
 const PACKS = {
   "bay-area": function () {
+const module = undefined;
 /* ---------------------------------------------------------
    cities/bay-area/city.js — what is true of the Bay Area.
 
@@ -608,6 +609,7 @@ if (typeof module !== 'undefined' && module.exports) module.exports = City;
 
 ; return City; },
   "bengaluru": function () {
+const module = undefined;
 /* ---------------------------------------------------------
    cities/bengaluru/city.js — what is true of Bengaluru.
 
@@ -1107,6 +1109,7 @@ if (typeof module !== 'undefined' && module.exports) module.exports = City;
 
 ; return City; },
   "delhi": function () {
+const module = undefined;
 /* ---------------------------------------------------------
    cities/delhi/city.js — what is true of Delhi.
 
@@ -1960,6 +1963,7 @@ if (typeof module !== 'undefined' && module.exports) module.exports = City;
 
 ; return City; },
   "new-york": function () {
+const module = undefined;
 /* ---------------------------------------------------------
    new-york/city.js — what is true of New York.
 
@@ -2887,6 +2891,7 @@ if (typeof module !== 'undefined' && module.exports) module.exports = City;
 
 ; return City; },
   "paris": function () {
+const module = undefined;
 /* ---------------------------------------------------------
    cities/paris/city.js — what is true of Paris and of nowhere else.
 
@@ -5543,6 +5548,10 @@ const Rank = (() => {
   function isLive(item, dateStr) {
     if (item.start && dateStr < item.start) return false;
     if (item.end && dateStr > item.end) return false;
+    /* Something on the second Friday of the month is not on every Friday,
+       and no `days` can say so. Such a record lists its next dates, with
+       `start` and `end` around them so it ends like any dated record. */
+    if (Array.isArray(item.dates) && !item.dates.includes(dateStr)) return false;
     return true;
   }
 

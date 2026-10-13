@@ -35,7 +35,8 @@ export const V = {
     weekendSub: 'Planned, in order, and open when you get there.',
     weekendGo: 'Have a look',
     tomorrow: t => `First thing tomorrow: ${t}`,
-    tip: 'Worth knowing'
+    tip: 'Worth knowing',
+    fewer: 'Got it, fewer like this'
   },
 
   ask: {
@@ -146,7 +147,13 @@ export const V = {
     novelty: ['Mostly what I know', 'A bit of both', 'Mostly new things'],
     noveltyTitle: 'Known and new',
     reset: 'Start again',
-    resetConfirm: 'Forget everything?'
+    resetConfirm: 'Forget everything?',
+    notes: 'Send my test notes',
+    notesSub: 'What the app counted on this phone, as text you can read before it goes.',
+    notesNames: 'Include the places’ names?',
+    notesNamesSub: 'Without them, it’s only numbers.',
+    notesWithout: 'Numbers only',
+    notesWith: 'Include names'
   },
 
   notify: {
