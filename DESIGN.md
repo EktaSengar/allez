@@ -73,12 +73,12 @@ signature is about 80% of the mark's height.
 ### The logo and the mascot
 
 The mark is the pigeon reduced to a silhouette. The 3D beanie pigeon in
-`allez-mascot/` is the mascot, and the two have different jobs:
+`allez-mascot/` is the mascot, **Coo**, and the two have different jobs:
 
 - **The mark** goes in the header, the app icon, the favicon, the splash
   screen, and anything printed.
 - **The mascot** is punctuation inside the product: first open, *Go*, the
-  end of Today, errors, celebrations. See *The pigeon* in APP.md. It never
+  end of Today, errors, celebrations. See *The pigeon: Coo* in APP.md. It never
   sits on a content card, and it never replaces the mark.
 
 ---
@@ -199,3 +199,10 @@ All 13 October 2026.
 `design/tokens.json` is the source of truth for these values. Generate
 `app/src/lib/theme.js` and the `:root` block in `css/style.css` from it,
 instead of keeping them in step by hand.
+
+14. **13 October 2026 — the mascot is called Coo.** Named after the sound
+    a pigeon makes: warm, three letters, and it works in every city.
+    The French touch stays in occasional lines, not the name. Coo is
+    curious, warm, observant and a little mischievous, and speaks only in
+    its own moments. It never vouches for a place or sends notifications.
+    Other names considered: Bubbly, Bulle, Cheri, Coco, Gigi, Lou.
