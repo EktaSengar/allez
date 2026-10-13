@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13",
+  "generated": "2026-10-11",
   "note": "Hand-written dated events, researched and not yet attended. Sport fixtures here fill the Watch half of Sport; each is checked against the team's or organiser's own schedule on the date given.",
   "items": [
     {
@@ -53,6 +53,46 @@
       "lastVerified": "2026-10-01",
       "quality": 4,
       "uniqueness": 4,
+      "id": "nyff-2026",
+      "title": "New York Film Festival",
+      "emoji": "🎬",
+      "categories": [
+        "film",
+        "festival"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "coords": [
+        40.7725,
+        -73.9835
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Lincoln Center and venues across the city",
+      "start": "2026-09-25",
+      "end": "2026-10-12",
+      "priceNote": "Tickets per screening",
+      "priceLevel": 2,
+      "why": "The 64th edition: two and a half weeks of premieres, many with the director on stage afterwards. Main-slate tickets go fast, but standby lines and the Currents strand are where the room still is.",
+      "source": "Film at Lincoln Center",
+      "url": "https://www.filmlinc.org/nyff/nyff64-lineup/",
+      "booking": "https://www.filmlinc.org/nyff/nyff64-lineup/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Lincoln_Center_Overview_%2848047495362%29.jpg/1280px-Lincoln_Center_Overview_%2848047495362%29.jpg",
+      "imageSubject": "Lincoln Center",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "18:00",
+      "durationMin": 150
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
       "id": "harry-styles-msg-2026",
       "title": "Harry Styles at the Garden",
       "emoji": "🎤",
@@ -88,6 +128,47 @@
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons",
       "durationMin": 180
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "ny-comic-con-2026",
+      "title": "New York Comic Con",
+      "emoji": "🦸",
+      "categories": [
+        "festival",
+        "culture"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "weekend",
+        "friends",
+        "afternoon"
+      ],
+      "coords": [
+        40.7577,
+        -74.0022
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Javits Center, Hudson Yards",
+      "start": "2026-10-08",
+      "end": "2026-10-11",
+      "priceNote": "Thursday and Sunday tickets left",
+      "priceLevel": 2,
+      "why": "The twentieth edition, with a Coney Island theme. Friday and Saturday are sold out; Thursday afternoon is the quiet way in, and the cosplay alone is worth the trip.",
+      "source": "New York Comic Con",
+      "url": "https://www.newyorkcomiccon.com/",
+      "booking": "https://www.newyorkcomiccon.com/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Cosplay_at_NYCC_%2860421%29.jpg/1280px-Cosplay_at_NYCC_%2860421%29.jpg",
+      "imageSubject": "New York Comic Con",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "10:00",
+      "durationMin": 360
     },
     {
       "type": "event",
