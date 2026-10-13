@@ -4,14 +4,15 @@
    anywhere else. (APP.md, "The agent they define".)
    --------------------------------------------------------- */
 
-import { Alert, Pressable, ScrollView, View } from 'react-native';
+import { Alert, Share, ScrollView, View } from 'react-native';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useApp, todayIso, untilIn } from '../lib/state';
+import { testNotes } from '../lib/report';
 import { useTheme, SPACE } from '../lib/theme';
 import { V } from '../lib/voice';
-import { Chip, Pigeon, Quiet, T } from '../components/ui';
+import { Chip, Close, Pigeon, Quiet, T } from '../components/ui';
 
 function Section({ title, children }) {
   return (
@@ -38,7 +39,7 @@ export default function Me() {
   return (
     <ScrollView style={{ flex: 1, backgroundColor: c.bg }}
       contentContainerStyle={{ padding: SPACE, paddingTop: inset.top + SPACE, paddingBottom: inset.bottom + SPACE * 2 }}>
-      <Pressable onPress={() => router.back()} hitSlop={12}><T muted weight="bold">← {V.city.tab}</T></Pressable>
+      <Close />
       <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: SPACE }}>
         <View style={{ flex: 1 }}>
           <T size="title" weight="heavy">{V.me.title}</T>
@@ -72,7 +73,18 @@ export default function Me() {
 
       <T muted style={{ marginTop: SPACE * 1.5 }}>{V.me.loved(loved)}{wants ? ` ${wants} saved for later.` : ''}</T>
 
-      <Quiet label={V.me.reset} style={{ marginTop: SPACE * 2 }}
+      <View style={{ marginTop: SPACE * 2 }}>
+        <Quiet label={V.me.notes} onPress={() => {
+          const send = names => Share.share({ message: testNotes(app.saved, { names }) }).catch(() => {});
+          Alert.alert(V.me.notesNames, V.me.notesNamesSub, [
+            { text: V.me.notesWithout, onPress: () => send(false) },
+            { text: V.me.notesWith, onPress: () => send(true) }
+          ]);
+        }} />
+        <T size="small" muted style={{ marginTop: 6, textAlign: 'center' }}>{V.me.notesSub}</T>
+      </View>
+
+      <Quiet label={V.me.reset} style={{ marginTop: SPACE }}
         onPress={() => Alert.alert(V.me.resetConfirm, '', [{ text: 'Cancel', style: 'cancel' }, { text: V.me.reset, style: 'destructive', onPress: () => { app.reset(); router.replace('/'); } }])} />
     </ScrollView>
   );

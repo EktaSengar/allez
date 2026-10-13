@@ -2,8 +2,13 @@
    The look, in one place. APP.md, "Minimal, on a phone":
 
    warm paper, ink, the pigeon's feather grey for anything secondary,
-   and the beanie's orange as the only accent — on one action per
-   screen. One rounded typeface in three sizes and two weights.
+   slate (the logo's blue, a step darker so text on it reads) as the
+   only accent, on one action per screen. The beanie orange (`cap`) is
+   for the logo and small moments of the pigeon, never a button.
+   One rounded typeface in three sizes and two weights.
+
+   `line` divides; `edge` outlines something you can press, and is
+   darker, because a quiet button nobody can find is not quiet but gone.
    --------------------------------------------------------- */
 
 import { useColorScheme } from 'react-native';
@@ -16,7 +21,9 @@ export const PALETTE = {
     ink: '#1F1D1A',
     muted: '#8A8580',
     line: '#E8E2D8',
-    accent: '#F28C28',
+    edge: '#D3C9BA',
+    accent: '#4E6A8E',
+    cap: '#E67E22',
     onAccent: '#FFFFFF',
     scrim: 'rgba(20,18,16,0.55)'
   },
@@ -27,8 +34,10 @@ export const PALETTE = {
     ink: '#F4EFE8',
     muted: '#A59E95',
     line: '#36322D',
-    accent: '#F59A3E',
-    onAccent: '#1F1D1A',
+    edge: '#625A50',
+    accent: '#9FB2CC',
+    cap: '#E67E22',
+    onAccent: '#191715',
     scrim: 'rgba(0,0,0,0.6)'
   }
 };

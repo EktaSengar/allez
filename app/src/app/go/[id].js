@@ -8,7 +8,7 @@
    --------------------------------------------------------- */
 
 import { useMemo, useState } from 'react';
-import { Linking, Platform, Pressable, ScrollView, View } from 'react-native';
+import { Linking, Platform, ScrollView, View } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -16,7 +16,7 @@ import { useApp } from '../../lib/state';
 import { afterThis, directionsUrl, zoneName } from '../../lib/answers';
 import { useTheme, SPACE, RADIUS } from '../../lib/theme';
 import { V } from '../../lib/voice';
-import { facts, Photo, Pigeon, Primary, Quiet, shortDate, T } from '../../components/ui';
+import { Close, facts, Photo, Pigeon, Primary, Quiet, shortDate, T } from '../../components/ui';
 
 export default function Go() {
   const { id } = useLocalSearchParams();
@@ -41,10 +41,7 @@ export default function Go() {
   return (
     <ScrollView style={{ flex: 1, backgroundColor: c.bg }} contentContainerStyle={{ paddingBottom: inset.bottom + SPACE * 2 }}>
       <Photo item={item} style={{ height: 300 }}>
-        <Pressable onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))} hitSlop={12} accessibilityLabel="Close"
-          style={{ position: 'absolute', top: inset.top + 8, left: SPACE, width: 36, height: 36, borderRadius: 18, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(20,18,16,0.55)' }}>
-          <T weight="heavy" color="#fff">✕</T>
-        </Pressable>
+        <Close onPhoto style={{ position: 'absolute', top: inset.top + 8, left: SPACE }} />
       </Photo>
       <View style={{ padding: SPACE * 1.25 }}>
         <T size="title" weight="heavy">{item.title}</T>

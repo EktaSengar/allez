@@ -19,7 +19,7 @@ import { deckFor, weekendPlan, zoneName } from '../lib/answers';
 import { deckLink, matches, newDeckId, parseReply } from '../lib/match';
 import { useTheme, SPACE, RADIUS, FONT, SIZE } from '../lib/theme';
 import { V } from '../lib/voice';
-import { Fade, facts, Photo, PigeonMoment, Primary, Quiet, T } from '../components/ui';
+import { Close, Fade, facts, Photo, PigeonMoment, Primary, Quiet, T } from '../components/ui';
 
 const W = Dimensions.get('window').width;
 
@@ -54,7 +54,10 @@ export default function Deck() {
     const deck = { id, ids: items.map(i => i.id), mine: bits.current.join(''), at: Date.now() };
     app.saveDeck(id, deck);
     setSent(deck);
-    try { await Share.share({ message: V.deck.sendText(deckLink(id, items)) }); } catch {}
+    try {
+      const r = await Share.share({ message: V.deck.sendText(deckLink(id, items)) });
+      if (r.action === Share.sharedAction) app.count('decksSent');
+    } catch {}
   };
 
   const check = () => {
@@ -63,6 +66,7 @@ export default function Deck() {
     if (!deck) return;
     const result = matches(deck, r.r);
     app.saveDeck(deck.id, Object.assign({}, deck, { theirs: r.r, result }));
+    if (!deck.theirs) app.count('decksMatched');
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
     router.replace(`/weekend?match=${deck.id}`);
   };
@@ -72,6 +76,7 @@ export default function Deck() {
   return (
     <View style={{ flex: 1, backgroundColor: c.bg, paddingTop: inset.top + SPACE, paddingBottom: inset.bottom + SPACE }}>
       <View style={{ paddingHorizontal: SPACE }}>
+        <Close style={{ marginBottom: SPACE }} />
         <T size="title" weight="heavy">{V.deck.title}</T>
         <T muted>{done ? '' : `${V.deck.sub}  ${k + 1}/${items.length}`}</T>
       </View>
@@ -133,7 +138,7 @@ function SwipeCard({ item, w, onDecide, behind }) {
     <Animated.View {...(behind ? {} : pan.panHandlers)}
       style={[StyleSheet.absoluteFill, { margin: SPACE }, behind ? { transform: [{ scale: 0.96 }], opacity: 0.6 } : { transform: [{ translateX: pos.x }, { translateY: pos.y }, { rotate }] }]}>
       <Photo item={item} style={{ flex: 1, borderRadius: RADIUS, justifyContent: 'flex-end' }}>
-        <Fade style={{ padding: SPACE * 1.25, paddingTop: SPACE * 5 }}>
+        <Fade style={{ padding: SPACE * 1.25, paddingTop: SPACE * 9 }}>
           <T size="title" weight="heavy" color="#fff">{item.title}</T>
           <T size="small" color="rgba(255,255,255,0.85)">{[zoneName(w, item), facts(w, item)].filter(Boolean).join(' · ')}</T>
           {item.why ? <T numberOfLines={3} color="#fff" style={{ marginTop: 8 }}>{item.why}</T> : null}

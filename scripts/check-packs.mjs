@@ -349,6 +349,25 @@ async function checkRecords(id) {
   const isTime = t => /^([01]\d|2[0-3]):[0-5]\d$/.test(t || '');
   const said = s => typeof s === 'string' && s.trim().length > 0;
 
+  /* Dates that exist only as a sentence. "Second Friday of the month …
+     the last of 2026 is 9 October" was all the Chinatown Night Market
+     said, so the planner, which reads fields and not prose, put it on
+     any Friday, including ones after the season had ended. A record whose
+     hours or cadence name a monthly day, a dated year or a "next on" has
+     to carry them as `dates` (or a `start` and `end`). "None on 28
+     December" on a weekly night, or a season with no year, is fine. */
+  const MONTH = '(?:January|February|March|April|May|June|July|August|September|October|November|December)';
+  const WDAY = '(?:Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)days?';
+  const DATED_TEXT = new RegExp([
+    `\\b(?:first|second|third|fourth|last) ${WDAY} (?:of|in) (?:the|each|every) month`,
+    `\\bone ${WDAY.slice(0, -2)} a month`,
+    `\\b\\d{1,2} ${MONTH} \\d{4}\\b`, `\\b${MONTH} \\d{1,2},? \\d{4}\\b`,
+    `\\bnext on \\d{1,2} ${MONTH}`, `\\bthe last of \\d{4}\\b`
+  ].join('|'), 'i');
+  const datesAsText = i => ['hoursNote', 'times', 'cadence'].some(f => DATED_TEXT.test(i[f] || ''));
+  const datesAsFields = i => (Array.isArray(i.dates) && i.dates.length > 0 && i.dates.every(d => /^\d{4}-\d{2}-\d{2}$/.test(d)))
+    || !!(i.start && i.end);
+
   const RULES = [
     ['a checked date', i => /^\d{4}-\d{2}-\d{2}$/.test(i.lastVerified || '') && i.lastVerified <= TODAY],
     /* Hours js/hours.js can read, for anything with a door. A dated event
@@ -365,6 +384,7 @@ async function checkRecords(id) {
     ['a price level', i => Number.isInteger(i.priceLevel) && i.priceLevel >= 0 && i.priceLevel <= 4
       && (typeof i.price !== 'number' || Rank.priceLevel({ price: i.price }) === i.priceLevel)],
     ['indoors or out', i => typeof i.indoor === 'boolean'],
+    ['its dates as fields when its hours name them', i => !datesAsText(i) || datesAsFields(i)],
     ['a booking link, or false', i => i.booking === false || /^https:\/\/\S+$/.test(i.booking || '')]
   ];
 

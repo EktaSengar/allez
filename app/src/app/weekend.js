@@ -8,7 +8,7 @@
    person, or for saving things alone. (APP.md, "The weekend".)
    --------------------------------------------------------- */
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Pressable, ScrollView, View } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -25,6 +25,10 @@ export default function Weekend() {
   const c = useTheme();
   const inset = useSafeAreaInsets();
   const [exclude, setExclude] = useState([]);
+
+  /* Counted once per visit, when what's saved has been read. */
+  const loaded = !!app.saved;
+  useEffect(() => { if (loaded) app.count('weekendOpened'); }, [loaded]); // eslint-disable-line react-hooks/exhaustive-deps -- once per visit
 
   const company = (app.saved && app.saved.profile.company) || [];
   const deck = match && app.saved && app.saved.decks[match];
@@ -78,7 +82,7 @@ export default function Weekend() {
           </T>
           {day.stops.length ? day.stops.map((stop, k) => (
             <Stop key={stop.item.id} stop={stop} first={k === 0} w={w}
-              onSwap={() => setExclude(x => x.concat(stop.item.id))} />
+              onSwap={() => { app.count('swaps'); setExclude(x => x.concat(stop.item.id)); }} />
           )) : <T muted style={{ marginTop: 8 }}>{V.weekend.empty}</T>}
         </View>
       ))}

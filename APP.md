@@ -459,8 +459,9 @@ that suit a hand on the move:
    screens.
 2. **The places supply the colour.** The frame is warm paper (`#FBF8F3`),
    ink (`#1F1D1A`) and the pigeon's feather grey (`#8A8580`) for anything
-   secondary. The pigeon's beanie orange (`#F28C28`) is the only accent, and
-   it marks **one action per screen** — the thing to do next. Dark mode is
+   secondary. Slate (`#4E6A8E`, from the logo) is the only accent, and
+   it marks **one action per screen** — the thing to do next. The beanie orange
+   (`#E67E22`) is kept for the logo and the pigeon. Dark mode is
    warm charcoal, never pure black.
 3. **One typeface, rounded and friendly** (Nunito), in three sizes and two
    weights. Hierarchy comes from size and space, not from boxes and lines.

@@ -14,7 +14,7 @@ import * as Haptics from 'expo-haptics';
 import { useApp } from '../../lib/state';
 import { useTheme, SPACE, RADIUS, FONT, SIZE } from '../../lib/theme';
 import { V } from '../../lib/voice';
-import { PigeonMoment, Primary, Quiet, T } from '../../components/ui';
+import { Close, PigeonMoment, Primary, Quiet, T } from '../../components/ui';
 
 export default function How() {
   const { key, v } = useLocalSearchParams();
@@ -56,8 +56,9 @@ export default function How() {
 
   return (
     <KeyboardAvoidingView style={{ flex: 1, backgroundColor: c.bg }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-      <ScrollView contentContainerStyle={{ padding: SPACE * 1.25, paddingTop: inset.top + SPACE * 2, paddingBottom: inset.bottom + SPACE * 2 }}
+      <ScrollView contentContainerStyle={{ padding: SPACE * 1.25, paddingTop: inset.top + SPACE, paddingBottom: inset.bottom + SPACE * 2 }}
         keyboardShouldPersistTaps="handled">
+        <Close style={{ marginBottom: SPACE }} />
         <T size="title" weight="heavy">{V.how.title(outing.title)}</T>
 
         <View style={{ marginTop: SPACE * 1.25, gap: 10 }}>
@@ -73,7 +74,7 @@ export default function How() {
             <T weight="bold" style={{ marginTop: SPACE * 2 }}>{V.how.anyway}</T>
             <View style={{ flexDirection: 'row', gap: 10, marginTop: 8 }}>
               {[[true, V.how.yes], [false, V.how.no]].map(([k, label]) => (
-                <Quiet key={label} label={label} onPress={() => setAnyway(k)} style={{ flex: 1, borderColor: anyway === k ? c.ink : c.line }} />
+                <Quiet key={label} label={label} onPress={() => setAnyway(k)} style={{ flex: 1, borderColor: anyway === k ? c.ink : c.edge }} />
               ))}
             </View>
 
