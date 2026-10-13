@@ -1,2467 +1,2467 @@
 {
-  "generated": "2026-10-01",
-  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: Wikidata holds three cafes in the whole of Bengaluru and no open dataset in India describes everyday food. See SOURCES.md.",
-  "rules": [
-    "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
-    "Say what to order and when to go. 'Lovely atmosphere' helps nobody.",
-    "No opening hours in prose. OpenStreetMap carries them, js/hours.js reads them, and a time written here is a time that rots.",
-    "quality and uniqueness cap at 4 here. 5 is reserved for somewhere one of you actually loved.",
-    "Always pin `match` with a zone. A chain with fourteen branches will otherwise resolve to whichever one the index happened to list first."
-  ],
-  "items": [
-    {
-      "id": "osm-vidyarthi-bhavan-25890-155143",
-      "title": "Vidyarthi Bhavan",
-      "type": "restaurant",
-      "zone": "basavanagudi",
-      "coords": [
-        12.94501,
-        77.57147
-      ],
-      "area": "Gandhi Bazaar Main Road, Basavanagudi",
-      "url": "https://vidyarthibhavan.in",
-      "hours": "Mo-Th 06:30-11:30, Mo-Th 14:00-20:00, Sa-Su 06:30-12:00, Sa-Su 14:30-20:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": "regional",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Vidyarthi Bhavan",
-        "zone": "basavanagudi",
-        "type": "restaurant"
-      },
-      "why": "Gandhi Bazaar since 1943, opened to feed students at the National College up the road — Vidyarthi Bhavan means student house. The benne masala dosa is the order and it is fried in enough butter to be a decision. Expect to give your name, wait on the pavement and share a table. Go on a weekday morning; weekends are a different and worse experience.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "Wikipedia; Karnataka Tourism; existence and address confirmed against OpenStreetMap",
-      "lastVerified": "2026-09-18",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/VidyarthiBhavanEntrance.jpg/500px-VidyarthiBhavanEntrance.jpg",
-      "imageSubject": "Vidyarthi Bhavan",
-      "imageKind": "subject",
-      "imageCredit": "User:Sarvagnya · CC BY 2.5"
-    },
-    {
-      "id": "osm-mavalli-tiffin-rooms-25910-155171",
-      "title": "Mavalli Tiffin Rooms",
-      "type": "restaurant",
-      "zone": "shanti-nagar",
-      "coords": [
-        12.95504,
-        77.58543
-      ],
-      "area": "Lalbagh Road",
-      "url": "https://www.mavallitiffinrooms.com/",
-      "hours": "Tu-Su 06:30-11:00, 12:30-21:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Mavalli Tiffin Rooms",
-        "zone": "shanti-nagar",
-        "type": "restaurant"
-      },
-      "why": "Founded in 1924 by two brothers from Udupi as the Brahmins' Coffee Club on Lalbagh Fort Road, MTR is known for popularising the rava idli. Order that, and the filter coffee.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Mavalli_Tiffin_Room_(6)%2C_Lalbagh_Road%2C_Bengaluru.jpg/500px-Mavalli_Tiffin_Room_(6)%2C_Lalbagh_Road%2C_Bengaluru.jpg",
-      "imageSubject": "Mavalli Tiffin Rooms",
-      "imageKind": "subject",
-      "imageCredit": "Gpkp · CC BY-SA 4.0"
-    },
-    {
-      "id": "osm-koshy-s-25951-155203",
-      "title": "Koshy's",
-      "type": "restaurant",
-      "zone": "shivajinagar",
-      "coords": [
-        12.97563,
-        77.60148
-      ],
-      "area": "Saint Mark's Road",
-      "url": null,
-      "hours": "09:00 - 23:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Koshy's",
-        "zone": "shivajinagar",
-        "type": "restaurant"
-      },
-      "why": "A family-run café where Nehru, Queen Elizabeth II and Khrushchev have eaten, and where journalists and writers still gather. Order tea and something off the old menu.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Koshys.jpg/500px-Koshys.jpg",
-      "imageSubject": "Koshy's",
-      "imageKind": "subject",
-      "imageCredit": "Atr hugo · CC BY-SA 4.0"
-    },
-    {
-      "id": "osm-shree-sagar-ctr-25997-155139",
-      "title": "Shree Sagar CTR",
-      "type": "restaurant",
-      "zone": "malleswaram",
-      "coords": [
-        12.99826,
-        77.56949
-      ],
-      "area": null,
-      "url": null,
-      "cuisine": "regional",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Shree Sagar CTR",
-        "zone": "malleswaram",
-        "type": "restaurant"
-      },
-      "why": "Central Tiffin Room, or Sri Sagar, a Malleswaram restaurant from the 1920s famous for its masala dosa, with or without butter. Get the butter one.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-lalbagh-botanical-gardens-25898-155173",
-      "title": "Lalbagh Botanical Gardens",
-      "type": "park",
-      "zone": "shanti-nagar",
-      "coords": [
-        12.94889,
-        77.58667
-      ],
-      "area": null,
-      "url": null,
-      "cuisine": null,
-      "categories": [
-        "park"
-      ],
-      "match": {
-        "name": "Lalbagh Botanical Gardens",
-        "zone": "shanti-nagar",
-        "type": "park"
-      },
-      "why": "Hyder Ali's garden from 1760, later run by British superintendents, with a glass house from 1890 that still holds the flower shows around Republic and Independence Days.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Glass_house_Lalbagh.jpg/500px-Glass_house_Lalbagh.jpg",
-      "imageSubject": "Lal Bagh",
-      "imageKind": "subject",
-      "imageCredit": "Jyothi Sundar · CC BY 4.0"
-    },
-    {
-      "id": "osm-cubbon-park-25948-155187",
-      "title": "Cubbon Park",
-      "type": "park",
-      "zone": "richmond-town",
-      "coords": [
-        12.97417,
-        77.59341
-      ],
-      "area": null,
-      "url": "https://cubbonpark.in/",
-      "cuisine": null,
-      "categories": [
-        "park"
-      ],
-      "match": {
-        "name": "Cubbon Park",
-        "zone": "richmond-town",
-        "type": "park"
-      },
-      "why": "The city's central park, officially Sri Chamarajendra Park, named after commissioner Sir Mark Cubbon. Walk it in the morning.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning",
-        "afternoon"
-      ],
-      "labels": [
-        "free"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Cubbon_Park_W.jpg/500px-Cubbon_Park_W.jpg",
-      "imageSubject": "Cubbon Park",
-      "imageKind": "subject",
-      "imageCredit": "Augustus Binu/ facebook · CC BY-SA 3.0"
-    },
-    {
-      "id": "osm-champaca-bookstore-library-cafe-25975-155192",
-      "title": "Champaca Bookstore, Library & Cafe",
-      "type": "cafe",
-      "zone": "vasanth-nagar",
-      "coords": [
-        12.98735,
-        77.59599
-      ],
-      "area": "Edward Road",
-      "url": "https://www.champaca.in/",
-      "hours": "Tu-Su 11:00-19:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Champaca Bookstore, Library & Cafe",
-        "zone": "vasanth-nagar",
-        "type": "cafe"
-      },
-      "why": "A bookshop run by booksellers who post their own recommendations, with a children's library and a café. Browse, then sit with a coffee.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-blossom-book-house-25950-155210",
-      "title": "Blossom Book House",
-      "type": "books",
-      "zone": "shivajinagar",
-      "coords": [
-        12.97482,
-        77.60522
-      ],
-      "area": "Church Street",
-      "url": "https://www.blossombookhouse.in/",
-      "cuisine": null,
-      "categories": [
-        "books"
-      ],
-      "match": {
-        "name": "Blossom Book House",
-        "zone": "shivajinagar",
-        "type": "books"
-      },
-      "why": "A bookshop with shelves across almost every subject, from fiction and history to Kannada novels and author-signed copies. Give yourself an hour.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-toit-25959-155281",
-      "title": "Toit",
-      "type": "nightlife",
-      "zone": "indiranagar",
-      "coords": [
-        12.97941,
-        77.64063
-      ],
-      "area": "100 Feet Road",
-      "url": "https://toit.in/",
-      "cuisine": null,
-      "categories": [
-        "nightlife"
-      ],
-      "match": {
-        "name": "Toit",
-        "zone": "indiranagar",
-        "type": "nightlife"
-      },
-      "why": "The Indiranagar brewpub that brews its own range, from Tint-in-Wit to Basmati Blonde and a nitro stout. Order a taster of the house beers.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "evening"
-      ],
-      "labels": [
-        "afterwork"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30",
-      "i": "0/03/Indiranagar_Shopping_Hundred_Feet_Road,_Indiranagar_Bangalore_by_night.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "osm-ulsoor-lake-park-25971-155244",
-      "title": "Ulsoor Lake Park",
-      "type": "park",
-      "zone": "halasuru",
-      "coords": [
-        12.9854,
-        77.62218
-      ],
-      "area": null,
-      "url": null,
-      "cuisine": null,
-      "categories": [
-        "park"
-      ],
-      "match": {
-        "name": "Ulsoor Lake Park",
-        "zone": "halasuru",
-        "type": "park"
-      },
-      "why": "Ulsoor Lake, one of the city's biggest lakes, near MG Road, spread over fifty hectares with several islands. Walk the edge at sunset.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [
-        "free"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Ulsoor_lake_Bangalore_India.jpg/500px-Ulsoor_lake_Bangalore_India.jpg",
-      "imageSubject": "Ulsoor Lake",
-      "imageKind": "context",
-      "imageCredit": "Ramesh NG from Bangalore, INDIA · CC BY-SA 2.0"
-    },
-    {
-      "id": "osm-city-market-25931-155153",
-      "title": "City Market",
-      "type": "market",
-      "zone": "chikkapete",
-      "coords": [
-        12.96571,
-        77.57627
-      ],
-      "area": null,
-      "url": null,
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "City Market",
-        "zone": "chikkapete",
-        "type": "market"
-      },
-      "why": "K R Market, the city's largest wholesale market and one of Asia's biggest flower markets, beside Tipu Sultan's Summer Palace. Go early for the flowers.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/K.R._Market.jpg/500px-K.R._Market.jpg",
-      "imageSubject": "K. R. Market",
-      "imageKind": "subject",
-      "imageCredit": "Pp391 · CC BY-SA 3.0"
-    },
-    {
-      "id": "osm-albert-bakery-25993-155228",
-      "title": "Albert Bakery",
-      "type": "bakery",
-      "zone": "frazer-town",
-      "coords": [
-        12.9966,
-        77.61422
-      ],
-      "area": "Mosque Road",
-      "url": null,
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Albert Bakery",
-        "zone": "frazer-town",
-        "type": "bakery"
-      },
-      "why": "A Fraser Town bakery on Mosque Road, founded in 1902 and named after Prince Albert, known for savoury snacks and, during Ramzan, its brain puffs.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "afternoon",
-        "evening"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-blue-tokai-coffee-roasters-26014-155158",
-      "title": "Blue Tokai Coffee Roasters",
-      "type": "cafe",
-      "zone": "sadashivanagar",
-      "coords": [
-        13.00692,
-        77.57898
-      ],
-      "area": null,
-      "url": null,
-      "cuisine": "coffee_shop",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Blue Tokai Coffee Roasters",
-        "zone": "sadashivanagar",
-        "type": "cafe"
-      },
-      "why": "A café of the Indian roaster that buys from more than eighty coffee estates and smallholders. Ask what single estate is on the bar.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-brahmin-s-coffee-bar-25908-155138",
-      "title": "Brahmin's Coffee Bar",
-      "type": "restaurant",
-      "zone": "chamarajapete",
-      "coords": [
-        12.95394,
-        77.56881
-      ],
-      "area": "2nd Cross Road",
-      "url": null,
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Brahmin's Coffee Bar",
-        "zone": "chamarajapete",
-        "type": "restaurant"
-      },
-      "why": "A Basavanagudi tiffin bar from 1965, one of the old vegetarian eating houses that came before the city's darshinis. Stand at the counter for idli, vada and coffee.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-lavonne-cafe-25934-155274",
-      "title": "Lavonne Café",
-      "type": "cafe",
-      "zone": "indiranagar",
-      "coords": [
-        12.96693,
-        77.63689
-      ],
-      "area": "3rd Cross Road",
-      "url": "https://lavonne.in/",
-      "cuisine": "coffee_shop",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Lavonne Café",
-        "zone": "indiranagar",
-        "type": "cafe"
-      },
-      "why": "The café of Lavonne, a baking and pastry academy teaching since 2012, so the pastries are the point. Come for breakfast.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning",
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-kopitiam-lah-25940-155276",
-      "title": "Kopitiam Lah",
-      "type": "cafe",
-      "zone": "indiranagar",
-      "coords": [
-        12.96983,
-        77.63808
-      ],
-      "area": "12th Main Road",
-      "url": "https://www.kopitiamlah.com/",
-      "hours": "Tu-Su 08:30-11:30,12:30-16:30",
-      "hoursFrom": "openstreetmap",
-      "cuisine": "malaysian",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Kopitiam Lah",
-        "zone": "indiranagar",
-        "type": "cafe"
-      },
-      "why": "India's first kopitiam, a Malaysian coffee shop and eatery in the tradition of Malaysia's old coffee houses. Order a kopi.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning",
-        "afternoon"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-yauatcha-25947-155241",
-      "title": "Yauatcha",
-      "type": "restaurant",
-      "zone": "halasuru",
-      "coords": [
-        12.97329,
-        77.62036
-      ],
-      "area": "Mahatma Gandhi Road",
-      "url": "https://yauatcha.com/bengaluru/",
-      "cuisine": "cantonese",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Yauatcha",
-        "zone": "halasuru",
-        "type": "restaurant"
-      },
-      "why": "The Bengaluru branch of the Soho dim sum teahouse, in MG Road Mall, open all day. Order dim sum and something from the patisserie.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "afternoon",
-        "evening"
-      ],
-      "labels": [
-        "bookahead"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-malgudi-mylari-mane-25875-155235",
-      "title": "Malgudi Mylari Mane",
-      "type": "restaurant",
-      "zone": "koramangala",
-      "coords": [
-        12.93744,
-        77.61765
-      ],
-      "area": null,
-      "url": "http://www.malgudimylari.com/",
-      "cuisine": "regional",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Malgudi Mylari Mane",
-        "zone": "koramangala",
-        "type": "restaurant"
-      },
-      "why": "A Karnataka restaurant serving traditional vegetarian and non-vegetarian food, with branches in Koramangala and on the Mangalore highway.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-the-bier-library-25878-155253",
-      "title": "The Bier Library",
-      "type": "nightlife",
-      "zone": "koramangala",
-      "coords": [
-        12.93912,
-        77.62625
-      ],
-      "area": "Patel Narayana Reddy Layout",
-      "url": "https://www.thebierlibrary.in/",
-      "hours": "Mo-Su 12:00-1:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": null,
-      "categories": [
-        "nightlife"
-      ],
-      "match": {
-        "name": "The Bier Library",
-        "zone": "koramangala",
-        "type": "nightlife"
-      },
-      "why": "A Koramangala brewpub built around its own craft beer and a comfortable room. Order a flight.",
-      "quality": 3,
-      "uniqueness": 3,
-      "goodFor": [
-        "evening"
-      ],
-      "labels": [
-        "afterwork"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-pizza-4p-s-25940-155272",
-      "title": "Pizza 4P's",
-      "type": "restaurant",
-      "zone": "indiranagar",
-      "coords": [
-        12.97005,
-        77.63611
-      ],
-      "area": "12th Main Road",
-      "url": "https://pizza4ps.com",
-      "cuisine": "pizza",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Pizza 4P's",
-        "zone": "indiranagar",
-        "type": "restaurant"
-      },
-      "why": "The Indian branch of Pizza 4P's, the pizza restaurant that began in Vietnam. Order a pizza to share.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "afternoon",
-        "evening"
-      ],
-      "labels": [
-        "bookahead"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-koko-25921-155296",
-      "title": "KOKO",
-      "type": "restaurant",
-      "zone": "kodihalli",
-      "coords": [
-        12.96039,
-        77.64791
-      ],
-      "area": null,
-      "url": "https://www.kokorestaurants.com/",
-      "cuisine": "asian",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "KOKO",
-        "zone": "kodihalli",
-        "type": "restaurant"
-      },
-      "why": "An Asian gastropub with branches in Mumbai and Hyderabad, and a bar in its Bengaluru room. Book for dinner and cocktails.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "evening"
-      ],
-      "labels": [
-        "bookahead"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-arbor-brewing-company-25941-155222",
-      "title": "Arbor Brewing Company",
-      "type": "nightlife",
-      "zone": "austin-town",
-      "coords": [
-        12.97031,
-        77.61098
-      ],
-      "area": "Magrath Road",
-      "url": "https://www.arborbrewing.in/",
-      "hours": "12:00-23:30",
-      "hoursFrom": "openstreetmap",
-      "cuisine": null,
-      "categories": [
-        "nightlife"
-      ],
-      "match": {
-        "name": "Arbor Brewing Company",
-        "zone": "austin-town",
-        "type": "nightlife"
-      },
-      "why": "India's first American craft brewery, opened in 2012 and one of the breweries the city's beer scene is known for. Ask what is new on tap.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "evening"
-      ],
-      "labels": [
-        "afterwork"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-6oz-coffee-and-roasters-25975-155242",
-      "title": "6oz Coffee and Roasters",
-      "type": "cafe",
-      "zone": "halasuru",
-      "coords": [
-        12.9876,
-        77.62084
-      ],
-      "area": null,
-      "url": "http://6oz.coffee",
-      "hours": "Mo-Su 09:00-22:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": "coffee_shop",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "6oz Coffee and Roasters",
-        "zone": "halasuru",
-        "type": "cafe"
-      },
-      "why": "A neighbourhood specialty coffee shop on Tank Road, Ulsoor, pouring espresso drinks, pour-overs and cold brew made with Indian beans.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "morning",
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-krumb-kraft-25926-155279",
-      "title": "Krumb Kraft",
-      "type": "bakery",
-      "zone": "kodihalli",
-      "coords": [
-        12.96318,
-        77.63967
-      ],
-      "area": null,
-      "url": "https://krumbkraft.in/",
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Krumb Kraft",
-        "zone": "kodihalli",
-        "type": "bakery"
-      },
-      "why": "A sourdough bakehouse making breads, crackers, cakes and preserves without additives. Buy a loaf.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "morning",
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-amintiri-25823-155289",
-      "title": "Amintiri",
-      "type": "cafe",
-      "zone": "hsr-layout",
-      "coords": [
-        12.91173,
-        77.64446
-      ],
-      "area": null,
-      "url": "https://amintiri.in/",
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Amintiri",
-        "zone": "hsr-layout",
-        "type": "cafe"
-      },
-      "why": "A bakery for celebration cakes, loaf cakes and French-style viennoiserie, with a café in HSR Layout. Order a pastry.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-nasi-and-mee-25870-155259",
-      "title": "Nasi and Mee",
-      "type": "restaurant",
-      "zone": "koramangala",
-      "coords": [
-        12.93507,
-        77.62928
-      ],
-      "area": "80 Feet Road, 4th Block",
-      "url": "https://www.nasiandmee.co.in/",
-      "cuisine": "asian",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Nasi and Mee",
-        "zone": "koramangala",
-        "type": "restaurant"
-      },
-      "why": "A Southeast Asian restaurant for nasi, ramen, sushi and dim sum. Order a nasi goreng.",
-      "quality": 3,
-      "uniqueness": 3,
-      "goodFor": [
-        "afternoon",
-        "evening"
-      ],
-      "labels": [],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-the-reservoire-25867-155244",
-      "title": "The Reservoire",
-      "type": "nightlife",
-      "zone": "koramangala",
-      "coords": [
-        12.93339,
-        77.62224
-      ],
-      "area": "17th Main Road, 5th Block",
-      "url": "https://www.thereservoire.com",
-      "cuisine": null,
-      "categories": [
-        "nightlife"
-      ],
-      "match": {
-        "name": "The Reservoire",
-        "zone": "koramangala",
-        "type": "nightlife"
-      },
-      "why": "A big Koramangala cocktail bar, opened in 2017 to bring a Manhattan-style cocktail culture to the city. Sit at the bar.",
-      "quality": 3,
-      "uniqueness": 3,
-      "goodFor": [
-        "evening"
-      ],
-      "labels": [
-        "afterwork"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-oota-bangalore-25965-155443",
-      "title": "Oota Bangalore",
-      "type": "restaurant",
-      "zone": "epip-zone",
-      "coords": [
-        12.9824,
-        77.72171
-      ],
-      "area": "Whitefield, near ITPL",
-      "url": "https://oota.in/",
-      "hours": "Mo-Su 12:00-15:00,19:00-23:00; Sa-Su 08:00-11:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": "regional",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Oota Bangalore",
-        "zone": "epip-zone",
-        "type": "restaurant"
-      },
-      "why": "A restaurant built on hyper-local Karnataka cooking, named after the Kannada greeting 'Oota aita?' — have you eaten? Order across the regions of the state.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "afternoon",
-        "evening"
-      ],
-      "labels": [
-        "bookahead"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-lavonne-25980-155455",
-      "title": "Lavonne",
-      "type": "cafe",
-      "zone": "hoodi",
-      "coords": [
-        12.9898,
-        77.72766
-      ],
-      "area": "Whitefield",
-      "url": null,
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Lavonne",
-        "zone": "hoodi",
-        "type": "cafe"
-      },
-      "why": "The Whitefield café of Lavonne, a baking and pastry academy teaching since 2012. Come in the morning for pastries and bread.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "morning",
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-lakeview-milk-bar-25936-155499",
-      "title": "Lakeview Milk Bar",
-      "type": "deli",
-      "zone": "whitefield",
-      "coords": [
-        12.96813,
-        77.74937
-      ],
-      "area": "Whitefield Main Road",
-      "url": "https://lakeviewmilkbar.in",
-      "hours": "10:30-13:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": null,
-      "categories": [
-        "food",
-        "dessert"
-      ],
-      "match": {
-        "name": "Lakeview Milk Bar",
-        "zone": "whitefield",
-        "type": "deli"
-      },
-      "why": "An ice-cream parlour that has been part of the city since before Independence. Order a sundae.",
-      "quality": 3,
-      "uniqueness": 3,
-      "goodFor": [
-        "afternoon",
-        "evening"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-blue-tokai-coffee-roasters-25970-155499",
-      "title": "Blue Tokai Coffee Roasters",
-      "type": "cafe",
-      "zone": "whitefield",
-      "coords": [
-        12.98518,
-        77.74974
-      ],
-      "area": null,
-      "url": null,
-      "cuisine": "coffee_shop",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Blue Tokai Coffee Roasters",
-        "zone": "whitefield",
-        "type": "cafe"
-      },
-      "why": "A café of the Indian roaster that buys from more than eighty coffee estates and smallholders. Ask what single estate is on the bar.",
-      "quality": 3,
-      "uniqueness": 2,
-      "goodFor": [
-        "morning",
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-the-rameshwaram-cafe-25813-155181",
-      "title": "The Rameshwaram Cafe",
-      "type": "restaurant",
-      "zone": "jp-nagar",
-      "coords": [
-        12.90651,
-        77.59059
-      ],
-      "area": null,
-      "url": null,
-      "cuisine": "regional",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "The Rameshwaram Cafe",
-        "zone": "jp-nagar",
-        "type": "restaurant"
-      },
-      "why": "A large-format darshini with ordering kiosks, one of the newcomers reshaping the city's standing-room South Indian eateries. Order at the kiosk and eat standing.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "morning",
-        "afternoon",
-        "evening"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-bengaluru-cafe-25878-155168",
-      "title": "Bengaluru Cafe",
-      "type": "restaurant",
-      "zone": "basavanagudi",
-      "coords": [
-        12.93921,
-        77.5839
-      ],
-      "area": "9th Cross, Jayanagar 2nd Block",
-      "url": null,
-      "cuisine": "south_indian",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Bengaluru Cafe",
-        "zone": "basavanagudi",
-        "type": "restaurant"
-      },
-      "why": "A newer darshini with rustic interiors and a more modern look than the old eating houses. Order a dosa at the counter.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-taaza-thindi-25845-155186",
-      "title": "Taaza Thindi",
-      "type": "restaurant",
-      "zone": "jayanagar",
-      "coords": [
-        12.92261,
-        77.5932
-      ],
-      "area": null,
-      "url": null,
-      "cuisine": "indian",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Taaza Thindi",
-        "zone": "jayanagar",
-        "type": "restaurant"
-      },
-      "why": "A Jayanagar darshini, one of the newer, rustic-looking standing-room eateries. Order idli, vada and coffee at the counter.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-blue-tokai-coffee-roasters-25845-155169",
-      "title": "Blue Tokai Coffee Roasters",
-      "type": "cafe",
-      "zone": "jayanagar",
-      "coords": [
-        12.92237,
-        77.5846
-      ],
-      "area": "10th Main Road, Jayanagar",
-      "url": "https://bluetokaicoffee.com/",
-      "hours": "Mo-Su 08:00-23:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Blue Tokai Coffee Roasters",
-        "zone": "jayanagar",
-        "type": "cafe"
-      },
-      "why": "A café of the Indian roaster that buys from more than eighty coffee estates and smallholders. Ask what single estate is on the bar.",
-      "quality": 3,
-      "uniqueness": 2,
-      "goodFor": [
-        "morning",
-        "afternoon"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-the-biere-club-25942-155195",
-      "title": "The Biere Club",
-      "type": "nightlife",
-      "zone": "richmond-town",
-      "coords": [
-        12.97096,
-        77.59756
-      ],
-      "area": "Vittal Mallya Road",
-      "url": "http://www.thebiereclub.com/",
-      "hours": "11:00-23:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": null,
-      "categories": [
-        "nightlife"
-      ],
-      "match": {
-        "name": "The Biere Club",
-        "zone": "richmond-town",
-        "type": "nightlife"
-      },
-      "why": "A brewpub just off UB City inspired by a roomy British pub, with its own beers and food. Order a taster of the house brews.",
-      "quality": 4,
-      "uniqueness": 3,
-      "goodFor": [
-        "evening"
-      ],
-      "labels": [
-        "afterwork"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-09-30"
-    },
-    {
-      "id": "osm-russel-market-25970-155212",
-      "title": "Russel Market",
-      "type": "market",
-      "zone": "shivajinagar",
-      "coords": [
-        12.98505,
-        77.60587
-      ],
-      "area": "AM Road",
-      "url": null,
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Russel Market",
-        "zone": "shivajinagar",
-        "type": "market"
-      },
-      "why": "The Cantonment's covered market, built by the British in 1927 and named for municipal commissioner T. B. Russell. Walk the produce and meat halls under the old roof, then out into Shivajinagar's streets.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-yeshwanthpur-apmc-market-26032-155090",
-      "title": "Yeshwanthpur APMC Market",
-      "type": "market",
-      "zone": "mahalakshmi-layout",
-      "coords": [
-        13.01589,
-        77.54514
-      ],
-      "area": null,
-      "url": null,
-      "hours": "Mo-Su 05:30-13:00",
-      "hoursFrom": "openstreetmap",
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Yeshwanthpur APMC Market",
-        "zone": "mahalakshmi-layout",
-        "type": "market"
-      },
-      "why": "The city's biggest wholesale yard for farm produce. This is where Bengaluru's vegetables arrive, so go early, while the trading is on.",
-      "quality": 3,
-      "uniqueness": 4,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-murphy-town-market-25958-155255",
-      "title": "Murphy Town Market",
-      "type": "market",
-      "zone": "halasuru",
-      "coords": [
-        12.97889,
-        77.62767
-      ],
-      "area": null,
-      "url": null,
-      "cuisine": null,
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Murphy Town Market",
-        "zone": "halasuru",
-        "type": "market"
-      },
-      "why": "Hoysala Nagara's neighbourhood market, known for its butchers and fishmongers, with one provisions shop, VM Stores, about a century old. One of the old Cantonment markets campaigners fought to save from demolition.",
-      "quality": 3,
-      "uniqueness": 3,
-      "goodFor": [
-        "morning"
-      ],
-      "labels": [],
-      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-the-rameshwaram-cafe-25964-155282",
-      "title": "The Rameshwaram Cafe",
-      "type": "restaurant",
-      "zone": "indiranagar",
-      "coords": [
-        12.9818,
-        77.64097
-      ],
-      "area": "847/A, 100 Feet Road, Indiranagar",
-      "url": "https://therameshwaramcafe.org",
-      "cuisine": "regional",
-      "hours": "05:00-01:00",
-      "hoursFrom": "openstreetmap",
-      "goodFor": [
-        "morning",
-        "cheap",
-        "late"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "priceLevel": 1,
-      "durationMin": 30,
-      "booking": false,
-      "indoor": true,
-      "source": "therameshwaramcafe.org; address and hours from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "The Rameshwaram Cafe",
-        "zone": "indiranagar",
-        "type": "restaurant"
-      },
-      "why": "A standing-room South Indian counter that started as street food in 2012 and became one of the city's busiest breakfasts. The order is ghee podi idli and a ghee masala dosa, then filter coffee. You pay at the till, collect at the counter and eat standing. Go early on a weekday, before the queue reaches the pavement.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-navathanyam-25933-155274",
-      "title": "Navathanyam",
-      "type": "restaurant",
-      "zone": "indiranagar",
-      "coords": [
-        12.96662,
-        77.63698
-      ],
-      "area": "288, 3rd Cross Road, Indiranagar",
-      "url": "https://navathanyam.com/",
-      "cuisine": "regional",
-      "hours": "11:00-23:00",
-      "hoursFrom": "openstreetmap",
-      "goodFor": [
-        "lunch",
-        "evening"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "booking": "unknown",
-      "source": "navathanyam.com; address and hours from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Navathanyam",
-        "zone": "indiranagar",
-        "type": "restaurant"
-      },
-      "why": "A South Indian kitchen built around the nine traditional grains, which makes it the place in Indiranagar to try millet in a full meal rather than as health food. Order the grain dishes you would not cook at home, and come at lunch, when the room is calmer.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-chinita-25962-155274",
-      "title": "Chinita",
-      "type": "restaurant",
-      "zone": "indiranagar",
-      "coords": [
-        12.98105,
-        77.63714
-      ],
-      "area": "218 Double Road, near the BDA Complex",
-      "url": "https://www.chinita.in/",
-      "cuisine": "mexican",
-      "hours": "Tu-Su 12:30-15:30,19:30-23:00",
-      "hoursFrom": "openstreetmap",
-      "goodFor": [
-        "evening",
-        "couple",
-        "group"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "labels": [
-        "bookahead"
-      ],
-      "source": "chinita.in; hours from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Chinita",
-        "zone": "indiranagar",
-        "type": "restaurant"
-      },
-      "why": "Mexican food cooked from scratch since 2012, by a chef who learned it in New York and then in Mexico itself. It is the Mexican kitchen other Bengaluru restaurants are measured against. Order tacos and share plates, and book for a weekend dinner.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-german-brezelhaus-25965-155277",
-      "title": "German BrezelHaus",
-      "type": "bakery",
-      "zone": "indiranagar",
-      "coords": [
-        12.98246,
-        77.63845
-      ],
-      "area": "626, 2nd Main, 10th Cross, Binnamangala",
-      "url": "https://www.germanbrezelhaus.com/",
-      "categories": [
-        "food",
-        "bakery"
-      ],
-      "cuisine": "german",
-      "hours": "Mo-Fr 09:00-22:30; Sa,Su 08:00-22:30",
-      "hoursFrom": "germanbrezelhaus.com",
-      "goodFor": [
-        "morning",
-        "cheap"
-      ],
-      "priceLevel": 1,
-      "indoor": true,
-      "booking": false,
-      "source": "germanbrezelhaus.com; position from OpenStreetMap",
-      "match": {
-        "name": "German BrezelHaus",
-        "zone": "indiranagar",
-        "type": "bakery"
-      },
-      "why": "A German craft bakery where every pretzel is shaped by hand, using some ingredients brought from Europe. Buy a pretzel and a sugar-dusted Berliner, or stay for a deli sandwich. It opens early enough on weekends to serve as the first stop on a Saturday morning.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-sharon-tea-stall-25946-155294",
-      "title": "Sharon Tea Stall",
-      "type": "cafe",
-      "zone": "indiranagar",
-      "coords": [
-        12.97317,
-        77.64705
-      ],
-      "area": "Thippasandra Main Road, Indiranagar edge",
-      "url": "https://sharonteastall.com/",
-      "categories": [
-        "food",
-        "coffee"
-      ],
-      "hours": "Mo-Sa 05:30-22:00; Su 16:00-22:00",
-      "hoursFrom": "openstreetmap",
-      "goodFor": [
-        "morning",
-        "cheap"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "priceLevel": 1,
-      "durationMin": 15,
-      "booking": false,
-      "indoor": false,
-      "source": "sharonteastall.com; hours from OpenStreetMap",
-      "match": {
-        "name": "Sharon Tea Stall",
-        "zone": "indiranagar",
-        "type": "cafe"
-      },
-      "why": "A local tea counter that now has twenty-five branches and claims a hundred kinds of tea. Skip the novelties and order a ginger-cardamom tea. Have it standing on the pavement, as the neighbourhood does, before the morning traffic starts.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-something-s-brewing-25938-155272",
-      "title": "Something's Brewing",
-      "type": "cafe",
-      "zone": "indiranagar",
-      "coords": [
-        12.96919,
-        77.63612
-      ],
-      "area": "3302 L, 12th A Main, HAL 2nd Stage",
-      "url": "https://somethingsbrewing.in/",
-      "categories": [
-        "food",
-        "coffee",
-        "shop"
-      ],
-      "goodFor": [
-        "morning",
-        "solo"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "booking": false,
-      "source": "somethingsbrewing.in; position from OpenStreetMap",
-      "match": {
-        "name": "Something's Brewing",
-        "zone": "indiranagar",
-        "type": "cafe"
-      },
-      "why": "Half café, half coffee shop for home brewers. It sells beans from several Indian roasters — Broot, Maverick & Farmer, Siolim — and the equipment to brew them. Have one cup, then take home whichever bag you liked.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-the-kind-25940-155290",
-      "title": "The Kind",
-      "type": "cafe",
-      "zone": "indiranagar",
-      "coords": [
-        12.97021,
-        77.6448
-      ],
-      "area": "2985, 12th Main Road",
-      "url": "https://thekindindia.com/",
-      "categories": [
-        "food",
-        "coffee"
-      ],
-      "hours": "08:00-23:00",
-      "hoursFrom": "openstreetmap",
-      "goodFor": [
-        "morning",
-        "solo",
-        "work"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "booking": false,
-      "source": "thekindindia.com; hours from OpenStreetMap",
-      "match": {
-        "name": "The Kind",
-        "zone": "indiranagar",
-        "type": "cafe"
-      },
-      "why": "A vegetarian roastery with a brew room on 12th Main, so the coffee is roasted on the premises. Ask what is fresh off the roaster and have it as a pour-over.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-copper-cloves-25956-155274",
-      "title": "Copper + Cloves",
-      "type": "cafe",
-      "zone": "indiranagar",
-      "coords": [
-        12.97785,
-        77.63709
-      ],
-      "area": "549A, 9th A Main Road",
-      "url": "https://copperandcloves.com",
-      "categories": [
-        "food"
-      ],
-      "cuisine": "plant_based",
-      "hours": "07:30-21:00",
-      "hoursFrom": "openstreetmap",
-      "goodFor": [
-        "lunch",
-        "morning"
-      ],
-      "labels": [
-        "veg"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "booking": false,
-      "source": "copperandcloves.com; hours from OpenStreetMap",
-      "match": {
-        "name": "Copper + Cloves",
-        "zone": "indiranagar",
-        "type": "cafe"
-      },
-      "why": "A plant-based kitchen that cooks seasonal produce from scratch. Healthy food usually tastes like a compromise; this tastes like lunch. Go for a weekday lunch and order a bowl.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-champaca-25956-155274",
-      "title": "Champaca",
-      "type": "books",
-      "zone": "indiranagar",
-      "coords": [
-        12.97785,
-        77.63714
-      ],
-      "area": "594 A, 9th Main Road, Hoysala Nagar",
-      "url": "https://www.champaca.in/",
-      "categories": [
-        "books",
-        "culture",
-        "shop"
-      ],
-      "hours": "10:00-20:00",
-      "hoursFrom": "champaca.in",
-      "goodFor": [
-        "afternoon",
-        "solo",
-        "rain"
-      ],
-      "priceLevel": 1,
-      "indoor": true,
-      "booking": false,
-      "uniqueness": 4,
-      "source": "champaca.in; position from OpenStreetMap",
-      "match": {
-        "name": "Champaca",
-        "zone": "indiranagar",
-        "type": "books"
-      },
-      "why": "An independent bookshop, library and café chosen with a sharp eye for Indian writing and small presses. There are author readings and children's read-alouds, and weekends are laptop-free, which makes it a good place to read for an hour. Come for the Indian non-fiction shelf and ask the staff what to read next.",
-      "quality": 4,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-atta-galatta-25960-155279",
-      "title": "Atta Galatta",
-      "type": "books",
-      "zone": "indiranagar",
-      "coords": [
-        12.9801,
-        77.63937
-      ],
-      "area": "178, 5th Main Road, 1st Stage",
-      "url": "https://attagalatta.com/",
-      "categories": [
-        "books",
-        "culture"
-      ],
-      "goodFor": [
-        "evening",
-        "weekend",
-        "rain"
-      ],
-      "priceLevel": 1,
-      "indoor": true,
-      "booking": "unknown",
-      "uniqueness": 4,
-      "hoursNote": "Events most weeks; the calendar is the timetable",
-      "source": "attagalatta.com; position from OpenStreetMap",
-      "match": {
-        "name": "Atta Galatta",
-        "zone": "indiranagar",
-        "type": "books"
-      },
-      "why": "A bookshop for Indian-language books with an events space attached. Atta Galatta runs the Bengaluru Poetry Festival and keeps a calendar of readings, film clubs and neighbourhood walks. Look at the calendar first and come for an event, then browse the Kannada shelves.",
-      "quality": 4,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-manora-25956-155281",
-      "title": "Manora",
-      "type": "museum",
-      "zone": "indiranagar",
-      "coords": [
-        12.97782,
-        77.64067
-      ],
-      "area": "55, 9A Main, 100 Feet Road, 1st Stage",
-      "url": "https://gallerymanora.com/",
-      "categories": [
-        "culture",
-        "art",
-        "free"
-      ],
-      "goodFor": [
-        "afternoon",
-        "free",
-        "rain"
-      ],
-      "price": 0,
-      "priceLevel": 0,
-      "indoor": true,
-      "booking": false,
-      "uniqueness": 3,
-      "hoursNote": "Hours not published — call before going",
-      "source": "gallerymanora.com; position from OpenStreetMap",
-      "match": {
-        "name": "Manora",
-        "zone": "indiranagar",
-        "type": "museum"
-      },
-      "why": "A commercial gallery on 100 Feet Road that runs changing exhibitions and keeps a stockroom of work for sale. It is a free half hour of contemporary art between meals. Check what is on before you go.",
-      "quality": 4,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-goethe-institut-max-m-ller-bhavan-25957-155289",
-      "title": "Goethe-Institut Max Müller Bhavan",
-      "type": "culture",
-      "zone": "indiranagar",
-      "coords": [
-        12.97833,
-        77.64437
-      ],
-      "area": "716, CMH Road, Indiranagar 1st Stage",
-      "url": "https://www.goethe.de/ins/in/en/sta/ban.html",
-      "categories": [
-        "culture",
-        "film",
-        "free"
-      ],
-      "hours": "Tu-Sa 11:00-18:00",
-      "hoursFrom": "goethe.de (library)",
-      "goodFor": [
-        "afternoon",
-        "evening",
-        "free",
-        "rain"
-      ],
-      "priceLevel": 0,
-      "indoor": true,
-      "booking": "unknown",
-      "uniqueness": 4,
-      "source": "goethe.de; position from OpenStreetMap",
-      "match": {
-        "name": "Goethe-Institut Max Müller Bhavan",
-        "zone": "indiranagar",
-        "type": "culture"
-      },
-      "why": "The German cultural institute, in Bengaluru since 1961. It screens films and hosts concerts, exhibitions and talks, many of them free. The public library lends films, music and games as well as books. Check the events page for a screening, or spend a weekday afternoon in the library.",
-      "quality": 4,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-indiranagar-sangeetha-sabha-25945-155289",
-      "title": "Indiranagar Sangeetha Sabha",
-      "type": "culture",
-      "zone": "indiranagar",
-      "coords": [
-        12.97244,
-        77.64461
-      ],
-      "area": "Purandara Bhavana, 8th Main, 8th Cross, HAL 2nd Stage",
-      "url": "https://www.isangeethasabha.in/",
-      "categories": [
-        "culture",
-        "music"
-      ],
-      "goodFor": [
-        "evening",
-        "cheap"
-      ],
-      "priceLevel": 1,
-      "indoor": true,
-      "booking": "unknown",
-      "uniqueness": 4,
-      "hoursNote": "Concerts by programme — the calendar is the timetable",
-      "source": "Wikipedia; isangeethasabha.in; position from OpenStreetMap",
-      "match": {
-        "name": "Indiranagar Sangeetha Sabha",
-        "zone": "indiranagar",
-        "type": "culture"
-      },
-      "why": "A music and dance school founded in 1986, whose hall, Purandara Bhavana, was opened by A. P. J. Abdul Kalam in 2004. It is the neighbourhood's place for a Carnatic recital or a dance programme, and tickets are often cheap or free. Watch for the annual six-day music and dance festival.",
-      "quality": 4,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-kaayal-25937-155301",
-      "title": "Kaayal",
-      "type": "restaurant",
-      "zone": "kodihalli",
-      "coords": [
-        12.96831,
-        77.65047
-      ],
-      "area": "1647/1, 2nd floor, Jeevan Bhima Nagar Main Road, opposite Miranda School",
-      "url": "https://www.kaayal.in/",
-      "cuisine": "regional",
-      "goodFor": [
-        "lunch",
-        "evening"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "booking": "unknown",
-      "source": "kaayal.in; position from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Kaayal",
-        "zone": "kodihalli",
-        "type": "restaurant"
-      },
-      "why": "A Kerala restaurant that has been a reliable choice on the Jeevan Bhima Nagar side of Old Airport Road for years. Order appam with stew, or a fish curry with rice, and come at lunch when the meals are on.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-jamavar-25923-155297",
-      "title": "Jamavar",
-      "type": "restaurant",
-      "zone": "kodihalli",
-      "coords": [
-        12.96147,
-        77.64866
-      ],
-      "area": "Lobby level, The Leela Palace, Old Airport Road",
-      "url": "https://www.theleela.com/the-leela-palace-bengaluru/restaurants/jamavar",
-      "cuisine": "indian",
-      "hours": "12:00-15:00,19:00-23:30",
-      "hoursFrom": "theleela.com",
-      "goodFor": [
-        "evening",
-        "couple",
-        "special"
-      ],
-      "labels": [
-        "bookahead"
-      ],
-      "priceLevel": 4,
-      "indoor": true,
-      "booking": true,
-      "coordsFrom": "home.json (The Leela Palace)",
-      "source": "theleela.com",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Jamavar",
-        "zone": "kodihalli",
-        "type": "restaurant"
-      },
-      "why": "The Leela Palace's Indian dining room is decorated with gold-leaf paintings and silver place settings. The menu covers royal Indian cooking from across the country. Order the raan and the house dal, and book ahead for a special dinner.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-the-registry-of-sarees-25912-155274",
-      "title": "The Registry of Sarees",
-      "type": "museum",
-      "zone": "kodihalli",
-      "coords": [
-        12.95618,
-        77.63688
-      ],
-      "area": "Domlur — by appointment",
-      "url": "https://theregistryofsarees.com/",
-      "categories": [
-        "culture",
-        "art"
-      ],
-      "goodFor": [
-        "afternoon",
-        "rain"
-      ],
-      "indoor": true,
-      "booking": true,
-      "uniqueness": 5,
-      "hoursNote": "By appointment — email before going",
-      "source": "theregistryofsarees.com; position from OpenStreetMap",
-      "match": {
-        "name": "The Registry of Sarees",
-        "zone": "kodihalli",
-        "type": "museum"
-      },
-      "why": "A research centre for handspun and handwoven textiles with two collections, one of them a large study of khadi, and a reference library. It is open to the public by appointment only. Write ahead and say what you want to see, and you will get a quiet hour with the textiles themselves.",
-      "quality": 4,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-the-hole-in-the-wall-cafe-25870-155251",
-      "title": "The Hole In The Wall Cafe",
-      "type": "cafe",
-      "zone": "koramangala",
-      "coords": [
-        12.93476,
-        77.62549
-      ],
-      "area": "3, 8th Main Road, 4th Block",
-      "url": "https://www.theholeinthewallcafe.org/",
-      "hours": "Tu-Su 08:00-21:00",
-      "hoursFrom": "theholeinthewallcafe.org",
-      "cuisine": "american",
-      "goodFor": [
-        "morning",
-        "weekend",
-        "group"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "booking": false,
-      "source": "theholeinthewallcafe.org; position from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "The Hole In The Wall Cafe",
-        "zone": "koramangala",
-        "type": "cafe"
-      },
-      "why": "A Koramangala breakfast institution that began in 2009 as a no-frills garage. Order a full English breakfast or the pancakes, and get there before the weekend queue forms. It is closed on Mondays.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-kappa-chakka-kandhari-25881-155247",
-      "title": "Kappa Chakka Kandhari",
-      "type": "restaurant",
-      "zone": "koramangala",
-      "coords": [
-        12.94053,
-        77.62357
-      ],
-      "area": "438, 18th Main Road, 6th Block",
-      "url": "https://www.kappachakkakandhari.com/",
-      "cuisine": "regional",
-      "goodFor": [
-        "lunch",
-        "evening",
-        "group"
-      ],
-      "labels": [
-        "bookahead"
-      ],
-      "priceLevel": 3,
-      "indoor": true,
-      "uniqueness": 4,
-      "source": "kappachakkakandhari.com; position from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Kappa Chakka Kandhari",
-        "zone": "koramangala",
-        "type": "restaurant"
-      },
-      "why": "Kerala home and toddy-shop cooking, built from three years of research in 265 homes and 70 toddy shops, with Chef Regi Mathew in charge of the kitchen. Order kappa with the kodampuli fish curry and finish with the cloud pudding. Book for dinner.",
-      "quality": 4,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-maverick-and-farmer-coffee-25871-155257",
-      "title": "Maverick and Farmer Coffee",
-      "type": "cafe",
-      "zone": "koramangala",
-      "coords": [
-        12.93535,
-        77.62842
-      ],
-      "area": "Koramangala 4th Block",
-      "url": "https://www.maverickandfarmer.com/",
-      "categories": [
-        "food",
-        "coffee"
-      ],
-      "goodFor": [
-        "morning",
-        "solo",
-        "work"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "booking": false,
-      "source": "maverickandfarmer.com; position from OpenStreetMap",
-      "match": {
-        "name": "Maverick and Farmer Coffee",
-        "zone": "koramangala",
-        "type": "cafe"
-      },
-      "why": "A farm-to-cup coffee brand that grows its beans on its own 140-acre estate in Pollibetta, Coorg, and roasts them daily in Bengaluru. Have a filter coffee made with the estate beans and take a bag home.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-babai-tiffins-25836-155289",
-      "title": "Babai Tiffins",
-      "type": "restaurant",
-      "zone": "hsr-layout",
-      "coords": [
-        12.91825,
-        77.64473
-      ],
-      "area": "8, 19th Main Road, 4th Sector",
-      "url": "https://www.babaitiffins.com/",
-      "cuisine": "regional",
-      "hours": "Mo-Su 07:00-01:00",
-      "hoursFrom": "babaitiffins.com",
-      "goodFor": [
-        "morning",
-        "cheap",
-        "late"
-      ],
-      "labels": [
-        "cheap",
-        "veg"
-      ],
-      "priceLevel": 1,
-      "indoor": true,
-      "booking": false,
-      "source": "babaitiffins.com; position from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Babai Tiffins",
-        "zone": "hsr-layout",
-        "type": "restaurant"
-      },
-      "why": "An Andhra vegetarian tiffin house cooking the food of the Krishna and Godavari deltas, and it insists it is not generically South Indian. Order pesarattu and ghee karam idli in the morning, or gongura rice later in the day.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-brik-oven-25827-155290",
-      "title": "Brik Oven",
-      "type": "restaurant",
-      "zone": "hsr-layout",
-      "coords": [
-        12.91364,
-        77.64489
-      ],
-      "area": "1791, 19th Main Road, 1st Sector",
-      "url": "https://brikoven.com",
-      "cuisine": "pizza",
-      "goodFor": [
-        "evening",
-        "group"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "booking": "unknown",
-      "source": "brikoven.com; position from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Brik Oven",
-        "zone": "hsr-layout",
-        "type": "restaurant"
-      },
-      "why": "Neapolitan-style pizza on a sourdough base fermented for two to three days and fired at 400°C, with mozzarella made in-house every day. Order a margherita first: it shows off the cheese.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-light-of-italy-25832-155302",
-      "title": "Light of Italy",
-      "type": "restaurant",
-      "zone": "hsr-layout",
-      "coords": [
-        12.91601,
-        77.65111
-      ],
-      "area": "669, 13th Cross, 27th Main Road, 1st Sector",
-      "url": "https://lightofitaly.com/",
-      "cuisine": "italian",
-      "goodFor": [
-        "evening",
-        "couple"
-      ],
-      "priceLevel": 2,
-      "indoor": true,
-      "booking": "unknown",
-      "source": "lightofitaly.com; position from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Light of Italy",
-        "zone": "hsr-layout",
-        "type": "restaurant"
-      },
-      "why": "An Italian kitchen that makes its own cheese and ice cream. Have pasta, then the gelato — the in-house work is the reason to choose it over the pizza places on 27th Main.",
-      "quality": 4,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-sapna-book-house-25861-155164",
-      "title": "Sapna Book House",
-      "type": "books",
-      "zone": "jayanagar",
-      "coords": [
-        12.93067,
-        77.58178
-      ],
-      "area": "14, 27th Cross, 4th Block, Jayanagar",
-      "url": "https://www.sapnaonline.com/",
-      "categories": [
-        "books",
-        "shop"
-      ],
-      "goodFor": [
-        "afternoon",
-        "rain"
-      ],
-      "priceLevel": 1,
-      "booking": false,
-      "uniqueness": 3,
-      "source": "Wikipedia (Sapna Book House); branch position from OpenStreetMap",
-      "match": {
-        "name": "Sapna Book House",
-        "zone": "jayanagar",
-        "type": "books"
-      },
-      "why": "The Jayanagar branch of the bookseller Suresh Shah started near Majestic in 1967. Sapna has since become the largest Kannada-language publisher, and the Limca Book of Records listed it as India's largest bookstore. Come for the Kannada shelves, which few other shops can match, and for textbooks at ordinary prices.",
-      "quality": 3,
-      "lastVerified": "2026-10-01",
-      "indoor": true
-    },
-    {
-      "id": "osm-sreenivasa-brahmins-bakery-25887-155136",
-      "title": "Sreenivasa Brahmins Bakery",
-      "type": "bakery",
-      "zone": "basavanagudi",
-      "coords": [
-        12.94343,
-        77.56775
-      ],
-      "area": "Abalashram building, DVG Road, Basavanagudi",
-      "url": "https://sreenivasabrahminbakery.com/",
-      "categories": [
-        "food",
-        "bakery"
-      ],
-      "goodFor": [
-        "morning",
-        "cheap"
-      ],
-      "labels": [
-        "cheap"
-      ],
-      "priceLevel": 1,
-      "booking": false,
-      "quality": 4,
-      "uniqueness": 4,
-      "source": "sreenivasabrahminbakery.com; position from OpenStreetMap",
-      "match": {
-        "name": "Sreenivasa Brahmins Bakery",
-        "zone": "basavanagudi",
-        "type": "bakery"
-      },
-      "why": "A family bakery on DVG Road since 1956, a few minutes' walk from Vidyarthi Bhavan and Gandhi Bazaar. It sells the old Bengaluru bakery range of buns, biscuits and savoury namkeen. Buy a bag of biscuits on the way to breakfast and eat them later with tea.",
-      "lastVerified": "2026-10-01",
-      "indoor": true
-    },
-    {
-      "id": "osm-glen-s-bakehouse-25876-155252",
-      "title": "Glen's Bakehouse",
-      "type": "bakery",
-      "zone": "koramangala",
-      "coords": [
-        12.93794,
-        77.62621
-      ],
-      "area": "616, 17th Main, 80 Feet Road, 6th Block",
-      "url": "https://www.glensbakehouse.com/",
-      "categories": [
-        "food",
-        "bakery"
-      ],
-      "goodFor": [
-        "afternoon",
-        "group"
-      ],
-      "priceLevel": 2,
-      "booking": false,
-      "source": "glensbakehouse.com; position from OpenStreetMap",
-      "match": {
-        "name": "Glen's Bakehouse",
-        "zone": "koramangala",
-        "type": "bakery"
-      },
-      "why": "A Bengaluru bakery café that has grown into a chain of about fifteen outlets in the city. The Koramangala branch is the neighbourhood's easy afternoon stop for a cake and a coffee. Go for a pastry rather than a meal.",
-      "quality": 3,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01",
-      "indoor": true
-    },
-    {
-      "id": "osm-crossword-25982-155142",
-      "title": "CrossWord",
-      "type": "books",
-      "zone": "malleswaram",
-      "coords": [
-        12.99117,
-        77.57096
-      ],
-      "area": "LG-34, Mantri Square, Sampige Road",
-      "url": "https://www.crossword.in/",
-      "categories": [
-        "books",
-        "shop"
-      ],
-      "goodFor": [
-        "evening",
-        "rain"
-      ],
-      "priceLevel": 2,
-      "booking": false,
-      "source": "crossword.in; position from OpenStreetMap",
-      "match": {
-        "name": "CrossWord",
-        "zone": "malleswaram",
-        "type": "books"
-      },
-      "why": "A big chain bookshop on the lower ground floor of the Mantri Square mall. It is useful because it is large and open late, and it is next to the metro. Come for new releases and children's books, and go to an independent shop for anything you want to linger over.",
-      "quality": 3,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01",
-      "indoor": true
-    },
-    {
-      "id": "osm-crossword-25920-155497",
-      "title": "Crossword",
-      "type": "books",
-      "zone": "whitefield",
-      "coords": [
-        12.95995,
-        77.74829
-      ],
-      "area": "Forum Value Mall, Whitefield",
-      "url": "https://www.crossword.in/",
-      "categories": [
-        "books",
-        "shop"
-      ],
-      "goodFor": [
-        "evening",
-        "rain"
-      ],
-      "priceLevel": 2,
-      "booking": false,
-      "source": "crossword.in; position from OpenStreetMap",
-      "match": {
-        "name": "Crossword",
-        "zone": "whitefield",
-        "type": "books"
-      },
-      "why": "Whitefield's one large bookshop, an open-plan Crossword inside the Forum Value Mall. Come for new releases and children's books.",
-      "quality": 3,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01",
-      "indoor": true
-    },
-    {
-      "id": "osm-chinita-25842-155369",
-      "title": "Chinita",
-      "type": "restaurant",
-      "zone": "bellanduru",
-      "coords": [
-        12.92084,
-        77.68437
-      ],
-      "area": "Kiosk 1, Deck Floor, Campus 6B, RMZ Ecoworld",
-      "url": "https://www.chinita.in/",
-      "cuisine": "mexican",
-      "goodFor": [
-        "lunch",
-        "cheap"
-      ],
-      "priceLevel": 2,
-      "booking": false,
-      "quality": 4,
-      "source": "chinita.in; position from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Chinita",
-        "zone": "bellanduru",
-        "type": "restaurant"
-      },
-      "why": "The Ecoworld kiosk of the Mexican kitchen that has been cooking from scratch in Bengaluru since 2012. It is the best lunch inside the tech park. Order tacos and eat them in the sun on the deck.",
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01",
-      "indoor": true
-    },
-    {
-      "id": "osm-biergarten-25860-155371",
-      "title": "Biergarten",
-      "type": "nightlife",
-      "zone": "bellanduru",
-      "coords": [
-        12.9299,
-        77.68545
-      ],
-      "area": "57/2/10, Bellandur–Doddakannelli Road, by RMZ Ecoworld",
-      "url": "https://biergarten.co.in/",
-      "categories": [
-        "nightlife",
-        "food"
-      ],
-      "hours": "Mo-Fr 12:00-24:00; Sa,Su 12:00-01:00",
-      "hoursFrom": "biergarten.co.in",
-      "goodFor": [
-        "evening",
-        "group"
-      ],
-      "indoor": false,
-      "priceLevel": 3,
-      "booking": "unknown",
-      "quality": 4,
-      "source": "biergarten.co.in; position from OpenStreetMap",
-      "match": {
-        "name": "Biergarten",
-        "zone": "bellanduru",
-        "type": "nightlife"
-      },
-      "why": "A brewpub in the German beer-garden style that brews its lagers, wheat beers and IPAs in-house. The Bellandur branch is its largest and leafiest, with long communal tables. Order the hefeweizen and a dunkel to compare, and come on a weekday evening.",
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01"
-    },
-    {
-      "id": "osm-sharief-bhai-25838-155337",
-      "title": "Sharief Bhai",
-      "type": "restaurant",
-      "zone": "bellanduru",
-      "coords": [
-        12.91919,
-        77.66864
-      ],
-      "area": "Sarjapur Road, Bellandur",
-      "url": "https://www.shariefbhai.com/",
-      "cuisine": "biryani",
-      "goodFor": [
-        "lunch",
-        "evening",
-        "cheap"
-      ],
-      "priceLevel": 2,
-      "booking": false,
-      "source": "shariefbhai.com; position from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Sharief Bhai",
-        "zone": "bellanduru",
-        "type": "restaurant"
-      },
-      "why": "Dakhni biryani — the Deccan Muslim household style, sealed and slow-cooked on dum with short-grained jeerakasala rice. The chain began as a single Bengaluru kitchen in 2017. Order the mutton dum biryani; the kofta biryani is the unusual one.",
-      "quality": 3,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01",
-      "indoor": true
-    },
-    {
-      "id": "osm-beijing-bites-25837-155341",
-      "title": "Beijing Bites",
-      "type": "restaurant",
-      "zone": "bellanduru",
-      "coords": [
-        12.91856,
-        77.67047
-      ],
-      "area": "Sarjapur Road, Bellandur",
-      "url": "https://beijingbites.com",
-      "cuisine": "chinese",
-      "hours": "Mo-Su 12:00-15:45,19:00-23:00",
-      "hoursFrom": "openstreetmap",
-      "goodFor": [
-        "evening",
-        "cheap",
-        "group"
-      ],
-      "priceLevel": 2,
-      "booking": false,
-      "source": "beijingbites.com; hours from OpenStreetMap",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Beijing Bites",
-        "zone": "bellanduru",
-        "type": "restaurant"
-      },
-      "why": "Bengaluru's own Indian-Chinese neighbourhood chain, running for more than twenty years and with over thirty branches. Expect the city's version of Chinese food rather than China's. Order Hunan tofu and a plate of noodles for a cheap, reliable weeknight dinner.",
-      "quality": 3,
-      "uniqueness": 3,
-      "lastVerified": "2026-10-01",
-      "indoor": true
-    },
-    {
-      "id": "farmlore",
-      "title": "FarmLore",
-      "type": "restaurant",
-      "zone": "yelahanka",
-      "coords": [
-        13.127519,
-        77.639262
-      ],
-      "area": "Bagalur Road, beyond the airport road",
-      "url": "https://www.farmlore.in/",
-      "cuisine": "tasting menu",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Farmlore",
-        "zone": "yelahanka",
-        "type": "restaurant"
-      },
-      "why": "A tasting-menu restaurant on a 33-acre estate north of the city, cooking with fire and with what the season and the land give. It's a journey out past Yelahanka, so make it the whole evening and book well ahead. This is the one to save for an occasion.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "evening",
-        "couple"
-      ],
-      "labels": [
-        "bookahead"
-      ],
-      "source": "the venue's own website; position from OpenStreetMap",
-      "lastVerified": "2026-10-12"
-    },
-    {
-      "id": "naru-noodle-bar",
-      "title": "Naru Noodle Bar",
-      "type": "restaurant",
-      "zone": "shanti-nagar",
-      "coords": [
-        12.958405,
-        77.59289
-      ],
-      "area": "Kengal Hanumanthaiah Road",
-      "url": "https://www.narunoodlebar.com/",
-      "hours": "Tu 18:30-20:30; We-Su 12:30-14:30,18:30-20:30",
-      "hoursFrom": "openstreetmap",
-      "cuisine": "ramen",
-      "categories": [
-        "food"
-      ],
-      "match": {
-        "name": "Naru Noodle Bar",
-        "zone": "shanti-nagar",
-        "type": "restaurant"
-      },
-      "why": "A twenty-seat ramen counter that started as a lockdown delivery kitchen and a run of pop-ups. You sit at the bar and watch the bowls being built. Seats go through online reservations and disappear fast, so book the moment the slots open rather than turning up.",
-      "quality": 4,
-      "uniqueness": 4,
-      "goodFor": [
-        "evening",
-        "friends"
-      ],
-      "labels": [
-        "bookahead"
-      ],
-      "source": "the venue's own website; hours and position from OpenStreetMap",
-      "lastVerified": "2026-10-12"
-    }
-  ]
+ "generated": "2026-10-01",
+ "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: Wikidata holds three cafes in the whole of Bengaluru and no open dataset in India describes everyday food. See SOURCES.md.",
+ "rules": [
+  "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
+  "Say what to order and when to go. 'Lovely atmosphere' helps nobody.",
+  "No opening hours in prose. OpenStreetMap carries them, js/hours.js reads them, and a time written here is a time that rots.",
+  "quality and uniqueness cap at 4 here. 5 is reserved for somewhere one of you actually loved.",
+  "Always pin `match` with a zone. A chain with fourteen branches will otherwise resolve to whichever one the index happened to list first."
+ ],
+ "items": [
+  {
+   "id": "osm-vidyarthi-bhavan-25890-155143",
+   "title": "Vidyarthi Bhavan",
+   "type": "restaurant",
+   "zone": "basavanagudi",
+   "coords": [
+    12.94501,
+    77.57147
+   ],
+   "area": "Gandhi Bazaar Main Road, Basavanagudi",
+   "url": "https://vidyarthibhavan.in",
+   "hours": "Mo-Th 06:30-11:30, Mo-Th 14:00-20:00, Sa-Su 06:30-12:00, Sa-Su 14:30-20:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Vidyarthi Bhavan",
+    "zone": "basavanagudi",
+    "type": "restaurant"
+   },
+   "why": "Gandhi Bazaar since 1943, opened to feed students at the National College up the road — Vidyarthi Bhavan means student house. The benne masala dosa is the order and it is fried in enough butter to be a decision. Expect to give your name, wait on the pavement and share a table. Go on a weekday morning; weekends are a different and worse experience.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia; Karnataka Tourism; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-09-18",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/VidyarthiBhavanEntrance.jpg/500px-VidyarthiBhavanEntrance.jpg",
+   "imageSubject": "Vidyarthi Bhavan",
+   "imageKind": "subject",
+   "imageCredit": "User:Sarvagnya · CC BY 2.5"
+  },
+  {
+   "id": "osm-mavalli-tiffin-rooms-25910-155171",
+   "title": "Mavalli Tiffin Rooms",
+   "type": "restaurant",
+   "zone": "shanti-nagar",
+   "coords": [
+    12.95504,
+    77.58543
+   ],
+   "area": "Lalbagh Road",
+   "url": "https://www.mavallitiffinrooms.com/",
+   "hours": "Tu-Su 06:30-11:00, 12:30-21:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Mavalli Tiffin Rooms",
+    "zone": "shanti-nagar",
+    "type": "restaurant"
+   },
+   "why": "Founded in 1924 by two brothers from Udupi as the Brahmins' Coffee Club on Lalbagh Fort Road, MTR is known for popularising the rava idli. Order that, and the filter coffee.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Mavalli_Tiffin_Room_(6)%2C_Lalbagh_Road%2C_Bengaluru.jpg/500px-Mavalli_Tiffin_Room_(6)%2C_Lalbagh_Road%2C_Bengaluru.jpg",
+   "imageSubject": "Mavalli Tiffin Rooms",
+   "imageKind": "subject",
+   "imageCredit": "Gpkp · CC BY-SA 4.0"
+  },
+  {
+   "id": "osm-koshy-s-25951-155203",
+   "title": "Koshy's",
+   "type": "restaurant",
+   "zone": "shivajinagar",
+   "coords": [
+    12.97563,
+    77.60148
+   ],
+   "area": "Saint Mark's Road",
+   "url": null,
+   "hours": "09:00 - 23:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Koshy's",
+    "zone": "shivajinagar",
+    "type": "restaurant"
+   },
+   "why": "A family-run café where Nehru, Queen Elizabeth II and Khrushchev have eaten, and where journalists and writers still gather. Order tea and something off the old menu.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Koshys.jpg/500px-Koshys.jpg",
+   "imageSubject": "Koshy's",
+   "imageKind": "subject",
+   "imageCredit": "Atr hugo · CC BY-SA 4.0"
+  },
+  {
+   "id": "osm-shree-sagar-ctr-25997-155139",
+   "title": "Shree Sagar CTR",
+   "type": "restaurant",
+   "zone": "malleswaram",
+   "coords": [
+    12.99826,
+    77.56949
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Shree Sagar CTR",
+    "zone": "malleswaram",
+    "type": "restaurant"
+   },
+   "why": "Central Tiffin Room, or Sri Sagar, a Malleswaram restaurant from the 1920s famous for its masala dosa, with or without butter. Get the butter one.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-lalbagh-botanical-gardens-25898-155173",
+   "title": "Lalbagh Botanical Gardens",
+   "type": "park",
+   "zone": "shanti-nagar",
+   "coords": [
+    12.94889,
+    77.58667
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Lalbagh Botanical Gardens",
+    "zone": "shanti-nagar",
+    "type": "park"
+   },
+   "why": "Hyder Ali's garden from 1760, later run by British superintendents, with a glass house from 1890 that still holds the flower shows around Republic and Independence Days.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Glass_house_Lalbagh.jpg/500px-Glass_house_Lalbagh.jpg",
+   "imageSubject": "Lal Bagh",
+   "imageKind": "subject",
+   "imageCredit": "Jyothi Sundar · CC BY 4.0"
+  },
+  {
+   "id": "osm-cubbon-park-25948-155187",
+   "title": "Cubbon Park",
+   "type": "park",
+   "zone": "richmond-town",
+   "coords": [
+    12.97417,
+    77.59341
+   ],
+   "area": null,
+   "url": "https://cubbonpark.in/",
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Cubbon Park",
+    "zone": "richmond-town",
+    "type": "park"
+   },
+   "why": "The city's central park, officially Sri Chamarajendra Park, named after commissioner Sir Mark Cubbon. Walk it in the morning.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Cubbon_Park_W.jpg/500px-Cubbon_Park_W.jpg",
+   "imageSubject": "Cubbon Park",
+   "imageKind": "subject",
+   "imageCredit": "Augustus Binu/ facebook · CC BY-SA 3.0"
+  },
+  {
+   "id": "osm-champaca-bookstore-library-cafe-25975-155192",
+   "title": "Champaca Bookstore, Library & Cafe",
+   "type": "cafe",
+   "zone": "vasanth-nagar",
+   "coords": [
+    12.98735,
+    77.59599
+   ],
+   "area": "Edward Road",
+   "url": "https://www.champaca.in/",
+   "hours": "Tu-Su 11:00-19:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Champaca Bookstore, Library & Cafe",
+    "zone": "vasanth-nagar",
+    "type": "cafe"
+   },
+   "why": "A bookshop run by booksellers who post their own recommendations, with a children's library and a café. Browse, then sit with a coffee.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-blossom-book-house-25950-155210",
+   "title": "Blossom Book House",
+   "type": "books",
+   "zone": "shivajinagar",
+   "coords": [
+    12.97482,
+    77.60522
+   ],
+   "area": "Church Street",
+   "url": "https://www.blossombookhouse.in/",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Blossom Book House",
+    "zone": "shivajinagar",
+    "type": "books"
+   },
+   "why": "A bookshop with shelves across almost every subject, from fiction and history to Kannada novels and author-signed copies. Give yourself an hour.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-toit-25959-155281",
+   "title": "Toit",
+   "type": "nightlife",
+   "zone": "indiranagar",
+   "coords": [
+    12.97941,
+    77.64063
+   ],
+   "area": "100 Feet Road",
+   "url": "https://toit.in/",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Toit",
+    "zone": "indiranagar",
+    "type": "nightlife"
+   },
+   "why": "The Indiranagar brewpub that brews its own range, from Tint-in-Wit to Basmati Blonde and a nitro stout. Order a taster of the house beers.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30",
+   "i": "0/03/Indiranagar_Shopping_Hundred_Feet_Road,_Indiranagar_Bangalore_by_night.JPG",
+   "ik": "c"
+  },
+  {
+   "id": "osm-ulsoor-lake-park-25971-155244",
+   "title": "Ulsoor Lake Park",
+   "type": "park",
+   "zone": "halasuru",
+   "coords": [
+    12.9854,
+    77.62218
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "park"
+   ],
+   "match": {
+    "name": "Ulsoor Lake Park",
+    "zone": "halasuru",
+    "type": "park"
+   },
+   "why": "Ulsoor Lake, one of the city's biggest lakes, near MG Road, spread over fifty hectares with several islands. Walk the edge at sunset.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30",
+   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Ulsoor_lake_Bangalore_India.jpg/500px-Ulsoor_lake_Bangalore_India.jpg",
+   "imageSubject": "Ulsoor Lake",
+   "imageKind": "context",
+   "imageCredit": "Ramesh NG from Bangalore, INDIA · CC BY-SA 2.0"
+  },
+  {
+   "id": "osm-city-market-25931-155153",
+   "title": "City Market",
+   "type": "market",
+   "zone": "chikkapete",
+   "coords": [
+    12.96571,
+    77.57627
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "City Market",
+    "zone": "chikkapete",
+    "type": "market"
+   },
+   "why": "K R Market, the city's largest wholesale market and one of Asia's biggest flower markets, beside Tipu Sultan's Summer Palace. Go early for the flowers.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30",
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/K.R._Market.jpg/500px-K.R._Market.jpg",
+   "imageSubject": "K. R. Market",
+   "imageKind": "subject",
+   "imageCredit": "Pp391 · CC BY-SA 3.0"
+  },
+  {
+   "id": "osm-albert-bakery-25993-155228",
+   "title": "Albert Bakery",
+   "type": "bakery",
+   "zone": "frazer-town",
+   "coords": [
+    12.9966,
+    77.61422
+   ],
+   "area": "Mosque Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Albert Bakery",
+    "zone": "frazer-town",
+    "type": "bakery"
+   },
+   "why": "A Fraser Town bakery on Mosque Road, founded in 1902 and named after Prince Albert, known for savoury snacks and, during Ramzan, its brain puffs.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-blue-tokai-coffee-roasters-26014-155158",
+   "title": "Blue Tokai Coffee Roasters",
+   "type": "cafe",
+   "zone": "sadashivanagar",
+   "coords": [
+    13.00692,
+    77.57898
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Tokai Coffee Roasters",
+    "zone": "sadashivanagar",
+    "type": "cafe"
+   },
+   "why": "A café of the Indian roaster that buys from more than eighty coffee estates and smallholders. Ask what single estate is on the bar.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-brahmin-s-coffee-bar-25908-155138",
+   "title": "Brahmin's Coffee Bar",
+   "type": "restaurant",
+   "zone": "chamarajapete",
+   "coords": [
+    12.95394,
+    77.56881
+   ],
+   "area": "2nd Cross Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Brahmin's Coffee Bar",
+    "zone": "chamarajapete",
+    "type": "restaurant"
+   },
+   "why": "A Basavanagudi tiffin bar from 1965, one of the old vegetarian eating houses that came before the city's darshinis. Stand at the counter for idli, vada and coffee.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-lavonne-cafe-25934-155274",
+   "title": "Lavonne Café",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.96693,
+    77.63689
+   ],
+   "area": "3rd Cross Road",
+   "url": "https://lavonne.in/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Lavonne Café",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "The café of Lavonne, a baking and pastry academy teaching since 2012, so the pastries are the point. Come for breakfast.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-kopitiam-lah-25940-155276",
+   "title": "Kopitiam Lah",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.96983,
+    77.63808
+   ],
+   "area": "12th Main Road",
+   "url": "https://www.kopitiamlah.com/",
+   "hours": "Tu-Su 08:30-11:30,12:30-16:30",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "malaysian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Kopitiam Lah",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "India's first kopitiam, a Malaysian coffee shop and eatery in the tradition of Malaysia's old coffee houses. Order a kopi.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-yauatcha-25947-155241",
+   "title": "Yauatcha",
+   "type": "restaurant",
+   "zone": "halasuru",
+   "coords": [
+    12.97329,
+    77.62036
+   ],
+   "area": "Mahatma Gandhi Road",
+   "url": "https://yauatcha.com/bengaluru/",
+   "cuisine": "cantonese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Yauatcha",
+    "zone": "halasuru",
+    "type": "restaurant"
+   },
+   "why": "The Bengaluru branch of the Soho dim sum teahouse, in MG Road Mall, open all day. Order dim sum and something from the patisserie.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-malgudi-mylari-mane-25875-155235",
+   "title": "Malgudi Mylari Mane",
+   "type": "restaurant",
+   "zone": "koramangala",
+   "coords": [
+    12.93744,
+    77.61765
+   ],
+   "area": null,
+   "url": "http://www.malgudimylari.com/",
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Malgudi Mylari Mane",
+    "zone": "koramangala",
+    "type": "restaurant"
+   },
+   "why": "A Karnataka restaurant serving traditional vegetarian and non-vegetarian food, with branches in Koramangala and on the Mangalore highway.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-the-bier-library-25878-155253",
+   "title": "The Bier Library",
+   "type": "nightlife",
+   "zone": "koramangala",
+   "coords": [
+    12.93912,
+    77.62625
+   ],
+   "area": "Patel Narayana Reddy Layout",
+   "url": "https://www.thebierlibrary.in/",
+   "hours": "Mo-Su 12:00-1:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "The Bier Library",
+    "zone": "koramangala",
+    "type": "nightlife"
+   },
+   "why": "A Koramangala brewpub built around its own craft beer and a comfortable room. Order a flight.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-pizza-4p-s-25940-155272",
+   "title": "Pizza 4P's",
+   "type": "restaurant",
+   "zone": "indiranagar",
+   "coords": [
+    12.97005,
+    77.63611
+   ],
+   "area": "12th Main Road",
+   "url": "https://pizza4ps.com",
+   "cuisine": "pizza",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Pizza 4P's",
+    "zone": "indiranagar",
+    "type": "restaurant"
+   },
+   "why": "The Indian branch of Pizza 4P's, the pizza restaurant that began in Vietnam. Order a pizza to share.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-koko-25921-155296",
+   "title": "KOKO",
+   "type": "restaurant",
+   "zone": "kodihalli",
+   "coords": [
+    12.96039,
+    77.64791
+   ],
+   "area": null,
+   "url": "https://www.kokorestaurants.com/",
+   "cuisine": "asian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "KOKO",
+    "zone": "kodihalli",
+    "type": "restaurant"
+   },
+   "why": "An Asian gastropub with branches in Mumbai and Hyderabad, and a bar in its Bengaluru room. Book for dinner and cocktails.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-arbor-brewing-company-25941-155222",
+   "title": "Arbor Brewing Company",
+   "type": "nightlife",
+   "zone": "austin-town",
+   "coords": [
+    12.97031,
+    77.61098
+   ],
+   "area": "Magrath Road",
+   "url": "https://www.arborbrewing.in/",
+   "hours": "12:00-23:30",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "Arbor Brewing Company",
+    "zone": "austin-town",
+    "type": "nightlife"
+   },
+   "why": "India's first American craft brewery, opened in 2012 and one of the breweries the city's beer scene is known for. Ask what is new on tap.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-6oz-coffee-and-roasters-25975-155242",
+   "title": "6oz Coffee and Roasters",
+   "type": "cafe",
+   "zone": "halasuru",
+   "coords": [
+    12.9876,
+    77.62084
+   ],
+   "area": null,
+   "url": "http://6oz.coffee",
+   "hours": "Mo-Su 09:00-22:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "6oz Coffee and Roasters",
+    "zone": "halasuru",
+    "type": "cafe"
+   },
+   "why": "A neighbourhood specialty coffee shop on Tank Road, Ulsoor, pouring espresso drinks, pour-overs and cold brew made with Indian beans.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-krumb-kraft-25926-155279",
+   "title": "Krumb Kraft",
+   "type": "bakery",
+   "zone": "kodihalli",
+   "coords": [
+    12.96318,
+    77.63967
+   ],
+   "area": null,
+   "url": "https://krumbkraft.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Krumb Kraft",
+    "zone": "kodihalli",
+    "type": "bakery"
+   },
+   "why": "A sourdough bakehouse making breads, crackers, cakes and preserves without additives. Buy a loaf.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-amintiri-25823-155289",
+   "title": "Amintiri",
+   "type": "cafe",
+   "zone": "hsr-layout",
+   "coords": [
+    12.91173,
+    77.64446
+   ],
+   "area": null,
+   "url": "https://amintiri.in/",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Amintiri",
+    "zone": "hsr-layout",
+    "type": "cafe"
+   },
+   "why": "A bakery for celebration cakes, loaf cakes and French-style viennoiserie, with a café in HSR Layout. Order a pastry.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-nasi-and-mee-25870-155259",
+   "title": "Nasi and Mee",
+   "type": "restaurant",
+   "zone": "koramangala",
+   "coords": [
+    12.93507,
+    77.62928
+   ],
+   "area": "80 Feet Road, 4th Block",
+   "url": "https://www.nasiandmee.co.in/",
+   "cuisine": "asian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Nasi and Mee",
+    "zone": "koramangala",
+    "type": "restaurant"
+   },
+   "why": "A Southeast Asian restaurant for nasi, ramen, sushi and dim sum. Order a nasi goreng.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-the-reservoire-25867-155244",
+   "title": "The Reservoire",
+   "type": "nightlife",
+   "zone": "koramangala",
+   "coords": [
+    12.93339,
+    77.62224
+   ],
+   "area": "17th Main Road, 5th Block",
+   "url": "https://www.thereservoire.com",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "The Reservoire",
+    "zone": "koramangala",
+    "type": "nightlife"
+   },
+   "why": "A big Koramangala cocktail bar, opened in 2017 to bring a Manhattan-style cocktail culture to the city. Sit at the bar.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-oota-bangalore-25965-155443",
+   "title": "Oota Bangalore",
+   "type": "restaurant",
+   "zone": "epip-zone",
+   "coords": [
+    12.9824,
+    77.72171
+   ],
+   "area": "Whitefield, near ITPL",
+   "url": "https://oota.in/",
+   "hours": "Mo-Su 12:00-15:00,19:00-23:00; Sa-Su 08:00-11:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Oota Bangalore",
+    "zone": "epip-zone",
+    "type": "restaurant"
+   },
+   "why": "A restaurant built on hyper-local Karnataka cooking, named after the Kannada greeting 'Oota aita?' — have you eaten? Order across the regions of the state.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-lavonne-25980-155455",
+   "title": "Lavonne",
+   "type": "cafe",
+   "zone": "hoodi",
+   "coords": [
+    12.9898,
+    77.72766
+   ],
+   "area": "Whitefield",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Lavonne",
+    "zone": "hoodi",
+    "type": "cafe"
+   },
+   "why": "The Whitefield café of Lavonne, a baking and pastry academy teaching since 2012. Come in the morning for pastries and bread.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-lakeview-milk-bar-25936-155499",
+   "title": "Lakeview Milk Bar",
+   "type": "deli",
+   "zone": "whitefield",
+   "coords": [
+    12.96813,
+    77.74937
+   ],
+   "area": "Whitefield Main Road",
+   "url": "https://lakeviewmilkbar.in",
+   "hours": "10:30-13:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Lakeview Milk Bar",
+    "zone": "whitefield",
+    "type": "deli"
+   },
+   "why": "An ice-cream parlour that has been part of the city since before Independence. Order a sundae.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-blue-tokai-coffee-roasters-25970-155499",
+   "title": "Blue Tokai Coffee Roasters",
+   "type": "cafe",
+   "zone": "whitefield",
+   "coords": [
+    12.98518,
+    77.74974
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Tokai Coffee Roasters",
+    "zone": "whitefield",
+    "type": "cafe"
+   },
+   "why": "A café of the Indian roaster that buys from more than eighty coffee estates and smallholders. Ask what single estate is on the bar.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-the-rameshwaram-cafe-25813-155181",
+   "title": "The Rameshwaram Cafe",
+   "type": "restaurant",
+   "zone": "jp-nagar",
+   "coords": [
+    12.90651,
+    77.59059
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "regional",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Rameshwaram Cafe",
+    "zone": "jp-nagar",
+    "type": "restaurant"
+   },
+   "why": "A large-format darshini with ordering kiosks, one of the newcomers reshaping the city's standing-room South Indian eateries. Order at the kiosk and eat standing.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-bengaluru-cafe-25878-155168",
+   "title": "Bengaluru Cafe",
+   "type": "restaurant",
+   "zone": "basavanagudi",
+   "coords": [
+    12.93921,
+    77.5839
+   ],
+   "area": "9th Cross, Jayanagar 2nd Block",
+   "url": null,
+   "cuisine": "south_indian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Bengaluru Cafe",
+    "zone": "basavanagudi",
+    "type": "restaurant"
+   },
+   "why": "A newer darshini with rustic interiors and a more modern look than the old eating houses. Order a dosa at the counter.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-taaza-thindi-25845-155186",
+   "title": "Taaza Thindi",
+   "type": "restaurant",
+   "zone": "jayanagar",
+   "coords": [
+    12.92261,
+    77.5932
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": "indian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Taaza Thindi",
+    "zone": "jayanagar",
+    "type": "restaurant"
+   },
+   "why": "A Jayanagar darshini, one of the newer, rustic-looking standing-room eateries. Order idli, vada and coffee at the counter.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-blue-tokai-coffee-roasters-25845-155169",
+   "title": "Blue Tokai Coffee Roasters",
+   "type": "cafe",
+   "zone": "jayanagar",
+   "coords": [
+    12.92237,
+    77.5846
+   ],
+   "area": "10th Main Road, Jayanagar",
+   "url": "https://bluetokaicoffee.com/",
+   "hours": "Mo-Su 08:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Tokai Coffee Roasters",
+    "zone": "jayanagar",
+    "type": "cafe"
+   },
+   "why": "A café of the Indian roaster that buys from more than eighty coffee estates and smallholders. Ask what single estate is on the bar.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-the-biere-club-25942-155195",
+   "title": "The Biere Club",
+   "type": "nightlife",
+   "zone": "richmond-town",
+   "coords": [
+    12.97096,
+    77.59756
+   ],
+   "area": "Vittal Mallya Road",
+   "url": "http://www.thebiereclub.com/",
+   "hours": "11:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "nightlife"
+   ],
+   "match": {
+    "name": "The Biere Club",
+    "zone": "richmond-town",
+    "type": "nightlife"
+   },
+   "why": "A brewpub just off UB City inspired by a roomy British pub, with its own beers and food. Order a taster of the house brews.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [
+    "afterwork"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "osm-russel-market-25970-155212",
+   "title": "Russel Market",
+   "type": "market",
+   "zone": "shivajinagar",
+   "coords": [
+    12.98505,
+    77.60587
+   ],
+   "area": "AM Road",
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Russel Market",
+    "zone": "shivajinagar",
+    "type": "market"
+   },
+   "why": "The Cantonment's covered market, built by the British in 1927 and named for municipal commissioner T. B. Russell. Walk the produce and meat halls under the old roof, then out into Shivajinagar's streets.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-yeshwanthpur-apmc-market-26032-155090",
+   "title": "Yeshwanthpur APMC Market",
+   "type": "market",
+   "zone": "mahalakshmi-layout",
+   "coords": [
+    13.01589,
+    77.54514
+   ],
+   "area": null,
+   "url": null,
+   "hours": "Mo-Su 05:30-13:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Yeshwanthpur APMC Market",
+    "zone": "mahalakshmi-layout",
+    "type": "market"
+   },
+   "why": "The city's biggest wholesale yard for farm produce. This is where Bengaluru's vegetables arrive, so go early, while the trading is on.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-murphy-town-market-25958-155255",
+   "title": "Murphy Town Market",
+   "type": "market",
+   "zone": "halasuru",
+   "coords": [
+    12.97889,
+    77.62767
+   ],
+   "area": null,
+   "url": null,
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Murphy Town Market",
+    "zone": "halasuru",
+    "type": "market"
+   },
+   "why": "Hoysala Nagara's neighbourhood market, known for its butchers and fishmongers, with one provisions shop, VM Stores, about a century old. One of the old Cantonment markets campaigners fought to save from demolition.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-the-rameshwaram-cafe-25964-155282",
+   "title": "The Rameshwaram Cafe",
+   "type": "restaurant",
+   "zone": "indiranagar",
+   "coords": [
+    12.9818,
+    77.64097
+   ],
+   "area": "847/A, 100 Feet Road, Indiranagar",
+   "url": "https://therameshwaramcafe.org",
+   "cuisine": "regional",
+   "hours": "05:00-01:00",
+   "hoursFrom": "openstreetmap",
+   "goodFor": [
+    "morning",
+    "cheap",
+    "late"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "priceLevel": 1,
+   "durationMin": 30,
+   "booking": false,
+   "indoor": true,
+   "source": "therameshwaramcafe.org; address and hours from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Rameshwaram Cafe",
+    "zone": "indiranagar",
+    "type": "restaurant"
+   },
+   "why": "A standing-room South Indian counter that started as street food in 2012 and became one of the city's busiest breakfasts. The order is ghee podi idli and a ghee masala dosa, then filter coffee. You pay at the till, collect at the counter and eat standing. Go early on a weekday, before the queue reaches the pavement.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-navathanyam-25933-155274",
+   "title": "Navathanyam",
+   "type": "restaurant",
+   "zone": "indiranagar",
+   "coords": [
+    12.96662,
+    77.63698
+   ],
+   "area": "288, 3rd Cross Road, Indiranagar",
+   "url": "https://navathanyam.com/",
+   "cuisine": "regional",
+   "hours": "11:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": "unknown",
+   "source": "navathanyam.com; address and hours from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Navathanyam",
+    "zone": "indiranagar",
+    "type": "restaurant"
+   },
+   "why": "A South Indian kitchen built around the nine traditional grains, which makes it the place in Indiranagar to try millet in a full meal rather than as health food. Order the grain dishes you would not cook at home, and come at lunch, when the room is calmer.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-chinita-25962-155274",
+   "title": "Chinita",
+   "type": "restaurant",
+   "zone": "indiranagar",
+   "coords": [
+    12.98105,
+    77.63714
+   ],
+   "area": "218 Double Road, near the BDA Complex",
+   "url": "https://www.chinita.in/",
+   "cuisine": "mexican",
+   "hours": "Tu-Su 12:30-15:30,19:30-23:00",
+   "hoursFrom": "openstreetmap",
+   "goodFor": [
+    "evening",
+    "couple",
+    "group"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "labels": [
+    "bookahead"
+   ],
+   "source": "chinita.in; hours from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Chinita",
+    "zone": "indiranagar",
+    "type": "restaurant"
+   },
+   "why": "Mexican food cooked from scratch since 2012, by a chef who learned it in New York and then in Mexico itself. It is the Mexican kitchen other Bengaluru restaurants are measured against. Order tacos and share plates, and book for a weekend dinner.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-german-brezelhaus-25965-155277",
+   "title": "German BrezelHaus",
+   "type": "bakery",
+   "zone": "indiranagar",
+   "coords": [
+    12.98246,
+    77.63845
+   ],
+   "area": "626, 2nd Main, 10th Cross, Binnamangala",
+   "url": "https://www.germanbrezelhaus.com/",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "cuisine": "german",
+   "hours": "Mo-Fr 09:00-22:30; Sa,Su 08:00-22:30",
+   "hoursFrom": "germanbrezelhaus.com",
+   "goodFor": [
+    "morning",
+    "cheap"
+   ],
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "source": "germanbrezelhaus.com; position from OpenStreetMap",
+   "match": {
+    "name": "German BrezelHaus",
+    "zone": "indiranagar",
+    "type": "bakery"
+   },
+   "why": "A German craft bakery where every pretzel is shaped by hand, using some ingredients brought from Europe. Buy a pretzel and a sugar-dusted Berliner, or stay for a deli sandwich. It opens early enough on weekends to serve as the first stop on a Saturday morning.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-sharon-tea-stall-25946-155294",
+   "title": "Sharon Tea Stall",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.97317,
+    77.64705
+   ],
+   "area": "Thippasandra Main Road, Indiranagar edge",
+   "url": "https://sharonteastall.com/",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "hours": "Mo-Sa 05:30-22:00; Su 16:00-22:00",
+   "hoursFrom": "openstreetmap",
+   "goodFor": [
+    "morning",
+    "cheap"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "priceLevel": 1,
+   "durationMin": 15,
+   "booking": false,
+   "indoor": false,
+   "source": "sharonteastall.com; hours from OpenStreetMap",
+   "match": {
+    "name": "Sharon Tea Stall",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "A local tea counter that now has twenty-five branches and claims a hundred kinds of tea. Skip the novelties and order a ginger-cardamom tea. Have it standing on the pavement, as the neighbourhood does, before the morning traffic starts.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-something-s-brewing-25938-155272",
+   "title": "Something's Brewing",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.96919,
+    77.63612
+   ],
+   "area": "3302 L, 12th A Main, HAL 2nd Stage",
+   "url": "https://somethingsbrewing.in/",
+   "categories": [
+    "food",
+    "coffee",
+    "shop"
+   ],
+   "goodFor": [
+    "morning",
+    "solo"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "source": "somethingsbrewing.in; position from OpenStreetMap",
+   "match": {
+    "name": "Something's Brewing",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "Half café, half coffee shop for home brewers. It sells beans from several Indian roasters — Broot, Maverick & Farmer, Siolim — and the equipment to brew them. Have one cup, then take home whichever bag you liked.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-the-kind-25940-155290",
+   "title": "The Kind",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.97021,
+    77.6448
+   ],
+   "area": "2985, 12th Main Road",
+   "url": "https://thekindindia.com/",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "hours": "08:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "goodFor": [
+    "morning",
+    "solo",
+    "work"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "source": "thekindindia.com; hours from OpenStreetMap",
+   "match": {
+    "name": "The Kind",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "A vegetarian roastery with a brew room on 12th Main, so the coffee is roasted on the premises. Ask what is fresh off the roaster and have it as a pour-over.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-copper-cloves-25956-155274",
+   "title": "Copper + Cloves",
+   "type": "cafe",
+   "zone": "indiranagar",
+   "coords": [
+    12.97785,
+    77.63709
+   ],
+   "area": "549A, 9th A Main Road",
+   "url": "https://copperandcloves.com",
+   "categories": [
+    "food"
+   ],
+   "cuisine": "plant_based",
+   "hours": "07:30-21:00",
+   "hoursFrom": "openstreetmap",
+   "goodFor": [
+    "lunch",
+    "morning"
+   ],
+   "labels": [
+    "veg"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "source": "copperandcloves.com; hours from OpenStreetMap",
+   "match": {
+    "name": "Copper + Cloves",
+    "zone": "indiranagar",
+    "type": "cafe"
+   },
+   "why": "A plant-based kitchen that cooks seasonal produce from scratch. Healthy food usually tastes like a compromise; this tastes like lunch. Go for a weekday lunch and order a bowl.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-champaca-25956-155274",
+   "title": "Champaca",
+   "type": "books",
+   "zone": "indiranagar",
+   "coords": [
+    12.97785,
+    77.63714
+   ],
+   "area": "594 A, 9th Main Road, Hoysala Nagar",
+   "url": "https://www.champaca.in/",
+   "categories": [
+    "books",
+    "culture",
+    "shop"
+   ],
+   "hours": "10:00-20:00",
+   "hoursFrom": "champaca.in",
+   "goodFor": [
+    "afternoon",
+    "solo",
+    "rain"
+   ],
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "uniqueness": 4,
+   "source": "champaca.in; position from OpenStreetMap",
+   "match": {
+    "name": "Champaca",
+    "zone": "indiranagar",
+    "type": "books"
+   },
+   "why": "An independent bookshop, library and café chosen with a sharp eye for Indian writing and small presses. There are author readings and children's read-alouds, and weekends are laptop-free, which makes it a good place to read for an hour. Come for the Indian non-fiction shelf and ask the staff what to read next.",
+   "quality": 4,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-atta-galatta-25960-155279",
+   "title": "Atta Galatta",
+   "type": "books",
+   "zone": "indiranagar",
+   "coords": [
+    12.9801,
+    77.63937
+   ],
+   "area": "178, 5th Main Road, 1st Stage",
+   "url": "https://attagalatta.com/",
+   "categories": [
+    "books",
+    "culture"
+   ],
+   "goodFor": [
+    "evening",
+    "weekend",
+    "rain"
+   ],
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": "unknown",
+   "uniqueness": 4,
+   "hoursNote": "Events most weeks; the calendar is the timetable",
+   "source": "attagalatta.com; position from OpenStreetMap",
+   "match": {
+    "name": "Atta Galatta",
+    "zone": "indiranagar",
+    "type": "books"
+   },
+   "why": "A bookshop for Indian-language books with an events space attached. Atta Galatta runs the Bengaluru Poetry Festival and keeps a calendar of readings, film clubs and neighbourhood walks. Look at the calendar first and come for an event, then browse the Kannada shelves.",
+   "quality": 4,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-manora-25956-155281",
+   "title": "Manora",
+   "type": "museum",
+   "zone": "indiranagar",
+   "coords": [
+    12.97782,
+    77.64067
+   ],
+   "area": "55, 9A Main, 100 Feet Road, 1st Stage",
+   "url": "https://gallerymanora.com/",
+   "categories": [
+    "culture",
+    "art",
+    "free"
+   ],
+   "goodFor": [
+    "afternoon",
+    "free",
+    "rain"
+   ],
+   "price": 0,
+   "priceLevel": 0,
+   "indoor": true,
+   "booking": false,
+   "uniqueness": 3,
+   "hoursNote": "Hours not published — call before going",
+   "source": "gallerymanora.com; position from OpenStreetMap",
+   "match": {
+    "name": "Manora",
+    "zone": "indiranagar",
+    "type": "museum"
+   },
+   "why": "A commercial gallery on 100 Feet Road that runs changing exhibitions and keeps a stockroom of work for sale. It is a free half hour of contemporary art between meals. Check what is on before you go.",
+   "quality": 4,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-goethe-institut-max-m-ller-bhavan-25957-155289",
+   "title": "Goethe-Institut Max Müller Bhavan",
+   "type": "culture",
+   "zone": "indiranagar",
+   "coords": [
+    12.97833,
+    77.64437
+   ],
+   "area": "716, CMH Road, Indiranagar 1st Stage",
+   "url": "https://www.goethe.de/ins/in/en/sta/ban.html",
+   "categories": [
+    "culture",
+    "film",
+    "free"
+   ],
+   "hours": "Tu-Sa 11:00-18:00",
+   "hoursFrom": "goethe.de (library)",
+   "goodFor": [
+    "afternoon",
+    "evening",
+    "free",
+    "rain"
+   ],
+   "priceLevel": 0,
+   "indoor": true,
+   "booking": "unknown",
+   "uniqueness": 4,
+   "source": "goethe.de; position from OpenStreetMap",
+   "match": {
+    "name": "Goethe-Institut Max Müller Bhavan",
+    "zone": "indiranagar",
+    "type": "culture"
+   },
+   "why": "The German cultural institute, in Bengaluru since 1961. It screens films and hosts concerts, exhibitions and talks, many of them free. The public library lends films, music and games as well as books. Check the events page for a screening, or spend a weekday afternoon in the library.",
+   "quality": 4,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-indiranagar-sangeetha-sabha-25945-155289",
+   "title": "Indiranagar Sangeetha Sabha",
+   "type": "culture",
+   "zone": "indiranagar",
+   "coords": [
+    12.97244,
+    77.64461
+   ],
+   "area": "Purandara Bhavana, 8th Main, 8th Cross, HAL 2nd Stage",
+   "url": "https://www.isangeethasabha.in/",
+   "categories": [
+    "culture",
+    "music"
+   ],
+   "goodFor": [
+    "evening",
+    "cheap"
+   ],
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": "unknown",
+   "uniqueness": 4,
+   "hoursNote": "Concerts by programme — the calendar is the timetable",
+   "source": "Wikipedia; isangeethasabha.in; position from OpenStreetMap",
+   "match": {
+    "name": "Indiranagar Sangeetha Sabha",
+    "zone": "indiranagar",
+    "type": "culture"
+   },
+   "why": "A music and dance school founded in 1986, whose hall, Purandara Bhavana, was opened by A. P. J. Abdul Kalam in 2004. It is the neighbourhood's place for a Carnatic recital or a dance programme, and tickets are often cheap or free. Watch for the annual six-day music and dance festival.",
+   "quality": 4,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-kaayal-25937-155301",
+   "title": "Kaayal",
+   "type": "restaurant",
+   "zone": "kodihalli",
+   "coords": [
+    12.96831,
+    77.65047
+   ],
+   "area": "1647/1, 2nd floor, Jeevan Bhima Nagar Main Road, opposite Miranda School",
+   "url": "https://www.kaayal.in/",
+   "cuisine": "regional",
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": "unknown",
+   "source": "kaayal.in; position from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Kaayal",
+    "zone": "kodihalli",
+    "type": "restaurant"
+   },
+   "why": "A Kerala restaurant that has been a reliable choice on the Jeevan Bhima Nagar side of Old Airport Road for years. Order appam with stew, or a fish curry with rice, and come at lunch when the meals are on.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-jamavar-25923-155297",
+   "title": "Jamavar",
+   "type": "restaurant",
+   "zone": "kodihalli",
+   "coords": [
+    12.96147,
+    77.64866
+   ],
+   "area": "Lobby level, The Leela Palace, Old Airport Road",
+   "url": "https://www.theleela.com/the-leela-palace-bengaluru/restaurants/jamavar",
+   "cuisine": "indian",
+   "hours": "12:00-15:00,19:00-23:30",
+   "hoursFrom": "theleela.com",
+   "goodFor": [
+    "evening",
+    "couple",
+    "special"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "priceLevel": 4,
+   "indoor": true,
+   "booking": true,
+   "coordsFrom": "home.json (The Leela Palace)",
+   "source": "theleela.com",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Jamavar",
+    "zone": "kodihalli",
+    "type": "restaurant"
+   },
+   "why": "The Leela Palace's Indian dining room is decorated with gold-leaf paintings and silver place settings. The menu covers royal Indian cooking from across the country. Order the raan and the house dal, and book ahead for a special dinner.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-the-registry-of-sarees-25912-155274",
+   "title": "The Registry of Sarees",
+   "type": "museum",
+   "zone": "kodihalli",
+   "coords": [
+    12.95618,
+    77.63688
+   ],
+   "area": "Domlur — by appointment",
+   "url": "https://theregistryofsarees.com/",
+   "categories": [
+    "culture",
+    "art"
+   ],
+   "goodFor": [
+    "afternoon",
+    "rain"
+   ],
+   "indoor": true,
+   "booking": true,
+   "uniqueness": 5,
+   "hoursNote": "By appointment — email before going",
+   "source": "theregistryofsarees.com; position from OpenStreetMap",
+   "match": {
+    "name": "The Registry of Sarees",
+    "zone": "kodihalli",
+    "type": "museum"
+   },
+   "why": "A research centre for handspun and handwoven textiles with two collections, one of them a large study of khadi, and a reference library. It is open to the public by appointment only. Write ahead and say what you want to see, and you will get a quiet hour with the textiles themselves.",
+   "quality": 4,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-the-hole-in-the-wall-cafe-25870-155251",
+   "title": "The Hole In The Wall Cafe",
+   "type": "cafe",
+   "zone": "koramangala",
+   "coords": [
+    12.93476,
+    77.62549
+   ],
+   "area": "3, 8th Main Road, 4th Block",
+   "url": "https://www.theholeinthewallcafe.org/",
+   "hours": "Tu-Su 08:00-21:00",
+   "hoursFrom": "theholeinthewallcafe.org",
+   "cuisine": "american",
+   "goodFor": [
+    "morning",
+    "weekend",
+    "group"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "source": "theholeinthewallcafe.org; position from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "The Hole In The Wall Cafe",
+    "zone": "koramangala",
+    "type": "cafe"
+   },
+   "why": "A Koramangala breakfast institution that began in 2009 as a no-frills garage. Order a full English breakfast or the pancakes, and get there before the weekend queue forms. It is closed on Mondays.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-kappa-chakka-kandhari-25881-155247",
+   "title": "Kappa Chakka Kandhari",
+   "type": "restaurant",
+   "zone": "koramangala",
+   "coords": [
+    12.94053,
+    77.62357
+   ],
+   "area": "438, 18th Main Road, 6th Block",
+   "url": "https://www.kappachakkakandhari.com/",
+   "cuisine": "regional",
+   "goodFor": [
+    "lunch",
+    "evening",
+    "group"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "priceLevel": 3,
+   "indoor": true,
+   "uniqueness": 4,
+   "source": "kappachakkakandhari.com; position from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Kappa Chakka Kandhari",
+    "zone": "koramangala",
+    "type": "restaurant"
+   },
+   "why": "Kerala home and toddy-shop cooking, built from three years of research in 265 homes and 70 toddy shops, with Chef Regi Mathew in charge of the kitchen. Order kappa with the kodampuli fish curry and finish with the cloud pudding. Book for dinner.",
+   "quality": 4,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-maverick-and-farmer-coffee-25871-155257",
+   "title": "Maverick and Farmer Coffee",
+   "type": "cafe",
+   "zone": "koramangala",
+   "coords": [
+    12.93535,
+    77.62842
+   ],
+   "area": "Koramangala 4th Block",
+   "url": "https://www.maverickandfarmer.com/",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "goodFor": [
+    "morning",
+    "solo",
+    "work"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "source": "maverickandfarmer.com; position from OpenStreetMap",
+   "match": {
+    "name": "Maverick and Farmer Coffee",
+    "zone": "koramangala",
+    "type": "cafe"
+   },
+   "why": "A farm-to-cup coffee brand that grows its beans on its own 140-acre estate in Pollibetta, Coorg, and roasts them daily in Bengaluru. Have a filter coffee made with the estate beans and take a bag home.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-babai-tiffins-25836-155289",
+   "title": "Babai Tiffins",
+   "type": "restaurant",
+   "zone": "hsr-layout",
+   "coords": [
+    12.91825,
+    77.64473
+   ],
+   "area": "8, 19th Main Road, 4th Sector",
+   "url": "https://www.babaitiffins.com/",
+   "cuisine": "regional",
+   "hours": "Mo-Su 07:00-01:00",
+   "hoursFrom": "babaitiffins.com",
+   "goodFor": [
+    "morning",
+    "cheap",
+    "late"
+   ],
+   "labels": [
+    "cheap",
+    "veg"
+   ],
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "source": "babaitiffins.com; position from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Babai Tiffins",
+    "zone": "hsr-layout",
+    "type": "restaurant"
+   },
+   "why": "An Andhra vegetarian tiffin house cooking the food of the Krishna and Godavari deltas, and it insists it is not generically South Indian. Order pesarattu and ghee karam idli in the morning, or gongura rice later in the day.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-brik-oven-25827-155290",
+   "title": "Brik Oven",
+   "type": "restaurant",
+   "zone": "hsr-layout",
+   "coords": [
+    12.91364,
+    77.64489
+   ],
+   "area": "1791, 19th Main Road, 1st Sector",
+   "url": "https://brikoven.com",
+   "cuisine": "pizza",
+   "goodFor": [
+    "evening",
+    "group"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": "unknown",
+   "source": "brikoven.com; position from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Brik Oven",
+    "zone": "hsr-layout",
+    "type": "restaurant"
+   },
+   "why": "Neapolitan-style pizza on a sourdough base fermented for two to three days and fired at 400°C, with mozzarella made in-house every day. Order a margherita first: it shows off the cheese.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-light-of-italy-25832-155302",
+   "title": "Light of Italy",
+   "type": "restaurant",
+   "zone": "hsr-layout",
+   "coords": [
+    12.91601,
+    77.65111
+   ],
+   "area": "669, 13th Cross, 27th Main Road, 1st Sector",
+   "url": "https://lightofitaly.com/",
+   "cuisine": "italian",
+   "goodFor": [
+    "evening",
+    "couple"
+   ],
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": "unknown",
+   "source": "lightofitaly.com; position from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Light of Italy",
+    "zone": "hsr-layout",
+    "type": "restaurant"
+   },
+   "why": "An Italian kitchen that makes its own cheese and ice cream. Have pasta, then the gelato — the in-house work is the reason to choose it over the pizza places on 27th Main.",
+   "quality": 4,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-sapna-book-house-25861-155164",
+   "title": "Sapna Book House",
+   "type": "books",
+   "zone": "jayanagar",
+   "coords": [
+    12.93067,
+    77.58178
+   ],
+   "area": "14, 27th Cross, 4th Block, Jayanagar",
+   "url": "https://www.sapnaonline.com/",
+   "categories": [
+    "books",
+    "shop"
+   ],
+   "goodFor": [
+    "afternoon",
+    "rain"
+   ],
+   "priceLevel": 1,
+   "booking": false,
+   "uniqueness": 3,
+   "source": "Wikipedia (Sapna Book House); branch position from OpenStreetMap",
+   "match": {
+    "name": "Sapna Book House",
+    "zone": "jayanagar",
+    "type": "books"
+   },
+   "why": "The Jayanagar branch of the bookseller Suresh Shah started near Majestic in 1967. Sapna has since become the largest Kannada-language publisher, and the Limca Book of Records listed it as India's largest bookstore. Come for the Kannada shelves, which few other shops can match, and for textbooks at ordinary prices.",
+   "quality": 3,
+   "lastVerified": "2026-10-01",
+   "indoor": true
+  },
+  {
+   "id": "osm-sreenivasa-brahmins-bakery-25887-155136",
+   "title": "Sreenivasa Brahmins Bakery",
+   "type": "bakery",
+   "zone": "basavanagudi",
+   "coords": [
+    12.94343,
+    77.56775
+   ],
+   "area": "Abalashram building, DVG Road, Basavanagudi",
+   "url": "https://sreenivasabrahminbakery.com/",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "goodFor": [
+    "morning",
+    "cheap"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "priceLevel": 1,
+   "booking": false,
+   "quality": 4,
+   "uniqueness": 4,
+   "source": "sreenivasabrahminbakery.com; position from OpenStreetMap",
+   "match": {
+    "name": "Sreenivasa Brahmins Bakery",
+    "zone": "basavanagudi",
+    "type": "bakery"
+   },
+   "why": "A family bakery on DVG Road since 1956, a few minutes' walk from Vidyarthi Bhavan and Gandhi Bazaar. It sells the old Bengaluru bakery range of buns, biscuits and savoury namkeen. Buy a bag of biscuits on the way to breakfast and eat them later with tea.",
+   "lastVerified": "2026-10-01",
+   "indoor": true
+  },
+  {
+   "id": "osm-glen-s-bakehouse-25876-155252",
+   "title": "Glen's Bakehouse",
+   "type": "bakery",
+   "zone": "koramangala",
+   "coords": [
+    12.93794,
+    77.62621
+   ],
+   "area": "616, 17th Main, 80 Feet Road, 6th Block",
+   "url": "https://www.glensbakehouse.com/",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "goodFor": [
+    "afternoon",
+    "group"
+   ],
+   "priceLevel": 2,
+   "booking": false,
+   "source": "glensbakehouse.com; position from OpenStreetMap",
+   "match": {
+    "name": "Glen's Bakehouse",
+    "zone": "koramangala",
+    "type": "bakery"
+   },
+   "why": "A Bengaluru bakery café that has grown into a chain of about fifteen outlets in the city. The Koramangala branch is the neighbourhood's easy afternoon stop for a cake and a coffee. Go for a pastry rather than a meal.",
+   "quality": 3,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01",
+   "indoor": true
+  },
+  {
+   "id": "osm-crossword-25982-155142",
+   "title": "CrossWord",
+   "type": "books",
+   "zone": "malleswaram",
+   "coords": [
+    12.99117,
+    77.57096
+   ],
+   "area": "LG-34, Mantri Square, Sampige Road",
+   "url": "https://www.crossword.in/",
+   "categories": [
+    "books",
+    "shop"
+   ],
+   "goodFor": [
+    "evening",
+    "rain"
+   ],
+   "priceLevel": 2,
+   "booking": false,
+   "source": "crossword.in; position from OpenStreetMap",
+   "match": {
+    "name": "CrossWord",
+    "zone": "malleswaram",
+    "type": "books"
+   },
+   "why": "A big chain bookshop on the lower ground floor of the Mantri Square mall. It is useful because it is large and open late, and it is next to the metro. Come for new releases and children's books, and go to an independent shop for anything you want to linger over.",
+   "quality": 3,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01",
+   "indoor": true
+  },
+  {
+   "id": "osm-crossword-25920-155497",
+   "title": "Crossword",
+   "type": "books",
+   "zone": "whitefield",
+   "coords": [
+    12.95995,
+    77.74829
+   ],
+   "area": "Forum Value Mall, Whitefield",
+   "url": "https://www.crossword.in/",
+   "categories": [
+    "books",
+    "shop"
+   ],
+   "goodFor": [
+    "evening",
+    "rain"
+   ],
+   "priceLevel": 2,
+   "booking": false,
+   "source": "crossword.in; position from OpenStreetMap",
+   "match": {
+    "name": "Crossword",
+    "zone": "whitefield",
+    "type": "books"
+   },
+   "why": "Whitefield's one large bookshop, an open-plan Crossword inside the Forum Value Mall. Come for new releases and children's books.",
+   "quality": 3,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01",
+   "indoor": true
+  },
+  {
+   "id": "osm-chinita-25842-155369",
+   "title": "Chinita",
+   "type": "restaurant",
+   "zone": "bellanduru",
+   "coords": [
+    12.92084,
+    77.68437
+   ],
+   "area": "Kiosk 1, Deck Floor, Campus 6B, RMZ Ecoworld",
+   "url": "https://www.chinita.in/",
+   "cuisine": "mexican",
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "priceLevel": 2,
+   "booking": false,
+   "quality": 4,
+   "source": "chinita.in; position from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Chinita",
+    "zone": "bellanduru",
+    "type": "restaurant"
+   },
+   "why": "The Ecoworld kiosk of the Mexican kitchen that has been cooking from scratch in Bengaluru since 2012. It is the best lunch inside the tech park. Order tacos and eat them in the sun on the deck.",
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01",
+   "indoor": true
+  },
+  {
+   "id": "osm-biergarten-25860-155371",
+   "title": "Biergarten",
+   "type": "nightlife",
+   "zone": "bellanduru",
+   "coords": [
+    12.9299,
+    77.68545
+   ],
+   "area": "57/2/10, Bellandur–Doddakannelli Road, by RMZ Ecoworld",
+   "url": "https://biergarten.co.in/",
+   "categories": [
+    "nightlife",
+    "food"
+   ],
+   "hours": "Mo-Fr 12:00-24:00; Sa,Su 12:00-01:00",
+   "hoursFrom": "biergarten.co.in",
+   "goodFor": [
+    "evening",
+    "group"
+   ],
+   "indoor": false,
+   "priceLevel": 3,
+   "booking": "unknown",
+   "quality": 4,
+   "source": "biergarten.co.in; position from OpenStreetMap",
+   "match": {
+    "name": "Biergarten",
+    "zone": "bellanduru",
+    "type": "nightlife"
+   },
+   "why": "A brewpub in the German beer-garden style that brews its lagers, wheat beers and IPAs in-house. The Bellandur branch is its largest and leafiest, with long communal tables. Order the hefeweizen and a dunkel to compare, and come on a weekday evening.",
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01"
+  },
+  {
+   "id": "osm-sharief-bhai-25838-155337",
+   "title": "Sharief Bhai",
+   "type": "restaurant",
+   "zone": "bellanduru",
+   "coords": [
+    12.91919,
+    77.66864
+   ],
+   "area": "Sarjapur Road, Bellandur",
+   "url": "https://www.shariefbhai.com/",
+   "cuisine": "biryani",
+   "goodFor": [
+    "lunch",
+    "evening",
+    "cheap"
+   ],
+   "priceLevel": 2,
+   "booking": false,
+   "source": "shariefbhai.com; position from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sharief Bhai",
+    "zone": "bellanduru",
+    "type": "restaurant"
+   },
+   "why": "Dakhni biryani — the Deccan Muslim household style, sealed and slow-cooked on dum with short-grained jeerakasala rice. The chain began as a single Bengaluru kitchen in 2017. Order the mutton dum biryani; the kofta biryani is the unusual one.",
+   "quality": 3,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01",
+   "indoor": true
+  },
+  {
+   "id": "osm-beijing-bites-25837-155341",
+   "title": "Beijing Bites",
+   "type": "restaurant",
+   "zone": "bellanduru",
+   "coords": [
+    12.91856,
+    77.67047
+   ],
+   "area": "Sarjapur Road, Bellandur",
+   "url": "https://beijingbites.com",
+   "cuisine": "chinese",
+   "hours": "Mo-Su 12:00-15:45,19:00-23:00",
+   "hoursFrom": "openstreetmap",
+   "goodFor": [
+    "evening",
+    "cheap",
+    "group"
+   ],
+   "priceLevel": 2,
+   "booking": false,
+   "source": "beijingbites.com; hours from OpenStreetMap",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Beijing Bites",
+    "zone": "bellanduru",
+    "type": "restaurant"
+   },
+   "why": "Bengaluru's own Indian-Chinese neighbourhood chain, running for more than twenty years and with over thirty branches. Expect the city's version of Chinese food rather than China's. Order Hunan tofu and a plate of noodles for a cheap, reliable weeknight dinner.",
+   "quality": 3,
+   "uniqueness": 3,
+   "lastVerified": "2026-10-01",
+   "indoor": true
+  },
+  {
+   "id": "farmlore",
+   "title": "FarmLore",
+   "type": "restaurant",
+   "zone": "yelahanka",
+   "coords": [
+    13.127519,
+    77.639262
+   ],
+   "area": "Bagalur Road, beyond the airport road",
+   "url": "https://www.farmlore.in/",
+   "cuisine": "tasting menu",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Farmlore",
+    "zone": "yelahanka",
+    "type": "restaurant"
+   },
+   "why": "A tasting-menu restaurant on a 33-acre estate north of the city, cooking with fire and with what the season and the land give. It's a journey out past Yelahanka, so make it the whole evening and book well ahead. This is the one to save for an occasion.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "couple"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-10-12"
+  },
+  {
+   "id": "naru-noodle-bar",
+   "title": "Naru Noodle Bar",
+   "type": "restaurant",
+   "zone": "shanti-nagar",
+   "coords": [
+    12.958405,
+    77.59289
+   ],
+   "area": "Kengal Hanumanthaiah Road",
+   "url": "https://www.narunoodlebar.com/",
+   "hours": "Tu 18:30-20:30; We-Su 12:30-14:30,18:30-20:30",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "ramen",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Naru Noodle Bar",
+    "zone": "shanti-nagar",
+    "type": "restaurant"
+   },
+   "why": "A twenty-seat ramen counter that started as a lockdown delivery kitchen and a run of pop-ups. You sit at the bar and watch the bowls being built. Seats go through online reservations and disappear fast, so book the moment the slots open rather than turning up.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "friends"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "the venue's own website; hours and position from OpenStreetMap",
+   "lastVerified": "2026-10-12"
+  }
+ ]
 }
