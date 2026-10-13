@@ -1524,6 +1524,74 @@
    "labels": [],
    "source": "the venue's own website; position from OpenStreetMap",
    "lastVerified": "2026-09-30"
+  },
+  {
+   "id": "inja-the-manor",
+   "title": "INJA",
+   "type": "restaurant",
+   "zone": "new-friends-colony",
+   "coords": [
+    28.5671,
+    77.269
+   ],
+   "coordsFrom": "hand-placed at The Manor",
+   "area": "The Manor, Friends Colony West",
+   "url": "https://www.themanordelhi.com/",
+   "cuisine": "indian;japanese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "INJA",
+    "zone": "new-friends-colony",
+    "type": "restaurant"
+   },
+   "why": "Indian cooking through a Japanese lens, in the house at The Manor where Indian Accent began. The tasting menu is dinner only and the reason to come, so book weeks ahead for a weekend. It's closed on Tuesdays.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "couple"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "The Manor's own dining page",
+   "lastVerified": "2026-10-12"
+  },
+  {
+   "id": "megu-leela-palace",
+   "title": "Megu",
+   "type": "restaurant",
+   "zone": "chanakyapuri",
+   "coords": [
+    28.5925,
+    77.1787
+   ],
+   "coordsFrom": "hand-placed at The Leela Palace",
+   "area": "The Leela Palace, Chanakyapuri",
+   "url": "https://www.theleela.com/the-leela-palace-new-delhi/",
+   "cuisine": "japanese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Megu",
+    "zone": "chanakyapuri",
+    "type": "restaurant"
+   },
+   "why": "The Leela's Japanese room, grilling over binchō-tan charcoal with produce flown in from Tokyo's markets. Order from the grill, or book the small omakase counter for a special night. It's a hotel dining room at hotel prices, at its best for a long dinner.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "couple"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "The Leela's own press releases",
+   "lastVerified": "2026-10-12"
   }
  ]
 }

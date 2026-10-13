@@ -2394,6 +2394,74 @@
    "uniqueness": 3,
    "lastVerified": "2026-10-01",
    "indoor": true
+  },
+  {
+   "id": "farmlore",
+   "title": "FarmLore",
+   "type": "restaurant",
+   "zone": "yelahanka",
+   "coords": [
+    13.127519,
+    77.639262
+   ],
+   "area": "Bagalur Road, beyond the airport road",
+   "url": "https://www.farmlore.in/",
+   "cuisine": "tasting menu",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Farmlore",
+    "zone": "yelahanka",
+    "type": "restaurant"
+   },
+   "why": "A tasting-menu restaurant on a 33-acre estate north of the city, cooking with fire and with what the season and the land give. It's a journey out past Yelahanka, so make it the whole evening and book well ahead. This is the one to save for an occasion.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "couple"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "the venue's own website; position from OpenStreetMap",
+   "lastVerified": "2026-10-12"
+  },
+  {
+   "id": "naru-noodle-bar",
+   "title": "Naru Noodle Bar",
+   "type": "restaurant",
+   "zone": "shanti-nagar",
+   "coords": [
+    12.958405,
+    77.59289
+   ],
+   "area": "Kengal Hanumanthaiah Road",
+   "url": "https://www.narunoodlebar.com/",
+   "hours": "Tu 18:30-20:30; We-Su 12:30-14:30,18:30-20:30",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "ramen",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Naru Noodle Bar",
+    "zone": "shanti-nagar",
+    "type": "restaurant"
+   },
+   "why": "A twenty-seat ramen counter that started as a lockdown delivery kitchen and a run of pop-ups. You sit at the bar and watch the bowls being built. Seats go through online reservations and disappear fast, so book the moment the slots open rather than turning up.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "friends"
+   ],
+   "labels": [
+    "bookahead"
+   ],
+   "source": "the venue's own website; hours and position from OpenStreetMap",
+   "lastVerified": "2026-10-12"
   }
  ]
 }
