@@ -1,0 +1,66 @@
+{
+  "note": "Festivals the city keeps, and when. Each `on` is one year's run: `start` and `end` bound the season, `peak` is the night it builds to, and the shelf appears `lead` days before `start`. A record joins with `\"festival\": \"<id>\"`; `match` words pull in the city feed's own listings by title. Read by the festival shelf in js/app.js. Dates that move (Diwali, Lunar New Year) are entered per year — check them each autumn.",
+  "items": [
+    {
+      "id": "halloween",
+      "name": "Halloween",
+      "emoji": "🎃",
+      "lead": 21,
+      "line": "Paris took to Halloween late and now does it properly: scare parks, museum night games, ghost stories in the Latin Quarter.",
+      "on": [
+        {
+          "start": "2026-10-01",
+          "end": "2026-11-01",
+          "peak": "2026-10-31"
+        }
+      ],
+      "match": [
+        "halloween",
+        "hallowe",
+        "zombie"
+      ]
+    },
+    {
+      "id": "christmas",
+      "name": "Christmas",
+      "emoji": "🎄",
+      "lead": 21,
+      "line": "Markets, lit department-store windows and a rink or two, from late November.",
+      "on": [
+        {
+          "start": "2026-11-12",
+          "end": "2027-01-04",
+          "peak": "2026-12-25"
+        }
+      ],
+      "match": [
+        "christmas",
+        "noël",
+        "xmas",
+        "holiday market",
+        "weihnacht"
+      ]
+    },
+    {
+      "id": "new-year",
+      "name": "New Year's Eve",
+      "emoji": "🎆",
+      "lead": 14,
+      "line": "The fireworks are at the Arc de Triomphe, the crowds on the Champs-Élysées. Dinner needs booking weeks ahead.",
+      "on": [
+        {
+          "start": "2026-12-27",
+          "end": "2027-01-01",
+          "peak": "2026-12-31"
+        }
+      ],
+      "match": [
+        "new year's eve",
+        "nouvel an",
+        "réveillon",
+        "saint-sylvestre",
+        "nye"
+      ]
+    }
+  ]
+}
