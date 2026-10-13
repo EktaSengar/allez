@@ -14,7 +14,8 @@
   --soft:    #6b5c53;
   --faint:   #a1958a;
   --line:    #ece2d5;
-  --accent:  #9d3f47;   /* wine */
+  --accent:  #4e6a8e;   /* slate, text-safe step of the brand #7E93AF */
+  --city:    #b4532a;   /* terracotta, from the cap: city names only */
   --blush:   #c98b8b;
   --gold:    #b38f5d;
   --img-bg:  #f0e7db;
@@ -31,7 +32,8 @@
   --soft:    #b3a596;
   --faint:   #877a6d;
   --line:    #322820;
-  --accent:  #e0918f;
+  --accent:  #9fb2cc;
+  --city:    #e08a5f;
   --blush:   #c98b8b;
   --gold:    #cdab74;
   --img-bg:  #271f19;
@@ -112,7 +114,43 @@ body {
   font-weight: 400;
   letter-spacing: -.022em;
 }
-.title em { font-style: italic; color: var(--accent); }
+.title em { font-style: italic; color: var(--city); }
+
+/* ---------- the lockup ----------
+
+   The mark and the signature wordmark, per DESIGN.md: "allez" as one pen
+   stroke in charcoal, the a and e kept open, the z flicking forward.
+   Inline SVG so it costs no request and can't shift anything. Clear space
+   below it keeps it apart from the serif headline. Never below 120px wide. */
+:root { --sig: #2c3e50; --mark: #2c3e50; }
+:root[data-theme="dark"] { --sig: #c9d3df; --mark: #7e93af; }
+.brand {
+  display: inline-flex; align-items: center; gap: .3em;
+  height: 2.1rem; margin: 0 0 1.1rem; min-width: 120px;
+  text-decoration: none;
+}
+.brand-mark circle { fill: var(--mark); }
+.brand-mark { height: 100%; width: auto; aspect-ratio: 1; flex: none; }
+.brand-sig { height: 80%; width: auto; aspect-ratio: 128 / 60; flex: none; overflow: visible; }
+.brand-sig path {
+  fill: none; stroke: var(--sig); stroke-width: 4.8;
+  stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 1; stroke-dashoffset: 0;
+}
+
+/* The signature writes itself on load, like a route being traced, and
+   ends on the z's flick. pathLength="1" on the path makes the dash maths
+   the same for any length. Paint only, so no layout shift. The opacity
+   step hides the round cap's dot before the pen moves. */
+@media (prefers-reduced-motion: no-preference) {
+  .brand-sig path { animation: sig-draw 1.6s cubic-bezier(.55, 0, .3, 1) .2s both; }
+}
+@keyframes sig-draw {
+  0%   { stroke-dashoffset: 1; opacity: 0; }
+  1%   { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+.brand-lg { height: clamp(3.4rem, 12vw, 4.6rem); margin: 0 0 .4rem; }
 
 /* a hairline of gold under the wordmark */
 .rule {
