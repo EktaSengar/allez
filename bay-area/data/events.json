@@ -1081,6 +1081,61 @@
       "imageSubject": "SAP Center",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "sport",
+        "weekend",
+        "couple",
+        "outdoors",
+        "afternoon"
+      ],
+      "lastVerified": "2026-10-12",
+      "quality": 5,
+      "uniqueness": 5,
+      "id": "fleet-week-2027",
+      "title": "Fleet Week and the Blue Angels",
+      "emoji": "✈️",
+      "coords": [
+        37.8066,
+        -122.43912
+      ],
+      "zone": "cow-hollow",
+      "area": "Marina Green and the waterfront",
+      "coordsFrom": "osm way/16761472",
+      "start": "2027-10-04",
+      "end": "2027-10-11",
+      "price": 0,
+      "priceNote": "Free from the shore",
+      "durationMin": 240,
+      "times": "Ships arrive early in the week; air show over the long weekend, usually noon to 4pm",
+      "why": "San Francisco's October week of Navy ships. The Parade of Ships comes in under the Golden Gate, the ships open for free tours at Piers 27 and 35, and on the long weekend the Blue Angels fly between the bridge and Alcatraz. Watching from the shore costs nothing.",
+      "spectator": "Marina Green, Crissy Field or Fort Mason, which has Equator Coffees at the gate. Arrive by eleven with a blanket and layers.",
+      "categories": [
+        "festival",
+        "outdoor",
+        "free"
+      ],
+      "labels": [
+        "dontmiss",
+        "couple",
+        "outdoor"
+      ],
+      "url": "https://fleetweeksf.org/",
+      "source": "Fleet Week San Francisco",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Marina_Green.jpg/1280px-Marina_Green.jpg",
+      "imageSubject": "Marina Green",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "booking": false,
+      "priceLevel": 0,
+      "provisional": true,
+      "festival": "fleet-week",
+      "hoursNote": "Air show afternoons over the long weekend; ship tours in the daytime earlier in the week"
     }
   ]
 }

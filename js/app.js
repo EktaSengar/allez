@@ -27,13 +27,17 @@ const App = (() => {
   const FIRST = ['home', 'places/index'];
   const CORE  = ['events', 'events-city', 'places', 'nightlife', 'sports', 'food',
                  'itineraries', 'daytrips', 'neighborhoods', 'quests', 'editorial',
-                 'invaders', 'notes'];
+                 'invaders', 'notes', 'festivals'];
   /* `practices` is behind the first paint on purpose. It feeds one
      section of one tab, so nothing the reader sees first is waiting on
      are. `regulars` is the hand-researched half of the same tab and
      waits with it. Same reasoning as civic and notable, and it holds for
      `conferences` too: a few dozen records that feed Events' Tech group. */
-  const LATER = ['civic', 'notable', 'practices', 'regulars', 'conferences'];
+  const LATER = ['civic', 'notable', 'practices', 'regulars', 'conferences',
+                 /* The outlines for the zone map — Quests and Explore only,
+                    never the first view, so they wait here; the dots stand
+                    in until they land. Only a pack that draws a map has one. */
+                 ...(City.zone.map ? ['zonemap'] : [])];
   const FILES = [...FIRST, ...CORE, ...LATER];
   const D = {};
   let ALL = [];
@@ -50,6 +54,7 @@ const App = (() => {
   let CLIM = null;
   let CLIMP = null;
   let VIEW = 'today';
+  let EXPLORE_PICK = null;              // the zone chosen on Explore's map
   let HOME = { label: City.name };        // replaced by the location engine
   let DISCOVERED = [];                  // OpenStreetMap layer, positions only
 
@@ -1174,7 +1179,7 @@ const App = (() => {
   defineView('weekend',  c  => renderWeekend(c.weekend), c => weekendLede(c.weekend));
   defineView('eat',      () => renderEat(),      () => eatLede());
   defineView('explore',  () => renderExplore(),  () => exploreLede());
-  defineView('events',   () => bookStrip() + renderEvents(),   () => eventsLede());
+  defineView('events',   () => festivalShelf(8) + bookStrip() + renderEvents(),   () => eventsLede());
   defineView('regulars', () => renderRegulars(), () => regularsLede());
   defineView('away',     () => renderAway());
   defineView('quests',   () => renderQuests());
@@ -1434,6 +1439,7 @@ const App = (() => {
     });
 
     return hero(lead)
+      + festivalShelf(3)
       + renderAroundYou()
       + (also.items.length
           ? stripHead(`Also around ${Loc.displayName(Loc.active())}`, radiusNote(also.radius, also.items, also.widened))
@@ -2795,7 +2801,68 @@ const App = (() => {
   const zoneDone = num => num === Loc.active()?.zone || Store.hasZone(num);
   const zoneCount = () => new Set([Loc.active()?.zone, ...Store.zones()].filter(n => n != null)).size;
 
+  /* What you have already done somewhere, as opposed to what you have
+     said you explored: places marked loved, good or meh, counted by zone.
+     A zone with some but not yet ticked is lit on the map, so the quest
+     can say "you have been to the 11th, count it" instead of waiting to
+     be told. */
+  function zoneActivity() {
+    const by = {};
+    for (const i of [...ALL, ...DISCOVERED]) {
+      if (i.zone == null || !['loved', 'good', 'meh'].includes(Store.rating(i.id))) continue;
+      by[i.zone] = (by[i.zone] || 0) + 1;
+    }
+    return by;
+  }
+
+  /* The arrondissements as shapes — the city's own boundaries, with the
+     Seine run through them and clipped to the city's edge. One drawing,
+     two jobs: in the quest a tap ticks a zone off, in Explore a tap picks
+     which one to read about. Until zonemap.json lands (it is behind the
+     first paint) the quest falls back to the dots below. */
+  function shapeMap({ mode, pick = null, label }) {
+    const M = D.zonemap;
+    const here = Loc.active()?.zone;
+    const lit = mode === 'quest' ? zoneActivity() : {};
+    /* tile() is markup (a superscript); a tooltip wants the plain text. */
+    const ord = n => String(City.zone.tile(n)).replace(/<[^>]+>/g, '');
+    /* The picked one is drawn last, or its neighbours paint over its outline. */
+    const shapes = Object.entries(M.zones)
+      .sort(([a], [b]) => (Number(a) === pick) - (Number(b) === pick))
+      .map(([n, z]) => {
+      const num = Number(n);
+      const cls = ['arr',
+        zoneDone(num) ? 'on' : '',
+        num === here ? 'home' : '',
+        num === pick ? 'pick' : '',
+        !zoneDone(num) && lit[num] ? 'lit' : ''].filter(Boolean).join(' ');
+      const tip = `${ord(num)}${zoneDone(num) ? ' — explored' : lit[num] ? ` — ${lit[num]} done here, not yet counted` : ''}`;
+      return `<g class="${cls}" ${mode === 'quest' ? `data-zonenum="${num}"` : `data-explorezone="${num}"`}
+                 role="button" tabindex="0" aria-label="${esc(tip)}">
+        <path d="${z.d}"></path>
+        <text x="${z.at[0]}" y="${z.at[1]}" dy=".35em">${num}</text>
+        <title>${esc(tip)}</title>
+      </g>`;
+    }).join('');
+    const outline = Object.values(M.zones).map(z => `<path d="${z.d}"></path>`).join('');
+    return `<svg class="arr-map ${mode}" viewBox="${M.viewBox}" role="group" aria-label="${esc(label)}">
+      <defs><clipPath id="arr-clip-${mode}">${outline}</clipPath></defs>
+      ${shapes}
+      ${M.seine ? `<path class="arr-seine" d="${M.seine}" clip-path="url(#arr-clip-${mode})"></path>` : ''}
+    </svg>`;
+  }
+
   function zoneMap(q) {
+    if (D.zonemap?.zones) {
+      const lit = Object.keys(zoneActivity()).map(Number).filter(n => !zoneDone(n));
+      const nudge = lit.length
+        ? `You have marked places done in the ${lit.slice(0, 3).map(n => City.zone.tile(n)).join(', ')}${lit.length > 3 ? ' and more' : ''} — tap ${lit.length === 1 ? 'it' : 'them'} to count.`
+        : `Tap one as you do it. You are in the ${Loc.active()?.zone != null ? City.zone.tile(Loc.active().zone) : '—'}, so that one is free.`;
+      return `<div class="zone-map-wrap">
+        ${shapeMap({ mode: 'quest', label: 'Arrondissements explored' })}
+        <p class="zone-map-note">${nudge}</p>
+      </div>`;
+    }
     const dots = Object.entries(ZONE_MAP).map(([n, xy]) => {
       const num = Number(n);
       const [x, y] = spread(xy);
@@ -2996,13 +3063,93 @@ const App = (() => {
 
   function evPool() {
     const out = [];
+    /* A researched record that names a feed listing in `sameAs` stands in
+       for it — the Notre-Dame market arrives from the city's feed and from
+       our own events.json, and should show once, as ours. */
+    const covered = new Set(ALL.flatMap(i => i.sameAs || []));
     for (const i of ALL) {
-      if (!isEvent(i) || spent(i)) continue;
+      if (!isEvent(i) || spent(i) || covered.has(i.id)) continue;
       const d = evNext(i);
       if (d == null) continue;
       out.push({ i, d, g: evGroupOf(i), run: evSpan(i) > EV_RUN });
     }
     return out;
+  }
+
+  /* ---------- festivals ----------
+
+     Halloween, Christmas, Diwali and the rest are a season, not a date,
+     and their events are mostly runs — which is exactly what the ranked
+     lists bury: on 12 October two of six Halloween records sat behind
+     "See all" under Running now. So a festival in season gets a shelf of
+     its own, at the top of Events and under the hero on Today.
+
+     The calendar is `festivals.json`, one per city. A record belongs to
+     one by saying so (`festival: 'halloween'`), or by a `match` word in
+     its title, which is how the city feed's own Halloween listings join
+     without anyone tagging them. Only what is on inside the season
+     counts, so a "Christmas" concert in July is not pulled forward. */
+  /* Seasons overlap — Christmas runs into the New Year — so of those in
+     season the one whose big day is next wins, and once every peak is
+     past, the one that peaked last. */
+  function festivalNow() {
+    const live = [];
+    for (const f of D.festivals?.items || []) {
+      for (const on of f.on || []) {
+        const opens = iso(addDays(new Date(on.start + 'T12:00:00'), -(f.lead || 21)));
+        if (TODAY_ISO >= opens && TODAY_ISO <= on.end) live.push({ f, on, peak: on.peak || on.start });
+      }
+    }
+    const ahead = live.filter(x => x.peak >= TODAY_ISO).sort((a, b) => a.peak.localeCompare(b.peak));
+    return ahead[0] || live.sort((a, b) => b.peak.localeCompare(a.peak))[0] || null;
+  }
+
+  function festivalPool(now) {
+    if (!now) return [];
+    const { f, on } = now;
+    const words = (f.match || []).map(w => new RegExp(`(^|[^\\p{L}])${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^\\p{L}])`, 'iu'));
+    return evPool().filter(({ i }) =>
+      i.start <= on.end && i.end >= on.start &&
+      (i.festival === f.id || words.some(r => r.test(i.title || ''))));
+  }
+
+  /* How far off, said the way people say it. */
+  function festivalCountdown(on) {
+    const n = Rank.daysBetween(TODAY_ISO, on.peak || on.start);
+    if (n < 0) return TODAY_ISO <= on.end ? 'On now' : '';
+    if (n === 0) return 'Tonight';
+    if (n === 1) return 'Tomorrow';
+    const { satISO, sunISO } = weekend();
+    const peak = on.peak || on.start;
+    if (peak === satISO || peak === sunISO) return 'This weekend';
+    return `${n} days to go`;
+  }
+
+  /* What the shelf drew, so Events can leave those out of the lists
+     below it rather than show them twice. */
+  let FEST_SHOWN = new Set();
+
+  function festivalShelf(cap) {
+    FEST_SHOWN = new Set();
+    const now = festivalNow();
+    const pool = festivalPool(now);
+    if (!pool.length) return '';
+    const { f, on } = now;
+    /* Hand-researched before the feed: the feed's `sourced` records are
+       facts with no opinion, and a shelf this short is for the ones
+       somebody chose. The score orders within each half. */
+    const chosen = i => i.provenance === 'editorial' || i.provenance === 'personal';
+    const ranked = Rank.rank(pool.map(e => e.i), CTX)
+      .sort((a, b) => chosen(b) - chosen(a)).slice(0, cap);
+    const byItem = new Map(pool.map(e => [e.i, e]));
+    const pick = ranked.map(i => byItem.get(i));
+    pick.forEach(e => FEST_SHOWN.add(e.i.id));
+    const more = pool.length > pick.length ? ` · ${pick.length} of ${pool.length}` : '';
+    return `<section class="festival" data-festival="${esc(f.id)}">`
+      + stripHead(`${f.emoji} ${f.name} in ${City.name}`, `${festivalCountdown(on)}${more}`)
+      + (f.line ? `<p class="festival-line">${esc(f.line)}</p>` : '')
+      + `<div class="event-grid">${pick.map(e => evRow(e, evWhen(e))).join('')}</div>`
+      + `</section>`;
   }
 
   /* The hour, where the record states one. A hand-written record says
@@ -3071,6 +3218,7 @@ const App = (() => {
       <p class="kicker"><b>${esc(lead)}${t && !e.run ? ` · ${t.from}${t.to ? `–${t.to}` : ''}` : ''}</b>${i.minutesFromHome != null ? ` · ${i.minutesFromHome} min` : ''}</p>
       <h3 class="card-title">${esc(i.title)}</h3>
       <p class="event-place">${[i.area ? esc(i.area) : (i.zone ? City.zone.tile(i.zone) : ''), esc(evPrice(i))].filter(Boolean).join(' · ')}</p>
+      ${i.provisional ? '<p class="event-provisional">Dates expected, not yet confirmed — check before going</p>' : ''}
       <p class="why">${esc(blurb(i))}</p>
       <div class="event-actions">
         ${act ? `<a class="event-primary" href="${esc(act[0])}" target="_blank" rel="noopener">${act[1]} <span aria-hidden="true">↗</span></a>` : ''}
@@ -3237,7 +3385,7 @@ const App = (() => {
   }
 
   function renderEvents() {
-    const pool = evPool();
+    const pool = evPool().filter(e => !FEST_SHOWN.has(e.i.id));
     if (!pool.length && !City.lumaPage) {
       return `<p class="empty">Nothing dated in the next month yet.</p>`;
     }
@@ -3560,8 +3708,11 @@ const App = (() => {
     const hoods = D.neighborhoods.items || [];
     const explored = Store.zones();
     const pool = hoods.filter(h => !h.isHome && !explored.includes(h.zone));
-    const f = (pool.length ? pool : hoods.filter(h => !h.isHome))
-      .slice().sort((a, b) => a.minutesFromHome - b.minutesFromHome)[0];
+    /* The nearest one you have not explored, unless you picked one on the
+       map — then that one, explored or not. */
+    const f = hoods.find(h => h.zone === EXPLORE_PICK) ||
+      (pool.length ? pool : hoods.filter(h => !h.isHome))
+        .slice().sort((a, b) => a.minutesFromHome - b.minutesFromHome)[0];
 
     let dossier = '', standing = '';
     if (f) {
@@ -3624,7 +3775,13 @@ const App = (() => {
     });
 
 
+    const map = D.zonemap?.zones
+      ? stripHead('Where next', `${zoneCount()} of ${hoods.length} explored · tap one to read about it`)
+        + `<div class="zone-map-wrap">${shapeMap({ mode: 'explore', pick: f?.zone ?? null, label: 'Choose an arrondissement' })}</div>`
+      : '';
+
     return standing
+      + map
       + dossier
       + (walk.items.length
           ? stripHead('Walks and routes', radiusNote(walk.radius, walk.items, walk.widened))
@@ -4310,7 +4467,7 @@ const App = (() => {
 
     // the arrondissement map — one tap marks it in the quest and in Explore
     document.addEventListener('click', e => {
-      const g = e.target.closest('.zone-dot'); if (!g) return;
+      const g = e.target.closest('.zone-dot, .arr-map.quest [data-zonenum]'); if (!g) return;
       const n = Number(g.dataset.zonenum);
       if (n === Loc.active()?.zone) { toast(`You are in the ${n}${n===1?'er':'e'} — that one is free.`); return; }
       const before = zoneCount();
@@ -4319,6 +4476,21 @@ const App = (() => {
       celebrate(g.closest('[data-quest]').dataset.quest, before, after);
       buildContext();
       render();
+    });
+
+    // Explore's map — a tap opens that zone's page below it
+    const pickZone = g => {
+      EXPLORE_PICK = Number(g.dataset.explorezone);
+      render();
+      document.querySelector('.hood')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    document.addEventListener('click', e => {
+      const g = e.target.closest('[data-explorezone]'); if (g) pickZone(g);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const g = e.target.closest?.('[data-explorezone], .arr-map.quest [data-zonenum]'); if (!g) return;
+      e.preventDefault(); g.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
 
     // arrondissements

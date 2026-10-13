@@ -315,6 +315,12 @@ thin.**
   rankings, ratings, photos or "known for" lines, and not reworded.
 - **Magazines, newspapers and food blogs** (Condé Nast Traveller,
   Hindustan Times, The Hindu, Mint, Eater, personal blogs) — same rule.
+- **Curator and "things to do" social accounts** (@onlyinsf and the
+  like) — same rule, and stricter: Instagram's terms forbid collecting
+  its content by automated means, and there is no API for an account we
+  do not run. Follow them by hand as a tip-off for what exists; never
+  scrape, embed, quote, link as the source, or reuse their photos. The
+  card is then written from the venue's or organiser's own page.
 - **Search-engine snippets and AI summaries** of any of the above: they
   carry the same content and the same rights.
 - **Google Places API data** stored in the repo.
