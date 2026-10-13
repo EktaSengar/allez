@@ -4,7 +4,7 @@
    Kept in one file so the voice stays one voice (APP.md, "The voice"):
    warm, friendly, a little playful, inviting. The fun is in the frame;
    facts stay plain. One exclamation mark at most, and only for a
-   celebration. The pigeon says "I" only in its own moments — the
+   celebration. The pigeon, Coo, says "I" only in its own moments — the
    `pigeon` lines below — and everywhere else the app speaks as Allez.
    --------------------------------------------------------- */
 

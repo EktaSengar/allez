@@ -477,12 +477,20 @@ that suit a hand on the move:
 8. **No settings screen to speak of.** What can be changed is on *What Allez
    knows about you*, written as sentences.
 
-### The pigeon
+### The pigeon: Coo
+
+The pigeon is called **Coo**, after the sound a pigeon makes, so the name
+needs no explaining. It's warm, because people coo over babies and pigeons
+coo when they're content. It's three letters, and it works in every city,
+not only Paris. The French touch lives in the occasional line ("Bonjour, je
+suis Coo."), not in the name. Coo is a character name, not a brand: handles
+take the form `@coo.allez` or "Coo by Allez".
 
 Pigeons are the most local creature in any city: in every square, at every
 café table, never lost for long. That's the character — a friend who has
-been everywhere on foot and is pleased to show you. Soft, curious, a bit
-greedy for pastry, never smug.
+been everywhere on foot and is pleased to show you. Curious, warm,
+observant, a little mischievous: greedy for pastry, always knows the best
+bench, never smug and never gushing.
 
 The pigeon is **punctuation, not wallpaper**. It never sits on a content
 card, because the places are the point. It turns up at the moments with
@@ -519,6 +527,11 @@ can't wait to tell you. It extends the site's voice rather than replacing it:
   most screens have none.
 - **The pigeon speaks as "I" only in its own moments** (the table above).
   Everywhere else the app speaks plainly as Allez.
+- **Coo never vouches for a place.** No "Coo approves" or "coo-rated":
+  the recommendation and its reason come from Allez, written plainly.
+  Notifications are Allez's too, so not "Coo found 3 cafés".
+- **Puns sparingly.** "Coo" wordplay counts as the screen's one pigeon joke.
+  Never "un bon coo": *un bon coup* is also French slang for a good lay.
 
 LAUNCH.md's "no exclamation marks" becomes "one, for celebrations" in the app.
 Everything else in it holds.
