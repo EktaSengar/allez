@@ -1,1597 +1,1597 @@
 {
- "generated": "2026-09-30",
- "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: no open dataset in India describes everyday food, Wikidata holds two Delhi restaurants and no cafes, and the whole sourced tier here is monuments. See SOURCES.md.",
- "rules": [
-  "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
-  "Say what to order and when to go. 'Lovely atmosphere' helps nobody.",
-  "No opening hours in prose. OpenStreetMap carries them, js/hours.js reads them, and a time written here is a time that rots.",
-  "quality and uniqueness cap at 4 here. 5 is reserved for somewhere one of you actually loved.",
-  "Where a claim is disputed, say it is disputed. Delhi has more than one restaurant claiming to have invented the same dish and at least one of those arguments is in court.",
-  "Always pin `match` with a zone. Matching on name alone resolved 'Bukhara' to a restaurant in Noida rather than the one in Chanakyapuri — and the famous one is not in OpenStreetMap at all, so the record was dropped. That is the index doing its job: it is what stops a writer inventing a place."
- ],
- "items": [
-  {
-   "id": "osm-karim-s-57299-154467",
-   "title": "Karim's",
-   "type": "restaurant",
-   "zone": "chandni-chowk",
-   "coords": [
-    28.64943,
-    77.23374
-   ],
-   "area": "Kalan Mahal Road",
-   "url": "http://www.karimhoteldelhi.com",
-   "cuisine": "chicken",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Karim's",
-    "zone": "chandni-chowk",
-    "type": "restaurant"
-   },
-   "why": "Founded in 1913 near the Jama Masjid by Haji Karimuddin, whose family had cooked for the Mughal court, and often called Old Delhi's most famous place to eat. The menu is Mughlai: nihari, kebabs, korma, biryani.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Karim's_Hotel%2C_Old_Delhi.jpg/500px-Karim's_Hotel%2C_Old_Delhi.jpg",
-   "imageSubject": "Karim's",
-   "imageKind": "subject",
-   "imageCredit": "Edmund Gall · CC BY-SA 2.0"
-  },
-  {
-   "id": "osm-moti-mahal-57294-154480",
-   "title": "Moti Mahal",
-   "type": "restaurant",
-   "zone": "chandni-chowk",
-   "coords": [
-    28.64689,
-    77.23998
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Moti Mahal",
-    "zone": "chandni-chowk",
-    "type": "restaurant"
-   },
-   "why": "The Daryaganj restaurant Kundan Lal Gujral opened after Partition, one of the first to bring Punjabi food like tandoori chicken, dal makhani and butter chicken to a wide audience. Order the tandoori chicken.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-indian-accent-57184-154476",
-   "title": "Indian Accent",
-   "type": "restaurant",
-   "zone": "nizamuddin",
-   "coords": [
-    28.59176,
-    77.2379
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Indian Accent",
-    "zone": "nizamuddin",
-    "type": "restaurant"
-   },
-   "why": "Rohit Khattar's modern Indian restaurant, opened in 2009 at The Manor and at The Lodhi hotel since 2017, with sister restaurants in New York and Mumbai. Book well ahead for the tasting menu.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [
-    "bookahead"
-   ],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-saravana-bhavan-57264-154432",
-   "title": "Saravana Bhavan",
-   "type": "restaurant",
-   "zone": "connaught-place",
-   "coords": [
-    28.6322,
-    77.21621
-   ],
-   "area": null,
-   "url": "https://saravanabhavan.com/",
-   "hours": "Mo-Su 08:00-23:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "indian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Saravana Bhavan",
-    "zone": "connaught-place",
-    "type": "restaurant"
-   },
-   "why": "The Connaught Place branch of the Chennai-based South Indian vegetarian chain, which has grown to dozens of outlets in India and abroad. Come for a dosa and filter coffee.",
-   "quality": 4,
-   "uniqueness": 3,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [
-    "cheap"
-   ],
-   "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-lodhi-gardens-57187-154439",
-   "title": "Lodhi Gardens",
-   "type": "park",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.59348,
-    77.21956
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "park"
-   ],
-   "match": {
-    "name": "Lodhi Gardens",
-    "zone": "lodhi-colony",
-    "type": "park"
-   },
-   "why": "Ninety acres with eleven monuments standing in it — the tombs of Muhammad Shah Sayyid (1444) and Sikandar Lodi, the Bada Gumbad, the Shish Gumbad — laid out as a garden around them in 1936. Delhi walks here in the morning. The octagonal Sayyid tomb is the one to look at properly: Hindu features built into an Indo-Islamic building.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [
-    "free"
-   ],
-   "source": "Wikipedia; Incredible India; position confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-18",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Lodhi_Gardens_on_a_sunny_day.jpg/500px-Lodhi_Gardens_on_a_sunny_day.jpg",
-   "imageSubject": "Lodhi Gardens",
-   "imageKind": "subject",
-   "imageCredit": "Amaninder · CC BY-SA 3.0"
-  },
-  {
-   "id": "osm-sunder-nursery-57194-154495",
-   "title": "Sunder Nursery",
-   "type": "park",
-   "zone": "nizamuddin",
-   "coords": [
-    28.59685,
-    77.24743
-   ],
-   "area": null,
-   "url": "https://www.sundernursery.org",
-   "hours": "Mo-Su 07:00-22:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "park"
-   ],
-   "match": {
-    "name": "Sunder Nursery",
-    "zone": "nizamuddin",
-    "type": "park"
-   },
-   "why": "Ninety acres next to Humayun's Tomb, derelict for decades and reopened in 2018 after a ten-year restoration by the Aga Khan Trust for Culture — the charbagh canals rebuilt, the axis to the tomb restored, hundreds of native species planted as Delhi's first arboretum. Six World Heritage monuments stand inside it. Time put it on its list of the world's hundred greatest places that year.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Wikipedia; Aga Khan Development Network; Delhi Tourism; position confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-18",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Sunder_Nursery_Sep-2019.jpg/500px-Sunder_Nursery_Sep-2019.jpg",
-   "imageSubject": "Sunder Nursery",
-   "imageKind": "subject",
-   "imageCredit": "Gryffindor · CC BY-SA 4.0"
-  },
-  {
-   "id": "osm-agrasen-ki-baoli-57252-154450",
-   "title": "Agrasen ki Baoli",
-   "type": "culture",
-   "zone": "connaught-place",
-   "coords": [
-    28.62609,
-    77.22501
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "culture"
-   ],
-   "match": {
-    "name": "Agrasen ki Baoli",
-    "zone": "connaught-place",
-    "type": "culture"
-   },
-   "why": "A historical stepwell, 60 metres long and 15 wide, set among the office blocks off Hailey Road near Connaught Place. Go on a quiet weekday morning.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning"
-   ],
-   "labels": [
-    "free"
-   ],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Agrasen_ki_Baoli%2C_New_Delhi.jpg/500px-Agrasen_ki_Baoli%2C_New_Delhi.jpg",
-   "imageSubject": "Agrasen Ki Baoli",
-   "imageKind": "subject",
-   "imageCredit": "Slyronit · CC BY-SA 4.0"
-  },
-  {
-   "id": "osm-bahrisons-booksellers-57200-154454",
-   "title": "Bahrisons Booksellers",
-   "type": "books",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.6,
-    77.22718
-   ],
-   "area": null,
-   "url": "https://www.booksatbahri.com/",
-   "hours": "10:30-20:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "books"
-   ],
-   "match": {
-    "name": "Bahrisons Booksellers",
-    "zone": "lodhi-colony",
-    "type": "books"
-   },
-   "why": "The Khan Market bookshop Balraj Bahri Malhotra opened in 1953 after Partition, raising the money by selling one of his mother's gold bangles. Still run by the family.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-blue-tokai-coffee-roasters-57199-154452",
-   "title": "Blue Tokai Coffee Roasters",
-   "type": "cafe",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.59972,
-    77.22618
-   ],
-   "area": "Khan Market",
-   "url": "https://bluetokaicoffee.com/pages/blue-tokai-coffee-roasters-khan-market",
-   "hours": "07:00-23:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "coffee_shop",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Blue Tokai Coffee Roasters",
-    "zone": "lodhi-colony",
-    "type": "cafe"
-   },
-   "why": "A Khan Market café of the Gurugram-based roaster, which buys from more than eighty Indian coffee estates and smallholders. Ask what single estate is on the bar.",
-   "quality": 4,
-   "uniqueness": 3,
-   "goodFor": [
-    "morning"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "i": "e/e5/FabIndia_outlet,_Khan_Market,_New_Delhi.jpg",
-   "ik": "c"
-  },
-  {
-   "id": "osm-bengali-sweet-house-pastry-57259-154464",
-   "title": "Bengali Sweet House",
-   "type": "bakery",
-   "zone": "connaught-place",
-   "coords": [
-    28.62943,
-    77.2319
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Bengali Sweet house & Pastry",
-    "zone": "connaught-place",
-    "type": "bakery"
-   },
-   "why": "A sweet shop in Bengali Market, one of New Delhi's oldest markets, built in 1930 by Bengali Mal Lohia — the name has nothing to do with Bengal. Buy a box of sweets to take away.",
-   "quality": 4,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [
-    "cheap"
-   ],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-khari-baoli-spice-market-57314-154446",
-   "title": "Khari Baoli Spice Market",
-   "type": "market",
-   "zone": "old-delhi",
-   "coords": [
-    28.6572,
-    77.22285
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Khari Baoli Spice Market",
-    "zone": "old-delhi",
-    "type": "market"
-   },
-   "why": "Asia's largest wholesale spice market, trading since the seventeenth century by the Fatehpuri Masjid at the western end of Chandni Chowk, selling spices, nuts, herbs, rice and tea. Go early.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/A_shop_selling_Dates_in_Khari_Baoli_market.jpg/500px-A_shop_selling_Dates_in_Khari_Baoli_market.jpg",
-   "imageSubject": "Khari Baoli",
-   "imageKind": "subject",
-   "imageCredit": "Manjit Singh · CC BY-SA 4.0"
-  },
-  {
-   "id": "osm-lajpat-nagar-central-market-57138-154482",
-   "title": "Lajpat Nagar Central Market",
-   "type": "market",
-   "zone": "lajpat-nagar",
-   "coords": [
-    28.56899,
-    77.24083
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Lajpat Nagar Central Market",
-    "zone": "lajpat-nagar",
-    "type": "market"
-   },
-   "why": "The central market of Lajpat Nagar, the South Delhi neighbourhood named after Lala Lajpat Rai. Clothes, fabric, shoes and household goods; evenings are busiest.",
-   "quality": 4,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [
-    "cheap"
-   ],
-   "source": "Wikipedia (CC BY-SA 4.0); Delhi Tourism; position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Lajpat_Nagar_marketplace_in_2006.jpg/500px-Lajpat_Nagar_marketplace_in_2006.jpg",
-   "imageSubject": "Lajpat Nagar",
-   "imageKind": "context",
-   "imageCredit": "Ville Miettinen from Helsinki, Finland · CC BY 2.0"
-  },
-  {
-   "id": "osm-nai-sarak-bookshop-area-57302-154461",
-   "title": "Nai Sarak Bookshop Area",
-   "type": "books",
-   "zone": "chandni-chowk",
-   "coords": [
-    28.65077,
-    77.23033
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "books"
-   ],
-   "match": {
-    "name": "Nai Sarak Bookshop Area",
-    "zone": "chandni-chowk",
-    "type": "books"
-   },
-   "why": "Nai Sarak, the 'new street' between Chandni Chowk and Chawri Bazaar, is a wholesale and retail market for school and college textbooks. Walk it after a paratha in the lane next door.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [
-    "cheap"
-   ],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Nai_sarak.jpg/500px-Nai_sarak.jpg",
-   "imageSubject": "Nai Sarak",
-   "imageKind": "subject",
-   "imageCredit": "Supreet Sethi http://supreetsethi.net · CC BY-SA 3.0"
-  },
-  {
-   "id": "osm-wenger-s-57267-154436",
-   "title": "Wenger's",
-   "type": "bakery",
-   "zone": "connaught-place",
-   "coords": [
-    28.63338,
-    77.21807
-   ],
-   "area": "Inner Circle",
-   "url": "https://wengers.in/",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Wenger's",
-    "zone": "connaught-place",
-    "type": "bakery"
-   },
-   "why": "One of the first shops in Connaught Place. It began in 1926 at Kashmere Gate, run by a Swiss couple who introduced Delhi to pastries and Swiss chocolates, and still bakes its own breads and cakes.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-l-opera-57200-154452",
-   "title": "L'Opera",
-   "type": "bakery",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.59982,
-    77.22617
-   ],
-   "area": null,
-   "url": "https://loperaindia.com/",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "L'Opera",
-    "zone": "lodhi-colony",
-    "type": "bakery"
-   },
-   "why": "A French bakery near Khan Market that makes its own viennoiserie, macarons, pastries and breads. Stop for a croissant or a box of macarons.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-cafe-lota-57226-154485",
-   "title": "Cafe Lota",
-   "type": "cafe",
-   "zone": "nizamuddin",
-   "coords": [
-    28.61315,
-    77.24263
-   ],
-   "area": null,
-   "url": null,
-   "hours": "Mo-Su 08:00-21:30",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Cafe Lota",
-    "zone": "nizamuddin",
-    "type": "cafe"
-   },
-   "why": "The café inside the National Crafts Museum, opposite Purana Qila, cooking regional Indian food. See the museum first, then have lunch.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Our own visit; national Crafts Museum; position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "provenance": "personal"
-  },
-  {
-   "id": "osm-kunzum-57107-154389",
-   "title": "Kunzum Travel Cafe",
-   "type": "cafe",
-   "zone": "hauz-khas",
-   "coords": [
-    28.55355,
-    77.19435
-   ],
-   "area": null,
-   "url": "https://kunzum.com/",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Kunzum",
-    "zone": "hauz-khas",
-    "type": "cafe"
-   },
-   "why": "A Hauz Khas Village café built around books and travel, with its own book club and reading events. Come to read over a coffee.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [
-    "cheap"
-   ],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-subko-cafe-57160-154443",
-   "title": "Subko Cafe",
-   "type": "cafe",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.57997,
-    77.22144
-   ],
-   "area": null,
-   "url": "https://subko.coffee",
-   "hours": "08:00-22:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "coffee_shop",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Subko Cafe",
-    "zone": "lodhi-colony",
-    "type": "cafe"
-   },
-   "why": "The Lodhi Colony café of Subko, a specialty coffee roaster that also makes fine cacao and runs a craft bakehouse. Order a coffee and something from the bakery counter.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning"
-   ],
-   "labels": [],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-blue-tokai-coffee-roasters-57081-154514",
-   "title": "Blue Tokai Coffee Roasters",
-   "type": "cafe",
-   "zone": "chittaranjan-park",
-   "coords": [
-    28.54063,
-    77.25678
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "coffee_shop",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Blue Tokai Coffee Roasters",
-    "zone": "chittaranjan-park",
-    "type": "cafe"
-   },
-   "why": "A Chittaranjan Park café of the Gurugram-based roaster, which buys from more than eighty Indian coffee estates and smallholders. Ask what single estate is on the bar.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-indian-coffee-house-57261-154432",
-   "title": "Indian Coffee House",
-   "type": "restaurant",
-   "zone": "connaught-place",
-   "coords": [
-    28.63069,
-    77.21605
-   ],
-   "area": "Baba Kharak Singh Marg",
-   "url": "http://indiancoffeehouse.com/",
-   "hours": "08:30-21:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "coffee_shop",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Indian Coffee House",
-    "zone": "connaught-place",
-    "type": "restaurant"
-   },
-   "why": "A branch of the Indian Coffee House, the chain run by worker co-operatives since the first outlet opened in Bombay in 1936. Cheap coffee and snacks in a room with history.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [
-    "cheap"
-   ],
-   "source": "Our own visit; wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "provenance": "personal"
-  },
-  {
-   "id": "osm-bahrisons-booksellers-57056-154440",
-   "title": "Bahrisons Booksellers",
-   "type": "books",
-   "zone": "saket",
-   "coords": [
-    28.5281,
-    77.22
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "books"
-   ],
-   "match": {
-    "name": "Bahrisons Booksellers",
-    "zone": "saket",
-    "type": "books"
-   },
-   "why": "The Khan Market bookshop Balraj Bahri Malhotra opened in 1953, a refugee from Partition who sold a gold bangle for the capital. Still run by the family.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-another-fine-day-cafe-and-readin-56910-154194",
-   "title": "Another Fine Day",
-   "type": "cafe",
-   "zone": "sector-43",
-   "coords": [
-    28.45476,
-    77.09716
-   ],
-   "area": null,
-   "url": "https://www.anotherfineday.net/",
-   "hours": "Mo-Su 11:00-21:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Another Fine Day Cafe and Reading Room",
-    "zone": "sector-43",
-    "type": "cafe"
-   },
-   "why": "A café tucked into Gurugram's corporate blocks, with an all-day breakfast menu, mezze, grills, sandwiches and wraps. Good alone with a book or with company.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-blue-tokai-coffee-roasters-57079-154426",
-   "title": "Blue Tokai Coffee Roasters",
-   "type": "cafe",
-   "zone": "malviya-nagar",
-   "coords": [
-    28.53948,
-    77.2132
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "coffee_shop",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Blue Tokai Coffee Roasters",
-    "zone": "malviya-nagar",
-    "type": "cafe"
-   },
-   "why": "A Malviya Nagar café of the Gurugram-based roaster, which buys from more than eighty Indian coffee estates and smallholders. Ask what single estate is on the bar.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [
-    "laptop"
-   ],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-moti-mahal-delux-57099-154473",
-   "title": "Moti Mahal Delux",
-   "type": "restaurant",
-   "zone": "greater-kailash",
-   "coords": [
-    28.54958,
-    77.23643
-   ],
-   "area": null,
-   "url": "https://www.motimahaldeluxgk1.com",
-   "cuisine": "punjabi",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Moti Mahal Delux",
-    "zone": "greater-kailash",
-    "type": "restaurant"
-   },
-   "why": "A branch of the chain descended from Kundan Lal Gujral's Moti Mahal in Daryaganj, the restaurant credited with popularising tandoori chicken, butter chicken and dal makhani. Order those.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-united-coffee-house-57265-154443",
-   "title": "United Coffee House",
-   "type": "restaurant",
-   "zone": "connaught-place",
-   "coords": [
-    28.63238,
-    77.22137
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "coffee_shop",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "United Coffee House",
-    "zone": "connaught-place",
-    "type": "restaurant"
-   },
-   "why": "One of Connaught Place's early restaurants, where Jawaharlal Nehru came to hear the poet Josh Malihabadi at its mushairas. Continental and Mughlai food in an old-fashioned room.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Our own visit; wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "provenance": "personal"
-  },
-  {
-   "id": "osm-the-big-chill-57200-154452",
-   "title": "The Big Chill",
-   "type": "cafe",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.59977,
-    77.22614
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "The Big Chill",
-    "zone": "lodhi-colony",
-    "type": "cafe"
-   },
-   "why": "The Khan Market home of Delhi's Big Chill café chain, which now runs three places in the market including its own cakery. Italian food, long dessert list.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-guppy-57169-154448",
-   "title": "Guppy",
-   "type": "restaurant",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.5847,
-    77.22381
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "japanese",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Guppy",
-    "zone": "lodhi-colony",
-    "type": "restaurant"
-   },
-   "why": "AD Singh's Japanese-themed restaurant in Lodhi Colony, from the restaurateur behind Olive. Book for dinner.",
-   "quality": 4,
-   "uniqueness": 3,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [
-    "bookahead"
-   ],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-colocal-57200-154454",
-   "title": "Colocal",
-   "type": "deli",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.60002,
-    77.22682
-   ],
-   "area": null,
-   "url": "https://colocal.in/",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Colocal",
-    "zone": "lodhi-colony",
-    "type": "deli"
-   },
-   "why": "A chocolate maker selling bars made from Indian-origin cacao, like its 55 per cent single-origin dark, plus cookies and coffee. Buy a bar to take home.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-one8-commune-57103-154245",
-   "title": "One8 commune",
-   "type": "restaurant",
-   "zone": "samalkha",
-   "coords": [
-    28.55156,
-    77.12254
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "One8 commune",
-    "zone": "samalkha",
-    "type": "restaurant"
-   },
-   "why": "A branch of One8 Commune, the chain of restaurant-bars started by cricketer Virat Kohli. A big, easy room for a drink near the airport.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-chache-di-hatti-57365-154412",
-   "title": "Chache di Hatti",
-   "type": "restaurant",
-   "zone": "kamla-nagar",
-   "coords": [
-    28.68232,
-    77.20602
-   ],
-   "area": null,
-   "url": null,
-   "hours": "Mo-Sa 10:30-14:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Chache di Hatti",
-    "zone": "kamla-nagar",
-    "type": "restaurant"
-   },
-   "why": "The Kamla Nagar chole bhature shop that draws very long queues during its short opening hours. Get there early.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-kallu-nihari-57284-154475",
-   "title": "Kallu Nihari",
-   "type": "restaurant",
-   "zone": "chandni-chowk",
-   "coords": [
-    28.64217,
-    77.23733
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "indian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Kallu Nihari",
-    "zone": "chandni-chowk",
-    "type": "restaurant"
-   },
-   "why": "A shop in Old Delhi that has served nothing but nihari, a slow-cooked meat stew, since Mohammed Rafiquddin — Kallu Mian — opened it in 1990. Go early; it sells out.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-arsalan-restaurant-caterer-57295-154240",
-   "title": "Arsalan Restaurant & Caterer",
-   "type": "restaurant",
-   "zone": "rajouri-garden",
-   "coords": [
-    28.64754,
-    77.12016
-   ],
-   "area": "Shivaji Marg",
-   "url": "https://www.arsalanrestaurants.com/",
-   "hours": "Mo-Su 10:00-01:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "indian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Arsalan Restaurant & Caterer",
-    "zone": "rajouri-garden",
-    "type": "restaurant"
-   },
-   "why": "The Delhi branch of Arsalan, the Kolkata restaurant known for its Kolkata-style biryani. Order the biryani.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-farzi-cafe-56990-154177",
-   "title": "Farzi Cafe",
-   "type": "restaurant",
-   "zone": "sector-25a",
-   "coords": [
-    28.4952,
-    77.08839
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Farzi Cafe",
-    "zone": "sector-25a",
-    "type": "restaurant"
-   },
-   "why": "A Cyber Hub branch of Farzi Café, one of Zorawar Kalra's modern Indian restaurant brands. Good for a group dinner.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-laduree-57200-154454",
-   "title": "Ladurée",
-   "type": "deli",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.59993,
-    77.2269
-   ],
-   "area": null,
-   "url": "https://laduree.in/",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Ladurée",
-    "zone": "lodhi-colony",
-    "type": "deli"
-   },
-   "why": "The Khan Market shop and tearoom of Ladurée, the Paris pastry house founded in 1862 on the rue Royale and best known for macarons. Buy a box to take away.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-game-on-board-57078-154427",
-   "title": "Game On Board",
-   "type": "cafe",
-   "zone": "malviya-nagar",
-   "coords": [
-    28.53895,
-    77.21373
-   ],
-   "area": "Corner Market",
-   "url": "https://www.gameonboard.in",
-   "hours": "Mo-Su 12:00-23:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "pizza",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Game On Board",
-    "zone": "malviya-nagar",
-    "type": "cafe"
-   },
-   "why": "Delhi's first board-game café, with a library of more than 500 games and game masters to teach them, plus food and drink. Bring friends and stay a few hours.",
-   "quality": 3,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "i": "7/79/Pike_Street_and_Pike_Place,_Seattle.jpg",
-   "ik": "c"
-  },
-  {
-   "id": "osm-the-piano-man-new-delhi-57057-154412",
-   "title": "The Piano Man New Delhi",
-   "type": "nightlife",
-   "zone": "malviya-nagar",
-   "coords": [
-    28.52842,
-    77.2059
-   ],
-   "area": null,
-   "url": "https://www.thepianoman.in/",
-   "cuisine": null,
-   "categories": [
-    "nightlife"
-   ],
-   "match": {
-    "name": "The Piano Man New Delhi",
-    "zone": "malviya-nagar",
-    "type": "nightlife"
-   },
-   "why": "The Eldeco Centre stage of The Piano Man, Delhi's best-known jazz club, with live music most nights. Book tickets for the show you want.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Our own visit; the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30",
-   "provenance": "personal"
-  },
-  {
-   "id": "osm-the-big-chill-57105-154484",
-   "title": "The Big Chill",
-   "type": "bakery",
-   "zone": "greater-kailash",
-   "coords": [
-    28.55261,
-    77.24208
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "The Big Chill",
-    "zone": "greater-kailash",
-    "type": "bakery"
-   },
-   "why": "The Kailash Colony café of the Big Chill, Delhi's own café chain. Italian food and a long dessert list.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-the-big-chill-57057-154433",
-   "title": "The Big Chill",
-   "type": "restaurant",
-   "zone": "saket",
-   "coords": [
-    28.52873,
-    77.21671
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "The Big Chill",
-    "zone": "saket",
-    "type": "restaurant"
-   },
-   "why": "The Saket branch of the Big Chill, Delhi's own café chain. Italian food and a long dessert list.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-l-opera-57118-154328",
-   "title": "L'Opera",
-   "type": "bakery",
-   "zone": "vasant-vihar",
-   "coords": [
-    28.55884,
-    77.16421
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "L'Opera",
-    "zone": "vasant-vihar",
-    "type": "bakery"
-   },
-   "why": "A Vasant Vihar shop of L'Opéra, the French bakery making its own viennoiserie, macarons, pastries and breads. Stop for a croissant.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-call-me-ten-57114-154328",
-   "title": "Call Me Ten",
-   "type": "restaurant",
-   "zone": "vasant-vihar",
-   "coords": [
-    28.55719,
-    77.16417
-   ],
-   "area": "Munirka Marg",
-   "url": null,
-   "hours": "Mo-Su 12:00-01:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": "japanese",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Call Me Ten",
-    "zone": "vasant-vihar",
-    "type": "restaurant"
-   },
-   "why": "A Japanese restaurant in Basant Lok, opened in 2024 by a group of founders including actor Neha Sharma. Good for sushi and small plates at dinner.",
-   "quality": 3,
-   "uniqueness": 3,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-the-big-chill-57082-154310",
-   "title": "The Big Chill",
-   "type": "restaurant",
-   "zone": "vasant-kunj",
-   "coords": [
-    28.54114,
-    77.15522
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "The Big Chill",
-    "zone": "vasant-kunj",
-    "type": "restaurant"
-   },
-   "why": "The Vasant Kunj branch of the Big Chill, Delhi's own café chain. Italian food and a long dessert list.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-kwality-57260-154435",
-   "title": "Kwality",
-   "type": "restaurant",
-   "zone": "connaught-place",
-   "coords": [
-    28.62991,
-    77.21727
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": "indian",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Kwality",
-    "zone": "connaught-place",
-    "type": "restaurant"
-   },
-   "why": "One of the early Connaught Place restaurants, which brought Continental and Mughlai cooking to the plaza. An old-fashioned room for lunch.",
-   "quality": 3,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-the-big-chill-57269-154438",
-   "title": "The Big Chill",
-   "type": "restaurant",
-   "zone": "connaught-place",
-   "coords": [
-    28.63432,
-    77.21916
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "The Big Chill",
-    "zone": "connaught-place",
-    "type": "restaurant"
-   },
-   "why": "The Connaught Place branch of the Big Chill, Delhi's own café chain. Italian food and a long dessert list.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-devan-s-at-lodhi-57160-154444",
-   "title": "Devan's at Lodhi",
-   "type": "cafe",
-   "zone": "lodhi-colony",
-   "coords": [
-    28.5799,
-    77.22201
-   ],
-   "area": null,
-   "url": "https://devans.in",
-   "hours": "Mo-Sa 10:00-19:30",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Devan's at Lodhi",
-    "zone": "lodhi-colony",
-    "type": "cafe"
-   },
-   "why": "A Lodhi Colony shop of Devan's, the coffee and tea merchant selling single-origin coffees, blends and teas from Darjeeling, Assam and the Nilgiris. Buy freshly ground coffee.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-jalebi-wala-57312-154467",
-   "title": "Jalebi Wala",
-   "type": "restaurant",
-   "zone": "chandni-chowk",
-   "coords": [
-    28.65601,
-    77.23349
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Jalebi Wala",
-    "zone": "chandni-chowk",
-    "type": "restaurant"
-   },
-   "why": "The Old Famous Jalebi Wala at the Dariba Kalan corner of Chandni Chowk, frying crisp jalebis. Buy them hot, by weight.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "afternoon",
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-dhaba-57009-154194",
-   "title": "Dhaba",
-   "type": "restaurant",
-   "zone": "cyber-city",
-   "coords": [
-    28.50431,
-    77.097
-   ],
-   "area": null,
-   "url": null,
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Dhaba",
-    "zone": "cyber-city",
-    "type": "restaurant"
-   },
-   "why": "Dhaba by Claridges, a restaurant themed on a Punjabi highway dhaba, cooking rustic North Indian food. Order dal and something from the tandoor.",
-   "quality": 3,
-   "uniqueness": 2,
-   "goodFor": [
-    "evening"
-   ],
-   "labels": [],
-   "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "osm-another-fine-day-56896-154199",
-   "title": "Another Fine Day",
-   "type": "cafe",
-   "zone": "sector-53",
-   "coords": [
-    28.44785,
-    77.09925
-   ],
-   "area": null,
-   "url": "https://www.anotherfineday.net/",
-   "hours": "Mo-Su 11:00-21:00",
-   "hoursFrom": "openstreetmap",
-   "cuisine": null,
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Another Fine Day",
-    "zone": "sector-53",
-    "type": "cafe"
-   },
-   "why": "A café in Gurugram's corporate blocks with an all-day breakfast menu, mezze, grills, sandwiches and wraps. Good alone with a book or with company.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "morning",
-    "afternoon"
-   ],
-   "labels": [],
-   "source": "the venue's own website; position from OpenStreetMap",
-   "lastVerified": "2026-09-30"
-  },
-  {
-   "id": "inja-the-manor",
-   "title": "INJA",
-   "type": "restaurant",
-   "zone": "new-friends-colony",
-   "coords": [
-    28.5671,
-    77.269
-   ],
-   "coordsFrom": "hand-placed at The Manor",
-   "area": "The Manor, Friends Colony West",
-   "url": "https://www.themanordelhi.com/",
-   "cuisine": "indian;japanese",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "INJA",
-    "zone": "new-friends-colony",
-    "type": "restaurant"
-   },
-   "why": "Indian cooking through a Japanese lens, in the house at The Manor where Indian Accent began. The tasting menu is dinner only and the reason to come, so book weeks ahead for a weekend. It's closed on Tuesdays.",
-   "quality": 4,
-   "uniqueness": 4,
-   "goodFor": [
-    "evening",
-    "couple"
-   ],
-   "labels": [
-    "bookahead"
-   ],
-   "source": "The Manor's own dining page",
-   "lastVerified": "2026-10-12"
-  },
-  {
-   "id": "megu-leela-palace",
-   "title": "Megu",
-   "type": "restaurant",
-   "zone": "chanakyapuri",
-   "coords": [
-    28.5925,
-    77.1787
-   ],
-   "coordsFrom": "hand-placed at The Leela Palace",
-   "area": "The Leela Palace, Chanakyapuri",
-   "url": "https://www.theleela.com/the-leela-palace-new-delhi/",
-   "cuisine": "japanese",
-   "categories": [
-    "food"
-   ],
-   "match": {
-    "name": "Megu",
-    "zone": "chanakyapuri",
-    "type": "restaurant"
-   },
-   "why": "The Leela's Japanese room, grilling over binchō-tan charcoal with produce flown in from Tokyo's markets. Order from the grill, or book the small omakase counter for a special night. It's a hotel dining room at hotel prices, at its best for a long dinner.",
-   "quality": 4,
-   "uniqueness": 3,
-   "goodFor": [
-    "evening",
-    "couple"
-   ],
-   "labels": [
-    "bookahead"
-   ],
-   "source": "The Leela's own press releases",
-   "lastVerified": "2026-10-12"
-  }
- ]
+  "generated": "2026-09-30",
+  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. This file exists because nothing else can fill it: no open dataset in India describes everyday food, Wikidata holds two Delhi restaurants and no cafes, and the whole sourced tier here is monuments. See SOURCES.md.",
+  "rules": [
+    "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
+    "Say what to order and when to go. 'Lovely atmosphere' helps nobody.",
+    "No opening hours in prose. OpenStreetMap carries them, js/hours.js reads them, and a time written here is a time that rots.",
+    "quality and uniqueness cap at 4 here. 5 is reserved for somewhere one of you actually loved.",
+    "Where a claim is disputed, say it is disputed. Delhi has more than one restaurant claiming to have invented the same dish and at least one of those arguments is in court.",
+    "Always pin `match` with a zone. Matching on name alone resolved 'Bukhara' to a restaurant in Noida rather than the one in Chanakyapuri — and the famous one is not in OpenStreetMap at all, so the record was dropped. That is the index doing its job: it is what stops a writer inventing a place."
+  ],
+  "items": [
+    {
+      "id": "osm-karim-s-57299-154467",
+      "title": "Karim's",
+      "type": "restaurant",
+      "zone": "chandni-chowk",
+      "coords": [
+        28.64943,
+        77.23374
+      ],
+      "area": "Kalan Mahal Road",
+      "url": "http://www.karimhoteldelhi.com",
+      "cuisine": "chicken",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Karim's",
+        "zone": "chandni-chowk",
+        "type": "restaurant"
+      },
+      "why": "Founded in 1913 near the Jama Masjid by Haji Karimuddin, whose family had cooked for the Mughal court, and often called Old Delhi's most famous place to eat. The menu is Mughlai: nihari, kebabs, korma, biryani.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Karim's_Hotel%2C_Old_Delhi.jpg/500px-Karim's_Hotel%2C_Old_Delhi.jpg",
+      "imageSubject": "Karim's",
+      "imageKind": "subject",
+      "imageCredit": "Edmund Gall · CC BY-SA 2.0"
+    },
+    {
+      "id": "osm-moti-mahal-57294-154480",
+      "title": "Moti Mahal",
+      "type": "restaurant",
+      "zone": "chandni-chowk",
+      "coords": [
+        28.64689,
+        77.23998
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Moti Mahal",
+        "zone": "chandni-chowk",
+        "type": "restaurant"
+      },
+      "why": "The Daryaganj restaurant Kundan Lal Gujral opened after Partition, one of the first to bring Punjabi food like tandoori chicken, dal makhani and butter chicken to a wide audience. Order the tandoori chicken.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-indian-accent-57184-154476",
+      "title": "Indian Accent",
+      "type": "restaurant",
+      "zone": "nizamuddin",
+      "coords": [
+        28.59176,
+        77.2379
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Indian Accent",
+        "zone": "nizamuddin",
+        "type": "restaurant"
+      },
+      "why": "Rohit Khattar's modern Indian restaurant, opened in 2009 at The Manor and at The Lodhi hotel since 2017, with sister restaurants in New York and Mumbai. Book well ahead for the tasting menu.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [
+        "bookahead"
+      ],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-saravana-bhavan-57264-154432",
+      "title": "Saravana Bhavan",
+      "type": "restaurant",
+      "zone": "connaught-place",
+      "coords": [
+        28.6322,
+        77.21621
+      ],
+      "area": null,
+      "url": "https://saravanabhavan.com/",
+      "hours": "Mo-Su 08:00-23:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": "indian",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Saravana Bhavan",
+        "zone": "connaught-place",
+        "type": "restaurant"
+      },
+      "why": "The Connaught Place branch of the Chennai-based South Indian vegetarian chain, which has grown to dozens of outlets in India and abroad. Come for a dosa and filter coffee.",
+      "quality": 4,
+      "uniqueness": 3,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-lodhi-gardens-57187-154439",
+      "title": "Lodhi Gardens",
+      "type": "park",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.59348,
+        77.21956
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "park"
+      ],
+      "match": {
+        "name": "Lodhi Gardens",
+        "zone": "lodhi-colony",
+        "type": "park"
+      },
+      "why": "Ninety acres with eleven monuments standing in it — the tombs of Muhammad Shah Sayyid (1444) and Sikandar Lodi, the Bada Gumbad, the Shish Gumbad — laid out as a garden around them in 1936. Delhi walks here in the morning. The octagonal Sayyid tomb is the one to look at properly: Hindu features built into an Indo-Islamic building.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "free"
+      ],
+      "source": "Wikipedia; Incredible India; position confirmed against OpenStreetMap",
+      "lastVerified": "2026-09-18",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Lodhi_Gardens_on_a_sunny_day.jpg/500px-Lodhi_Gardens_on_a_sunny_day.jpg",
+      "imageSubject": "Lodhi Gardens",
+      "imageKind": "subject",
+      "imageCredit": "Amaninder · CC BY-SA 3.0"
+    },
+    {
+      "id": "osm-sunder-nursery-57194-154495",
+      "title": "Sunder Nursery",
+      "type": "park",
+      "zone": "nizamuddin",
+      "coords": [
+        28.59685,
+        77.24743
+      ],
+      "area": null,
+      "url": "https://www.sundernursery.org",
+      "hours": "Mo-Su 07:00-22:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": null,
+      "categories": [
+        "park"
+      ],
+      "match": {
+        "name": "Sunder Nursery",
+        "zone": "nizamuddin",
+        "type": "park"
+      },
+      "why": "Ninety acres next to Humayun's Tomb, derelict for decades and reopened in 2018 after a ten-year restoration by the Aga Khan Trust for Culture — the charbagh canals rebuilt, the axis to the tomb restored, hundreds of native species planted as Delhi's first arboretum. Six World Heritage monuments stand inside it. Time put it on its list of the world's hundred greatest places that year.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "Wikipedia; Aga Khan Development Network; Delhi Tourism; position confirmed against OpenStreetMap",
+      "lastVerified": "2026-09-18",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Sunder_Nursery_Sep-2019.jpg/500px-Sunder_Nursery_Sep-2019.jpg",
+      "imageSubject": "Sunder Nursery",
+      "imageKind": "subject",
+      "imageCredit": "Gryffindor · CC BY-SA 4.0"
+    },
+    {
+      "id": "osm-agrasen-ki-baoli-57252-154450",
+      "title": "Agrasen ki Baoli",
+      "type": "culture",
+      "zone": "connaught-place",
+      "coords": [
+        28.62609,
+        77.22501
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "culture"
+      ],
+      "match": {
+        "name": "Agrasen ki Baoli",
+        "zone": "connaught-place",
+        "type": "culture"
+      },
+      "why": "A historical stepwell, 60 metres long and 15 wide, set among the office blocks off Hailey Road near Connaught Place. Go on a quiet weekday morning.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning"
+      ],
+      "labels": [
+        "free"
+      ],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Agrasen_ki_Baoli%2C_New_Delhi.jpg/500px-Agrasen_ki_Baoli%2C_New_Delhi.jpg",
+      "imageSubject": "Agrasen Ki Baoli",
+      "imageKind": "subject",
+      "imageCredit": "Slyronit · CC BY-SA 4.0"
+    },
+    {
+      "id": "osm-bahrisons-booksellers-57200-154454",
+      "title": "Bahrisons Booksellers",
+      "type": "books",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.6,
+        77.22718
+      ],
+      "area": null,
+      "url": "https://www.booksatbahri.com/",
+      "hours": "10:30-20:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": null,
+      "categories": [
+        "books"
+      ],
+      "match": {
+        "name": "Bahrisons Booksellers",
+        "zone": "lodhi-colony",
+        "type": "books"
+      },
+      "why": "The Khan Market bookshop Balraj Bahri Malhotra opened in 1953 after Partition, raising the money by selling one of his mother's gold bangles. Still run by the family.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-blue-tokai-coffee-roasters-57199-154452",
+      "title": "Blue Tokai Coffee Roasters",
+      "type": "cafe",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.59972,
+        77.22618
+      ],
+      "area": "Khan Market",
+      "url": "https://bluetokaicoffee.com/pages/blue-tokai-coffee-roasters-khan-market",
+      "hours": "07:00-23:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": "coffee_shop",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Blue Tokai Coffee Roasters",
+        "zone": "lodhi-colony",
+        "type": "cafe"
+      },
+      "why": "A Khan Market café of the Gurugram-based roaster, which buys from more than eighty Indian coffee estates and smallholders. Ask what single estate is on the bar.",
+      "quality": 4,
+      "uniqueness": 3,
+      "goodFor": [
+        "morning"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "i": "e/e5/FabIndia_outlet,_Khan_Market,_New_Delhi.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "osm-bengali-sweet-house-pastry-57259-154464",
+      "title": "Bengali Sweet House",
+      "type": "bakery",
+      "zone": "connaught-place",
+      "coords": [
+        28.62943,
+        77.2319
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Bengali Sweet house & Pastry",
+        "zone": "connaught-place",
+        "type": "bakery"
+      },
+      "why": "A sweet shop in Bengali Market, one of New Delhi's oldest markets, built in 1930 by Bengali Mal Lohia — the name has nothing to do with Bengal. Buy a box of sweets to take away.",
+      "quality": 4,
+      "uniqueness": 3,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-khari-baoli-spice-market-57314-154446",
+      "title": "Khari Baoli Spice Market",
+      "type": "market",
+      "zone": "old-delhi",
+      "coords": [
+        28.6572,
+        77.22285
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Khari Baoli Spice Market",
+        "zone": "old-delhi",
+        "type": "market"
+      },
+      "why": "Asia's largest wholesale spice market, trading since the seventeenth century by the Fatehpuri Masjid at the western end of Chandni Chowk, selling spices, nuts, herbs, rice and tea. Go early.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/A_shop_selling_Dates_in_Khari_Baoli_market.jpg/500px-A_shop_selling_Dates_in_Khari_Baoli_market.jpg",
+      "imageSubject": "Khari Baoli",
+      "imageKind": "subject",
+      "imageCredit": "Manjit Singh · CC BY-SA 4.0"
+    },
+    {
+      "id": "osm-lajpat-nagar-central-market-57138-154482",
+      "title": "Lajpat Nagar Central Market",
+      "type": "market",
+      "zone": "lajpat-nagar",
+      "coords": [
+        28.56899,
+        77.24083
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Lajpat Nagar Central Market",
+        "zone": "lajpat-nagar",
+        "type": "market"
+      },
+      "why": "The central market of Lajpat Nagar, the South Delhi neighbourhood named after Lala Lajpat Rai. Clothes, fabric, shoes and household goods; evenings are busiest.",
+      "quality": 4,
+      "uniqueness": 3,
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "source": "Wikipedia (CC BY-SA 4.0); Delhi Tourism; position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Lajpat_Nagar_marketplace_in_2006.jpg/500px-Lajpat_Nagar_marketplace_in_2006.jpg",
+      "imageSubject": "Lajpat Nagar",
+      "imageKind": "context",
+      "imageCredit": "Ville Miettinen from Helsinki, Finland · CC BY 2.0"
+    },
+    {
+      "id": "osm-nai-sarak-bookshop-area-57302-154461",
+      "title": "Nai Sarak Bookshop Area",
+      "type": "books",
+      "zone": "chandni-chowk",
+      "coords": [
+        28.65077,
+        77.23033
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "books"
+      ],
+      "match": {
+        "name": "Nai Sarak Bookshop Area",
+        "zone": "chandni-chowk",
+        "type": "books"
+      },
+      "why": "Nai Sarak, the 'new street' between Chandni Chowk and Chawri Bazaar, is a wholesale and retail market for school and college textbooks. Walk it after a paratha in the lane next door.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Nai_sarak.jpg/500px-Nai_sarak.jpg",
+      "imageSubject": "Nai Sarak",
+      "imageKind": "subject",
+      "imageCredit": "Supreet Sethi http://supreetsethi.net · CC BY-SA 3.0"
+    },
+    {
+      "id": "osm-wenger-s-57267-154436",
+      "title": "Wenger's",
+      "type": "bakery",
+      "zone": "connaught-place",
+      "coords": [
+        28.63338,
+        77.21807
+      ],
+      "area": "Inner Circle",
+      "url": "https://wengers.in/",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Wenger's",
+        "zone": "connaught-place",
+        "type": "bakery"
+      },
+      "why": "One of the first shops in Connaught Place. It began in 1926 at Kashmere Gate, run by a Swiss couple who introduced Delhi to pastries and Swiss chocolates, and still bakes its own breads and cakes.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-l-opera-57200-154452",
+      "title": "L'Opera",
+      "type": "bakery",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.59982,
+        77.22617
+      ],
+      "area": null,
+      "url": "https://loperaindia.com/",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "L'Opera",
+        "zone": "lodhi-colony",
+        "type": "bakery"
+      },
+      "why": "A French bakery near Khan Market that makes its own viennoiserie, macarons, pastries and breads. Stop for a croissant or a box of macarons.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-cafe-lota-57226-154485",
+      "title": "Cafe Lota",
+      "type": "cafe",
+      "zone": "nizamuddin",
+      "coords": [
+        28.61315,
+        77.24263
+      ],
+      "area": null,
+      "url": null,
+      "hours": "Mo-Su 08:00-21:30",
+      "hoursFrom": "openstreetmap",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Cafe Lota",
+        "zone": "nizamuddin",
+        "type": "cafe"
+      },
+      "why": "The café inside the National Crafts Museum, opposite Purana Qila, cooking regional Indian food. See the museum first, then have lunch.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "Our own visit; national Crafts Museum; position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "provenance": "personal"
+    },
+    {
+      "id": "osm-kunzum-57107-154389",
+      "title": "Kunzum Travel Cafe",
+      "type": "cafe",
+      "zone": "hauz-khas",
+      "coords": [
+        28.55355,
+        77.19435
+      ],
+      "area": null,
+      "url": "https://kunzum.com/",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Kunzum",
+        "zone": "hauz-khas",
+        "type": "cafe"
+      },
+      "why": "A Hauz Khas Village café built around books and travel, with its own book club and reading events. Come to read over a coffee.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-subko-cafe-57160-154443",
+      "title": "Subko Cafe",
+      "type": "cafe",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.57997,
+        77.22144
+      ],
+      "area": null,
+      "url": "https://subko.coffee",
+      "hours": "08:00-22:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": "coffee_shop",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Subko Cafe",
+        "zone": "lodhi-colony",
+        "type": "cafe"
+      },
+      "why": "The Lodhi Colony café of Subko, a specialty coffee roaster that also makes fine cacao and runs a craft bakehouse. Order a coffee and something from the bakery counter.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning"
+      ],
+      "labels": [],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-blue-tokai-coffee-roasters-57081-154514",
+      "title": "Blue Tokai Coffee Roasters",
+      "type": "cafe",
+      "zone": "chittaranjan-park",
+      "coords": [
+        28.54063,
+        77.25678
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": "coffee_shop",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Blue Tokai Coffee Roasters",
+        "zone": "chittaranjan-park",
+        "type": "cafe"
+      },
+      "why": "A Chittaranjan Park café of the Gurugram-based roaster, which buys from more than eighty Indian coffee estates and smallholders. Ask what single estate is on the bar.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-indian-coffee-house-57261-154432",
+      "title": "Indian Coffee House",
+      "type": "restaurant",
+      "zone": "connaught-place",
+      "coords": [
+        28.63069,
+        77.21605
+      ],
+      "area": "Baba Kharak Singh Marg",
+      "url": "http://indiancoffeehouse.com/",
+      "hours": "08:30-21:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": "coffee_shop",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Indian Coffee House",
+        "zone": "connaught-place",
+        "type": "restaurant"
+      },
+      "why": "A branch of the Indian Coffee House, the chain run by worker co-operatives since the first outlet opened in Bombay in 1936. Cheap coffee and snacks in a room with history.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [
+        "cheap"
+      ],
+      "source": "Our own visit; wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "provenance": "personal"
+    },
+    {
+      "id": "osm-bahrisons-booksellers-57056-154440",
+      "title": "Bahrisons Booksellers",
+      "type": "books",
+      "zone": "saket",
+      "coords": [
+        28.5281,
+        77.22
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "books"
+      ],
+      "match": {
+        "name": "Bahrisons Booksellers",
+        "zone": "saket",
+        "type": "books"
+      },
+      "why": "The Khan Market bookshop Balraj Bahri Malhotra opened in 1953, a refugee from Partition who sold a gold bangle for the capital. Still run by the family.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-another-fine-day-cafe-and-readin-56910-154194",
+      "title": "Another Fine Day",
+      "type": "cafe",
+      "zone": "sector-43",
+      "coords": [
+        28.45476,
+        77.09716
+      ],
+      "area": null,
+      "url": "https://www.anotherfineday.net/",
+      "hours": "Mo-Su 11:00-21:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Another Fine Day Cafe and Reading Room",
+        "zone": "sector-43",
+        "type": "cafe"
+      },
+      "why": "A café tucked into Gurugram's corporate blocks, with an all-day breakfast menu, mezze, grills, sandwiches and wraps. Good alone with a book or with company.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-blue-tokai-coffee-roasters-57079-154426",
+      "title": "Blue Tokai Coffee Roasters",
+      "type": "cafe",
+      "zone": "malviya-nagar",
+      "coords": [
+        28.53948,
+        77.2132
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": "coffee_shop",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Blue Tokai Coffee Roasters",
+        "zone": "malviya-nagar",
+        "type": "cafe"
+      },
+      "why": "A Malviya Nagar café of the Gurugram-based roaster, which buys from more than eighty Indian coffee estates and smallholders. Ask what single estate is on the bar.",
+      "quality": 3,
+      "uniqueness": 2,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [
+        "laptop"
+      ],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-moti-mahal-delux-57099-154473",
+      "title": "Moti Mahal Delux",
+      "type": "restaurant",
+      "zone": "greater-kailash",
+      "coords": [
+        28.54958,
+        77.23643
+      ],
+      "area": null,
+      "url": "https://www.motimahaldeluxgk1.com",
+      "cuisine": "punjabi",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Moti Mahal Delux",
+        "zone": "greater-kailash",
+        "type": "restaurant"
+      },
+      "why": "A branch of the chain descended from Kundan Lal Gujral's Moti Mahal in Daryaganj, the restaurant credited with popularising tandoori chicken, butter chicken and dal makhani. Order those.",
+      "quality": 3,
+      "uniqueness": 2,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-united-coffee-house-57265-154443",
+      "title": "United Coffee House",
+      "type": "restaurant",
+      "zone": "connaught-place",
+      "coords": [
+        28.63238,
+        77.22137
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": "coffee_shop",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "United Coffee House",
+        "zone": "connaught-place",
+        "type": "restaurant"
+      },
+      "why": "One of Connaught Place's early restaurants, where Jawaharlal Nehru came to hear the poet Josh Malihabadi at its mushairas. Continental and Mughlai food in an old-fashioned room.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "labels": [],
+      "source": "Our own visit; wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "provenance": "personal"
+    },
+    {
+      "id": "osm-the-big-chill-57200-154452",
+      "title": "The Big Chill",
+      "type": "cafe",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.59977,
+        77.22614
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "The Big Chill",
+        "zone": "lodhi-colony",
+        "type": "cafe"
+      },
+      "why": "The Khan Market home of Delhi's Big Chill café chain, which now runs three places in the market including its own cakery. Italian food, long dessert list.",
+      "quality": 3,
+      "uniqueness": 3,
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-guppy-57169-154448",
+      "title": "Guppy",
+      "type": "restaurant",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.5847,
+        77.22381
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": "japanese",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Guppy",
+        "zone": "lodhi-colony",
+        "type": "restaurant"
+      },
+      "why": "AD Singh's Japanese-themed restaurant in Lodhi Colony, from the restaurateur behind Olive. Book for dinner.",
+      "quality": 4,
+      "uniqueness": 3,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [
+        "bookahead"
+      ],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-colocal-57200-154454",
+      "title": "Colocal",
+      "type": "deli",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.60002,
+        77.22682
+      ],
+      "area": null,
+      "url": "https://colocal.in/",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Colocal",
+        "zone": "lodhi-colony",
+        "type": "deli"
+      },
+      "why": "A chocolate maker selling bars made from Indian-origin cacao, like its 55 per cent single-origin dark, plus cookies and coffee. Buy a bar to take home.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-one8-commune-57103-154245",
+      "title": "One8 commune",
+      "type": "restaurant",
+      "zone": "samalkha",
+      "coords": [
+        28.55156,
+        77.12254
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "One8 commune",
+        "zone": "samalkha",
+        "type": "restaurant"
+      },
+      "why": "A branch of One8 Commune, the chain of restaurant-bars started by cricketer Virat Kohli. A big, easy room for a drink near the airport.",
+      "quality": 3,
+      "uniqueness": 2,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-chache-di-hatti-57365-154412",
+      "title": "Chache di Hatti",
+      "type": "restaurant",
+      "zone": "kamla-nagar",
+      "coords": [
+        28.68232,
+        77.20602
+      ],
+      "area": null,
+      "url": null,
+      "hours": "Mo-Sa 10:30-14:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Chache di Hatti",
+        "zone": "kamla-nagar",
+        "type": "restaurant"
+      },
+      "why": "The Kamla Nagar chole bhature shop that draws very long queues during its short opening hours. Get there early.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-kallu-nihari-57284-154475",
+      "title": "Kallu Nihari",
+      "type": "restaurant",
+      "zone": "chandni-chowk",
+      "coords": [
+        28.64217,
+        77.23733
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": "indian",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Kallu Nihari",
+        "zone": "chandni-chowk",
+        "type": "restaurant"
+      },
+      "why": "A shop in Old Delhi that has served nothing but nihari, a slow-cooked meat stew, since Mohammed Rafiquddin — Kallu Mian — opened it in 1990. Go early; it sells out.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-arsalan-restaurant-caterer-57295-154240",
+      "title": "Arsalan Restaurant & Caterer",
+      "type": "restaurant",
+      "zone": "rajouri-garden",
+      "coords": [
+        28.64754,
+        77.12016
+      ],
+      "area": "Shivaji Marg",
+      "url": "https://www.arsalanrestaurants.com/",
+      "hours": "Mo-Su 10:00-01:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": "indian",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Arsalan Restaurant & Caterer",
+        "zone": "rajouri-garden",
+        "type": "restaurant"
+      },
+      "why": "The Delhi branch of Arsalan, the Kolkata restaurant known for its Kolkata-style biryani. Order the biryani.",
+      "quality": 3,
+      "uniqueness": 3,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-farzi-cafe-56990-154177",
+      "title": "Farzi Cafe",
+      "type": "restaurant",
+      "zone": "sector-25a",
+      "coords": [
+        28.4952,
+        77.08839
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Farzi Cafe",
+        "zone": "sector-25a",
+        "type": "restaurant"
+      },
+      "why": "A Cyber Hub branch of Farzi Café, one of Zorawar Kalra's modern Indian restaurant brands. Good for a group dinner.",
+      "quality": 3,
+      "uniqueness": 3,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-laduree-57200-154454",
+      "title": "Ladurée",
+      "type": "deli",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.59993,
+        77.2269
+      ],
+      "area": null,
+      "url": "https://laduree.in/",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Ladurée",
+        "zone": "lodhi-colony",
+        "type": "deli"
+      },
+      "why": "The Khan Market shop and tearoom of Ladurée, the Paris pastry house founded in 1862 on the rue Royale and best known for macarons. Buy a box to take away.",
+      "quality": 3,
+      "uniqueness": 3,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-game-on-board-57078-154427",
+      "title": "Game On Board",
+      "type": "cafe",
+      "zone": "malviya-nagar",
+      "coords": [
+        28.53895,
+        77.21373
+      ],
+      "area": "Corner Market",
+      "url": "https://www.gameonboard.in",
+      "hours": "Mo-Su 12:00-23:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": "pizza",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Game On Board",
+        "zone": "malviya-nagar",
+        "type": "cafe"
+      },
+      "why": "Delhi's first board-game café, with a library of more than 500 games and game masters to teach them, plus food and drink. Bring friends and stay a few hours.",
+      "quality": 3,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "labels": [],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "i": "7/79/Pike_Street_and_Pike_Place,_Seattle.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "osm-the-piano-man-new-delhi-57057-154412",
+      "title": "The Piano Man New Delhi",
+      "type": "nightlife",
+      "zone": "malviya-nagar",
+      "coords": [
+        28.52842,
+        77.2059
+      ],
+      "area": null,
+      "url": "https://www.thepianoman.in/",
+      "cuisine": null,
+      "categories": [
+        "nightlife"
+      ],
+      "match": {
+        "name": "The Piano Man New Delhi",
+        "zone": "malviya-nagar",
+        "type": "nightlife"
+      },
+      "why": "The Eldeco Centre stage of The Piano Man, Delhi's best-known jazz club, with live music most nights. Book tickets for the show you want.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [],
+      "source": "Our own visit; the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30",
+      "provenance": "personal"
+    },
+    {
+      "id": "osm-the-big-chill-57105-154484",
+      "title": "The Big Chill",
+      "type": "bakery",
+      "zone": "greater-kailash",
+      "coords": [
+        28.55261,
+        77.24208
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "The Big Chill",
+        "zone": "greater-kailash",
+        "type": "bakery"
+      },
+      "why": "The Kailash Colony café of the Big Chill, Delhi's own café chain. Italian food and a long dessert list.",
+      "quality": 3,
+      "uniqueness": 2,
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-the-big-chill-57057-154433",
+      "title": "The Big Chill",
+      "type": "restaurant",
+      "zone": "saket",
+      "coords": [
+        28.52873,
+        77.21671
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "The Big Chill",
+        "zone": "saket",
+        "type": "restaurant"
+      },
+      "why": "The Saket branch of the Big Chill, Delhi's own café chain. Italian food and a long dessert list.",
+      "quality": 3,
+      "uniqueness": 2,
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-l-opera-57118-154328",
+      "title": "L'Opera",
+      "type": "bakery",
+      "zone": "vasant-vihar",
+      "coords": [
+        28.55884,
+        77.16421
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "L'Opera",
+        "zone": "vasant-vihar",
+        "type": "bakery"
+      },
+      "why": "A Vasant Vihar shop of L'Opéra, the French bakery making its own viennoiserie, macarons, pastries and breads. Stop for a croissant.",
+      "quality": 3,
+      "uniqueness": 3,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-call-me-ten-57114-154328",
+      "title": "Call Me Ten",
+      "type": "restaurant",
+      "zone": "vasant-vihar",
+      "coords": [
+        28.55719,
+        77.16417
+      ],
+      "area": "Munirka Marg",
+      "url": null,
+      "hours": "Mo-Su 12:00-01:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": "japanese",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Call Me Ten",
+        "zone": "vasant-vihar",
+        "type": "restaurant"
+      },
+      "why": "A Japanese restaurant in Basant Lok, opened in 2024 by a group of founders including actor Neha Sharma. Good for sushi and small plates at dinner.",
+      "quality": 3,
+      "uniqueness": 3,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-the-big-chill-57082-154310",
+      "title": "The Big Chill",
+      "type": "restaurant",
+      "zone": "vasant-kunj",
+      "coords": [
+        28.54114,
+        77.15522
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "The Big Chill",
+        "zone": "vasant-kunj",
+        "type": "restaurant"
+      },
+      "why": "The Vasant Kunj branch of the Big Chill, Delhi's own café chain. Italian food and a long dessert list.",
+      "quality": 3,
+      "uniqueness": 2,
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-kwality-57260-154435",
+      "title": "Kwality",
+      "type": "restaurant",
+      "zone": "connaught-place",
+      "coords": [
+        28.62991,
+        77.21727
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": "indian",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Kwality",
+        "zone": "connaught-place",
+        "type": "restaurant"
+      },
+      "why": "One of the early Connaught Place restaurants, which brought Continental and Mughlai cooking to the plaza. An old-fashioned room for lunch.",
+      "quality": 3,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-the-big-chill-57269-154438",
+      "title": "The Big Chill",
+      "type": "restaurant",
+      "zone": "connaught-place",
+      "coords": [
+        28.63432,
+        77.21916
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "The Big Chill",
+        "zone": "connaught-place",
+        "type": "restaurant"
+      },
+      "why": "The Connaught Place branch of the Big Chill, Delhi's own café chain. Italian food and a long dessert list.",
+      "quality": 3,
+      "uniqueness": 2,
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-devan-s-at-lodhi-57160-154444",
+      "title": "Devan's at Lodhi",
+      "type": "cafe",
+      "zone": "lodhi-colony",
+      "coords": [
+        28.5799,
+        77.22201
+      ],
+      "area": null,
+      "url": "https://devans.in",
+      "hours": "Mo-Sa 10:00-19:30",
+      "hoursFrom": "openstreetmap",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Devan's at Lodhi",
+        "zone": "lodhi-colony",
+        "type": "cafe"
+      },
+      "why": "A Lodhi Colony shop of Devan's, the coffee and tea merchant selling single-origin coffees, blends and teas from Darjeeling, Assam and the Nilgiris. Buy freshly ground coffee.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-jalebi-wala-57312-154467",
+      "title": "Jalebi Wala",
+      "type": "restaurant",
+      "zone": "chandni-chowk",
+      "coords": [
+        28.65601,
+        77.23349
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Jalebi Wala",
+        "zone": "chandni-chowk",
+        "type": "restaurant"
+      },
+      "why": "The Old Famous Jalebi Wala at the Dariba Kalan corner of Chandni Chowk, frying crisp jalebis. Buy them hot, by weight.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-dhaba-57009-154194",
+      "title": "Dhaba",
+      "type": "restaurant",
+      "zone": "cyber-city",
+      "coords": [
+        28.50431,
+        77.097
+      ],
+      "area": null,
+      "url": null,
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Dhaba",
+        "zone": "cyber-city",
+        "type": "restaurant"
+      },
+      "why": "Dhaba by Claridges, a restaurant themed on a Punjabi highway dhaba, cooking rustic North Indian food. Order dal and something from the tandoor.",
+      "quality": 3,
+      "uniqueness": 2,
+      "goodFor": [
+        "evening"
+      ],
+      "labels": [],
+      "source": "Wikipedia (CC BY-SA 4.0); position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "osm-another-fine-day-56896-154199",
+      "title": "Another Fine Day",
+      "type": "cafe",
+      "zone": "sector-53",
+      "coords": [
+        28.44785,
+        77.09925
+      ],
+      "area": null,
+      "url": "https://www.anotherfineday.net/",
+      "hours": "Mo-Su 11:00-21:00",
+      "hoursFrom": "openstreetmap",
+      "cuisine": null,
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Another Fine Day",
+        "zone": "sector-53",
+        "type": "cafe"
+      },
+      "why": "A café in Gurugram's corporate blocks with an all-day breakfast menu, mezze, grills, sandwiches and wraps. Good alone with a book or with company.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "morning",
+        "afternoon"
+      ],
+      "labels": [],
+      "source": "the venue's own website; position from OpenStreetMap",
+      "lastVerified": "2026-09-30"
+    },
+    {
+      "id": "inja-the-manor",
+      "title": "INJA",
+      "type": "restaurant",
+      "zone": "new-friends-colony",
+      "coords": [
+        28.5671,
+        77.269
+      ],
+      "coordsFrom": "hand-placed at The Manor",
+      "area": "The Manor, Friends Colony West",
+      "url": "https://www.themanordelhi.com/",
+      "cuisine": "indian;japanese",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "INJA",
+        "zone": "new-friends-colony",
+        "type": "restaurant"
+      },
+      "why": "Indian cooking through a Japanese lens, in the house at The Manor where Indian Accent began. The tasting menu is dinner only and the reason to come, so book weeks ahead for a weekend. It's closed on Tuesdays.",
+      "quality": 4,
+      "uniqueness": 4,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "labels": [
+        "bookahead"
+      ],
+      "source": "The Manor's own dining page",
+      "lastVerified": "2026-10-12"
+    },
+    {
+      "id": "megu-leela-palace",
+      "title": "Megu",
+      "type": "restaurant",
+      "zone": "chanakyapuri",
+      "coords": [
+        28.5925,
+        77.1787
+      ],
+      "coordsFrom": "hand-placed at The Leela Palace",
+      "area": "The Leela Palace, Chanakyapuri",
+      "url": "https://www.theleela.com/the-leela-palace-new-delhi/",
+      "cuisine": "japanese",
+      "categories": [
+        "food"
+      ],
+      "match": {
+        "name": "Megu",
+        "zone": "chanakyapuri",
+        "type": "restaurant"
+      },
+      "why": "The Leela's Japanese room, grilling over binchō-tan charcoal with produce flown in from Tokyo's markets. Order from the grill, or book the small omakase counter for a special night. It's a hotel dining room at hotel prices, at its best for a long dinner.",
+      "quality": 4,
+      "uniqueness": 3,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "labels": [
+        "bookahead"
+      ],
+      "source": "The Leela's own press releases",
+      "lastVerified": "2026-10-12"
+    }
+  ]
 }
