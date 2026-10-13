@@ -1190,6 +1190,30 @@ body[data-view="away"]    { --accent: #3f5e7a; --blush: #93add0; }
 .zone-dot.on text { fill: var(--bg); }
 .zone-dot.home circle { fill: var(--gold); stroke: var(--gold); }
 .zone-dot.home text { fill: var(--bg); }
+/* The shapes version, once paris/data/zonemap.json has landed. */
+.arr-map { width: 100%; max-width: 34rem; height: auto; display: block; margin: 0 auto; }
+.arr-map .arr { cursor: pointer; outline: none; }
+.arr-map .arr path {
+  fill: color-mix(in srgb, var(--ink) 9%, var(--bg)); stroke: var(--bg); stroke-width: 3; stroke-linejoin: round;
+  transition: fill .25s;
+}
+.arr-map .arr text {
+  font-family: var(--sans); font-size: 22px; font-weight: 600;
+  text-anchor: middle; fill: var(--faint); pointer-events: none;
+}
+.arr-map .arr:hover path, .arr-map .arr:focus-visible path { fill: color-mix(in srgb, var(--accent) 25%, var(--bg)); }
+.arr-map .arr.lit path { fill: color-mix(in srgb, var(--accent) 22%, var(--bg)); stroke-dasharray: 6 5; stroke: var(--accent); stroke-width: 2; }
+.arr-map .arr.on path { fill: var(--accent); }
+.arr-map .arr.on text { fill: var(--bg); }
+.arr-map .arr.home path { fill: var(--gold); }
+.arr-map .arr.home text { fill: var(--bg); }
+.arr-map .arr.pick path { stroke: var(--ink, currentColor); stroke-width: 5; }
+.arr-map.explore .arr.on path { fill: color-mix(in srgb, var(--accent) 55%, var(--bg)); }
+.arr-seine {
+  fill: none; pointer-events: none;
+  stroke: color-mix(in srgb, var(--blue, #35566e) 55%, transparent);
+  stroke-width: 11; stroke-linecap: round; stroke-linejoin: round; opacity: .55;
+}
 .zone-map-note {
   text-align: center; margin: .9rem 0 0;
   font-size: .76rem; color: var(--faint);
