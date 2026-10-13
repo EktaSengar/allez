@@ -27,7 +27,7 @@ const App = (() => {
   const FIRST = ['home', 'places/index'];
   const CORE  = ['events', 'events-city', 'places', 'nightlife', 'sports', 'food',
                  'itineraries', 'daytrips', 'neighborhoods', 'quests', 'editorial',
-                 'invaders', 'notes'];
+                 'invaders', 'notes', 'festivals'];
   /* `practices` is behind the first paint on purpose. It feeds one
      section of one tab, so nothing the reader sees first is waiting on
      are. `regulars` is the hand-researched half of the same tab and
@@ -1134,7 +1134,7 @@ const App = (() => {
   defineView('weekend',  c  => renderWeekend(c.weekend), c => weekendLede(c.weekend));
   defineView('eat',      () => renderEat(),      () => eatLede());
   defineView('explore',  () => renderExplore(),  () => exploreLede());
-  defineView('events',   () => bookStrip() + renderEvents(),   () => eventsLede());
+  defineView('events',   () => festivalShelf(8) + bookStrip() + renderEvents(),   () => eventsLede());
   defineView('regulars', () => renderRegulars(), () => regularsLede());
   defineView('away',     () => renderAway());
   defineView('quests',   () => renderQuests());
@@ -1394,6 +1394,7 @@ const App = (() => {
     });
 
     return hero(lead)
+      + festivalShelf(3)
       + renderAroundYou()
       + (also.items.length
           ? stripHead(`Also around ${Loc.displayName(Loc.active())}`, radiusNote(also.radius, also.items, also.widened))
@@ -2956,13 +2957,93 @@ const App = (() => {
 
   function evPool() {
     const out = [];
+    /* A researched record that names a feed listing in `sameAs` stands in
+       for it — the Notre-Dame market arrives from the city's feed and from
+       our own events.json, and should show once, as ours. */
+    const covered = new Set(ALL.flatMap(i => i.sameAs || []));
     for (const i of ALL) {
-      if (!isEvent(i) || spent(i)) continue;
+      if (!isEvent(i) || spent(i) || covered.has(i.id)) continue;
       const d = evNext(i);
       if (d == null) continue;
       out.push({ i, d, g: evGroupOf(i), run: evSpan(i) > EV_RUN });
     }
     return out;
+  }
+
+  /* ---------- festivals ----------
+
+     Halloween, Christmas, Diwali and the rest are a season, not a date,
+     and their events are mostly runs — which is exactly what the ranked
+     lists bury: on 12 October two of six Halloween records sat behind
+     "See all" under Running now. So a festival in season gets a shelf of
+     its own, at the top of Events and under the hero on Today.
+
+     The calendar is `festivals.json`, one per city. A record belongs to
+     one by saying so (`festival: 'halloween'`), or by a `match` word in
+     its title, which is how the city feed's own Halloween listings join
+     without anyone tagging them. Only what is on inside the season
+     counts, so a "Christmas" concert in July is not pulled forward. */
+  /* Seasons overlap — Christmas runs into the New Year — so of those in
+     season the one whose big day is next wins, and once every peak is
+     past, the one that peaked last. */
+  function festivalNow() {
+    const live = [];
+    for (const f of D.festivals?.items || []) {
+      for (const on of f.on || []) {
+        const opens = iso(addDays(new Date(on.start + 'T12:00:00'), -(f.lead || 21)));
+        if (TODAY_ISO >= opens && TODAY_ISO <= on.end) live.push({ f, on, peak: on.peak || on.start });
+      }
+    }
+    const ahead = live.filter(x => x.peak >= TODAY_ISO).sort((a, b) => a.peak.localeCompare(b.peak));
+    return ahead[0] || live.sort((a, b) => b.peak.localeCompare(a.peak))[0] || null;
+  }
+
+  function festivalPool(now) {
+    if (!now) return [];
+    const { f, on } = now;
+    const words = (f.match || []).map(w => new RegExp(`(^|[^\\p{L}])${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^\\p{L}])`, 'iu'));
+    return evPool().filter(({ i }) =>
+      i.start <= on.end && i.end >= on.start &&
+      (i.festival === f.id || words.some(r => r.test(i.title || ''))));
+  }
+
+  /* How far off, said the way people say it. */
+  function festivalCountdown(on) {
+    const n = Rank.daysBetween(TODAY_ISO, on.peak || on.start);
+    if (n < 0) return TODAY_ISO <= on.end ? 'On now' : '';
+    if (n === 0) return 'Tonight';
+    if (n === 1) return 'Tomorrow';
+    const { satISO, sunISO } = weekend();
+    const peak = on.peak || on.start;
+    if (peak === satISO || peak === sunISO) return 'This weekend';
+    return `${n} days to go`;
+  }
+
+  /* What the shelf drew, so Events can leave those out of the lists
+     below it rather than show them twice. */
+  let FEST_SHOWN = new Set();
+
+  function festivalShelf(cap) {
+    FEST_SHOWN = new Set();
+    const now = festivalNow();
+    const pool = festivalPool(now);
+    if (!pool.length) return '';
+    const { f, on } = now;
+    /* Hand-researched before the feed: the feed's `sourced` records are
+       facts with no opinion, and a shelf this short is for the ones
+       somebody chose. The score orders within each half. */
+    const chosen = i => i.provenance === 'editorial' || i.provenance === 'personal';
+    const ranked = Rank.rank(pool.map(e => e.i), CTX)
+      .sort((a, b) => chosen(b) - chosen(a)).slice(0, cap);
+    const byItem = new Map(pool.map(e => [e.i, e]));
+    const pick = ranked.map(i => byItem.get(i));
+    pick.forEach(e => FEST_SHOWN.add(e.i.id));
+    const more = pool.length > pick.length ? ` · ${pick.length} of ${pool.length}` : '';
+    return `<section class="festival" data-festival="${esc(f.id)}">`
+      + stripHead(`${f.emoji} ${f.name} in ${City.name}`, `${festivalCountdown(on)}${more}`)
+      + (f.line ? `<p class="festival-line">${esc(f.line)}</p>` : '')
+      + `<div class="event-grid">${pick.map(e => evRow(e, evWhen(e))).join('')}</div>`
+      + `</section>`;
   }
 
   /* The hour, where the record states one. A hand-written record says
@@ -3031,6 +3112,7 @@ const App = (() => {
       <p class="kicker"><b>${esc(lead)}${t && !e.run ? ` · ${t.from}${t.to ? `–${t.to}` : ''}` : ''}</b>${i.minutesFromHome != null ? ` · ${i.minutesFromHome} min` : ''}</p>
       <h3 class="card-title">${esc(i.title)}</h3>
       <p class="event-place">${[i.area ? esc(i.area) : (i.zone ? City.zone.tile(i.zone) : ''), esc(evPrice(i))].filter(Boolean).join(' · ')}</p>
+      ${i.provisional ? '<p class="event-provisional">Dates expected, not yet confirmed — check before going</p>' : ''}
       <p class="why">${esc(blurb(i))}</p>
       <div class="event-actions">
         ${act ? `<a class="event-primary" href="${esc(act[0])}" target="_blank" rel="noopener">${act[1]} <span aria-hidden="true">↗</span></a>` : ''}
@@ -3197,7 +3279,7 @@ const App = (() => {
   }
 
   function renderEvents() {
-    const pool = evPool();
+    const pool = evPool().filter(e => !FEST_SHOWN.has(e.i.id));
     if (!pool.length && !City.lumaPage) {
       return `<p class="empty">Nothing dated in the next month yet.</p>`;
     }
