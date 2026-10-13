@@ -135,19 +135,21 @@ body {
 .brand-sig path {
   fill: none; stroke: var(--sig); stroke-width: 4.8;
   stroke-linecap: round; stroke-linejoin: round;
-  stroke-dasharray: 1; stroke-dashoffset: 0;
+  stroke-dasharray: 531 532; stroke-dashoffset: 0;
 }
 
 /* The signature writes itself on load, like a route being traced, and
-   ends on the z's flick. pathLength="1" on the path makes the dash maths
-   the same for any length. Paint only, so no layout shift. The opacity
-   step hides the round cap's dot before the pen moves. */
+   ends on the z's flick. The dash is the path's measured length (531 in
+   viewBox units), not pathLength="1": Safari ignores pathLength for
+   dashes and drew a dotted line. Paint only, so no layout shift. A short
+   opacity ramp hides the round cap's dot before the pen moves, and an
+   even ease keeps the pen speed steady instead of lurching mid-word. */
 @media (prefers-reduced-motion: no-preference) {
-  .brand-sig path { animation: sig-draw 1.6s cubic-bezier(.55, 0, .3, 1) .2s both; }
+  .brand-sig path { animation: sig-draw 1.8s cubic-bezier(.45, .05, .35, 1) .15s both; }
 }
 @keyframes sig-draw {
-  0%   { stroke-dashoffset: 1; opacity: 0; }
-  1%   { opacity: 1; }
+  0%   { stroke-dashoffset: 531; opacity: 0; }
+  6%   { opacity: 1; }
   100% { stroke-dashoffset: 0; opacity: 1; }
 }
 .brand-lg { height: clamp(3.4rem, 12vw, 4.6rem); margin: 0 0 .4rem; }
