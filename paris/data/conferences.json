@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07",
+  "generated": "2026-10-13",
   "window": {
     "from": "2026-10-06",
     "to": "2026-12-05"
@@ -7,48 +7,6 @@
   "source": "confs.tech (MIT) · developers.events (CC BY-NC 4.0)",
   "note": "Tech conferences in this city, from two open lists maintained by volunteers. Facts only: name, dates, city, topic, link — the line under each title is assembled from those, never copied. Kept apart from events-city.json because the licences differ; see DATA-LICENSE.md. Written daily by scripts/conferences.mjs, pruned by scripts/refresh.mjs.",
   "items": [
-    {
-      "id": "conf-kubeauto-day-paris-2026-10-08",
-      "title": "KubeAuto Day Paris",
-      "emoji": "💻",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "Paris",
-      "start": "2026-10-08",
-      "end": "2026-10-08",
-      "why": "A one-day conference on kubernetes, cloud native, open source in Paris. Tickets and programme on its own site.",
-      "url": "https://kubeauto.day/paris",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-06",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-dev-with-ai-2026-10-12",
-      "title": "Dev With AI",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "Paris",
-      "start": "2026-10-12",
-      "end": "2026-10-12",
-      "why": "A one-day conference on AI, development in Paris. Tickets and programme on its own site.",
-      "url": "https://www.devw.ai/",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-06",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
     {
       "id": "conf-directions-emea-2026-2026-10-27",
       "title": "Directions EMEA 2026",
