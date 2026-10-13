@@ -17,6 +17,7 @@ you derive from them under the ODbL.
 | `paris/data/events-city.json` | [Que Faire à Paris](https://opendata.paris.fr/explore/dataset/que-faire-a-paris-/) | Ville de Paris |
 | `paris/data/practices.json` — the records whose `source` names Que Faire à Paris | Que Faire à Paris | Ville de Paris |
 | `paris/data/civic.json` | [Marchés découverts](https://opendata.paris.fr/explore/dataset/marches-decouverts/) and [Lieux municipaux](https://opendata.paris.fr/explore/dataset/lieux-municipaux/) | Ville de Paris |
+| `paris/data/zonemap.json` | [Arrondissements](https://opendata.paris.fr/explore/dataset/arrondissements/), and the Seine from [OpenStreetMap](https://www.openstreetmap.org/copyright) | Ville de Paris; © OpenStreetMap contributors |
 | `*/data/places/*.json` (every city) and `*/data/invaders.json` | [OpenStreetMap](https://www.openstreetmap.org/copyright), via Overpass | © OpenStreetMap contributors |
 
 On the site, each of these records names its source on its card, and

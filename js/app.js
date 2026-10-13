@@ -33,7 +33,11 @@ const App = (() => {
      are. `regulars` is the hand-researched half of the same tab and
      waits with it. Same reasoning as civic and notable, and it holds for
      `conferences` too: a few dozen records that feed Events' Tech group. */
-  const LATER = ['civic', 'notable', 'practices', 'regulars', 'conferences'];
+  const LATER = ['civic', 'notable', 'practices', 'regulars', 'conferences',
+                 /* The outlines for the zone map — Quests and Explore only,
+                    never the first view, so they wait here; the dots stand
+                    in until they land. Only a pack that draws a map has one. */
+                 ...(City.zone.map ? ['zonemap'] : [])];
   const FILES = [...FIRST, ...CORE, ...LATER];
   const D = {};
   let ALL = [];
@@ -50,6 +54,7 @@ const App = (() => {
   let CLIM = null;
   let CLIMP = null;
   let VIEW = 'today';
+  let EXPLORE_PICK = null;              // the zone chosen on Explore's map
   let HOME = { label: City.name };        // replaced by the location engine
   let DISCOVERED = [];                  // OpenStreetMap layer, positions only
 
@@ -2756,7 +2761,68 @@ const App = (() => {
   const zoneDone = num => num === Loc.active()?.zone || Store.hasZone(num);
   const zoneCount = () => new Set([Loc.active()?.zone, ...Store.zones()].filter(n => n != null)).size;
 
+  /* What you have already done somewhere, as opposed to what you have
+     said you explored: places marked loved, good or meh, counted by zone.
+     A zone with some but not yet ticked is lit on the map, so the quest
+     can say "you have been to the 11th, count it" instead of waiting to
+     be told. */
+  function zoneActivity() {
+    const by = {};
+    for (const i of [...ALL, ...DISCOVERED]) {
+      if (i.zone == null || !['loved', 'good', 'meh'].includes(Store.rating(i.id))) continue;
+      by[i.zone] = (by[i.zone] || 0) + 1;
+    }
+    return by;
+  }
+
+  /* The arrondissements as shapes — the city's own boundaries, with the
+     Seine run through them and clipped to the city's edge. One drawing,
+     two jobs: in the quest a tap ticks a zone off, in Explore a tap picks
+     which one to read about. Until zonemap.json lands (it is behind the
+     first paint) the quest falls back to the dots below. */
+  function shapeMap({ mode, pick = null, label }) {
+    const M = D.zonemap;
+    const here = Loc.active()?.zone;
+    const lit = mode === 'quest' ? zoneActivity() : {};
+    /* tile() is markup (a superscript); a tooltip wants the plain text. */
+    const ord = n => String(City.zone.tile(n)).replace(/<[^>]+>/g, '');
+    /* The picked one is drawn last, or its neighbours paint over its outline. */
+    const shapes = Object.entries(M.zones)
+      .sort(([a], [b]) => (Number(a) === pick) - (Number(b) === pick))
+      .map(([n, z]) => {
+      const num = Number(n);
+      const cls = ['arr',
+        zoneDone(num) ? 'on' : '',
+        num === here ? 'home' : '',
+        num === pick ? 'pick' : '',
+        !zoneDone(num) && lit[num] ? 'lit' : ''].filter(Boolean).join(' ');
+      const tip = `${ord(num)}${zoneDone(num) ? ' — explored' : lit[num] ? ` — ${lit[num]} done here, not yet counted` : ''}`;
+      return `<g class="${cls}" ${mode === 'quest' ? `data-zonenum="${num}"` : `data-explorezone="${num}"`}
+                 role="button" tabindex="0" aria-label="${esc(tip)}">
+        <path d="${z.d}"></path>
+        <text x="${z.at[0]}" y="${z.at[1]}" dy=".35em">${num}</text>
+        <title>${esc(tip)}</title>
+      </g>`;
+    }).join('');
+    const outline = Object.values(M.zones).map(z => `<path d="${z.d}"></path>`).join('');
+    return `<svg class="arr-map ${mode}" viewBox="${M.viewBox}" role="group" aria-label="${esc(label)}">
+      <defs><clipPath id="arr-clip-${mode}">${outline}</clipPath></defs>
+      ${shapes}
+      ${M.seine ? `<path class="arr-seine" d="${M.seine}" clip-path="url(#arr-clip-${mode})"></path>` : ''}
+    </svg>`;
+  }
+
   function zoneMap(q) {
+    if (D.zonemap?.zones) {
+      const lit = Object.keys(zoneActivity()).map(Number).filter(n => !zoneDone(n));
+      const nudge = lit.length
+        ? `You have marked places done in the ${lit.slice(0, 3).map(n => City.zone.tile(n)).join(', ')}${lit.length > 3 ? ' and more' : ''} — tap ${lit.length === 1 ? 'it' : 'them'} to count.`
+        : `Tap one as you do it. You are in the ${Loc.active()?.zone != null ? City.zone.tile(Loc.active().zone) : '—'}, so that one is free.`;
+      return `<div class="zone-map-wrap">
+        ${shapeMap({ mode: 'quest', label: 'Arrondissements explored' })}
+        <p class="zone-map-note">${nudge}</p>
+      </div>`;
+    }
     const dots = Object.entries(ZONE_MAP).map(([n, xy]) => {
       const num = Number(n);
       const [x, y] = spread(xy);
@@ -3602,8 +3668,11 @@ const App = (() => {
     const hoods = D.neighborhoods.items || [];
     const explored = Store.zones();
     const pool = hoods.filter(h => !h.isHome && !explored.includes(h.zone));
-    const f = (pool.length ? pool : hoods.filter(h => !h.isHome))
-      .slice().sort((a, b) => a.minutesFromHome - b.minutesFromHome)[0];
+    /* The nearest one you have not explored, unless you picked one on the
+       map — then that one, explored or not. */
+    const f = hoods.find(h => h.zone === EXPLORE_PICK) ||
+      (pool.length ? pool : hoods.filter(h => !h.isHome))
+        .slice().sort((a, b) => a.minutesFromHome - b.minutesFromHome)[0];
 
     let dossier = '', standing = '';
     if (f) {
@@ -3666,7 +3735,13 @@ const App = (() => {
     });
 
 
+    const map = D.zonemap?.zones
+      ? stripHead('Where next', `${zoneCount()} of ${hoods.length} explored · tap one to read about it`)
+        + `<div class="zone-map-wrap">${shapeMap({ mode: 'explore', pick: f?.zone ?? null, label: 'Choose an arrondissement' })}</div>`
+      : '';
+
     return standing
+      + map
       + dossier
       + (walk.items.length
           ? stripHead('Walks and routes', radiusNote(walk.radius, walk.items, walk.widened))
@@ -4352,7 +4427,7 @@ const App = (() => {
 
     // the arrondissement map — one tap marks it in the quest and in Explore
     document.addEventListener('click', e => {
-      const g = e.target.closest('.zone-dot'); if (!g) return;
+      const g = e.target.closest('.zone-dot, .arr-map.quest [data-zonenum]'); if (!g) return;
       const n = Number(g.dataset.zonenum);
       if (n === Loc.active()?.zone) { toast(`You are in the ${n}${n===1?'er':'e'} — that one is free.`); return; }
       const before = zoneCount();
@@ -4361,6 +4436,21 @@ const App = (() => {
       celebrate(g.closest('[data-quest]').dataset.quest, before, after);
       buildContext();
       render();
+    });
+
+    // Explore's map — a tap opens that zone's page below it
+    const pickZone = g => {
+      EXPLORE_PICK = Number(g.dataset.explorezone);
+      render();
+      document.querySelector('.hood')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    document.addEventListener('click', e => {
+      const g = e.target.closest('[data-explorezone]'); if (g) pickZone(g);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const g = e.target.closest?.('[data-explorezone], .arr-map.quest [data-zonenum]'); if (!g) return;
+      e.preventDefault(); g.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
 
     // arrondissements
