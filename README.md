@@ -66,7 +66,10 @@ node scripts/check-views.mjs --compare /tmp/before.json
 node scripts/serve.mjs      # http://localhost:4321
 ```
 
-`http://localhost:4321/` is the city chooser; `/paris/`, `/delhi/`,
+`http://localhost:4321/` is the discovery homepage: city switching, mood
+filters, previews of written recommendations, and a surprise idea. It
+reads existing city files; live location-aware ranking stays in the city
+guides. `/paris/`, `/delhi/`,
 `/bengaluru/`, `/bay-area/` and `/new-york/` are the cities.
 
 ### Adding a sixth city

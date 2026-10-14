@@ -26,6 +26,16 @@ export const V = {
 
   today: {
     tab: 'Today',
+    heading: day => `Your ${day}, sorted.`,
+    introduction: n => n === 1 ? 'One good idea worth your time.' : `${n} good ideas. Pick what feels like you.`,
+    noPicks: 'A little pause. More possibilities soon.',
+    surprise: 'Surprise me ✧',
+    less: 'Less like this',
+    more: 'Good to know',
+    collapse: 'Show less',
+    preferences: 'Your taste',
+    credit: 'Photo: ',
+    contextPhoto: 'The neighbourhood',
     rightNow: 'Right now',
     afterWork: 'After work',
     tonight: 'Tonight',

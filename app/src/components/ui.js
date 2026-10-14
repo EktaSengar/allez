@@ -4,7 +4,7 @@
    --------------------------------------------------------- */
 
 import { useEffect, useState } from 'react';
-import { Animated, Image, Pressable, Text, View, StyleSheet } from 'react-native';
+import { Animated, Image, Pressable, Text, View, StyleSheet, useColorScheme } from 'react-native';
 import { router } from 'expo-router';
 import * as Haptics from 'expo-haptics';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -32,11 +32,25 @@ export function T({ size = 'body', weight = 'regular', muted, color, style, chil
   );
 }
 
-/* The one orange thing on a screen. */
+/* Native exports of the existing mark and drawn signature. */
+export function Brand() {
+  const dark = useColorScheme() === 'dark';
+  return (
+    <View accessible accessibilityLabel="Allez" style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+      <Image source={dark ? require('../../assets/brand-mark-dark.png') : require('../../assets/brand-mark.png')}
+        style={{ width: 34, height: 34 }} accessibilityIgnoresInvertColors />
+      <Image source={dark ? require('../../assets/wordmark-dark.png') : require('../../assets/wordmark.png')}
+        style={{ width: 76, height: 36 }} resizeMode="contain" accessibilityIgnoresInvertColors />
+    </View>
+  );
+}
+
+/* One action gets the slate accent. */
 export function Primary({ label, onPress, style, disabled }) {
   const c = useTheme();
   return (
-    <Pressable disabled={disabled} onPress={() => { Haptics.selectionAsync().catch(() => {}); onPress && onPress(); }}
+    <Pressable disabled={disabled} accessibilityRole="button" accessibilityLabel={label} accessibilityState={{ disabled: !!disabled }}
+      onPress={() => { Haptics.selectionAsync().catch(() => {}); onPress && onPress(); }}
       style={({ pressed }) => [s.primary, { backgroundColor: c.accent, opacity: disabled ? 0.4 : pressed ? 0.85 : 1 }, style]}>
       <T weight="bold" color={c.onAccent}>{label}</T>
     </Pressable>
@@ -46,7 +60,7 @@ export function Primary({ label, onPress, style, disabled }) {
 export function Quiet({ label, onPress, style, color }) {
   const c = useTheme();
   return (
-    <Pressable onPress={onPress} hitSlop={8} style={({ pressed }) => [s.quiet, { borderColor: c.edge, opacity: pressed ? 0.6 : 1 }, style]}>
+    <Pressable onPress={onPress} accessibilityRole="button" accessibilityLabel={label} hitSlop={8} style={({ pressed }) => [s.quiet, { borderColor: c.edge, opacity: pressed ? 0.6 : 1 }, style]}>
       <T weight="bold" color={color || c.ink} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.8}>{label}</T>
     </Pressable>
   );
@@ -55,7 +69,8 @@ export function Quiet({ label, onPress, style, color }) {
 export function Chip({ label, on, onPress }) {
   const c = useTheme();
   return (
-    <Pressable onPress={() => { Haptics.selectionAsync().catch(() => {}); onPress(); }}
+    <Pressable accessibilityRole="button" accessibilityLabel={label} accessibilityState={{ selected: on }}
+      onPress={() => { Haptics.selectionAsync().catch(() => {}); onPress(); }}
       style={[s.chip, { backgroundColor: on ? c.ink : 'transparent', borderColor: on ? c.ink : c.edge }]}>
       <T size="small" weight="bold" color={on ? c.bg : c.ink}>{label}</T>
     </Pressable>

@@ -91,32 +91,32 @@ The mark is the pigeon reduced to a silhouette. The 3D beanie pigeon in
 |---|---|---|
 | `charcoal` | `#2C3E50` | the circle and the signature. **The primary brand colour** |
 | `slate` | `#7E93AF` | the circle on dark backgrounds. Charcoal's lighter partner |
-| `cap` | `#E67E22` | the beanie only. Never a fill for large areas, never a button |
+| `cap` | `#E67E22` | the beanie and small punctuation. Never a fill for large areas, never a button |
 | `white` | `#FFFFFF` | the bird |
 
 ### Product
 
 The places supply the colour. The frame stays quiet: warm paper, ink, one
-accent for actions, and terracotta for city names.
+accent for actions, and terracotta for city names and selected editorial emphasis.
 
 | Token | App light | App dark | Website light | Website dark |
 |---|---|---|---|---|
-| `bg` | `#FBF8F3` | `#191715` | `#FDFAF5` | `#17120F` |
-| `card` | `#FFFFFF` | `#24211E` | `#FFFDFA` | `#201A15` |
-| `sunk` / `bg-2` | `#F2EDE5` | `#2C2925` | `#F7F1E8` | `#1D1713` |
-| `ink` | `#1F1D1A` | `#F4EFE8` | `#241C18` | `#F4ECE1` |
-| `muted` / `soft` | `#8A8580` | `#A59E95` | `#6B5C53` | `#B3A596` |
-| `line` | `#E8E2D8` | `#36322D` | `#ECE2D5` | `#322820` |
+| `bg` | `#FDFAF5` | `#17120F` | `#FDFAF5` | `#17120F` |
+| `card` | `#FFFDFA` | `#201A15` | `#FFFDFA` | `#201A15` |
+| `sunk` / `bg-2` | `#F7F1E8` | `#1D1713` | `#F7F1E8` | `#1D1713` |
+| `ink` | `#2C3E50` | `#F4ECE1` | `#2C3E50` | `#F4ECE1` |
+| `muted` / `soft` | `#6B5C53` | `#B3A596` | `#6B5C53` | `#B3A596` |
+| `line` | `#ECE2D5` | `#322820` | `#ECE2D5` | `#322820` |
 | `accent` | `#4E6A8E` | `#9FB2CC` | `#4E6A8E` | `#9FB2CC` |
 | `onAccent` | `#FFFFFF` | `#191715` | — | — |
-| `city` | — | — | `#B4532A` | `#E08A5F` |
+| `city` / editorial emphasis | — | — | `#B4532A` | `#E08A5F` |
 
 - **Actions (buttons, active tabs) are deep slate `#4E6A8E`,** one per
   screen. It's in the logo's colour family but lighter than charcoal, so a
   button never looks like body text. White on it is 5.5 : 1. In dark mode it's
   `#9FB2CC` with dark text.
-- **City names are terracotta,** a darker step of the cap's orange (5 : 1 on
-  paper), for the italic city name in headings only.
+- **City names and selected editorial highlights are terracotta,** a
+  darker step of the cap's orange (5 : 1 on paper).
 - **Dark mode is warm charcoal, never pure black.**
 
 ### Contrast
@@ -131,9 +131,9 @@ accent for actions, and terracotta for city names.
 | Role | Face | Notes |
 |---|---|---|
 | Wordmark | the drawn signature | never typed in a font |
-| App interface | Nunito | three sizes (14 / 17 / 26) and two weights. Hierarchy comes from size and space |
-| Website headings | Iowan Old Style / Palatino | the site's warmth. City names in italic terracotta |
-| Website body | the system sans | close to Inter, and costs nothing to load |
+| App interface | Nunito | functional sizes 14 / 17 / 26, a 32px welcome headline and 11px photo credits. Weights 400 / 700 / 800 |
+| Website headings | Iowan Old Style / Palatino, weight 400 | every headline, including the homepage promise; the key phrase in terracotta italic (“Allez, *Paris*”, “What’s worth *leaving home for.*”) |
+| Website body | system sans | body, buttons and labels; restrained, light typography with no font download. No rounded sans on the website |
 
 **The serif never sits in the lockup or beside the mark.** On the site, the
 lockup sits above the date line, with clear space before the serif headline.
@@ -156,7 +156,7 @@ lockup sits above the date line, with clear space before the serif headline.
 | Surface | Use | File |
 |---|---|---|
 | Website header | the lockup, inline SVG, signature drawn on load | `index.html` and each city's `index.html` |
-| Favicon, home-screen icon | the mark | `design/logo/mark.svg` |
+| Favicon, home-screen icon | the mark | `design/logo/mark.svg`; PNG and ICO sizes (`favicon-32`, `apple-touch-icon`, `icon-192/512`, `icon-maskable-512`, `/favicon.ico`) are rendered from it by `scripts/icons.mjs`. Re-run it whenever the mark changes |
 | iPhone icon | the bird full bleed on charcoal. iOS rounds the corners | `app/assets/icon.png` |
 | Android icon | the bird in the safe zone on charcoal, plus a white monochrome version | `app/assets/android-icon-*.png` |
 | Splash, light | the mark with the charcoal signature below, on `bg` | `app/assets/splash-icon.png` |
@@ -195,10 +195,47 @@ All 13 October 2026.
 10. **The signature animates on the website only.** A native splash screen
     can't animate. An animated first screen in the app would be a separate
     piece of work.
+11. **13 October 2026 — playful editorial evolution.** The website front
+    door and the app's Today screen become a companion for free time.
+    The promise is “Make more of your free time.” Cream, sand and ink blue
+    frame real-world photography. Orange punctuates the frame in a small
+    dot and the pigeon's cap. Slate remains the action colour. The drawn
+    signature and pigeon mark are retained, including in the native app
+    header. The website uses sans for its main promise and serif for the
+    editorial phrase and place names; the app retains Nunito. A 32px
+    welcome headline and 11px photo credits join its existing type scale.
+    The homepage previews existing written recommendations with city and
+    mood controls; it does not claim they are personalized or open now.
+    The app keeps its personalized, finite Today selection and presents
+    its photographs above readable copy on paper. “Surprise me” chooses
+    from the current ideas. The pigeon helps with indecision, onboarding,
+    empty states and the end of Today.
 
 `design/tokens.json` is the source of truth for these values. Generate
 `app/src/lib/theme.js` and the `:root` block in `css/style.css` from it,
 instead of keeping them in step by hand.
+
+12. **13 October 2026 — one family across surfaces.** Retain the original
+    tagline: “What’s worth leaving home for, in the city you live in.”
+    The website (homepage and city guides) and app share Nunito in
+    weights 400, 700 and 800, warm cream, ink blue, slate actions and
+    matching dark-mode colours. Website fonts are self-hosted from the
+    app’s existing licensed font files. Remove the generic “From the
+    city guide” label; keep evidence-bearing distinctions. The homepage
+    reduces its introduction and gives the featured recommendation its
+    written reason and practical details before the longer list. This
+    supersedes the mixed serif/sans typography and differing product
+    palettes recorded above.
+
+13. **13 October 2026 — restore the website’s editorial character.** The
+    user prefers the earlier website treatment. Restore serif editorial
+    headings, system sans body text, lighter weights, larger photography
+    and generous spacing. Recommendation cards and the featured idea
+    have no enclosing app-style panel. Retain the original tagline,
+    useful recommendation details and the removal of generic badges.
+    The website and app share colours and the drawn logo; identical
+    interface typography is no longer the goal. This supersedes the
+    website typography decision in entry 12.
 
 14. **13 October 2026 — the mascot is called Coo.** Named after the sound
     a pigeon makes: warm, three letters, and it works in every city.
@@ -206,3 +243,52 @@ instead of keeping them in step by hand.
     curious, warm, observant and a little mischievous, and speaks only in
     its own moments. It never vouches for a place or sends notifications.
     Other names considered: Bubbly, Bulle, Cheri, Coco, Gigi, Lou.
+
+15. **13 October 2026 — one stylesheet, one editorial system.** The
+    homepage and the city guides now share `css/style.css`; the old
+    `css/home.css` is gone. The homepage's own layout lives at the end of
+    that file, scoped under `<body class="home">`, and uses the shared
+    tokens (`--bg`, `--bg-2`, `--accent`, `--city`, plus `--orange` and
+    `--on-action`). The city guides' editorial look is the house style:
+    every website headline is the serif at weight 400 with its key phrase
+    in terracotta italic, and everything else is system sans. The
+    homepage drops its rounded sans and semibold headline to match. The
+    homepage headline is “What’s worth *leaving home for.*” with the
+    subline “Good things are happening near you. Let’s find one.” The
+    random-pick button reads “Surprise me” everywhere. Coo appears on
+    the homepage only in the “Can’t choose? I’ve got you.” band, which
+    has no label above it.
+
+    Shared parts, the same on every page:
+    - **Header:** the lockup top left at one size everywhere (a 40px mark and a
+      32px signature,
+      the signature drawn by the same measured-dash animation), and the
+      round light/dark switch top right. The homepage's city picker
+      wears the city guides' location button (pin, small “City” label,
+      serif name, “Change”), with a native select laid over it.
+      The theme choice is one setting across the whole site.
+    - **Warmth:** every page opens on the same wash at the top (a faint
+      blush glow over sand fading into paper), and no page has a rule
+      under its header.
+    - **Buttons:** page-level buttons are 44px pills, 14px system sans at
+      weight 500. One filled slate action per screen; everything else is
+      an outlined ink pill with a hairline border that warms to sand on
+      hover. “Surprise me ✧” looks the same on every page. Selected
+      filters fill with ink.
+    - **Cards:** a 4:3 photograph with a 12px radius and a warm hairline,
+      an optional uppercase badge top left, a small grey uppercase label,
+      a serif title at 1.22rem that turns slate on hover, and up to three
+      lines of reason. Category labels are grey, not terracotta:
+      terracotta stays for city names and the headline's italic phrase.
+    - **Footer:** one footer on every page, after meta.com and
+      sofahq.com: the mark and “Good taste. A little curiosity.
+      *Allez.*” on the left; three short link columns on the right
+      (Cities · Allez: All cities, Find something good, About us ·
+      Legal: Terms and policies, Privacy, Credits) with small sans
+      headings; then a divider and one centred line, “© 2026 Allez.
+      Made for the people who live here.” The OpenStreetMap credit (and
+      Paris's open-data credit) stays in that bottom line because the
+      ODbL asks for it where the data is used. Everything else about
+      sources, privacy and use lives on `terms/`; the story lives on
+      `about/`. Both pages use the homepage header and this footer.
+

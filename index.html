@@ -1,116 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Allez</title>
-<meta name="description" content="What's worth leaving home for, in the city you live in. Paris, Delhi, Bengaluru, the Bay Area and New York.">
-<meta name="theme-color" content="#fdfaf5">
-<link rel="stylesheet" href="css/style.css?v=d2d28f43">
+<title>Allez — What’s worth leaving home for</title>
+<meta name="description" content="What’s worth leaving home for, in the city you live in. Discover Paris, Delhi, Bengaluru, the Bay Area and New York.">
+<meta name="theme-color" content="#FDFAF5">
 <link rel="icon" type="image/svg+xml" href="/design/logo/mark.svg">
-
+<link rel="icon" type="image/png" sizes="32x32" href="/design/logo/favicon-32.png">
+<link rel="apple-touch-icon" href="/design/logo/apple-touch-icon.png">
 <script>
-  /* The theme, before the first paint, exactly as each city's page does
-     it — and reading the same key, because the theme is the one thing
-     that deliberately follows you between cities. See js/keys.js. */
-  try {
-    var t = localStorage.getItem('homeground.theme');
-    if (t === null) t = localStorage.getItem('paris-for-you.theme');
-    if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-  } catch (e) {}
+try {
+  var t = localStorage.getItem('homeground.theme') || localStorage.getItem('paris-for-you.theme');
+  if (t === 'dark') document.documentElement.dataset.theme = 'dark';
+} catch (e) {}
 </script>
-
-<style>
-  /* This page is the only one with no data behind it, so it carries its
-     own handful of rules rather than adding a chooser section to the
-     stylesheet every city loads. */
-  .door { max-width: 46rem; margin: 0 auto; padding: 4rem 1.25rem 5rem; }
-  .door .title { margin-bottom: .2rem; }
-  .door .sub {
-    font-family: var(--serif);
-    font-style: italic;
-    color: var(--soft);
-    font-size: 1.05rem;
-    margin: 0 0 2.4rem;
-  }
-  .doors { display: grid; gap: .75rem; }
-  @media (min-width: 34rem) { .doors { grid-template-columns: 1fr 1fr; } }
-  .door-card {
-    display: block;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 1.1rem 1.2rem;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color .15s ease, transform .15s ease;
-  }
-  .door-card:hover, .door-card:focus-visible { border-color: var(--blush); transform: translateY(-1px); }
-  .door-card .where {
-    font-family: var(--serif);
-    font-size: 1.55rem;
-    line-height: 1.1;
-    letter-spacing: -.02em;
-    margin: 0;
-  }
-  .door-card .where em { font-style: italic; color: var(--city); }
-  .door-card .what {
-    font-size: .88rem;
-    color: var(--soft);
-    margin: .4rem 0 0;
-    line-height: 1.45;
-  }
-  .door-foot {
-    margin-top: 2.6rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid var(--line);
-    font-size: .85rem;
-    color: var(--faint);
-    line-height: 1.6;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .door-card { transition: none; }
-    .door-card:hover, .door-card:focus-visible { transform: none; }
-  }
-</style>
+<link rel="stylesheet" href="css/style.css?v=5779ae57">
+<script src="js/home.js?v=40915de7" defer></script>
 </head>
-<body>
+<body class="home">
+<a class="skip" href="#main">Skip to ideas</a>
+<header class="site-head shell">
+  <a class="lockup" href="./" aria-label="Allez home">
+    <svg class="mark" width="44" height="44" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/><path fill="#FFF" d="M16 62C34 58 44 48 51 33C54 28 57 26.6 60 26.6L67 26.6C71 28 74 31 75.5 34L84 40L77 40C74 40 73 42 73 46L73 52C73 70 61 82 45 82C31 82 20 73 16 62Z"/><path fill="#E67E22" d="M55 26.6A8.3 8.3 0 0 1 71.6 26.6Z"/></svg>
 
-<main class="door">
-  <h1 class="brand brand-lg" aria-label="Allez"><svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/><path fill="#FFF" d="M16 62C34 58 44 48 51 33C54 28 57 26.6 60 26.6L67 26.6C71 28 74 31 75.5 34L84 40L77 40C74 40 73 42 73 46L73 52C73 70 61 82 45 82C31 82 20 73 16 62Z"/><path fill="#E67E22" d="M55 26.6A8.3 8.3 0 0 1 71.6 26.6Z"/></svg><svg class="brand-sig" viewBox="4 44 128 60" aria-hidden="true"><path d="M35.5 75 C32.4 69 22.4 69 16.4 76 C10.2 84 10.1 99 20.1 99 C27.1 99 32.1 92 34.8 80 L36.2 70 L32.8 94 C32.3 98 35.0 100 39.3 98 C44.7 95 57.9 72 59.8 59 C60.9 51 57.3 48 54.0 50 C50.7 52 51.3 62 49.9 72 L46.8 94 C46.3 98 49.0 100 53.3 98 C58.7 95 71.9 72 73.8 59 C74.9 51 71.3 48 68.0 50 C64.7 52 65.3 62 63.9 72 L60.8 94 C60.3 98 63.0 100 67.3 98 C72.6 96 81.4 90 86.2 84 C90.0 79 90.9 72 85.1 71 C79.2 70 74.1 78 73.0 86 C71.7 95 76.0 100 83.1 99 C87.3 98 90.6 96 92.8 94 M100.1 71 L120.1 71 L96.1 99 L113.1 99 C119.1 99 123.6 96 126.4 90"/></svg></h1>
-  <hr class="rule">
-  <p class="sub">What&rsquo;s worth leaving home for, in the city you live in.</p>
-
-  <div class="doors">
-    <a class="door-card" href="paris/">
-      <p class="where">Allez, <em>Paris</em></p>
-      <p class="what">Twenty arrondissements, and a city that publishes what is on.</p>
-    </a>
-    <a class="door-card" href="delhi/">
-      <p class="where">Allez, <em>Delhi</em></p>
-      <p class="what">Colonies and NCR, and a guide that tells you what the air is doing.</p>
-    </a>
-    <a class="door-card" href="bengaluru/">
-      <p class="where">Allez, <em>Bengaluru</em></p>
-      <p class="what">Ninety-six neighbourhoods, and an honest answer about crossing town.</p>
-    </a>
-    <a class="door-card" href="bay-area/">
-      <p class="where">Allez, <em>the Bay</em></p>
-      <p class="what">Two homes, fifty kilometres apart, and weather that disagrees with itself.</p>
-    </a>
-    <a class="door-card" href="new-york/">
-      <p class="where">Allez, <em>New York</em></p>
-      <p class="what">Two hundred and thirty-seven neighbourhoods, five boroughs, one subway.</p>
-    </a>
-  </div>
-
-  <p class="door-foot">
-    Each city is its own guide, written for someone who lives there — not a
-    listings site with four tabs. Ratings, saved places and quest progress stay
-    in this browser and stay separate per city. Your location is never sent
-    anywhere.
-  </p>
+    <svg class="signature" width="98" height="46" role="img" aria-label="Allez" xmlns="http://www.w3.org/2000/svg" viewBox="4 44 128 60"><path d="M35.5 75 C32.4 69 22.4 69 16.4 76 C10.2 84 10.1 99 20.1 99 C27.1 99 32.1 92 34.8 80 L36.2 70 L32.8 94 C32.3 98 35.0 100 39.3 98 C44.7 95 57.9 72 59.8 59 C60.9 51 57.3 48 54.0 50 C50.7 52 51.3 62 49.9 72 L46.8 94 C46.3 98 49.0 100 53.3 98 C58.7 95 71.9 72 73.8 59 C74.9 51 71.3 48 68.0 50 C64.7 52 65.3 62 63.9 72 L60.8 94 C60.3 98 63.0 100 67.3 98 C72.6 96 81.4 90 86.2 84 C90.0 79 90.9 72 85.1 71 C79.2 70 74.1 78 73.0 86 C71.7 95 76.0 100 83.1 99 C87.3 98 90.6 96 92.8 94 M100.1 71 L120.1 71 L96.1 99 L113.1 99 C119.1 99 123.6 96 126.4 90" fill="none" stroke="#2C3E50" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+  <label class="locbtn city-control">
+    <span class="loc-pin" aria-hidden="true">📍</span>
+    <span class="loc-text" aria-hidden="true"><span class="loc-kicker">City</span><span class="loc-name" id="city-name">The Bay Area</span></span>
+    <span class="loc-change" aria-hidden="true">Change</span>
+    <select id="city" aria-label="Choose your city"><option value="bay-area">The Bay Area</option><option value="paris">Paris</option><option value="delhi">Delhi</option><option value="bengaluru">Bengaluru</option><option value="new-york">New York</option></select>
+  </label>
+  <button id="theme" class="theme" type="button" title="Switch to dark" aria-label="Switch to dark">☾</button>
+</header>
+<main id="main" class="shell">
+  <section class="hero" aria-labelledby="promise">
+    <div class="intro">
+      <h1 id="promise">What’s worth <em>leaving home for.</em></h1>
+      <p class="lede">Good things are happening near you. Let’s find one.</p>
+      <div class="actions"><a class="primary" id="find" href="bay-area/">Find my next thing <span aria-hidden="true">↗</span></a><button class="quiet" id="surprise" type="button" disabled>Surprise me <span aria-hidden="true">✧</span></button></div>
+    </div>
+    <article class="featured-idea">
+    <div class="hero-scene">
+      <img id="hero-photo" class="hero-photo" src="bay-area/img/thumb/osm-goodthing-74890--244323/960px-osm-goodthing-74890--244323.jpg" width="960" height="720" alt="A coffee at Goodthing Coffee in Palo Alto" fetchpriority="high">
+      <div class="photo-note"><span class="eyebrow">A small change of scenery</span><p id="hero-title">Goodthing Coffee</p><span id="hero-credit">Our own photograph</span></div>
+      <button id="hero-open" class="photo-open" type="button" aria-label="Explore the featured idea" disabled>↗</button>
+    </div>
+    <div class="featured-copy"><p class="eyebrow">Why it’s worth going</p><p id="hero-why">A loft to linger in, a coffee worth trying, and a little change of scenery.</p><p id="hero-facts" class="pick-meta"></p></div>
+    </article>
+  </section>
+  <section id="ideas" class="ideas" aria-labelledby="ideas-title">
+    <div class="section-head"><div><p class="eyebrow" id="dateline">Your next little adventure</p><h2 id="ideas-title">A few good reasons to get out.</h2><p class="section-sub" id="ideas-sub">Explore the Bay Area. Pick what feels like you.</p></div><a id="guide" class="text-link" href="bay-area/">The whole city guide <span aria-hidden="true">↗</span></a></div>
+    <div class="moods" role="group" aria-label="What are you in the mood for?">
+      <button type="button" data-mood="all" aria-pressed="true">A bit of everything</button>
+      <button type="button" data-mood="food" aria-pressed="false">Something delicious</button>
+      <button type="button" data-mood="culture" aria-pressed="false">A little culture</button>
+      <button type="button" data-mood="outdoors" aria-pressed="false">Some fresh air</button>
+    </div>
+    <p id="status" class="status" role="status">Finding a few good ideas…</p>
+    <div id="picks" class="pick-grid" aria-busy="true"></div>
+  </section>
+  <aside class="nudge"><img src="allez-mascot/main_guide_cutout.png" width="104" height="104" alt="The Allez pigeon, your little city companion"><div><h2>Can’t choose? I’ve got you.</h2><p>One good idea is all it takes to change the shape of your day.</p></div><button class="quiet" id="nudge-surprise" type="button" disabled>Pick one for me <span aria-hidden="true">✧</span></button></aside>
+  <section class="cities" aria-labelledby="cities-title"><p class="eyebrow" id="cities-title">Same curiosity. Different pavement.</p><div class="city-links"><a href="paris/">Paris ↗</a><a href="delhi/">Delhi ↗</a><a href="bengaluru/">Bengaluru ↗</a><a href="bay-area/">The Bay Area ↗</a><a href="new-york/">New York ↗</a></div></section>
 </main>
-
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="foot-mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/><path fill="#FFF" d="M16 62C34 58 44 48 51 33C54 28 57 26.6 60 26.6L67 26.6C71 28 74 31 75.5 34L84 40L77 40C74 40 73 42 73 46L73 52C73 70 61 82 45 82C31 82 20 73 16 62Z"/><path fill="#E67E22" d="M55 26.6A8.3 8.3 0 0 1 71.6 26.6Z"/></svg>
+        <p>Good taste. A little curiosity. <span>Allez.</span></p>
+      </div>
+      <nav class="foot-col" aria-labelledby="foot-cities"><h2 id="foot-cities">Cities</h2><ul><li><a href="paris/">Paris</a></li><li><a href="delhi/">Delhi</a></li><li><a href="bengaluru/">Bengaluru</a></li><li><a href="bay-area/">The Bay Area</a></li><li><a href="new-york/">New York</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="foot-allez"><h2 id="foot-allez">Allez</h2><ul><li><a href="./">All cities</a></li><li><a href="./#ideas">Find something good</a></li><li><a href="about/">About us</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="foot-legal"><h2 id="foot-legal">Legal</h2><ul><li><a href="terms/">Terms and policies</a></li><li><a href="terms/#privacy">Privacy</a></li><li><a href="terms/#sources">Credits</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Allez. Made for the people who live here.</p>
+      <p class="foot-credit">Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, ODbL.</p>
+    </div>
+  </div>
+</footer>
+<dialog id="idea-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close idea">×</button><div id="dialog-content"></div></dialog>
+<noscript><p class="shell">Choose a city to explore its guide: <a href="paris/">Paris</a>, <a href="delhi/">Delhi</a>, <a href="bengaluru/">Bengaluru</a>, <a href="bay-area/">the Bay Area</a> or <a href="new-york/">New York</a>.</p></noscript>
 </body>
 </html>

@@ -121,10 +121,13 @@ export function AppProvider({ children }) {
   const prefs = useMemo(() => (novelty != null ? { novelty } : {}), [novelty]);
 
   const data = boot && boot.data, storage = boot && boot.storage;
+  /* The first answer uses the pack's base while permission or GPS is
+     pending. A real position refines it without holding the UI hostage. */
+  const origin = useMemo(() => where || (data ? homeBase(data) : null), [where, data]);
   const world = useMemo(() => {
-    if (!data || !where) return null;
-    return makeWorld({ data, storage, where, prefs, weather });
-  }, [data, storage, where, prefs, weather, tick]); // eslint-disable-line react-hooks/exhaustive-deps
+    if (!data || !origin) return null;
+    return makeWorld({ data, storage, where: origin, prefs, weather });
+  }, [data, storage, origin, prefs, weather, tick]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /* Weather, once there is a world to ask: the ranking reads it. */
   useEffect(() => {
@@ -244,12 +247,12 @@ export function AppProvider({ children }) {
 
   const value = useMemo(() => ({
     ready: !!(world && saved),
-    world, saved, where, weather,
+    world, saved, where: origin, weather,
     offline: boot ? boot.offline : false,
     fetchedAt: boot ? boot.fetchedAt : null,
     tick,
     ...actions
-  }), [world, saved, where, weather, boot, tick, actions]);
+  }), [world, saved, origin, weather, boot, tick, actions]);
 
   return createElement(Ctx.Provider, { value }, children);
 }
