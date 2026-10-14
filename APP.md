@@ -120,7 +120,7 @@ weekend, defaulting to last time's answer. See *Who's coming* below.
 
 **Answer first, then ask.** The first screen is already an answer: one good
 thing near them, open now, from location alone (principle 1). The questions
-come after it, one at a time, as full-screen cards with no progress bar — the
+come after it, one at a time, as cards in the finite Today set — the
 app starting up, not a form. *How long are you here?* comes on the first
 open, because everything else hangs off it. *Your hours* comes the first time
 a time-of-day answer would be wrong without it. *This or that* is offered,
@@ -141,12 +141,20 @@ not a place you go to; it's what any card becomes when you tap *Go*.
 
 ### 1. Today — a short stack you finish
 
-Open the app: a vertical stack of five to eight full-screen cards, swiped up
-like Inshorts. Each card stands on its own in a photo and two lines: the thing,
+**Updated 13 October 2026 — playful editorial.** Open the app: a finite,
+scrollable set of ideas under “Your Tuesday, sorted.” The drawn Allez
+signature sits in the header. “Surprise me” opens one of the current
+recommendations, and “Your taste” opens the existing preferences. A photo
+leads each pick, with readable copy on paper below: the thing,
 why, how far, open until when, the trust mark. The first card always answers
 *right now* (time, weather, location). The rest are what today holds: a
 Regular on tonight, an event that ends Sunday, a new opening, one bit of local
 knowledge ("an SF library card gets you free museum passes").
+
+The written reason can expand in place. Save, Go and Less like this are
+separate controls. Questions still follow the first recommendation and
+the existing ranking, timing, weather, memory and follow-up logic remain
+the source of the answers. Photo credits stay visible.
 
 **The stack ends.** The last card says *That's today* and shows tomorrow's
 first thing, or what's new since yesterday. That is the difference from TikTok, and it's deliberate: the

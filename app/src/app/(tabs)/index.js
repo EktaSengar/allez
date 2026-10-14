@@ -1,9 +1,8 @@
 /* ---------------------------------------------------------
    Today — a short stack you finish.
 
-   Five to eight full-screen cards, swiped up. The first answers right
-   now (or after work). The questions live in the stack, after that first
-   answer. The last card ends it: "That's today." (APP.md, "Today".)
+   A finite set of photo-led ideas on warm paper. Questions still follow
+   the first answer; the last card still ends the day.
    --------------------------------------------------------- */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -16,15 +15,22 @@ import { useApp, todayIso, untilIn } from '../../lib/state';
 import { todayStack, zoneName } from '../../lib/answers';
 import { useTheme, SPACE, RADIUS } from '../../lib/theme';
 import { V } from '../../lib/voice';
-import { Chip, Fade, facts, Photo, Pigeon, PigeonMoment, Primary, Quiet, T, Toast } from '../../components/ui';
+import { Brand, Chip, facts, Photo, Pigeon, PigeonMoment, Primary, Quiet, T, Toast } from '../../components/ui';
+
+/* Called by the press handler, so a re-render never changes the choice. */
+function chooseSurprise(picks, previous) {
+  const fresh = picks.filter(card => card.item.id !== previous);
+  const choices = fresh.length ? fresh : picks;
+  return choices[Math.floor(Math.random() * choices.length)];
+}
 
 export default function Today() {
   const app = useApp();
   const c = useTheme();
   const inset = useSafeAreaInsets();
-  const [h, setH] = useState(0);
   const [now, setNow] = useState(() => new Date());
   const [note, setNote] = useState(null);
+  const lastSurprise = useRef(null);
 
   useFocusEffect(useCallback(() => { setNow(new Date()); }, []));
 
@@ -50,33 +56,52 @@ export default function Today() {
   }
 
   const wx = app.weather && app.weather.now;
-  const head = [now.toLocaleDateString('en-US', { weekday: 'long' }), app.where && app.where.area, wx ? `${wx.temp}° ${wx.label.toLowerCase()}` : null]
+  const day = now.toLocaleDateString('en-US', { timeZone: app.world.E.City.weather.tz, weekday: 'long' });
+  const picks = cards.filter(card => card.kind === 'pick');
+  const head = [app.world.E.City.name, app.where && app.where.area, wx ? `${wx.temp}° ${wx.label.toLowerCase()}` : null]
     .filter(Boolean).join(' · ');
+  function handleSurprise() {
+    const chosen = chooseSurprise(picks, lastSurprise.current);
+    if (chosen) {
+      lastSurprise.current = chosen.item.id;
+      router.push(`/go/${encodeURIComponent(chosen.item.id)}`);
+    }
+  }
 
   return (
     <View style={{ flex: 1, backgroundColor: c.bg, paddingTop: inset.top }}>
-      <View style={st.head}>
-        <T size="title" weight="heavy">Allez</T>
-        <T size="small" muted numberOfLines={1} style={{ flexShrink: 1, marginLeft: 12 }}>{app.offline ? V.pigeon.lost : head}</T>
+      <View style={[st.head, { borderBottomColor: c.line }]}>
+        <Brand />
+        <Pressable onPress={() => router.push('/me')} accessibilityRole="button" accessibilityLabel={V.me.title}
+          hitSlop={8} style={[st.location, { borderColor: c.line }]}>
+          <T size="small" weight="bold" numberOfLines={1}>{V.today.preferences} ↗</T>
+        </Pressable>
       </View>
-      <View style={{ flex: 1 }} onLayout={e => setH(e.nativeEvent.layout.height)}>
-        {h > 0 && (
+      <View style={{ flex: 1 }}>
           <FlatList
             data={cards}
             keyExtractor={x => x.key}
-            pagingEnabled
             showsVerticalScrollIndicator={false}
-            decelerationRate="fast"
+            contentContainerStyle={{ paddingHorizontal: SPACE, paddingBottom: SPACE * 2, maxWidth: 620, width: '100%', alignSelf: 'center' }}
+            ListHeaderComponent={
+              <View style={st.welcome}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                  <View style={{ width: 6, height: 6, borderRadius: 3, backgroundColor: c.cap }} />
+                  <T size="small" muted>{app.offline ? V.pigeon.lost : head}</T>
+                </View>
+                <T size="headline" weight="heavy" accessibilityRole="header" style={{ marginTop: 12, letterSpacing: -1 }}>{V.today.heading(day)}</T>
+                <T muted style={{ marginTop: 5 }}>{picks.length ? V.today.introduction(picks.length) : V.today.noPicks}</T>
+                {picks.length ? <Quiet label={V.today.surprise} onPress={handleSurprise} style={{ alignSelf: 'flex-start', marginTop: 16 }} /> : null}
+              </View>
+            }
             viewabilityConfig={seen.config}
             onViewableItemsChanged={seen.handler}
-            getItemLayout={(_, i) => ({ length: h, offset: h * i, index: i })}
             renderItem={({ item: card }) => (
-              <View style={{ height: h, paddingHorizontal: SPACE, paddingBottom: SPACE }}>
+              <View style={{ marginBottom: SPACE * 1.5 }}>
                 <Card card={card} app={app} onLess={() => setNote({ text: V.today.fewer, n: Date.now() })} />
               </View>
             )}
           />
-        )}
         {note ? <Toast key={note.n} text={note.text} onDone={() => setNote(null)} /> : null}
       </View>
     </View>
@@ -113,29 +138,41 @@ function PickCard({ card, app, onLess }) {
   const c = useTheme();
   const w = app.world;
   const item = card.item;
-  const [saved, setSaved] = useState(() => w.E.Store.rating(item.id) === 'want');
+  const saved = w.E.Store.rating(item.id) === 'want';
+  const [expanded, setExpanded] = useState(false);
   const label = card.label === 'endsSoon' ? V.today.endsSoon(card.days) : V.today[card.label];
   const zone = zoneName(w, item);
   return (
-    <Pressable style={{ flex: 1 }} onPress={() => router.push(`/go/${encodeURIComponent(item.id)}`)}
-      onLongPress={() => { Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning).catch(() => {}); app.less(item); onLess(); }}
-      delayLongPress={500}>
-      <Photo item={item} style={[st.panel, { justifyContent: 'flex-end' }]}>
-        <Fade style={st.scrim}>
-          <T size="small" weight="heavy" color={c.accent} style={st.label}>{label}</T>
-          <T size="title" weight="heavy" color="#fff">{item.title}</T>
-          {zone ? <T size="small" color="rgba(255,255,255,0.8)">{zone}</T> : null}
-          {item.why ? <T numberOfLines={3} color="#fff" style={{ marginTop: 8 }}>{item.why}</T> : null}
-          <T size="small" color="rgba(255,255,255,0.8)" style={{ marginTop: 8 }}>{facts(w, item, { at: card.at })}</T>
-          <View style={st.row}>
-            <Primary label={V.card.go} onPress={() => router.push(`/go/${encodeURIComponent(item.id)}`)} style={{ flex: 1 }} />
-            <Quiet label={saved ? '♥ ' + V.card.saved : '♡ ' + V.card.save} color="#fff"
-              onPress={() => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {}); setSaved(app.save(item)); }}
-              style={{ marginLeft: 10, borderColor: 'rgba(255,255,255,0.5)' }} />
-          </View>
-        </Fade>
-      </Photo>
-    </Pressable>
+    <View style={[st.pick, { backgroundColor: c.card, borderColor: c.line }]}>
+      <Pressable onPress={() => router.push(`/go/${encodeURIComponent(item.id)}`)} accessibilityRole="button" accessibilityLabel={item.title}>
+        <Photo item={item} style={{ height: 220 }}>
+          {item.imageKind === 'context' ? <View style={{ position: 'absolute', bottom: 12, left: 12, backgroundColor: c.bg, borderRadius: 16, paddingHorizontal: 10, paddingVertical: 5 }}>
+            <T size="caption" weight="bold">{V.today.contextPhoto}</T>
+          </View> : null}
+        </Photo>
+      </Pressable>
+      <View style={{ padding: SPACE * 1.25 }}>
+        <T size="small" weight="bold" color={c.accent} style={st.label}>{label}</T>
+        <T size="title" weight="heavy" accessibilityRole="header">{item.title}</T>
+        {zone ? <T size="small" muted style={{ marginTop: 3 }}>{zone}</T> : null}
+        {item.why ? <T numberOfLines={expanded ? undefined : 3} style={{ marginTop: 10 }}>{item.why}</T> : null}
+        {item.why ? <Pressable onPress={() => setExpanded(!expanded)} accessibilityRole="button" accessibilityState={{ expanded }} hitSlop={8} style={{ alignSelf: 'flex-start', marginTop: 8 }}>
+          <T size="small" weight="bold" color={c.accent}>{expanded ? V.today.collapse : V.today.more}</T>
+        </Pressable> : null}
+        <T size="small" muted style={{ marginTop: 12 }}>{facts(w, item, { at: card.at })}</T>
+        <View style={[st.row, { gap: 10, flexWrap: 'wrap' }]}>
+          <Primary label={V.card.go} onPress={() => router.push(`/go/${encodeURIComponent(item.id)}`)} style={{ flexGrow: 1 }} />
+          <Quiet label={saved ? '♥ ' + V.card.saved : '♡ ' + V.card.save}
+            onPress={() => { Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light).catch(() => {}); app.save(item); }} />
+        </View>
+        <View style={[st.row, { justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }]}>
+          {item.imageCredit ? <T size="caption" muted style={{ flexShrink: 1 }}>{V.today.credit}{item.imageCredit}</T> : null}
+          <Pressable onPress={() => { app.less(item); onLess(); }} accessibilityRole="button" hitSlop={8}>
+            <T size="small" muted>{V.today.less}</T>
+          </Pressable>
+        </View>
+      </View>
+    </View>
   );
 }
 
@@ -199,9 +236,11 @@ function AskHours({ app }) {
 
 const st = StyleSheet.create({
   fill: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  head: { flexDirection: 'row', alignItems: 'baseline', paddingHorizontal: SPACE, paddingTop: 8, paddingBottom: 12 },
-  panel: { flex: 1, borderRadius: RADIUS, overflow: 'hidden' },
-  scrim: { padding: SPACE * 1.25, paddingTop: SPACE * 9 },
+  head: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 16, paddingHorizontal: SPACE, paddingVertical: 12, borderBottomWidth: 1 },
+  location: { borderWidth: 1, borderRadius: 24, paddingHorizontal: 12, paddingVertical: 8, flexShrink: 1 },
+  welcome: { paddingTop: 24, paddingBottom: 24 },
+  panel: { minHeight: 360, borderRadius: RADIUS, overflow: 'hidden', paddingVertical: 24 },
+  pick: { borderRadius: RADIUS, overflow: 'hidden', borderWidth: 1 },
   label: { textTransform: 'uppercase', letterSpacing: 1, marginBottom: 4 },
   row: { flexDirection: 'row', alignItems: 'center', marginTop: SPACE }
 });

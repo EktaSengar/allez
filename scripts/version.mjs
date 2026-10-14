@@ -164,17 +164,26 @@ async function everyCity() {
    unstamped, a returning browser paired the new page with an old cached
    stylesheet and drew the logo SVGs at their bare, unstyled size. */
 async function stampHome() {
-  const file = path.join(ROOT, 'index.html');
+  let failed = 0;
+  for (const page of ['index.html', 'about/index.html', 'terms/index.html']) failed += await stampPage(page);
+  return failed;
+}
+
+/* The homepage and the plain pages (about/, terms/) carry no data map,
+   only the shared stylesheet and a script, so they are stamped alike. */
+async function stampPage(page) {
+  const file = path.join(ROOT, page);
+  const name = page === 'index.html' ? 'home' : path.dirname(page);
   const original = await fs.readFile(file, 'utf8');
   let out = original;
   for (const [full, attr, src] of original.matchAll(ASSET)) {
-    const h = hash(await fs.readFile(path.resolve(ROOT, src)));
+    const h = hash(await fs.readFile(path.resolve(path.dirname(file), src)));
     out = out.replace(full, `${attr}="${src}?v=${h}"`);
   }
-  if (out === original) { console.log('home: asset stamps already current.'); return 0; }
-  if (CHECK) { console.error('home: asset stamps are out of date. Run: node scripts/version.mjs --all'); return 1; }
+  if (out === original) { console.log(`${name}: asset stamps already current.`); return 0; }
+  if (CHECK) { console.error(`${name}: asset stamps are out of date. Run: node scripts/version.mjs --all`); return 1; }
   await fs.writeFile(file, out, 'utf8');
-  console.log('Stamped (home).');
+  console.log(`Stamped (${name}).`);
   return 0;
 }
 

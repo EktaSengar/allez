@@ -6,7 +6,7 @@
 <title>Allez · Delhi</title>
 <meta name="description" content="A Delhi guide for the people who live here — what's worth doing today, tonight and this weekend, from wherever you are.">
 <meta name="theme-color" content="#fdfaf5">
-<link rel="stylesheet" href="../css/style.css?v=d2d28f43">
+<link rel="stylesheet" href="../css/style.css?v=5779ae57">
 
 <!-- Every photograph on the page comes from Commons and the forecast from
      open-meteo. Both are third parties, so the first request to each pays
@@ -61,7 +61,7 @@
      cached hard, so a returning reader spends no round trips at all
      being told the file has not changed. -->
 <script>
-  window.__DV = {"civic":"3eb7fd39","conferences":"75cc1f2f","daytrips":"64513f18","editorial":"75c5b7bf","events":"a7d59d00","events-city":"5f4f49c6","festivals":"89588813","food":"aaf89155","home":"25e2260f","invaders":"aef06896","itineraries":"e2d79d8d","neighborhoods":"d060da31","nightlife":"28a5aeab","notable":"548a84ee","notes":"3b45b810","places":"f0934b61","places/g00":"a488f12c","places/g01":"be0e07dc","places/g02":"7a4d37b1","places/g03":"71febc83","places/g10":"64f6222b","places/g11":"b130852f","places/g12":"a11c1899","places/g13":"11394ded","places/g20":"c662d0a7","places/g21":"06938ee4","places/g22":"2a308db1","places/g23":"dffb8723","places/g30":"c8c058c7","places/g31":"13323e2f","places/g32":"973f0894","places/g33":"0e8ccfc4","places/index":"5f8c3f2f","practices":"3689b104","quests":"1c921e88","regulars":"990a9c78","sports":"5f088cd3"};
+  window.__DV = {"civic":"3eb7fd39","conferences":"a9b12282","daytrips":"64513f18","editorial":"75c5b7bf","events":"39679af6","events-city":"c86727a5","festivals":"89588813","food":"aaf89155","home":"25e2260f","invaders":"aef06896","itineraries":"e2d79d8d","neighborhoods":"d060da31","nightlife":"28a5aeab","notable":"548a84ee","notes":"3b45b810","places":"f0934b61","places/g00":"a488f12c","places/g01":"be0e07dc","places/g02":"7a4d37b1","places/g03":"71febc83","places/g10":"64f6222b","places/g11":"b130852f","places/g12":"a11c1899","places/g13":"11394ded","places/g20":"c662d0a7","places/g21":"06938ee4","places/g22":"2a308db1","places/g23":"dffb8723","places/g30":"c8c058c7","places/g31":"13323e2f","places/g32":"973f0894","places/g33":"0e8ccfc4","places/index":"5f8c3f2f","practices":"b7de715c","quests":"1c921e88","regulars":"990a9c78","sports":"5f088cd3"};
   (function () {
     var core = ['home', 'places/index',
                 'events', 'events-city', 'places', 'nightlife', 'sports', 'food',
@@ -84,6 +84,8 @@
 </script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/svg+xml" href="/design/logo/mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/design/logo/favicon-32.png">
+<link rel="apple-touch-icon" href="/design/logo/apple-touch-icon.png">
 </head>
 <body>
 
@@ -218,7 +220,7 @@
     <p class="lede" id="lede"></p>
     <div class="bar-actions">
       <button id="filters-toggle" class="ghost" type="button" aria-expanded="false">Filter</button>
-      <button id="surprise" class="ghost accent" type="button">Surprise us</button>
+      <button id="surprise" class="ghost accent" type="button">Surprise me <span aria-hidden="true">✧</span></button>
     </div>
   </div>
 
@@ -269,17 +271,24 @@
 
 <footer class="foot">
   <div class="wrap">
-    <p>Made for the people who live here. Travel times are estimated from <span id="home-foot">where you are exploring from</span> — straight-line, so they under-read a weekday evening badly.</p>
-    <p>Events carry a source and a verified date and expire on their own. Hours change — check the link before you travel. Ratings and progress stay in this browser.</p>
     <p class="foot-links">
       <button class="tab-link" data-view="quests" type="button">Quests</button>
       <button class="tab-link" data-view="saved" type="button">Your list</button>
     </p>
-    <p id="stamp"></p>
-    <p>Photographs curated by us. Where one of us went, the picture is our own; the rest come from Wikimedia Commons under their respective licences. Each card says whose.</p>
-    <p>Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, under the ODbL.</p>
-    <p>Weather data by <a href="https://open-meteo.com/">Open-Meteo.com</a>, under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Place descriptions from Wikipedia are <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
-    <p>Air quality generated using Copernicus Atmosphere Monitoring Service information, via Open-Meteo.</p>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg class="foot-mark" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/><path fill="#FFF" d="M16 62C34 58 44 48 51 33C54 28 57 26.6 60 26.6L67 26.6C71 28 74 31 75.5 34L84 40L77 40C74 40 73 42 73 46L73 52C73 70 61 82 45 82C31 82 20 73 16 62Z"/><path fill="#E67E22" d="M55 26.6A8.3 8.3 0 0 1 71.6 26.6Z"/></svg>
+        <p>Good taste. A little curiosity. <span>Allez.</span></p>
+      </div>
+      <nav class="foot-col" aria-labelledby="foot-cities"><h2 id="foot-cities">Cities</h2><ul><li><a href="../paris/">Paris</a></li><li><a href="../delhi/" aria-current="page">Delhi</a></li><li><a href="../bengaluru/">Bengaluru</a></li><li><a href="../bay-area/">The Bay Area</a></li><li><a href="../new-york/">New York</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="foot-allez"><h2 id="foot-allez">Allez</h2><ul><li><a href="../">All cities</a></li><li><a href="../#ideas">Find something good</a></li><li><a href="../about/">About us</a></li></ul></nav>
+      <nav class="foot-col" aria-labelledby="foot-legal"><h2 id="foot-legal">Legal</h2><ul><li><a href="../terms/">Terms and policies</a></li><li><a href="../terms/#privacy">Privacy</a></li><li><a href="../terms/#sources">Credits</a></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Allez. Made for the people who live here.</p>
+      <p class="foot-credit">Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, ODbL.</p>
+      <p id="stamp"></p>
+    </div>
   </div>
 </footer>
 
