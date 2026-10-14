@@ -120,7 +120,7 @@ weekend, defaulting to last time's answer. See *Who's coming* below.
 
 **Answer first, then ask.** The first screen is already an answer: one good
 thing near them, open now, from location alone (principle 1). The questions
-come after it, one at a time, as full-screen cards with no progress bar — the
+come after it, one at a time, as cards in the finite Today set — the
 app starting up, not a form. *How long are you here?* comes on the first
 open, because everything else hangs off it. *Your hours* comes the first time
 a time-of-day answer would be wrong without it. *This or that* is offered,
@@ -141,12 +141,20 @@ not a place you go to; it's what any card becomes when you tap *Go*.
 
 ### 1. Today — a short stack you finish
 
-Open the app: a vertical stack of five to eight full-screen cards, swiped up
-like Inshorts. Each card stands on its own in a photo and two lines: the thing,
+**Updated 13 October 2026 — playful editorial.** Open the app: a finite,
+scrollable set of ideas under “Your Tuesday, sorted.” The drawn Allez
+signature sits in the header. “Surprise me” opens one of the current
+recommendations, and “Your taste” opens the existing preferences. A photo
+leads each pick, with readable copy on paper below: the thing,
 why, how far, open until when, the trust mark. The first card always answers
 *right now* (time, weather, location). The rest are what today holds: a
 Regular on tonight, an event that ends Sunday, a new opening, one bit of local
 knowledge ("an SF library card gets you free museum passes").
+
+The written reason can expand in place. Save, Go and Less like this are
+separate controls. Questions still follow the first recommendation and
+the existing ranking, timing, weather, memory and follow-up logic remain
+the source of the answers. Photo credits stay visible.
 
 **The stack ends.** The last card says *That's today* and shows tomorrow's
 first thing, or what's new since yesterday. That is the difference from TikTok, and it's deliberate: the
@@ -477,12 +485,20 @@ that suit a hand on the move:
 8. **No settings screen to speak of.** What can be changed is on *What Allez
    knows about you*, written as sentences.
 
-### The pigeon
+### The pigeon: Coo
+
+The pigeon is called **Coo**, after the sound a pigeon makes, so the name
+needs no explaining. It's warm, because people coo over babies and pigeons
+coo when they're content. It's three letters, and it works in every city,
+not only Paris. The French touch lives in the occasional line ("Bonjour, je
+suis Coo."), not in the name. Coo is a character name, not a brand: handles
+take the form `@coo.allez` or "Coo by Allez".
 
 Pigeons are the most local creature in any city: in every square, at every
 café table, never lost for long. That's the character — a friend who has
-been everywhere on foot and is pleased to show you. Soft, curious, a bit
-greedy for pastry, never smug.
+been everywhere on foot and is pleased to show you. Curious, warm,
+observant, a little mischievous: greedy for pastry, always knows the best
+bench, never smug and never gushing.
 
 The pigeon is **punctuation, not wallpaper**. It never sits on a content
 card, because the places are the point. It turns up at the moments with
@@ -519,6 +535,11 @@ can't wait to tell you. It extends the site's voice rather than replacing it:
   most screens have none.
 - **The pigeon speaks as "I" only in its own moments** (the table above).
   Everywhere else the app speaks plainly as Allez.
+- **Coo never vouches for a place.** No "Coo approves" or "coo-rated":
+  the recommendation and its reason come from Allez, written plainly.
+  Notifications are Allez's too, so not "Coo found 3 cafés".
+- **Puns sparingly.** "Coo" wordplay counts as the screen's one pigeon joke.
+  Never "un bon coo": *un bon coup* is also French slang for a good lay.
 
 LAUNCH.md's "no exclamation marks" becomes "one, for celebrations" in the app.
 Everything else in it holds.

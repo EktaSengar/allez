@@ -4,7 +4,7 @@
    Kept in one file so the voice stays one voice (APP.md, "The voice"):
    warm, friendly, a little playful, inviting. The fun is in the frame;
    facts stay plain. One exclamation mark at most, and only for a
-   celebration. The pigeon says "I" only in its own moments — the
+   celebration. The pigeon, Coo, says "I" only in its own moments — the
    `pigeon` lines below — and everywhere else the app speaks as Allez.
    --------------------------------------------------------- */
 
@@ -26,6 +26,16 @@ export const V = {
 
   today: {
     tab: 'Today',
+    heading: day => `Your ${day}, sorted.`,
+    introduction: n => n === 1 ? 'One good idea worth your time.' : `${n} good ideas. Pick what feels like you.`,
+    noPicks: 'A little pause. More possibilities soon.',
+    surprise: 'Surprise me ✧',
+    less: 'Less like this',
+    more: 'Good to know',
+    collapse: 'Show less',
+    preferences: 'Your taste',
+    credit: 'Photo: ',
+    contextPhoto: 'The neighbourhood',
     rightNow: 'Right now',
     afterWork: 'After work',
     tonight: 'Tonight',
