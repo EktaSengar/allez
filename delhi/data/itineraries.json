@@ -1,5 +1,411 @@
 {
   "generated": "2026-09-14",
-  "note": "Hand-written routes. Empty.",
-  "items": []
+  "note": "Ready-made routes. Each is a sequence, not a list — the order matters.",
+  "items": [
+    {
+      "type": "itinerary",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-14",
+      "booking": false,
+      "indoor": false,
+      "weatherSensitive": true,
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "nizamuddin-evening",
+      "title": "A Thursday evening in Nizamuddin",
+      "emoji": "🕌",
+      "categories": [
+        "culture",
+        "walk",
+        "free"
+      ],
+      "zone": "nizamuddin",
+      "price": 0,
+      "priceLevel": 0,
+      "priceNote": "Entry to Humayun's Tomb extra",
+      "durationMin": 240,
+      "startTime": "15:30",
+      "why": "Gardens in the late light, then a Mughal tomb at sunset, then the qawwali at the dargah as night falls. Thursday is the night the singers come.",
+      "goodFor": [
+        "culture",
+        "couple",
+        "evening",
+        "walk"
+      ],
+      "labels": [
+        "couple",
+        "dontmiss"
+      ],
+      "stops": [
+        {
+          "emoji": "🌳",
+          "text": "Sunder Nursery, the restored Mughal garden",
+          "at": [
+            28.59685,
+            77.24743
+          ],
+          "short": "Sunder | NURSERY"
+        },
+        {
+          "emoji": "🕌",
+          "text": "Humayun's Tomb, next door, for sunset",
+          "walk": "5 min",
+          "at": [
+            28.5933,
+            77.2507
+          ],
+          "short": "Humayun's | TOMB"
+        },
+        {
+          "emoji": "🎶",
+          "text": "Across Mathura Road into the basti, to the dargah for the qawwali",
+          "walk": "15 min",
+          "at": [
+            28.5913,
+            77.2425
+          ],
+          "short": "Nizamuddin | DARGAH"
+        },
+        {
+          "emoji": "🍢",
+          "text": "Kebabs in the basti lanes on the way out",
+          "walk": "2 min",
+          "at": [
+            28.5905,
+            77.2418
+          ],
+          "short": "Basti | KEBABS"
+        }
+      ],
+      "hoursNote": "Thursdays. Cover your head and take off your shoes at the dargah; women watch from the courtyard.",
+      "coords": [
+        28.59685,
+        77.24743
+      ],
+      "coordsFrom": "first stop"
+    },
+    {
+      "type": "itinerary",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-14",
+      "booking": false,
+      "indoor": false,
+      "weatherSensitive": true,
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "lodhi-morning",
+      "title": "A morning in Lodhi",
+      "emoji": "🌿",
+      "categories": [
+        "walk",
+        "outdoors",
+        "culture",
+        "free"
+      ],
+      "zone": "lodhi-colony",
+      "price": 0,
+      "priceLevel": 1,
+      "priceNote": "Free, plus coffee",
+      "durationMin": 180,
+      "startTime": "07:30",
+      "why": "Delhi's best morning: tombs among the walkers in Lodhi Gardens, the murals of the old government blocks, then coffee and a bookshop in Khan Market before it gets busy.",
+      "goodFor": [
+        "morning",
+        "walk",
+        "couple",
+        "weekend"
+      ],
+      "labels": [
+        "cheap",
+        "weekend"
+      ],
+      "stops": [
+        {
+          "emoji": "🌳",
+          "text": "Lodhi Gardens, past the Bara Gumbad and Sikandar Lodi's tomb",
+          "at": [
+            28.59348,
+            77.21956
+          ],
+          "short": "Lodhi | GARDENS"
+        },
+        {
+          "emoji": "🎨",
+          "text": "The murals of the Lodhi Art District",
+          "walk": "10 min",
+          "at": [
+            28.5866,
+            77.2257
+          ],
+          "short": "Lodhi | ART DISTRICT"
+        },
+        {
+          "emoji": "☕",
+          "text": "Coffee at Blue Tokai, Khan Market",
+          "walk": "15 min",
+          "at": [
+            28.59972,
+            77.22618
+          ],
+          "short": "Khan | MARKET"
+        },
+        {
+          "emoji": "📚",
+          "text": "Bahrisons, two doors along",
+          "walk": "1 min",
+          "at": [
+            28.6,
+            77.22718
+          ],
+          "short": "Bahrisons | BOOKS"
+        }
+      ],
+      "coords": [
+        28.59348,
+        77.21956
+      ],
+      "coordsFrom": "first stop"
+    },
+    {
+      "type": "itinerary",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-14",
+      "booking": false,
+      "indoor": false,
+      "weatherSensitive": true,
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "old-delhi-diwali-lights",
+      "title": "Old Delhi in Diwali week",
+      "emoji": "🪔",
+      "categories": [
+        "walk",
+        "culture",
+        "festival",
+        "food"
+      ],
+      "festival": "diwali",
+      "zone": "chandni-chowk",
+      "price": 0,
+      "priceLevel": 1,
+      "priceNote": "Free; bring cash for the stalls",
+      "durationMin": 180,
+      "startTime": "17:00",
+      "why": "The old city at its brightest: Kinari Bazaar's tinsel and lights, the gold shops of Dariba Kalan, sweets on Chandni Chowk and Sis Ganj lit up at dusk.",
+      "goodFor": [
+        "evening",
+        "walk",
+        "culture"
+      ],
+      "labels": [
+        "seasonal"
+      ],
+      "stops": [
+        {
+          "emoji": "🕌",
+          "text": "From the Jama Masjid steps at dusk",
+          "at": [
+            28.6507,
+            77.2334
+          ],
+          "short": "Jama | MASJID"
+        },
+        {
+          "emoji": "✨",
+          "text": "Kinari Bazaar for the tinsel and lights",
+          "walk": "10 min",
+          "at": [
+            28.6555,
+            77.2338
+          ],
+          "short": "Kinari | BAZAAR"
+        },
+        {
+          "emoji": "🍩",
+          "text": "Jalebi at the Dariba Kalan corner",
+          "walk": "3 min",
+          "at": [
+            28.65601,
+            77.23349
+          ],
+          "short": "Jalebi | WALA"
+        },
+        {
+          "emoji": "🙏",
+          "text": "Gurudwara Sis Ganj, lit up for the festival",
+          "walk": "5 min",
+          "at": [
+            28.6561,
+            77.2314
+          ],
+          "short": "Sis Ganj | GURUDWARA"
+        }
+      ],
+      "hoursNote": "1–8 November; the crowds peak on Dhanteras and the weekend before Diwali. Chandni Chowk metro.",
+      "coords": [
+        28.6507,
+        77.2334
+      ],
+      "coordsFrom": "first stop"
+    },
+    {
+      "id": "saket-saidulajab-afternoon",
+      "title": "Saket to Saidulajab",
+      "emoji": "🖼️",
+      "type": "itinerary",
+      "provenance": "editorial",
+      "categories": [
+        "culture",
+        "walk",
+        "food",
+        "free"
+      ],
+      "zone": "saket",
+      "price": 0,
+      "priceLevel": 1,
+      "priceNote": "Free, plus chai and dinner",
+      "durationMin": 300,
+      "startTime": "14:00",
+      "why": "Modern art in a mall, a Tughlaq mosque across the road, a garden on the ridge, then chai and a Kerala dinner in Saidulajab's lanes. All of South Delhi's layers in one afternoon.",
+      "goodFor": [
+        "afternoon",
+        "culture",
+        "walk",
+        "couple"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "labels": [
+        "cheap"
+      ],
+      "uniqueness": 4,
+      "quality": 4,
+      "stops": [
+        {
+          "emoji": "🖼️",
+          "text": "Kiran Nadar Museum of Art, free",
+          "at": [
+            28.52888,
+            77.22037
+          ],
+          "short": "KNMA | MUSEUM"
+        },
+        {
+          "emoji": "🕌",
+          "text": "Across the road to Khirki Masjid",
+          "walk": "10 min",
+          "at": [
+            28.53146,
+            77.21976
+          ],
+          "short": "Khirki | MASJID"
+        },
+        {
+          "emoji": "🌿",
+          "text": "Auto to the Garden of Five Senses for late afternoon",
+          "walk": "10 min by auto",
+          "at": [
+            28.51379,
+            77.1988
+          ],
+          "short": "Five Senses | GARDEN"
+        },
+        {
+          "emoji": "☕",
+          "text": "Chai at JugMug Thela in Saidulajab",
+          "walk": "8 min",
+          "at": [
+            28.51726,
+            77.19997
+          ],
+          "short": "JugMug | THELA"
+        },
+        {
+          "emoji": "🍛",
+          "text": "Dinner at Mahabelly Canteen",
+          "walk": "3 min",
+          "at": [
+            28.51742,
+            77.19795
+          ],
+          "short": "Mahabelly | CANTEEN"
+        }
+      ],
+      "coords": [
+        28.52888,
+        77.22037
+      ],
+      "coordsFrom": "first stop",
+      "lastVerified": "2026-10-14",
+      "booking": false
+    },
+    {
+      "id": "aerocity-night",
+      "title": "A night out in Aerocity",
+      "emoji": "🪬",
+      "type": "itinerary",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "walk"
+      ],
+      "zone": "samalkha",
+      "priceLevel": 3,
+      "priceNote": "Hotel-bar prices",
+      "durationMin": 360,
+      "startTime": "20:00",
+      "why": "The walk most people staying in Aerocity do: gin at the Andaz, cocktails at the Pullman, then the dance floor at Naqab, which runs past 3am at weekends. All three are hotels a few minutes apart, so there are no cabs to find.",
+      "goodFor": [
+        "late",
+        "friends",
+        "weekend"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "labels": [
+        "friends"
+      ],
+      "uniqueness": 3,
+      "quality": 4,
+      "stops": [
+        {
+          "emoji": "🍸",
+          "text": "Start with gin at Juniper Bar, Andaz",
+          "at": [
+            28.552,
+            77.1221
+          ],
+          "short": "Juniper | ANDAZ"
+        },
+        {
+          "emoji": "🍹",
+          "text": "Cocktails and late wonton noodles at Pling, Pullman",
+          "walk": "short walk",
+          "at": [
+            28.5544,
+            77.1216
+          ],
+          "short": "Pling | PULLMAN"
+        },
+        {
+          "emoji": "🪬",
+          "text": "Dance until late at Naqab, JW Marriott",
+          "walk": "short walk",
+          "at": [
+            28.553,
+            77.121
+          ],
+          "short": "Naqab | JW MARRIOTT"
+        }
+      ],
+      "coords": [
+        28.552,
+        77.1221
+      ],
+      "coordsFrom": "first stop",
+      "lastVerified": "2026-10-14",
+      "booking": false,
+      "source": "Your notes; researched, not visited"
+    }
+  ]
 }

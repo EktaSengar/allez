@@ -1,5 +1,311 @@
 {
   "generated": "2026-09-14",
-  "note": "Chaat, Old Delhi, the Nizamuddin and Jama Masjid Ramzan nights. Hand-written. Empty.",
-  "items": []
+  "note": "Food as missions rather than listings, the Paris shape: each is a small assignment in a particular set of streets — what to order, how to judge it, where to go afterwards.",
+  "items": [
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 5,
+      "quality": 4,
+      "lastVerified": "2026-10-14",
+      "coordsFrom": "first stop",
+      "booking": false,
+      "id": "mission-old-delhi-breakfast",
+      "title": "An Old Delhi Breakfast",
+      "emoji": "🍳",
+      "moods": [
+        "cheap",
+        "walk"
+      ],
+      "zone": "chandni-chowk",
+      "area": "Four stops between the Jama Masjid and Chandni Chowk",
+      "coords": [
+        28.64217,
+        77.23733
+      ],
+      "price": 600,
+      "priceNote": "~₹600 for two",
+      "priceLevel": 1,
+      "durationMin": 150,
+      "brief": "Old Delhi eats its heaviest meal first thing. Go before 8am, while the nihari is fresh off the overnight fire and the lanes are still passable, and finish on something sweet on Chandni Chowk.",
+      "test": "The nihari should be glossy and loose, with the meat falling off the bone at a touch of the khamiri roti; the jalebi should snap, then run with syrup.",
+      "candidates": [
+        {
+          "emoji": "🍲",
+          "name": "Kallu Nihari",
+          "id": "osm-kallu-nihari-57284-154475",
+          "order": "Nihari with khamiri roti",
+          "note": "Early morning only; they sell until the pot is empty.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🍢",
+          "name": "Karim's",
+          "id": "osm-karim-s-57299-154467",
+          "order": "Mutton burra or seekh kebab, if you still have room",
+          "note": "In the lane off Gate 1 of the Jama Masjid since 1913.",
+          "walk": "10 min on"
+        },
+        {
+          "emoji": "🍩",
+          "name": "Jalebi Wala",
+          "id": "osm-jalebi-wala-57312-154467",
+          "order": "Jalebi, fried in desi ghee, by the hundred grams",
+          "note": "At the Dariba Kalan corner of Chandni Chowk.",
+          "walk": "15 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🧂",
+          "text": "Walk west to the Khari Baoli spice market before it gets too busy"
+        },
+        {
+          "emoji": "📚",
+          "text": "Browse the secondhand textbook stalls on Nai Sarak"
+        }
+      ],
+      "why": "The quickest way into Shahjahanabad is through its breakfast, and nobody else in the city eats like this before nine.",
+      "goodFor": [
+        "food",
+        "morning",
+        "cheap",
+        "walk"
+      ],
+      "labels": [
+        "dontmiss",
+        "cheap",
+        "foodmission"
+      ],
+      "hoursNote": "Start by 7:30am. Cash. Chawri Bazar or Jama Masjid metro."
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 5,
+      "quality": 4,
+      "lastVerified": "2026-10-14",
+      "coordsFrom": "first stop",
+      "booking": false,
+      "id": "mission-kamla-nagar-chole",
+      "title": "Chole Bhature in North Campus",
+      "emoji": "🫓",
+      "moods": [
+        "cheap"
+      ],
+      "zone": "kamla-nagar",
+      "area": "Kamla Nagar and the streets around Delhi University",
+      "coords": [
+        28.68232,
+        77.20602
+      ],
+      "price": 400,
+      "priceNote": "~₹400 for two",
+      "priceLevel": 1,
+      "durationMin": 90,
+      "brief": "North Campus runs on chole bhature, and the queues at the old shops are the student body's verdict. Come hungry, late morning, and walk it off round the university afterwards.",
+      "test": "The bhatura should puff up and tear soft, not chewy or oily; the chole should be dark and sharp with amchur, with the pickle and onions on the side.",
+      "candidates": [
+        {
+          "emoji": "🫓",
+          "name": "Chache di Hatti",
+          "id": "osm-chache-di-hatti-57365-154412",
+          "order": "Chole bhature, one plate each to start",
+          "note": "A tiny counter that shuts once the batter runs out, usually by early afternoon.",
+          "walk": "first stop"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🎓",
+          "text": "Walk to the Arts Faculty and the North Campus lawns"
+        },
+        {
+          "emoji": "🥤",
+          "text": "A cold lassi or shikanji from the Kamla Nagar market stalls"
+        }
+      ],
+      "why": "One plate, eaten standing, explains more about Delhi's Punjabi lunch than any restaurant.",
+      "goodFor": [
+        "food",
+        "cheap",
+        "lunch"
+      ],
+      "labels": [
+        "cheap",
+        "foodmission"
+      ],
+      "hoursNote": "Late morning to early afternoon; closes when sold out. Vishwavidyalaya metro."
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 5,
+      "quality": 4,
+      "lastVerified": "2026-10-14",
+      "coordsFrom": "first stop",
+      "booking": false,
+      "id": "mission-cr-park-bengali",
+      "title": "A Bengali Evening in CR Park",
+      "emoji": "🐟",
+      "moods": [
+        "cheap",
+        "walk"
+      ],
+      "zone": "chittaranjan-park",
+      "area": "Market No. 1 and Market No. 2, five minutes apart",
+      "coords": [
+        28.5372,
+        77.2493
+      ],
+      "price": 800,
+      "priceNote": "~₹800 for two",
+      "priceLevel": 1,
+      "durationMin": 120,
+      "festival": "durga-puja",
+      "brief": "Chittaranjan Park was settled by families from East Bengal after Partition, and its markets still keep Kolkata hours: the fish market buzzing in the evening, and rolls and sweets on every corner. Walk both markets, then end at the Kali Mandir on the hill.",
+      "test": "The fish chop should crack open to flaky fish, not mashed potato; the mishti doi should be thick enough to hold the spoon upright, and caramel-sweet.",
+      "candidates": [
+        {
+          "emoji": "🐟",
+          "name": "Market No. 1 fish market",
+          "order": "Just look: hilsa in season, rohu, prawns, the evening bargaining",
+          "note": "Busiest from 5pm.",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🌯",
+          "name": "The roll and chop stalls in Market No. 1",
+          "order": "An egg-chicken roll and a fish chop",
+          "note": "Pick whichever stall has the longest line.",
+          "walk": "2 min on"
+        },
+        {
+          "emoji": "🍮",
+          "name": "A sweet shop in Market No. 2",
+          "order": "Mishti doi, sandesh and a rosogolla",
+          "note": "Ask what came out of the kitchen today.",
+          "walk": "5 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🛕",
+          "text": "Climb to the Kali Mandir for the evening aarti"
+        },
+        {
+          "emoji": "🌺",
+          "text": "In Durga Puja week, carry on to the pandals at Mela Ground"
+        }
+      ],
+      "why": "A neighbourhood that feels like a different city, best tasted standing up between stalls.",
+      "goodFor": [
+        "food",
+        "evening",
+        "cheap",
+        "walk"
+      ],
+      "labels": [
+        "cheap",
+        "foodmission"
+      ],
+      "hoursNote": "Evenings. Nehru Enclave metro."
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 5,
+      "quality": 4,
+      "lastVerified": "2026-10-14",
+      "coordsFrom": "first stop",
+      "booking": false,
+      "id": "mission-diwali-mithai",
+      "title": "The Diwali Mithai Run",
+      "emoji": "🪔",
+      "moods": [
+        "walk"
+      ],
+      "zone": "chandni-chowk",
+      "area": "Chandni Chowk and Connaught Place, in the week before Diwali",
+      "coords": [
+        28.65601,
+        77.23349
+      ],
+      "price": 2000,
+      "priceNote": "~₹2,000, with boxes to give away",
+      "priceLevel": 2,
+      "durationMin": 180,
+      "festival": "diwali",
+      "brief": "In the fortnight before Diwali the whole city queues for sweets to give away. Start in the old city for the classics and the lights on Chandni Chowk, then come back south via Connaught Place for something for the people who will not eat ghee.",
+      "test": "Good kaju katli is thin, barely sweet and leaves no grease on the paper; a fresh sohan halwa should snap clean.",
+      "candidates": [
+        {
+          "emoji": "🍩",
+          "name": "Jalebi Wala",
+          "id": "osm-jalebi-wala-57312-154467",
+          "order": "Hot jalebi to eat now, while you queue",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "✨",
+          "name": "Kinari Bazaar",
+          "order": "Tinsel, gota and diya-wicks; walk it for the lights even if you buy nothing",
+          "note": "Off Dariba Kalan, very crowded after dark.",
+          "walk": "5 min on"
+        },
+        {
+          "emoji": "🎁",
+          "name": "Bengali Sweet House",
+          "id": "osm-bengali-sweet-house-pastry-57259-154464",
+          "order": "A mixed box of barfi and kaju katli for the neighbours",
+          "walk": "metro to Barakhamba"
+        },
+        {
+          "emoji": "🍰",
+          "name": "Wenger's",
+          "id": "osm-wenger-s-57267-154436",
+          "order": "Plum cake or rum balls, for the friends who want something else",
+          "note": "The Connaught Place bakery since 1926.",
+          "walk": "10 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🛍️",
+          "text": "Diya, candle and rangoli stalls at Dilli Haat INA"
+        }
+      ],
+      "why": "The one week Delhi's sweet shops are at their busiest and best. Lights, gifting and a sugar high in one afternoon.",
+      "goodFor": [
+        "food",
+        "afternoon",
+        "walk"
+      ],
+      "labels": [
+        "foodmission",
+        "seasonal"
+      ],
+      "hoursNote": "Weekdays are easier. Avoid Chandni Chowk on Dhanteras evening unless you love crowds."
+    }
+  ]
 }
