@@ -306,7 +306,7 @@ picture { display: contents; }
 .ghost:hover { border-color: var(--soft); color: var(--ink); }
 .ghost.accent { border-color: var(--accent); color: var(--accent); }
 .ghost.accent:hover { background: var(--accent); color: var(--bg); }
-.ghost[aria-expanded="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.ghost[aria-expanded="true"] { background: color-mix(in srgb, var(--ink) 8%, transparent); border-color: var(--ink); color: var(--ink); }
 
 /* The page-level buttons are the homepage's pills: same height, same
    type, an outlined ink pill that warms on hover. */
@@ -319,7 +319,7 @@ picture { display: contents; }
 .bar-actions .ghost:hover,
 .bar-actions .ghost.accent:hover { background: var(--bg-2); color: var(--ink); border-color: var(--line); }
 .bar-actions .ghost.accent { color: var(--ink); border-color: var(--line); }
-.bar-actions .ghost[aria-expanded="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.bar-actions .ghost[aria-expanded="true"] { background: color-mix(in srgb, var(--ink) 8%, transparent); border-color: var(--ink); color: var(--ink); }
 
 /* ---------- filters ---------- */
 
@@ -349,7 +349,7 @@ picture { display: contents; }
   transition: all .14s;
 }
 .chip:hover { border-color: var(--soft); color: var(--ink); }
-.chip.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.chip.on { background: color-mix(in srgb, var(--ink) 8%, transparent); border-color: var(--ink); color: var(--ink); }
 
 .book-list { display: grid; gap: .5rem; margin: 0 0 1.6rem; }
 .book { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .2rem .8rem; padding: .55rem 0; border-bottom: 1px solid var(--line); }
@@ -2015,8 +2015,8 @@ html:has(.home) {
 }
 .home .moods button[aria-pressed=true] {
   border-color:var(--ink);
-  background:var(--ink);
-  color:var(--bg);
+  background:color-mix(in srgb, var(--ink) 8%, transparent);
+  color:var(--ink);
 }
 .home .status {
   font-size:14px;
