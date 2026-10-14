@@ -176,8 +176,7 @@ All 13 October 2026.
    Sora, script fonts (Pacifico, Damion, Niconne and others), italic
    serifs (Fraunces, Playfair), Airbnb- and Spotify-style sans, and a
    GPS-route lettering. Fonts read as generic or lost elegance. The
-   signature is personal and sits with the bird. The explorations are in
-   `design/explore/`.
+   signature is personal and sits with the bird.
 3. **The signature was cleaned up:** no lead-in stroke, one 8° slant, `ll`
    at 1.7 times the x-height, even joins, and a pen lift so the `z` reads.
 4. **The brand colour is charcoal `#2C3E50`,** for the circle and the
