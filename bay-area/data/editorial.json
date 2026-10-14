@@ -4938,6 +4938,477 @@
    "indoor": true,
    "booking": "https://www.opentable.com/r/asa-los-altos",
    "hoursNote": "Dinner from 5pm Monday to Friday and from 4:30pm Saturday; closed Sundays. Closing time not published."
+  },
+  {
+   "id": "osm-sam-s-chowder-house-75005--244952",
+   "title": "Sam's Chowder House",
+   "type": "restaurant",
+   "zone": "half-moon-bay",
+   "coords": [
+    37.50251,
+    -122.47583
+   ],
+   "area": "Cabrillo Highway, El Granada",
+   "url": "https://www.samschowderhouse.com/",
+   "hours": "Mo-Th 11:30-20:30; Fr 11:30-21:00; Sa 11:00-21:00; Su 11:00-20:30",
+   "hoursFrom": "samschowderhouse.com",
+   "cuisine": "seafood",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sam's Chowder House",
+    "zone": "half-moon-bay",
+    "type": "restaurant"
+   },
+   "why": "Oceanfront seafood on Highway 1, with a patio facing the Pacific that takes dogs. The lobster roll is the one people drive over the hill for; the cioppino is the other reason. Come for a late lunch and stay for the light on the water.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "labels": [
+    "outdoor"
+   ],
+   "source": "samschowderhouse.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 90,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-half-moon-bay-brewing-company-75008--244971",
+   "title": "Half Moon Bay Brewing Company",
+   "type": "restaurant",
+   "zone": "half-moon-bay",
+   "coords": [
+    37.50397,
+    -122.48555
+   ],
+   "area": "Pillar Point Harbor, Capistrano Road",
+   "url": "https://www.hmbbrewingco.com/",
+   "hours": "Mo-Th 11:00-20:00; Fr 11:00-21:00; Sa 10:00-21:00; Su 10:00-20:00",
+   "hoursFrom": "hmbbrewingco.com — Brew Pub",
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Half Moon Bay Brewing Company",
+    "zone": "half-moon-bay",
+    "type": "restaurant"
+   },
+   "why": "The coast's own brewery since 2000, in a brewpub on Pillar Point Harbor with an oceanfront patio. Drink what is brewed here, eat something simple alongside, and walk the harbour after. Weekend brunch starts at ten.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "outdoor"
+   ],
+   "source": "hmbbrewingco.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 75,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-barbara-s-fish-trap-75007--244970",
+   "title": "Barbara's Fish Trap",
+   "type": "restaurant",
+   "zone": "half-moon-bay",
+   "coords": [
+    37.50346,
+    -122.4851
+   ],
+   "area": "Pillar Point Harbor, Capistrano Road",
+   "url": "https://www.barbarasfishtrap.com/",
+   "hours": null,
+   "hoursFrom": null,
+   "cuisine": "seafood",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Barbara's Fish Trap",
+    "zone": "half-moon-bay",
+    "type": "restaurant"
+   },
+   "why": "A family-run fish house on Pillar Point Harbor, looking out at the Pacific from the same spot since 1978. Order the fish and chips or the scallop tempura and take the window seats. It is plain, quick and exactly what you want after a morning on the bluffs.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "afternoon"
+   ],
+   "labels": [
+    "cheap"
+   ],
+   "source": "barbarasfishtrap.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 60,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hoursNote": "Opens 11am daily; the dining room closes 3–4pm for an oil change. The site gives two different closing times, so check before an evening visit."
+  },
+  {
+   "id": "osm-dad-s-luncheonette-74932--244867",
+   "title": "Dad's Luncheonette",
+   "type": "restaurant",
+   "zone": "half-moon-bay",
+   "coords": [
+    37.4659,
+    -122.43344
+   ],
+   "area": "Cabrillo Highway South",
+   "url": "https://www.dadsluncheonette.com/",
+   "hours": "Th-Su 11:15-16:00",
+   "hoursFrom": "dadsluncheonette.com",
+   "cuisine": "burger",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Dad's Luncheonette",
+    "zone": "half-moon-bay",
+    "type": "restaurant"
+   },
+   "why": "A lunch counter in an old train caboose by Highway 1, with a menu short enough to read in one go. Get the hamburger sandwich, grass-fed beef with a soft egg on grilled bread, or its maitake-mushroom twin, with chips cut that morning. Lunch only, Thursday to Sunday.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "afternoon"
+   ],
+   "labels": [
+    "hiddengem"
+   ],
+   "source": "dadsluncheonette.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 45,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-miramar-beach-restaurant-74991--244925",
+   "title": "Miramar Beach Restaurant",
+   "type": "restaurant",
+   "zone": "half-moon-bay",
+   "coords": [
+    37.49565,
+    -122.46233
+   ],
+   "area": "Mirada Road, Miramar",
+   "url": "https://miramarbeachrestaurant.com/",
+   "cuisine": "seafood",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Miramar Beach Restaurant",
+    "zone": "half-moon-bay",
+    "type": "restaurant"
+   },
+   "hours": "Mo-Fr 11:30-20:00; Sa,Su 11:00-20:00",
+   "hoursFrom": "miramarbeachrestaurant.com — last order 8pm",
+   "why": "On the sand at Miramar since 1918, in a building put up as a Prohibition speakeasy, revolving cabinets and hidden liquor compartments included. Ask for a window seat or the heated patio and watch the surf. No reservations, so go early on weekends.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "labels": [
+    "outdoor"
+   ],
+   "source": "miramarbeachrestaurant.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 90,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-coastal-repertory-theatre-74904--244858",
+   "title": "Coastal Repertory Theatre",
+   "type": "culture",
+   "zone": "half-moon-bay",
+   "coords": [
+    37.45216,
+    -122.42907
+   ],
+   "area": "Main Street",
+   "url": "https://coastalrep.com/",
+   "cuisine": null,
+   "categories": [
+    "art",
+    "indoor"
+   ],
+   "match": {
+    "name": "Coastal Repertory Theatre",
+    "zone": "half-moon-bay",
+    "type": "culture"
+   },
+   "hours": null,
+   "hoursFrom": null,
+   "why": "The coast's community theatre, a nonprofit on Main Street making musicals, plays and youth shows by and for the town. A Christmas Carol is the December fixture. Pair a matinee with dinner on Main Street.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "coastalrep.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "hoursNote": "Performance days only; times are on each show's page.",
+   "durationMin": 150,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": "https://coastalrep.com/"
+  },
+  {
+   "id": "osm-fox-theatre-74973--244459",
+   "title": "Fox Theatre",
+   "type": "culture",
+   "zone": "redwood-city",
+   "coords": [
+    37.48635,
+    -122.22962
+   ],
+   "area": "Broadway",
+   "url": "https://foxrwc.com/",
+   "cuisine": null,
+   "categories": [
+    "art",
+    "indoor"
+   ],
+   "match": {
+    "name": "Fox Theatre",
+    "zone": "redwood-city",
+    "type": "culture"
+   },
+   "hours": null,
+   "hoursFrom": null,
+   "why": "Downtown Redwood City's theatre on Broadway, now a live venue for tribute bands, touring concerts, comedy and holiday shows. Check the calendar, buy ahead, and eat on Broadway first.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "foxrwc.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 150,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": "https://foxrwc.com/",
+   "hoursNote": "Show nights only; times are on each event's page."
+  },
+  {
+   "id": "osm-timber-salt-74971--244458",
+   "title": "Timber & Salt",
+   "type": "restaurant",
+   "zone": "redwood-city",
+   "coords": [
+    37.4855,
+    -122.2289
+   ],
+   "area": "Middlefield Road",
+   "url": "https://www.timberandsalt.com/",
+   "hours": null,
+   "hoursFrom": null,
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Timber & Salt",
+    "zone": "redwood-city",
+    "type": "restaurant"
+   },
+   "why": "American comfort cooking done carefully: steaks are the centre of it, with a tomahawk to share and a plated scallop dish for anyone who does not want one. The bar makes its own syrups and infusions and rewrites the cocktail list each season. Dinner only.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "timberandsalt.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 90,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": "https://www.timberandsalt.com/",
+   "hoursNote": "Dinner from 5pm Tuesday to Saturday; closing time not published."
+  },
+  {
+   "id": "osm-donato-enoteca-74969--244454",
+   "title": "Donato Enoteca",
+   "type": "restaurant",
+   "zone": "redwood-city",
+   "coords": [
+    37.48431,
+    -122.22688
+   ],
+   "area": "Middlefield Road",
+   "url": "https://www.donatoenoteca.com/",
+   "cuisine": "italian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Donato Enoteca",
+    "zone": "redwood-city",
+    "type": "restaurant"
+   },
+   "hours": "Tu-Th 11:30-14:00,17:00-21:30; Fr,Sa 11:30-16:00,17:00-22:00; Su 11:30-16:00,17:00-21:00",
+   "hoursFrom": "donatoenoteca.com — happy hour Tu–Su 4–6:30pm",
+   "why": "An Italian wine bar and kitchen built around small plates to share, with a long wine list to match. The easy way in is happy hour on the bar patio; dinner is the full version. Closed Mondays.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "labels": [],
+   "source": "donatoenoteca.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 90,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-casa-circulo-cultural-74974--244452",
+   "title": "Casa Círculo Cultural",
+   "type": "culture",
+   "zone": "redwood-city",
+   "coords": [
+    37.48719,
+    -122.22578
+   ],
+   "area": "Middlefield Road",
+   "url": "https://casacirculocultural.org/",
+   "cuisine": null,
+   "categories": [
+    "art",
+    "learn"
+   ],
+   "match": {
+    "name": "Casa Círculo Cultural",
+    "zone": "redwood-city",
+    "type": "culture"
+   },
+   "hours": "Mo-Fr 11:00-18:00; Sa 09:00-15:30",
+   "hoursFrom": "casacirculocultural.org",
+   "why": "A women-led Latino arts and culture centre on Middlefield, running dance, music and Spanish-language programmes for more than fifteen years. Its Día de los Muertos, with altars, catrinas and a procession, is the one to go to; many other events are free.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "casacirculocultural.org; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 60,
+   "priceLevel": 0,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-the-baker-next-door-74971--244452",
+   "title": "The Baker Next Door",
+   "type": "bakery",
+   "zone": "redwood-city",
+   "coords": [
+    37.48563,
+    -122.22609
+   ],
+   "area": "Main Street",
+   "url": "https://www.thebakernextdoorrwc.com/",
+   "hours": "Tu-Su 07:30-15:00",
+   "hoursFrom": "thebakernextdoorrwc.com",
+   "cuisine": null,
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "match": {
+    "name": "The Baker Next Door",
+    "zone": "redwood-city",
+    "type": "bakery"
+   },
+   "why": "A European-style bakery downtown: country loaves, Danish rye and the rotating special boule, plus kouign amann, morning buns and almond snails. Come early for the pastries, or late morning for a tartine or quiche at a table.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "lunch"
+   ],
+   "labels": [],
+   "source": "thebakernextdoorrwc.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-domenico-winery-and-osteria-74998--244483",
+   "title": "Domenico Winery and Osteria",
+   "type": "restaurant",
+   "zone": "redwood-city",
+   "coords": [
+    37.499,
+    -122.24166
+   ],
+   "area": "Industrial Road, San Carlos",
+   "url": "https://www.domenicowinery.com/osteria",
+   "cuisine": "italian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Domenico Winery and Osteria",
+    "zone": "redwood-city",
+    "type": "restaurant"
+   },
+   "hours": "We-Fr 17:00-21:00; Sa 11:00-21:00; Su 11:00-18:00",
+   "hoursFrom": "domenicowinery.com — weekend brunch 11am–3pm",
+   "hoursChecked": "2026-10-14",
+   "why": "A family winery with its own tasting room and osteria in converted warehouses on Industrial Road: a black-and-white room with a marble wine bar. Book a 45-minute flight of their Cal-Italian wines at the bar, or order one at the table with stone-hearth pizza, fresh pasta and Mama G's polpetti. Dogs are welcome on the patio.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "domenicowinery.com; Punch magazine; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 90,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": "https://www.domenicowinery.com/osteria"
   }
  ]
 }
