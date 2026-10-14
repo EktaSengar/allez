@@ -546,10 +546,10 @@
       ],
       "coordsFrom": "Fort Mason Center (osm node/358857198); the café is at its entrance and is not mapped itself",
       "lastVerified": "2026-09-25",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/FortMasonWharves.JPG/1280px-FortMasonWharves.JPG",
-      "imageSubject": "Fort Mason",
-      "imageKind": "context",
-      "imageCredit": "Original uploader was SuperJumbo at en.wikipedia · CC BY-SA 3.0",
+      "image": "img/thumb/equator-fort-mason/500px-equator-fort-mason.jpg",
+      "imageSubject": "Two Equator coffees on the patio table at Fort Mason",
+      "imageKind": "subject",
+      "imageCredit": "Our own photograph",
       "hours": "Mo-Fr 06:30-17:00; Sa-Su 07:00-17:00",
       "hoursFrom": "equatorcoffees.com",
       "hoursChecked": "2026-09-25",
@@ -625,7 +625,7 @@
       ],
       "quality": 5,
       "uniqueness": 5,
-      "lastVerified": "2026-09-25",
+      "lastVerified": "2026-10-13",
       "id": "ettan-palo-alto",
       "title": "Ettan",
       "emoji": "🍛",
@@ -633,17 +633,17 @@
       "cuisine": "indian",
       "priceNote": "Special-occasion prices",
       "bookAhead": true,
-      "why": "California-Indian cooking from Srijith Gopinathan, who earned two Michelin stars at Campton Place in San Francisco, in a downtown room that opened in 2020. It is listed in the Michelin Guide, and its team were James Beard finalists in 2026. Book ahead: it is the one for a special dinner.",
+      "why": "Heavenly Indian cooking from Srijith Gopinathan, who earned two Michelin stars at Campton Place in San Francisco. The menu keeps changing, and every version is put together with real thought — California produce, Indian technique. It is listed in the Michelin Guide, and its team were James Beard finalists in 2026. Book ahead: it is the one for a special dinner.",
       "url": "https://www.exploretock.com/ettan",
       "coords": [
         37.44537,
         -122.16136
       ],
       "coordsFrom": "osm way/132746454",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG/1280px-Ramona_Street_Architectural_District%2C_261_Hamilton_St.%2C_Palo_Alto%2C_CA_5-27-2012_2-20-25_PM.JPG",
-      "imageSubject": "Palo Alto, California",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons",
+      "image": "img/thumb/ettan-palo-alto/500px-ettan-palo-alto.jpg",
+      "imageSubject": "The painted rickshaw in Ettan's tiled courtyard",
+      "imageKind": "subject",
+      "imageCredit": "Our own photograph",
       "booking": "https://www.ettanrestaurant.com/reservations",
       "durationMin": 120,
       "priceLevel": 4,
@@ -2894,6 +2894,81 @@
       "imageKind": "subject",
       "imageCredit": "druchoy · CC BY-SA 2.0",
       "touristy": true
+    },
+    {
+      "type": "cafe",
+      "categories": [
+        "food",
+        "cafe"
+      ],
+      "zone": "palo-alto",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "lastVerified": "2026-10-13",
+      "labels": [],
+      "booking": false,
+      "id": "redwood-cafe-avenidas",
+      "title": "Redwood Café",
+      "emoji": "🥞",
+      "area": "Avenidas, 450 Bryant Street",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "food"
+      ],
+      "why": "A French touch hidden on the ground floor of Avenidas, the downtown community centre, where the chef Julien Cellier bakes the pastries himself and makes the salads and sandwiches to go with them. Nobody walking down University would know it is there, and it is quiet enough to read over a cappuccino.",
+      "url": "https://www.avenidas.org/services/redwood-cafe/",
+      "coords": [
+        37.44618,
+        -122.16242
+      ],
+      "coordsFrom": "Avenidas (osm way/127082294); the café is inside and not mapped itself",
+      "hours": "Mo-Su 08:00-15:00",
+      "hoursFrom": "a visit — open daily now, not just on weekdays",
+      "hoursChecked": "2026-10-13",
+      "durationMin": 60,
+      "priceLevel": 1,
+      "source": "avenidas.org; Palo Alto Online",
+      "image": "img/thumb/redwood-cafe-avenidas/500px-redwood-cafe-avenidas.jpg",
+      "imageSubject": "A coffee outside Redwood Café at Avenidas",
+      "imageKind": "subject",
+      "imageCredit": "Our own photograph"
+    },
+    {
+      "type": "deli",
+      "categories": [
+        "food"
+      ],
+      "zone": "palo-alto",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3,
+      "lastVerified": "2026-10-13",
+      "labels": [],
+      "booking": false,
+      "id": "jamba-town-and-country",
+      "title": "Jamba",
+      "emoji": "🥤",
+      "area": "Town & Country Village, 855 El Camino Real",
+      "goodFor": [
+        "afternoon",
+        "evening"
+      ],
+      "why": "Fruity smoothies to carry along Town & Country's covered walkways in the evening, when the string lights are on. Order the Razzmatazz.",
+      "url": "https://www.jamba.com/",
+      "coords": [
+        37.43874,
+        -122.1596
+      ],
+      "coordsFrom": "osm node/1747200869",
+      "hoursNote": "Jamba publishes no hours for this shop; check before going",
+      "durationMin": 15,
+      "priceLevel": 1,
+      "image": "img/thumb/jamba-town-and-country/500px-jamba-town-and-country.jpg",
+      "imageSubject": "A Jamba smoothie under the lights at Town & Country",
+      "imageKind": "subject",
+      "imageCredit": "Our own photograph"
     }
   ]
 }

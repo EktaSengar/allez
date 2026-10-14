@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-30",
+ "generated": "2026-10-14",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it. Written against the holes the generated tiers cannot fill: Wikidata knows of three cafés and two bakeries in the whole Bay Area and no markets at all, and the Peninsula has almost nothing.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -626,6 +626,235 @@
    "imageKind": "context",
    "imageSubject": "Sourdough",
    "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-yutori-74840--244272",
+   "title": "Yutori",
+   "type": "cafe",
+   "zone": "palo-alto",
+   "coords": [
+    37.42014,
+    -122.13586
+   ],
+   "area": "3375 El Camino Real",
+   "url": "https://www.yutori-pa.com/",
+   "hours": "Mo-Su 08:00-17:00; We,Th,Su 17:30-21:00; Fr,Sa 17:30-22:00",
+   "hoursFrom": "yutori-pa.com — café 8am–4pm, konbini and market to 5pm; restaurant Wed–Sun evenings only",
+   "cuisine": "japanese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Yutori",
+    "zone": "palo-alto",
+    "type": "cafe"
+   },
+   "why": "A Japanese café, konbini and market under one roof, opened in 2026 by Jerome Ito of Taro San. Mornings are for a hojicha or matcha latte and a hot sando from the deli; the konbini fridges hold onigiri, bentos and sushi made that day, and the market shelves are soy sauces, ceramics and stationery. The patio is laid out like a small stone garden. Dinner is a separate, booked restaurant at the back.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Palo Alto Online; Verde Magazine; Paly Voice; yutori-pa.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-13",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": "https://www.opentable.com/r/yutori-reservations-palo-alto",
+   "hoursChecked": "2026-10-13"
+  },
+  {
+   "id": "osm-wild-seed-74876--244317",
+   "title": "Wild Seed",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.43823,
+    -122.15875
+   ],
+   "area": "Town & Country Village, 855 El Camino Real",
+   "url": "https://www.wildseedsf.com/palo-alto-home/",
+   "hours": "Mo-Th 11:30-21:00; Fr 11:30-22:00; Sa 11:00-22:00; Su 11:00-21:00",
+   "hoursFrom": "wildseedsf.com — happy hour weekdays 4–6pm",
+   "cuisine": "vegan",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Wild Seed",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "Entirely plant-based, from Adriano Paganini's Back of the House group, in the old Mayfield Bakery room across El Camino from Stanford. The kitchen leans Mediterranean: the yellow curry, the house mushroom-and-spinach burger, and the Meyer lemon cheesecake. Every wine on the list is vegan, so nobody at the table has to ask.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Palo Alto Online; Mountain View Voice; Verde Magazine; wildseedsf.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-13",
+   "durationMin": 75,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": "https://www.opentable.com/r/wildseed-palo-alto-reservations-palo-alto",
+   "hoursChecked": "2026-10-13",
+   "diet": [
+    "vegan"
+   ]
+  },
+  {
+   "id": "osm-teleferic-barcelona-74877--244317",
+   "title": "Telefèric Barcelona",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.43831,
+    -122.15837
+   ],
+   "area": "Town & Country Village, 855 El Camino Real",
+   "url": null,
+   "cuisine": "spanish",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Telefèric Barcelona",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "Barcelona-born owners, a Sant Cugat original, and tapas that do not apologise for being Spanish. Order the patatas bravas and the squid-ink paella negra, which comes with shrimp and calamari and takes its time. One of seven paellas, and the one the regulars order.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Palo Alto Online; San Francisco Chronicle; telefericbarcelona.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-13",
+   "durationMin": 90,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": "https://www.telefericbarcelona.com/reservations",
+   "hours": "Mo-Th 11:30-21:15; Fr 11:30-22:15; Sa 11:00-22:15; Su 11:00-21:15",
+   "hoursFrom": "telefericbarcelona.com/palo-alto",
+   "hoursChecked": "2026-10-13"
+  },
+  {
+   "id": "osm-howie-s-artisan-pizza-74876--244320",
+   "title": "Howie's Artisan Pizza",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.43797,
+    -122.16014
+   ],
+   "area": "Town & Country Village, 855 El Camino Real",
+   "url": "https://www.howiesartisanpizza.com/",
+   "hours": "Mo-Su 11:30-21:00",
+   "hoursFrom": "howiesartisanpizza.com — open daily",
+   "cuisine": "pizza",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Howie's Artisan Pizza",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "New Haven-style pizza from Howard Bulka, once head chef at Marché in Menlo Park, modelled on Frank Pepe's. The dough proofs for two days and bakes hot in a brick oven, so the edges blister and the middle stays thin and crisp. Here since 2009: the family dinner on this stretch of El Camino.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "The Stanford Daily; Food Gal; howiesartisanpizza.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-13",
+   "durationMin": 60,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-13"
+  },
+  {
+   "id": "osm-antoine-s-cookie-shop-74877--244320",
+   "title": "Antoine's Cookie Shop",
+   "type": "bakery",
+   "zone": "palo-alto",
+   "coords": [
+    37.43858,
+    -122.1602
+   ],
+   "area": "Town & Country Village, 855 El Camino Real",
+   "url": "https://www.antoinescookieshop.com/",
+   "hours": "Mo-Sa 10:00-20:00; Su 10:00-17:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Antoine's Cookie Shop",
+    "zone": "palo-alto",
+    "type": "bakery"
+   },
+   "why": "A San Mateo cookie shop that sold two thousand cookies on its first day in Palo Alto in 2021. Antoine Tang bakes them thick and serves them warm. Start with the chocolate chip, take a box for later, and walk it across to Stanford.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Mountain View Voice; Midpen Post; Verde Magazine; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-13",
+   "durationMin": 15,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursNote": "Neither antoinescookieshop.com nor the press gives current hours; they need checking against the shop"
+  },
+  {
+   "id": "osm-state-of-mind-slice-house-74834--244263",
+   "title": "State of Mind Slice House",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.41718,
+    -122.13139
+   ],
+   "area": "3850 El Camino Real",
+   "url": null,
+   "hours": "Mo-Su 11:30-20:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "pizza",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "State of Mind Slice House",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "The by-the-slice spin-off of State of Mind in Los Altos, opened in 2021 by two owners who grew up in this part of Palo Alto. Chef Lars Smith has won the International Pizza Challenge and the West Coast Pizza Cup, and the dough is long-fermented. Come for a New York slice at the counter rather than a sit-down dinner.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Palo Alto Online; Los Altos Town Crier via Almanac; The Stanford Daily; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-13",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursNote": "The two published sets of hours disagree (Toast shows open until 11pm, another listing 9pm), so check them before a late visit"
   },
   {
    "id": "osm-lake-merced-park-75440--244987",
@@ -3672,6 +3901,8 @@
    ],
    "area": "Broadway",
    "url": null,
+   "hours": "Mo-Th 15:00-21:00; Fr,Sa 11:30-01:30; Su 11:30-21:00",
+   "hoursFrom": "lvmar.com; Yelp",
    "cuisine": null,
    "categories": [
     "food"
@@ -3694,8 +3925,6 @@
    "priceLevel": 2,
    "indoor": true,
    "booking": false,
-   "hours": "Mo-Th 15:00-21:00; Fr,Sa 11:30-01:30; Su 11:30-21:00",
-   "hoursFrom": "lvmar.com; Yelp",
    "hoursChecked": "2026-09-29",
    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Cebiche_de_corvina.JPG/500px-Cebiche_de_corvina.JPG",
    "imageKind": "context",
