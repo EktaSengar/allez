@@ -944,6 +944,7 @@
    "url": null,
    "cuisine": null,
    "categories": [
+    "bar",
     "food"
    ],
    "match": {
@@ -951,7 +952,7 @@
     "zone": "samalkha",
     "type": "restaurant"
    },
-   "why": "A branch of One8 Commune, the chain of restaurant-bars started by cricketer Virat Kohli. A big, easy room for a drink near the airport.",
+   "why": "Virat Kohli's restaurant and bar in Worldmark 2: Asian, Italian and North Indian on one menu, an outdoor lounge, and cocktails until late. Order the signature black chicken.",
    "quality": 3,
    "uniqueness": 2,
    "goodFor": [
@@ -1592,6 +1593,2719 @@
    ],
    "source": "The Leela's own press releases",
    "lastVerified": "2026-10-12"
+  },
+  {
+   "id": "osm-perch-wine-coffee-bar-57200-154453",
+   "title": "Perch",
+   "type": "cafe",
+   "zone": "lodhi-colony",
+   "coords": [
+    28.59992,
+    77.2263
+   ],
+   "area": "Khan Market",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "match": {
+    "name": "Perch - Wine & Coffee Bar",
+    "zone": "lodhi-colony",
+    "type": "bar"
+   },
+   "why": "A narrow first-floor room in Khan Market that does serious coffee by day and wine by the glass after dark. Come mid-afternoon for a pour-over and the window seats over the market lane.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "couple",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "e/e5/FabIndia_outlet,_Khan_Market,_New_Delhi.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-ama-cafe-57405-154457",
+   "title": "AMA Cafe",
+   "type": "cafe",
+   "zone": "majnu-ka-tila",
+   "coords": [
+    28.70255,
+    77.22841
+   ],
+   "area": "Majnu ka Tilla, New Aruna Nagar",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "match": {
+    "name": "AMA Cafe",
+    "zone": "majnu-ka-tila",
+    "type": "cafe"
+   },
+   "why": "The best-known café in Majnu ka Tilla, the Tibetan colony on the Yamuna: several floors of students and monks over coffee, cheesecake and Tibetan bread. Pair it with laphing from the lane stalls outside.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "cheap",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-diggin-57190-154396",
+   "title": "Diggin",
+   "type": "cafe",
+   "zone": "chanakyapuri",
+   "coords": [
+    28.59509,
+    77.19798
+   ],
+   "area": "Chanakyapuri",
+   "categories": [
+    "food",
+    "coffee",
+    "italian"
+   ],
+   "match": {
+    "name": "Diggin",
+    "zone": "chanakyapuri",
+    "type": "cafe"
+   },
+   "why": "A garden café in Chanakyapuri, all fairy lights and outdoor tables, serving pasta, pizza and cold coffee to students and families. Best on a winter afternoon.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "friends",
+    "outdoors"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "d/db/Akbar_Hotel_New_Delhi_(cropped)_Ummu_06_00680_full_3669_2416_0_default.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-carnatic-caf-57197-154492",
+   "title": "Carnatic Café",
+   "type": "cafe",
+   "zone": "nizamuddin",
+   "coords": [
+    28.5985,
+    77.24608
+   ],
+   "area": "Nizamuddin East",
+   "categories": [
+    "food",
+    "south-indian"
+   ],
+   "match": {
+    "name": "Carnatic Café",
+    "zone": "nizamuddin",
+    "type": "cafe"
+   },
+   "why": "Karnataka breakfast done properly: thin, crisp, ghee-roasted dosas with podi and filter coffee in a steel tumbler. Order the benne masala dosa and a kesari bath.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-mum-caf-and-bakery-57176-154337",
+   "title": "Mum Café and Bakery",
+   "type": "cafe",
+   "zone": "moti-bagh",
+   "coords": [
+    28.58779,
+    77.1684
+   ],
+   "area": "Moti Bagh",
+   "categories": [
+    "food",
+    "coffee",
+    "bakery"
+   ],
+   "match": {
+    "name": "Mum Café and Bakery",
+    "zone": "moti-bagh",
+    "type": "cafe"
+   },
+   "why": "A small neighbourhood café and bakery in Moti Bagh, good for a slow breakfast with something just out of the oven.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "d/d1/Railway_Board_Colony,_Moti_Bagh.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-tibetan-food-stop-57097-154334",
+   "title": "Tibetan Food Stop",
+   "type": "cafe",
+   "zone": "vasant-vihar",
+   "coords": [
+    28.54857,
+    77.16722
+   ],
+   "area": "Vasant Vihar",
+   "categories": [
+    "food",
+    "tibetan",
+    "cheap"
+   ],
+   "match": {
+    "name": "Tibetan Food Stop",
+    "zone": "vasant-vihar",
+    "type": "cafe"
+   },
+   "why": "A cheap Tibetan counter in Vasant Vihar: steamed momos, thukpa and thenthuk, for less than a coffee costs a few doors down.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-andhra-bhawan-canteen-57234-154452",
+   "title": "Andhra Bhawan Canteen",
+   "type": "restaurant",
+   "zone": "central-vista",
+   "coords": [
+    28.61692,
+    77.226
+   ],
+   "area": "Ashoka Road",
+   "categories": [
+    "food",
+    "south-indian",
+    "cheap"
+   ],
+   "match": {
+    "name": "Andhra Bhawan Canteen",
+    "zone": "central-vista",
+    "type": "restaurant"
+   },
+   "why": "The state guesthouse canteen on Ashoka Road, where civil servants and students queue for the unlimited Andhra thali on steel plates: rice, sambar, rasam, pickles and gunpowder ghee, refilled until you stop them. Sunday's chicken and mutton fry draws the biggest line.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-himachal-bhawan-dining-hall-57252-154466",
+   "title": "Himachal Bhawan Dining Hall",
+   "type": "restaurant",
+   "zone": "connaught-place",
+   "coords": [
+    28.62608,
+    77.23303
+   ],
+   "area": "Mandi House",
+   "categories": [
+    "food",
+    "cheap"
+   ],
+   "match": {
+    "name": "Himachal Bhawan Dining Hall",
+    "zone": "connaught-place",
+    "type": "restaurant"
+   },
+   "why": "Another state-bhawan canteen, this one serving Himachali home food — madra, siddu, and the Sunday dham — for very little. Go at lunchtime.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "c/ce/Doordarshan_Bhawan,_Copernicus_Marg,_Delhi.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-gulati-57216-154460",
+   "title": "Gulati",
+   "type": "restaurant",
+   "zone": "central-vista",
+   "coords": [
+    28.60785,
+    77.23007
+   ],
+   "area": "Pandara Road Market",
+   "categories": [
+    "food",
+    "north-indian"
+   ],
+   "match": {
+    "name": "Gulati",
+    "zone": "central-vista",
+    "type": "restaurant"
+   },
+   "why": "The longest-running of the Pandara Road restaurants, a short row near India Gate famous for Punjabi food served late into the night. Order the butter chicken and dal makhani with garlic naan, and share.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner",
+    "friends",
+    "family"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "http://www.gulatirestaurant.in/"
+  },
+  {
+   "id": "osm-pandit-kanhaiya-lal-durga-pras-57312-154461",
+   "title": "Paranthe Wala, Paranthe Wali Gali",
+   "type": "restaurant",
+   "zone": "chandni-chowk",
+   "coords": [
+    28.65607,
+    77.23037
+   ],
+   "area": "Paranthe Wali Gali",
+   "categories": [
+    "food",
+    "cheap",
+    "vegetarian"
+   ],
+   "match": {
+    "name": "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+    "zone": "chandni-chowk",
+    "type": "restaurant"
+   },
+   "why": "One of the last of the family shops that named Paranthe Wali Gali, open since 1875 according to the sign. Parathas here are deep-fried in ghee, not griddled, and stuffed with anything from rabri to bitter gourd; they come with pumpkin sabzi, banana-tamarind chutney and pickle.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "d/d9/Paratha_wali_gali.jpeg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-natraj-dahibhalla-57313-154461",
+   "title": "Natraj Dahi Bhalle Wala",
+   "type": "restaurant",
+   "zone": "chandni-chowk",
+   "coords": [
+    28.65645,
+    77.2305
+   ],
+   "area": "Chandni Chowk",
+   "categories": [
+    "food",
+    "chaat",
+    "cheap"
+   ],
+   "match": {
+    "name": "Natraj Dahibhalla",
+    "zone": "chandni-chowk",
+    "type": "restaurant"
+   },
+   "why": "A hatch on the corner of Chandni Chowk selling two things: dahi bhalla, soft lentil dumplings in cold sweet curd and tamarind, and aloo tikki. Eat standing on the step.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "a/a9/Gurudwara_Sisganj_Sahib_Chandni_Chowk_19.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-jung-bahadur-kachori-wala-57311-154460",
+   "title": "Jung Bahadur Kachori Wala",
+   "type": "restaurant",
+   "zone": "chandni-chowk",
+   "coords": [
+    28.65569,
+    77.22999
+   ],
+   "area": "Chandni Chowk",
+   "categories": [
+    "food",
+    "cheap",
+    "vegetarian"
+   ],
+   "match": {
+    "name": "Jung Bahadur Kachori Wala",
+    "zone": "chandni-chowk",
+    "type": "restaurant"
+   },
+   "why": "Since 1961 near Paranthe Wali Gali: urad-dal kachori, crisp and hollow, with a tangy aloo sabzi. A good first stop before the bigger plates.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "a/a9/Gurudwara_Sisganj_Sahib_Chandni_Chowk_19.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-burma-burma-57057-154440",
+   "title": "Burma Burma",
+   "type": "restaurant",
+   "zone": "saket",
+   "coords": [
+    28.52855,
+    77.21976
+   ],
+   "area": "Select Citywalk, Saket",
+   "categories": [
+    "food",
+    "burmese",
+    "vegetarian"
+   ],
+   "match": {
+    "name": "Burma Burma",
+    "zone": "saket",
+    "type": "restaurant"
+   },
+   "why": "Vegetarian Burmese at Select Citywalk: khow suey with all its crunchy toppings, tea-leaf salad and bubble tea. The best case in south Delhi for a meatless dinner nobody complains about.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner",
+    "couple",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-nagaland-s-kitchen-57115-154411",
+   "title": "Nagaland's Kitchen",
+   "type": "restaurant",
+   "zone": "green-park",
+   "coords": [
+    28.55764,
+    77.20568
+   ],
+   "area": "Green Park",
+   "categories": [
+    "food",
+    "northeast"
+   ],
+   "match": {
+    "name": "Nagaland's Kitchen",
+    "zone": "green-park",
+    "type": "restaurant"
+   },
+   "why": "Naga food in Green Park: smoked pork with bamboo shoot, axone and raja mirchi chutney. Fiery and fermented; order rice and go easy at first.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "dinner",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "6/60/Green_Park,_London_-_April_2007.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-yeti-57269-154438",
+   "title": "Yeti",
+   "type": "restaurant",
+   "zone": "connaught-place",
+   "coords": [
+    28.63428,
+    77.21902
+   ],
+   "area": "Connaught Place",
+   "categories": [
+    "food",
+    "himalayan"
+   ],
+   "match": {
+    "name": "Yeti",
+    "zone": "connaught-place",
+    "type": "restaurant"
+   },
+   "why": "Himalayan food — Nepali, Tibetan and Bhutanese — upstairs in Connaught Place. Go for the thakali thali, jhol momos and ema datshi.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-jamun-57169-154446",
+   "title": "Jamun",
+   "type": "restaurant",
+   "zone": "lodhi-colony",
+   "coords": [
+    28.58466,
+    77.22317
+   ],
+   "area": "Lodhi Colony",
+   "categories": [
+    "food",
+    "indian"
+   ],
+   "match": {
+    "name": "Jamun",
+    "zone": "lodhi-colony",
+    "type": "restaurant"
+   },
+   "why": "Regional Indian cooking in a bungalow off Lodhi Road, with dishes taken from home kitchens across the country rather than the usual restaurant canon. Ask what is new on the seasonal menu.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner",
+    "couple"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "a/ab/Shish_Gumbad,_Lodhi_Gardens,_Delhi.JPG",
+   "ik": "c"
+  },
+  {
+   "id": "osm-khan-chacha-57201-154455",
+   "title": "Khan Chacha",
+   "type": "restaurant",
+   "zone": "lodhi-colony",
+   "coords": [
+    28.6007,
+    77.2273
+   ],
+   "area": "Khan Market",
+   "categories": [
+    "food",
+    "cheap"
+   ],
+   "match": {
+    "name": "Khan Chacha",
+    "zone": "lodhi-colony",
+    "type": "restaurant"
+   },
+   "why": "The roll counter in Khan Market that started as a kebab stall: a chicken or paneer tikka roll in rumali roti, eaten standing up in the lane.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "e/e5/FabIndia_outlet,_Khan_Market,_New_Delhi.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-annapurna-bhojnalai-57396-154411",
+   "title": "Annapurna Bhojnalai",
+   "type": "restaurant",
+   "zone": "north-campus",
+   "coords": [
+    28.69821,
+    77.20551
+   ],
+   "area": "North Campus",
+   "categories": [
+    "food",
+    "cheap",
+    "vegetarian"
+   ],
+   "match": {
+    "name": "Annapurna Bhojnalai",
+    "zone": "north-campus",
+    "type": "restaurant"
+   },
+   "why": "A cheap vegetarian dining room by North Campus where students eat thalis between classes.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-giani-s-di-hatti-57316-154447",
+   "title": "Giani's di Hatti",
+   "type": "deli",
+   "zone": "old-delhi",
+   "coords": [
+    28.65793,
+    77.22326
+   ],
+   "area": "Fatehpuri, Church Mission Road",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Giani's di Hatti",
+    "zone": "old-delhi",
+    "type": "deli"
+   },
+   "why": "The original Giani's, in Fatehpuri at the west end of Chandni Chowk, where the Delhi chain began. The order is rabri-falooda: cold vermicelli, thick reduced milk and kulfi in one glass.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "https://www.gianisicecream.com/"
+  },
+  {
+   "id": "osm-kuremal-mohanlal-kulfiwale-57295-154454",
+   "title": "Kuremal Mohanlal Kulfiwale",
+   "type": "deli",
+   "zone": "chandni-chowk",
+   "coords": [
+    28.64765,
+    77.22691
+   ],
+   "area": "Sitaram Bazar, Chawri Bazar",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "kuremal mohanlal kulfiwale",
+    "zone": "chandni-chowk",
+    "type": "deli"
+   },
+   "why": "A kulfi shop in the lanes of Chawri Bazar, famous for kulfis frozen inside the hollowed-out fruit — mango, orange, pomegranate — and sliced to order. Several branches of the family use the Kuremal name; this is the one in the old lanes.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-roshan-di-kulfi-57301-154385",
+   "title": "Roshan Di Kulfi",
+   "type": "deli",
+   "zone": "karol-bagh",
+   "coords": [
+    28.65044,
+    77.1923
+   ],
+   "area": "Ajmal Khan Road, Karol Bagh",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Roshan Di Kulfi",
+    "zone": "karol-bagh",
+    "type": "restaurant"
+   },
+   "why": "A Karol Bagh institution on Ajmal Khan Road, known for kesar-pista kulfi and, in winter, gajar ka halwa. Pair it with the chole bhature they also serve.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-nathus-sweets-57259-154464",
+   "title": "Nathu's Sweets",
+   "type": "deli",
+   "zone": "connaught-place",
+   "coords": [
+    28.62973,
+    77.23203
+   ],
+   "area": "Bengali Market",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Nathus Sweets",
+    "zone": "connaught-place",
+    "type": "restaurant"
+   },
+   "why": "The Bengali Market sweet shop, around since the 1930s: barfi, besan laddoo and, in winter, moong dal halwa. Busy with box orders before every festival.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-lokenath-sweets-57074-154497",
+   "title": "Lokenath Sweets",
+   "type": "deli",
+   "zone": "chittaranjan-park",
+   "coords": [
+    28.53725,
+    77.2484
+   ],
+   "area": "Market No. 1, CR Park",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Lokenath Sweets",
+    "zone": "chittaranjan-park",
+    "type": "deli"
+   },
+   "why": "A CR Park sweet shop for Bengali mishti: rosogolla, sandesh and mishti doi in clay pots. Best in the evening, after the fish market.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-annapurna-sweets-57116-154417",
+   "title": "Annapurna Sweets",
+   "type": "deli",
+   "zone": "green-park",
+   "coords": [
+    28.55807,
+    77.20838
+   ],
+   "area": "Green Park",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Annapurna Sweets",
+    "zone": "green-park",
+    "type": "deli"
+   },
+   "why": "A Bengali sweet shop in Green Park: notun gurer sandesh in winter, and rosogolla all year.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "6/60/Green_Park,_London_-_April_2007.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-the-oberoi-patisserie-and-deli-57193-154480",
+   "title": "The Oberoi Patisserie",
+   "type": "deli",
+   "zone": "nizamuddin",
+   "coords": [
+    28.59671,
+    77.23982
+   ],
+   "area": "The Oberoi, Dr Zakir Hussain Marg",
+   "categories": [
+    "food",
+    "dessert",
+    "bakery"
+   ],
+   "match": {
+    "name": "The Oberoi Patisserie And Delicatessen",
+    "zone": "nizamuddin",
+    "type": "bakery"
+   },
+   "why": "The pastry shop at The Oberoi on Dr Zakir Hussain Marg: laminated pastries, macarons and celebration cakes at hotel prices. The place to buy a cake that has to impress.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-chocolateria-san-churro-57069-154487",
+   "title": "Chocolateria San Churro",
+   "type": "deli",
+   "zone": "chittaranjan-park",
+   "coords": [
+    28.53461,
+    77.2436
+   ],
+   "area": "Chittaranjan Park",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Chocolateria San Churro",
+    "zone": "chittaranjan-park",
+    "type": "restaurant"
+   },
+   "why": "Churros with thick Spanish hot chocolate for dipping, in CR Park. A good stop on a winter evening.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "7/7e/Crpark5.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-si-si-gelato-57083-154310",
+   "title": "Si, Si! Gelato",
+   "type": "deli",
+   "zone": "vasant-kunj",
+   "coords": [
+    28.5415,
+    77.15517
+   ],
+   "area": "Vasant Kunj",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Si, Si! Gelato",
+    "zone": "vasant-kunj",
+    "type": "deli"
+   },
+   "why": "A small gelateria in Vasant Kunj for Italian-style gelato in rotating flavours.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "e/ed/Vasant_Kunj_Campus_Undeveloped.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-bahrisons-galleria-market-book-56935-154165",
+   "title": "Bahrisons at Galleria",
+   "type": "cafe",
+   "zone": "sector-27",
+   "coords": [
+    28.46747,
+    77.08226
+   ],
+   "area": "Galleria Market, DLF Phase IV",
+   "categories": [
+    "food",
+    "coffee",
+    "books"
+   ],
+   "match": {
+    "name": "Bahrisons Galleria Market Book cafe",
+    "zone": "sector-27",
+    "type": "books"
+   },
+   "why": "Bahrisons, the Khan Market booksellers, opened this Gurugram branch in Galleria Market with a café inside, so you can read before you buy.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "rainy"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "https://www.booksatbahri.com/"
+  },
+  {
+   "id": "osm-sibang-bakery-56896-154198",
+   "title": "Sibang Bakery",
+   "type": "bakery",
+   "zone": "sector-53",
+   "coords": [
+    28.44808,
+    77.09899
+   ],
+   "area": "Sector 53 market",
+   "categories": [
+    "food",
+    "bakery",
+    "korean"
+   ],
+   "match": {
+    "name": "Sibang Bakery",
+    "zone": "sector-53",
+    "type": "cafe"
+   },
+   "why": "A Korean bakery in the Sector 53 market, where Gurugram's Korean community shops: soft milk bread, red-bean buns, castella and iced Americanos.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-the-bibimbab-56897-154199",
+   "title": "The Bibimbab",
+   "type": "restaurant",
+   "zone": "sector-53",
+   "coords": [
+    28.44827,
+    77.09926
+   ],
+   "area": "Sector 53 market",
+   "categories": [
+    "food",
+    "korean"
+   ],
+   "match": {
+    "name": "The Bibimbab",
+    "zone": "sector-53",
+    "type": "restaurant"
+   },
+   "why": "One of the small Korean restaurants in the Sector 53 market: dolsot bibimbap in a sizzling stone bowl, kimchi jjigae and banchan that keeps coming.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "dinner"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-midam-56896-154198",
+   "title": "Midam",
+   "type": "restaurant",
+   "zone": "sector-53",
+   "coords": [
+    28.44819,
+    77.09924
+   ],
+   "area": "Sector 53 market",
+   "categories": [
+    "food",
+    "korean"
+   ],
+   "match": {
+    "name": "Midam",
+    "zone": "sector-53",
+    "type": "restaurant"
+   },
+   "why": "Korean home cooking next door to The Bibimbab: tteokbokki, japchae and a seafood pancake to share.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "dinner",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-kashgar-56940-154172",
+   "title": "Kashgar",
+   "type": "restaurant",
+   "zone": "sector-28",
+   "coords": [
+    28.46984,
+    77.08587
+   ],
+   "area": "Lotus Villas, DLF Phase IV",
+   "categories": [
+    "food",
+    "indian"
+   ],
+   "match": {
+    "name": "Kashgar",
+    "zone": "sector-28",
+    "type": "restaurant"
+   },
+   "why": "Inside Lotus Villas in DLF Phase IV: a slow-cooked Mughlai menu of kebabs, nihari and biryani, for when you can't face the drive to Old Delhi.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner",
+    "family"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-le-truffle-56921-154158",
+   "title": "Le Truffle",
+   "type": "bakery",
+   "zone": "sector-27",
+   "coords": [
+    28.46052,
+    77.07914
+   ],
+   "area": "DLF Phase IV",
+   "categories": [
+    "food",
+    "bakery",
+    "dessert"
+   ],
+   "match": {
+    "name": "Le Truffle",
+    "zone": "sector-27",
+    "type": "bakery"
+   },
+   "why": "A small patisserie in DLF Phase IV for tarts, entremets and cakes to order.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-smoor-chocolates-and-desserts-56851-154115",
+   "title": "Smoor",
+   "type": "deli",
+   "zone": "sector-51",
+   "coords": [
+    28.42573,
+    77.05763
+   ],
+   "area": "Sector 51",
+   "categories": [
+    "food",
+    "dessert"
+   ],
+   "match": {
+    "name": "Smoor Chocolates And Desserts",
+    "zone": "sector-51",
+    "type": "bakery"
+   },
+   "why": "A Bengaluru chocolatier's Gurugram branch: plated desserts, hot chocolate and boxed chocolates to take away.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "evening",
+    "couple"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-cafe-turtle-57200-154455",
+   "title": "Cafe Turtle",
+   "type": "cafe",
+   "zone": "lodhi-colony",
+   "coords": [
+    28.6002,
+    77.22735
+   ],
+   "area": "Khan Market",
+   "categories": [
+    "food",
+    "coffee",
+    "books"
+   ],
+   "match": {
+    "name": "Cafe Turtle",
+    "zone": "lodhi-colony",
+    "type": "cafe"
+   },
+   "why": "Upstairs from the Full Circle bookshop in Khan Market: a quiet café for coffee, cake and the paperback you just bought. Ask for a table by the window.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "rainy"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "https://cafeturtle.com/",
+   "i": "e/e5/FabIndia_outlet,_Khan_Market,_New_Delhi.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-lavonne-cafe-57150-154476",
+   "title": "Lavonne Cafe",
+   "type": "cafe",
+   "zone": "defence-colony",
+   "coords": [
+    28.57521,
+    77.23813
+   ],
+   "area": "Defence Colony market",
+   "categories": [
+    "food",
+    "coffee",
+    "bakery"
+   ],
+   "match": {
+    "name": "Lavonne Cafe",
+    "zone": "defence-colony",
+    "type": "cafe"
+   },
+   "why": "The café of a Bengaluru baking academy, in Defence Colony market: laminated pastries, tarts and a proper brunch.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "brunch"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-madras-coffee-house-57264-154433",
+   "title": "Madras Coffee House",
+   "type": "cafe",
+   "zone": "connaught-place",
+   "coords": [
+    28.63185,
+    77.21631
+   ],
+   "area": "Connaught Place, Inner Circle",
+   "categories": [
+    "food",
+    "coffee",
+    "south-indian",
+    "cheap"
+   ],
+   "match": {
+    "name": "Madras Coffee House",
+    "zone": "connaught-place",
+    "type": "cafe"
+   },
+   "why": "An old-fashioned South Indian coffee room in Connaught Place's Inner Circle: filter coffee, idli-vada and dosa at prices from another decade.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-dada-bodi-tandoori-tea-stall-57080-154498",
+   "title": "Dada & Bodi Tandoori Tea Stall",
+   "type": "cafe",
+   "zone": "chittaranjan-park",
+   "coords": [
+    28.53975,
+    77.24879
+   ],
+   "area": "Chittaranjan Park",
+   "categories": [
+    "food",
+    "tea",
+    "cheap"
+   ],
+   "match": {
+    "name": "Dada & Bodi Tandoori Tea Stall",
+    "zone": "chittaranjan-park",
+    "type": "cafe"
+   },
+   "why": "A CR Park stall for tandoori chai: tea poured into a clay kulhad still hot from the tandoor, so it boils up and turns smoky. Ten minutes and a few rupees.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "7/7e/Crpark5.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-jugmug-thela-57035-154400",
+   "title": "JugMug Thela",
+   "type": "cafe",
+   "zone": "lado-sarai",
+   "coords": [
+    28.51726,
+    77.19997
+   ],
+   "area": "Saidulajab, by Saket",
+   "categories": [
+    "food",
+    "tea",
+    "coffee",
+    "cheap"
+   ],
+   "match": {
+    "name": "JugMug Thela",
+    "zone": "lado-sarai",
+    "type": "cafe"
+   },
+   "why": "A roadside stall in Saidulajab with a far longer tea and coffee list than its size suggests, from masala chai to cold brews. Stand at the counter and ask what's new.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-ssongchee-korea-bings-cafe-57035-154397",
+   "title": "Ssongchee",
+   "type": "cafe",
+   "zone": "lado-sarai",
+   "coords": [
+    28.51744,
+    77.19845
+   ],
+   "area": "Lado Sarai, by Saket",
+   "categories": [
+    "food",
+    "dessert",
+    "korean"
+   ],
+   "match": {
+    "name": "Ssongchee - Korea Bings Cafe",
+    "zone": "lado-sarai",
+    "type": "cafe"
+   },
+   "why": "A Korean dessert café near Saket for bingsu: a bowl of feather-light shaved milk ice heaped with mango, injeolmi or red bean. Share one between two.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "https://www.zomato.com/ncr/ssongchee-korea-bings-cafe-saket-new-delhi"
+  },
+  {
+   "id": "osm-altogether-experimental-57036-154396",
+   "title": "Altogether Experimental",
+   "type": "cafe",
+   "zone": "lado-sarai",
+   "coords": [
+    28.51809,
+    77.19785
+   ],
+   "area": "Lado Sarai",
+   "categories": [
+    "food",
+    "coffee",
+    "art"
+   ],
+   "match": {
+    "name": "Altogether Experimental",
+    "zone": "lado-sarai",
+    "type": "cafe"
+   },
+   "why": "A café that doubles as an art and workshop space in Lado Sarai's gallery lanes. Check what is on the walls before you order.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "culture"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-kenangan-coffee-57093-154394",
+   "title": "Kenangan Coffee",
+   "type": "cafe",
+   "zone": "hauz-khas",
+   "coords": [
+    28.54629,
+    77.19676
+   ],
+   "area": "Hauz Khas",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "match": {
+    "name": "Kenangan Coffee",
+    "zone": "hauz-khas",
+    "type": "cafe"
+   },
+   "why": "The Indonesian chain's Delhi café: try the es kopi susu, iced coffee sweetened with palm sugar.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-madison-and-pike-56829-154131",
+   "title": "Madison and Pike",
+   "type": "cafe",
+   "zone": "sector-50",
+   "coords": [
+    28.41442,
+    77.06548
+   ],
+   "area": "Nirvana Courtyard, Sector 50",
+   "categories": [
+    "food",
+    "coffee",
+    "brunch"
+   ],
+   "match": {
+    "name": "Madison and Pike",
+    "zone": "sector-50",
+    "type": "cafe"
+   },
+   "why": "A New York-style all-day café in Nirvana Courtyard, Sector 50: big brunches, good coffee and a covered terrace.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "brunch",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "https://madisonandpike.com/"
+  },
+  {
+   "id": "osm-bbr-coffee-by-before-british-r-56822-154216",
+   "title": "BBR Coffee",
+   "type": "cafe",
+   "zone": "sector-58",
+   "coords": [
+    28.41125,
+    77.10806
+   ],
+   "area": "Sector 58",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "match": {
+    "name": "BBR Coffee by Before British Raj",
+    "zone": "sector-58",
+    "type": "cafe"
+   },
+   "why": "A café from Before British Raj, an Indian estate-coffee brand: single-estate pour-overs and bags of beans to take home.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "https://beforebritishraj.com/"
+  },
+  {
+   "id": "osm-dark-brown-world-street-56773-154706",
+   "title": "Dark Brown, World Street",
+   "type": "cafe",
+   "zone": "faridabad",
+   "coords": [
+    28.38661,
+    77.35318
+   ],
+   "area": "World Street, Sector 79, Faridabad",
+   "categories": [
+    "food",
+    "coffee",
+    "dessert"
+   ],
+   "match": {
+    "name": "Dark Brown World Street",
+    "zone": "faridabad",
+    "type": "cafe"
+   },
+   "why": "A café on World Street for coffee, shakes and something chocolatey between laps of the themed streets.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "evening",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "world-street-faridabad",
+   "title": "World Street, Faridabad",
+   "type": "market",
+   "zone": "faridabad",
+   "coords": [
+    28.3864,
+    77.353
+   ],
+   "coordsFrom": "approximate (World Street by Omaxe, Sector 79)",
+   "area": "Sector 79, Faridabad",
+   "categories": [
+    "food",
+    "coffee",
+    "walk",
+    "shopping"
+   ],
+   "why": "An open-air high street built as a world tour, with themed streets lined with London-, Paris- and other city-style façades and cafés and restaurants below. It is liveliest in the evening, when the lights come on. Coffee at Blue Tokai, then dinner on London Street.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "friends",
+    "family",
+    "walk"
+   ],
+   "labels": [],
+   "url": "https://www.omaxe.com/",
+   "source": "Omaxe; trade press",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "blue-tokai-world-street",
+   "title": "Blue Tokai, World Street",
+   "type": "cafe",
+   "zone": "faridabad",
+   "coords": [
+    28.3866,
+    77.3532
+   ],
+   "coordsFrom": "approximate (World Street)",
+   "area": "World Street, Sector 79, Faridabad",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "why": "Faridabad's branch of the Gurugram-based specialty roaster, open since December 2024: Indian single-estate coffee and the best espresso on World Street.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "Trade press (India Retailing, Dec 2024)",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-kiran-nadar-museum-of-art-57058-154441",
+   "title": "Kiran Nadar Museum of Art",
+   "type": "museum",
+   "zone": "saket",
+   "coords": [
+    28.52888,
+    77.22037
+   ],
+   "area": "DLF South Court, Saket",
+   "categories": [
+    "culture",
+    "art",
+    "free"
+   ],
+   "match": {
+    "name": "Kiran Nadar Museum of Art",
+    "zone": "saket",
+    "type": "museum"
+   },
+   "why": "India's first private museum of modern and contemporary art, in a mall basement in Saket of all places: Husain, Souza, Gaitonde and Amrita Sher-Gil, with rotating contemporary shows. Entry is free; go on a weekday afternoon.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "culture",
+    "rainy"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "https://knma.in/"
+  },
+  {
+   "id": "osm-khirki-masjid-57063-154440",
+   "title": "Khirki Masjid",
+   "type": "culture",
+   "zone": "malviya-nagar",
+   "coords": [
+    28.53146,
+    77.21976
+   ],
+   "area": "Khirki Extension, opposite Select Citywalk",
+   "categories": [
+    "culture",
+    "history",
+    "free"
+   ],
+   "match": {
+    "name": "Khirki Masjid",
+    "zone": "malviya-nagar",
+    "type": "culture"
+   },
+   "why": "A fourteenth-century Tughlaq mosque, unusually roofed over, its name from the latticed khirkis (windows) in its walls. It stands in Khirki village, opposite the Saket malls, and you will often have it to yourself.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "culture",
+    "unusual"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-mahabelly-57054-154434",
+   "title": "Mahabelly",
+   "type": "restaurant",
+   "zone": "saket",
+   "coords": [
+    28.52718,
+    77.21695
+   ],
+   "area": "Saket",
+   "categories": [
+    "food",
+    "kerala"
+   ],
+   "match": {
+    "name": "Mahabelly",
+    "zone": "saket",
+    "type": "restaurant"
+   },
+   "why": "Kerala food in Saket: appam with stew, Malabar parotta with beef or chicken fry, and fish curry with red rice. A good lunch after KNMA.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "dinner"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "d/de/Shri_Ram_Janambhoomi_Mandir,_Ayodhya_Dham.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-coco-ichibanya-57059-154439",
+   "title": "CoCo Ichibanya",
+   "type": "restaurant",
+   "zone": "saket",
+   "coords": [
+    28.52963,
+    77.2195
+   ],
+   "area": "Select Citywalk, Saket",
+   "categories": [
+    "food",
+    "japanese"
+   ],
+   "match": {
+    "name": "CoCo Ichibanya",
+    "zone": "saket",
+    "type": "restaurant"
+   },
+   "why": "The Japanese curry-rice chain at Select Citywalk: pick a base, a topping and a spice level from one to ten, and start lower than you think.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "lunch",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-the-garden-of-five-senses-57028-154398",
+   "title": "The Garden of Five Senses",
+   "type": "park",
+   "zone": "neb-sarai",
+   "coords": [
+    28.51379,
+    77.1988
+   ],
+   "area": "Westend Marg, Saidulajab",
+   "categories": [
+    "outdoors",
+    "walk"
+   ],
+   "match": {
+    "name": "The Garden of Five Senses",
+    "zone": "neb-sarai",
+    "type": "park"
+   },
+   "why": "Twenty acres of rock garden, water features, bamboo and flower beds on the ridge at Saidulajab, laid out by the Delhi tourism corporation for the senses rather than the eye alone. Best in February, for the flower show, or on a winter afternoon.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "walk",
+    "family",
+    "outdoors"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-mahabelly-canteen-57035-154396",
+   "title": "Mahabelly Canteen",
+   "type": "restaurant",
+   "zone": "lado-sarai",
+   "coords": [
+    28.51742,
+    77.19795
+   ],
+   "area": "Saidulajab",
+   "categories": [
+    "food",
+    "kerala",
+    "cheap"
+   ],
+   "match": {
+    "name": "Mahabelly Canteen",
+    "zone": "lado-sarai",
+    "type": "restaurant"
+   },
+   "why": "The quicker, cheaper sibling of Mahabelly in Saidulajab's lanes: Kerala meals, parotta and beef fry, and filter coffee.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-ganga-dhaba-57099-154336",
+   "title": "Ganga Dhaba",
+   "type": "cafe",
+   "zone": "vasant-vihar",
+   "coords": [
+    28.54963,
+    77.1679
+   ],
+   "area": "JNU campus",
+   "categories": [
+    "food",
+    "tea",
+    "cheap"
+   ],
+   "match": {
+    "name": "Ganga Dhaba",
+    "zone": "vasant-vihar",
+    "type": "cafe"
+   },
+   "why": "JNU's best-known dhaba, open late: chai, parathas and Maggi on stone seats under the trees, with half the campus's arguments going on around you. It is inside the university, so go with somebody from JNU or check entry rules at the gate.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "cheap",
+    "late"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-sabarmati-dhaba-57090-154328",
+   "title": "Sabarmati Dhaba",
+   "type": "cafe",
+   "zone": "vasant-vihar",
+   "coords": [
+    28.54516,
+    77.16386
+   ],
+   "area": "JNU campus",
+   "categories": [
+    "food",
+    "tea",
+    "cheap"
+   ],
+   "match": {
+    "name": "Sabarmati Dhaba",
+    "zone": "vasant-vihar",
+    "type": "cafe"
+   },
+   "why": "The hostel dhaba by Sabarmati in JNU, for late tea and cheap thalis between Ganga Dhaba and the hostel lawns.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-pvr-priya-57115-154329",
+   "title": "PVR Priya",
+   "type": "culture",
+   "zone": "vasant-vihar",
+   "coords": [
+    28.55731,
+    77.16449
+   ],
+   "area": "Basant Lok, Vasant Vihar",
+   "categories": [
+    "culture",
+    "film"
+   ],
+   "match": {
+    "name": "PVR Priya",
+    "zone": "vasant-vihar",
+    "type": "culture"
+   },
+   "why": "The Basant Lok single-screen cinema that gave PVR its name: Priya Village Roadshow began here. Now a modern screen, but still the anchor of the market.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "rainy"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "manam-chocolate-eldeco",
+   "title": "Manam Chocolate",
+   "type": "deli",
+   "zone": "malviya-nagar",
+   "coords": [
+    28.5286,
+    77.206
+   ],
+   "coordsFrom": "approximate (Eldeco Centre, Shivalik Road)",
+   "area": "Eldeco Centre, Shivalik Road",
+   "categories": [
+    "food",
+    "dessert",
+    "chocolate"
+   ],
+   "why": "The Hyderabad bean-to-bar chocolate maker's first café outside Hyderabad: hot chocolates, shakes and plated desserts made from Indian cacao, and bars to take home.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "couple"
+   ],
+   "labels": [],
+   "source": "Researched; venue's own pages",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "six-ballygunge-place-eldeco",
+   "title": "6 Ballygunge Place",
+   "type": "restaurant",
+   "zone": "malviya-nagar",
+   "coords": [
+    28.5286,
+    77.206
+   ],
+   "coordsFrom": "approximate (Eldeco Centre, Shivalik Road)",
+   "area": "Eldeco Centre, Shivalik Road",
+   "categories": [
+    "food",
+    "bengali"
+   ],
+   "why": "A Delhi branch of the Kolkata restaurant known for Bengali home cooking: shukto, kosha mangsho, bhetki paturi steamed in banana leaf, and mishti doi to finish.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner",
+    "family"
+   ],
+   "labels": [],
+   "source": "Researched; venue's own pages",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "hikki-eldeco",
+   "title": "Hikki",
+   "type": "restaurant",
+   "zone": "malviya-nagar",
+   "coords": [
+    28.5286,
+    77.206
+   ],
+   "coordsFrom": "approximate (Eldeco Centre, Shivalik Road)",
+   "area": "Eldeco Centre, Shivalik Road",
+   "categories": [
+    "food",
+    "japanese"
+   ],
+   "why": "Japanese at Eldeco Centre: sushi, robata and small plates for a slower dinner before a drink next door.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner",
+    "couple"
+   ],
+   "labels": [],
+   "source": "Researched; venue's own pages",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "mission-bay-eldeco",
+   "title": "The Mission Bay",
+   "type": "restaurant",
+   "zone": "malviya-nagar",
+   "coords": [
+    28.5286,
+    77.206
+   ],
+   "coordsFrom": "approximate (Eldeco Centre, Shivalik Road)",
+   "area": "Eldeco Centre, Shivalik Road",
+   "categories": [
+    "food",
+    "mexican",
+    "bar"
+   ],
+   "why": "Mexican food by way of San Francisco, with a bar: burritos, tacos and margaritas, the loudest room in the building.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; venue's own pages",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-sukiya-tokyo-bowls-57100-154502",
+   "title": "Sukiya",
+   "type": "restaurant",
+   "zone": "kalkaji",
+   "coords": [
+    28.54986,
+    77.25099
+   ],
+   "area": "Nehru Place",
+   "categories": [
+    "food",
+    "japanese",
+    "cheap"
+   ],
+   "match": {
+    "name": "Sukiya Tokyo Bowls",
+    "zone": "kalkaji",
+    "type": "restaurant"
+   },
+   "why": "The Japanese gyudon chain's Nehru Place branch: a bowl of thin-sliced beef, or chicken, simmered with onion over rice, with miso soup and a raw or soft egg on the side. Quick, cheap and better than the food court.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "9/9b/Delhi-Nehru-Place-Skyline.jpeg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-juggernaut-57106-154482",
+   "title": "Juggernaut",
+   "type": "restaurant",
+   "zone": "greater-kailash",
+   "coords": [
+    28.5529,
+    77.24088
+   ],
+   "area": "Kailash Colony market",
+   "categories": [
+    "food",
+    "south-indian"
+   ],
+   "match": {
+    "name": "Juggernaut",
+    "zone": "greater-kailash",
+    "type": "restaurant"
+   },
+   "why": "Andhra and South Indian thalis in Kailash Colony market: rice with podi and ghee, pappu, gongura and a fiery chicken fry. Come hungry for the lunch thali.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "dinner"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "https://juggernaut.online"
+  },
+  {
+   "id": "osm-nimtho-57095-154489",
+   "title": "Nimtho",
+   "type": "restaurant",
+   "zone": "greater-kailash",
+   "coords": [
+    28.54728,
+    77.24447
+   ],
+   "area": "Greater Kailash I",
+   "categories": [
+    "food",
+    "northeast",
+    "himalayan"
+   ],
+   "match": {
+    "name": "Nimtho",
+    "zone": "greater-kailash",
+    "type": "restaurant"
+   },
+   "why": "Sikkimese and Himalayan cooking near GK I: momos, thukpa, gundruk soup and a Sikkimese thali. One of the few places in the city for food from Sikkim.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "dinner",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-34-chowringhee-lane-57088-154502",
+   "title": "34, Chowringhee Lane",
+   "type": "restaurant",
+   "zone": "chittaranjan-park",
+   "coords": [
+    28.54381,
+    77.25096
+   ],
+   "area": "Chittaranjan Park",
+   "categories": [
+    "food",
+    "cheap"
+   ],
+   "match": {
+    "name": "34, Chowringhee Lane",
+    "zone": "chittaranjan-park",
+    "type": "restaurant"
+   },
+   "why": "Kolkata-style kathi rolls in CR Park, named after the Calcutta street: an egg-chicken roll with onion and green chilli is the order.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "evening",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "7/7e/Crpark5.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "osm-gopal-s-chop-and-cutlet-57081-154498",
+   "title": "Gopal's Chop and Cutlet",
+   "type": "restaurant",
+   "zone": "chittaranjan-park",
+   "coords": [
+    28.54028,
+    77.24892
+   ],
+   "area": "Chittaranjan Park",
+   "categories": [
+    "food",
+    "bengali",
+    "cheap"
+   ],
+   "match": {
+    "name": "Gopal's Chop and Cutlet",
+    "zone": "chittaranjan-park",
+    "type": "restaurant"
+   },
+   "why": "A CR Park snack counter for Bengali telebhaja: fish fry, chicken cutlet, vegetable chop and mochar chop, fried to order with kasundi on the side.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "i": "7/7e/Crpark5.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "epicuria-nehru-place",
+   "title": "Epicuria, Nehru Place",
+   "type": "market",
+   "zone": "kalkaji",
+   "coords": [
+    28.5514,
+    77.2515
+   ],
+   "coordsFrom": "approximate (Epicuria, Nehru Place metro)",
+   "area": "Above Nehru Place metro station",
+   "categories": [
+    "food",
+    "nightlife",
+    "film"
+   ],
+   "why": "A food-and-drink mall built over Nehru Place metro: Delhi favourites like Karim's and Khan Chacha in one building, bars including The Irish House and Social, and an INOX Insignia cinema upstairs. Easiest after work, straight off the Violet Line. For a sit-down dinner, Fio Cookhouse is the pick; for something quick, walk to Sukiya.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "friends",
+    "rainy"
+   ],
+   "labels": [],
+   "source": "OpenStreetMap (venues in the building)",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "type": "restaurant",
+   "categories": [
+    "food",
+    "european",
+    "bar"
+   ],
+   "quality": 3,
+   "uniqueness": 3,
+   "labels": [
+    "couple"
+   ],
+   "lastVerified": "2026-10-14",
+   "booking": true,
+   "id": "fio-cookhouse-nehru-place",
+   "title": "Fio Cookhouse & Bar",
+   "zone": "kalkaji",
+   "coords": [
+    28.5515,
+    77.2514
+   ],
+   "coordsFrom": "approximate (Epicuria, Nehru Place metro)",
+   "area": "Epicuria, Nehru Place metro station",
+   "why": "The city sibling of Fio at the Garden of Five Senses, opened in Epicuria in 2013: a European-leaning menu and a proper bar, and the most grown-up dinner in the building. Book for a table after work, straight off the Violet Line.",
+   "goodFor": [
+    "dinner",
+    "couple",
+    "friends"
+   ],
+   "source": "Delhi Tourism listing; restaurant press",
+   "url": "https://www.delhitourism.gov.in/dt/entertainment_%26_fun/fio_cookhouse_and_bar.html"
+  },
+  {
+   "type": "restaurant",
+   "categories": [
+    "food",
+    "european",
+    "bar"
+   ],
+   "quality": 3,
+   "uniqueness": 4,
+   "labels": [
+    "couple"
+   ],
+   "lastVerified": "2026-10-14",
+   "booking": true,
+   "id": "fio-country-kitchen-five-senses",
+   "title": "Fio Country Kitchen & Bar",
+   "zone": "neb-sarai",
+   "coords": [
+    28.5136,
+    77.1985
+   ],
+   "coordsFrom": "approximate (Gate 1, Garden of Five Senses)",
+   "area": "Gate 1, Garden of Five Senses, Saidulajab",
+   "why": "The original Fio, inside the Garden of Five Senses: tables out among the trees and lanterns, a European menu and a bar. Best on a winter evening, after a walk round the garden.",
+   "goodFor": [
+    "dinner",
+    "couple",
+    "outdoors"
+   ],
+   "indoor": false,
+   "weatherSensitive": true,
+   "source": "Restaurant press; listings for address only"
+  },
+  {
+   "id": "osm-dolma-aunty-momos-57138-154481",
+   "title": "Dolma Aunty Momos",
+   "type": "restaurant",
+   "zone": "lajpat-nagar",
+   "coords": [
+    28.56921,
+    77.24061
+   ],
+   "area": "Central Market, Lajpat Nagar II",
+   "categories": [
+    "food",
+    "tibetan",
+    "cheap"
+   ],
+   "match": {
+    "name": "Dolma Aunty Momos",
+    "zone": "lajpat-nagar",
+    "type": "restaurant"
+   },
+   "why": "A momo counter in Lajpat Nagar Central Market, one of the stalls that made momos a Delhi street food in the 1990s. Steamed pork or chicken, with the fiery red chutney; eat them standing between the shopping bags.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-nagpal-chole-bature-57127-154482",
+   "title": "Nagpal Chole Bhature",
+   "type": "restaurant",
+   "zone": "lajpat-nagar",
+   "coords": [
+    28.56345,
+    77.24077
+   ],
+   "area": "Lajpat Nagar IV",
+   "categories": [
+    "food",
+    "cheap",
+    "vegetarian"
+   ],
+   "match": {
+    "name": "Nagpal chole bature",
+    "zone": "lajpat-nagar",
+    "type": "restaurant"
+   },
+   "why": "A Lajpat Nagar IV shop that does chole bhature and little else: a puffed bhatura, dark, tangy chole and pickled onions. Mornings are best, before the weekend queue builds.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-hunger-strike-57125-154489",
+   "title": "Hunger Strike",
+   "type": "restaurant",
+   "zone": "lajpat-nagar",
+   "coords": [
+    28.56251,
+    77.24464
+   ],
+   "area": "Amar Colony market",
+   "categories": [
+    "food",
+    "cheap",
+    "vegetarian"
+   ],
+   "match": {
+    "name": "Hunger Strike",
+    "zone": "lajpat-nagar",
+    "type": "restaurant"
+   },
+   "why": "The Amar Colony market counter for pav bhaji, chole kulche and cheese-loaded sandwiches. Messy, buttery and cheap; good after shopping.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-sanjay-chur-chur-naan-57128-154468",
+   "title": "Sanjay Chur Chur Naan",
+   "type": "restaurant",
+   "zone": "andrews-ganj",
+   "coords": [
+    28.56415,
+    77.23419
+   ],
+   "area": "Andrews Ganj, by Lajpat Nagar",
+   "categories": [
+    "food",
+    "cheap",
+    "vegetarian"
+   ],
+   "match": {
+    "name": "Sanjay Chur Chur Naan",
+    "zone": "andrews-ganj",
+    "type": "restaurant"
+   },
+   "why": "Amritsari-style chur chur naan: a crisp, flaky stuffed naan crushed by hand and doused in butter, served with chole and chutney.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-japan-foundation-57130-154469",
+   "title": "Japan Foundation, New Delhi",
+   "type": "culture",
+   "zone": "defence-colony",
+   "coords": [
+    28.5649,
+    77.23469
+   ],
+   "area": "Lajpat Nagar IV",
+   "categories": [
+    "culture",
+    "learn",
+    "film",
+    "free"
+   ],
+   "match": {
+    "name": "Japan Foundation",
+    "zone": "defence-colony",
+    "type": "culture"
+   },
+   "why": "Japan's cultural centre in Delhi: a library of Japanese books and films, language courses, and free film screenings and talks. Check the events page before you go.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "culture",
+    "rainy"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "url": "https://www.jfindia.org.in/"
+  },
+  {
+   "id": "osm-sagar-ratna-south-indian-57147-154460",
+   "title": "Sagar Ratna, Defence Colony",
+   "type": "restaurant",
+   "zone": "defence-colony",
+   "coords": [
+    28.57333,
+    77.23014
+   ],
+   "area": "Defence Colony market",
+   "categories": [
+    "food",
+    "south-indian",
+    "cheap",
+    "vegetarian"
+   ],
+   "match": {
+    "name": "Sagar Ratna - South Indian",
+    "zone": "defence-colony",
+    "type": "restaurant"
+   },
+   "why": "The first Sagar Ratna, opened here in 1986 before it became a chain across north India. Order the Mysore masala dosa, a rava idli and filter coffee.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "lunch",
+    "cheap",
+    "family"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-defense-bakery-57147-154461",
+   "title": "Defence Bakery",
+   "type": "bakery",
+   "zone": "defence-colony",
+   "coords": [
+    28.57341,
+    77.23071
+   ],
+   "area": "Defence Colony market",
+   "categories": [
+    "food",
+    "bakery",
+    "cheap"
+   ],
+   "match": {
+    "name": "defense Bakery",
+    "zone": "defence-colony",
+    "type": "bakery"
+   },
+   "why": "The old bakery in Defence Colony market, a neighbourhood fixture for decades: chicken patties, cream rolls and a birthday cake to order. Get the patties warm.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-moets-57146-154461",
+   "title": "Moets",
+   "type": "restaurant",
+   "zone": "defence-colony",
+   "coords": [
+    28.57323,
+    77.23068
+   ],
+   "area": "Defence Colony market",
+   "categories": [
+    "food",
+    "north-indian"
+   ],
+   "match": {
+    "name": "Moets",
+    "zone": "defence-colony",
+    "type": "restaurant"
+   },
+   "why": "A long-running, family-run restaurant complex in the market, with several kitchens under one name. Go for the North Indian: kebabs, butter chicken and naan, with a big group.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner",
+    "family",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-angels-in-my-kitchen-57148-154461",
+   "title": "Angels in My Kitchen",
+   "type": "bakery",
+   "zone": "defence-colony",
+   "coords": [
+    28.57387,
+    77.23041
+   ],
+   "area": "Defence Colony market",
+   "categories": [
+    "food",
+    "bakery",
+    "dessert"
+   ],
+   "match": {
+    "name": "Angels in My Kitchen",
+    "zone": "defence-colony",
+    "type": "bakery"
+   },
+   "why": "A small bakery-café in the market for cakes, cupcakes and cookies, and a cake to order for someone else.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-amici-57147-154460",
+   "title": "Amici",
+   "type": "restaurant",
+   "zone": "defence-colony",
+   "coords": [
+    28.57374,
+    77.22999
+   ],
+   "area": "Defence Colony market",
+   "categories": [
+    "food",
+    "italian"
+   ],
+   "match": {
+    "name": "Amici",
+    "zone": "defence-colony",
+    "type": "restaurant"
+   },
+   "why": "Thin-crust pizzas and simple pasta in the market: a dependable Italian dinner with no fuss.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "dinner",
+    "friends"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-aka-gaka-57146-154461",
+   "title": "Aka Gaka",
+   "type": "restaurant",
+   "zone": "defence-colony",
+   "coords": [
+    28.57296,
+    77.23026
+   ],
+   "area": "Defence Colony market",
+   "categories": [
+    "food",
+    "japanese"
+   ],
+   "match": {
+    "name": "Aka Gaka",
+    "zone": "defence-colony",
+    "type": "restaurant"
+   },
+   "why": "A small Japanese place in the market for ramen, donburi and sushi rolls.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-mubarak-shah-sayyid-s-tomb-57148-154448",
+   "title": "Mubarak Shah Sayyid's Tomb",
+   "type": "culture",
+   "zone": "south-extension",
+   "coords": [
+    28.57375,
+    77.22383
+   ],
+   "area": "Kotla Mubarakpur, by South Extension",
+   "categories": [
+    "culture",
+    "history",
+    "free"
+   ],
+   "match": {
+    "name": "Mubarak Shah Sayyid's Tomb",
+    "zone": "south-extension",
+    "type": "culture"
+   },
+   "why": "The octagonal tomb of the second Sayyid sultan, built in 1434, now surrounded by the lanes of Kotla Mubarakpur village. With two Lodi-era gumbads nearby, it's a ten-minute walk from Defence Colony market into fifteenth-century Delhi.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "culture",
+    "unusual"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-anna-maya-57109-154245",
+   "title": "Anna Maya",
+   "type": "restaurant",
+   "zone": "samalkha",
+   "coords": [
+    28.55469,
+    77.12247
+   ],
+   "area": "Andaz Delhi, Aerocity",
+   "categories": [
+    "food",
+    "european",
+    "bakery"
+   ],
+   "match": {
+    "name": "Anna Maya",
+    "zone": "samalkha",
+    "type": "restaurant"
+   },
+   "why": "The all-day food hall at the Andaz: a bakery counter, a pantry of Indian produce and a menu built around regional, seasonal ingredients. The best breakfast in Aerocity if you have a flight to wait for.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "lunch",
+    "couple"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "osm-dhaba-est-1986-57104-154245",
+   "title": "Dhaba Estd 1986",
+   "type": "restaurant",
+   "zone": "samalkha",
+   "coords": [
+    28.55176,
+    77.1226
+   ],
+   "area": "Worldmark, Aerocity",
+   "categories": [
+    "food",
+    "north-indian"
+   ],
+   "match": {
+    "name": "Dhaba est 1986",
+    "zone": "samalkha",
+    "type": "restaurant"
+   },
+   "why": "A Punjabi highway dhaba recreated in Worldmark, with truck art on the walls and butter chicken, dal and tandoori on the menu. A loud, easy dinner for a group.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "dinner",
+    "friends",
+    "family"
+   ],
+   "labels": [],
+   "source": "Researched; position and hours from OpenStreetMap",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "worldmark-aerocity",
+   "title": "Worldmark, Aerocity",
+   "type": "market",
+   "zone": "samalkha",
+   "coords": [
+    28.5508,
+    77.1219
+   ],
+   "coordsFrom": "approximate (Worldmark 1–3, Aerocity)",
+   "area": "Aerocity, by the Airport Express metro",
+   "categories": [
+    "food",
+    "nightlife",
+    "coffee"
+   ],
+   "why": "The block of glass towers between Aerocity's hotels that has become a dining district: dozens of restaurants, bars and cafés on open walkways, busy with office crowds after work and travellers killing time before a flight. Easiest by Airport Express metro.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "evening",
+    "friends",
+    "rainy"
+   ],
+   "labels": [],
+   "source": "OpenStreetMap; researched",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "dragonfly-experience-aerocity",
+   "title": "Dragonfly Experience",
+   "type": "restaurant",
+   "zone": "samalkha",
+   "coords": [
+    28.5509,
+    77.1223
+   ],
+   "coordsFrom": "approximate (Worldmark 1)",
+   "area": "Worldmark 1, Aerocity",
+   "categories": [
+    "food",
+    "asian",
+    "indian",
+    "bar"
+   ],
+   "why": "Pan-Asian and modern Indian, biryani included, in a dim room themed on dragonflies, with a long cocktail list and a soundtrack that builds as the night goes on. Good for a long dinner that turns into drinks.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "dinner",
+    "friends",
+    "late"
+   ],
+   "labels": [],
+   "source": "Your notes; researched, not visited",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "monsoon-aerocity",
+   "title": "Monsoon",
+   "type": "restaurant",
+   "zone": "samalkha",
+   "coords": [
+    28.5509,
+    77.1223
+   ],
+   "coordsFrom": "approximate (Aerocity)",
+   "area": "Aerocity",
+   "categories": [
+    "food",
+    "indian"
+   ],
+   "why": "Contemporary Indian built on home-style regional cooking: a Kerala mappas prawn curry, mutton gujiya, and a blue-tea mojito. Slower and quieter than the bars around it.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "dinner",
+    "couple"
+   ],
+   "labels": [],
+   "source": "Your notes; researched, not visited",
+   "lastVerified": "2026-10-14",
+   "i": "2/25/Delhi_Aerocity_Metro_Station.jpg",
+   "ik": "c"
+  },
+  {
+   "id": "kuuraku-ramen-aerocity",
+   "title": "Kuuraku Ramen",
+   "type": "restaurant",
+   "zone": "samalkha",
+   "coords": [
+    28.5509,
+    77.1223
+   ],
+   "coordsFrom": "approximate (Worldmark food court)",
+   "area": "Lower-ground food court, Worldmark",
+   "categories": [
+    "food",
+    "japanese",
+    "cheap"
+   ],
+   "why": "Proper miso and shoyu ramen with gyoza, in the lower-ground food court. Quick and cheap if you don't want fine dining before a flight.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Your notes; researched, not visited",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "blue-tokai-gmr-square",
+   "title": "Blue Tokai, GMR Square",
+   "type": "cafe",
+   "zone": "samalkha",
+   "coords": [
+    28.5513,
+    77.1216
+   ],
+   "coordsFrom": "approximate (Aerocity)",
+   "area": "GMR Square, Aerocity",
+   "categories": [
+    "food",
+    "coffee"
+   ],
+   "why": "The specialty roaster's Aerocity café, open early and late, so it works between flights: a vanilla-bean iced latte and sourdough toast.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "morning",
+    "late"
+   ],
+   "labels": [],
+   "source": "Your notes; researched, not visited",
+   "lastVerified": "2026-10-14"
+  },
+  {
+   "id": "chai-garam-aerocity",
+   "title": "Chai Garam",
+   "type": "cafe",
+   "zone": "samalkha",
+   "coords": [
+    28.5509,
+    77.1223
+   ],
+   "coordsFrom": "approximate (Food Capital, Worldmark 1)",
+   "area": "Food Capital, Worldmark 1",
+   "categories": [
+    "food",
+    "tea",
+    "cheap"
+   ],
+   "why": "Masala chai made by hand, lassi and wraps in the Worldmark 1 food court: the cheap, quick stop between flights.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "cheap"
+   ],
+   "labels": [],
+   "source": "Your notes; researched, not visited",
+   "lastVerified": "2026-10-14"
   }
  ]
 }

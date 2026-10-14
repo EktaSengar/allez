@@ -1,6 +1,233 @@
 {
   "generated": "2026-09-14",
   "home": "greater-kailash",
-  "note": "One dossier per colony worth writing one for. Empty.",
-  "items": []
+  "note": "One profile per colony or quarter, written from what is on the site. `minutesFromHome` is recomputed from wherever you are.",
+  "items": [
+    {
+      "zone": "greater-kailash",
+      "name": "Greater Kailash",
+      "minutesFromHome": 0,
+      "famousFor": "M Block and N Block markets: South Delhi's high street of boutiques, cafés and bakeries",
+      "streets": [
+        "M Block Market",
+        "N Block Market",
+        "Archana Complex"
+      ],
+      "food": "Moti Mahal Delux, where the butter-chicken story is still told",
+      "walk": "M Block → N Block → the Kailash Colony side",
+      "hidden": "The colony parks in the evening, when the uncles walk laps and the kids take over the swings"
+    },
+    {
+      "zone": "chittaranjan-park",
+      "name": "Chittaranjan Park",
+      "minutesFromHome": 10,
+      "famousFor": "Delhi's Bengali neighbourhood, and the biggest Durga Puja in the city",
+      "streets": [
+        "Market No. 1",
+        "Market No. 2",
+        "Kali Mandir Road"
+      ],
+      "cafe": "Blue Tokai, for when you need a break from the rolls",
+      "culture": "The Kali Mandir on the hill, and the pandals each October",
+      "food": "The evening fish market, fish chops and mishti doi",
+      "hidden": "The adda on the market steps after dark, in Bengali"
+    },
+    {
+      "zone": "lodhi-colony",
+      "name": "Lodhi Colony",
+      "minutesFromHome": 15,
+      "famousFor": "Lodhi Gardens, Khan Market and the murals of the Lodhi Art District",
+      "streets": [
+        "Khan Market",
+        "Meherchand Market",
+        "Lodhi Road"
+      ],
+      "cafe": "Blue Tokai and Subko Cafe in Meherchand Market",
+      "bakery": "L'Opera in Khan Market",
+      "culture": "Bahrisons Booksellers, Khan Market's bookshop since 1953",
+      "park": "Lodhi Gardens, with fifteenth-century tombs between the joggers",
+      "unusual": "Street murals along the blocks of the 1940s government housing",
+      "walk": "Lodhi Gardens → the mural lanes → Khan Market",
+      "hidden": "The Bara Gumbad mosque in Lodhi Gardens, early, before the walkers"
+    },
+    {
+      "zone": "nizamuddin",
+      "name": "Nizamuddin",
+      "minutesFromHome": 15,
+      "famousFor": "The dargah of Hazrat Nizamuddin Auliya, Humayun's Tomb and Sunder Nursery",
+      "streets": [
+        "Nizamuddin Basti",
+        "Mathura Road"
+      ],
+      "cafe": "Cafe Lota at the Crafts Museum",
+      "culture": "Thursday-evening qawwali at the dargah",
+      "park": "Sunder Nursery, a restored Mughal garden next to Humayun's Tomb",
+      "food": "Kebabs and nihari in the basti lanes",
+      "walk": "Sunder Nursery → Humayun's Tomb → the basti and dargah",
+      "hidden": "Mirza Ghalib's tomb, a short walk from the dargah"
+    },
+    {
+      "zone": "chandni-chowk",
+      "name": "Chandni Chowk & Old Delhi",
+      "minutesFromHome": 30,
+      "famousFor": "Shahjahan's city: the Red Fort, the Jama Masjid and three and a half centuries of bazaars",
+      "streets": [
+        "Chandni Chowk",
+        "Dariba Kalan",
+        "Kinari Bazaar",
+        "Nai Sarak",
+        "Khari Baoli"
+      ],
+      "culture": "The Red Fort and Gurudwara Sis Ganj",
+      "food": "Karim's, Kallu Nihari, Jalebi Wala and Moti Mahal's first site",
+      "unusual": "The Khari Baoli spice market, Asia's largest",
+      "walk": "Jama Masjid → Dariba Kalan → Chandni Chowk → Khari Baoli",
+      "hidden": "Rooftop views from the spice-market building on Khari Baoli"
+    },
+    {
+      "zone": "connaught-place",
+      "name": "Connaught Place",
+      "minutesFromHome": 25,
+      "famousFor": "The colonnaded rings of the 1930s city centre",
+      "streets": [
+        "Inner Circle",
+        "Janpath",
+        "Barakhamba Road"
+      ],
+      "cafe": "Indian Coffee House upstairs in Mohan Singh Place, and United Coffee House",
+      "bakery": "Wenger's, since 1926",
+      "culture": "Agrasen ki Baoli, a stepwell hidden behind the office blocks",
+      "food": "Saravana Bhavan for dosa; Kwality for chole bhature the old way",
+      "walk": "Janpath → the Inner Circle → Agrasen ki Baoli",
+      "hidden": "Gurudwara Bangla Sahib's langar, open to anyone, a short walk west"
+    },
+    {
+      "zone": "hauz-khas",
+      "name": "Hauz Khas",
+      "minutesFromHome": 15,
+      "famousFor": "A medieval reservoir and madrasa, with a village of bars and boutiques on top of it",
+      "streets": [
+        "Hauz Khas Village",
+        "Deer Park"
+      ],
+      "cafe": "Kunzum Travel Cafe — pay what you like",
+      "park": "Deer Park and the lake, behind the village",
+      "culture": "The fourteenth-century madrasa and Firoz Shah's tomb on the water",
+      "hidden": "The ruins at sunset from the lake's far bank"
+    },
+    {
+      "zone": "saket",
+      "name": "Saket",
+      "minutesFromHome": 15,
+      "famousFor": "The malls, a free museum of modern Indian art, and a Tughlaq mosque across the road",
+      "streets": [
+        "Press Enclave Marg",
+        "Select Citywalk",
+        "DLF South Court"
+      ],
+      "cafe": "Blue Tokai, or the bookshop café at Bahrisons",
+      "culture": "Kiran Nadar Museum of Art, free",
+      "food": "Mahabelly for Kerala food; Burma Burma for vegetarian Burmese",
+      "unusual": "Khirki Masjid, a roofed fourteenth-century mosque in the village opposite the malls",
+      "walk": "KNMA → across Press Enclave Marg → Khirki Masjid",
+      "hidden": "The Khirki village lanes behind the mosque"
+    },
+    {
+      "zone": "malviya-nagar",
+      "name": "Malviya Nagar & Eldeco Centre",
+      "minutesFromHome": 12,
+      "famousFor": "Eldeco Centre, a single building on Shivalik Road packed with the evening's bars and restaurants",
+      "streets": [
+        "Shivalik Road",
+        "Malviya Nagar Main Market"
+      ],
+      "cafe": "Manam Chocolate at Eldeco",
+      "culture": "Live music and cocktails at the Piano Man and Arts Room",
+      "food": "6 Ballygunge Place for Bengali; Hikki for Japanese; the Mission Bay for tacos",
+      "walk": "Begumpur Mosque → Shivalik Road → Eldeco Centre",
+      "hidden": "The Begumpur Mosque, a huge Tughlaq courtyard a few streets away"
+    },
+    {
+      "zone": "vasant-vihar",
+      "name": "Vasant Vihar",
+      "minutesFromHome": 25,
+      "famousFor": "Embassy-quarter calm by day, and Delhi's best cluster of speakeasies by night",
+      "streets": [
+        "Basant Lok",
+        "D Block Market",
+        "Poorvi Marg"
+      ],
+      "cafe": "Blue Tokai in Basant Lok",
+      "bakery": "L'Opera",
+      "culture": "PVR Priya, the cinema that gave PVR its name",
+      "food": "Tibetan Food Stop for momos and thukpa",
+      "unusual": "The dhabas of JNU next door, chai and arguments until late",
+      "walk": "Basant Lok → D Block Market → dinner, then a bar",
+      "hidden": "PCO, through the phone booth — DM for the week's code"
+    },
+    {
+      "zone": "lado-sarai",
+      "name": "Saidulajab & Lado Sarai",
+      "minutesFromHome": 15,
+      "famousFor": "Urban villages between Saket and the Qutb, full of galleries, cafés and cheap eats",
+      "streets": [
+        "Westend Marg",
+        "Saidulajab",
+        "Lado Sarai main road"
+      ],
+      "cafe": "JugMug Thela for a stand-up chai",
+      "culture": "The Lado Sarai galleries and Altogether Experimental",
+      "park": "The Garden of Five Senses on the ridge",
+      "food": "Mahabelly Canteen for Kerala meals; Ssongchee for bingsu",
+      "walk": "Garden of Five Senses → Saidulajab lanes → Lado Sarai → Qutb at sunset",
+      "hidden": "Mehrauli Archaeological Park, a short walk west, with tombs and step-wells"
+    },
+    {
+      "zone": "lajpat-nagar",
+      "name": "Lajpat Nagar & Amar Colony",
+      "minutesFromHome": 8,
+      "famousFor": "South Delhi's biggest everyday bazaar, built by families who came from West Punjab after Partition, and now home to a large Afghan community",
+      "streets": [
+        "Central Market",
+        "Amar Colony market",
+        "Lajpat Nagar IV"
+      ],
+      "food": "Dolma Aunty's momos in Central Market; Nagpal for chole bhature",
+      "unusual": "Afghan bakeries and kebab shops on the lanes towards Bhogal, with signs in Dari",
+      "culture": "The Japan Foundation's library and free film screenings",
+      "walk": "Central Market → Amar Colony market → Lajpat Nagar IV for Nagpal",
+      "hidden": "Tailors and lace-and-trim shops in the Central Market back lanes, before Diwali and the wedding season"
+    },
+    {
+      "zone": "defence-colony",
+      "name": "Defence Colony",
+      "minutesFromHome": 10,
+      "famousFor": "A 1960s colony built for ex-servicemen, with one compact market packed with places to eat",
+      "streets": [
+        "Defence Colony market",
+        "Ring Road flyover market"
+      ],
+      "cafe": "Lavonne, for pastries and brunch",
+      "bakery": "Defence Bakery, for patties and cream rolls",
+      "food": "The original Sagar Ratna, open since 1986, for dosa",
+      "culture": "Mubarak Shah Sayyid's tomb in Kotla Mubarakpur, ten minutes' walk",
+      "walk": "Defence Colony market → Kotla Mubarakpur → the Lodi gumbads by South Extension",
+      "hidden": "Ek Bar upstairs in the market, for cocktails made with Indian ingredients"
+    },
+    {
+      "zone": "samalkha",
+      "name": "Aerocity",
+      "minutesFromHome": 35,
+      "famousFor": "The hotel district by the airport, with Worldmark's restaurants and bars at its centre",
+      "streets": [
+        "Worldmark",
+        "Asset Area, Aerocity"
+      ],
+      "cafe": "Anna Maya at the Andaz, for breakfast before a flight",
+      "food": "Worldmark's walkways: One8 Commune, Dhaba Estd 1986 and dozens more",
+      "culture": "Not much — come for dinner and a drink",
+      "walk": "Aerocity metro → Worldmark → the Andaz for a drink",
+      "hidden": "Juniper Bar's Indian craft gins at the Andaz"
+    }
+  ]
 }
