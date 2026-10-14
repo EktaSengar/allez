@@ -676,8 +676,8 @@
    ],
    "area": "Town & Country Village, 855 El Camino Real",
    "url": "https://www.wildseedsf.com/palo-alto-home/",
-   "hours": "Mo-Th 11:30-21:00; Fr 11:30-22:00; Sa 11:00-22:00; Su 11:00-21:00",
-   "hoursFrom": "wildseedsf.com — happy hour weekdays 4–6pm",
+   "hours": "Mo-Fr 11:30-21:00; Sa,Su 11:00-21:00",
+   "hoursFrom": "confirmed in person 2026-10-14 — happy hour weekdays 4–6pm",
    "cuisine": "vegan",
    "categories": [
     "food"
@@ -701,7 +701,7 @@
    "priceLevel": 2,
    "indoor": true,
    "booking": "https://www.opentable.com/r/wildseed-palo-alto-reservations-palo-alto",
-   "hoursChecked": "2026-10-13",
+   "hoursChecked": "2026-10-14",
    "diet": [
     "vegan"
    ]
@@ -2555,10 +2555,10 @@
     37.39338,
     -122.07406
    ],
-   "area": null,
-   "url": null,
+   "area": "Caltrain station lot, Castro Street",
+   "url": "https://mountainview.gov/our-city/departments/community-services/special-events/farmers-market",
    "hours": "Su 09:00-13:00",
-   "hoursFrom": "openstreetmap",
+   "hoursFrom": "mountainview.gov",
    "cuisine": null,
    "categories": [
     "food"
@@ -2577,15 +2577,16 @@
    "labels": [
     "cheap"
    ],
-   "source": "pcfma.org; Mountain View Voice; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-09-29",
+   "source": "mountainview.gov; cafarmersmkts.com (California Farmers' Markets Association); existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
    "days": [
     0
    ],
    "durationMin": 60,
    "priceLevel": 1,
    "indoor": false,
-   "booking": false
+   "booking": false,
+   "hoursChecked": "2026-10-14"
   },
   {
    "id": "osm-chez-tj-74789--244161",
@@ -4278,6 +4279,665 @@
    "imageKind": "context",
    "imageSubject": "Espresso",
    "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "osm-books-inc-74784--244160",
+   "title": "Books, Inc.",
+   "type": "books",
+   "zone": "mountain-view",
+   "coords": [
+    37.39217,
+    -122.07978
+   ],
+   "area": "Castro Street",
+   "url": "https://www.booksinc.com/",
+   "hours": "Su-Tu 10:00-21:00; We-Sa 10:00-22:00",
+   "hoursFrom": "booksinc.com",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Books, Inc.",
+    "zone": "mountain-view",
+    "type": "books"
+   },
+   "why": "The Mountain View branch of the West's long-running independent chain, mid-Castro and open late enough to browse after dinner. Check the events page before you go: it brings touring authors to this store, and the launch parties are free.",
+   "quality": 4,
+   "uniqueness": 2,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "booksinc.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "hoursChecked": "2026-10-14",
+   "durationMin": 30,
+   "priceLevel": 0,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "osm-east-west-74784--244160",
+   "title": "East West Bookshop",
+   "type": "books",
+   "zone": "mountain-view",
+   "coords": [
+    37.39223,
+    -122.08013
+   ],
+   "area": "Castro Street",
+   "url": "https://www.eastwestbooks.org/",
+   "hours": "Mo-Sa 11:00-22:00; Su 11:00-21:00",
+   "hoursFrom": "eastwestbooks.org",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "East West Bookshop",
+    "zone": "mountain-view",
+    "type": "books"
+   },
+   "why": "Fifty-odd years of spiritual and mind-body books, plus crystals, singing bowls, incense and sacred art. Even if that is not your shelf, it is the most unusual shop on Castro, and the place to find a gift nobody else will bring. Readers and sound-healing sessions run most days.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [
+    "hiddengem"
+   ],
+   "source": "eastwestbooks.org; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "hoursChecked": "2026-10-14",
+   "durationMin": 30,
+   "priceLevel": 0,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "osm-ludwig-s-biergarten-74783--244160",
+   "title": "Ludwig's Biergarten",
+   "type": "restaurant",
+   "zone": "mountain-view",
+   "coords": [
+    37.3914,
+    -122.08016
+   ],
+   "area": "Castro Street",
+   "url": "https://www.ludwigsmv.com/",
+   "hours": "Tu-Th,Su 11:30-22:00; Fr,Sa 11:30-22:30",
+   "hoursFrom": "ludwigsmv.com",
+   "cuisine": "german",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Ludwig's Biergarten",
+    "zone": "mountain-view",
+    "type": "restaurant"
+   },
+   "why": "A proper beer garden: long communal benches on a big outdoor patio, German beer by the litre and a kitchen that rewrites part of the menu every month. Bring the dog and a group. It is built for eight at a table, and it books in eights too.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "afternoon"
+   ],
+   "labels": [
+    "outdoor"
+   ],
+   "source": "ludwigsmv.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "hoursChecked": "2026-10-14",
+   "durationMin": 90,
+   "priceLevel": 2,
+   "indoor": false,
+   "booking": "https://www.ludwigsmv.com/"
+  },
+  {
+   "id": "osm-das-bierhauz-74789--244157",
+   "title": "Das Bierhauz",
+   "type": "restaurant",
+   "zone": "mountain-view",
+   "coords": [
+    37.39449,
+    -122.07828
+   ],
+   "area": "Castro Street",
+   "url": "https://dasbierhauz.com/",
+   "hours": "Mo-Su 11:00-23:00",
+   "hoursFrom": "dasbierhauz.com",
+   "cuisine": "german",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Das Bierhauz",
+    "zone": "mountain-view",
+    "type": "restaurant"
+   },
+   "why": "The other German beer garden, at the train-station end of Castro. German drafts, pretzels and a patio, with board games and a kids' menu, so it works for families as well as after work. Go for the weekday happy hour or weekend brunch.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "evening",
+    "afternoon",
+    "lunch"
+   ],
+   "labels": [
+    "outdoor"
+   ],
+   "source": "dasbierhauz.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "hoursChecked": "2026-10-14",
+   "durationMin": 75,
+   "priceLevel": 2,
+   "indoor": false,
+   "booking": false
+  },
+  {
+   "id": "osm-taverna-74884--244318",
+   "title": "Taverna",
+   "type": "restaurant",
+   "zone": "palo-alto",
+   "coords": [
+    37.44213,
+    -122.15905
+   ],
+   "area": "Emerson Street",
+   "url": "https://www.tavernarestaurant.net/",
+   "hours": "Mo-Fr 11:30-21:00; Sa,Su 10:30-21:00",
+   "hoursFrom": "tavernarestaurant.net",
+   "cuisine": "greek",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Taverna",
+    "zone": "palo-alto",
+    "type": "restaurant"
+   },
+   "why": "Downtown's Greek dining room, opened in 2018: farm-to-table cooking with grilled lamb chops at the centre of it and an outdoor veranda for warm evenings. Finish with bougatsa, the custard pastry, which comes with pistachio ice cream here. Weekend brunch is the cheaper way in.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "lunch"
+   ],
+   "labels": [],
+   "source": "tavernarestaurant.net; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "hoursChecked": "2026-10-14",
+   "durationMin": 90,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": "https://www.tavernarestaurant.net/"
+  },
+  {
+   "id": "osm-douce-france-74878--244318",
+   "title": "Douce France",
+   "type": "cafe",
+   "zone": "palo-alto",
+   "coords": [
+    37.43894,
+    -122.15886
+   ],
+   "area": "Town & Country Village, 855 El Camino Real",
+   "url": "http://www.doucefrancebakery.com",
+   "hours": "Mo-Sa 07:00-19:00; Su 08:00-16:00",
+   "hoursFrom": "confirmed in person 2026-10-14",
+   "cuisine": "french",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "match": {
+    "name": "Douce France",
+    "zone": "palo-alto",
+    "type": "cafe"
+   },
+   "why": "A French café in Town & Country for decades: croissants, brioche, tarts and breads, with tables to sit with a coffee before the shops open. It opens at seven, which makes it the village's breakfast stop.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Hours confirmed in person 2026-10-14; product range from OpenStreetMap tags; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "hoursChecked": "2026-10-14",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "osm-linden-tree-books-74758--244234",
+   "title": "Linden Tree Books",
+   "type": "books",
+   "zone": "los-altos",
+   "coords": [
+    37.37924,
+    -122.11698
+   ],
+   "area": "State Street",
+   "url": "https://www.lindentreebooks.com/",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Linden Tree Books",
+    "zone": "los-altos",
+    "type": "books"
+   },
+   "hours": "Tu-We,Fr 10:00-18:00; Th 10:00-20:00; Sa,Su 09:00-18:00",
+   "hoursFrom": "lindentreebooks.com",
+   "why": "Downtown Los Altos' children's bookshop, started in 1981 as a children's-music business and on State Street since. The staff picks are the point: tell them an age and a kid, and they will hand you the right book. Author visits and launch parties run most weeks; check the events page.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [
+    "free"
+   ],
+   "source": "lindentreebooks.com; Los Altos Town Crier; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 30,
+   "priceLevel": 0,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-bus-barn-theater-74761--244224",
+   "title": "Bus Barn Theater",
+   "type": "culture",
+   "zone": "los-altos",
+   "coords": [
+    37.38035,
+    -122.11221
+   ],
+   "area": "Hillview Avenue",
+   "url": "https://losaltosstage.org/",
+   "cuisine": null,
+   "categories": [
+    "art",
+    "indoor"
+   ],
+   "match": {
+    "name": "Bus Barn Theater",
+    "zone": "los-altos",
+    "type": "culture"
+   },
+   "hours": null,
+   "hoursFrom": null,
+   "why": "Home of Los Altos Stage Company, a small community theatre in a converted bus barn by the civic centre. It runs a full season of plays and musicals plus Los Altos Youth Theatre shows, close enough to the stage that a straight play feels like it is happening in the room.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "losaltosstage.org; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 150,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": "https://losaltosstage.org/",
+   "hoursNote": "Performance nights only; times are on each show's page."
+  },
+  {
+   "id": "osm-craftsman-and-wolves-74809--244224",
+   "title": "Craftsman and Wolves",
+   "type": "cafe",
+   "zone": "los-altos",
+   "coords": [
+    37.40461,
+    -122.11192
+   ],
+   "area": "San Antonio Road",
+   "url": "https://craftsman-wolves.com/",
+   "hours": "Mo-Fr 07:30-15:30; Sa,Su 08:00-16:00",
+   "hoursFrom": "craftsman-wolves.com",
+   "cuisine": null,
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "match": {
+    "name": "Craftsman and Wolves",
+    "zone": "los-altos",
+    "type": "cafe"
+   },
+   "why": "The Peninsula outpost of the Valencia Street pâtisserie. Get the Rebel Within, a savoury muffin with a soft-cooked egg baked inside, which is what made the bakery's name. The cakes are more ambitious than most of the area's, with flavours like oolong and matcha.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "lunch"
+   ],
+   "labels": [],
+   "source": "craftsman-wolves.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 30,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-sweet-diplomacy-74757--244236",
+   "title": "Sweet Diplomacy",
+   "type": "bakery",
+   "zone": "los-altos",
+   "coords": [
+    37.37856,
+    -122.11818
+   ],
+   "area": "1st Street",
+   "url": "https://www.sweetdiplomacy.com/losaltos",
+   "hours": "Tu-Su 09:00-18:00",
+   "hoursFrom": "openstreetmap",
+   "cuisine": null,
+   "categories": [
+    "food",
+    "bakery",
+    "dessert"
+   ],
+   "match": {
+    "name": "Sweet Diplomacy",
+    "zone": "los-altos",
+    "type": "bakery"
+   },
+   "why": "A dedicated gluten-free bakery with dairy-free and vegan options. If someone at your table cannot eat wheat, this is where the whole table can share dessert without checking labels.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "sweetdiplomacy.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "osm-cafe-borrone-74907--244365",
+   "title": "Cafe Borrone",
+   "type": "cafe",
+   "zone": "menlo-park",
+   "coords": [
+    37.45367,
+    -122.18231
+   ],
+   "area": "El Camino Real",
+   "url": "https://www.cafeborrone.com/",
+   "hours": "We-Fr 07:00-20:00; Sa-Mo 07:00-16:00",
+   "hoursFrom": "cafeborrone.com — closed Tuesdays",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Cafe Borrone",
+    "zone": "menlo-park",
+    "type": "cafe"
+   },
+   "why": "Menlo Park's town square in café form, family-run since 1979 and right next to Kepler's: buy a book, then read it here. Everything is made in-house from an organic, seasonal menu, from the pastries to the pasta. Go for a weekend breakfast and sit outside.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "lunch",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "cafeborrone.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 60,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-guild-74905--244363",
+   "title": "Guild",
+   "type": "culture",
+   "zone": "menlo-park",
+   "coords": [
+    37.45243,
+    -122.18126
+   ],
+   "area": "El Camino Real",
+   "url": "https://guildtheatre.com/",
+   "cuisine": null,
+   "categories": [
+    "art",
+    "indoor"
+   ],
+   "match": {
+    "name": "Guild",
+    "zone": "menlo-park",
+    "type": "culture"
+   },
+   "hours": null,
+   "hoursFrom": null,
+   "why": "A small music and comedy venue on El Camino. It books touring rock, Americana and bluegrass acts, plus stand-up, in a room small enough that you are never far from the stage. Check the calendar and buy ahead; shows usually start at eight.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "guildtheatre.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 150,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": "https://guildtheatre.com/",
+   "hoursNote": "Show nights only; doors usually 7pm, shows 8pm. Box office Thu–Sat 1–4pm."
+  },
+  {
+   "id": "osm-feldman-s-books-74904--244368",
+   "title": "Feldman's Books",
+   "type": "books",
+   "zone": "menlo-park",
+   "coords": [
+    37.45197,
+    -122.18378
+   ],
+   "area": "Curtis Street",
+   "url": "https://www.feldmansbooks.net/home",
+   "hours": "Mo-Su 12:00-17:00",
+   "hoursFrom": "feldmansbooks.net — evening events usually 6–8pm",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Feldman's Books",
+    "zone": "menlo-park",
+    "type": "books"
+   },
+   "why": "A used and vintage bookshop that has run for over 25 years, just off Santa Cruz Avenue, and doubles as a neighbourhood hall: author talks, poetry readings, live music and even a bike-repair kitchen. Browse in the afternoon, or come back for an evening event.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon"
+   ],
+   "labels": [
+    "hiddengem"
+   ],
+   "source": "feldmansbooks.net; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-shiok-74907--244369",
+   "title": "Shiok",
+   "type": "restaurant",
+   "zone": "menlo-park",
+   "coords": [
+    37.45368,
+    -122.18438
+   ],
+   "area": "Oak Grove Avenue",
+   "url": "https://shiokkitchen.com/",
+   "hours": "We-Fr 11:00-14:30,17:00-20:30; Sa-Su 10:00-14:00,17:00-20:30",
+   "hoursFrom": "openstreetmap",
+   "cuisine": "singaporean",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Shiok",
+    "zone": "menlo-park",
+    "type": "restaurant"
+   },
+   "why": "Singaporean hawker cooking off Santa Cruz Avenue. Order the laksa or the Hainanese chicken rice, with roti prata and satay for the table; beef rendang if you want something slow-cooked. It closes between lunch and dinner and is shut early in the week.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "labels": [],
+   "source": "shiokkitchen.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 60,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "osm-burma-love-74911--244372",
+   "title": "Burma Love",
+   "type": "restaurant",
+   "zone": "menlo-park",
+   "coords": [
+    37.4554,
+    -122.18622
+   ],
+   "area": "El Camino Real",
+   "url": "https://burmafoodgroup.com/burma-love.html",
+   "hours": null,
+   "hoursFrom": null,
+   "cuisine": "burmese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Burma Love",
+    "zone": "menlo-park",
+    "type": "restaurant"
+   },
+   "why": "From the Bay Area's Burma restaurant group. Order the tea leaf salad, the samusa soup and a curry with platha to mop it up. Good for a group, since everything is built to share.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "labels": [],
+   "source": "burmafoodgroup.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 75,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false,
+   "hoursNote": "The venue does not publish hours on its site; check before going."
+  },
+  {
+   "id": "osm-barbayani-greek-taverna-74756--244235",
+   "title": "Barbayani Greek Taverna",
+   "type": "restaurant",
+   "zone": "los-altos",
+   "coords": [
+    37.37802,
+    -122.11764
+   ],
+   "area": "Main Street",
+   "url": "https://barbayanitaverna.com/",
+   "cuisine": "greek",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Barbayani Greek Taverna",
+    "zone": "los-altos",
+    "type": "restaurant"
+   },
+   "hours": "Mo-Th,Su 11:30-14:30,17:00-21:00; Fr,Sa 11:30-14:30,17:00-21:30",
+   "hoursFrom": "barbayanitaverna.com",
+   "why": "A Greek taverna on Main Street, opened in 2023 by the team behind San Jose's Nemea and named for a bearded innkeeper of Greek folk tale. It is built around hospitality: a warm, family-style room that fills up quickly at dinner. Lunch every day is the easier way to get a table.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "lunch",
+    "evening"
+   ],
+   "labels": [],
+   "source": "barbayanitaverna.com; Los Altos Town Crier; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 90,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": "https://barbayanitaverna.com/",
+   "hoursChecked": "2026-10-14"
+  },
+  {
+   "id": "osm-asa-los-altos-74759--244234",
+   "title": "Asa Los Altos",
+   "type": "restaurant",
+   "zone": "los-altos",
+   "coords": [
+    37.37958,
+    -122.11682
+   ],
+   "area": "State Street",
+   "url": "https://www.asalosaltos.com/location/asa-los-altos/",
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Asa Los Altos",
+    "zone": "los-altos",
+    "type": "restaurant"
+   },
+   "hours": null,
+   "hoursFrom": null,
+   "why": "A dinner-only American restaurant on State Street, with Spanish and Italian influences in the cooking and a beverage director running the bar. It is the Los Altos half of a pair, with a sister in Los Gatos: a grown-up evening room rather than a quick bite. Book ahead, and note that it is closed on Sundays.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening"
+   ],
+   "labels": [],
+   "source": "asalosaltos.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-14",
+   "durationMin": 90,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": "https://www.opentable.com/r/asa-los-altos",
+   "hoursNote": "Dinner from 5pm Monday to Friday and from 4:30pm Saturday; closed Sundays. Closing time not published."
   }
  ]
 }
