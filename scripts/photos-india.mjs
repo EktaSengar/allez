@@ -109,7 +109,8 @@ for (let i = 0; i < files.length; i += 20) {
     const md = page.imageinfo?.[0]?.extmetadata || {};
     const licence = strip(md.LicenseShortName?.value);
     // Fail closed: no generic credit, unknown licence or noncommercial work.
-    if (!/^(CC BY(?:-SA)? [\d.]+|CC0(?: [\d.]+)?|Public domain)$/i.test(licence)) {
+    // GFDL and GODL-India are allowed too; both permit reuse with attribution.
+    if (!/^(CC BY(?:-SA)? [\d.]+|CC0(?: [\d.]+)?|Public domain|GFDL(?: [\d.]+)?|GODL-India)$/i.test(licence)) {
       console.log(`Licence excluded: ${page.title}: ${licence}`);
       continue;
     }
