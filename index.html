@@ -15,8 +15,8 @@ try {
   if (t === 'dark') document.documentElement.dataset.theme = 'dark';
 } catch (e) {}
 </script>
-<link rel="stylesheet" href="css/style.css?v=99d84fef">
-<script src="js/home.js?v=40915de7" defer></script>
+<link rel="stylesheet" href="css/style.css?v=1c115d69">
+<script src="js/home.js?v=6c943177" defer></script>
 </head>
 <body class="home">
 <a class="skip" href="#main">Skip to ideas</a>
@@ -41,14 +41,21 @@ try {
       <p class="lede">Good things are happening near you. Let’s find one.</p>
       <div class="actions"><a class="primary" id="find" href="bay-area/">Find my next thing <span aria-hidden="true">↗</span></a><button class="quiet" id="surprise" type="button" disabled>Surprise me <span aria-hidden="true">✧</span></button></div>
     </div>
-    <article class="featured-idea">
-    <div class="hero-scene">
-      <img id="hero-photo" class="hero-photo" src="bay-area/img/thumb/osm-goodthing-74890--244323/960px-osm-goodthing-74890--244323.jpg" width="960" height="720" alt="A coffee at Goodthing Coffee in Palo Alto" fetchpriority="high">
-      <div class="photo-note"><span class="eyebrow">A small change of scenery</span><p id="hero-title">Goodthing Coffee</p><span id="hero-credit">Our own photograph</span></div>
-      <button id="hero-open" class="photo-open" type="button" aria-label="Explore the featured idea" disabled>↗</button>
-    </div>
-    <div class="featured-copy"><p class="eyebrow">Why it’s worth going</p><p id="hero-why">A loft to linger in, a coffee worth trying, and a little change of scenery.</p><p id="hero-facts" class="pick-meta"></p></div>
-    </article>
+    <section class="reel" aria-label="Our own footage from five cities">
+      <figure class="reel-slide on" data-video="reel/bay-stanford.mp4"><img src="reel/bay-stanford.jpg" fetchpriority="high" width="1080" height="1350" alt="Driving down Palm Drive towards Stanford"><figcaption><b>Bay Area</b> Stanford</figcaption></figure>
+      <figure class="reel-slide" data-video="reel/ny-brooklyn-bridge.mp4"><img data-src="reel/ny-brooklyn-bridge.jpg" width="1080" height="1350" alt="Walking the Brooklyn Bridge"><figcaption><b>New York</b> Brooklyn Bridge</figcaption></figure>
+      <figure class="reel-slide" data-video="reel/bay-golden-gate.mp4"><img data-src="reel/bay-golden-gate.jpg" width="1080" height="1350" alt="Under the Golden Gate from the water"><figcaption><b>Bay Area</b> Golden Gate</figcaption></figure>
+      <figure class="reel-slide" data-video="reel/paris-canal.mp4"><img data-src="reel/paris-canal.jpg" width="1080" height="1350" alt="The Canal Saint-Martin at blue hour"><figcaption><b>Paris</b> Canal Saint-Martin</figcaption></figure>
+      <figure class="reel-slide" data-video="reel/delhi-india-gate.mp4"><img data-src="reel/delhi-india-gate.jpg" width="1080" height="1350" alt="India Gate lit in the tricolour"><figcaption><b>Delhi</b> India Gate</figcaption></figure>
+      <figure class="reel-slide" data-video="reel/paris-eiffel.mp4"><img data-src="reel/paris-eiffel.jpg" width="1080" height="1350" alt="The Eiffel Tower lit blue at night"><figcaption><b>Paris</b> Eiffel Tower</figcaption></figure>
+      <figure class="reel-slide" data-video="reel/delhi-olive.mp4"><img data-src="reel/delhi-olive.jpg" width="1080" height="1350" alt="Candlelit tables in the courtyard at Olive"><figcaption><b>Delhi</b> Olive Bar &amp; Kitchen</figcaption></figure>
+      <figure class="reel-slide" data-video="reel/bengaluru-jazz.mp4"><img data-src="reel/bengaluru-jazz.jpg" width="1080" height="1350" alt="A live jazz set at ZLB23"><figcaption><b>Bengaluru</b> ZLB23</figcaption></figure>
+      <button class="reel-pause" type="button" aria-label="Pause the film">❚❚</button>
+    </section>
+    <nav class="city-tiles" aria-labelledby="cities-title">
+      <h2 class="eyebrow" id="cities-title">Same curiosity. Different pavement.</h2>
+      <ul><li><a href="paris/"><span>Paris</span><span aria-hidden="true">↗</span></a></li><li><a href="delhi/"><span>Delhi</span><span aria-hidden="true">↗</span></a></li><li><a href="bengaluru/"><span>Bengaluru</span><span aria-hidden="true">↗</span></a></li><li><a href="bay-area/"><span>Bay Area</span><span aria-hidden="true">↗</span></a></li><li><a href="new-york/"><span>New York</span><span aria-hidden="true">↗</span></a></li></ul>
+    </nav>
   </section>
   <section id="ideas" class="ideas" aria-labelledby="ideas-title">
     <div class="section-head"><div><p class="eyebrow" id="dateline">Your next little adventure</p><h2 id="ideas-title">A few good reasons to get out.</h2><p class="section-sub" id="ideas-sub">Explore the Bay Area. Pick what feels like you.</p></div><a id="guide" class="text-link" href="bay-area/">The whole city guide <span aria-hidden="true">↗</span></a></div>
@@ -62,7 +69,6 @@ try {
     <div id="picks" class="pick-grid" aria-busy="true"></div>
   </section>
   <aside class="nudge"><img src="allez-mascot/main_guide_cutout.png" width="104" height="104" alt="The Allez pigeon, your little city companion"><div><h2>Can’t choose? I’ve got you.</h2><p>One good idea is all it takes to change the shape of your day.</p></div><button class="quiet" id="nudge-surprise" type="button" disabled>Pick one for me <span aria-hidden="true">✧</span></button></aside>
-  <section class="cities" aria-labelledby="cities-title"><p class="eyebrow" id="cities-title">Same curiosity. Different pavement.</p><div class="city-links"><a href="paris/">Paris ↗</a><a href="delhi/">Delhi ↗</a><a href="bengaluru/">Bengaluru ↗</a><a href="bay-area/">The Bay Area ↗</a><a href="new-york/">New York ↗</a></div></section>
 </main>
 <footer class="foot">
   <div class="shell">

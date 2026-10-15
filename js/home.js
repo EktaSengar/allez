@@ -17,7 +17,7 @@
     } catch { return ''; }
   };
   const cache = new Map();
-  let city = 'bay-area', mood = 'all', pool = [], featured = null, revision = 0, lastSurprise = null;
+  let city = 'bay-area', mood = 'all', pool = [], revision = 0, lastSurprise = null;
   const dialog = $('#idea-dialog');
 
   const kinds = item => [item.type, ...(item.categories || []), ...(item.goodFor || []), ...(item.labels || [])];
@@ -120,20 +120,13 @@
     const current = ++revision;
     city = id;
     pool = [];
-    featured = null;
     if (dialog.open) dialog.close();
     $('#city').value = id;
     $('#city-name').textContent = cities[id].name === 'Bay Area' ? 'The Bay Area' : cities[id].name;
     $('#find').href = $('#guide').href = `${id}/`;
     $('#ideas-sub').textContent = `Explore ${cities[id].name === 'Bay Area' ? 'the Bay Area' : cities[id].name}. Pick what feels like you.`;
     $('#dateline').textContent = new Date().toLocaleDateString('en-GB', { timeZone: cities[id].tz, weekday: 'long', day: 'numeric', month: 'long' });
-    $('#hero-photo').hidden = true;
-    $('.hero-scene').classList.add('no-photo');
-    $('#hero-title').textContent = cities[id].name;
-    $('#hero-credit').textContent = 'Finding a little change of scenery…';
-    $('#hero-why').textContent = 'Finding an idea worth your time…';
-    $('#hero-facts').textContent = '';
-    $('#hero-open').disabled = $('#surprise').disabled = $('#nudge-surprise').disabled = true;
+    $('#surprise').disabled = $('#nudge-surprise').disabled = true;
     $('#picks').innerHTML = '';
     $('#picks').setAttribute('aria-busy', 'true');
     $('#status').textContent = 'Finding a few good ideas…';
@@ -141,27 +134,12 @@
       const items = await getPool(id);
       if (revision !== current) return;
       pool = items;
-      featured = items.find(item => item.id === cities[id].lead) || items.find(item => photo(item)) || items[0];
-      if (featured) {
-        const url = photo(featured);
-        const img = $('#hero-photo');
-        img.onerror = () => { img.hidden = true; $('.hero-scene').classList.add('no-photo'); $('#hero-credit').textContent = ''; };
-        if (url) { img.src = url; img.alt = featured.imageSubject || (featured.ik === 'c' || featured.imageKind === 'context' ? `Around ${featured.title}` : featured.title); img.hidden = false; $('.hero-scene').classList.remove('no-photo'); }
-        $('#hero-title').textContent = featured.title;
-        $('#hero-credit').textContent = url ? `${featured.imageCredit || 'Wikimedia Commons'}${featured.ik === 'c' || featured.imageKind === 'context' ? ' · The neighbourhood' : ''}` : '';
-        $('#hero-why').textContent = featured.why;
-        $('#hero-facts').textContent = facts(featured);
-        $('#hero-open').disabled = false;
-        $('#hero-open').setAttribute('aria-label', `Explore ${featured.title}`);
-      }
       render();
       try { localStorage.setItem('allez.home.city', id); } catch {}
     } catch {
       if (revision !== current) return;
       $('#picks').setAttribute('aria-busy', 'false');
       $('#status').textContent = 'The ideas couldn’t load. Your city guide is still one tap away.';
-      $('#hero-credit').textContent = 'Explore the city guide for more';
-      $('#hero-why').textContent = 'Open the city guide to find places and ideas near you.';
     }
   }
 
@@ -174,7 +152,6 @@
   $('#picks').addEventListener('click', e => { const button = e.target.closest('[data-id]'); if (button) showIdea(pool.find(item => item.id === button.dataset.id)); });
   $('#surprise').addEventListener('click', surprise);
   $('#nudge-surprise').addEventListener('click', surprise);
-  $('#hero-open').addEventListener('click', () => showIdea(featured));
   $('.dialog-close').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', e => { if (e.target === dialog) { const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close(); } });
   // Same switch and key as the city guides (js/app.js), so the choice follows you.
@@ -193,4 +170,54 @@
   });
   try { const saved = localStorage.getItem('allez.home.city'); if (cities[saved]) city = saved; } catch {}
   changeCity(city);
+})();
+/* The opening reel: a hard cut every 2.4s. Footage is only fetched after
+   the page has loaded, one shot ahead; a clip plays over its own first
+   frame once it can, and a shot that isn't ready yet holds the current
+   one. Nothing moves for reduced motion, off-screen, in a hidden tab, or
+   once paused. */
+(() => {
+  const reel = document.querySelector('.reel');
+  if (!reel || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const slides = [...reel.querySelectorAll('.reel-slide')];
+  const button = reel.querySelector('.reel-pause');
+  let index = 0, timer = 0, paused = false, visible = true, loaded = false;
+  const load = slide => {
+    const img = slide.querySelector('img');
+    if (img.dataset.src) { img.src = img.dataset.src; delete img.dataset.src; }
+    if (slide.dataset.video && !slide.querySelector('video')) {
+      const video = Object.assign(document.createElement('video'), { muted: true, playsInline: true, loop: true, preload: 'auto', src: slide.dataset.video });
+      video.setAttribute('aria-hidden', 'true');
+      video.addEventListener('playing', () => video.classList.add('ready'));
+      slide.append(video);
+    }
+  };
+  const play = slide => { const v = slide.querySelector('video'); if (v) { v.currentTime = 0; v.play().catch(() => {}); } };
+  const ready = slide => { const img = slide.querySelector('img'); return !img.dataset.src && img.complete && img.naturalWidth > 0; };
+  const next = () => {
+    const i = (index + 1) % slides.length;
+    if (!ready(slides[i])) { load(slides[i]); return; }
+    slides[index].classList.remove('on');
+    slides[index].querySelector('video')?.pause();
+    slides[i].classList.add('on');
+    play(slides[i]);
+    index = i;
+    load(slides[(i + 1) % slides.length]);
+  };
+  const sync = () => {
+    clearInterval(timer);
+    const running = loaded && !paused && visible && !document.hidden;
+    if (running) timer = setInterval(next, 2400);
+    const v = slides[index].querySelector('video');
+    if (v) running ? v.play().catch(() => {}) : v.pause();
+  };
+  addEventListener('load', () => { loaded = true; load(slides[0]); load(slides[1]); play(slides[0]); sync(); }, { once: true });
+  document.addEventListener('visibilitychange', sync);
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; sync(); }).observe(reel);
+  button.addEventListener('click', () => {
+    paused = !paused;
+    button.textContent = paused ? '▶' : '❚❚';
+    button.setAttribute('aria-label', paused ? 'Play the film' : 'Pause the film');
+    sync();
+  });
 })();

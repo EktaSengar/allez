@@ -2466,3 +2466,63 @@ html:has(.home) {
 .page .page-toc a { border: 1px solid var(--line); border-radius: 999px; padding: .45rem 1rem; font-size: .84rem; text-decoration: none; color: var(--ink); }
 .page .page-toc a:hover { background: var(--bg-2); }
 .page .page-cta { margin-top: 2rem; }
+
+/* ---------- home reel ----------
+   The opening film, after meta.com's: our own footage carries the motion,
+   so there are no effects on top, just quick cuts and a quiet caption.
+   The footage is phone video, shot tall, so the frame is 4:5 at native
+   resolution instead of a soft 16:9 crop. Paint-only animation in a
+   box of fixed aspect ratio, so no layout shift. Everything after the
+   first frame loads once the page has painted. Reduced motion gets the
+   first frame, still. */
+.home .hero { grid-template-columns:minmax(0, 1fr) minmax(320px, 500px); column-gap:clamp(32px, 5vw, 72px); justify-content:center; }
+.home .intro { justify-self:end; max-width:560px; }
+/* the five cities, straight after the film, as tiles of our own frames */
+.home .city-tiles { grid-column:1 / -1; }
+.home .city-tiles h2 { margin:0 0 14px; }
+.home .city-tiles ul { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:10px; }
+.home .city-tiles li { flex:1 1 0; }
+.home .city-tiles a {
+  display:flex; justify-content:space-between; align-items:center; gap:8px; padding:14px 16px; white-space:nowrap;
+  border:1px solid var(--line); border-radius:16px; color:var(--ink); text-decoration:none;
+  font:400 1.15rem/1.2 var(--serif); transition:background .2s, border-color .2s;
+}
+.home .city-tiles a span:last-child { color:var(--soft); font:.9rem var(--sans); }
+.home .city-tiles a:hover { background:var(--bg-2); border-color:var(--accent); }
+.home .city-tiles a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.home .featured-idea { grid-column:1 / -1; display:grid; grid-template-columns:minmax(0, 1.1fr) 1fr; gap:32px; align-items:center; }
+.home .featured-idea .hero-scene { height:300px; }
+.home .reel {
+  position:relative; overflow:hidden; isolation:isolate; aspect-ratio:4 / 5;
+  border-radius:28px; background:#1b2531; color:#fff;
+}
+.home .reel-slide { position:absolute; inset:0; margin:0; opacity:0; transition:opacity .15s linear; }
+.home .reel-slide.on { opacity:1; }
+.home .reel-slide img, .home .reel-slide video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
+.home .reel-slide video { opacity:0; }
+.home .reel-slide video.ready { opacity:1; }
+.home .reel-slide figcaption {
+  position:absolute; z-index:1; left:0; right:0; bottom:0; padding:48px 22px 20px;
+  background:linear-gradient(0deg, rgba(15,20,28,.55), rgba(15,20,28,0));
+  font-size:.8rem; letter-spacing:.02em;
+}
+.home .reel-slide figcaption b { font-weight:600; margin-right:4px; }
+.home .reel-slide figcaption b:after { content:" ·"; font-weight:400; opacity:.7; }
+.home .reel-pause {
+  position:absolute; z-index:2; right:14px; bottom:14px; width:32px; height:32px; border-radius:50%;
+  border:0; background:rgba(15,20,28,.45); color:#fff; font-size:.62rem; cursor:pointer;
+}
+.home .reel-pause:focus-visible { outline:2px solid #fff; outline-offset:2px; }
+@media (prefers-reduced-motion: reduce) { .home .reel-pause { display:none; } }
+@media (max-width:920px) {
+  .home .hero { grid-template-columns:1fr minmax(240px, 340px); }
+  .home .featured-idea { grid-template-columns:1fr; gap:0; }
+}
+@media (max-width:640px) {
+  .home .hero { grid-template-columns:1fr; }
+  .home .intro { justify-self:stretch; }
+  .home .city-tiles ul { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; margin-inline:-18px; padding-inline:18px; }
+  .home .city-tiles li { flex:0 0 42%; scroll-snap-align:start; }
+  .home .reel { order:-1; border-radius:20px; }
+  .home .featured-idea .hero-scene { height:265px; }
+}
