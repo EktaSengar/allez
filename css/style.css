@@ -1510,6 +1510,21 @@ body[data-view="away"]    { --accent: #3f5e7a; --blush: #93add0; }
   background: var(--bg); color: var(--ink);
 }
 .locrow input:focus { outline: none; border-color: var(--accent); }
+.locsuggest {
+  list-style: none; margin: -.35rem 0 .8rem; padding: .3rem;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--bg); max-height: 18rem; overflow-y: auto;
+}
+.locsuggest li {
+  display: flex; align-items: baseline; gap: .55rem;
+  padding: .5rem .7rem; border-radius: calc(var(--radius) - 4px);
+  font-size: .9rem; cursor: pointer; color: var(--ink);
+}
+.locsuggest li b { font-weight: 600; color: var(--accent); }
+.locsuggest li.on, .locsuggest li:hover { background: var(--card); }
+.locsuggest .ls-ico { font-size: .8rem; flex: none; }
+.locsuggest .ls-sub { margin-left: auto; font-size: .74rem; color: var(--faint); }
+.locsuggest .ls-addr { color: var(--faint); border-top: 1px solid var(--line); margin-top: .2rem; }
 .locactions { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .9rem; }
 .locgroup { margin-bottom: .8rem; }
 .loclabel {
