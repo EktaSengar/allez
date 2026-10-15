@@ -36,6 +36,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -63,9 +64,19 @@ async function run() {
     const top = Math.max(0, Math.min(h - cropH, Math.round((p.focus ?? 0.5) * h - cropH / 2)));
     const left = Math.max(0, Math.round((w - cropW) / 2));
 
+    /* The file name carries a tag of the photo and its crop, so a recrop
+       is a new URL. Pages serve images with max-age and no hash of their
+       own: under the old fixed name a browser that had already fetched
+       one width kept showing the old crop wherever that width was used —
+       Ettan's recrop reached Eat, which asks for a different width, but
+       not Today's lead. The same tag lets an unchanged photo skip the
+       re-encode, which used to rewrite every thumbnail on every run. */
+    const tag = crypto.createHash('md5').update(await fs.readFile(src))
+      .update(JSON.stringify([p.focus ?? 0.5, WIDTHS, 72])).digest('hex').slice(0, 8);
     const dir = path.join(ROOT, p.city, 'img', 'thumb', p.id);
-    const rel = w2 => `img/thumb/${p.id}/${w2}px-${p.id}.jpg`;
-    if (!DRY) {
+    const rel = w2 => `img/thumb/${p.id}/${w2}px-${p.id}-${tag}.jpg`;
+    const fresh = await Promise.all(WIDTHS.map(x => fs.access(path.join(ROOT, p.city, rel(x))).then(() => true, () => false)));
+    if (!DRY && !fresh.every(Boolean)) {
       await fs.mkdir(dir, { recursive: true });
       const cropped = path.join(dir, '_crop.jpg');
       sips('--cropToHeightWidth', String(cropH), String(cropW), '--cropOffset', String(top), String(left),
@@ -75,6 +86,8 @@ async function run() {
              cropped, '--out', path.join(ROOT, p.city, rel(width)));
       }
       await fs.rm(cropped);
+      // Drop the renditions of any earlier crop.
+      for (const f of await fs.readdir(dir)) if (f.endsWith('.jpg') && !f.endsWith(`-${tag}.jpg`)) await fs.rm(path.join(dir, f));
     }
 
     /* Point the record at it. A place the map holds and nobody wrote up
