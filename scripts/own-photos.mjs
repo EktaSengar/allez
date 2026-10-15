@@ -43,7 +43,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DRY = process.argv.includes('--dry');
 const WIDTHS = [250, 500, 960, 1280];        // keep in step with THUMB_WIDTHS in js/app.js
 const CREDIT = 'Our own photograph';
-const FILES = ['places', 'editorial', 'nightlife', 'food', 'sports', 'itineraries', 'daytrips'];
+const FILES = ['places', 'editorial', 'nightlife', 'food', 'sports', 'itineraries', 'daytrips', 'events'];
 
 const sips = (...args) => execFileSync('sips', args, { stdio: ['ignore', 'pipe', 'pipe'] }).toString();
 const size = file => {
