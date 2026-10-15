@@ -108,6 +108,10 @@ for (const id of cityIds()) {
       (bad.length ? ` — not: ${bad.map(s => s.item.title).join(', ')}` : ''));
     want(stops[0].travel.from === null, `${tag} · the first leg is measured from where the day starts`);
     want(plan.picks.length > 0 && plan.picks[0].key === 'best', `${tag} · the picks lead with the best overall`);
+    const free = (plan.picks.find(p => p.key === 'free') || {}).item;
+    want(!free || (!['restaurant', 'cafe', 'bakery', 'deli', 'bar', 'speakeasy', 'club', 'nightlife'].includes(free.type) &&
+      (Rank.priceLevel(free) === 0 || /^free\b/i.test(free.priceNote || ''))),
+      `${tag} · the free pick is free on evidence and not somewhere to eat or drink (${free ? free.title : 'none'})`);
 
     /* Saturday already under way in the city: at half past five
        there, the morning and afternoon slots are over and only the
