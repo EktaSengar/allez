@@ -83,7 +83,11 @@
         "foodmission"
       ],
       "hoursNote": "Start by 7:30am. Cash. Chawri Bazar or Jama Masjid metro.",
-      "url": "https://www.google.com/maps/search/?api=1&query=An%20Old%20Delhi%20Breakfast%2C%20Four%20stops%20between%20the%20Jama%20Masjid%20and%20Chandni%20Chowk%2C%20New%20Delhi"
+      "url": "https://www.google.com/maps/search/?api=1&query=An%20Old%20Delhi%20Breakfast%2C%20Four%20stops%20between%20the%20Jama%20Masjid%20and%20Chandni%20Chowk%2C%20New%20Delhi",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Nalli_Nihari_India.jpg/500px-Nalli_Nihari_India.jpg",
+      "imageSubject": "Nihari",
+      "imageKind": "subject",
+      "imageCredit": "Nilanjan Sasmal · CC BY-SA 4.0"
     },
     {
       "type": "mission",
@@ -147,7 +151,11 @@
         "foodmission"
       ],
       "hoursNote": "Late morning to early afternoon; closes when sold out. Vishwavidyalaya metro.",
-      "url": "https://www.google.com/maps/search/?api=1&query=Chole%20Bhature%20in%20North%20Campus%2C%20Kamla%20Nagar%20and%20the%20streets%20around%20Delhi%20University%2C%20New%20Delhi"
+      "url": "https://www.google.com/maps/search/?api=1&query=Chole%20Bhature%20in%20North%20Campus%2C%20Kamla%20Nagar%20and%20the%20streets%20around%20Delhi%20University%2C%20New%20Delhi",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Chole_Bhature_from_Nagpur.JPG/500px-Chole_Bhature_from_Nagpur.JPG",
+      "imageSubject": "Chole bhature",
+      "imageKind": "subject",
+      "imageCredit": "Dheerajk88 · CC BY-SA 4.0"
     },
     {
       "type": "mission",
@@ -227,7 +235,11 @@
         "foodmission"
       ],
       "hoursNote": "Evenings. Nehru Enclave metro.",
-      "url": "https://www.google.com/maps/search/?api=1&query=A%20Bengali%20Evening%20in%20CR%20Park%2C%20Market%20No.%201%20and%20Market%20No.%202%2C%20five%20minutes%20apart%2C%20New%20Delhi"
+      "url": "https://www.google.com/maps/search/?api=1&query=A%20Bengali%20Evening%20in%20CR%20Park%2C%20Market%20No.%201%20and%20Market%20No.%202%2C%20five%20minutes%20apart%2C%20New%20Delhi",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Mishti_Doi.jpg/500px-Mishti_Doi.jpg",
+      "imageSubject": "Mishti doi",
+      "imageKind": "subject",
+      "imageCredit": "Kirti Poddar · CC BY 2.0"
     },
     {
       "type": "mission",
@@ -309,7 +321,102 @@
         "seasonal"
       ],
       "hoursNote": "Weekdays are easier. Avoid Chandni Chowk on Dhanteras evening unless you love crowds.",
-      "url": "https://www.google.com/maps/search/?api=1&query=The%20Diwali%20Mithai%20Run%2C%20Chandni%20Chowk%20and%20Connaught%20Place%2C%20in%20the%20week%20before%20Diwali%2C%20New%20Delhi"
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20Diwali%20Mithai%20Run%2C%20Chandni%20Chowk%20and%20Connaught%20Place%2C%20in%20the%20week%20before%20Diwali%2C%20New%20Delhi",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Kaju_katli_sweet.jpg/500px-Kaju_katli_sweet.jpg",
+      "imageSubject": "Kaju katli",
+      "imageKind": "subject",
+      "imageCredit": "najeeb shaik · CC BY-SA 4.0"
+    },
+    {
+      "type": "mission",
+      "categories": [
+        "food",
+        "mission"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "uniqueness": 5,
+      "quality": 4,
+      "lastVerified": "2026-10-14",
+      "coordsFrom": "first stop",
+      "booking": false,
+      "id": "mission-majnu-ka-tilla",
+      "title": "Laphing and Butter Tea in Majnu ka Tilla",
+      "emoji": "🥟",
+      "moods": [
+        "cheap",
+        "walk"
+      ],
+      "zone": "majnu-ka-tila",
+      "area": "The lanes of the Tibetan colony, a few minutes apart",
+      "coords": [
+        28.70191,
+        77.22824
+      ],
+      "price": 600,
+      "priceNote": "~₹600 for two",
+      "priceLevel": 1,
+      "durationMin": 150,
+      "brief": "Cross the footbridge from Ring Road into the Tibetan colony and eat your way through it: laphing first, then momos, a Bhutanese lunch, and coffee and cheesecake to finish where the students sit.",
+      "test": "Good laphing is cold, glossy and slippery, and the chilli oil should be fragrant before it is hot; momo skins should be thin enough to see the filling.",
+      "candidates": [
+        {
+          "emoji": "🍜",
+          "name": "Laphing Express",
+          "id": "osm-laphing-express-57404-154456",
+          "order": "Dry laphing with extra garlic",
+          "walk": "first stop"
+        },
+        {
+          "emoji": "🥟",
+          "name": "Bobby Special Momo and Laphing",
+          "id": "osm-bobby-special-momo-and-laphing-57402-154456",
+          "order": "Steamed pork or veg momos with sepen",
+          "walk": "1 min on"
+        },
+        {
+          "emoji": "🌶️",
+          "name": "Tara Bhutanese Restaurant",
+          "id": "osm-tara-bhutanese-restaurant-57405-154458",
+          "order": "Ema datshi with red rice",
+          "walk": "3 min on"
+        },
+        {
+          "emoji": "☕",
+          "name": "AMA Cafe",
+          "id": "osm-ama-cafe-57405-154457",
+          "order": "Coffee and a slice of cheesecake",
+          "walk": "2 min on"
+        }
+      ],
+      "then": [
+        {
+          "emoji": "🙏",
+          "text": "Walk round the monastery in the colony's main square"
+        },
+        {
+          "emoji": "🛕",
+          "text": "Gurudwara Majnu ka Tilla Sahib, across Ring Road"
+        }
+      ],
+      "why": "The cheapest, most transporting afternoon in north Delhi: you cross a footbridge and are somewhere else entirely.",
+      "goodFor": [
+        "food",
+        "afternoon",
+        "cheap",
+        "walk"
+      ],
+      "labels": [
+        "dontmiss",
+        "cheap",
+        "foodmission"
+      ],
+      "url": "https://www.google.com/maps/search/?api=1&query=Majnu%20ka%20Tilla%20Tibetan%20colony%2C%20Majnu%20ka%20Tilla%2C%20New%20Delhi",
+      "hoursNote": "Afternoons. Vidhan Sabha metro, then an auto or the footbridge from Ring Road.",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Majnu_ka_tilla_monastery.jpg/500px-Majnu_ka_tilla_monastery.jpg",
+      "imageSubject": "The monastery at Majnu ka Tilla",
+      "imageKind": "context",
+      "imageCredit": "Ashudas563 · CC BY-SA 4.0"
     }
   ]
 }
