@@ -4018,11 +4018,11 @@ const App = (() => {
       }
     }
 
+    /* The neighbourhood wall is gone: ninety-five chips in Bengaluru,
+       two hundred and seventy in Delhi, to find one name. Neighbourhoods
+       are now suggested as you type — see wireSuggest. */
     const zones = $('#loc-zones');
-    if (zones && !zones.children.length) {
-      zones.innerHTML = Loc.presets().map(p =>
-        `<button class="chip" data-zone-pick="${p.zone}" title="${esc(p.name)}">${esc(City.zone.label(p.zone))}</button>`).join('');
-    }
+    if (zones) zones.parentElement.hidden = true;
     const rec = Loc.recents();
     $('#loc-recent-wrap').hidden = !rec.length;
     $('#loc-recent').innerHTML = rec.map((r, i) =>
@@ -4123,6 +4123,131 @@ const App = (() => {
     applyTheme(saved === 'dark' ? 'dark' : 'light');   // light unless asked otherwise
   }
 
+  /* ---------- type-ahead for the location box ----------
+
+     The pattern every maps and booking site uses: type, and the matches
+     come up under the box; arrows to move, Enter to take one.
+
+     Suggestions are the city's own neighbourhoods, matched in the
+     browser, so they appear on the first keystroke. Streets and hotels
+     still go to the address finder — but only when asked, from the last
+     row, because Nominatim's usage policy forbids searching on every
+     keystroke. */
+  function wireSuggest(doSearch, pick) {
+    const input = $('#loc-input');
+    const list = document.createElement('ul');
+    list.id = 'loc-suggest';
+    list.className = 'locsuggest';
+    list.setAttribute('role', 'listbox');
+    list.hidden = true;
+    input.closest('.locrow').after(list);
+    input.setAttribute('role', 'combobox');
+    input.setAttribute('aria-autocomplete', 'list');
+    input.setAttribute('aria-controls', list.id);
+    input.setAttribute('aria-expanded', 'false');
+
+    const fold = t => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const ZONES = Loc.presets().map(p => {
+      const label = City.zone.label(p.zone), name = p.name || label;
+      return { zone: p.zone, name, label, key: fold(name + ' ' + label) };
+    });
+
+    let rows = [], active = -1, places = [], timer = 0, inflight = null;
+
+    function matches(q) {
+      const f = fold(q);
+      const scored = [];
+      for (const z of ZONES) {
+        const at = z.key.indexOf(f);
+        if (at < 0) continue;
+        // start of the name, then start of a word, then anywhere
+        const rank = at === 0 ? 0 : /[\s\-(]/.test(z.key[at - 1]) ? 1 : 2;
+        scored.push([rank, z]);
+      }
+      return scored.sort((a, b) => a[0] - b[0] || a[1].name.localeCompare(b[1].name))
+        .slice(0, 6).map(x => x[1]);
+    }
+
+    function draw() {
+      const q = input.value.trim();
+      if (!q) { close(); return; }
+      rows = matches(q).map(z => ({ kind: 'zone', z }))
+        .concat(places.filter(p => p.q === q).map(p => ({ kind: 'place', p })));
+      rows.push({ kind: 'address', q });
+      active = rows.length > 1 ? 0 : -1;
+      list.innerHTML = rows.map((r, i) => r.kind === 'place'
+        ? `<li role="option" id="loc-opt-${i}" data-i="${i}"><span class="ls-ico">🏠</span>${hilite(r.p.name, q)}${
+            r.p.where ? `<span class="ls-sub">${esc(r.p.where)}</span>` : ''}</li>`
+        : r.kind === 'zone'
+        ? `<li role="option" id="loc-opt-${i}" data-i="${i}"><span class="ls-ico">📍</span>${hilite(r.z.name, q)}${
+            r.z.label !== r.z.name ? `<span class="ls-sub">${esc(r.z.label)}</span>` : ''}</li>`
+        : `<li role="option" id="loc-opt-${i}" data-i="${i}" class="ls-addr"><span class="ls-ico">🔎</span>Search “${esc(r.q)}” as an address</li>`
+      ).join('');
+      list.hidden = false;
+      input.setAttribute('aria-expanded', 'true');
+      mark();
+    }
+
+    function hilite(name, q) {
+      const at = fold(name).indexOf(fold(q));
+      if (at < 0) return esc(name);
+      return esc(name.slice(0, at)) + '<b>' + esc(name.slice(at, at + q.length)) + '</b>' + esc(name.slice(at + q.length));
+    }
+
+    function mark() {
+      [...list.children].forEach((li, i) => li.classList.toggle('on', i === active));
+      if (active >= 0) input.setAttribute('aria-activedescendant', 'loc-opt-' + active);
+      else input.removeAttribute('aria-activedescendant');
+    }
+
+    function close() {
+      list.hidden = true; rows = []; active = -1;
+      input.setAttribute('aria-expanded', 'false');
+      input.removeAttribute('aria-activedescendant');
+    }
+
+    async function choose(i) {
+      const r = rows[i];
+      if (!r) { doSearch(); return; }
+      close();
+      if (r.kind === 'address') { doSearch(); return; }
+      input.value = '';
+      await pick(r.kind === 'place' ? r.p.loc : Loc.fromZone(r.z.zone));
+    }
+
+    /* Streets and buildings, after a pause in typing — neighbourhoods
+       show at once, addresses join them a moment later. */
+    function fetchPlaces() {
+      clearTimeout(timer);
+      const q = input.value.trim();
+      if (q.length < 3) return;
+      timer = setTimeout(async () => {
+        if (inflight) inflight.abort();
+        inflight = new AbortController();
+        try {
+          const hits = await Loc.suggest(q, inflight.signal);
+          places = hits.map(p => Object.assign(p, { q }));
+          if (input.value.trim() === q && document.activeElement === input) draw();
+        } catch (e) {}
+      }, 250);
+    }
+
+    input.addEventListener('input', () => { draw(); fetchPlaces(); });
+    input.addEventListener('focus', draw);
+    input.addEventListener('keydown', e => {
+      if (e.key === 'ArrowDown' && rows.length) { e.preventDefault(); active = (active + 1) % rows.length; mark(); }
+      else if (e.key === 'ArrowUp' && rows.length) { e.preventDefault(); active = (active - 1 + rows.length) % rows.length; mark(); }
+      else if (e.key === 'Enter') { e.preventDefault(); choose(active); }
+      else if (e.key === 'Escape') close();
+    });
+    // mousedown, not click: a click lands after the input's blur has closed the list
+    list.addEventListener('mousedown', e => {
+      const li = e.target.closest('[data-i]');
+      if (li) { e.preventDefault(); choose(Number(li.dataset.i)); }
+    });
+    input.addEventListener('blur', () => setTimeout(close, 120));
+  }
+
   function wire() {
     const panel = $('#locpanel'), err = $('#loc-err');
     const fail = m => { err.textContent = m; err.hidden = false; };
@@ -4153,7 +4278,11 @@ const App = (() => {
       $('#loc-go').textContent = 'Go';
     };
     $('#loc-go').addEventListener('click', doSearch);
-    $('#loc-input').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+    wireSuggest(doSearch, async loc => {
+      panel.hidden = true;
+      $('#loc-open').setAttribute('aria-expanded', 'false');
+      await moveTo(loc);
+    });
 
     $('#loc-here').addEventListener('click', async () => {
       err.hidden = true;

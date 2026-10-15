@@ -282,7 +282,18 @@ const Rank = (() => {
     // an excellent thing across the city outranking a good thing nearby.
     // Near.reach is the same curve the retrieval layer uses, so the two
     // agree about what "close" means.
-    s += 14 * Near.reach(item.minutesFromHome ?? 30);
+    //
+    // Twenty, not fourteen. At fourteen a well-loved place in the next
+    // town over drew level with a good one on your own street, so a
+    // reader setting home to Redwood City was handed mostly Palo Alto —
+    // the town the guide happens to know best. Where you live is the
+    // strongest fact the site has about you.
+    s += 20 * Near.reach(item.minutesFromHome ?? 30);
+
+    // home turf — the same town or quarter as wherever you are standing.
+    // Distance alone misses this: two places eight minutes away, one in
+    // your town and one across the line, are not the same suggestion.
+    if (homeZone && item.zone === homeZone) s += 5;
 
     // price
     //
@@ -317,8 +328,11 @@ const Rank = (() => {
     // suits a couple
     if ((item.goodFor || []).includes('couple')) s += 2;
 
-    // somewhere you have not been — your own arrondissement is not "new"
-    if (item.zone && !exploredZones.includes(item.zone) && item.zone !== homeZone) s += 3;
+    // somewhere you have not been — your own arrondissement is not "new".
+    // Within reach only: rewarding every unexplored zone handed a bonus
+    // to the far side of the map over the reader's own neighbourhood.
+    if (item.zone && !exploredZones.includes(item.zone) && item.zone !== homeZone
+        && (item.minutesFromHome ?? 99) <= 20) s += 3;
 
     // learned taste, and what the reader has said about themselves —
     // the weights come from Store.weigh, which explains each key

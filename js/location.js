@@ -222,6 +222,36 @@ const Loc = (() => {
     return fromAddress(hit);
   }
 
+  /* Suggestions while typing. Photon, not Nominatim: both read
+     OpenStreetMap, but Photon is built for search-as-you-type and
+     Nominatim's usage policy forbids it. Same box as `search`; Photon
+     wants it as west,south,east,north. Results go through fromAddress,
+     so a suggestion is stored exactly like a searched place. */
+  async function suggest(query, signal) {
+    const [s, w, n, e] = City.bbox.split(',');
+    const url = 'https://photon.komoot.io/api/'
+      + `?q=${encodeURIComponent(query)}&limit=8&bbox=${w},${s},${e},${n}`;
+    const res = await fetch(url, { signal });
+    if (!res.ok) return [];
+    const seen = new Set(), out = [];
+    for (const f of (await res.json()).features || []) {
+      const p = f.properties || {}, [lon, lat] = f.geometry.coordinates;
+      const name = p.name || [p.housenumber, p.street].filter(Boolean).join(' ');
+      if (!name) continue;
+      const where = p.locality || p.district || p.city || '';
+      const key = (name + '|' + where).toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push({
+        name, where,
+        loc: fromAddress({ lat, lon, display_name: name,
+          address: { postcode: p.postcode, suburb: p.locality || p.district, city: p.city } })
+      });
+      if (out.length === 5) break;
+    }
+    return out;
+  }
+
   async function locate() {
     if (!navigator.geolocation) throw new Error('This browser will not share a location.');
     const pos = await new Promise((ok, no) =>
@@ -242,6 +272,6 @@ const Loc = (() => {
   return {
     boot, save, active, home, isExploring, setHome, explore, resetToHome, recents,
     minutes, minutesTo, kmTo, km, activeLeg, activeTo, displayName, zoneName, zoneCoords, presets,
-    search, locate, fromZone, ZONE_NAMES, setClock
+    search, suggest, locate, fromZone, ZONE_NAMES, setClock
   };
 })();
