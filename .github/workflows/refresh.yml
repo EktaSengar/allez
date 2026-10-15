@@ -8,7 +8,12 @@ on:
   schedule:
     - cron: '10 4 * * *'      # 04:10 UTC — ~06:10 Paris in summer
   workflow_dispatch:           # lets you run it by hand from the Actions tab
+  # main only. On any branch it restamped and pushed a bot commit into
+  # the PR — rewriting someone's branch, and leaving a Checks run that
+  # GitHub reports as a workflow error. A branch with stale stamps should
+  # fail Checks and be restamped by its author: node scripts/version.mjs --all
   push:
+    branches: [main]
     paths:
       # All four now: every city has at least a Luma calendar, and the
       # collectors run for whichever sources its pack declares.
