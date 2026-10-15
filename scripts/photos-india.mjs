@@ -18,6 +18,8 @@ const subjects = {
   'Vidyarthi Bhavan': 'Vidyarthi Bhavan', 'Mavalli Tiffin Rooms': 'Mavalli Tiffin Rooms',
   "Koshy's": "Koshy's", 'Shree Sagar CTR': 'Central Tiffin Room',
   'Lalbagh Botanical Gardens': 'Lal Bagh', 'Cubbon Park': 'Cubbon Park',
+  'Khirki Masjid': 'Khirki Mosque', 'The Garden of Five Senses': 'Garden of Five Senses',
+  "Mubarak Shah Sayyid's Tomb": 'Kotla Mubarakpur', 'Majnu ka Tilla': 'Majnu-ka-tilla',
   'City Market': 'K. R. Market', 'Blossom Book House': 'Blossom Book House'
 };
 // A photo of the street or market a card is about, where the card is the
@@ -27,19 +29,35 @@ const contexts = {
   'chandni-chowk-bazaars': 'Chandni Chowk', 'karol-bagh-ajmal-khan-road': 'Karol Bagh',
   'osm-lajpat-nagar-central-market-57138-154482': 'Lajpat Nagar',
   'osm-ulsoor-lake-park-25971-155244': 'Ulsoor Lake',
-  'osm-koshy-s-25951-155203': "Koshy's"
+  'osm-koshy-s-25951-155203': "Koshy's",
+  // Dated events: the venue they happen at, not the event itself.
+  'luv-kush-ramlila-2026': 'Red Fort', 'cr-park-durga-puja-2026': 'Chittaranjan Park',
+  'shubharambh-garba-2026': 'Bharat Mandapam', 'meri-dilli-dandiya-2026': 'Talkatora Indoor Stadium',
+  'mission-majnu-ka-tilla': 'Majnu-ka-tilla'
+};
+// Missions and routes by id, where the frame holds the exact subject: the
+// dish a food mission is built on, or a stop on the route.
+const idSubjects = {
+  'mission-old-delhi-breakfast': 'Nihari', 'mission-kamla-nagar-chole': 'Chole bhature',
+  'mission-cr-park-bengali': 'Mishti doi', 'mission-diwali-mithai': 'Kaju katli',
+  'nizamuddin-evening': "Humayun's Tomb", 'lodhi-morning': 'Lodhi Gardens',
+  'old-delhi-diwali-lights': 'Gurdwara Sis Ganj Sahib', 'saket-saidulajab-afternoon': 'Garden of Five Senses'
 };
 
 const docs = [];
 const wanted = new Map();
 for (const city of ['delhi', 'bengaluru']) {
-  for (const tier of ['editorial', 'places', 'nightlife']) {
+  for (const tier of ['editorial', 'places', 'nightlife', 'food', 'itineraries', 'events']) {
+    if (city === 'bengaluru' && !['editorial', 'places', 'nightlife'].includes(tier)) continue;
     const file = new URL(`../${city}/data/${tier}.json`, import.meta.url);
-    const doc = JSON.parse(await fs.readFile(file, 'utf8'));
-    docs.push({ file, doc, city, tier });
+    const text = await fs.readFile(file, 'utf8');
+    const doc = JSON.parse(text);
+    // Write back in the file's own indentation, so a run only diffs what it changed.
+    const indent = text.match(/\n( +)"/)?.[1].length || 1;
+    docs.push({ file, doc, city, tier, indent });
     for (const item of doc.items) {
       if (item.image || item.i) continue;
-      const subject = subjects[item.title];
+      const subject = subjects[item.title] || idSubjects[item.id];
       const title = subject || contexts[item.id];
       if (!title) continue;
       if (!wanted.has(title)) wanted.set(title, []);
@@ -101,13 +119,15 @@ for (const [title, records] of wanted) {
     item.imageSubject = ({ Indiranagar: '100 Feet Road, Indiranagar',
       Ulsoor: 'Ulsoor Lake', 'Lodhi Colony': 'Shish Gumbad, Lodhi Gardens',
       Mehrauli: 'Qutb Minar, Mehrauli', Chanakyapuri: 'Akbar Hotel, Chanakyapuri',
-      Sadashivanagar: 'Sankey Tank, Sadashivanagar', Basavanagudi: 'Bull Temple, Basavanagudi'
+      Sadashivanagar: 'Sankey Tank, Sadashivanagar', Basavanagudi: 'Bull Temple, Basavanagudi',
+      'Kotla Mubarakpur': "Mubarak Shah's tomb, Kotla Mubarakpur", 'Majnu-ka-tilla': 'The monastery at Majnu ka Tilla',
+      'Chittaranjan Park': 'Chittaranjan Park', 'Garden of Five Senses': 'The sun clock, Garden of Five Senses'
     })[title] || title;
     item.imageKind = kind;
     item.imageCredit = credit;
   }
 }
-for (const { file, doc, city, tier } of docs) {
-  if (!dry) await fs.writeFile(file, JSON.stringify(doc, null, tier === 'nightlife' ? 2 : 1) + '\n');
+for (const { file, doc, city, tier, indent } of docs) {
+  if (!dry) await fs.writeFile(file, JSON.stringify(doc, null, indent) + '\n');
   console.log(`${city}/${tier}: ${doc.items.filter(i => i.image || i.i).length}/${doc.items.length} with photos`);
 }
