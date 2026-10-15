@@ -227,26 +227,46 @@ const Loc = (() => {
      Nominatim's usage policy forbids it. Same box as `search`; Photon
      wants it as west,south,east,north. Results go through fromAddress,
      so a suggestion is stored exactly like a searched place. */
+  const KIND_NAMES = { marketplace: 'Market', mall: 'Mall', park: 'Park', station: 'Station',
+    attraction: 'Attraction', hotel: 'Hotel', university: 'University', residential: 'Area',
+    suburb: 'Area', neighbourhood: 'Area', quarter: 'Area', city: 'Town', town: 'Town', village: 'Village' };
+  const kindOf = p => KIND_NAMES[p.osm_value] || '';
+
   async function suggest(query, signal) {
     const [s, w, n, e] = City.bbox.split(',');
     const url = 'https://photon.komoot.io/api/'
-      + `?q=${encodeURIComponent(query)}&limit=8&bbox=${w},${s},${e},${n}`;
+      + `?q=${encodeURIComponent(query)}&limit=12&bbox=${w},${s},${e},${n}`;
     const res = await fetch(url, { signal });
     if (!res.ok) return [];
-    const seen = new Set(), out = [];
-    for (const f of (await res.json()).features || []) {
-      const p = f.properties || {}, [lon, lat] = f.geometry.coordinates;
+    /* One row per real place. A busy name comes back many times over —
+       "Khan Market" is a market, a Metro station, four station exits and
+       a bus stop, each filed under a different locality — and three
+       identical rows read as a broken list. Transit points go unless
+       they are all there is, and a name repeated within a kilometre is
+       the same place. */
+    const TRANSIT = new Set(['railway', 'public_transport']);
+    const feats = ((await res.json()).features || []).filter(f => f.geometry && f.properties);
+    const places = feats.filter(f => !TRANSIT.has(f.properties.osm_key) && f.properties.osm_value !== 'bus_stop');
+    const out = [];
+    for (const f of (places.length ? places : feats)) {
+      const p = f.properties, [lon, lat] = f.geometry.coordinates;
+      // a road, or a bare address. Not `type: 'house'`: Photon files the
+      // Khan Market attraction under that too.
+      const street = p.osm_key === 'highway' || !p.name;
       const name = p.name || [p.housenumber, p.street].filter(Boolean).join(' ');
       if (!name) continue;
-      const where = p.locality || p.district || p.city || '';
-      const key = (name + '|' + where).toLowerCase();
-      if (seen.has(key)) continue;
-      seen.add(key);
-      out.push({
-        name, where,
-        loc: fromAddress({ lat, lon, display_name: name,
-          address: { postcode: p.postcode, suburb: p.locality || p.district, city: p.city } })
-      });
+      const twin = out.findIndex(o => o.name.toLowerCase() === name.toLowerCase() && km([o.loc.lat, o.loc.lon], [lat, lon]) < 1);
+      // the market beats the road named after it
+      if (twin >= 0 && (street || !out[twin].street)) continue;
+      const loc = fromAddress({ lat, lon, display_name: name,
+        address: { postcode: p.postcode, suburb: p.locality || p.district, city: p.city } });
+      /* A market or a park is a fine thing to call where you are; a
+         street is not — the header never names the street you typed. */
+      if (!street) loc.area = name;
+      const where = street ? (p.locality || p.district || p.city || '')
+                           : [kindOf(p), p.locality || p.district].filter(Boolean).join(' · ');
+      const row = { name, where, loc, street };
+      if (twin >= 0) out[twin] = row; else out.push(row);
       if (out.length === 5) break;
     }
     return out;

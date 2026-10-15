@@ -4168,11 +4168,22 @@ const App = (() => {
         .slice(0, 6).map(x => x[1]);
     }
 
+    /* Every word typed has to appear in the suggestion: Photon will
+       offer "fruit and vegetables market" for "khan market". And a
+       place already listed as a neighbourhood is not listed twice. */
+    const words = t => fold(t).replace(/[^a-z0-9]+/g, ' ').trim();
+    function relevant(p, q, shown) {
+      if (shown.has(fold(p.name))) return false;
+      const hay = ' ' + words(p.name + ' ' + p.where) + ' ';
+      return words(q).split(' ').every(w => hay.includes(' ' + w));
+    }
+
     function draw() {
       const q = input.value.trim();
       if (!q) { close(); return; }
-      rows = matches(q).map(z => ({ kind: 'zone', z }))
-        .concat(places.filter(p => p.q === q).map(p => ({ kind: 'place', p })));
+      const zs = matches(q), shown = new Set(zs.map(z => fold(z.name)));
+      rows = zs.map(z => ({ kind: 'zone', z }))
+        .concat(places.filter(p => p.q === q && relevant(p, q, shown)).map(p => ({ kind: 'place', p })));
       rows.push({ kind: 'address', q });
       active = rows.length > 1 ? 0 : -1;
       list.innerHTML = rows.map((r, i) => r.kind === 'place'
