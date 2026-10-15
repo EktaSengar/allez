@@ -20,7 +20,11 @@ const subjects = {
   'Lalbagh Botanical Gardens': 'Lal Bagh', 'Cubbon Park': 'Cubbon Park',
   'Khirki Masjid': 'Khirki Mosque', 'The Garden of Five Senses': 'Garden of Five Senses',
   "Mubarak Shah Sayyid's Tomb": 'Kotla Mubarakpur', 'Majnu ka Tilla': 'Majnu-ka-tilla',
-  'City Market': 'K. R. Market', 'Blossom Book House': 'Blossom Book House'
+  'City Market': 'K. R. Market', 'Blossom Book House': 'Blossom Book House',
+  'Russel Market': 'Russell Market', 'Akshara Theatre': 'Akshara Theatre',
+  'Indian Accent': 'Indian Accent', 'Bukhara': 'Bukhara (restaurant)', "Wenger's": "Wenger's",
+  'Moti Mahal': 'Moti Mahal (restaurant)', 'Kunzum Travel Cafe': 'Kunzum Travel Cafe',
+  'Yeshwanthpur APMC Market': 'Yeshwanthpur APMC Yard', 'Meherchand Market': 'Meharchand Market'
 };
 // A photo of the street or market a card is about, where the card is the
 // street or market itself. Never a nearby landmark standing in for a venue.
@@ -33,7 +37,9 @@ const contexts = {
   // Dated events: the venue they happen at, not the event itself.
   'luv-kush-ramlila-2026': 'Red Fort', 'cr-park-durga-puja-2026': 'Chittaranjan Park',
   'shubharambh-garba-2026': 'Bharat Mandapam', 'meri-dilli-dandiya-2026': 'Talkatora Indoor Stadium',
-  'mission-majnu-ka-tilla': 'Majnu-ka-tilla'
+  'mission-majnu-ka-tilla': 'Majnu-ka-tilla',
+  'shahpur-jat-lanes': 'Shahpur Jat', 'kamla-nagar-market': 'Kamla Nagar',
+  'south-extension-market': 'South Extension'
 };
 // Missions and routes by id, where the frame holds the exact subject: the
 // dish a food mission is built on, or a stop on the route.
@@ -41,14 +47,16 @@ const idSubjects = {
   'mission-old-delhi-breakfast': 'Nihari', 'mission-kamla-nagar-chole': 'Chole bhature',
   'mission-cr-park-bengali': 'Mishti doi', 'mission-diwali-mithai': 'Kaju katli',
   'nizamuddin-evening': "Humayun's Tomb", 'lodhi-morning': 'Lodhi Gardens',
-  'old-delhi-diwali-lights': 'Gurdwara Sis Ganj Sahib', 'saket-saidulajab-afternoon': 'Garden of Five Senses'
+  'old-delhi-diwali-lights': 'Gurdwara Sis Ganj Sahib', 'saket-saidulajab-afternoon': 'Garden of Five Senses',
+  'run-agara-lake': 'Agara Lake', 'run-kaikondrahalli': 'Kaikondrahalli Lake', 'run-saul-kere': 'Saul Kere',
+  'green-bengaluru': 'Cubbon Park', 'basavanagudi-sunday': 'Bull Temple'
 };
 
 const docs = [];
 const wanted = new Map();
 for (const city of ['delhi', 'bengaluru']) {
-  for (const tier of ['editorial', 'places', 'nightlife', 'food', 'itineraries', 'events']) {
-    if (city === 'bengaluru' && !['editorial', 'places', 'nightlife'].includes(tier)) continue;
+  for (const tier of ['editorial', 'places', 'nightlife', 'food', 'itineraries', 'events', 'sports']) {
+    if (city === 'bengaluru' && !['editorial', 'places', 'nightlife', 'sports', 'itineraries'].includes(tier)) continue;
     const file = new URL(`../${city}/data/${tier}.json`, import.meta.url);
     const text = await fs.readFile(file, 'utf8');
     const doc = JSON.parse(text);
@@ -120,6 +128,7 @@ for (const [title, records] of wanted) {
       Ulsoor: 'Ulsoor Lake', 'Lodhi Colony': 'Shish Gumbad, Lodhi Gardens',
       Mehrauli: 'Qutb Minar, Mehrauli', Chanakyapuri: 'Akbar Hotel, Chanakyapuri',
       Sadashivanagar: 'Sankey Tank, Sadashivanagar', Basavanagudi: 'Bull Temple, Basavanagudi',
+      'Bull Temple': 'Dodda Ganapathi Temple, beside the Bull Temple',
       'Kotla Mubarakpur': "Mubarak Shah's tomb, Kotla Mubarakpur", 'Majnu-ka-tilla': 'The monastery at Majnu ka Tilla',
       'Chittaranjan Park': 'Chittaranjan Park', 'Garden of Five Senses': 'The sun clock, Garden of Five Senses'
     })[title] || title;
