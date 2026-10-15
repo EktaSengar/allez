@@ -2422,7 +2422,11 @@
       "coordsFrom": "osm way/38696291 (preserve)",
       "hours": "sunrise-sunset",
       "hoursFrom": "openspace.org — Midpen preserves are open from a half-hour before sunrise to a half-hour after sunset",
-      "hoursNote": "Half an hour before sunrise until half an hour after sunset"
+      "hoursNote": "Half an hour before sunrise until half an hour after sunset",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/SanFranciscoBayFromPulgasRidge.jpg/1280px-SanFranciscoBayFromPulgasRidge.jpg",
+      "imageSubject": "Pulgas Ridge Open Space Preserve",
+      "imageKind": "subject",
+      "imageCredit": "Elf · CC BY-SA 4.0"
     },
     {
       "id": "climb-movement-sunnyvale",
@@ -2464,7 +2468,11 @@
       "hoursFrom": "movementgyms.com/sunnyvale",
       "hoursChecked": "2026-09-28",
       "booking": "https://movementgyms.com/sunnyvale/climbing/youth-programs/after-school-weekly-programs/",
-      "priceLevel": 2
+      "priceLevel": 2,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Historic_Murphy_Avenue%2C_Sunnyvale_%28May_2025%29_%28cropped%29.jpg/1280px-Historic_Murphy_Avenue%2C_Sunnyvale_%28May_2025%29_%28cropped%29.jpg",
+      "imageSubject": "Sunnyvale, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }
