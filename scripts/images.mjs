@@ -202,6 +202,18 @@ const QUERIES = {
   'saratoga-bagels': 'Saratoga, California',
   'climb-movement-sunnyvale': 'Sunnyvale, California',
 
+  // Paris — gaps filled October 2026
+  'opera-bastille': "Opéra Bastille",
+  'palais-garnier': "Palais Garnier",
+  'cordon-bleu-workshops': "Le Cordon Bleu",
+  'cafe-pli-parmentier': "Avenue Parmentier",
+  'le-foodist': "Rue du Cardinal-Lemoine",
+  'cook-n-with-class': "Montmartre",
+  'impro-academy': "Rue de Cléry",
+  'french-english-theatre-workshop': "Rue des Cordelières",
+  'paris-choral-society': "Avenue George-V",
+  'paris-tennis-courts': "Stade Roland-Garros",
+  'mission-unknown-bread': "Baguette",
   // events
   'villette-open-air-cinema-2026': 'Parc de la Villette',
   'paris-plages-2026': 'Bassin de la Villette',
@@ -668,6 +680,7 @@ const CONTEXT_ONLY = new Set([
   'ride-golden-gate-sausalito', 'ride-portola-loop', 'ride-old-la-honda', 'fleet-week-2026',
   'orens-hummus-university', 'ettan-palo-alto', 'rooh-palo-alto', 'khazana-palo-alto', 'pho-ha-noi-palo-alto',
   'local-union-271', 'bevri-palo-alto', 'taverna-palo-alto',
+  'cafe-pli-parmentier', 'le-foodist', 'cook-n-with-class', 'impro-academy', 'french-english-theatre-workshop', 'paris-choral-society', 'paris-tennis-courts', 'mission-unknown-bread',
   'meyhouse-palo-alto', 'evvia-palo-alto', 'saint-michaels-alley-palo-alto', 'mendocino-farms-palo-alto', 'sweet-maple-palo-alto', 'yummy-future-palo-alto', 'philz-coffee-forest-palo-alto', 'kirks-steakburgers-palo-alto', 'covour-coffee-palo-alto', 'meyhouse-jazz', 'nola-palo-alto', 'zaytinya-stanford', 'delarosa-stanford', 'dumpling-time-stanford', 'rh-rooftop-stanford', 'la-baguette-stanford', 'coho-stanford', 'orchard-valley-coffee-campbell', 'lookout-coffee-campbell', 'nox-cookie-bar-campbell', 'flower-flour-pruneyard', 'jiaren-cafe-santa-clara', 'big-mug-coffee-roaster', 'portuguese-tasty-desserts', 'sues-gallery-cafe', 'big-basin-cafe', 'saratoga-bagels', 'climb-movement-sunnyvale',
   'junior-museum-zoo', 'ride-stevens-creek-trail', 'bedwell-bayfront-park', 'mitchell-park-magical-bridge', 'alpine-inn-portola-valley',
   'frost-amphitheater', 'black-cat-sf', 'bats-improv', 'tosca-cafe', 'li-po-lounge', 'trick-dog', 'zam-zam', 'rose-and-crown-pa', 'dutch-goose', 'british-bankers-club',
