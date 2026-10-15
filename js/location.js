@@ -232,40 +232,107 @@ const Loc = (() => {
     suburb: 'Area', neighbourhood: 'Area', quarter: 'Area', city: 'Town', town: 'Town', village: 'Village' };
   const kindOf = p => KIND_NAMES[p.osm_value] || '';
 
+  /* What sort of thing a result is, for ordering. A park, a landmark
+     or a mall is somewhere a person might say they are; a toilet block,
+     a pier gate or a car-park entrance is a part of one. */
+  const MAJOR = new Set(['park', 'attraction', 'museum', 'mall', 'marketplace', 'university',
+    'suburb', 'neighbourhood', 'quarter', 'city', 'town', 'village', 'residential', 'stadium',
+    'college', 'square', 'garden', 'zoo', 'theme_park', 'viewpoint', 'beach']);
+  const MINOR = new Set(['toilets', 'assembly_point', 'pier', 'entrance', 'parking', 'parking_entrance',
+    'atm', 'bench', 'waste_basket', 'drinking_water', 'gate', 'vending_machine', 'post_box']);
+  const TRANSIT = new Set(['railway', 'public_transport']);
+  const isTransit = p => TRANSIT.has(p.osm_key) || p.osm_value === 'bus_stop';
+
   async function suggest(query, signal) {
     const [s, w, n, e] = City.bbox.split(',');
+    /* Biased towards wherever the reader is: there is a University
+       Avenue in Palo Alto, Berkeley and Mountain View, and the one you
+       mean is the one near you. Rounded to two decimals, a kilometre or
+       so — the same precision the weather service gets. */
+    const a = active();
+    const near = a ? `&lat=${a.lat.toFixed(2)}&lon=${a.lon.toFixed(2)}` : '';
     const url = 'https://photon.komoot.io/api/'
-      + `?q=${encodeURIComponent(query)}&limit=12&bbox=${w},${s},${e},${n}`;
+      + `?q=${encodeURIComponent(query)}&limit=20&bbox=${w},${s},${e},${n}${near}`;
     const res = await fetch(url, { signal });
     if (!res.ok) return [];
-    /* One row per real place. A busy name comes back many times over —
-       "Khan Market" is a market, a Metro station, four station exits and
-       a bus stop, each filed under a different locality — and three
-       identical rows read as a broken list. Transit points go unless
-       they are all there is, and a name repeated within a kilometre is
-       the same place. */
-    const TRANSIT = new Set(['railway', 'public_transport']);
+
+    /* One row per real place, best first.
+
+       Photon orders by text match, and a busy name comes back many
+       times over: "Khan Market" is a road, a Metro station, four exits
+       and the market; "Dolores Park" is five businesses and a restroom
+       before the park itself. So: an exact name beats a longer one, a
+       place beats a facility inside it, and a stop is kept only when
+       nothing else answers to the name — "Ferry Building" is, as far as
+       OpenStreetMap's names go, mostly tram stops. A name repeated
+       within a kilometre is the same place, and the place beats the
+       road named after it. */
+    const fold = t => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    /* Every word typed has to be in the name or where it is, with the
+       usual abbreviations read both ways — "university ave" is not a
+       request for a university. */
+    const ABBR = { ave: 'avenue', st: 'street', rd: 'road', blvd: 'boulevard', dr: 'drive',
+                   ln: 'lane', pl: 'place', sq: 'square', mt: 'mount', ft: 'fort', marg: 'marg' };
+    const words = t => fold(t).replace(/[^a-z0-9]+/g, ' ').trim()
+      .split(' ').map(w => ABBR[w] || w).join(' ');
+    const q = words(query);
+    const relevant = p => {
+      // the street only when there is no name: San Francisco State is on
+      // Holloway Avenue, and is still not an answer to "university ave"
+      const hay = ' ' + words([p.name || p.street, p.locality, p.district, p.city].join(' ')) + ' ';
+      // whole words, except the last — that one may still be being typed
+      const ws = q.split(' ');
+      return ws.every((w, i) => hay.includes(' ' + w + (i < ws.length - 1 ? ' ' : '')));
+    };
     const feats = ((await res.json()).features || []).filter(f => f.geometry && f.properties);
-    const places = feats.filter(f => !TRANSIT.has(f.properties.osm_key) && f.properties.osm_value !== 'bus_stop');
+    const named = new Set(feats.filter(f => !isTransit(f.properties)).map(f => fold(f.properties.name)));
+    const score = (p, i, f) => {
+      const nm = words(p.name);
+      let v = -i * 0.1;                                   // keep Photon's order as the tiebreak
+      // nearer is better: up to three points over thirty kilometres
+      if (a) v -= Math.min(3, km([a.lat, a.lon], [f.geometry.coordinates[1], f.geometry.coordinates[0]]) / 10);
+      if (nm === q) v += 4; else if (nm.startsWith(q)) v += 1.5;
+      if ((' ' + nm + ' ').includes(' ' + q + ' ')) v += 1; // the whole phrase, as words
+      // not for roads: OpenStreetMap calls a quiet street `residential` too
+      if (MAJOR.has(p.osm_value) && p.osm_key !== 'highway') v += 3;
+      if (MINOR.has(p.osm_value)) v -= 3;
+      if (p.osm_value === 'hotel') v += 1;               // where you might be staying
+      if (isTransit(p)) v -= named.has(fold(p.name)) ? 10 : 2.5;
+      return v;
+    };
+    const ranked = feats.filter(f => relevant(f.properties)).map((f, i) => [score(f.properties, i, f), f])
+      .filter(([v]) => v > -5).sort((x, y) => y[0] - x[0]).map(x => x[1]);
+
     const out = [];
-    for (const f of (places.length ? places : feats)) {
+    for (const f of ranked) {
       const p = f.properties, [lon, lat] = f.geometry.coordinates;
       // a road, or a bare address. Not `type: 'house'`: Photon files the
       // Khan Market attraction under that too.
       const street = p.osm_key === 'highway' || !p.name;
       const name = p.name || [p.housenumber, p.street].filter(Boolean).join(' ');
       if (!name) continue;
-      const twin = out.findIndex(o => o.name.toLowerCase() === name.toLowerCase() && km([o.loc.lat, o.loc.lon], [lat, lon]) < 1);
-      // the market beats the road named after it
+      // the same name within a kilometre — three when one of them has no
+      // quarter to tell them apart. Further than that it is another
+      // town's University Avenue, and both stay.
+      const local = p.locality || p.district;
+      const town = p.city && p.city !== local && !City.name.includes(p.city) ? p.city : '';
+      const place = [local, town].filter(Boolean).join(', ');
+      // the same name within a kilometre, or in the same quarter (a long
+      // street comes back once per segment), or with no place to tell
+      // the two apart. Another town's University Avenue stays.
+      const twin = out.findIndex(o => words(o.name) === words(name) &&
+        (km([o.loc.lat, o.loc.lon], [lat, lon]) < 1 || o.place === place || !o.place || !place));
+      // results arrive best first, so a twin is only ever replaced by a
+      // place standing in for the road named after it
       if (twin >= 0 && (street || !out[twin].street)) continue;
       const loc = fromAddress({ lat, lon, display_name: name,
         address: { postcode: p.postcode, suburb: p.locality || p.district, city: p.city } });
       /* A market or a park is a fine thing to call where you are; a
          street is not — the header never names the street you typed. */
       if (!street) loc.area = name;
-      const where = street ? (p.locality || p.district || p.city || '')
-                           : [kindOf(p), p.locality || p.district].filter(Boolean).join(' · ');
-      const row = { name, where, loc, street };
+      const kind = isTransit(p) ? 'Station' : kindOf(p);
+      const where = [street ? '' : kind, place].filter(Boolean).join(' · ');
+      const row = { name, where, loc, street, place };
       if (twin >= 0) out[twin] = row; else out.push(row);
       if (out.length === 5) break;
     }

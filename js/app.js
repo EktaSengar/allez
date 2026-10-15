@@ -4168,14 +4168,10 @@ const App = (() => {
         .slice(0, 6).map(x => x[1]);
     }
 
-    /* Every word typed has to appear in the suggestion: Photon will
-       offer "fruit and vegetables market" for "khan market". And a
-       place already listed as a neighbourhood is not listed twice. */
-    const words = t => fold(t).replace(/[^a-z0-9]+/g, ' ').trim();
+    /* A place already listed as a neighbourhood is not listed twice.
+       Whether a result matches what was typed is Loc.suggest's job. */
     function relevant(p, q, shown) {
-      if (shown.has(fold(p.name))) return false;
-      const hay = ' ' + words(p.name + ' ' + p.where) + ' ';
-      return words(q).split(' ').every(w => hay.includes(' ' + w));
+      return !shown.has(fold(p.name));
     }
 
     function draw() {
