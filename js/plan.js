@@ -65,6 +65,14 @@ const Plan = (() => {
   const isEdible = i =>
     ['bakery', 'cafe', 'market'].includes(i.type) || (i.labels || []).includes('foodmission');
 
+  /* Free only on evidence — a price of 0, a level of 0, or a note that
+     says so. A record that states no price is unknown, not free. And a
+     place you go to eat or drink is never the free pick, whatever it says. */
+  const PAY_TO_STAY = ['restaurant', 'cafe', 'bakery', 'deli', 'bar', 'speakeasy', 'club', 'nightlife'];
+  const isFree = i =>
+    !PAY_TO_STAY.includes(i.type) && !(i.labels || []).includes('foodmission') &&
+    (Rank.priceLevel(i) === 0 || /^free\b/i.test(i.priceNote || ''));
+
   /* ---------- dates ----------
 
      Local calendar dates, stepped from noon, so a daylight-saving night
@@ -461,7 +469,7 @@ const Plan = (() => {
 
   const PICKS = [
     ['best',    null],
-    ['free',    i => !i.price],
+    ['free',    isFree],
     ['food',    isEdible],
     ['unusual', i => (i.uniqueness || 0) >= 5],
     ['daytrip', i => i.type === 'daytrip']
