@@ -239,7 +239,7 @@ const Loc = (() => {
     'suburb', 'neighbourhood', 'quarter', 'city', 'town', 'village', 'residential', 'stadium',
     'college', 'square', 'garden', 'zoo', 'theme_park', 'viewpoint', 'beach']);
   const MINOR = new Set(['toilets', 'assembly_point', 'pier', 'entrance', 'parking', 'parking_entrance',
-    'atm', 'bench', 'waste_basket', 'drinking_water', 'gate', 'vending_machine', 'post_box']);
+    'bicycle_rental', 'charging_station', 'car_rental', 'fuel', 'atm', 'bench', 'waste_basket', 'drinking_water', 'gate', 'vending_machine', 'post_box']);
   const TRANSIT = new Set(['railway', 'public_transport']);
   const isTransit = p => TRANSIT.has(p.osm_key) || p.osm_value === 'bus_stop';
 
@@ -251,10 +251,11 @@ const Loc = (() => {
        so — the same precision the weather service gets. */
     const a = active();
     const near = a ? `&lat=${a.lat.toFixed(2)}&lon=${a.lon.toFixed(2)}` : '';
-    const url = 'https://photon.komoot.io/api/'
-      + `?q=${encodeURIComponent(query)}&limit=20&bbox=${w},${s},${e},${n}${near}`;
-    const res = await fetch(url, { signal });
-    if (!res.ok) return [];
+    const ask = async t => {
+      const res = await fetch('https://photon.komoot.io/api/'
+        + `?q=${encodeURIComponent(t)}&limit=20&bbox=${w},${s},${e},${n}${near}`, { signal });
+      return res.ok ? ((await res.json()).features || []) : [];
+    };
 
     /* One row per real place, best first.
 
@@ -273,8 +274,12 @@ const Loc = (() => {
        request for a university. */
     const ABBR = { ave: 'avenue', st: 'street', rd: 'road', blvd: 'boulevard', dr: 'drive',
                    ln: 'lane', pl: 'place', sq: 'square', mt: 'mount', ft: 'fort', marg: 'marg' };
+    /* At the front of a name these mean something else: "St Marks
+       Place" is a saint, and French puts the street type first — "bd
+       Saint-Germain", "av. de l'Opéra". */
+    const FIRST = { st: 'saint', bd: 'boulevard', bld: 'boulevard', av: 'avenue' };
     const words = t => fold(t).replace(/[^a-z0-9]+/g, ' ').trim()
-      .split(' ').map(w => ABBR[w] || w).join(' ');
+      .split(' ').map((w, i) => (!i && FIRST[w]) || ABBR[w] || w).join(' ');
     const q = words(query);
     const relevant = p => {
       // the street only when there is no name: San Francisco State is on
@@ -282,9 +287,26 @@ const Loc = (() => {
       const hay = ' ' + words([p.name || p.street, p.locality, p.district, p.city].join(' ')) + ' ';
       // whole words, except the last — that one may still be being typed
       const ws = q.split(' ');
-      return ws.every((w, i) => hay.includes(' ' + w + (i < ws.length - 1 ? ' ' : '')));
+      return ws.every((w, i) => hay.includes(' ' + w + (i < ws.length - 1 ? ' ' : '')))
+        || hay.replace(/ /g, '').includes(q.replace(/ /g, ''));
     };
-    const feats = ((await res.json()).features || []).filter(f => f.geometry && f.properties);
+    /* Nothing at all usually means a word written differently from the
+       map — "marketcity" for Phoenix Market City. Asking again without
+       the last word finds it, and `relevant` still checks the whole
+       query, ignoring spaces. */
+    /* The map spells streets out — "Bedford Avenue" — while people type
+       "bedford ave", and Photon matches the letters, so the short form
+       finds every laundromat with "Ave" in its name before the avenue. */
+    // never the first word: "St Marks Place" is a saint, not a street
+    const spelled = query.trim().split(/\s+/)
+      .map((t, i) => {
+        const k = fold(t).replace(/\./g, '');
+        return i ? (ABBR[k] || t) : (FIRST[k] || t);
+      }).join(' ');
+    let raw = await ask(spelled);
+    const parts = query.trim().split(/\s+/);
+    if (!raw.length && parts.length > 1) raw = await ask(parts.slice(0, -1).join(' '));
+    const feats = raw.filter(f => f.geometry && f.properties);
     const named = new Set(feats.filter(f => !isTransit(f.properties)).map(f => fold(f.properties.name)));
     const score = (p, i, f) => {
       const nm = words(p.name);
@@ -321,7 +343,8 @@ const Loc = (() => {
       // street comes back once per segment), or with no place to tell
       // the two apart. Another town's University Avenue stays.
       const twin = out.findIndex(o => words(o.name) === words(name) &&
-        (km([o.loc.lat, o.loc.lon], [lat, lon]) < 1 || o.place === place || !o.place || !place));
+        (km([o.loc.lat, o.loc.lon], [lat, lon]) < (street && o.street ? 3 : 1)
+         || o.place === place || !o.place || !place));
       // results arrive best first, so a twin is only ever replaced by a
       // place standing in for the road named after it
       if (twin >= 0 && (street || !out[twin].street)) continue;
