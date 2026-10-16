@@ -228,7 +228,8 @@ const Loc = (() => {
      wants it as west,south,east,north. Results go through fromAddress,
      so a suggestion is stored exactly like a searched place. */
   const KIND_NAMES = { marketplace: 'Market', mall: 'Mall', park: 'Park', station: 'Station',
-    attraction: 'Attraction', hotel: 'Hotel', university: 'University', residential: 'Area',
+    attraction: 'Attraction', monument: 'Monument', memorial: 'Memorial', fort: 'Fort',
+    retail: 'Shopping area', commercial: 'Shopping area', hotel: 'Hotel', university: 'University', residential: 'Area',
     suburb: 'Area', neighbourhood: 'Area', quarter: 'Area', city: 'Town', town: 'Town', village: 'Village' };
   const kindOf = p => KIND_NAMES[p.osm_value] || '';
 
@@ -237,13 +238,24 @@ const Loc = (() => {
      a pier gate or a car-park entrance is a part of one. */
   const MAJOR = new Set(['park', 'attraction', 'museum', 'mall', 'marketplace', 'university',
     'suburb', 'neighbourhood', 'quarter', 'city', 'town', 'village', 'residential', 'stadium',
-    'college', 'square', 'garden', 'zoo', 'theme_park', 'viewpoint', 'beach']);
+    'college', 'monument', 'memorial', 'castle', 'fort', 'ruins', 'archaeological_site', 'city_gate',
+    'retail', 'commercial', 'square', 'garden', 'zoo', 'theme_park', 'viewpoint', 'beach']);
   const MINOR = new Set(['toilets', 'assembly_point', 'pier', 'entrance', 'parking', 'parking_entrance',
     'bicycle_rental', 'charging_station', 'car_rental', 'fuel', 'atm', 'bench', 'waste_basket', 'drinking_water', 'gate', 'vending_machine', 'post_box']);
   const TRANSIT = new Set(['railway', 'public_transport']);
   const isTransit = p => TRANSIT.has(p.osm_key) || p.osm_value === 'bus_stop';
 
+  /* A pack's shorthands, longest phrase first and whole words only. */
+  const ALIASES = Object.entries(City.aliases || {}).sort((x, y) => y[0].length - x[0].length);
+  function unalias(query) {
+    let t = ' ' + query.toLowerCase().replace(/\s+/g, ' ').trim() + ' ';
+    for (const [k, v] of ALIASES) t = t.split(' ' + k + ' ').join(' ' + v + ' ');
+    return t.trim();
+  }
+
   async function suggest(query, signal) {
+    // the city's own shorthands first — "cp", "gk 2", "ues"
+    query = unalias(query);
     const [s, w, n, e] = City.bbox.split(',');
     /* Biased towards wherever the reader is: there is a University
        Avenue in Palo Alto, Berkeley and Mountain View, and the one you
