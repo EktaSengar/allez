@@ -857,7 +857,15 @@ const City = (() => {
     'ncr': 'delhi', 'gurgaon': 'gurugram', 'saket mall': 'select citywalk'
   };
 
-  return { id, name, ua, bbox, serviceWorker, aliases, nightNotes, zone, air, seasons, reach, notable, luma, conferences, lumaPage, practices, discover,
+  /* Somewhere worth naming alongside a search, chosen by hand. Typing
+     "khan market" should offer the bookshop that has been there since
+     1931, not the police post at the gate. Each value is looked up on
+     the map like anything typed, so nothing here carries coordinates. */
+  const featured = {
+    'khan market': ['Faqir Chand & Sons']
+  };
+
+  return { id, name, ua, bbox, serviceWorker, aliases, featured, nightNotes, zone, air, seasons, reach, notable, luma, conferences, lumaPage, practices, discover,
            centre, views, holidays, shutsOnHoliday, money, weather };
 })();
 

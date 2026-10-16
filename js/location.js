@@ -228,7 +228,7 @@ const Loc = (() => {
      wants it as west,south,east,north. Results go through fromAddress,
      so a suggestion is stored exactly like a searched place. */
   const KIND_NAMES = { marketplace: 'Market', mall: 'Mall', park: 'Park', station: 'Station',
-    attraction: 'Attraction', monument: 'Monument', memorial: 'Memorial', fort: 'Fort',
+    attraction: 'Attraction', books: 'Bookshop', monument: 'Monument', memorial: 'Memorial', fort: 'Fort',
     retail: 'Shopping area', commercial: 'Shopping area', hotel: 'Hotel', university: 'University', residential: 'Area',
     suburb: 'Area', neighbourhood: 'Area', quarter: 'Area', city: 'Town', town: 'Town', village: 'Village' };
   const kindOf = p => KIND_NAMES[p.osm_value] || '';
@@ -242,6 +242,8 @@ const Loc = (() => {
     'retail', 'commercial', 'square', 'garden', 'zoo', 'theme_park', 'viewpoint', 'beach']);
   const MINOR = new Set(['toilets', 'assembly_point', 'pier', 'entrance', 'parking', 'parking_entrance',
     'bicycle_rental', 'charging_station', 'car_rental', 'fuel', 'atm', 'bench', 'waste_basket', 'drinking_water', 'gate', 'vending_machine', 'post_box']);
+  // nobody is "at" a police post — left out, not just ranked down
+  const SKIP = new Set(['police', 'fire_station', 'prison', 'ranger_station']);
   const TRANSIT = new Set(['railway', 'public_transport']);
   const isTransit = p => TRANSIT.has(p.osm_key) || p.osm_value === 'bus_stop';
 
@@ -318,7 +320,7 @@ const Loc = (() => {
     let raw = await ask(spelled);
     const parts = query.trim().split(/\s+/);
     if (!raw.length && parts.length > 1) raw = await ask(parts.slice(0, -1).join(' '));
-    const feats = raw.filter(f => f.geometry && f.properties);
+    const feats = raw.filter(f => f.geometry && f.properties && !SKIP.has(f.properties.osm_value));
     const named = new Set(feats.filter(f => !isTransit(f.properties)).map(f => fold(f.properties.name)));
     const score = (p, i, f) => {
       const nm = words(p.name);
@@ -371,7 +373,24 @@ const Loc = (() => {
       if (twin >= 0) out[twin] = row; else out.push(row);
       if (out.length === 5) break;
     }
-    return out;
+    /* The pack's own picks for this search, straight after the best
+       match: a lookup each, by name, so a pick is placed by the map
+       like any other result. */
+    const picks = (City.featured || {})[words(query)] || [];
+    for (const name of picks.slice().reverse()) {
+      const found = (await ask(name)).filter(f => f.geometry && f.properties);
+      const hit = found.find(f => words(f.properties.name) === words(name)) || found[0];
+      if (!hit) continue;
+      const p = hit.properties, [lon, lat] = hit.geometry.coordinates;
+      const loc = fromAddress({ lat, lon, display_name: p.name,
+        address: { postcode: p.postcode, suburb: p.locality || p.district, city: p.city } });
+      loc.area = p.name;
+      const row = { name: p.name, where: [kindOf(p), p.locality || p.district].filter(Boolean).join(' · '), loc };
+      const at = out.findIndex(o => words(o.name) === words(p.name));
+      if (at >= 0) out.splice(at, 1);
+      out.splice(Math.min(1, out.length), 0, row);
+    }
+    return out.slice(0, 5);
   }
 
   async function locate() {
