@@ -4227,7 +4227,8 @@ const App = (() => {
     function fetchPlaces() {
       clearTimeout(timer);
       const q = input.value.trim();
-      if (q.length < 3) return;
+      // two, not three: "cp" is a whole place name in Delhi
+      if (q.length < 2) return;
       timer = setTimeout(async () => {
         if (inflight) inflight.abort();
         inflight = new AbortController();

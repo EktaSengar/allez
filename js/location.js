@@ -239,7 +239,7 @@ const Loc = (() => {
   const MAJOR = new Set(['park', 'attraction', 'museum', 'mall', 'marketplace', 'university',
     'suburb', 'neighbourhood', 'quarter', 'city', 'town', 'village', 'residential', 'stadium',
     'college', 'monument', 'memorial', 'castle', 'fort', 'ruins', 'archaeological_site', 'city_gate',
-    'retail', 'commercial', 'square', 'garden', 'zoo', 'theme_park', 'viewpoint', 'beach']);
+ 'square', 'garden', 'zoo', 'theme_park', 'viewpoint', 'beach']);
   const MINOR = new Set(['toilets', 'assembly_point', 'pier', 'entrance', 'parking', 'parking_entrance',
     'bicycle_rental', 'charging_station', 'car_rental', 'fuel', 'atm', 'bench', 'waste_basket', 'drinking_water', 'gate', 'vending_machine', 'post_box']);
   // nobody is "at" a police post — left out, not just ranked down
@@ -265,9 +265,14 @@ const Loc = (() => {
        so — the same precision the weather service gets. */
     const a = active();
     const near = a ? `&lat=${a.lat.toFixed(2)}&lon=${a.lon.toFixed(2)}` : '';
+    /* Names in the language people type them in. Left to the browser,
+       Photon answered "Luxembourg Garden" to "jardin du luxembourg",
+       and the garden failed its own match. A pack may say; English
+       otherwise, which also keeps Delhi's names out of Devanagari. */
+    const lang = City.searchLang || 'en';
     const ask = async t => {
       const res = await fetch('https://photon.komoot.io/api/'
-        + `?q=${encodeURIComponent(t)}&limit=20&bbox=${w},${s},${e},${n}${near}`, { signal });
+        + `?q=${encodeURIComponent(t)}&limit=20&bbox=${w},${s},${e},${n}${near}&lang=${lang}`, { signal });
       return res.ok ? ((await res.json()).features || []) : [];
     };
 
@@ -325,13 +330,18 @@ const Loc = (() => {
     const score = (p, i, f) => {
       const nm = words(p.name);
       let v = -i * 0.1;                                   // keep Photon's order as the tiebreak
-      // nearer is better: up to three points over thirty kilometres
-      if (a) v -= Math.min(3, km([a.lat, a.lon], [f.geometry.coordinates[1], f.geometry.coordinates[0]]) / 10);
+      // nearer is better: up to five points over thirty kilometres. Three
+      // let an exact "Whole Foods" in Los Gatos beat the Whole Foods
+      // Market in Redwood City for somebody living in Redwood City.
+      if (a) v -= Math.min(5, km([a.lat, a.lon], [f.geometry.coordinates[1], f.geometry.coordinates[0]]) / 6);
       if (nm === q) v += 4; else if (nm.startsWith(q)) v += 1.5;
       if ((' ' + nm + ' ').includes(' ' + q + ' ')) v += 1; // the whole phrase, as words
       // not for roads: OpenStreetMap calls a quiet street `residential` too
       if (MAJOR.has(p.osm_value) && p.osm_key !== 'highway') v += 3;
       if (MINOR.has(p.osm_value)) v -= 3;
+      // a shopping area counts for something, not as much as a landmark:
+      // a supermarket's car park is mapped the same way as M Block Market
+      if (p.osm_key === 'landuse' && (p.osm_value === 'retail' || p.osm_value === 'commercial')) v += 1;
       if (p.osm_value === 'hotel') v += 1;               // where you might be staying
       if (isTransit(p)) v -= named.has(fold(p.name)) ? 10 : 2.5;
       return v;

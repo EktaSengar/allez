@@ -490,7 +490,17 @@ const City = (() => {
     ]
   };
 
-  return { id, name, ua, bbox, serviceWorker, nightNotes, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather, notable, luma, conferences, lumaPage, practices, discover };
+  /* What people type for places the map spells out — read by the
+     location box. See cities/delhi for how they are applied. */
+  const aliases = {
+    'mg road': 'mahatma gandhi road', 'hsr': 'hsr layout', 'btm': 'btm layout',
+    'ecity': 'electronic city', 'e city': 'electronic city',
+    // not the airport: Devanahalli is outside the box searches stay in
+    'iisc': 'indian institute of science',
+    'cbd': 'mahatma gandhi road', 'ub': 'ub city'
+  };
+
+  return { id, name, ua, bbox, serviceWorker, aliases, nightNotes, zone, reach, centre, views, holidays, shutsOnHoliday, money, weather, notable, luma, conferences, lumaPage, practices, discover };
 })();
 
 if (typeof module !== 'undefined' && module.exports) module.exports = City;

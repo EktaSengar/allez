@@ -335,7 +335,11 @@ const City = (() => {
      `buildings`: places drawn as a building outline as well as a pin. */
   const discover = { buildings: true };
 
-  return { id, name, ua, bbox, discover, epigraphs, nightNotes, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma, conferences, lumaPage };
+
+  // what the location box asks the place finder to name things in
+  const searchLang = 'fr';
+
+  return { searchLang, id, name, ua, bbox, discover, epigraphs, nightNotes, serviceWorker, zone, reach, views, holidays, shutsOnHoliday, money, weather, notable, practices, luma, conferences, lumaPage };
 })();
 
 /* Node loads this through scripts/shim.mjs, which evaluates it the same
