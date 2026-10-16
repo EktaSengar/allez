@@ -917,7 +917,16 @@ const City = (() => {
      `buildings`: places drawn as a building outline as well as a pin. */
   const discover = { buildings: true };
 
-  return { id, name, searchRegion, ua, bbox, discover, serviceWorker, nightNotes, zone, reach, centre, views,
+  /* What New Yorkers type for places the map spells out — read by the
+     location box. See cities/delhi for how they are applied. */
+  const aliases = {
+    'ues': 'upper east side', 'uws': 'upper west side', 'les': 'lower east side',
+    'fidi': 'financial district', 'bk': 'brooklyn', 'lic': 'long island city',
+    'wburg': 'williamsburg', 'bed stuy': 'bedford stuyvesant', 'msg': 'madison square garden',
+    'the met': 'metropolitan museum of art', 'moma': 'museum of modern art', 'jfk': 'jfk airport'
+  };
+
+  return { id, name, searchRegion, ua, bbox, aliases, discover, serviceWorker, nightNotes, zone, reach, centre, views,
            holidays, shutsOnHoliday, money, weather, luma, conferences, lumaPage, events, practices };
 })();
 

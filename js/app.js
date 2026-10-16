@@ -4168,11 +4168,18 @@ const App = (() => {
         .slice(0, 6).map(x => x[1]);
     }
 
+    /* A place already listed as a neighbourhood is not listed twice.
+       Whether a result matches what was typed is Loc.suggest's job. */
+    function relevant(p, q, shown) {
+      return !shown.has(fold(p.name));
+    }
+
     function draw() {
       const q = input.value.trim();
       if (!q) { close(); return; }
-      rows = matches(q).map(z => ({ kind: 'zone', z }))
-        .concat(places.filter(p => p.q === q).map(p => ({ kind: 'place', p })));
+      const zs = matches(q), shown = new Set(zs.map(z => fold(z.name)));
+      rows = zs.map(z => ({ kind: 'zone', z }))
+        .concat(places.filter(p => p.q === q && relevant(p, q, shown)).map(p => ({ kind: 'place', p })));
       rows.push({ kind: 'address', q });
       active = rows.length > 1 ? 0 : -1;
       list.innerHTML = rows.map((r, i) => r.kind === 'place'
@@ -4220,7 +4227,8 @@ const App = (() => {
     function fetchPlaces() {
       clearTimeout(timer);
       const q = input.value.trim();
-      if (q.length < 3) return;
+      // two, not three: "cp" is a whole place name in Delhi
+      if (q.length < 2) return;
       timer = setTimeout(async () => {
         if (inflight) inflight.abort();
         inflight = new AbortController();
