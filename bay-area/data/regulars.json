@@ -745,6 +745,97 @@
       "durationMin": 90,
       "priceLevel": 3,
       "booking": "https://www.paloalto.gov/Departments/Community-Services/Activities-Programs/Enjoy/Enjoy-Catalog"
+    },
+    {
+      "provenance": "editorial",
+      "id": "coastside-farmers-market",
+      "title": "Coastside Farmers' Market",
+      "emoji": "🥕",
+      "type": "market",
+      "mode": "do",
+      "group": "taste",
+      "zone": "half-moon-bay",
+      "coords": [
+        37.4659,
+        -122.43344
+      ],
+      "coordsFrom": "Shoreline Station (osm way/222254147, the next-door caboose)",
+      "categories": [
+        "food",
+        "market",
+        "free"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Saturdays 9 to 1, April to December",
+      "times": "Every Saturday, 9am to 1pm, from April until just before Christmas",
+      "firstStep": "Just turn up on a Saturday morning",
+      "area": "Shoreline Station, 225 Cabrillo Highway South",
+      "price": 0,
+      "priceNote": "Free to walk round",
+      "indoor": false,
+      "url": "https://www.coastsidefarmersmarkets.org/",
+      "source": "Coastside Farmers' Markets",
+      "lastVerified": "2026-10-16",
+      "why": "Coastside farmers selling what grows in the fog: artichokes, Brussels sprouts, berries, flowers, and in autumn, pumpkins. Fishermen from the harbour sell here too. Make it a Saturday: market, then a burger from the caboose next door, then a walk on the beach.",
+      "goodFor": [
+        "morning",
+        "weekend",
+        "family",
+        "food"
+      ],
+      "quality": 4,
+      "uniqueness": 3,
+      "hours": "Sa 09:00-13:00",
+      "hoursFrom": "coastsidefarmersmarkets.org",
+      "hoursChecked": "2026-10-16",
+      "durationMin": 60,
+      "priceLevel": 0,
+      "booking": false,
+      "hoursNote": "Saturdays 9 to 1, from April until just before Christmas; no market in winter"
+    },
+    {
+      "provenance": "editorial",
+      "id": "bach-dancing-dynamite",
+      "title": "Sunday concerts at the Bach Dancing & Dynamite Society",
+      "emoji": "🎷",
+      "type": "music",
+      "mode": "watch",
+      "group": "sing",
+      "zone": "el-granada",
+      "coords": [
+        37.49463,
+        -122.46121
+      ],
+      "coordsFrom": "osm node/11073189645",
+      "categories": [
+        "music",
+        "jazz"
+      ],
+      "rhythm": "weekly",
+      "commitment": "dropin",
+      "cadence": "Most Sundays, 4.30pm",
+      "times": "Jazz and chamber music, mostly on Sunday afternoons at 4.30. The programme is on the calendar",
+      "firstStep": "Pick a Sunday from the calendar. Members can reserve; everyone else turns up early for a seat at the door",
+      "area": "Douglas Beach House, 311 Mirada Road, Miramar Beach",
+      "priceNote": "About $35 to $60 a concert",
+      "indoor": true,
+      "url": "https://bachddsoc.org/calendar/",
+      "source": "bachddsoc.org; Wikipedia",
+      "lastVerified": "2026-10-16",
+      "why": "Since 1964, a beach house on Miramar Beach where serious jazz and chamber musicians play on Sunday afternoons with the ocean through the windows. It is still run by the family of Pete Douglas, who founded it. Mirada Road is one-way because of erosion, so drive in on Medio Avenue.",
+      "goodFor": [
+        "weekend",
+        "afternoon",
+        "couple"
+      ],
+      "quality": 5,
+      "uniqueness": 5,
+      "startTime": "16:30",
+      "hoursNote": "Most Sundays at 4.30pm; check the calendar",
+      "durationMin": 150,
+      "priceLevel": 3,
+      "booking": "https://bachddsoc.org/calendar/"
     }
   ]
 }

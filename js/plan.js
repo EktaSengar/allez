@@ -163,7 +163,7 @@ const Plan = (() => {
 
   function legMinutes(from, item, when, first) {
     const a = from && from.coords, b = coordsOf(item);
-    if (a && b) return City.reach.minutes(Loc.km(a, b), when);
+    if (a && b) return City.reach.minutes(Loc.km(a, b), when, a, b);
     return first ? (item.minutesFromHome ?? null) : null;
   }
 

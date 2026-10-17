@@ -2879,6 +2879,132 @@
       "imageSubject": "Cupertino, California",
       "imageKind": "context",
       "imageCredit": "Coolcaesar at en.wikipedia · CC BY-SA 3.0"
+    },
+    {
+      "type": "venue",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "music"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening"
+      ],
+      "lastVerified": "2026-10-16",
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "old-princeton-landing",
+      "title": "Old Princeton Landing",
+      "emoji": "🎸",
+      "coords": [
+        37.50499,
+        -122.48618
+      ],
+      "coordsFrom": "osm way/391409950",
+      "area": "460 Capistrano Road, Princeton",
+      "zone": "princeton",
+      "priceNote": "Free most nights; ticketed for touring bands",
+      "durationMin": 150,
+      "why": "The harbour's roadhouse, with a stage that has hosted Neil Young & Crazy Horse and the surfer Tom Curren as well as local bands. Most weekends there is live music: rock, funk, reggae, jazz, indie. On the other nights it is a pub with pool tables and fish tacos. It is the only place on the coast where a Saturday goes past ten.",
+      "url": "https://www.opl.bar/",
+      "source": "Visit Half Moon Bay; SF Beer Week; confirmed against OpenStreetMap (way/391409950)",
+      "labels": [
+        "hiddengem"
+      ],
+      "hoursNote": "Live music most weekends; check the calendar for who is on",
+      "priceLevel": 2,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Pillar_Point_Harbor_in_April_2007.jpg/1280px-Pillar_Point_Harbor_in_April_2007.jpg",
+      "imageSubject": "Princeton-by-the-Sea, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "free",
+        "outdoors"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple"
+      ],
+      "setting": [
+        "sunset"
+      ],
+      "lastVerified": "2026-10-16",
+      "quality": 4,
+      "uniqueness": 5,
+      "id": "ritz-bagpiper-sunset",
+      "title": "The bagpiper at sunset",
+      "emoji": "🎶",
+      "coords": [
+        37.43378,
+        -122.44157
+      ],
+      "coordsFrom": "osm way/391400186 (the hotel)",
+      "area": "The Ritz-Carlton's ocean lawn, Miramontes Point Road",
+      "zone": "half-moon-bay",
+      "price": 0,
+      "priceNote": "Free to watch; drinks at the hotel bar are dear",
+      "durationMin": 60,
+      "why": "Most evenings a piper in a kilt walks the clifftop golf course above the Ritz-Carlton at sunset and plays as the light goes. The Coastal Trail runs right past and the coastal access is public, so you can watch without staying. Bring a jacket, then either take a drink by the fire pits on the lawn or walk back along the bluff in the dusk.",
+      "url": "https://www.ritzcarlton.com/",
+      "source": "Forbes Travel Guide; 7x7; public coastal access confirmed against OpenStreetMap",
+      "labels": [
+        "hiddengem"
+      ],
+      "hoursNote": "About sunset most evenings; when and where he starts varies, so arrive early",
+      "priceLevel": 0,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Ritz_Carlton_HMB_in_the_age_of_COVID_%2849812323307%29.jpg/1280px-Ritz_Carlton_HMB_in_the_age_of_COVID_%2849812323307%29.jpg",
+      "imageSubject": "Ritz-Carlton Half Moon Bay",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife"
+      ],
+      "indoor": true,
+      "goodFor": [
+        "evening",
+        "afternoon"
+      ],
+      "lastVerified": "2026-10-16",
+      "quality": 3,
+      "uniqueness": 4,
+      "id": "camerons-pub",
+      "title": "Cameron's Pub",
+      "emoji": "🍺",
+      "coords": [
+        37.44725,
+        -122.42914
+      ],
+      "coordsFrom": "osm node/2675631640",
+      "area": "1410 Cabrillo Highway South",
+      "zone": "half-moon-bay",
+      "priceNote": "Cheap",
+      "durationMin": 75,
+      "why": "A British pub on the highway south of town, with a red Bristol double-decker bus parked out front that once ran tourists round Lake Tahoe. Inside it is darts, dark wood and a long row of taps, with fish and chips and pies. It has the feel of a pub rather than a restaurant that happens to have a bar.",
+      "source": "Punch Magazine; San Mateo Daily Journal; confirmed against OpenStreetMap (node/2675631640)",
+      "labels": [
+        "unusual"
+      ],
+      "hoursNote": "Cameron's publishes no hours; call 650-726-5705 before a late visit",
+      "priceLevel": 1,
+      "booking": false,
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/2009_aerial_view_of_Pillar_Point_Harbor_and_Bluff.jpg/1280px-2009_aerial_view_of_Pillar_Point_Harbor_and_Bluff.jpg",
+      "imageSubject": "Half Moon Bay, California",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }
