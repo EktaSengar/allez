@@ -4951,7 +4951,7 @@
    "id": "osm-sam-s-chowder-house-75005--244952",
    "title": "Sam's Chowder House",
    "type": "restaurant",
-   "zone": "half-moon-bay",
+   "zone": "el-granada",
    "coords": [
     37.50251,
     -122.47583
@@ -4966,7 +4966,7 @@
    ],
    "match": {
     "name": "Sam's Chowder House",
-    "zone": "half-moon-bay",
+    "zone": "el-granada",
     "type": "restaurant"
    },
    "why": "Oceanfront seafood on Highway 1, with a patio facing the Pacific that takes dogs. The lobster roll is the one people drive over the hill for; the cioppino is the other reason. Come for a late lunch and stay for the light on the water.",
@@ -4980,18 +4980,18 @@
     "outdoor"
    ],
    "source": "samschowderhouse.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-10-14",
+   "lastVerified": "2026-10-16",
    "durationMin": 90,
    "priceLevel": 3,
    "indoor": true,
-   "booking": false,
-   "hoursChecked": "2026-10-14"
+   "booking": "https://samschowderhouse.com/reservations/",
+   "hoursChecked": "2026-10-16"
   },
   {
    "id": "osm-half-moon-bay-brewing-company-75008--244971",
    "title": "Half Moon Bay Brewing Company",
    "type": "restaurant",
-   "zone": "half-moon-bay",
+   "zone": "princeton",
    "coords": [
     37.50397,
     -122.48555
@@ -4999,14 +4999,14 @@
    "area": "Pillar Point Harbor, Capistrano Road",
    "url": "https://www.hmbbrewingco.com/",
    "hours": "Mo-Th 11:00-20:00; Fr 11:00-21:00; Sa 10:00-21:00; Su 10:00-20:00",
-   "hoursFrom": "hmbbrewingco.com — Brew Pub",
+   "hoursFrom": "hmbbrewingco.com",
    "cuisine": "american",
    "categories": [
     "food"
    ],
    "match": {
     "name": "Half Moon Bay Brewing Company",
-    "zone": "half-moon-bay",
+    "zone": "princeton",
     "type": "restaurant"
    },
    "why": "The coast's own brewery since 2000, in a brewpub on Pillar Point Harbor with an oceanfront patio. Drink what is brewed here, eat something simple alongside, and walk the harbour after. Weekend brunch starts at ten.",
@@ -5021,33 +5021,33 @@
     "outdoor"
    ],
    "source": "hmbbrewingco.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-10-14",
+   "lastVerified": "2026-10-16",
    "durationMin": 75,
    "priceLevel": 2,
    "indoor": true,
    "booking": false,
-   "hoursChecked": "2026-10-14"
+   "hoursChecked": "2026-10-16"
   },
   {
    "id": "osm-barbara-s-fish-trap-75007--244970",
    "title": "Barbara's Fish Trap",
    "type": "restaurant",
-   "zone": "half-moon-bay",
+   "zone": "princeton",
    "coords": [
     37.50346,
     -122.4851
    ],
    "area": "Pillar Point Harbor, Capistrano Road",
    "url": "https://www.barbarasfishtrap.com/",
-   "hours": null,
-   "hoursFrom": null,
+   "hours": "Mo-Th 11:00-15:00,16:00-20:30; Fr-Su 11:00-15:00,16:00-21:00",
+   "hoursFrom": "barbarasfishtrap.com; closes 3 to 4pm to refresh the oil",
    "cuisine": "seafood",
    "categories": [
     "food"
    ],
    "match": {
     "name": "Barbara's Fish Trap",
-    "zone": "half-moon-bay",
+    "zone": "princeton",
     "type": "restaurant"
    },
    "why": "A family-run fish house on Pillar Point Harbor, looking out at the Pacific from the same spot since 1978. Order the fish and chips or the scallop tempura and take the window seats. It is plain, quick and exactly what you want after a morning on the bluffs.",
@@ -5061,12 +5061,12 @@
     "cheap"
    ],
    "source": "barbarasfishtrap.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-10-14",
+   "lastVerified": "2026-10-16",
    "durationMin": 60,
    "priceLevel": 2,
    "indoor": true,
    "booking": false,
-   "hoursNote": "Opens 11am daily; the dining room closes 3–4pm for an oil change. The site gives two different closing times, so check before an evening visit."
+   "hoursChecked": "2026-10-16"
   },
   {
    "id": "osm-dad-s-luncheonette-74932--244867",
@@ -5079,8 +5079,8 @@
    ],
    "area": "Cabrillo Highway South",
    "url": "https://www.dadsluncheonette.com/",
-   "hours": "Th-Su 11:15-16:00",
-   "hoursFrom": "dadsluncheonette.com",
+   "hours": "Th-Su 11:00-16:00",
+   "hoursFrom": "news reports; closes when it sells out",
    "cuisine": "burger",
    "categories": [
     "food"
@@ -5101,18 +5101,18 @@
     "hiddengem"
    ],
    "source": "dadsluncheonette.com; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-10-14",
+   "lastVerified": "2026-10-16",
    "durationMin": 45,
    "priceLevel": 2,
    "indoor": true,
    "booking": false,
-   "hoursChecked": "2026-10-14"
+   "hoursChecked": "2026-10-16"
   },
   {
    "id": "osm-miramar-beach-restaurant-74991--244925",
    "title": "Miramar Beach Restaurant",
    "type": "restaurant",
-   "zone": "half-moon-bay",
+   "zone": "el-granada",
    "coords": [
     37.49565,
     -122.46233
@@ -5125,7 +5125,7 @@
    ],
    "match": {
     "name": "Miramar Beach Restaurant",
-    "zone": "half-moon-bay",
+    "zone": "el-granada",
     "type": "restaurant"
    },
    "hours": "Mo-Fr 11:30-20:00; Sa,Su 11:00-20:00",
@@ -5417,6 +5417,159 @@
    "priceLevel": 3,
    "indoor": true,
    "booking": "https://www.domenicowinery.com/osteria"
+  },
+  {
+   "lastVerified": "2026-10-16",
+   "uniqueness": 4,
+   "quality": 3,
+   "id": "osm-half-moon-bay-bakery-74927--244859",
+   "title": "Half Moon Bay Bakery",
+   "type": "bakery",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "zone": "half-moon-bay",
+   "indoor": true,
+   "area": "514 Main Street",
+   "coords": [
+    37.46336,
+    -122.42946
+   ],
+   "why": "Main Street's old bakery still bakes in its original brick ovens. Come for Portuguese sweet bread or a doughnut first thing in the morning. In October, get the pumpkin bread, the one week a year the whole town smells of it.",
+   "goodFor": [
+    "morning",
+    "food"
+   ],
+   "hoursNote": "The bakery publishes no hours; mornings are the safe bet",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "booking": false,
+   "source": "Visit Half Moon Bay; OpenStreetMap",
+   "match": {
+    "name": "Half Moon Bay Bakery",
+    "zone": "half-moon-bay",
+    "type": "bakery"
+   },
+   "labels": []
+  },
+  {
+   "lastVerified": "2026-10-16",
+   "uniqueness": 4,
+   "quality": 3,
+   "id": "osm-sage-bakehouse-75082--245032",
+   "title": "Sage Bakehouse",
+   "type": "cafe",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "zone": "montara",
+   "indoor": true,
+   "area": "8455 Cabrillo Highway",
+   "coords": [
+    37.54123,
+    -122.51623
+   ],
+   "why": "New Zealand savoury pies on the highway in Montara: steak and cheese, or mince, in proper flaky pastry, and scones alongside. Buy one warm and walk five minutes down to Montara State Beach to eat it on the sand.",
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "food"
+   ],
+   "hours": "Mo-Su 07:00-18:00",
+   "hoursFrom": "OpenStreetMap, matching the shop's listing",
+   "hoursChecked": "2026-10-16",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "booking": false,
+   "source": "Palo Alto Online (2023 opening); San Mateo County Parks",
+   "url": "https://www.sagebakehousesf.com/",
+   "match": {
+    "name": "Sage Bakehouse",
+    "zone": "montara",
+    "type": "cafe"
+   },
+   "labels": []
+  },
+  {
+   "title": "Moonside Bakery & Cafe",
+   "categories": [
+    "food",
+    "bakery"
+   ],
+   "area": "604 Main Street",
+   "url": "https://moonsidebakery.com/",
+   "why": "A European-style bakery at the top of Main Street, with a long glass case of danishes, fruit tarts, cookies and cakes. Get an apricot danish and a coffee in the morning. At lunch they turn to wood-fired pizza and sandwiches on their own bread.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "food"
+   ],
+   "hours": "Su-Th 07:00-15:30; Fr,Sa 07:00-16:00",
+   "hoursFrom": "moonsidebakery.com",
+   "hoursChecked": "2026-10-16",
+   "source": "moonsidebakery.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-16",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "id": "osm-moonside-bakery-cafe-74925--244860",
+   "type": "bakery",
+   "zone": "half-moon-bay",
+   "coords": [
+    37.46246,
+    -122.42979
+   ],
+   "match": {
+    "name": "Moonside Bakery & Cafe",
+    "zone": "half-moon-bay",
+    "type": "bakery"
+   },
+   "labels": []
+  },
+  {
+   "title": "Caffè Mezzaluna",
+   "categories": [
+    "food",
+    "cafe"
+   ],
+   "area": "Harbor Village, 240 Capistrano Road",
+   "url": "https://www.mezzalunabythesea.com/caffe-mezzaluna",
+   "why": "The café belonging to Mezza Luna, the Italian restaurant across the harbour. It does breakfast all day, with homemade biscotti, Italian pastries and a gelato counter. Take a cappuccino and a scoop out to the patio, where dogs are welcome, or order a picnic to carry to the beach.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "food",
+    "family"
+   ],
+   "hours": "Mo-Su 07:00-18:00",
+   "hoursFrom": "mezzalunabythesea.com (some listings say 7pm on Fridays and Saturdays)",
+   "hoursChecked": "2026-10-16",
+   "source": "mezzalunabythesea.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-16",
+   "durationMin": 40,
+   "priceLevel": 1,
+   "indoor": false,
+   "booking": false,
+   "id": "osm-caffe-mezzaluna-75009--244966",
+   "type": "cafe",
+   "zone": "princeton",
+   "coords": [
+    37.50449,
+    -122.48285
+   ],
+   "match": {
+    "name": "Caffe Mezzaluna",
+    "zone": "princeton",
+    "type": "cafe"
+   },
+   "labels": []
   }
  ]
 }

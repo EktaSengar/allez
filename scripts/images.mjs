@@ -606,6 +606,16 @@ const QUERIES = {
   'castro-street-fair-2026': 'Castro Street Fair',
   'chayanne-2026-10-11': 'Chayanne',
   'half-moon-bay-pumpkin-2026': 'Half Moon Bay Art and Pumpkin Festival',
+  // bay area — the Coastside
+  'fitzgerald-reef-moss-beach': 'James V. Fitzgerald Marine Reserve',
+  'pillar-point-bluff': 'Mavericks, California',
+  'half-moon-bay-coastal-trail': 'Half Moon Bay State Beach',
+  'montara-mountain': 'Montara Mountain',
+  'gulino-gelato': 'Half Moon Bay, California',
+  'moss-beach-distillery': 'Moss Beach Distillery',
+  'old-princeton-landing': 'Princeton-by-the-Sea, California',
+  'ritz-bagpiper-sunset': 'Ritz-Carlton Half Moon Bay',
+  'camerons-pub': 'Half Moon Bay, California',
   'doja-cat-2026-10-19': 'Doja Cat',
   'lit-crawl-sf-2026': 'Valencia Street',
   'phoebe-bridgers-2026': 'Phoebe Bridgers',
@@ -668,6 +678,8 @@ const QUERIES = {
 
    Anything not listed here is assumed to be a photo of the subject itself. */
 const CONTEXT_ONLY = new Set([
+  'old-princeton-landing', 'ritz-bagpiper-sunset', 'camerons-pub',
+  'gulino-gelato',
   'au-pied-de-cochon',
   'windmills-craftworks', 'comedy-theatre-indiranagar', 'soka-bengaluru', 'bar-spirit-forward', 'toit', 'empire-church-street', 'equilibrium-climbing', 'ride-nandi-hills-dawn',
   'piano-man-jazz-club', 'happy-high', 'laughter-nation', 'akshara-theatre', 'sidecar-delhi', 'pco-delhi', 'karims', 'moolchand-paranthe', 'qutab-golf-course', 'ride-delhi-by-cycle', 'siri-fort-pay-play', 'delhi-half-marathon-2026',

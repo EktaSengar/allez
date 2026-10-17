@@ -124,6 +124,7 @@ const City = (() => {
       'forest-knolls': [37.75427, -122.45895],
       'foster-city': [37.56003, -122.26885],
       'golden-gate-heights': [37.75459, -122.4709],
+      'el-granada': [37.50271, -122.47280],
       'half-moon-bay': [37.46355, -122.42859],
       'hayes-valley': [37.77669, -122.42294],
       'hillsborough': [37.55725, -122.36253],
@@ -143,6 +144,8 @@ const City = (() => {
       'midtown-terrace': [37.75117, -122.45219],
       'millbrae': [37.59896, -122.40094],
       'mission': [37.75993, -122.41914],
+      'montara': [37.54220, -122.51580],
+      'moss-beach': [37.52740, -122.51310],
       'mount-davidson-manor': [37.72828, -122.46397],
       'mountain-view': [37.38939, -122.08321],
       'noe-valley': [37.75159, -122.43208],
@@ -161,6 +164,7 @@ const City = (() => {
       'potrero-terrace': [37.75392, -122.39686],
       'presidio-heights': [37.78875, -122.45303],
       'presidio-terrace': [37.78823, -122.46092],
+      'princeton': [37.50330, -122.48690],
       'redwood-city': [37.48632, -122.23252],
       'richmond-district': [37.78064, -122.4726],
       'rincon-hill': [37.78615, -122.39241],
@@ -218,6 +222,7 @@ const City = (() => {
       'forest-knolls': 'Forest Knolls',
       'foster-city': 'Foster City',
       'golden-gate-heights': 'Golden Gate Heights',
+      'el-granada': 'El Granada',
       'half-moon-bay': 'Half Moon Bay',
       'hayes-valley': 'Hayes Valley',
       'hillsborough': 'Hillsborough',
@@ -237,6 +242,8 @@ const City = (() => {
       'midtown-terrace': 'Midtown Terrace',
       'millbrae': 'Millbrae',
       'mission': 'Mission',
+      'montara': 'Montara',
+      'moss-beach': 'Moss Beach',
       'mount-davidson-manor': 'Mount Davidson Manor',
       'mountain-view': 'Mountain View',
       'noe-valley': 'Noe Valley',
@@ -255,6 +262,7 @@ const City = (() => {
       'potrero-terrace': 'Potrero Terrace',
       'presidio-heights': 'Presidio Heights',
       'presidio-terrace': 'Presidio Terrace',
+      'princeton': 'Princeton',
       'redwood-city': 'Redwood City',
       'richmond-district': 'Richmond District',
       'rincon-hill': 'Rincon Hill',
@@ -313,6 +321,7 @@ const City = (() => {
       'forest-knolls': 'city',
       'foster-city': 'peninsula',
       'golden-gate-heights': 'city',
+      'el-granada': 'peninsula',
       'half-moon-bay': 'peninsula',
       'hayes-valley': 'city',
       'hillsborough': 'peninsula',
@@ -332,6 +341,8 @@ const City = (() => {
       'midtown-terrace': 'city',
       'millbrae': 'peninsula',
       'mission': 'city',
+      'montara': 'peninsula',
+      'moss-beach': 'peninsula',
       'mount-davidson-manor': 'city',
       'mountain-view': 'peninsula',
       'noe-valley': 'city',
@@ -350,6 +361,7 @@ const City = (() => {
       'potrero-terrace': 'city',
       'presidio-heights': 'city',
       'presidio-terrace': 'city',
+      'princeton': 'peninsula',
       'redwood-city': 'peninsula',
       'richmond-district': 'city',
       'rincon-hill': 'city',
@@ -401,10 +413,12 @@ const City = (() => {
 
   /* ---------- the microclimate ----------
 
-     Five points, fetched in one call, because Open-Meteo takes a list.
+     Six points, fetched in one call, because Open-Meteo takes a list.
      Chosen to bracket the spread rather than to cover the map evenly:
      the Sunset is the fog, the Mission is the sun two miles away, and
-     the Peninsula is reliably ten degrees warmer than either.
+     the Peninsula is reliably ten degrees warmer than either. The
+     sixth is the coast: without it Half Moon Bay is nearest Palo Alto,
+     over the ridge, and gets a sunny afternoon it is not having.
 
      Every zone ranks against its nearest station, so a fine afternoon
      in the Mission does not put the Outer Sunset at the top of the
@@ -417,7 +431,8 @@ const City = (() => {
       { id: 'mission',  lat: 37.7599, lon: -122.4148 },
       { id: 'downtown', lat: 37.7937, lon: -122.3965 },
       { id: 'palo-alto', lat: 37.4419, lon: -122.1430 },
-      { id: 'south-bay', lat: 37.3861, lon: -122.0839 }
+      { id: 'south-bay', lat: 37.3861, lon: -122.0839 },
+      { id: 'coast',    lat: 37.4636, lon: -122.4286 }
     ]
   };
 
@@ -434,6 +449,12 @@ const City = (() => {
 
   const RUSH = [[7, 10], [16, 19]];
 
+  /* West of the ridge and south of Pacifica: Montara down to Half Moon
+     Bay. Pacifica is left out on purpose, because Highway 1 runs it
+     straight into Daly City with no climb. */
+  const onCoast = p => p[0] < 37.575 && p[0] > 37.40 && p[1] < -122.40;
+  const RIDGE_MIN = 12;
+
   const reach = {
     rush: RUSH,
     isPeak(when) {
@@ -442,11 +463,19 @@ const City = (() => {
       const h = when.getHours() + when.getMinutes() / 60;
       return RUSH.some(([a, b]) => h >= a && h < b);
     },
-    minutes(d, when) {
+    /* `a` and `b` are the two ends, where the caller has them. Only the
+       coast reads them. Half Moon Bay is 25 km from Palo Alto as the crow
+       flies, and the straight line priced that as a Caltrain ride, but no
+       train runs on the coast. The real trip is Highway 92 or Highway 1
+       over the ridge on two-lane roads, and that is what made the coast's
+       lists fill up with Palo Alto and the Sunset. So a trip that crosses
+       the ridge goes by car, and the climb costs a fixed twelve minutes. */
+    minutes(d, when, a, b) {
       const walk = d < 1.6 ? d / 4.8 * 60 : Infinity;
-      const muni = d < 12 ? 6 + (d / 13) * 60 + 4 : Infinity;
-      const train = d > 12 ? 12 + (d / 55) * 60 + 8 : Infinity;
       const car = 5 + (d / (this.isPeak(when) ? 24 : 48)) * 60;
+      if (a && b && onCoast(a) !== onCoast(b)) return Math.round(car + RIDGE_MIN);
+      const muni = d < 12 ? 6 + (d / 13) * 60 + 4 : Infinity;
+      const train = d > 12 && !(a && onCoast(a)) ? 12 + (d / 55) * 60 + 8 : Infinity;
       return Math.max(2, Math.round(Math.min(walk, muni, train, car)));
     },
     sector: 90

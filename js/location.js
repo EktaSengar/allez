@@ -115,7 +115,7 @@ const Loc = (() => {
     if (!a || !coords) return null;
     const d = km([a.lat, a.lon], coords);
     if (!isFinite(d)) return null;
-    return City.reach.minutes(d, when || clock());
+    return City.reach.minutes(d, when || clock(), [a.lat, a.lon], coords);
   }
 
   /* Distance for a record: its own coordinates if it has them, otherwise
