@@ -597,3 +597,16 @@ test looks at the journey. Both are visible now that the plan says so.
 slot is skipped, and a leg past half an hour costs a point for every three
 minutes over. `check-plan.mjs` has held both since 2 October, across 26
 weekends from every base and in two small cases rebuilt from these records.*
+
+---
+
+## Locals and organisers  ·  *written 20 October 2026*
+
+Neighbours as sources, not as a forum. Two hand-run pilots, both in
+[LOCALS.md](LOCALS.md): **Locals**, named people who write walks, history and
+small events for one area under their own name and take them to their own
+followers; and **organisers**, who submit the facts about a regular while we
+write the verdict, with a 90-day ping so the Regulars tab stops decaying.
+Neither adds a tier: a Local's pick is ★ with a credit, an organiser's record
+is ◆ labelled *from the organiser · not yet visited*. It starts on the website
+what APP.md's Locals' Bench does in the app.
