@@ -1,13 +1,13 @@
 {
-  "generated": "2026-10-20",
+  "generated": "2026-10-21",
   "window": {
-    "from": "2026-10-20",
-    "to": "2026-12-19"
+    "from": "2026-10-21",
+    "to": "2026-12-20"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 3
+    "luma": 6
   },
   "items": [
     {
@@ -29,7 +29,76 @@
       "why": "🎲 Founders Play & Connect Step away from formal meetings and connect with fellow founders through games, conversations, and meaningful networking. Join us for an evening of 300+ games, founder networking, collaboration opportunities, and real connections in a relaxed café environment. ✨ Event Highlights 🎲 300+ Games ",
       "url": "https://luma.com/pp687qxk",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-20",
+      "lastVerified": "2026-10-21",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evt9qbXxI87FMFkdFf",
+      "title": "ETHGlobal Happy Hour New Delhi with ENS, Arkiv, GrowthFi, 0xSpace",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "north-campus",
+      "area": null,
+      "coords": [
+        28.693546443003626,
+        77.21870770183745
+      ],
+      "start": "2026-10-22",
+      "end": "2026-10-22",
+      "why": "Join us for the ETHGlobal Happy Hour New Delhi with ENS, Arkiv, GrowthFi, 0xSpace! 🍻 We're bringing founders, builders, developers, and crypto enthusiasts together for an evening of great conversations, fresh connections, and Web3 vibes. 🚀 🍕 Food & Mocktails are on the house! 🔥 See you there! For queries or event-r",
+      "url": "https://luma.com/ethglobal-hh-newdelhi",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-10-21",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtzFoyR3DKCh2l5ij",
+      "title": "Brandbrew: Gurugram Edition",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "sector-55",
+      "area": "Downtown Skye Suncity, 3rd Floor, Suncity Business Tower, Golf Course Rd, Suncit",
+      "coords": [
+        28.4338385,
+        77.10550219999999
+      ],
+      "start": "2026-10-22",
+      "end": "2026-10-22",
+      "why": "Tagline: Loyalty Without the Discount. About Event: Most loyalty programs start with a discount. The trouble starts when customers begin to wait for one. Brandbrew is an evening by NETCORE × NECTOR for the people who run those programs. Retention, CRM, loyalty and growth leads from D2C, ecommerce and retail brands, in ",
+      "url": "https://luma.com/s9126d1o",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-10-21",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evt7Tw6CIvMEJGKZVs",
+      "title": "Community Ride with Mohit (Delhi)",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "connaught-place",
+      "area": "Blue Tokai Coffee Roasters Origins | Janpath, No 48, Mezzanine & Ground Floor, A",
+      "coords": [
+        28.626972,
+        77.21977799999999
+      ],
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "why": "Join us for a community ride that's all about movement, connection, and coffee. Whether you're a seasoned cyclist or just looking to enjoy a spin with like-minded people, everyone is welcome. Post ride head to Blue Tokai cafe to unwind over freshly brewed coffee and good conversations. Come for the ride, stay for the c",
+      "url": "https://luma.com/h8124o2f",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-10-21",
       "quality": 3,
       "uniqueness": 3
     },
@@ -52,7 +121,7 @@
       "why": "THE REP CULTURE IS HERE. No membership. No excuses. Just good lifts, good energy, and the right community. SetNSweat × 24HS Fitness brings you a FREE LIFTING SESSION for everyone who lives for the gym, loves the grind, and wants to be part of something bigger than just a workout. 📍 65th Avenue, 24HS Fitness 📅 25 Octo",
       "url": "https://luma.com/0xqilo4k",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-20",
+      "lastVerified": "2026-10-21",
       "quality": 3,
       "uniqueness": 3
     },
@@ -75,7 +144,7 @@
       "why": "OPEN TO ALL! Jashn-e-Noor welcomes everyone to two days of celebration. Jashn-e-Noor is an annual festival curated by the simurgh communities every year for two days to celebrate not just their culture, but to also share the spirit of community and collective building with everyone who visits this festival. The festiva",
       "url": "https://luma.com/0wscuhty",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-20",
+      "lastVerified": "2026-10-21",
       "quality": 3,
       "uniqueness": 3
     }
