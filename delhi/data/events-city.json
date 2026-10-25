@@ -1,130 +1,15 @@
 {
-  "generated": "2026-10-24",
+  "generated": "2026-10-25",
   "window": {
-    "from": "2026-10-24",
-    "to": "2026-12-23"
+    "from": "2026-10-25",
+    "to": "2026-12-24"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 9
+    "luma": 5
   },
   "items": [
-    {
-      "id": "luma-evtsX8mqN8Cq3qt7Ni",
-      "title": "Winter Greens",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "chandni-chowk",
-      "area": null,
-      "coords": [
-        28.65130606839662,
-        77.2489091833008
-      ],
-      "start": "2026-10-25",
-      "end": "2026-10-25",
-      "why": "Welcome the winter running season with Winter Greens, hosted by United Runners Club on Sunday, October 25. Join us for an early morning run along the paths of Shanti Van, with 3 km, 5 km and 10 km distances to choose from. We’ll meet at the Shanti Van Parking Area in Raj Ghat, New Delhi. Pick your distance, bring your ",
-      "url": "https://luma.com/wxvg5ucz",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-10-24",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evt7Tw6CIvMEJGKZVs",
-      "title": "Community Ride with Mohit (Delhi)",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "connaught-place",
-      "area": "Blue Tokai Coffee Roasters Origins | Janpath, No 48, Mezzanine & Ground Floor, A",
-      "coords": [
-        28.626972,
-        77.21977799999999
-      ],
-      "start": "2026-10-25",
-      "end": "2026-10-25",
-      "why": "Join us for a community ride that's all about movement, connection, and coffee. Whether you're a seasoned cyclist or just looking to enjoy a spin with like-minded people, everyone is welcome. Post ride head to Blue Tokai cafe to unwind over freshly brewed coffee and good conversations. Come for the ride, stay for the c",
-      "url": "https://luma.com/h8124o2f",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-10-24",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtyDuNTvGlBq7nGKE",
-      "title": "RunNexis Childhood Sunday",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "old-faridabad",
-      "area": "Pinaka Sports Academy, Sector 88 Rd, opposite Jain Temple, opp. Piyush Heights, ",
-      "coords": [
-        28.4150444,
-        77.36244839999999
-      ],
-      "start": "2026-10-25",
-      "end": "2026-10-25",
-      "why": "POV: Your childhood games just dropped a comeback nobody asked for but EVERYONE needed. 😭🔥 3K Run. Pickleball. CHOR POLICE. Same childhood, different character development. 💀 📍 Pinaka Sports Academy, Sec 89 📅 25th October | 6:30 AM onwards Send this to your partner-in-crime. 👮🏻‍♂️🏃🏻 #RunNexis #Faridabad Hosted",
-      "url": "https://luma.com/rfo017u3",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-10-24",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtlzi9LaRe7AHA16o",
-      "title": "5K Run w Surfskating 🛹",
-      "emoji": "🏃",
-      "type": "event",
-      "categories": [
-        "sport"
-      ],
-      "zone": "sector-53",
-      "area": "Blue Tokai Coffee Roasters | Golf Course Road, Shop No 20, Gr, The Palm Springs,",
-      "coords": [
-        28.4453275,
-        77.10145709999999
-      ],
-      "start": "2026-10-25",
-      "end": "2026-10-25",
-      "why": "Join Delhi Run Collective for a high-energy morning built around movement and community. Expect a fun 5K run through a carefully curated route, followed by coffee and conversations and surfskating with fellow runners. What the morning looks like : 5K community run Post-run coffee at BlueTokai and introduction to Surfsk",
-      "url": "https://luma.com/s7bw7dwp",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-10-24",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtDz9nI48scbxDsFI",
-      "title": "Wingit x Pickleball",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "sector-45",
-      "area": "Two88 Pickleball Lounge Club Pollution Free (A.C.), The Pickleball Lounge Club, ",
-      "coords": [
-        28.4401847,
-        77.0698173
-      ],
-      "start": "2026-10-25",
-      "end": "2026-10-25",
-      "why": "You're busy! We get it. At WingIt, we’re reimagining how Gurgaon’s most discerning women shop for beauty and personal care. We're a small team of operators, backed by top VCs and a set of angels and operators we admire. Why? Our starting point is simple. Looking good shouldn’t be another task on your list. If discoveri",
-      "url": "https://luma.com/8pip11a9",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-10-24",
-      "quality": 3,
-      "uniqueness": 3
-    },
     {
       "id": "luma-evtUIlSXcTzdwcHarf",
       "title": "THE REP CULTURE",
@@ -144,7 +29,7 @@
       "why": "THE REP CULTURE IS HERE. No membership. No excuses. Just good lifts, good energy, and the right community. SetNSweat × 24HS Fitness brings you a FREE LIFTING SESSION for everyone who lives for the gym, loves the grind, and wants to be part of something bigger than just a workout. 📍 65th Avenue, 24HS Fitness 📅 25 Octo",
       "url": "https://luma.com/0xqilo4k",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-24",
+      "lastVerified": "2026-10-25",
       "quality": 3,
       "uniqueness": 3
     },
@@ -167,7 +52,30 @@
       "why": "Hosted by TheGymCollective",
       "url": "https://luma.com/y34snxtz",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-24",
+      "lastVerified": "2026-10-25",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtLULxa3cPbhwD7wq",
+      "title": "TRAITORS",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "greater-noida",
+      "area": "Bennett University, Plot Nos 8 11, TechZone 2, Greater Noida, Uttar Pradesh 2013",
+      "coords": [
+        28.450277399999997,
+        77.584425
+      ],
+      "start": "2026-10-25",
+      "end": "2026-10-26",
+      "why": "🕵️ TRAITORS: Trust No One 🎃 Hosted by Mobilon Club × IEEE WIE Something is lurking among us… Can you uncover the truth before it’s too late? Step into a thrilling Halloween-themed experience where trust is fragile, alliances are tested, and anyone could be the traitor. TRAITORS brings together freshers and seniors fo",
+      "url": "https://luma.com/nznha24a",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-10-25",
       "quality": 3,
       "uniqueness": 3
     },
@@ -190,7 +98,7 @@
       "why": "OPEN TO ALL! Jashn-e-Noor welcomes everyone to two days of celebration. Jashn-e-Noor is an annual festival curated by the simurgh communities every year for two days to celebrate not just their culture, but to also share the spirit of community and collective building with everyone who visits this festival. The festiva",
       "url": "https://luma.com/0wscuhty",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-24",
+      "lastVerified": "2026-10-25",
       "quality": 3,
       "uniqueness": 3
     },
@@ -213,7 +121,7 @@
       "why": "Nature Morte presents The Evolution of the Soothsayer (Part 2), the second part of the exhibition that inaugurated its new space at A9 Gulmohar Park. In what was our founder Peter Nagy's final curatorial project, this exhibition brings together works by eighteen artists, the exhibition considers how contemporary artist",
       "url": "https://luma.com/qoxfif6m",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-24",
+      "lastVerified": "2026-10-25",
       "quality": 3,
       "uniqueness": 3
     }
