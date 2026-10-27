@@ -1,13 +1,13 @@
 {
-  "generated": "2026-10-26",
+  "generated": "2026-10-27",
   "window": {
-    "from": "2026-10-26",
-    "to": "2026-12-25"
+    "from": "2026-10-27",
+    "to": "2026-12-26"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 2
+    "luma": 3
   },
   "items": [
     {
@@ -29,7 +29,30 @@
       "why": "OPEN TO ALL! Jashn-e-Noor welcomes everyone to two days of celebration. Jashn-e-Noor is an annual festival curated by the simurgh communities every year for two days to celebrate not just their culture, but to also share the spirit of community and collective building with everyone who visits this festival. The festiva",
       "url": "https://luma.com/0wscuhty",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-26",
+      "lastVerified": "2026-10-27",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtPDix7c0mWHkyPDI",
+      "title": "Cornershop Adda - Founders Meet",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "connaught-place",
+      "area": "First Coffee | Connaught Place, Shop No 2, Block F, Connaught Place, New Delhi, ",
+      "coords": [
+        28.631860999999997,
+        77.221222
+      ],
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "why": "Cornershop Adda is Delhi’s first offline meetup for people who build things. When: Saturday, 31 October 2026, 3 to 6 PM Where: first coffee, Connaught Place Seats: Limited Good coffee and conversation with people working on their own projects. Open to founders in Delhi and to anyone aged 16 to 22 who’s curious about wh",
+      "url": "https://luma.com/hhba6fed",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-10-27",
       "quality": 3,
       "uniqueness": 3
     },
@@ -52,7 +75,7 @@
       "why": "Nature Morte presents The Evolution of the Soothsayer (Part 2), the second part of the exhibition that inaugurated its new space at A9 Gulmohar Park. In what was our founder Peter Nagy's final curatorial project, this exhibition brings together works by eighteen artists, the exhibition considers how contemporary artist",
       "url": "https://luma.com/qoxfif6m",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-10-26",
+      "lastVerified": "2026-10-27",
       "quality": 3,
       "uniqueness": 3
     }
