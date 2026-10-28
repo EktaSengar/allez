@@ -3006,6 +3006,158 @@
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons",
       "url": "https://www.smdailyjournal.com/news/local/a-bit-of-england-in-half-moon-bay/article_9666ad45-0ee9-4ea9-b359-286d61708bbd.html"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "pub"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "lastVerified": "2026-10-28",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "fibbar-magees",
+      "title": "Fibbar MaGee's",
+      "emoji": "🍀",
+      "zone": "sunnyvale",
+      "coords": [
+        37.37668,
+        -122.03004
+      ],
+      "coordsFrom": "OpenStreetMap",
+      "area": "156 South Murphy Avenue, Sunnyvale",
+      "priceNote": "No cover · 21+ after dark",
+      "durationMin": 120,
+      "url": "https://fibbars.com",
+      "booking": false,
+      "source": "fibbars.com; confirmed against OpenStreetMap",
+      "why": "The Irish pub on historic Murphy Avenue since 1994, and the street's late-night anchor: open till two every night. Tuesday is quiz night from seven. On Fridays and Saturdays the DJs take over and the floor fills, with no cover charge.",
+      "labels": [],
+      "priceLevel": 1,
+      "hours": "Mo 15:00-02:00; Tu-Su 11:00-02:00",
+      "hoursFrom": "fibbars.com",
+      "hoursChecked": "2026-10-28"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "beer"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "friends",
+        "group"
+      ],
+      "lastVerified": "2026-10-28",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "laughing-monk-sunnyvale",
+      "title": "Laughing Monk Brewing",
+      "emoji": "🍺",
+      "zone": "sunnyvale",
+      "coords": [
+        37.38762,
+        -121.99248
+      ],
+      "coordsFrom": "OpenStreetMap",
+      "area": "1235 Oakmead Parkway, Sunnyvale",
+      "durationMin": 120,
+      "url": "https://sunnyvale.laughingmonk.com/",
+      "booking": false,
+      "source": "sunnyvale.laughingmonk.com; confirmed against OpenStreetMap",
+      "why": "A brewery and gastropub in the old Faultline building among the office parks, with award-winning house beers, a big patio and room for a crowd. Busy on game days, when it runs a shuttle to Levi's Stadium for the 49ers. It closes at nine, so make it an early evening.",
+      "labels": [],
+      "priceLevel": 2,
+      "hours": "Mo-Fr 11:00-21:00; Sa 11:30-21:00; Su 10:00-20:00",
+      "hoursFrom": "sunnyvale.laughingmonk.com",
+      "hoursChecked": "2026-10-28"
+    },
+    {
+      "type": "bar",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "karaoke",
+        "dancing"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends"
+      ],
+      "lastVerified": "2026-10-28",
+      "quality": 3,
+      "uniqueness": 4,
+      "id": "blue-pheasant-bar",
+      "title": "The Blue Pheasant bar, after dark",
+      "emoji": "🎤",
+      "zone": "cupertino",
+      "coords": [
+        37.32256,
+        -122.0597
+      ],
+      "coordsFrom": "OpenStreetMap",
+      "area": "22100 Stevens Creek Boulevard, Cupertino",
+      "durationMin": 120,
+      "url": "https://www.thebluepheasant.com/",
+      "booking": false,
+      "source": "thebluepheasant.com; confirmed against OpenStreetMap",
+      "why": "Cupertino's late night, such as it is: the bar of a restaurant that's been here since 1974, open till midnight, with karaoke and dancing. A local crowd and no pretension. Go to sing.",
+      "labels": [],
+      "priceLevel": 2,
+      "hours": "We-Su 17:00-24:00",
+      "hoursFrom": "thebluepheasant.com",
+      "hoursChecked": "2026-10-28"
+    },
+    {
+      "type": "afterdark",
+      "provenance": "editorial",
+      "categories": [
+        "nightlife",
+        "karaoke"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "goodFor": [
+        "evening",
+        "friends",
+        "group",
+        "family"
+      ],
+      "lastVerified": "2026-10-28",
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "music-tunnel-ktv",
+      "title": "Music Tunnel KTV",
+      "emoji": "🎶",
+      "zone": "cupertino",
+      "coords": [
+        37.30577,
+        -122.03169
+      ],
+      "coordsFrom": "OpenStreetMap",
+      "area": "1132 South De Anza Boulevard",
+      "durationMin": 120,
+      "url": "https://www.musictunnelktv.com/",
+      "booking": false,
+      "source": "musictunnelktv.com; confirmed against OpenStreetMap",
+      "why": "Private karaoke rooms by the hour, with a boba café out front — around since 2010. No alcohol and no smoking, so it suits a birthday with mixed ages or a team night that doesn't need to be a bar.",
+      "labels": [],
+      "priceLevel": 2,
+      "hoursNote": "Rooms by the hour; book ahead for weekends — hours and rates are on the website"
     }
   ]
 }
