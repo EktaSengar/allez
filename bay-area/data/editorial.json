@@ -5635,8 +5635,8 @@
    "quality": 4,
    "uniqueness": 4,
    "goodFor": [
-    "lunch",
-    "dinner",
+    "afternoon",
+    "evening",
     "group"
    ],
    "labels": [],
@@ -5675,8 +5675,8 @@
    "uniqueness": 3,
    "goodFor": [
     "morning",
-    "lunch",
-    "dinner"
+    "afternoon",
+    "evening"
    ],
    "labels": [],
    "source": "madrascafe.us; existence and address confirmed against OpenStreetMap",
@@ -5713,8 +5713,8 @@
    "quality": 3,
    "uniqueness": 4,
    "goodFor": [
-    "lunch",
-    "dinner",
+    "afternoon",
+    "evening",
     "group"
    ],
    "labels": [],
@@ -5752,7 +5752,7 @@
    "quality": 3,
    "uniqueness": 4,
    "goodFor": [
-    "dinner",
+    "evening",
     "couple"
    ],
    "labels": [],
@@ -5797,7 +5797,8 @@
    "durationMin": 45,
    "priceLevel": 1,
    "indoor": true,
-   "booking": false
+   "booking": false,
+   "hoursNote": "Hours are not published — check arwacoffee.com before a special trip"
   },
   {
    "id": "sv-leighs-favorite-books",
@@ -5832,7 +5833,8 @@
    "durationMin": 30,
    "priceLevel": 1,
    "indoor": true,
-   "booking": false
+   "booking": false,
+   "hoursNote": "Hours are on leighsbooks.com"
   },
   {
    "id": "sv-farmers-market",

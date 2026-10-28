@@ -3504,7 +3504,8 @@
       "coordsFrom": "OpenStreetMap",
       "booking": false,
       "durationMin": 60,
-      "priceLevel": 0
+      "priceLevel": 0,
+      "hoursNote": "A city park, open from dawn until dusk"
     },
     {
       "type": "restaurant",
@@ -3526,8 +3527,8 @@
       "cuisine": "indian",
       "goodFor": [
         "morning",
-        "lunch",
-        "dinner",
+        "afternoon",
+        "evening",
         "friends",
         "family"
       ],
