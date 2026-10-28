@@ -5876,6 +5876,173 @@
    "days": [
     6
    ]
+  },
+  {
+   "id": "sv-home-coffee-roasters",
+   "title": "Home Coffee Roasters",
+   "type": "cafe",
+   "zone": "sunnyvale",
+   "coords": [
+    37.37451,
+    -122.03259
+   ],
+   "area": "200 West McKinley Avenue, by CityLine",
+   "url": "https://www.almanacnews.com/food/2025/07/23/home-coffee-roasters-expands-to-sunnyvale/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Home Coffee Roasters",
+    "zone": "sunnyvale",
+    "type": "cafe"
+   },
+   "why": "The San Francisco roaster from Clement Street, whose first café outside the city opened here in 2025. Five seats, so take it to go. The drinks are the playful kind: an ube latte, a cookie-butter latte, and espresso over Coke with vanilla ice cream.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "Mountain View Voice / Almanac (July 2025); existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/500px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
+   "imageKind": "context",
+   "imageSubject": "Espresso",
+   "imageCredit": "Wikimedia Commons",
+   "hoursNote": "Closed Mondays; check hours before a special trip"
+  },
+  {
+   "id": "sv-coffeebar",
+   "title": "Coffeebar Sunnyvale",
+   "type": "cafe",
+   "zone": "sunnyvale",
+   "coords": [
+    37.37024,
+    -121.99711
+   ],
+   "area": "401 Willow Avenue",
+   "url": "https://coffeebar.com/locations/",
+   "hours": "Mo-Su 07:00-18:00",
+   "hoursFrom": "coffeebar.com",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Coffeebar Sunnyvale",
+    "zone": "sunnyvale",
+    "type": "cafe"
+   },
+   "why": "A big, bright café from a small California and Nevada chain that roasts its own beans in Reno. Room to sit with a laptop, which is rare round here, and open till six every day.",
+   "quality": 3,
+   "uniqueness": 2,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "coffeebar.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/500px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
+   "imageKind": "context",
+   "imageSubject": "Espresso",
+   "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "cu-nirvana-soul",
+   "title": "Nirvana Soul",
+   "type": "cafe",
+   "zone": "cupertino",
+   "coords": [
+    37.32534,
+    -122.01272
+   ],
+   "area": "19700 Vallco Parkway",
+   "url": "https://www.nirvanasoulcoffee.com/",
+   "hours": "Mo-Fr 07:00-16:00",
+   "hoursFrom": "nirvanasoulcoffee.com",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Nirvana Soul",
+    "zone": "cupertino",
+    "type": "cafe"
+   },
+   "why": "Coffee from the sisters who started Nirvana Soul in downtown San José, roasted by them in North San José. The house cold brew is made from their dark Noir blend. Weekday mornings are the time.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "nirvanasoulcoffee.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/500px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
+   "imageKind": "context",
+   "imageSubject": "Espresso",
+   "imageCredit": "Wikimedia Commons",
+   "hoursNote": "Weekdays 7am to 4pm; weekend hours not published"
+  },
+  {
+   "id": "cu-bitter-sweet",
+   "title": "Bitter + Sweet",
+   "type": "cafe",
+   "zone": "cupertino",
+   "coords": [
+    37.31823,
+    -122.03144
+   ],
+   "area": "20560 Town Center Lane",
+   "url": "https://www.bitter-sweet.com/",
+   "hours": "Mo-Su 07:00-17:00",
+   "hoursFrom": "bitter-sweet.com",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Bitter + Sweet",
+    "zone": "cupertino",
+    "type": "cafe"
+   },
+   "why": "Cupertino's coffee-and-dessert bar: Sightglass on the grinder, Kyoto slow drip, and lattes made with miso, black sesame or red bean. Cake comes from Sugar Butter Flour and ice cream from Humphry Slocombe, so stay for the sweet half.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "bitter-sweet.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false,
+   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg/500px-Tazzina_di_caff%C3%A8_a_Ventimiglia.jpg",
+   "imageKind": "context",
+   "imageSubject": "Espresso",
+   "imageCredit": "Wikimedia Commons"
   }
  ]
 }
