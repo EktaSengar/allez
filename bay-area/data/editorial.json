@@ -5570,6 +5570,310 @@
     "type": "cafe"
    },
    "labels": []
+  },
+  {
+   "id": "sv-sugar-butter-flour",
+   "title": "Sugar Butter Flour Pastry Shop",
+   "type": "bakery",
+   "zone": "sunnyvale",
+   "coords": [
+    37.37197,
+    -122.05757
+   ],
+   "area": "669 South Bernardo Avenue, Cherry Chase",
+   "url": "https://sugarbutterflour.com/",
+   "hours": "Mo-Sa 07:00-19:30; Su 08:00-17:00",
+   "hoursFrom": "sugarbutterflour.com",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sugar Butter Flour Pastry Shop",
+    "zone": "sunnyvale",
+    "type": "bakery"
+   },
+   "why": "A French-style pastry shop in the Cherry Chase centre, best known round here for its cakes — from a six-inch to a full sheet. Come in the morning for croissants, or later for a mousse slice, a tart or a box of macarons.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon"
+   ],
+   "labels": [],
+   "source": "sugarbutterflour.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 30,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "sv-dish-dash",
+   "title": "Dish Dash",
+   "type": "restaurant",
+   "zone": "sunnyvale",
+   "coords": [
+    37.37615,
+    -122.03022
+   ],
+   "area": "190 South Murphy Avenue",
+   "url": "https://dishdash.com/location/dishdash-sunnyvale",
+   "hours": "Mo-Th 11:00-21:00; Fr 11:00-21:30; Sa 11:30-21:30; Su 16:00-21:00",
+   "hoursFrom": "dishdash.com",
+   "cuisine": "middle_eastern",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Dish Dash",
+    "zone": "sunnyvale",
+    "type": "restaurant"
+   },
+   "why": "The Middle Eastern room that anchors historic Murphy Avenue, cooking Lebanese and Gulf dishes rather than just the kebab plate. Share the mezze sampler, then try the mansaf — lamb slow-cooked in aged yogurt — or the crab falafel nobody else does.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "dinner",
+    "group"
+   ],
+   "labels": [],
+   "source": "dishdash.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 75,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "sv-madras-cafe",
+   "title": "Madras Café",
+   "type": "restaurant",
+   "zone": "sunnyvale",
+   "coords": [
+    37.37428,
+    -122.05495
+   ],
+   "area": "1177 West El Camino Real, Bernardo Shopping Center",
+   "url": "https://madrascafe.us/",
+   "hours": "Mo-Su 08:30-22:00",
+   "hoursFrom": "madrascafe.us",
+   "cuisine": "indian",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Madras Café",
+    "zone": "sunnyvale",
+    "type": "restaurant"
+   },
+   "why": "A South Indian tiffin house that started in Chennai before opening here. It opens early for idli, vada and poori masala, and the crisp dosas carry on all day. Cheap, fast and full of people who grew up on the real thing.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "lunch",
+    "dinner"
+   ],
+   "labels": [],
+   "source": "madrascafe.us; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "sv-burma-taste",
+   "title": "Burma Taste",
+   "type": "restaurant",
+   "zone": "sunnyvale",
+   "coords": [
+    37.37712,
+    -122.02985
+   ],
+   "area": "124 South Murphy Avenue",
+   "url": "https://burmataste.com/",
+   "hours": "Su-Th 11:00-14:30,16:30-21:00; Fr,Sa 11:00-14:30,16:30-21:30",
+   "hoursFrom": "burmataste.com",
+   "cuisine": "burmese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Burma Taste",
+    "zone": "sunnyvale",
+    "type": "restaurant"
+   },
+   "why": "Burmese cooking on Murphy Avenue, with noodle bowls, seafood curries and a long vegetarian side to the menu. A good table for a group that wants to order widely and share.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "lunch",
+    "dinner",
+    "group"
+   ],
+   "labels": [],
+   "source": "burmataste.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 60,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "sv-kabul",
+   "title": "Kabul",
+   "type": "restaurant",
+   "zone": "sunnyvale",
+   "coords": [
+    37.37678,
+    -122.03327
+   ],
+   "area": "351 West Washington Avenue",
+   "url": "https://www.kabulrestaurant.net/",
+   "hours": "Mo-Fr 11:30-14:00,17:00-21:00; Sa,Su 17:00-21:00",
+   "hoursFrom": "kabulrestaurant.net",
+   "cuisine": "afghan",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Kabul",
+    "zone": "sunnyvale",
+    "type": "restaurant"
+   },
+   "why": "A long-standing Afghan dining room a block off Murphy Avenue: charcoal kebabs, rice pilaus and dumplings in a quieter, tablecloth setting. Phone ahead for a table on a weekend night.",
+   "quality": 3,
+   "uniqueness": 4,
+   "goodFor": [
+    "dinner",
+    "couple"
+   ],
+   "labels": [],
+   "source": "kabulrestaurant.net; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 75,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "sv-arwa-yemeni-coffee",
+   "title": "Arwa Yemeni Coffee",
+   "type": "cafe",
+   "zone": "sunnyvale",
+   "coords": [
+    37.40367,
+    -122.0096
+   ],
+   "area": "605 Tasman Drive",
+   "url": "https://arwacoffee.com/",
+   "cuisine": "coffee_shop",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Arwa Yemeni Coffee",
+    "zone": "sunnyvale",
+    "type": "cafe"
+   },
+   "why": "Yemeni coffee, roasted from beans grown in the Haraz mountains, served the Yemeni way — spiced with cardamom and ginger. A long, low-key café for an afternoon, and a rare thing this side of the bay.",
+   "quality": 4,
+   "uniqueness": 5,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "arwacoffee.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "durationMin": 45,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "sv-leighs-favorite-books",
+   "title": "Leigh's Favorite Books",
+   "type": "books",
+   "zone": "sunnyvale",
+   "coords": [
+    37.37728,
+    -122.03019
+   ],
+   "area": "121 South Murphy Avenue",
+   "url": "https://www.leighsbooks.com",
+   "cuisine": null,
+   "categories": [
+    "books"
+   ],
+   "match": {
+    "name": "Leigh's Favorite Books",
+    "zone": "sunnyvale",
+    "type": "books"
+   },
+   "why": "Downtown Sunnyvale's independent bookshop since 2004, mostly new books with a shelf of recent used titles you can trade into. Bookasaurus, its children's shop, is next door at 125 and runs free Sunday story times.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "family"
+   ],
+   "labels": [],
+   "source": "Silicon Valley Voice; leighsbooks.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "durationMin": 30,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "sv-farmers-market",
+   "title": "Sunnyvale Farmers' Market",
+   "type": "market",
+   "zone": "sunnyvale",
+   "coords": [
+    37.37665,
+    -122.03035
+   ],
+   "area": "Murphy Avenue at Washington Avenue",
+   "url": "https://uvfm.org/",
+   "hours": "Sa 09:00-13:00",
+   "hoursFrom": "uvfm.org",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Sunnyvale Farmers' Market",
+    "zone": "sunnyvale",
+    "type": "market"
+   },
+   "why": "Saturday mornings the historic block of Murphy Avenue closes to cars and fills with growers' stalls, year round. Do the produce first, then breakfast at one of the cafés on the street. It skips the Art & Wine Festival weekend.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "family"
+   ],
+   "labels": [],
+   "source": "uvfm.org (Urban Village Farmers' Market Association); existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 60,
+   "priceLevel": 1,
+   "indoor": false,
+   "booking": false,
+   "days": [
+    6
+   ]
   }
  ]
 }

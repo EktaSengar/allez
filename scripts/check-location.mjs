@@ -263,8 +263,9 @@ const EXPECT = {
        of 40 moved. It now lands on Campbell, Santa Clara and Saratoga,
        which have map places and a profile but no café, bakery or market
        written up yet. 147 the same day, once ten cafés and bakeries were
-       written up across the three. Their market column is still empty. */
-    floor: 147
+       written up across the three. Their market column is still empty.
+       160 on 28 October, once Sunnyvale had its own cards. */
+    floor: 160
   },
   delhi: {
     probes: ['connaught-place', 'hauz-khas', 'saket', 'karol-bagh', 'dwarka'],

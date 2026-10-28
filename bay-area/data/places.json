@@ -3388,6 +3388,161 @@
       "hoursChecked": "2026-10-16",
       "durationMin": 75,
       "priceLevel": 2
+    },
+    {
+      "type": "museum",
+      "provenance": "editorial",
+      "categories": [
+        "culture",
+        "free"
+      ],
+      "zone": "sunnyvale",
+      "indoor": true,
+      "lastVerified": "2026-10-28",
+      "goodFor": [
+        "afternoon",
+        "family",
+        "culture"
+      ],
+      "labels": [
+        "free"
+      ],
+      "quality": 4,
+      "uniqueness": 4,
+      "id": "sunnyvale-heritage-park-museum",
+      "title": "Sunnyvale Heritage Park Museum",
+      "emoji": "🍑",
+      "area": "570 East Remington Drive",
+      "priceNote": "Free",
+      "why": "Sunnyvale was orchards before it was chips, and this small museum, run by the Historical Society, keeps both stories: the Murphy family who founded the town, the canneries and iron works that followed. Outside is the city's last working apricot orchard — walk it in spring blossom or June harvest.",
+      "url": "https://heritageparkmuseum.org/",
+      "source": "heritageparkmuseum.org",
+      "coords": [
+        37.35647,
+        -122.02548
+      ],
+      "coordsFrom": "OpenStreetMap",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 0,
+      "hours": "Tu,Th,Su 12:00-16:00",
+      "hoursFrom": "heritageparkmuseum.org",
+      "hoursChecked": "2026-10-28"
+    },
+    {
+      "type": "park",
+      "provenance": "editorial",
+      "categories": [
+        "outdoor",
+        "nature"
+      ],
+      "zone": "sunnyvale",
+      "indoor": false,
+      "lastVerified": "2026-10-28",
+      "goodFor": [
+        "morning",
+        "afternoon",
+        "family",
+        "outdoor"
+      ],
+      "labels": [
+        "free"
+      ],
+      "quality": 3,
+      "uniqueness": 3,
+      "id": "sunnyvale-baylands-park",
+      "title": "Sunnyvale Baylands Park",
+      "emoji": "🦆",
+      "area": "999 East Caribbean Drive",
+      "priceNote": "Free",
+      "why": "The town's edge on the bay: lawns and picnic shelters on one side, salt-marsh and seasonal wetlands on the other, with the Bay Trail running along the levees. Bring binoculars in winter, when the shorebirds come through. Parking costs a few dollars from March to October and is free the rest of the year.",
+      "url": "https://www.sunnyvale.ca.gov/recreation-and-community/parks-and-trails/baylands-park",
+      "source": "sunnyvale.ca.gov",
+      "coords": [
+        37.4125,
+        -121.99687
+      ],
+      "coordsFrom": "OpenStreetMap",
+      "booking": false,
+      "durationMin": 90,
+      "priceLevel": 0,
+      "hours": "Mo-Su 08:00-sunset",
+      "hoursFrom": "sunnyvale.ca.gov",
+      "hoursChecked": "2026-10-28"
+    },
+    {
+      "type": "park",
+      "provenance": "editorial",
+      "categories": [
+        "outdoor",
+        "free"
+      ],
+      "zone": "sunnyvale",
+      "indoor": false,
+      "lastVerified": "2026-10-28",
+      "goodFor": [
+        "afternoon",
+        "family"
+      ],
+      "labels": [
+        "free"
+      ],
+      "quality": 3,
+      "uniqueness": 4,
+      "id": "las-palmas-park",
+      "title": "Las Palmas Park",
+      "emoji": "🌴",
+      "area": "850 Russet Drive",
+      "priceNote": "Free",
+      "why": "A neighbourhood park with a Polynesian theme — palms around a pond and a 'tropical island' playground that small children treat as an expedition. The best of Sunnyvale's many parks for a family hour.",
+      "url": "https://www.sunnyvale.ca.gov/Home/Components/FacilityDirectory/FacilityDirectory/51/260",
+      "source": "sunnyvale.ca.gov",
+      "coords": [
+        37.36451,
+        -122.03816
+      ],
+      "coordsFrom": "OpenStreetMap",
+      "booking": false,
+      "durationMin": 60,
+      "priceLevel": 0
+    },
+    {
+      "type": "restaurant",
+      "categories": [
+        "food",
+        "restaurant"
+      ],
+      "zone": "sunnyvale",
+      "indoor": true,
+      "quality": 5,
+      "uniqueness": 4,
+      "lastVerified": "2026-10-28",
+      "labels": [],
+      "booking": false,
+      "id": "mylapore-sunnyvale",
+      "title": "Mylapore",
+      "emoji": "🥞",
+      "area": "1025 West El Camino Real",
+      "cuisine": "indian",
+      "goodFor": [
+        "morning",
+        "lunch",
+        "dinner",
+        "friends",
+        "family"
+      ],
+      "why": "South Indian cooking named after the old Chennai neighbourhood, and the dosa is the reason to come: thin, golden and crisp right to the edge, with sambar and chutneys alongside. Open from breakfast. Weekends fill up, so go early or expect to wait.",
+      "url": "https://withbites.com/merchants/mylaporesunnyvale",
+      "coords": [
+        37.37254,
+        -122.04943
+      ],
+      "coordsFrom": "OpenStreetMap",
+      "hours": "Mo-Sa 08:00-21:45; Su 07:00-21:45",
+      "hoursFrom": "withbites.com (the restaurant's ordering page)",
+      "hoursChecked": "2026-10-28",
+      "durationMin": 60,
+      "priceLevel": 1
     }
   ]
 }
