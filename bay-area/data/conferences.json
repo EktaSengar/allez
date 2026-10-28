@@ -1,162 +1,15 @@
 {
-  "generated": "2026-10-17",
+  "generated": "2026-10-28",
   "window": {
-    "from": "2026-10-16",
-    "to": "2026-12-15"
+    "from": "2026-10-28",
+    "to": "2026-12-27"
   },
   "source": "confs.tech (MIT) · developers.events (CC BY-NC 4.0)",
   "note": "Tech conferences in this city, from two open lists maintained by volunteers. Facts only: name, dates, city, topic, link — the line under each title is assembled from those, never copied. Kept apart from events-city.json because the licences differ; see DATA-LICENSE.md. Written daily by scripts/conferences.mjs, pruned by scripts/refresh.mjs.",
   "items": [
     {
-      "id": "conf-mit-ai-conference-2026-10-17",
-      "title": "MIT AI Conference",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "Mountain View, CA",
-      "start": "2026-10-17",
-      "end": "2026-10-17",
-      "why": "A one-day conference on data in Mountain View, CA. Tickets and programme on its own site.",
-      "url": "https://www.mitaiconference.org",
-      "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-jupyter-day-2026-10-19",
-      "title": "Jupyter Day",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "San Jose, CA",
-      "start": "2026-10-19",
-      "end": "2026-10-19",
-      "why": "A one-day conference on python, data, open source in San Jose, CA. Tickets and programme on its own site.",
-      "url": "https://events.linuxfoundation.org/jupyter-day/",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-oin-connect-2026-2026-10-19",
-      "title": "OIN Connect 2026",
-      "emoji": "💻",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "San Jose, CA",
-      "start": "2026-10-19",
-      "end": "2026-10-19",
-      "why": "A one-day conference on open source, linux in San Jose, CA. Tickets and programme on its own site.",
-      "url": "https://openinventionnetwork.com/oin-connect-2026/",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-pytorch-conference-2026-2026-10-20",
-      "title": "PyTorch Conference 2026",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "San Jose, CA",
-      "start": "2026-10-20",
-      "end": "2026-10-21",
-      "why": "A two-day conference on pytorch, machine learning in San Jose, CA. Tickets and programme on its own site.",
-      "url": "https://events.linuxfoundation.org/pytorch-conference-2026/",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-pytorch-conference-north-america-2026-10-20",
-      "title": "PyTorch Conference North America",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "San Jose, CA",
-      "start": "2026-10-20",
-      "end": "2026-10-20",
-      "why": "A one-day conference on python, data, open source in San Jose, CA. Tickets and programme on its own site.",
-      "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-the-linux-foundation-legal-summit-2026-10-20",
-      "title": "The Linux Foundation Legal Summit",
-      "emoji": "💻",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "San Jose, CA",
-      "start": "2026-10-20",
-      "end": "2026-10-20",
-      "why": "A one-day conference on legal, open source, licensing in San Jose, CA. Tickets and programme on its own site.",
-      "url": "https://events.linuxfoundation.org/lf-legal-summit/",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-resend-forward-2026-10-21",
-      "title": "Resend Forward",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "San Francisco, CA",
-      "start": "2026-10-21",
-      "end": "2026-10-21",
-      "why": "A one-day conference on python, data, open source in San Francisco, CA. Tickets and programme on its own site.",
-      "url": "https://resend.com/forward",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-sev0-2026-10-27",
-      "title": "SEV0",
+      "id": "conf-unprompted-the-ai-security-practitioner-conferen-2026-10-27",
+      "title": "unprompted | The AI Security Practitioner Conference (October 2026)",
       "emoji": "🤖",
       "type": "event",
       "categories": [
@@ -166,11 +19,11 @@
       "approx": "city",
       "area": "San Francisco, CA",
       "start": "2026-10-27",
-      "end": "2026-10-27",
-      "why": "A one-day conference on data in San Francisco, CA. Tickets and programme on its own site.",
-      "url": "https://sev0.com",
-      "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "end": "2026-10-29",
+      "why": "A three-day conference in San Francisco, CA. Tickets and programme on its own site.",
+      "url": "https://unpromptedcon.org/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -191,7 +44,7 @@
       "why": "A two-day conference on open source, developer tools in San Francisco, CA. Tickets and programme on its own site.",
       "url": "https://githubuniverse.com/",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -212,7 +65,7 @@
       "why": "A one-day conference on javascript in Sunnyvale, CA. Tickets and programme on its own site.",
       "url": "https://goo.gle/WebAISummit26",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -233,7 +86,7 @@
       "why": "A one-day conference on data in San Francisco, CA. Tickets and programme on its own site.",
       "url": "https://osacon.io",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -254,7 +107,7 @@
       "why": "A three-day conference on security, appsec in San Francisco, CA. Tickets and programme on its own site.",
       "url": "https://owasp.glueup.com/event/owasp-2026-global-appsec-usa-san-francisco-ca-167174/",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -275,7 +128,7 @@
       "why": "A one-day conference on elasticsearch, data, search in San Francisco, CA. Tickets and programme on its own site.",
       "url": "https://www.elastic.co/events/elasticon",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -296,7 +149,7 @@
       "why": "A two-day conference on security, appsec in San Francisco, CA. Tickets and programme on its own site.",
       "url": "https://owasp.glueup.com/event/owasp-global-appsec-usa-2026-167174/",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -317,7 +170,7 @@
       "why": "A one-day conference on voice agents, AI in San Francisco, CA. Tickets and programme on its own site.",
       "url": "https://luma.com/voiceagentssf",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -338,7 +191,7 @@
       "why": "A two-day conference on opensource in San Francisco, CA. Tickets and programme on its own site.",
       "url": "https://gus26.gerritforge.com",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -359,28 +212,7 @@
       "why": "A three-day conference on AI, developer in San Francisco, CA. Tickets and programme on its own site.",
       "url": "https://ai.engineer/code",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-aie-code-summit-sf-2026-2026-11-12",
-      "title": "AIE CODE Summit SF 2026",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "San Francisco, CA",
-      "start": "2026-11-12",
-      "end": "2026-11-12",
-      "why": "A one-day conference on AI, machine learning, code in San Francisco, CA. Tickets and programme on its own site.",
-      "url": "https://ai.engineer/code/2026",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -401,28 +233,7 @@
       "why": "A two-day conference on cloud, community in Oakland, CA. Tickets and programme on its own site.",
       "url": "https://badcamp.org",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-agntcon-mcpcon-2026-11-22",
-      "title": "AGNTCon + MCPCon",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "San Jose, CA",
-      "start": "2026-11-22",
-      "end": "2026-11-22",
-      "why": "A one-day conference on AI, agent in San Jose, CA. Tickets and programme on its own site.",
-      "url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -443,7 +254,28 @@
       "why": "A three-day conference on python in San Francisco, CA. Tickets and programme on its own site.",
       "url": "https://pyconf.org",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-ai-infra-summit-6-2026-12-09",
+      "title": "AI Infra Summit 6",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "San Francisco, CA",
+      "start": "2026-12-09",
+      "end": "2026-12-09",
+      "why": "A one-day conference on AI, infrastructure in San Francisco, CA. Tickets and programme on its own site.",
+      "url": "https://aiinfra.live/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3

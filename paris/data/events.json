@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17",
+  "generated": "2026-10-28",
   "window": {
     "from": "2026-08-13",
     "to": "2027-01-06"
@@ -52,134 +52,6 @@
         2.312
       ],
       "coordsFrom": "arr-centroid"
-    },
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "categories": [
-        "sport",
-        "football"
-      ],
-      "indoor": false,
-      "weatherSensitive": true,
-      "goodFor": [
-        "sport",
-        "weekend",
-        "evening"
-      ],
-      "lastVerified": "2026-09-28",
-      "quality": 5,
-      "uniqueness": 5,
-      "id": "psg-ucl-oct-2026",
-      "title": "PSG — a Champions League night",
-      "emoji": "⚽",
-      "coords": [
-        48.84144,
-        2.25303
-      ],
-      "coordsFrom": "hand-placed at the venue",
-      "area": "Parc des Princes, 16e",
-      "start": "2026-10-20",
-      "end": "2026-10-20",
-      "durationMin": 180,
-      "priceNote": "Hard to get — resale only close to the day",
-      "why": "A Tuesday Champions League night at the Parc des Princes, which for European games is the loudest stadium in France: the Virage Auteuil sings for the whole ninety minutes. Tickets go to members first and the official resale is the honest way in. The opponent is on the club's calendar.",
-      "labels": [
-        "dontmiss"
-      ],
-      "url": "https://billetterie.psg.fr/en/schedule",
-      "source": "Paris Saint-Germain",
-      "booking": "https://billetterie.psg.fr/en/schedule",
-      "priceLevel": 4,
-      "startTime": "21:00",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Paris_Parc_des_Princes_1.jpg/1280px-Paris_Parc_des_Princes_1.jpg",
-      "imageSubject": "Parc des Princes",
-      "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
-    },
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "lastVerified": "2026-10-01",
-      "quality": 4,
-      "uniqueness": 4,
-      "id": "the-strokes-paris-2026",
-      "title": "The Strokes",
-      "emoji": "🎸",
-      "categories": [
-        "music",
-        "concert",
-        "rock"
-      ],
-      "indoor": true,
-      "weatherSensitive": false,
-      "goodFor": [
-        "evening",
-        "friends"
-      ],
-      "coords": [
-        48.8386,
-        2.3786
-      ],
-      "coordsFrom": "hand-placed at the venue",
-      "area": "Accor Arena, Bercy",
-      "start": "2026-10-22",
-      "end": "2026-10-22",
-      "priceNote": "Tickets from Live Nation",
-      "priceLevel": 3,
-      "why": "Twenty-five years after Is This It, still the band every Paris rock bar plays.",
-      "source": "Live Nation",
-      "url": "https://www.livenation.fr/event/the-strokes-reality-awaits-paris-2026-paris-tickets-edp1666756",
-      "booking": "https://www.livenation.fr/event/the-strokes-reality-awaits-paris-2026-paris-tickets-edp1666756",
-      "zone": 12,
-      "startTime": "20:00",
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/The_Strokes_by_Roger_Woolman.jpg/1280px-The_Strokes_by_Roger_Woolman.jpg",
-      "imageSubject": "The Strokes",
-      "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons",
-      "durationMin": 120
-    },
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "lastVerified": "2026-10-01",
-      "quality": 4,
-      "uniqueness": 4,
-      "id": "art-basel-paris-2026",
-      "title": "Art Basel Paris",
-      "emoji": "🖼️",
-      "categories": [
-        "art",
-        "festival"
-      ],
-      "indoor": true,
-      "weatherSensitive": false,
-      "goodFor": [
-        "couple",
-        "weekend",
-        "afternoon"
-      ],
-      "coords": [
-        48.8661,
-        2.3125
-      ],
-      "coordsFrom": "hand-placed at the venue",
-      "area": "Grand Palais, 8e",
-      "start": "2026-10-23",
-      "end": "2026-10-25",
-      "priceNote": "Tickets from Art Basel",
-      "priceLevel": 3,
-      "why": "195 galleries under the Grand Palais glass roof. The fair is worth it for the building alone; the free public programme around the city that week costs nothing.",
-      "source": "Art Basel",
-      "url": "https://www.artbasel.com/paris",
-      "booking": "https://www.artbasel.com/paris",
-      "zone": 8,
-      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/France-000296_-_Paris%27_Grand_Palais_%2814525102530%29.jpg/1280px-France-000296_-_Paris%27_Grand_Palais_%2814525102530%29.jpg",
-      "imageSubject": "Grand Palais",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons",
-      "startTime": "11:00",
-      "durationMin": 180
     },
     {
       "type": "event",
@@ -581,52 +453,6 @@
         2.3363
       ],
       "coordsFrom": "arr-centroid"
-    },
-    {
-      "id": "zombie-walk-paris-2026",
-      "title": "Zombie Walk Paris",
-      "emoji": "🧟",
-      "categories": [
-        "halloween",
-        "festival",
-        "free",
-        "walk"
-      ],
-      "indoor": false,
-      "weatherSensitive": true,
-      "goodFor": [
-        "friends",
-        "afternoon",
-        "weekend"
-      ],
-      "coords": [
-        48.8674,
-        2.3636
-      ],
-      "coordsFrom": "hand-placed at the venue",
-      "zone": 3,
-      "area": "Place de la République",
-      "start": "2026-10-17",
-      "end": "2026-10-17",
-      "startTime": "13:00",
-      "durationMin": 180,
-      "priceNote": "Free",
-      "priceLevel": 0,
-      "booking": false,
-      "quality": 3,
-      "uniqueness": 4,
-      "labels": [],
-      "why": "Hundreds of people in zombie make-up meet at République and shuffle across the east of the city. Come in costume to join in, or just stand on the pavement and watch. The march usually sets off mid-afternoon, but the route changes each year, so check the organisers' page that week.",
-      "source": "paris.fr carnivals and parades calendar",
-      "url": "https://www.paris.fr/pages/l-agenda-parisien-des-carnavals-et-des-parades-33630",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Place_de_la_Republique%2C_Monument_for_Gloire_de_la_Republique_Francaise_%282%29.JPG/500px-Place_de_la_Republique%2C_Monument_for_Gloire_de_la_Republique_Francaise_%282%29.JPG",
-      "imageSubject": "Place de la République",
-      "imageKind": "context",
-      "type": "event",
-      "provenance": "editorial",
-      "lastVerified": "2026-10-12",
-      "festival": "halloween",
-      "imageCredit": "Wikimedia Commons"
     },
     {
       "id": "parc-de-letrange-2026",

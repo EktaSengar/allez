@@ -1,54 +1,12 @@
 {
-  "generated": "2026-10-17",
+  "generated": "2026-10-28",
   "window": {
-    "from": "2026-10-16",
-    "to": "2026-12-15"
+    "from": "2026-10-28",
+    "to": "2026-12-27"
   },
   "source": "confs.tech (MIT) · developers.events (CC BY-NC 4.0)",
   "note": "Tech conferences in this city, from two open lists maintained by volunteers. Facts only: name, dates, city, topic, link — the line under each title is assembled from those, never copied. Kept apart from events-city.json because the licences differ; see DATA-LICENSE.md. Written daily by scripts/conferences.mjs, pruned by scripts/refresh.mjs.",
   "items": [
-    {
-      "id": "conf-bsidesnyc-0x06-2026-10-17",
-      "title": "BSidesNYC 0x06",
-      "emoji": "💻",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "New York, NY",
-      "start": "2026-10-17",
-      "end": "2026-10-17",
-      "why": "A one-day conference on cybersecurity, security in New York, NY. Tickets and programme on its own site.",
-      "url": "https://bsidesnyc.org",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-a-case-for-community-open-source-events-with-gat-2026-10-27",
-      "title": "A Case for Community: Open Source Events with GatherPress",
-      "emoji": "💻",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "New York, NY",
-      "start": "2026-10-27",
-      "end": "2026-10-27",
-      "why": "A one-day conference on wordpress, open source, cms in New York, NY. Tickets and programme on its own site.",
-      "url": "https://www.meetup.com/wordpressnyc/events/316377220/",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
     {
       "id": "conf-recursion-2026-10-29",
       "title": "Recursion",
@@ -65,7 +23,7 @@
       "why": "A two-day conference on haskell in New York, NY. Tickets and programme on its own site.",
       "url": "https://conf.funcp.org",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -86,28 +44,7 @@
       "why": "A three-day conference on data in Brooklyn, NY. Tickets and programme on its own site.",
       "url": "https://tessl.io/devcon",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "conf-ai-native-devcon-new-york-2026-2026-11-03",
-      "title": "AI Native DevCon New York 2026",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech"
-      ],
-      "zone": null,
-      "approx": "city",
-      "area": "Brooklyn, NY",
-      "start": "2026-11-03",
-      "end": "2026-11-04",
-      "why": "A two-day conference on AI, DevOps in Brooklyn, NY. Tickets and programme on its own site.",
-      "url": "https://ainativedevcon.io/",
-      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -128,7 +65,7 @@
       "why": "A two-day conference on finance, open source in New York, NY. Tickets and programme on its own site.",
       "url": "https://events.linuxfoundation.org/open-source-finance-forum-new-york/",
       "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -149,7 +86,7 @@
       "why": "A 4-day conference on javascript in New York, NY. Tickets and programme on its own site.",
       "url": "https://aicodingsummit.com/nyc",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -170,7 +107,7 @@
       "why": "A 4-day conference on javascript in New York, NY. Tickets and programme on its own site.",
       "url": "https://jsnation.us",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -191,7 +128,49 @@
       "why": "A 4-day conference on javascript in New York, NY. Tickets and programme on its own site.",
       "url": "https://reactsummit.us",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-ai-dev-nyc-2026-2026-11-30",
+      "title": "AI Dev NYC 2026",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-11-30",
+      "end": "2026-12-01",
+      "why": "A two-day conference in New York, NY. Tickets and programme on its own site.",
+      "url": "https://ai-dev.deeplearning.ai/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-10-28",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-odsc-ai-nyc-2026-ai-for-work-summit-2026-12-02",
+      "title": "ODSC AI NYC 2026: AI for Work Summit",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-12-02",
+      "end": "2026-12-03",
+      "why": "A two-day conference in New York, NY. Tickets and programme on its own site.",
+      "url": "https://summit.ai/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -212,7 +191,28 @@
       "why": "A two-day conference in New York, NY. Tickets and programme on its own site.",
       "url": "https://conversations.ctocraft.com/new-york",
       "source": "confs.tech — tech-conferences/conference-data (MIT)",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "conf-the-ai-summit-new-york-2026-2026-12-09",
+      "title": "The AI Summit New York 2026",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech"
+      ],
+      "zone": null,
+      "approx": "city",
+      "area": "New York, NY",
+      "start": "2026-12-09",
+      "end": "2026-12-10",
+      "why": "A two-day conference in New York, NY. Tickets and programme on its own site.",
+      "url": "https://newyork.theaisummit.com/",
+      "source": "developers.events — Developers Conferences Agenda (CC BY-NC 4.0)",
+      "lastVerified": "2026-10-28",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3

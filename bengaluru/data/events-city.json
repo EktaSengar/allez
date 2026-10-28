@@ -1,64 +1,110 @@
 {
-  "generated": "2026-10-17",
+  "generated": "2026-10-28",
   "window": {
-    "from": "2026-10-16",
-    "to": "2026-12-15"
+    "from": "2026-10-28",
+    "to": "2026-12-27"
   },
   "source": "Luma — Bengaluru",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 8
+    "luma": 10
   },
   "items": [
     {
-      "id": "luma-evtbtdQAQKovPRXnkU",
-      "title": "The First 5 Sales Hires: Should They Be Closers, SDRs, or Technical Experts? How to Build Your Initial GTM Team.",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "halasuru",
-      "area": "BHIVE Workspace MG Road, BHIVE, Mahalakshmi Chambers, 29, Mahatma Gandhi Rd, nex",
-      "coords": [
-        12.973508899999999,
-        77.6164228
-      ],
-      "start": "2026-10-17",
-      "end": "2026-10-17",
-      "why": "Once the founder has closed the first few dozen customers, the next question is always: Who do we hire first to build the machine? A wrong move here doesn't just cost money—it costs months of momentum. This month, we are breaking down the blueprint for your initial Go-To-Market team: The First 5 Sales Hires: Should The",
-      "url": "https://luma.com/g44lx0tq",
-      "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-16",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtH6byedDG1jNrFR6",
-      "title": "Recognisable in 3 Seconds: Building Distinctive Brand Codes",
+      "id": "luma-evtvpo7qEhHuGP7tSp",
+      "title": "Inkle Diwali Celebration | Bengaluru",
       "emoji": "🫂",
       "type": "event",
       "categories": [
         "community"
       ],
       "zone": "hsr-layout",
-      "area": "Edit Lobby, 455, 17th Cross Service Rd, Sector 6, HSR Layout, Bengaluru, Karnata",
+      "area": null,
       "coords": [
-        12.9125288,
-        77.63186499999999
+        12.910996815104262,
+        77.64942307616005
       ],
-      "start": "2026-10-17",
-      "end": "2026-10-17",
-      "why": "In a feed full of brands that look and sound the same, the ones that win are the ones you'd recognise without the logo. Edit Lobby is teaming up with Erth.Co, a design studio shaping distinctive identities for a new generation of brands, including Project Qaafi, Croffle Guys, Indinoor and many more for an afternoon on ",
-      "url": "https://luma.com/wqm2mnvy",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "why": "Bengaluru in Diwali week is the city at its best. Lights on every balcony, rangoli at every gate, and the sound of crackers that never quite stops. It’s also the week founders rarely slow down. The US market doesn’t pause for Diwali, and neither does the work of building a company that sells to the world from here. So ",
+      "url": "https://luma.com/ls2e1izm",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "quality": 3,
       "uniqueness": 3
     },
     {
-      "id": "luma-evtee3VRt7RTfODVKC",
-      "title": "Slow weekends: ft AOH",
+      "id": "luma-evtmzCnxyeyOUcGvDT",
+      "title": "Skydo Diwali After Hours",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "hsr-layout",
+      "area": "Skydo, 2nd Floor, 31, Phase, IndiQube Serenity, 2, Hosur Rd, near Vishal Megamar",
+      "coords": [
+        12.9136819,
+        77.6251553
+      ],
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "why": "Being your own boss is great, but the office Diwali party is one thing you might miss. 🪔 So, we thought we'll throw one for you! 🫶 Join us for Skydo Diwali After Hours, an evening of games, good food, drinks and great company. Meet fellow freelancers, founders and business owners, make some new friends, and enjoy a f",
+      "url": "https://luma.com/u87ht7bs",
+      "source": "Luma — Bengaluru",
+      "lastVerified": "2026-10-28",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtehGwAwuaGqaFl3R",
+      "title": "Alter Magazine #7 Launch",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "halasuru",
+      "area": null,
+      "coords": [
+        12.975547515569566,
+        77.62243465155127
+      ],
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "why": "About Alter: Alter Magazine is a monthly journal bringing to the world new literary writing on Science, Technology, and Progress, from South Asia. With every story, we aim to alter our readers’ views and perceptions, bringing them contemporary geniuses, cutting-edge ideas, and pathbreaking discoveries. This is a living",
+      "url": "https://luma.com/ghyfu6jt",
+      "source": "Luma — Bengaluru",
+      "lastVerified": "2026-10-28",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evt0zEtH0QAAF1IPEW",
+      "title": "Aretaxia Bookclub Halloween Party",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "hsr-layout",
+      "area": "Tapas Reading Cafe, 2nd Floor, 2628, 27th Main Rd, above Juice Junction, 1st Sec",
+      "coords": [
+        12.915047,
+        77.65170049999999
+      ],
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "why": "There's been a murder at the library, and everyone's a suspect. For this edition of our bookclub, we're celebrating Halloween at Tapas, and things are about to get a little spooky!!! Dressing up is a must, preferably as your favourite book character, of course... Expect fun costume parades, spooky conversations, a litt",
+      "url": "https://luma.com/wq3j0no2",
+      "source": "Luma — Bengaluru",
+      "lastVerified": "2026-10-28",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtPPQlKWgSIGvXXZL",
+      "title": "Not a Launch Party",
       "emoji": "🫂",
       "type": "event",
       "categories": [
@@ -67,84 +113,61 @@
       "zone": "indiranagar",
       "area": null,
       "coords": [
-        12.970548622866461,
-        77.64125877890972
+        12.965783701543025,
+        77.64180207273454
       ],
-      "start": "2026-10-18",
-      "end": "2026-10-18",
-      "why": "Sundays were made for doing very little, and we're doing it in style. Slow Weekends is back with a midday hangout hosted by Pooja Sinha & Abhimanyu. Think easy energy, good company, and a one-hour reset before the week starts creeping back into your head. Come as you are. Roll in, find a spot, say hi to someone new or ",
-      "url": "https://luma.com/rvlcwypu",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "why": "Let’s get one thing straight: this is NOT a launch party. 🙅 There will be no keynote, no “our journey” slideshow, and nobody will say “synergy” (anyone caught saying it gets cut off from the snacks). What we are doing is throwing a ridiculously good night, because everyone deserve one. 🌀 What’s happening 🧠 No Theme ",
+      "url": "https://luma.com/z3nc0tgc",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "quality": 3,
       "uniqueness": 3
     },
     {
-      "id": "luma-evt8Mu36DRxrQV4ttX",
-      "title": "The KV Cache Bottleneck: Architectural Alternatives",
+      "id": "luma-evtC3SwBJfHFwRQDPJ",
+      "title": "Indie Sambar Listening Sessions #7: The Scene (2015)",
       "emoji": "🫂",
       "type": "event",
       "categories": [
         "community"
       ],
-      "zone": "indiranagar",
+      "zone": "halasuru",
+      "area": "Rainbow Bridge, 140, Gangadhar Chetty Rd, Halasuru, Yellappa Chetty Layout, Siva",
+      "coords": [
+        12.9767716,
+        77.6194649
+      ],
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "why": "The times had a changed in 2015 since Thermal and a Quarter's early landmark work (including Jupiter Cafe and Plan B) that cemented and gave utterance to \"Bangalore rock\" and its scene. It was the heydey of social media, electronic dance music, the accelerating pace of taste and the proliferation of subcultures. What d",
+      "url": "https://luma.com/f64z6iyi",
+      "source": "Luma — Bengaluru",
+      "lastVerified": "2026-10-28",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtBb7RENTilnsCjJR",
+      "title": "CyberSwaraj: Digital Privacy for Beginners",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "hsr-layout",
       "area": null,
       "coords": [
-        12.980070469169066,
-        77.64139348744976
+        12.91079252349907,
+        77.63066996394056
       ],
-      "start": "2026-10-21",
-      "end": "2026-10-21",
-      "why": "In autoregressive decoding, each new token recomputes the keys and values for all preceding tokens. This cache grows linearly with context length, and in long-context serving it becomes the dominant memory and bandwidth cost - quite often more limiting than raw compute itself. In this session, Abhay Kumar, co-founder o",
-      "url": "https://luma.com/587afpgo",
+      "start": "2026-11-15",
+      "end": "2026-11-15",
+      "why": "Forty years later, the feeling he was describing is just daily life. Your phone knows where you slept last night. Your browser knows what you almost bought and changed your mind about. Your keyboard knows what you typed and then deleted. None of this is a secret anymore, it's just something most of us have stopped noti",
+      "url": "https://luma.com/guz9u3ic",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-16",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtsAAM7t4xPhiGJtV",
-      "title": "BitGo x Giottus: Crypto Custody in Action",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "koramangala",
-      "area": "BitGo, Incubex KRM5, 450, 8th Main Rd, 4th Block, Koramangala, Bengaluru, Karnat",
-      "coords": [
-        12.9319385,
-        77.6282543
-      ],
-      "start": "2026-10-24",
-      "end": "2026-10-24",
-      "why": "Join us for an evening with the CEO of Giottus, one of India's longest-running crypto exchanges, built for Indian traders and investors Giottus secures user funds with BitGo custody, and the two have been long-standing partners. Hear how they built Giottus from scratch, scaled it in India, and how custody works under t",
-      "url": "https://luma.com/39txuq8y",
-      "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-16",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evty8WQuw7CWeGKjYO",
-      "title": "QFF 2026: Quantum and Qiskit 101",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "btm-layout",
-      "area": "Startup Park Bengaluru, Total Mall, Police Station, opposite to Madiwala, Sidhar",
-      "coords": [
-        12.9218575,
-        77.6201801
-      ],
-      "start": "2026-11-06",
-      "end": "2026-11-06",
-      "why": "As part of Qiskit Fall Fest 2026, QuantumX is bringing together students, researchers, professionals, and technology enthusiasts for an engaging introduction to the world of quantum computing and Qiskit. This expert talk is designed to provide a clear and accessible starting point for anyone interested in understanding",
-      "url": "https://luma.com/hczdve5y",
-      "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "quality": 3,
       "uniqueness": 3
     },
@@ -167,7 +190,30 @@
       "why": "Get started with quantum programming through a practical, beginner-friendly workshop using Qiskit and IBM Quantum Platform. This event is exclusively for students and is open to participants from all academic institutions. About the Event Ready to move beyond theory and start building with quantum computers? Join the Q",
       "url": "https://luma.com/79i0vamg",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtigi1EIWWWMb5iuz",
+      "title": "When I Met Myself...a Playback Theatre performance",
+      "emoji": "🎭",
+      "type": "event",
+      "categories": [
+        "theatre"
+      ],
+      "zone": "shivajinagar",
+      "area": "Samagata Foundation, Cobalt, 4th floor, 46/1, Church St, Haridevpur, Shanthala N",
+      "coords": [
+        12.975618599999999,
+        77.60275589999999
+      ],
+      "start": "2026-11-22",
+      "end": "2026-11-22",
+      "why": "First Drop Theatre presents 'When I Met Myself' - A Playback Theatre Performance on Mental Health About the Show: Our inner worlds hold countless stories - of feeling overwhelmed and finding our footing, of hiding behind a smile, of struggling to be understood, of moments of doubt, courage, vulnerability, and self-disc",
+      "url": "https://luma.com/manotsava-fip9",
+      "source": "Luma — Bengaluru",
+      "lastVerified": "2026-10-28",
       "quality": 3,
       "uniqueness": 3
     },
@@ -190,7 +236,7 @@
       "why": "Product Managers Connect is a relaxed, high value networking meetup created exclusively for product managers. The goal is simple: connect, exchange experiences, and build professional relationships with peers in the product community. What to expect A casual, conversation driven environment. Dedicated space to meet fel",
       "url": "https://luma.com/232qy3xn",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-10-16",
+      "lastVerified": "2026-10-28",
       "quality": 3,
       "uniqueness": 3
     }
