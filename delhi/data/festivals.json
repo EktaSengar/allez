@@ -1,11 +1,11 @@
 {
-  "note": "Festivals the city keeps, and when. Each `on` is one year's run: `start` and `end` bound the season, `peak` is the night it builds to, and the shelf appears `lead` days before `start`. A record joins with `\"festival\": \"<id>\"`; `match` words pull in the city feed's own listings by title. Read by the festival shelf in js/app.js. Dates that move (Diwali, Lunar New Year) are entered per year — check them each autumn.",
+  "note": "Festivals the city keeps, and when. Each `on` is one year's run: `start` and `end` bound the season, `peak` is the night it builds to, and the festival joins the Festivals tab in Events (and the shelf on Today) `lead` days before `start` — 45, so there is time to book. A record joins with `\"festival\": \"<id>\"`; `match` words pull in the city feed's own listings by title. Read by festivalTab and festivalShelf in js/app.js. Dates that move (Diwali, Lunar New Year) are entered per year — check them each autumn.",
   "items": [
     {
       "id": "navratri",
       "name": "Navratri",
       "emoji": "💃",
-      "lead": 10,
+      "lead": 45,
       "line": "Nine nights of garba and dandiya: Gujarati circles in the colony parks, ticketed raas nights on the big grounds, and kuttu-atta thalis for the fasting.",
       "on": [
         {
@@ -25,7 +25,7 @@
       "id": "durga-puja",
       "name": "Durga Puja",
       "emoji": "🌺",
-      "lead": 10,
+      "lead": 45,
       "line": "CR Park turns into Kolkata for five days: pandal-hopping after dark, dhunuchi dancing, and kosha mangsho and mishti doi from the stalls.",
       "on": [
         {
@@ -45,7 +45,7 @@
       "id": "dussehra",
       "name": "Dussehra",
       "emoji": "🏹",
-      "lead": 10,
+      "lead": 45,
       "line": "Ten nights of Ramlila on the Red Fort grounds, ending with Ravan, Kumbhkaran and Meghnad burning in front of a crowd of thousands.",
       "on": [
         {
@@ -66,7 +66,7 @@
       "id": "halloween",
       "name": "Halloween",
       "emoji": "🎃",
-      "lead": 21,
+      "lead": 45,
       "line": "Costume nights at Hauz Khas and Connaught Place.",
       "on": [
         {
@@ -85,7 +85,7 @@
       "id": "diwali",
       "name": "Diwali",
       "emoji": "🪔",
-      "lead": 21,
+      "lead": 45,
       "line": "The city's biggest week: Chandni Chowk's lights and Kinari Bazaar tinsel, mithai queues, diya stalls at Dilli Haat and card parties in every colony.",
       "on": [
         {
@@ -107,7 +107,7 @@
       "id": "chhath",
       "name": "Chhath",
       "emoji": "🌅",
-      "lead": 7,
+      "lead": 45,
       "line": "Purvanchali families wade into the Yamuna ghats at sunset and again at dawn, with offerings to the sun in bamboo baskets.",
       "on": [
         {
@@ -124,7 +124,7 @@
       "id": "gurpurab",
       "name": "Gurpurab",
       "emoji": "🙏",
-      "lead": 10,
+      "lead": 45,
       "line": "Guru Nanak's birthday: Bangla Sahib and Sis Ganj lit up, nagar kirtan processions through the old city, and langar for anyone who comes.",
       "on": [
         {
@@ -144,7 +144,7 @@
       "id": "christmas",
       "name": "Christmas",
       "emoji": "🎄",
-      "lead": 21,
+      "lead": 45,
       "line": "Khan Market lit up, carols at Sacred Heart and plum cake at the old bakeries.",
       "on": [
         {
@@ -165,7 +165,7 @@
       "id": "new-year",
       "name": "New Year's Eve",
       "emoji": "🎆",
-      "lead": 14,
+      "lead": 45,
       "line": "Parties from Aerocity to Hauz Khas. Book ahead, and plan the ride home.",
       "on": [
         {
@@ -186,7 +186,7 @@
       "id": "lohri",
       "name": "Lohri",
       "emoji": "🔥",
-      "lead": 10,
+      "lead": 45,
       "line": "Bonfires in the Punjabi colonies on the coldest week of winter, with rewri, gajak, peanuts and popcorn thrown into the flames.",
       "on": [
         {
@@ -203,7 +203,7 @@
       "id": "republic-day",
       "name": "Republic Day",
       "emoji": "🇮🇳",
-      "lead": 14,
+      "lead": 45,
       "line": "The parade down Kartavya Path, then Beating Retreat at Vijay Chowk three days later as the camels stand on the skyline.",
       "on": [
         {

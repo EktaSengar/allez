@@ -1,11 +1,11 @@
 {
-  "note": "Festivals the city keeps, and when. Each `on` is one year's run: `start` and `end` bound the season, `peak` is the night it builds to, and the shelf appears `lead` days before `start`. A record joins with `\"festival\": \"<id>\"`; `match` words pull in the city feed's own listings by title. Read by the festival shelf in js/app.js. Dates that move (Diwali, Lunar New Year) are entered per year — check them each autumn.",
+  "note": "Festivals the city keeps, and when. Each `on` is one year's run: `start` and `end` bound the season, `peak` is the night it builds to, and the festival joins the Festivals tab in Events (and the shelf on Today) `lead` days before `start` — 45, so there is time to book. A record joins with `\"festival\": \"<id>\"`; `match` words pull in the city feed's own listings by title. Read by festivalTab and festivalShelf in js/app.js. Dates that move (Diwali, Lunar New Year) are entered per year — check them each autumn.",
   "items": [
     {
       "id": "diwali",
       "name": "Diwali",
       "emoji": "🪔",
-      "lead": 21,
+      "lead": 45,
       "line": "Lamps on every balcony, sweets from every counter, and fireworks through the night.",
       "on": [
         {
@@ -24,7 +24,7 @@
       "id": "halloween",
       "name": "Halloween",
       "emoji": "🎃",
-      "lead": 21,
+      "lead": 45,
       "line": "Costume nights in the bars of Indiranagar and Koramangala.",
       "on": [
         {
@@ -43,7 +43,7 @@
       "id": "christmas",
       "name": "Christmas",
       "emoji": "🎄",
-      "lead": 21,
+      "lead": 45,
       "line": "Plum cake season, carols on Brigade Road and midnight mass at St Mark's.",
       "on": [
         {
@@ -64,7 +64,7 @@
       "id": "new-year",
       "name": "New Year's Eve",
       "emoji": "🎆",
-      "lead": 14,
+      "lead": 45,
       "line": "Brigade Road and Church Street pack out. Book a table or go early.",
       "on": [
         {

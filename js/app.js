@@ -1179,7 +1179,7 @@ const App = (() => {
   defineView('weekend',  c  => renderWeekend(c.weekend), c => weekendLede(c.weekend));
   defineView('eat',      () => renderEat(),      () => eatLede());
   defineView('explore',  () => renderExplore(),  () => exploreLede());
-  defineView('events',   () => festivalShelf(8) + bookStrip() + renderEvents(),   () => eventsLede());
+  defineView('events',   () => bookStrip() + renderEvents(),   () => eventsLede());
   defineView('regulars', () => renderRegulars(), () => regularsLede());
   defineView('away',     () => renderAway());
   defineView('quests',   () => renderQuests());
@@ -2999,9 +2999,9 @@ const App = (() => {
 
   /* The first day in the window it is on, as days from today, or null.
      `isOpenOn` already knows about weekdays and holidays. */
-  function evNext(i) {
+  function evNext(i, ahead = EV_AHEAD) {
     const from = Math.max(0, Rank.daysBetween(TODAY_ISO, i.start));
-    for (let d = from; d <= EV_AHEAD; d++) {
+    for (let d = from; d <= ahead; d++) {
       if (d === 0 && evOverToday(i)) continue;
       if (Rank.isOpenOn(i, iso(addDays(TODAY, d)))) return d;
     }
@@ -3061,7 +3061,7 @@ const App = (() => {
   }
 
 
-  function evPool() {
+  function evPool(ahead = EV_AHEAD) {
     const out = [];
     /* A researched record that names a feed listing in `sameAs` stands in
        for it — the Notre-Dame market arrives from the city's feed and from
@@ -3069,7 +3069,7 @@ const App = (() => {
     const covered = new Set(ALL.flatMap(i => i.sameAs || []));
     for (const i of ALL) {
       if (!isEvent(i) || spent(i) || covered.has(i.id)) continue;
-      const d = evNext(i);
+      const d = evNext(i, ahead);
       if (d == null) continue;
       out.push({ i, d, g: evGroupOf(i), run: evSpan(i) > EV_RUN });
     }
@@ -3092,7 +3092,12 @@ const App = (() => {
   /* Seasons overlap — Christmas runs into the New Year — so of those in
      season the one whose big day is next wins, and once every peak is
      past, the one that peaked last. */
-  function festivalNow() {
+  /* Every festival worth planning for, soonest big day first and then
+     those past their peak but still on. Planning is the point: a Diwali
+     party sells out while Halloween is still the one everybody is
+     talking about, so the Festivals tab shows them all, not just the
+     next. */
+  function festivalsAhead() {
     const live = [];
     for (const f of D.festivals?.items || []) {
       for (const on of f.on || []) {
@@ -3101,14 +3106,19 @@ const App = (() => {
       }
     }
     const ahead = live.filter(x => x.peak >= TODAY_ISO).sort((a, b) => a.peak.localeCompare(b.peak));
-    return ahead[0] || live.sort((a, b) => b.peak.localeCompare(a.peak))[0] || null;
+    const past = live.filter(x => x.peak < TODAY_ISO).sort((a, b) => b.peak.localeCompare(a.peak));
+    return [...ahead, ...past];
   }
 
-  function festivalPool(now) {
+  function festivalNow() { return festivalsAhead()[0] || null; }
+
+  /* `ahead` reaches to the end of the season for the Festivals tab, whose
+     whole job is the weeks the 30-day lists stop short of. */
+  function festivalPool(now, ahead) {
     if (!now) return [];
     const { f, on } = now;
     const words = (f.match || []).map(w => new RegExp(`(^|[^\\p{L}])${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^\\p{L}])`, 'iu'));
-    return evPool().filter(({ i }) =>
+    return evPool(ahead).filter(({ i }) =>
       i.start <= on.end && i.end >= on.start &&
       (i.festival === f.id || words.some(r => r.test(i.title || ''))));
   }
@@ -3125,12 +3135,8 @@ const App = (() => {
     return `${n} days to go`;
   }
 
-  /* What the shelf drew, so Events can leave those out of the lists
-     below it rather than show them twice. */
-  let FEST_SHOWN = new Set();
-
+  /* The teaser on Today. The whole season lives in the Festivals tab. */
   function festivalShelf(cap) {
-    FEST_SHOWN = new Set();
     const now = festivalNow();
     const pool = festivalPool(now);
     if (!pool.length) return '';
@@ -3143,13 +3149,60 @@ const App = (() => {
       .sort((a, b) => chosen(b) - chosen(a)).slice(0, cap);
     const byItem = new Map(pool.map(e => [e.i, e]));
     const pick = ranked.map(i => byItem.get(i));
-    pick.forEach(e => FEST_SHOWN.add(e.i.id));
     const more = pool.length > pick.length ? ` · ${pick.length} of ${pool.length}` : '';
+    const n = festivalsAhead().length;
     return `<section class="festival" data-festival="${esc(f.id)}">`
       + stripHead(`${f.emoji} ${f.name} in ${City.name}`, `${festivalCountdown(on)}${more}`)
       + (f.line ? `<p class="festival-line">${esc(f.line)}</p>` : '')
       + `<div class="event-grid">${pick.map(e => evRow(e, evWhen(e))).join('')}</div>`
+      + `<button type="button" class="event-more tab-link" data-view="events" data-evmode="fest" data-fest="${esc(f.id)}">${n > 1 ? `See all ${n} festivals` : `See all of ${esc(f.name)}`}</button>`
       + `</section>`;
+  }
+
+  /* ---------- the Festivals tab ----------
+
+     Its own tile in Events rather than a shelf on top of it, so Tech and
+     Exhibitions open on their own lists. It exists only while a festival
+     is close enough to plan for — a tile with nothing behind it is worse
+     than none — and it shows every festival in that window, because the
+     week a festival is on is too late to book the night that sells out.
+
+     Inside: one chip per festival, then what needs booking, then the
+     season day by day, then the runs that last all of it. */
+  let FEST_SEL = null;
+
+  function festivalTab() {
+    const list = festivalsAhead();
+    if (!list.length) return `<p class="empty">No festivals in the next few weeks.</p>`;
+    const now = list.find(x => x.f.id === FEST_SEL) || list[0];
+    FEST_SEL = now.f.id;
+    const { f, on } = now;
+    const when = x => festivalCountdown(x.on) || fmtShort(new Date(x.peak + 'T12:00:00'));
+    const chips = list.length > 1
+      ? `<div class="fest-chips" role="group" aria-label="Which festival">${list.map(x =>
+          `<button type="button" data-fest="${esc(x.f.id)}" aria-pressed="${x === now}">${x.f.emoji} ${esc(x.f.name)} <em>${esc(when(x))}</em></button>`).join('')}</div>`
+      : '';
+    const pool = festivalPool(now, Math.max(EV_AHEAD, Rank.daysBetween(TODAY_ISO, on.end)));
+    const head = stripHead(`${f.emoji} ${f.name} in ${City.name}`,
+      [festivalCountdown(on), `${pool.length} ${pool.length === 1 ? 'event' : 'events'}`].filter(Boolean).join(' · '))
+      + (f.line ? `<p class="festival-line">${esc(f.line)}</p>` : '');
+    if (!pool.length) return chips + `<section class="festival">${head}<p class="empty">Nothing listed for ${esc(f.name)} yet. Check back nearer the day.</p></section>`;
+
+    const book = pool.filter(e => e.i.bookAhead && e.d > 0);
+    const rest = pool.filter(e => !book.includes(e));
+    const once = rest.filter(e => !e.run);
+    const runs = rest.filter(e => e.run);
+    const byDay = new Map();
+    for (const e of once.sort((a, b) => a.d - b.d)) {
+      const k = e.d;
+      if (!byDay.has(k)) byDay.set(k, []);
+      byDay.get(k).push(e);
+    }
+    const days = [...byDay].map(([d, es]) => evSection(dayLabel(d), es, 6, 0)).join('');
+    return chips + `<section class="festival" data-festival="${esc(f.id)}">${head}</section>`
+      + evSection('Book ahead', book, 6, 0)
+      + days
+      + evSection('All season', runs, 6, 0);
   }
 
   /* The hour, where the record states one. A hand-written record says
@@ -3385,8 +3438,8 @@ const App = (() => {
   }
 
   function renderEvents() {
-    const pool = evPool().filter(e => !FEST_SHOWN.has(e.i.id));
-    if (!pool.length && !City.lumaPage) {
+    const pool = evPool();
+    if (!pool.length && !City.lumaPage && !festivalsAhead().length) {
       return `<p class="empty">Nothing dated in the next month yet.</p>`;
     }
 
@@ -3397,6 +3450,8 @@ const App = (() => {
        show what they carry. An empty Tech says so; a missing one looks
        like the tab forgot. */
     const groups = EV_GROUPS.filter(([k]) => k === 'tech' || pool.some(e => e.g === k));
+    const fests = festivalsAhead();
+    if (fests.length) groups.push(['fest', '🎉', 'Festivals', fests.map(x => x.f.name).join(' · ')]);
     if (!groups.some(([k]) => k === EV_MODE)) EV_MODE = 'all';
     const tabs = [['all', '📅', 'Coming up', 'a bit of everything'], ...groups];
     const modeBar = `<div class="mode mode-wide mode-chips" id="ev-mode">
@@ -3407,6 +3462,7 @@ const App = (() => {
         </button>`).join('')}
     </div>`;
 
+    if (EV_MODE === 'fest') return modeBar + festivalTab();
     const all = EV_MODE === 'all';
     const mine = (all ? pool : pool.filter(e => e.g === EV_MODE)).filter(evMatchesDate);
     const controls = modeBar + evTools(mine.length);
@@ -4468,6 +4524,12 @@ const App = (() => {
     });
 
     // Events: the four groups, same component as Regulars'
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-fest]'); if (!b) return;
+      FEST_SEL = b.dataset.fest;
+      if (!b.closest('[data-evmode]')) { EV_OPEN.clear(); render(); }
+    });
+
     document.addEventListener('click', e => {
       const b = e.target.closest('[data-evmode]'); if (!b) return;
       EV_MODE = b.dataset.evmode;
