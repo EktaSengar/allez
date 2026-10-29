@@ -3,7 +3,9 @@
 Notes for the Allez app, written 23 September 2026 before any of it is built.
 Extended 6 October 2026 with who it is for, the shape of the app, what
 happens when it isn't open, what happens after, and the first build that
-can be tested (from *Three people, one question* onwards).
+can be tested (from *Three people, one question* onwards). Extended 16
+October 2026 with *Saved from anywhere: the snapshot*. The feature-by-feature
+spec is APP-SPEC.md; the build order is APP-TASKS.md.
 The website keeps its tabs; the experience described here belongs in a native
 app, because it is used many times a week, in the hand, on the move — and
 that is an app's job, not a website's.
@@ -543,6 +545,84 @@ can't wait to tell you. It extends the site's voice rather than replacing it:
 
 LAUNCH.md's "no exclamation marks" becomes "one, for celebrations" in the app.
 Everything else in it holds.
+
+---
+
+## Saved from anywhere: the snapshot
+
+*Added 16 October 2026.*
+
+Most "we should go there" moments don't start in Allez. They start on
+Instagram: a friend's story from a new ramen counter, a reel about a night
+market, a poster for a gig on Saturday. People screenshot it, and the
+screenshot dies in the camera roll between a parking ticket and a meme.
+Allez should be where that screenshot goes, and where it turns into a
+Saturday.
+
+**The promise:** *see it anywhere, send it to Allez, and it turns up in a
+plan when it fits.*
+
+### How it works
+
+1. **Capture.** Two ways in, one result.
+   - From Instagram (or anywhere): *Share → Allez*. Instagram hands over a
+     link, not the post, so the link is a hint, not the content.
+   - From the camera roll: share the screenshot to Allez, or tap
+     *Add from a screenshot* inside the app. This is the path that always
+     works.
+2. **Read.** The phone reads the text in the image — a name, a date, a time,
+   an address, a handle — using the operating system's own text recognition.
+   Nothing is uploaded. The image and its text stay on the phone, like the
+   rest of what Allez knows (principle 10).
+3. **Recognise.** The text is matched against the city's places and events.
+   - **Known:** the save becomes our record — hours, trust mark, photos — with
+     the person's screenshot kept beside it as *why you saved this*.
+   - **Unknown:** a private card is made from what was read. One short screen
+     asks the person to confirm the name, the place and when ("this
+     weekend", a date, or "some time"). It never shows a ★ or "we went",
+     because we didn't.
+4. **Plan.** A dated thing — a gig, a market, a pop-up — becomes a fixed stop
+   in that weekend's plan, and the rest of the plan is built around it. An
+   undated thing — a restaurant, a bakery — goes into *Saved* and is offered
+   when a weekend has room and it's open, near the other stops, and right for
+   who's coming. Saved things that are about to end are flagged ("ends
+   Sunday").
+
+The confirmation reads like the rest of the app: *"Saved: Hinodeya, Japantown.
+I'll find a Saturday for it."* No forms, no tags.
+
+### Why it belongs
+
+- **It's the strongest signal we can get.** A save nobody asked for says more
+  about taste than any swipe, and it's training data the person handed over
+  with intent.
+- **It turns the app into the place plans are kept.** The weekend stops being
+  only what Allez found and becomes what the person and Allez found together.
+- **It shows where the data is thin.** Unknown saves are the places our data
+  is missing. With the person's permission (off by default, asked once),
+  the name and neighbourhood — never the image — can be sent to us as a lead
+  for the Thursday drop.
+
+### Rules
+
+- **The screenshot is the person's, not ours.** It is never published, never
+  becomes a card's photo for anyone else, and never feeds the site. A place
+  learned this way is checked and written up from our own sources like any
+  other record (see the no-aggregator rule).
+- **No scraping.** We don't fetch Instagram posts behind a shared link. The
+  link is stored so the person can get back to the post; the content comes
+  from their screenshot.
+- **Closed and past things fall away.** A saved event that has ended moves to
+  *Missed* quietly, once. A saved place that closes is marked, not deleted.
+
+### What it needs
+
+- **A development build.** The share-sheet entry and on-device text reading
+  are native code, which Expo Go doesn't include. The first version
+  (*Add from a screenshot* plus a typed name) works in Expo Go; reading the
+  text and the share sheet arrive with the EAS build.
+- **An engine change.** `Plan.weekend()` has to accept fixed stops and a
+  saved pool, and plan around them. See APP-SPEC.md, *Snapshot*.
 
 ---
 

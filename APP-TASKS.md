@@ -8,8 +8,8 @@ order, and how we know each piece is done.
 (complete plan, who's coming, swap a stop), the deck (for two by link, and
 saving alone), Go, How was it?, postcards, My city (counts, countdown,
 regulars) and What Allez knows about you. The swipe page for the other person
-is in `match/`. So far it has only been tried in the web version, never on a
-phone.
+is in `match/`. *16 October:* F has run it in Expo Go on a phone. The
+feature-by-feature spec is APP-SPEC.md.
 
 **The rule for the order.** The test is about one loop: *weekend plan → go →
 how was it → postcard*. Anything that makes that loop work on real phones comes
@@ -25,7 +25,7 @@ means, and its dependencies.
 
 Nothing else matters until the app runs on a phone in someone's hand.
 
-### 1.1 Run on the founder's phone · C + F
+### 1.1 Run on the founder's phone · C + F · *run in Expo Go, 16 October; the list of what felt wrong is still to write*
 - F installs Expo Go. C runs the dev server and F opens the app on the phone.
 - Walk the whole loop on the phone: answer the question, tap Go on a card,
   open How was it? from My city's test hook (see 1.2), make a postcard, share
@@ -80,7 +80,39 @@ Nothing else matters until the app runs on a phone in someone's hand.
 
 ---
 
-## Phase 2: ready for testers (by 20 October)
+## The calendar
+
+Written 16 October. Dates are targets; the order matters more than the days.
+
+| Week | Dates | Goal | Tasks |
+|---|---|---|---|
+| 1 | 16–22 Oct | The loop feels right on a phone | 1.1 list, 1.4 fixes, 1.7 data sync, 1.8 simulator, 1.5 one real deck |
+| 2 | 23–29 Oct | Ready for testers | 2.1 APK, 2.3 report check, 2.5 notifications, S.1 snapshot v0, 2.6 recruit, 2.7 first drop |
+| 3–5 | 30 Oct – 19 Nov | The test | phase 3, weekly drops, S.2 and S.3 in a development build |
+| 6 | 20–26 Nov | Read the test, decide | the native decision, phase 4 picks |
+
+The tester start moves from 20 October to **27 October**. Snapshot v0 is
+small enough to make the test; the share-sheet version is not.
+
+### 1.7 Sync the app with the site's data · C
+- Since 13 October the site's engine and data have changed (Bengaluru
+  events, Bay Area places, neighbourhoods and regulars). Regenerate
+  `app/engine/` from the site, and check that the app's bundled copy and the
+  allez.city fetch agree.
+- **Done when:** the bundled data's stamp matches the site's, and the
+  weekend plan on a fixed date is the same in the app and on the site.
+
+### 1.8 A simulator Claude can drive · F (install) + C
+- F installs Xcode from the App Store (free, large) and opens it once.
+  C then runs the app in the iOS Simulator (`npx expo run:ios` or Expo Go in
+  the simulator) and can tap through it and take screenshots without the
+  phone. Android Studio's emulator is the same for Android, optional.
+- **Done when:** C has walked the loop in the simulator and sent
+  screenshots.
+
+---
+
+## Phase 2: ready for testers (by 27 October)
 
 Fifteen people: five locals, five new arrivals, five workationers (APP.md,
 *The test*).
@@ -149,6 +181,44 @@ Fifteen people: five locals, five new arrivals, five workationers (APP.md,
   something new. The app already fetches it.
 - **Done when:** a drop has been published and seen arriving in the app
   without an update.
+
+---
+
+## Phase S: Snapshot — saved from anywhere
+
+APP.md, *Saved from anywhere*; spec in APP-SPEC.md, feature 12.
+
+### S.1 Snapshot v0, in Expo Go · C · *for the test*
+- *Add from a screenshot* (photo picker) and *Paste a link or text*.
+  The person types the name with autocomplete from the city's records;
+  unknown places get the short form. *When:* this weekend / a day / some
+  time.
+- The `saves` list in saved state, the Saved list in My city, and the counts
+  in the test report.
+- **Done when:** five real Instagram screenshots are saved and each lands in
+  the right group.
+
+### S.2 Plan around saves · C · *for the test, if S.1 lands by 25 October*
+- Engine: `Plan.weekend()` accepts `pinned` stops and a `saved` pool (spec,
+  *Engine change*). Done in the site's engine so both share it.
+- Today shows a save that fits today.
+- **Done when:** a save for this Saturday is a pinned stop and the rest of
+  Saturday is planned around it; an undated save shows up in a weekend with
+  room.
+
+### S.3 Share → Allez and on-device text reading · C + F · *development build*
+- A share-extension / intent-filter config plugin, and on-device text
+  recognition. Check both against the SDK 57 docs before choosing packages.
+- Needs a development build (EAS), so Android first; iPhone needs the Apple
+  Developer Program.
+- **Done when:** sharing from Instagram opens the confirm screen in two
+  seconds, and 4 of 5 known places auto-match.
+
+### S.4 Missing-place leads · C
+- Opt-in "tell Allez about places we're missing": name and neighbourhood
+  only. Arrives as a list for the Thursday drop.
+- **Done when:** one lead has reached F and been researched from our own
+  sources.
 
 ---
 
@@ -265,7 +335,6 @@ In this order (APP.md, *What the content has to add*):
 - **A typed "ask"** ("Saturday with my sister, she likes art"). Needs a
   server and a model.
 - **Other cities.** Paris first (LAUNCH.md), with the beret pigeon.
-- **The mascot's name.** F to choose. It's needed before the store listing.
 
 ---
 
@@ -274,6 +343,8 @@ In this order (APP.md, *What the content has to add*):
 | # | Decision | Needed by |
 |---|---|---|
 | 1 | Deck first or plan first for the weekend, or test both (3.3) | Before testers start |
-| 2 | iPhone testers: Expo Go or TestFlight (2.2) | 20 October |
-| 3 | The pigeon's name | Before any store listing |
+| 2 | iPhone testers: Expo Go or TestFlight (2.2). *16 October: Expo Go for now* | done |
+| 3 | The pigeon's name. *Coo, 13 October* | done |
+| 5 | Snapshot v0 in the first test, or after it (S.1) | 22 October |
+| 6 | Apple Developer Program for iPhone development builds (S.3) | Before S.3 on iPhone |
 | 4 | Native in January (LAUNCH.md, *Native in January?*), now with a working build to judge from | As soon as 1.1 is done |
