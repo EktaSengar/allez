@@ -2554,3 +2554,25 @@ html:has(.home) {
 .fest-chips button em { font-style: normal; font-size: .75rem; color: var(--faint); }
 .fest-chips [aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
 .fest-chips [aria-pressed="true"] em { color: var(--accent); }
+
+/* A festival card with no photo of its own is a poster rather than a
+   picture of the street: the festival's colours, its emoji, and one line
+   of what the night is like. Same box as a photo, so the grid holds. */
+.event-shot.poster {
+  display: flex; flex-direction: column; justify-content: flex-end; gap: .4rem;
+  padding: 1rem 1.1rem; color: #fff8ee;
+  background: linear-gradient(155deg, #3a2a4a, #1d1a26);
+}
+.event-shot.poster[data-poster="halloween"] { background: radial-gradient(120% 90% at 85% 10%, #e0782a 0, transparent 55%), linear-gradient(160deg, #3b1f3f, #151018); }
+.event-shot.poster[data-poster="diwali"]    { background: radial-gradient(110% 90% at 20% 15%, #f2b53a 0, transparent 55%), linear-gradient(160deg, #9b2448, #3d0f2a); }
+.event-shot.poster[data-poster="christmas"] { background: radial-gradient(110% 90% at 80% 10%, #d9a441 0, transparent 50%), linear-gradient(160deg, #1f4a3a, #0e2219); }
+.event-shot.poster[data-poster="new-year"]  { background: radial-gradient(110% 90% at 50% 0%, #c9a6ff 0, transparent 55%), linear-gradient(160deg, #1b2450, #0b0f24); }
+.poster-mark { font-size: 2.6rem; line-height: 1; }
+.poster-vibe { font-family: var(--serif); font-size: 1.35rem; line-height: 1.2; max-width: 16rem; text-wrap: balance; }
+
+.fest-banner { position: relative; margin: 0 0 1rem; border-radius: var(--radius, 14px); overflow: hidden; aspect-ratio: 3 / 1; background: var(--img-bg); }
+.fest-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fest-banner figcaption { position: absolute; right: .6rem; bottom: .5rem; font-size: .6rem; color: #fff; background: rgb(0 0 0 / .45); border-radius: 3px; padding: .1rem .4rem; }
+@media (max-width: 560px) { .fest-banner { aspect-ratio: 16 / 9; } }
+
+.fest-way .pick-label { margin: 0 0 .5rem; }
