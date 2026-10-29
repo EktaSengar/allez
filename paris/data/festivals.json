@@ -21,6 +21,25 @@
       ]
     },
     {
+      "id": "diwali",
+      "name": "Diwali",
+      "emoji": "🪔",
+      "lead": 14,
+      "line": "Lamps and sweets around La Chapelle and Passage Brady, pujas at the Tamil temples, and a festival night at the Maison de l’Inde.",
+      "on": [
+        {
+          "start": "2026-11-06",
+          "end": "2026-11-10",
+          "peak": "2026-11-08"
+        }
+      ],
+      "match": [
+        "diwali",
+        "deepavali",
+        "dipavali"
+      ]
+    },
+    {
       "id": "christmas",
       "name": "Christmas",
       "emoji": "🎄",
