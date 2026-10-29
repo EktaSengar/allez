@@ -1,12 +1,48 @@
 {
   "generated": "2026-10-29",
   "window": {
-    "from": "2026-10-28",
-    "to": "2027-01-26"
+    "from": "2026-10-29",
+    "to": "2027-01-27"
   },
   "source": "Our415 · SF Rec & Park, data.sfgov.org · Luma",
   "note": "Things you take up rather than attend — `mode: \"do\"`. Luma is most of it: the tech, AI and design evenings the Bay is thick with. Our415 adds Rec & Park's recurring dance and art classes, whose weekdays the feed states outright; its sport drop-ins are deliberately left for the Sport tab. Lines are assembled from each record's own fields. These are `sourced` records and rank below anything hand-written. The gate lives in scripts/practices.mjs; pruned daily by scripts/refresh.mjs.",
   "items": [
+    {
+      "id": "prac-our415-43736rpd",
+      "title": "Drop-in: Ballroom Dance",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "dance",
+        "learn"
+      ],
+      "zone": "richmond-district",
+      "area": "Richmond Rec Center",
+      "coords": [
+        37.783215000001,
+        -122.477976000002
+      ],
+      "start": "2026-09-02",
+      "end": "2026-12-30",
+      "days": [
+        3,
+        5
+      ],
+      "times": "12:30–14:30",
+      "why": "Dance class · twice a week, Sep–Dec",
+      "price": 0,
+      "priceNote": "Free",
+      "labels": [
+        "free",
+        "learn"
+      ],
+      "url": "https://sfrecpark.org/register",
+      "source": "Our415 — SF Rec & Park, data.sfgov.org",
+      "lastVerified": "2026-10-29",
+      "quality": 3,
+      "uniqueness": 3
+    },
     {
       "id": "prac-our415-44042rpd",
       "title": "Saturday Afternoon Drop-in Art",
@@ -36,7 +72,7 @@
       ],
       "url": "https://sfrecpark.org/register",
       "source": "Our415 — SF Rec & Park, data.sfgov.org",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -71,43 +107,7 @@
       ],
       "url": "https://sfrecpark.org/register",
       "source": "Our415 — SF Rec & Park, data.sfgov.org",
-      "lastVerified": "2026-10-28",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-our415-43736rpd",
-      "title": "Drop-in: Ballroom Dance",
-      "emoji": "💃",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "dance",
-        "learn"
-      ],
-      "zone": "richmond-district",
-      "area": "Richmond Rec Center",
-      "coords": [
-        37.783215000001,
-        -122.477976000002
-      ],
-      "start": "2026-09-02",
-      "end": "2026-12-30",
-      "days": [
-        3,
-        5
-      ],
-      "times": "12:30–14:30",
-      "why": "Dance class · twice a week, Sep–Dec",
-      "price": 0,
-      "priceNote": "Free",
-      "labels": [
-        "free",
-        "learn"
-      ],
-      "url": "https://sfrecpark.org/register",
-      "source": "Our415 — SF Rec & Park, data.sfgov.org",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "quality": 3,
       "uniqueness": 3
     },
@@ -132,7 +132,7 @@
       "why": "Entire Espresso is a pop up breakfast series for the developer community. We pick a city, put the coffee on, and get two people who’ve built a lot of software talking before work starts. San Francisco is up first. Thomas Dohmke (CEO of Entire, previously CEO of GitHub) sits down with Gergely Orosz (The Pragmatic Engine",
       "url": "https://luma.com/0m8oub77",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -162,7 +162,7 @@
       "why": "Pancake AI x Corgi: The tallest stack of pancakes Ever Come watch a startup launch make it into the record books. Pancake AI and Corgi are hosting Pancake's launch party at the Corgi Cafe, and it comes with an official GUINNESS WORLD RECORDS™ attempt at the Tallest stack of pancakes title. The height to beat is 108.3 c",
       "url": "https://luma.com/usecorgi-fda6",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -192,7 +192,7 @@
       "why": "Something’s talking in the dark... 🎃 Join AssemblyAI to celebrate the launch of our new text-to-speech model with a haunted house happy hour. Trick-or-treat your way through life-size animatronics, each one brought to life with real-time TTS. There’s candy at every station and spooky decorations throughout, plus drink",
       "url": "https://luma.com/assemb-42oc",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -203,7 +203,7 @@
     },
     {
       "id": "luma-evtKdMel2GGJDUExNE",
-      "title": "Agents After Dark: Mini Golf & Arcade @ GitHub Universe",
+      "title": "Agents After Dark: Tacos & Margaritas at Barrio | GitHub Universe",
       "emoji": "🤖",
       "type": "event",
       "mode": "do",
@@ -212,17 +212,47 @@
         "learn"
       ],
       "zone": "fisherman-s-wharf",
-      "area": "Subpar Miniature Golf, 900 North Point St F-201, San Francisco, CA 94109, USA",
+      "area": "Barrio, 900 North Point St Unit J 101, San Francisco, CA 94133, USA",
       "coords": [
-        37.805931,
-        -122.4232413
+        37.8060737,
+        -122.42230289999999
       ],
       "start": "2026-10-29",
       "end": "2026-10-29",
       "why": "GitHub Universe 2026 Side Event Join us for Agents After Dark presented by 1Password, a night of mini golf, arcade games, food, drinks, and good company during GitHub Universe! We're bringing together developers, engineers, AI builders, and founders for a fun evening at Subpar in Ghirardelli Square. 🎯 What's included:",
       "url": "https://luma.com/gh-agentsafterdark",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
+      "indoor": true,
+      "labels": [
+        "learn",
+        "afterwork"
+      ],
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evt0FZX6ZWF4KV7evX",
+      "title": "AI That Reasons and Acts: Carina Hong",
+      "emoji": "🤖",
+      "type": "event",
+      "mode": "do",
+      "categories": [
+        "tech",
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": null,
+      "coords": [
+        37.44745246304018,
+        -122.15793480823174
+      ],
+      "start": "2026-10-29",
+      "end": "2026-10-29",
+      "why": "Join the Turing Frontier Fellows for an intimate Bay Area fireside with Carina Hong, Founder & CEO of Axiom Math, on the next frontier of artificial intelligence: systems that can reason deeply and verify their work. Carina is building an AI mathematician capable of discovering new mathematics, generating step-by-step ",
+      "url": "https://luma.com/zw8t5s9t",
+      "source": "Luma — San Francisco",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -252,7 +282,7 @@
       "why": "Inference as Instrument is a panel exploring how inference-powered tools are becoming instruments in their own right: reshaping how artists, musicians, filmmakers, and designers create. The panel brings together builders and practitioners at the intersection of generative AI and creative work to discuss what it means t",
       "url": "https://luma.com/modal-48ev",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -282,7 +312,7 @@
       "why": "Night Hack is back at Founders, Inc. on October 30. Come make something you want to show off. A robot. An agent. A game. That side project you can't stop thinking about. You'll have five hours to build. Then show us what works. Last time: nearly 1,000 signups and 120+ projects submitted in five hours. The night: 4:15pm",
       "url": "https://luma.com/nighthack",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -312,7 +342,7 @@
       "why": "The training run is almost complete… The Night Before RSI A Halloween party for people building with AI. Costumes are very encouraged. Friday, Oct 30, 6:59PM - 9PM San Francisco (you'll get the address once you're approved) Bring a photo ID. Spots are limited, so request to join and we'll confirm. See you soon! 👻 Host",
       "url": "https://luma.com/spacexai-734u",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -342,7 +372,7 @@
       "why": "Make your own frontier November 2 | San Francisco Fireworks, Microsoft, and NVIDIA are handing you one challenge: take open models and make your own frontier, on a task you define. Train a specialized model, build a smarter harness, route across models, whatever gets you there. Best result wins $10,000! The challenge P",
       "url": "https://luma.com/fireworks-8kmc",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -372,7 +402,37 @@
       "why": "What’s one thing you’d make better about life in San Francisco? Join us the evening before Elastic{ON} SF for a night of building with Mistral. Pick something you care about, like your commute, your neighborhood, or your favorite small business, and turn an idea into a working prototype. The challenge: build something ",
       "url": "https://luma.com/mistral-elastic",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
+      "indoor": true,
+      "labels": [
+        "learn",
+        "afterwork"
+      ],
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evt5yNZVDc8Od7KRiJ",
+      "title": "Different by Design: Lessons from Building Lovable",
+      "emoji": "💻",
+      "type": "event",
+      "mode": "do",
+      "categories": [
+        "tech",
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": null,
+      "coords": [
+        37.427084050808745,
+        -122.16460382963157
+      ],
+      "start": "2026-11-04",
+      "end": "2026-11-04",
+      "why": "What makes people fall in love with a product? Building software has never been easier. Ideas that once took months to bring to life can now be built in hours. But creating something people truly love is still incredibly hard. As the barriers to building disappear, design becomes one of the most powerful advantages a f",
+      "url": "https://luma.com/f2ggzehh",
+      "source": "Luma — San Francisco",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -402,7 +462,7 @@
       "why": "Notion and Clover are bringing together security leaders for an afternoon at Notion HQ. AI has changed how software gets built, but most security teams have not changed nearly as fast. We’ll hear how Notion’s security team runs AI in production, then sit down with security leaders from Notion and Vercel to discuss what",
       "url": "https://luma.com/of81psme",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -432,7 +492,7 @@
       "why": "South Park Commons is delighted to host Ian Silber for our Design Chat series with Soleio. Event Details 4:30pm: Doors Open 5pm-6pm: Design Chat Ian Silber is the former Head of Product Design at OpenAI, where he has led the design of ChatGPT, Codex, and the company’s product experience for the past three years. Before",
       "url": "https://luma.com/ian-silber-spc",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -462,7 +522,37 @@
       "why": "Join us for a special evening with Gergely Orosz, author and host of The Pragmatic Engineer, as he sits down live with Bryan Cantrill and Diogo Almeida at SFJAZZ in San Francisco on November 4. Come hear a candid conversation about how software is built today, how AI is changing the craft, and what it all means for eng",
       "url": "https://luma.com/pragmatic-engineer-unplugged",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
+      "indoor": true,
+      "labels": [
+        "learn",
+        "afterwork"
+      ],
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtoSHzpUsMOYMMLi8",
+      "title": "An Evening with Denmark's AI Enterprise Alliance",
+      "emoji": "🤖",
+      "type": "event",
+      "mode": "do",
+      "categories": [
+        "tech",
+        "learn"
+      ],
+      "zone": "menlo-park",
+      "area": null,
+      "coords": [
+        37.43446564747826,
+        -122.18403497891805
+      ],
+      "start": "2026-11-04",
+      "end": "2026-11-04",
+      "why": "Consul General of Denmark Jacob Vind, in collaboration with the American-Danish Business Council, is pleased to invite you to an exclusive reception at his residence in Menlo Park, bringing together senior executives from five of Denmark's leading companies and leaders from Silicon Valley's AI and technology ecosystem.",
+      "url": "https://luma.com/1fv8wanp",
+      "source": "Luma — San Francisco",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -489,10 +579,10 @@
       ],
       "start": "2026-11-04",
       "end": "2026-11-04",
-      "why": "Join us on November 4th at PlanetScale’s San Francisco office as we celebrate 30 years of Postgres. We’ll be joined by Bruce Momjian, co-founder of open source Postgres, and Fabrizio Mello, our Lead Postgres Core Engineer, to dive into how Postgres got to where it is today. More speakers to be announced soon. We’ve als",
+      "why": "Join us on November 4th at PlanetScale’s San Francisco office as we celebrate 30 years of Postgres. We’ll be joined by Bruce Momjian, co-founder of open source Postgres, along with Jan Nidzwetzki and Nikhil Sontakke from PlanetScale’s Postgres Core team, to dive into how Postgres got to where it is today and where it’s",
       "url": "https://luma.com/haxfnzo1",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -522,7 +612,7 @@
       "why": "A Codex community meetup hosted by Peter Yang and Amplitude 📅 November 4, 2026 · 5:30–8:30 pm PT 📍Amplitude HQ · San Francisco Join Peter Yang, founder of Behind the Craft, and fellow product leaders and builders for an evening of live demos, Q&A, and conversation about building with Codex and Amplitude. We’ll explor",
       "url": "https://luma.com/7a9oq3cy",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -552,7 +642,7 @@
       "why": "Baseten is proud to present Heavyweights, a series of talks where AI founders learn from the greats. Today, agents generate huge amounts of data, run their own queries, and take multi-step actions in production. So what does that mean for evals and observability? Ankur Goyal, Co-founder and CEO of Braintrust, sits down",
       "url": "https://luma.com/baseten-g3n4",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -582,7 +672,7 @@
       "why": "Even Realities makes smart glasses built to be worn all day. Even G2 looks like a normal pair of glasses but puts a display right in your line of sight. It has no camera, so it’s welcome in meetings, classrooms and conversations. We call our approach Quiet Tech: technology that’s there when you need it and gets out of ",
       "url": "https://luma.com/jvcxz1he",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -612,7 +702,7 @@
       "why": "Join us for the 139th SF Hardware Meetup at Vizcom. Our theme for the night: Manufacturing and Design! We'll have food and drink and there will be a chance for an open mic. 🤖 Bring demos for the community open mic. Speakers TBA Agenda 6:30-7:00 - Arrival, mingle, grab refreshments 7:00-7:05 - Welcome and introduction ",
       "url": "https://luma.com/2u9iuenk",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -642,7 +732,7 @@
       "why": "Build Day: OpenRouter × Meta Something we've never done before... On November 9, OpenRouter x Meta Superintelligence Labs are teaming up for our first-ever Build Day in San Francisco. One evening. A room full of builders. And 60 minutes to turn an idea into something real. The debut of Muse Spark on OpenRouter this sum",
       "url": "https://luma.com/openro-lu9g",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -672,7 +762,7 @@
       "why": "After Tokens The AI Economy Infrastructure Conference What happens after the model call? Tokens tell you what the model consumed. They don't tell you what a customer can use, when an agent should stop, or how a contract becomes a limit in your code. After Tokens is about the infrastructure that answers those questions:",
       "url": "https://luma.com/after-tokens",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -702,7 +792,7 @@
       "why": "Have anxiety about your taste? Tired of slop? We have the cure 💊 Join us Tuesday, November 10, at tiat in downtown San Francisco for Culture Slop LIVE!, presented by Air, the Season One finale. Five talks from people shaping how tech feels. Some you met in Season One, some are a preview of ideas forming around Season ",
       "url": "https://luma.com/culturesloplive",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -732,7 +822,7 @@
       "why": "welcome to the residency f26 demo day 🪽 impressive work needs to be shared the residency is the leading global founders residency network that is inspiring other companies in the category through it’s playbook, design, and founder experience. this cohort is building across ML research, thermodynamic compute, data netw",
       "url": "https://luma.com/w0vmh85c",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -762,7 +852,7 @@
       "why": "South Park Commons is excited to host Tanay Kothari, co-founder & CEO of Wispr (and SPC alum) for a fireside chat. Event Details 3:00pm: Doors Open 3:30-4:30pm: Fireside Chat Tanay Kothari is the co-founder and CEO of Wispr and Wispr Advanced Interfaces Lab. A four-time founder, he launched FeatherX, an AI personalizat",
       "url": "https://luma.com/tanay-kothari-spc",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -792,7 +882,7 @@
       "why": "Hosted by Michael Ducker",
       "url": "https://luma.com/xueo91fw",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -822,7 +912,7 @@
       "why": "Hosted by OpenStages Team, SoMa ProtoLab & TechEquity Ai",
       "url": "https://luma.com/cpqlpbpi",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -852,7 +942,7 @@
       "why": "Hosted by Abaka AI, Martina Beg & Zoe Sheng",
       "url": "https://luma.com/comedy-night",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -879,10 +969,10 @@
       ],
       "start": "2026-10-31",
       "end": "2026-10-31",
-      "why": "Hosted by NERDCONF & 6 others",
+      "why": "Hosted by NERDCONF & 8 others",
       "url": "https://luma.com/strangerbuilds",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -912,7 +1002,7 @@
       "why": "Hosted by Open Source Analytics Community & 4 others",
       "url": "https://luma.com/eis7567t",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -942,7 +1032,7 @@
       "why": "Hosted by TechEquity Ai & 4 others",
       "url": "https://luma.com/ai-summit-2026",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -972,7 +1062,7 @@
       "why": "Hosted by Francesca Vera & Snorkel AI",
       "url": "https://luma.com/41dbkzu4",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -1002,7 +1092,7 @@
       "why": "Hosted by Box Developers & 3 others",
       "url": "https://luma.com/box-dev-summit-2026",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -1032,7 +1122,7 @@
       "why": "Hosted by Agentic AI Foundation, Sahar Mor (Bond AI) & Demetrios",
       "url": "https://luma.com/voiceagentssf",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -1043,7 +1133,7 @@
     },
     {
       "id": "luma-evtZj5VcU7jmYrZXyc",
-      "title": "Physical AI Hackathon",
+      "title": "Physical AI Hackathon 🦾 [with X Square Robot]",
       "emoji": "🤖",
       "type": "event",
       "mode": "do",
@@ -1051,18 +1141,18 @@
         "tech",
         "learn"
       ],
-      "zone": "hayes-valley",
+      "zone": "forest-knolls",
       "area": null,
       "coords": [
-        37.77553700130236,
-        -122.41782823813213
+        37.75800159925836,
+        -122.45343475210592
       ],
-      "start": "2026-11-13",
-      "end": "2026-11-16",
+      "start": "2026-11-14",
+      "end": "2026-11-15",
       "why": "Hosted by Osama F Rama & X Square Robot",
       "url": "https://luma.com/21palhfw",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -1092,7 +1182,7 @@
       "why": "Hosted by Brooke Contreras & 4 others",
       "url": "https://luma.com/Agentic_AI_Night-11-19",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
@@ -1122,7 +1212,7 @@
       "why": "Hosted by Yujian Tang",
       "url": "https://luma.com/abzyfbxm",
       "source": "Luma — Open Source for AI",
-      "lastVerified": "2026-10-28",
+      "lastVerified": "2026-10-29",
       "indoor": true,
       "labels": [
         "learn",
