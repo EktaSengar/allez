@@ -929,7 +929,6 @@
     {
       "id": "nye-champs-elysees-2026",
       "festival": "new-year",
-      "provisional": true,
       "title": "New Year's Eve on the Champs-Élysées",
       "emoji": "🎆",
       "categories": [
@@ -953,9 +952,9 @@
       "area": "Arc de Triomphe and the Champs-Élysées",
       "start": "2026-12-31",
       "end": "2026-12-31",
-      "startTime": "21:00",
-      "durationMin": 240,
-      "times": "Avenue closed to traffic; projections on the Arc before midnight, fireworks at 12",
+      "startTime": "19:00",
+      "durationMin": 300,
+      "times": "Avenue closed to traffic from 3pm; festivities from 7pm; sound-and-light show on the Arc from 9pm; countdown and fireworks at midnight",
       "priceNote": "Free",
       "priceLevel": 0,
       "booking": false,
@@ -964,15 +963,15 @@
       "labels": [
         "dontmiss"
       ],
-      "why": "Paris's countdown is a light show projected onto the Arc de Triomphe, then ten minutes of fireworks from around it. Expect hundreds of thousands of people and bag checks. Arrive before nine for a view down the avenue, and plan to walk home or take the Metro, which runs all night.",
-      "source": "Ville de Paris · paris.fr",
-      "url": "https://www.paris.fr/",
+      "why": "Paris’s countdown is a light show projected onto the Arc de Triomphe, then fireworks from around it at midnight. There are none from the Eiffel Tower, whatever people say. Expect hundreds of thousands of people and bag checks. Arrive before nine for a view down the avenue, and plan to walk home or take the Metro, which runs all night.",
+      "source": "Paris je t’aime (Office du tourisme) · Ville de Paris",
+      "url": "https://parisjetaime.com/eng/article/what-to-do-in-paris-in-december-a1584",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg/500px-Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg",
       "imageSubject": "Arc de Triomphe",
       "imageKind": "subject",
       "type": "event",
       "provenance": "editorial",
-      "lastVerified": "2026-10-12",
+      "lastVerified": "2026-10-29",
       "imageCredit": "Wikimedia Commons"
     },
     {
@@ -1181,6 +1180,132 @@
       "type": "event",
       "provenance": "editorial",
       "festival": "diwali"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "christmas",
+      "labels": [],
+      "provisional": true,
+      "coordsFrom": "hand-placed at the venue",
+      "id": "jardin-des-plantes-illuminations-2026",
+      "title": "Winter light trail — Jardin des Plantes",
+      "emoji": "✨",
+      "categories": [
+        "christmas",
+        "walk",
+        "family"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "family",
+        "couple",
+        "evening"
+      ],
+      "coords": [
+        48.844,
+        2.3597
+      ],
+      "zone": 5,
+      "area": "Jardin des Plantes, 5e",
+      "start": "2026-11-18",
+      "end": "2027-01-17",
+      "startTime": "18:00",
+      "durationMin": 75,
+      "times": "Evenings 6–10pm, usually mid-November to mid-January; 2026 dates still to be announced",
+      "priceLevel": 2,
+      "booking": "https://www.jardindesplantesdeparis.fr/fr/illuminations",
+      "bookAhead": true,
+      "quality": 4,
+      "uniqueness": 4,
+      "why": "Each winter the Natural History Museum fills its garden with giant lit sculptures of animals, plants and extinct creatures, laid out along a walk after dark. It’s ticketed with timed entry, and weekend slots before Christmas go first.",
+      "source": "Muséum national d’Histoire naturelle · Paris je t’aime",
+      "url": "https://www.jardindesplantesdeparis.fr/fr/illuminations"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "christmas",
+      "labels": [],
+      "provisional": true,
+      "coordsFrom": "hand-placed at the venue",
+      "id": "gare-de-lest-alsace-market-2026",
+      "title": "Alsatian Christmas market — Gare de l’Est",
+      "emoji": "🥨",
+      "categories": [
+        "christmas",
+        "market",
+        "food"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "friends",
+        "family",
+        "afternoon"
+      ],
+      "coords": [
+        48.8768,
+        2.3592
+      ],
+      "zone": 10,
+      "area": "Parvis de la Gare de l’Est, 10e",
+      "start": "2026-11-26",
+      "end": "2026-12-27",
+      "durationMin": 60,
+      "times": "Daily, late November to late December; 2026 dates still to be announced",
+      "priceNote": "Free entry",
+      "priceLevel": 1,
+      "booking": false,
+      "quality": 3,
+      "uniqueness": 4,
+      "why": "Strasbourg’s Christmas comes to the station its trains leave from, with chalets of bredele biscuits, pretzels, flammekueche and mulled wine. Go at dusk, when the forecourt is lit.",
+      "source": "Paris je t’aime (Office du tourisme)",
+      "url": "https://parisjetaime.com/eng/article/what-to-do-in-paris-in-december-a1584"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "christmas",
+      "labels": [],
+      "provisional": true,
+      "coordsFrom": "hand-placed at the venue",
+      "id": "saint-germain-christmas-market-2026",
+      "title": "Christmas market — Saint-Germain-des-Prés",
+      "emoji": "🎄",
+      "categories": [
+        "christmas",
+        "market"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "couple",
+        "friends",
+        "afternoon"
+      ],
+      "coords": [
+        48.8536,
+        2.3336
+      ],
+      "zone": 6,
+      "area": "Place Saint-Germain-des-Prés, 6e",
+      "start": "2026-11-26",
+      "end": "2026-12-27",
+      "durationMin": 45,
+      "times": "Daily, late November to late December; 2026 dates still to be announced",
+      "priceNote": "Free entry",
+      "priceLevel": 1,
+      "booking": false,
+      "quality": 3,
+      "uniqueness": 3,
+      "why": "A small market of craft chalets beside the abbey church, more for gifts than mulled wine. Combine it with the Bon Marché windows a ten-minute walk away.",
+      "source": "Paris je t’aime (Office du tourisme)",
+      "url": "https://parisjetaime.com/eng/article/what-to-do-in-paris-in-december-a1584"
     }
   ]
 }
