@@ -3151,10 +3151,13 @@ const App = (() => {
     const pick = ranked.map(i => byItem.get(i));
     const more = pool.length > pick.length ? ` · ${pick.length} of ${pool.length}` : '';
     const n = festivalsAhead().length;
+    EV_POSTER = f.id;
+    const cards = pick.map(e => evRow(e, evWhen(e))).join('');
+    EV_POSTER = null;
     return `<section class="festival" data-festival="${esc(f.id)}">`
       + stripHead(`${f.emoji} ${f.name} in ${City.name}`, `${festivalCountdown(on)}${more}`)
       + (f.line ? `<p class="festival-line">${esc(f.line)}</p>` : '')
-      + `<div class="event-grid">${pick.map(e => evRow(e, evWhen(e))).join('')}</div>`
+      + `<div class="event-grid">${cards}</div>`
       + `<button type="button" class="event-more tab-link" data-view="events" data-evmode="fest" data-fest="${esc(f.id)}">${n > 1 ? `See all ${n} festivals` : `See all of ${esc(f.name)}`}</button>`
       + `</section>`;
   }
@@ -3183,11 +3186,58 @@ const App = (() => {
           `<button type="button" data-fest="${esc(x.f.id)}" aria-pressed="${x === now}">${x.f.emoji} ${esc(x.f.name)} <em>${esc(when(x))}</em></button>`).join('')}</div>`
       : '';
     const pool = festivalPool(now, Math.max(EV_AHEAD, Rank.daysBetween(TODAY_ISO, on.end)));
-    const head = stripHead(`${f.emoji} ${f.name} in ${City.name}`,
+    const banner = f.image
+      ? `<figure class="fest-banner"><img src="${esc(f.image)}" alt="${esc(f.imageSubject || f.name)}" loading="lazy" decoding="async">${f.imageCredit ? `<figcaption>${esc(f.imageCredit)}</figcaption>` : ''}</figure>`
+      : '';
+    const head = banner + stripHead(`${f.emoji} ${f.name} in ${City.name}`,
       [festivalCountdown(on), `${pool.length} ${pool.length === 1 ? 'event' : 'events'}`].filter(Boolean).join(' · '))
       + (f.line ? `<p class="festival-line">${esc(f.line)}</p>` : '');
     if (!pool.length) return chips + `<section class="festival">${head}<p class="empty">Nothing listed for ${esc(f.name)} yet. Check back nearer the day.</p></section>`;
 
+    EV_POSTER = f.id;
+    try {
+      const picks = festivalWays(pool);
+      const left = pool.filter(e => !picks.some(p => p.e === e));
+      const ways = picks.length > 1
+        ? stripHead(`${picks.length === 3 ? 'Three' : 'Two'} ways to do ${f.name}`, 'If you only go to one thing')
+          + `<div class="event-grid fest-ways">${picks.map(p =>
+              `<div class="fest-way"><p class="pick-label">${p.label}</p>${evRow(p.e, evWhen(p.e))}</div>`).join('')}</div>`
+          + (left.length ? stripHead(`Everything for ${f.name}`, `${left.length} more`) : '')
+        : '';
+      return chips + `<section class="festival" data-festival="${esc(f.id)}">${head}</section>`
+        + ways + festivalLists(picks.length > 1 ? left : pool);
+    } finally {
+      EV_POSTER = null;
+    }
+  }
+
+  /* The answer before the list. A festival page of twenty-five cards
+     tells you what is on and not where to go, so it opens on one pick
+     per kind of evening: the night out, the one for children, and the
+     one you would not have thought of. Each is the best-ranked of its
+     kind, hand-picked records first, and no record answers twice. */
+  const FEST_WAYS = [
+    ['🕺 Big night out', i => (i.goodFor || []).includes('night') || (i.categories || []).includes('nightlife')],
+    ['👨‍👩‍👧 With kids',    i => (i.goodFor || []).includes('family')],
+    ['🎭 Something different', i => (i.uniqueness || 0) >= 4]
+  ];
+
+  function festivalWays(pool) {
+    const chosen = i => i.provenance === 'editorial' || i.provenance === 'personal';
+    const ranked = Rank.rank(pool.map(e => e.i), CTX).sort((a, b) => chosen(b) - chosen(a));
+    const byItem = new Map(pool.map(e => [e.i, e]));
+    const used = new Set();
+    const out = [];
+    for (const [label, fits] of FEST_WAYS) {
+      const it = ranked.find(i => !used.has(i) && fits(i));
+      if (!it) continue;
+      used.add(it);
+      out.push({ label, e: byItem.get(it) });
+    }
+    return out;
+  }
+
+  function festivalLists(pool) {
     const book = pool.filter(e => e.i.bookAhead && e.d > 0);
     const rest = pool.filter(e => !book.includes(e));
     const once = rest.filter(e => !e.run);
@@ -3199,8 +3249,7 @@ const App = (() => {
       byDay.get(k).push(e);
     }
     const days = [...byDay].map(([d, es]) => evSection(dayLabel(d), es, 6, 0)).join('');
-    return chips + `<section class="festival" data-festival="${esc(f.id)}">${head}</section>`
-      + evSection('Book ahead', book, 6, 0)
+    return evSection('Book ahead', book, 6, 0)
       + days
       + evSection('All season', runs, 6, 0);
   }
@@ -3253,16 +3302,25 @@ const App = (() => {
      photogenic. Without a photograph it is the same tinted tile every
      other card draws — clearly not a picture. A photograph of the street
      rather than the event says so on the picture itself. */
+  /* Inside a festival, a photograph of the street next door says less
+     than the night does. Where the record has no photo of its own, the
+     card becomes a poster: the festival's colours, the emoji, and the
+     record's `vibe` — one line of what it is like to be there. */
+  let EV_POSTER = null;
+
   function evRow(e, lead) {
     const i = e.i;
     const saved = Store.rating(i.id) === 'want';
     const act = evAction(i);
     const t = evTime(i);
-    const pic = i.image
+    const poster = EV_POSTER && (!i.image || i.imageKind === 'context');
+    const pic = poster
+      ? `<span class="poster-mark" aria-hidden="true">${esc(i.emoji || markFor(i))}</span>${i.vibe ? `<span class="poster-vibe">${esc(i.vibe)}</span>` : ''}`
+      : i.image
       ? `${img(i, 'card')}${i.imageKind === 'context' ? '<span class="event-photo-label">Photo of the area</span>' : ''}`
       : `<span class="ph-mark">${markFor(i)}</span>`;
     return `<article class="card event-card ${tierCls(i)} ${Store.isDone(i.id) ? 'done' : ''}" data-id="${esc(i.id)}" data-evday="${e.d}">
-      <div class="shot event-shot ${i.image ? '' : 'ph'}" data-kind="${esc(i.type || '')}">
+      <div class="shot event-shot ${poster ? 'poster' : i.image ? '' : 'ph'}" data-kind="${esc(i.type || '')}"${poster ? ` data-poster="${esc(EV_POSTER)}"` : ''}>
         ${pic}
         <button class="event-save" type="button" data-evsave aria-label="${saved ? 'Unsave' : 'Save'} ${esc(i.title)}" aria-pressed="${saved}" title="${saved ? 'Saved' : 'Save event'}">
           <svg width="18" height="21" viewBox="0 0 18 21" fill="none" aria-hidden="true"><path d="M3 2h12v17l-6-4-6 4V2Z" stroke="currentColor" stroke-width="1.3"/></svg>
