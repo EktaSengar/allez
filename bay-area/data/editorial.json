@@ -6043,6 +6043,200 @@
    "imageKind": "context",
    "imageSubject": "Espresso",
    "imageCredit": "Wikimedia Commons"
+  },
+  {
+   "id": "cu-koi-palace-contempo",
+   "title": "Koi Palace Contempo",
+   "type": "restaurant",
+   "zone": "cupertino",
+   "coords": [
+    37.32335,
+    -122.0093
+   ],
+   "area": "19369 Stevens Creek Boulevard, Main Street Cupertino",
+   "url": "https://www.koipalacecontempo.com/",
+   "hours": "Mo-Th 11:00-14:30,17:30-20:30; Fr 11:00-14:30,17:30-21:00; Sa 10:30-15:00,17:00-21:00; Su 10:30-15:00,17:00-20:30",
+   "hoursFrom": "koipalacecontempo.com",
+   "cuisine": "chinese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Koi Palace Contempo",
+    "zone": "cupertino",
+    "type": "restaurant"
+   },
+   "why": "The modern offshoot of Koi Palace, the Daly City dim sum hall. Come at lunch for the dim sum, which the kitchen makes in-house with newer ideas, or at dinner for the seafood and big plates. Some tables are kept for walk-ins, so weekend brunch means a wait.",
+   "quality": 4,
+   "uniqueness": 4,
+   "goodFor": [
+    "afternoon",
+    "evening",
+    "family",
+    "group"
+   ],
+   "labels": [],
+   "source": "koipalacecontempo.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 75,
+   "priceLevel": 3,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "cu-blue-pheasant",
+   "title": "Blue Pheasant",
+   "type": "restaurant",
+   "zone": "cupertino",
+   "coords": [
+    37.32256,
+    -122.0597
+   ],
+   "area": "22100 Stevens Creek Boulevard, by Blackberry Farm golf course",
+   "url": "https://www.thebluepheasant.com/",
+   "hours": "Tu 11:30-14:00; We-Fr 11:30-24:00; Sa,Su 17:00-24:00",
+   "hoursFrom": "thebluepheasant.com",
+   "cuisine": "american",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Blue Pheasant",
+    "zone": "cupertino",
+    "type": "restaurant"
+   },
+   "why": "A Cupertino institution since 1974, from before anyone had heard of Apple. American food in a dining room that looks over the golf course, and a bar that turns to karaoke and dancing late at night. Go for the room and the evening more than for the plate.",
+   "quality": 3,
+   "uniqueness": 5,
+   "goodFor": [
+    "afternoon",
+    "evening",
+    "friends"
+   ],
+   "labels": [],
+   "source": "thebluepheasant.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 90,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "cu-yayoi",
+   "title": "Yayoi",
+   "type": "restaurant",
+   "zone": "cupertino",
+   "coords": [
+    37.33715,
+    -122.03645
+   ],
+   "area": "20682 Homestead Road",
+   "url": "https://www.yayoi-us.com",
+   "hours": "Su-Th 11:30-20:00; Fr,Sa 11:30-21:00",
+   "hoursFrom": "yayoi-us.com",
+   "cuisine": "japanese",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Yayoi",
+    "zone": "cupertino",
+    "type": "restaurant"
+   },
+   "why": "A Japanese teishoku house: one tray holds a main, rice, miso soup and small sides. Get the pork katsu curry or the wagyu sukiyaki. Quick, tidy, and good for one.",
+   "quality": 3,
+   "uniqueness": 3,
+   "goodFor": [
+    "afternoon",
+    "evening"
+   ],
+   "labels": [],
+   "source": "yayoi-us.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 50,
+   "priceLevel": 2,
+   "indoor": true,
+   "booking": false
+  },
+  {
+   "id": "cu-alexanders-steakhouse",
+   "title": "Alexander's Steakhouse",
+   "type": "restaurant",
+   "zone": "cupertino",
+   "coords": [
+    37.32333,
+    -122.00985
+   ],
+   "area": "19379 Stevens Creek Boulevard, Main Street Cupertino",
+   "url": "https://alexanderssteakhouse.com/cupertino/",
+   "hours": "Mo,Tu 17:00-21:00; We-Fr 12:00-14:00,17:00-21:00; Sa,Su 11:00-14:00,17:00-21:00",
+   "hoursFrom": "alexanderssteakhouse.com",
+   "cuisine": "steak_house",
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "Alexander's Steakhouse",
+    "zone": "cupertino",
+    "type": "restaurant"
+   },
+   "why": "The valley's big-occasion steakhouse, known for its wagyu. Book a table for a birthday or a deal closed. Weekend lunch is the gentler way in.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "evening",
+    "couple"
+   ],
+   "labels": [],
+   "source": "alexanderssteakhouse.com; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 120,
+   "priceLevel": 4,
+   "indoor": true,
+   "booking": "https://alexanderssteakhouse.com/cupertino/"
+  },
+  {
+   "id": "cu-la-patisserie",
+   "title": "La Patisserie",
+   "type": "bakery",
+   "zone": "cupertino",
+   "coords": [
+    37.32184,
+    -122.01901
+   ],
+   "area": "19758 Stevens Creek Boulevard, The Marketplace",
+   "url": "https://lapatisserie.net/",
+   "hours": "Mo 08:00-17:00; Tu-Sa 08:00-19:00; Su 09:00-17:00",
+   "hoursFrom": "lapatisserie.net",
+   "cuisine": null,
+   "categories": [
+    "food"
+   ],
+   "match": {
+    "name": "La Patisserie",
+    "zone": "cupertino",
+    "type": "bakery"
+   },
+   "why": "A family-run European bakery that has made the valley's birthday cakes since 1986. The Black Forest and the Princess cake are the classics. In the morning there are croissants, strudel and coffee cake.",
+   "quality": 4,
+   "uniqueness": 3,
+   "goodFor": [
+    "morning",
+    "afternoon",
+    "family"
+   ],
+   "labels": [],
+   "source": "lapatisserie.net; existence and address confirmed against OpenStreetMap",
+   "lastVerified": "2026-10-28",
+   "hoursChecked": "2026-10-28",
+   "durationMin": 20,
+   "priceLevel": 1,
+   "indoor": true,
+   "booking": false
   }
  ]
 }
