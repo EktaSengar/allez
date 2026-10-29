@@ -440,7 +440,7 @@
       "startTime": "18:00",
       "durationMin": 90,
       "times": "16–24 Oct 7.30–10pm; 25–29 Oct 6–10pm; 30 Oct 6–11pm; 31 Oct 6pm to midnight",
-      "priceNote": "Dated 30-min slots online; reduced rate for under-26s, students and disabled visitors",
+      "priceNote": "From €17.90 for a dated 30-min slot; reduced rate for under-26s, students and disabled visitors",
       "priceLevel": 2,
       "booking": "https://www.leparcdeletrange.fr/",
       "bookAhead": true,
@@ -1049,13 +1049,15 @@
       "start": "2026-10-30",
       "end": "2026-10-30",
       "durationMin": 180,
-      "times": "Friday 30 Oct, evening",
-      "priceLevel": 2,
+      "times": "Friday 30 Oct from 5.30pm; the courtyard is free, the ball in the salons is ticketed",
+      "priceLevel": 1,
       "bookAhead": true,
       "booking": true,
       "quality": 4,
       "uniqueness": 5,
-      "why": "A ghosts’ ball in the eighteenth-century royal storehouse on Concorde, with Parisians past and present sharing the dance floor. It’s one night only, in rooms you’d normally see by day with an audio guide."
+      "why": "A ghosts’ ball in the eighteenth-century royal storehouse on Concorde, with Parisians past and present sharing the dance floor. It’s one night only, in rooms you’d normally see by day with an audio guide.",
+      "startTime": "17:30",
+      "priceNote": "Courtyard free; ball in the salons ticketed"
     },
     {
       "type": "event",
@@ -1429,7 +1431,7 @@
       "indoor": true,
       "bookAhead": true,
       "id": "the-diwali-club-chatelet-2026",
-      "title": "The Diwali Club — Châtelet",
+      "title": "The Diwali Club — Tara Tata Club, Châtelet",
       "emoji": "🎶",
       "categories": [
         "diwali",
@@ -1441,12 +1443,12 @@
         "night"
       ],
       "coords": [
-        48.8584,
-        2.347
+        48.8617,
+        2.3445
       ],
-      "coordsFrom": "approximate: Châtelet; the venue is named but not its address",
+      "coordsFrom": "hand-placed at the venue",
       "zone": 1,
-      "area": "Tara Tara, Châtelet",
+      "area": "Tara Tata Club, 49 rue Berger, 1er (Châtelet)",
       "start": "2026-11-20",
       "end": "2026-11-20",
       "startTime": "21:00",
@@ -1460,6 +1462,431 @@
       "why": "A homesick-friendly Diwali night with lamps, marigolds, the sweets and snacks of childhood, and music by Sash. Ethnic wear is encouraged. Tickets are sold through the organiser’s Instagram.",
       "source": "Bollymooves (organiser’s Instagram)",
       "url": "https://www.instagram.com/bollymooves/"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": true,
+      "bookAhead": true,
+      "coordsFrom": "hand-placed at the venue",
+      "start": "2026-10-31",
+      "end": "2026-11-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "booking": true,
+      "categories": [
+        "halloween",
+        "nightlife",
+        "dance"
+      ],
+      "goodFor": [
+        "friends",
+        "night",
+        "weekend"
+      ],
+      "priceLevel": 2,
+      "id": "bollywood-halloween-tara-tata-2026",
+      "title": "Bollywood Halloween Party — Tara Tata Club",
+      "emoji": "🎃",
+      "coords": [
+        48.8617,
+        2.3445
+      ],
+      "zone": 1,
+      "area": "Tara Tata Club, 49 rue Berger, 1er",
+      "startTime": "20:00",
+      "durationMin": 360,
+      "times": "Sat 31 Oct, 8pm–2am",
+      "price": 10,
+      "priceNote": "Early bird €10 women, €15 men, €25 couple; then €15/€20/€30. A free drink with every ticket",
+      "why": "DJ Vir plays Bollywood, Punjabi, Bollytech and global hits for a costume night near Les Halles. Come as a horror villain or a Bollywood hero. The best costume wins €50 in cash.",
+      "source": "DJ Vir (organiser’s Instagram)",
+      "url": "https://www.instagram.com/o_okaran/"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": true,
+      "bookAhead": true,
+      "coordsFrom": "hand-placed at the venue",
+      "start": "2026-10-31",
+      "end": "2026-11-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "booking": true,
+      "categories": [
+        "halloween",
+        "nightlife",
+        "dance"
+      ],
+      "goodFor": [
+        "friends",
+        "night",
+        "weekend"
+      ],
+      "priceLevel": 2,
+      "id": "solum-hip-hop-halloween-2026",
+      "title": "Hip Hop & Afrobeats Horror Halloween — Solum",
+      "emoji": "🏰",
+      "coords": [
+        48.8638,
+        2.3136
+      ],
+      "zone": 7,
+      "area": "Solum, under the Pont Alexandre III, 7e",
+      "startTime": "23:00",
+      "durationMin": 360,
+      "times": "Sat 31 Oct, 11pm–5am",
+      "why": "A club in the stone vaults under the Pont Alexandre III, dressed as a haunted castle for the night. Expect hip hop, afrobeats, amapiano and baile funk, and a crowd of about 1,400, many of them international students.",
+      "source": "Paris Erasmus Life (Shotgun)",
+      "url": "https://shotgun.live/events/the-biggest-hip-hop-afrobeats-horror-halloween-solum"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": true,
+      "bookAhead": true,
+      "coordsFrom": "hand-placed at the venue",
+      "start": "2026-10-31",
+      "end": "2026-11-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "booking": true,
+      "categories": [
+        "halloween",
+        "nightlife",
+        "dance"
+      ],
+      "goodFor": [
+        "friends",
+        "night",
+        "weekend"
+      ],
+      "priceLevel": 1,
+      "id": "belushis-noche-de-terror-2026",
+      "title": "La Noche de Terror — Belushi’s Canal",
+      "emoji": "🏨",
+      "coords": [
+        48.8893,
+        2.3779
+      ],
+      "zone": 19,
+      "area": "Belushi’s, 159 rue de Crimée, 19e",
+      "startTime": "22:00",
+      "durationMin": 420,
+      "times": "Sat 31 Oct, 10pm–5am",
+      "price": 25,
+      "priceNote": "€25 including a drink (cheaper tiers sold out)",
+      "why": "A canal-side hostel turned haunted hotel, with two rooms and two sounds. It’s a student-priced night that’s easy to get into.",
+      "source": "Paris Erasmus Life (Shotgun)",
+      "url": "https://shotgun.live/events/la-noche-de-terror-halloween-hotel-party"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": true,
+      "bookAhead": true,
+      "coordsFrom": "hand-placed at the venue",
+      "start": "2026-10-31",
+      "end": "2026-11-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "booking": true,
+      "categories": [
+        "halloween",
+        "nightlife",
+        "dance"
+      ],
+      "goodFor": [
+        "friends",
+        "night",
+        "weekend"
+      ],
+      "priceLevel": 2,
+      "id": "chateau-de-longchamp-halloween-2026",
+      "title": "Le Grand Royaume des Ténèbres — Château de Longchamp",
+      "emoji": "🦇",
+      "coords": [
+        48.8608,
+        2.2338
+      ],
+      "zone": 16,
+      "area": "Château de Longchamp, Bois de Boulogne, 16e",
+      "startTime": "22:00",
+      "durationMin": 420,
+      "times": "Sat 31 Oct, 10pm–5am",
+      "why": "A Second Empire château in the Bois de Boulogne goes dark for a big costume party, with house, pop, R&B and disco for about a thousand people. Costumes are encouraged. Plan your ride home, as the Bois is a long walk from the nearest Metro.",
+      "source": "Paris Erasmus Life (Eventbrite)",
+      "url": "https://www.eventbrite.fr/e/le-grand-royaume-des-tenebres-halloween-chateau-de-longchamp-tickets-2003675116210"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": true,
+      "bookAhead": true,
+      "coordsFrom": "hand-placed at the venue",
+      "start": "2026-10-31",
+      "end": "2026-11-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "booking": true,
+      "categories": [
+        "halloween",
+        "nightlife",
+        "dance"
+      ],
+      "goodFor": [
+        "friends",
+        "night",
+        "weekend"
+      ],
+      "priceLevel": 2,
+      "id": "chalet-du-lac-baile-loca-halloween-2026",
+      "title": "Baile Loca Halloween — Chalet du Lac",
+      "emoji": "💀",
+      "coords": [
+        48.842,
+        2.4297
+      ],
+      "zone": 12,
+      "area": "Chalet du Lac, Bois de Vincennes, 12e",
+      "startTime": "21:00",
+      "durationMin": 420,
+      "times": "Sat 31 Oct, 9pm–4am",
+      "price": 42,
+      "priceNote": "Last tickets €42 all night",
+      "why": "Reggaeton and baile funk in the lakeside chalet at the edge of the Bois de Vincennes, with a dark Day-of-the-Dead look. The early tiers have sold out, so it’s the last tickets now.",
+      "source": "Vibes Events (Shotgun)",
+      "url": "https://shotgun.live/events/la-plus-grande-soiree-latino-d-halloween-by-baile-loca"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": true,
+      "bookAhead": true,
+      "coordsFrom": "hand-placed at the venue",
+      "start": "2026-10-31",
+      "end": "2026-11-01",
+      "quality": 3,
+      "uniqueness": 3,
+      "booking": true,
+      "categories": [
+        "halloween",
+        "nightlife",
+        "dance"
+      ],
+      "goodFor": [
+        "friends",
+        "night",
+        "weekend"
+      ],
+      "priceLevel": 2,
+      "id": "bagatelle-manoir-diable-halloween-2026",
+      "title": "Le Manoir Géant du Diable — Bagatelle Club",
+      "emoji": "😈",
+      "coords": [
+        48.87,
+        2.248
+      ],
+      "zone": 16,
+      "area": "Bagatelle Club, 42 route de Sèvres à Neuilly, Bois de Boulogne",
+      "startTime": "22:00",
+      "durationMin": 420,
+      "times": "Sat 31 Oct, 10pm–5am",
+      "why": "A garden club in the Bois de Boulogne turned haunted manor, with DJs playing house, pop and hip-hop until five, and outdoor gardens between the rooms. Costumes are encouraged.",
+      "source": "Night Life Paris (Eventbrite)",
+      "url": "https://www.eventbrite.fr/e/le-manoir-geant-du-diable-de-bagatelle-halloween-party-2026-tickets-2003876965948"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": false,
+      "bookAhead": true,
+      "coordsFrom": "hand-placed at the venue",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "quality": 3,
+      "uniqueness": 3,
+      "booking": true,
+      "id": "pere-lachaise-free-halloween-walk-2026",
+      "title": "Free Halloween walk — Père-Lachaise",
+      "emoji": "⚰️",
+      "categories": [
+        "halloween",
+        "walk",
+        "free"
+      ],
+      "weatherSensitive": true,
+      "goodFor": [
+        "friends",
+        "afternoon",
+        "weekend"
+      ],
+      "coords": [
+        48.8614,
+        2.3934
+      ],
+      "zone": 20,
+      "area": "Cimetière du Père-Lachaise, 20e",
+      "startTime": "14:00",
+      "durationMin": 120,
+      "times": "Sat 31 Oct, 2–4pm",
+      "price": 0,
+      "priceNote": "Free; register online",
+      "priceLevel": 0,
+      "why": "A free guided walk in English among the cemetery’s legends: Morrison, Wilde, Piaf and Chopin, and the darker stories in between. It’s run for international students but open to all.",
+      "source": "Paris Erasmus Life (Eventbrite)",
+      "url": "https://www.eventbrite.fr/e/free-walking-tour-pere-lachaise-halloween-edition-tickets-2003618471785"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": true,
+      "bookAhead": true,
+      "coordsFrom": "approximate: 9e",
+      "start": "2026-10-24",
+      "end": "2026-10-31",
+      "quality": 3,
+      "uniqueness": 4,
+      "booking": true,
+      "id": "paradox-museum-nuits-du-corbeau-2026",
+      "title": "Les Nuits du Corbeau — Paradox Museum",
+      "emoji": "🐦‍⬛",
+      "categories": [
+        "halloween",
+        "immersive",
+        "indoor"
+      ],
+      "goodFor": [
+        "friends",
+        "family",
+        "evening",
+        "indoor"
+      ],
+      "coords": [
+        48.872,
+        2.342
+      ],
+      "zone": 9,
+      "area": "Paradox Museum, 9e",
+      "startTime": "19:00",
+      "durationMin": 120,
+      "times": "Nightly 24–31 Oct, 7pm–midnight",
+      "price": 33,
+      "priceNote": "€33",
+      "priceLevel": 2,
+      "why": "The optical-illusion museum spends eight nights in Edgar Allan Poe’s world, with magicians, hypnotists, live acts and a quest through the rooms. It’s a good pick for teenagers.",
+      "source": "Paris je t’aime (Office du tourisme)",
+      "url": "https://parisjetaime.com/eng/article/halloween-in-paris-a1033"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": true,
+      "bookAhead": true,
+      "coordsFrom": "hand-placed at the venue",
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "quality": 4,
+      "uniqueness": 5,
+      "booking": true,
+      "id": "musee-curie-murder-party-2026",
+      "title": "Case 226 murder party — Musée Curie",
+      "emoji": "🧪",
+      "categories": [
+        "halloween",
+        "culture",
+        "game",
+        "indoor"
+      ],
+      "goodFor": [
+        "friends",
+        "evening",
+        "indoor"
+      ],
+      "coords": [
+        48.8443,
+        2.3443
+      ],
+      "zone": 5,
+      "area": "Musée Curie, 1 rue Pierre-et-Marie-Curie, 5e",
+      "startTime": "18:00",
+      "durationMin": 120,
+      "times": "Sat 31 Oct, sessions at 6pm and 8.30pm",
+      "priceLevel": 1,
+      "why": "Teams have two hours to solve a 1928 murder in the corridors of Marie Curie’s own laboratory. Places are few, so book now.",
+      "source": "Paris je t’aime (Office du tourisme)",
+      "url": "https://parisjetaime.com/eng/article/halloween-in-paris-a1033"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-10-29",
+      "festival": "halloween",
+      "labels": [],
+      "indoor": true,
+      "bookAhead": true,
+      "coordsFrom": "hand-placed at the venue",
+      "start": "2026-10-30",
+      "end": "2026-11-01",
+      "quality": 4,
+      "uniqueness": 4,
+      "booking": true,
+      "id": "dream-nation-2026",
+      "title": "Dream Nation — Halloween electronic festival",
+      "emoji": "🔊",
+      "categories": [
+        "halloween",
+        "festival",
+        "music",
+        "nightlife"
+      ],
+      "goodFor": [
+        "friends",
+        "night",
+        "weekend"
+      ],
+      "coords": [
+        48.9712,
+        2.5163
+      ],
+      "area": "Paris Nord Villepinte exhibition centre (RER B)",
+      "startTime": "20:30",
+      "durationMin": 600,
+      "times": "Fri 30 and Sat 31 Oct, 8.30pm–6.15am",
+      "price": 43.9,
+      "priceNote": "From €43.90 a night · 18+",
+      "priceLevel": 3,
+      "why": "France’s big Halloween rave: six stages over two nights, with Pendulum, Vini Vici, The Bloody Beetroots and about 40,000 people in costume. It’s strictly 18+. The RER B runs late for it, but check the last trains.",
+      "source": "Dream Nation",
+      "url": "https://dreamnation.fr/en/tickets-2026/"
     }
   ]
 }
