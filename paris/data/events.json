@@ -684,13 +684,13 @@
       ],
       "why": "Skating under the Grand Palais's glass roof, on one of the largest indoor rinks anywhere. The late session runs until 2am with a DJ. Weekday mornings before the school holidays (19 Dec) are the quiet ones, and evenings sell out first.",
       "source": "Grand Palais des Glaces · Paris je t'aime",
-      "url": "https://www.legrandpalaisdesglaces.fr/",
+      "url": "https://legrandpalaisdeglace.fr/",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/France-000296_-_Paris%27_Grand_Palais_%2814525102530%29.jpg/500px-France-000296_-_Paris%27_Grand_Palais_%2814525102530%29.jpg",
       "imageSubject": "Grand Palais",
       "imageKind": "subject",
       "type": "event",
       "provenance": "editorial",
-      "lastVerified": "2026-10-12",
+      "lastVerified": "2026-10-29",
       "imageCredit": "Wikimedia Commons"
     },
     {
@@ -1013,7 +1013,11 @@
       "booking": true,
       "quality": 3,
       "uniqueness": 3,
-      "why": "The Seine boats dress up for two days, with a gentler afternoon sailing for children and darker evening crossings for adults. Boarding is at the foot of the Eiffel Tower, so the 6pm boat catches it as it lights up."
+      "why": "The Seine boats dress up for two days, with a gentler afternoon sailing for children and darker evening crossings for adults. Boarding is at the foot of the Eiffel Tower, so the 6pm boat catches it as it lights up.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/View_of_the_Seine_River_from_a_boat_with_a_reflexion_of_the_Eiffel_Tower_at_night.jpg/500px-View_of_the_Seine_River_from_a_boat_with_a_reflexion_of_the_Eiffel_Tower_at_night.jpg",
+      "imageSubject": "The Seine and the Eiffel Tower from a boat",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1021,8 +1025,8 @@
       "lastVerified": "2026-10-29",
       "festival": "halloween",
       "labels": [],
-      "source": "Paris je t’aime (Office du tourisme)",
-      "url": "https://parisjetaime.com/eng/article/halloween-in-paris-a1033",
+      "source": "Hôtel de la Marine",
+      "url": "https://www.hotel-de-la-marine.paris/agenda/bals-d-epoque-de-l-hotel-de-la-marine/bal-des-revenants",
       "id": "hotel-de-la-marine-bal-revenants-2026",
       "title": "Bal des Revenants — Hôtel de la Marine",
       "emoji": "💃",
@@ -1048,8 +1052,8 @@
       "area": "Place de la Concorde, 8e",
       "start": "2026-10-30",
       "end": "2026-10-30",
-      "durationMin": 180,
-      "times": "Friday 30 Oct from 5.30pm; the courtyard is free, the ball in the salons is ticketed",
+      "durationMin": 210,
+      "times": "Fri 30 Oct, 5.30–9pm; the courtyard is free without booking, the state rooms need a ball ticket",
       "priceLevel": 1,
       "bookAhead": true,
       "booking": true,
@@ -1057,7 +1061,11 @@
       "uniqueness": 5,
       "why": "A ghosts’ ball in the eighteenth-century royal storehouse on Concorde, with Parisians past and present sharing the dance floor. It’s one night only, in rooms you’d normally see by day with an audio guide.",
       "startTime": "17:30",
-      "priceNote": "Courtyard free; ball in the salons ticketed"
+      "priceNote": "Courtyard free; ball in the salons ticketed",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Fa%C3%A7ade_de_l%27h%C3%B4tel_du_Garde-Meuble%2C_aujourd%27hui_l%27h%C3%B4tel_de_la_Marine%2C_place_de_la_Concorde%2C_8%C3%A8me_arrondissement%2C_Paris%2C_PH73525.jpg/500px-Fa%C3%A7ade_de_l%27h%C3%B4tel_du_Garde-Meuble%2C_aujourd%27hui_l%27h%C3%B4tel_de_la_Marine%2C_place_de_la_Concorde%2C_8%C3%A8me_arrondissement%2C_Paris%2C_PH73525.jpg",
+      "imageSubject": "Hôtel de la Marine",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1065,8 +1073,8 @@
       "lastVerified": "2026-10-29",
       "festival": "halloween",
       "labels": [],
-      "source": "Paris je t’aime (Office du tourisme)",
-      "url": "https://parisjetaime.com/eng/article/halloween-in-paris-a1033",
+      "source": "Musée Guimet",
+      "url": "https://www.guimet.fr/fr/activites-visites/nuit-k-horror",
       "id": "guimet-k-horror-night-2026",
       "title": "K-Horror Night — Musée Guimet",
       "emoji": "🧟",
@@ -1091,13 +1099,20 @@
       "start": "2026-10-31",
       "end": "2026-10-31",
       "durationMin": 240,
-      "times": "Saturday 31 Oct, evening",
-      "priceLevel": 1,
+      "times": "Sat 31 Oct: Train to Busan at 7.30pm, Seoul Station at 10pm (Korean with French subtitles)",
+      "priceLevel": 0,
       "bookAhead": true,
       "booking": true,
       "quality": 4,
       "uniqueness": 4,
-      "why": "The Asian-art museum screens Yeon Sang-ho’s Train to Busan and its animated prequel Seoul Station back to back. A Halloween night for people who’d rather have zombies on a train than fake blood in a club."
+      "why": "The Asian-art museum screens Yeon Sang-ho’s Train to Busan and its animated prequel Seoul Station back to back, free, in its auditorium. A Halloween night for people who’d rather have zombies on a train than fake blood in a club. The films are in Korean with French subtitles.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Le_mus%C3%A9e_Guimet_November_20%2C_2011.jpg/500px-Le_mus%C3%A9e_Guimet_November_20%2C_2011.jpg",
+      "imageSubject": "Musée Guimet",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons",
+      "startTime": "19:30",
+      "price": 0,
+      "priceNote": "Free"
     },
     {
       "id": "paris-wali-diwali-cruise-2026",
@@ -1141,7 +1156,11 @@
       "type": "event",
       "provenance": "editorial",
       "lastVerified": "2026-10-29",
-      "festival": "diwali"
+      "festival": "diwali",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg/500px-Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
+      "imageSubject": "The Seine at dusk by the Eiffel Tower",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "id": "baps-mandir-diwali-annakut-2026",
@@ -1182,7 +1201,11 @@
       "type": "event",
       "provenance": "editorial",
       "festival": "diwali",
-      "url": "https://www.bapsmandirparis.fr/fr"
+      "url": "https://www.bapsmandirparis.fr/fr",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Diya_Diwali_India.jpg/500px-Diya_Diwali_India.jpg",
+      "imageSubject": "A Diwali diya",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1225,7 +1248,11 @@
       "uniqueness": 4,
       "why": "Each winter the Natural History Museum fills its garden with giant lit sculptures of animals, plants and extinct creatures, laid out along a walk after dark. It’s ticketed with timed entry, and weekend slots before Christmas go first.",
       "source": "Muséum national d’Histoire naturelle · Paris je t’aime",
-      "url": "https://www.jardindesplantesdeparis.fr/fr/illuminations"
+      "url": "https://www.jardindesplantesdeparis.fr/fr/illuminations",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Paris-Jardin_des_Plantes-110-Grande_Galerie_de_l%27Evolution-2017-gje.jpg/500px-Paris-Jardin_des_Plantes-110-Grande_Galerie_de_l%27Evolution-2017-gje.jpg",
+      "imageSubject": "Jardin des Plantes",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1267,7 +1294,11 @@
       "uniqueness": 4,
       "why": "Strasbourg’s Christmas comes to the station its trains leave from, with chalets of bredele biscuits, pretzels, flammekueche and mulled wine. Go at dusk, when the forecourt is lit.",
       "source": "Paris je t’aime (Office du tourisme)",
-      "url": "https://parisjetaime.com/eng/article/what-to-do-in-paris-in-december-a1584"
+      "url": "https://parisjetaime.com/eng/article/what-to-do-in-paris-in-december-a1584",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Paris-Gare_de_l%27Est-2009.jpg/500px-Paris-Gare_de_l%27Est-2009.jpg",
+      "imageSubject": "Gare de l’Est",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1308,7 +1339,11 @@
       "uniqueness": 3,
       "why": "A small market of craft chalets beside the abbey church, more for gifts than mulled wine. Combine it with the Bon Marché windows a ten-minute walk away.",
       "source": "Paris je t’aime (Office du tourisme)",
-      "url": "https://parisjetaime.com/eng/article/what-to-do-in-paris-in-december-a1584"
+      "url": "https://parisjetaime.com/eng/article/what-to-do-in-paris-in-december-a1584",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Abbaye_de_Saint-Germain-des-Pr%C3%A9s_140131_1.jpg/500px-Abbaye_de_Saint-Germain-des-Pr%C3%A9s_140131_1.jpg",
+      "imageSubject": "Saint-Germain-des-Prés church",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1349,7 +1384,11 @@
       "uniqueness": 3,
       "why": "The city’s biggest yearly Diwali club night, with DJs Thai and Exist playing Bollywood and desi hits until five, the night before Diwali itself. It sells out most years, so buy early. Tickets are sold through the organiser’s Instagram.",
       "source": "Bollywood in Paris (organiser’s Instagram)",
-      "url": "https://www.instagram.com/bollywoodinparis/"
+      "url": "https://www.instagram.com/bollywoodinparis/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Iglesia_de_Saint-Merri%2C_Par%C3%ADs%2C_Francia%2C_2022-10-31%2C_DD_157-159_HDR.jpg/500px-Iglesia_de_Saint-Merri%2C_Par%C3%ADs%2C_Francia%2C_2022-10-31%2C_DD_157-159_HDR.jpg",
+      "imageSubject": "Église Saint-Merri, on the same street",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1384,7 +1423,11 @@
       "uniqueness": 3,
       "why": "A Diwali-night party on the festival itself, from the Mehfil Paris crowd: live singing, a DJ, Diwali games and festive food. Wear your best desi outfit. The venue is only revealed with your invite.",
       "source": "The Mehfil Paris (organiser’s Instagram)",
-      "url": "https://www.instagram.com/themehfilparis/"
+      "url": "https://www.instagram.com/themehfilparis/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Diwali_Diyas.jpg/500px-Diwali_Diyas.jpg",
+      "imageSubject": "Diwali diyas",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1420,7 +1463,11 @@
       "uniqueness": 3,
       "why": "A small Delhi-style Diwali evening from Paris Daily Life and Entre Mondes, with Indian street food, classical music, poetry and art. It’s meant for people who grew up with Diwali and for curious newcomers alike.",
       "source": "Paris Daily Life × Entre Mondes (organiser’s Instagram)",
-      "url": "https://www.instagram.com/dans.la.vie.de.fara/"
+      "url": "https://www.instagram.com/dans.la.vie.de.fara/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Diya_Lamp.jpg/500px-Diya_Lamp.jpg",
+      "imageSubject": "A Diwali lamp",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1461,7 +1508,11 @@
       "uniqueness": 3,
       "why": "A homesick-friendly Diwali night with lamps, marigolds, the sweets and snacks of childhood, and music by Sash. Ethnic wear is encouraged. Tickets are sold through the organiser’s Instagram.",
       "source": "Bollymooves (organiser’s Instagram)",
-      "url": "https://www.instagram.com/bollymooves/"
+      "url": "https://www.instagram.com/bollymooves/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Canop%C3%A9e_%40_Les_Halles_%40_Paris_%2826280306441%29.jpg/500px-Canop%C3%A9e_%40_Les_Halles_%40_Paris_%2826280306441%29.jpg",
+      "imageSubject": "Les Halles, around the corner",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1504,7 +1555,11 @@
       "priceNote": "Early bird €10 women, €15 men, €25 couple; then €15/€20/€30. A free drink with every ticket",
       "why": "DJ Vir plays Bollywood, Punjabi, Bollytech and global hits for a costume night near Les Halles. Come as a horror villain or a Bollywood hero. The best costume wins €50 in cash.",
       "source": "DJ Vir (organiser’s Instagram)",
-      "url": "https://www.instagram.com/o_okaran/"
+      "url": "https://www.instagram.com/o_okaran/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Canop%C3%A9e_%40_Les_Halles_%40_Paris_%2826280306441%29.jpg/500px-Canop%C3%A9e_%40_Les_Halles_%40_Paris_%2826280306441%29.jpg",
+      "imageSubject": "Les Halles, around the corner",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1545,7 +1600,11 @@
       "times": "Sat 31 Oct, 11pm–5am",
       "why": "A club in the stone vaults under the Pont Alexandre III, dressed as a haunted castle for the night. Expect hip hop, afrobeats, amapiano and baile funk, and a crowd of about 1,400, many of them international students.",
       "source": "Paris Erasmus Life (Shotgun)",
-      "url": "https://shotgun.live/events/the-biggest-hip-hop-afrobeats-horror-halloween-solum"
+      "url": "https://shotgun.live/events/the-biggest-hip-hop-afrobeats-horror-halloween-solum",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg/500px-Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
+      "imageSubject": "Pont Alexandre III",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1588,7 +1647,11 @@
       "priceNote": "€25 including a drink (cheaper tiers sold out)",
       "why": "A canal-side hostel turned haunted hotel, with two rooms and two sounds. It’s a student-priced night that’s easy to get into.",
       "source": "Paris Erasmus Life (Shotgun)",
-      "url": "https://shotgun.live/events/la-noche-de-terror-halloween-hotel-party"
+      "url": "https://shotgun.live/events/la-noche-de-terror-halloween-hotel-party",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Bassin_de_la_Villette_1.jpg/500px-Bassin_de_la_Villette_1.jpg",
+      "imageSubject": "Bassin de la Villette",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1629,7 +1692,11 @@
       "times": "Sat 31 Oct, 10pm–5am",
       "why": "A Second Empire château in the Bois de Boulogne goes dark for a big costume party, with house, pop, R&B and disco for about a thousand people. Costumes are encouraged. Plan your ride home, as the Bois is a long walk from the nearest Metro.",
       "source": "Paris Erasmus Life (Eventbrite)",
-      "url": "https://www.eventbrite.fr/e/le-grand-royaume-des-tenebres-halloween-chateau-de-longchamp-tickets-2003675116210"
+      "url": "https://www.eventbrite.fr/e/le-grand-royaume-des-tenebres-halloween-chateau-de-longchamp-tickets-2003675116210",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Ch%C3%A2teau_de_Longchamp_-_Fondation_GoodPlanet_2.jpg/500px-Ch%C3%A2teau_de_Longchamp_-_Fondation_GoodPlanet_2.jpg",
+      "imageSubject": "Château de Longchamp",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1672,7 +1739,11 @@
       "priceNote": "Last tickets €42 all night",
       "why": "Reggaeton and baile funk in the lakeside chalet at the edge of the Bois de Vincennes, with a dark Day-of-the-Dead look. The early tiers have sold out, so it’s the last tickets now.",
       "source": "Vibes Events (Shotgun)",
-      "url": "https://shotgun.live/events/la-plus-grande-soiree-latino-d-halloween-by-baile-loca"
+      "url": "https://shotgun.live/events/la-plus-grande-soiree-latino-d-halloween-by-baile-loca",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Le_Lac_Daumesnil_2010.jpg/500px-Le_Lac_Daumesnil_2010.jpg",
+      "imageSubject": "Lac Daumesnil, Bois de Vincennes",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1713,7 +1784,11 @@
       "times": "Sat 31 Oct, 10pm–5am",
       "why": "A garden club in the Bois de Boulogne turned haunted manor, with DJs playing house, pop and hip-hop until five, and outdoor gardens between the rooms. Costumes are encouraged.",
       "source": "Night Life Paris (Eventbrite)",
-      "url": "https://www.eventbrite.fr/e/le-manoir-geant-du-diable-de-bagatelle-halloween-party-2026-tickets-2003876965948"
+      "url": "https://www.eventbrite.fr/e/le-manoir-geant-du-diable-de-bagatelle-halloween-party-2026-tickets-2003876965948",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Chateau_de_Bagatelle_Paris.jpg/500px-Chateau_de_Bagatelle_Paris.jpg",
+      "imageSubject": "Bagatelle, Bois de Boulogne",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1757,7 +1832,11 @@
       "priceLevel": 0,
       "why": "A free guided walk in English among the cemetery’s legends: Morrison, Wilde, Piaf and Chopin, and the darker stories in between. It’s run for international students but open to all.",
       "source": "Paris Erasmus Life (Eventbrite)",
-      "url": "https://www.eventbrite.fr/e/free-walking-tour-pere-lachaise-halloween-edition-tickets-2003618471785"
+      "url": "https://www.eventbrite.fr/e/free-walking-tour-pere-lachaise-halloween-edition-tickets-2003618471785",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Paris%2C_P%C3%A8re_Lachaise_--_2014_--_1377.jpg/500px-Paris%2C_P%C3%A8re_Lachaise_--_2014_--_1377.jpg",
+      "imageSubject": "Père-Lachaise",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1843,7 +1922,11 @@
       "priceLevel": 1,
       "why": "Teams have two hours to solve a 1928 murder in the corridors of Marie Curie’s own laboratory. Places are few, so book now.",
       "source": "Paris je t’aime (Office du tourisme)",
-      "url": "https://parisjetaime.com/eng/article/halloween-in-paris-a1033"
+      "url": "https://parisjetaime.com/eng/article/halloween-in-paris-a1033",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Institut_du_Radium_-_pavillon_de_Mme_Curie_-_btv1b9021841v.jpg/500px-Institut_du_Radium_-_pavillon_de_Mme_Curie_-_btv1b9021841v.jpg",
+      "imageSubject": "Marie Curie’s pavilion at the Institut du Radium",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     },
     {
       "type": "event",
@@ -1886,7 +1969,11 @@
       "priceLevel": 3,
       "why": "France’s big Halloween rave: six stages over two nights, with Pendulum, Vini Vici, The Bloody Beetroots and about 40,000 people in costume. It’s strictly 18+. The RER B runs late for it, but check the last trains.",
       "source": "Dream Nation",
-      "url": "https://dreamnation.fr/en/tickets-2026/"
+      "url": "https://dreamnation.fr/en/tickets-2026/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Parc_Expositions_Paris_Nord_Villepinte_-_Villepinte_%28FR93%29_-_2024-08-01_-_1.jpg/500px-Parc_Expositions_Paris_Nord_Villepinte_-_Villepinte_%28FR93%29_-_2024-08-01_-_1.jpg",
+      "imageSubject": "Paris Nord Villepinte",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }
