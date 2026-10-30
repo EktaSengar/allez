@@ -191,6 +191,9 @@ async function run() {
     for (const el of data.elements) {
       const t = el.tags || {};
       if (!t.name) continue;
+      /* A pack's list of names OSM files under the wrong layer — Pal
+         Dairy in Vasant Vihar is a milk shop tagged `shop=bakery`. */
+      if ((City.discover?.notIn?.[layer.cat] || []).some(re => re.test(t.name))) continue;
 
       const lat = el.lat ?? el.center?.lat;
       const lon = el.lon ?? el.center?.lon;

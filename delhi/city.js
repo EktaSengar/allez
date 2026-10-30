@@ -836,6 +836,9 @@ const City = (() => {
        discover.mjs. Most of a market street's restaurants are drawn that
        way, and the index missed every one of them. */
     buildings: true,
+    /* Names mapped into the wrong layer. A Delhi "dairy" sells milk,
+       curd and paneer, not bread; OSM has some tagged as bakeries. */
+    notIn: { bakery: [/^(?!.*bak).*\bdairy\b/i] },
     layers: [
       { cat:'culture',    emoji:'🏛️', label:'Historic',    q:['way["historic"]["name"]','node["historic"]["name"]'] },
       { cat:'park',       emoji:'💧', label:'Water',       q:['way["natural"="water"]["name"]'], minName:true },
