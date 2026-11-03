@@ -1,58 +1,35 @@
 {
-  "generated": "2026-11-01",
+  "generated": "2026-11-03",
   "window": {
-    "from": "2026-11-01",
-    "to": "2026-12-31"
+    "from": "2026-11-03",
+    "to": "2027-01-02"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 2
+    "luma": 1
   },
   "items": [
     {
-      "id": "luma-evtizn64xvixtz7Exr",
-      "title": "Material Matters | Gujral House",
-      "emoji": "🫂",
+      "id": "luma-evtzgYlrpkpbFKd1jK",
+      "title": "Community Run with Kartikeya (Delhi)",
+      "emoji": "🏃",
       "type": "event",
       "categories": [
-        "community"
+        "sport"
       ],
-      "zone": "lajpat-nagar",
-      "area": "The Gujral Foundation, 16, Firoz Gandhi Marg, Block I, Lajpat Nagar III, Lajpat ",
+      "zone": "lodhi-colony",
+      "area": "Blue Tokai Coffee Roasters | Mehar Chand Market, Shop No 115, Meharchand Market,",
       "coords": [
-        28.568945,
-        77.23899569999999
+        28.583111,
+        77.226751
       ],
-      "start": "2026-11-01",
-      "end": "2026-12-01",
-      "why": "MATERIAL MATTERS Curated by Alaiia Gujral Saturday, 31st October | 7:00 PM – 10:00 PM Venue: Gujral House On View till 30th November Material Matters marks five years of Artdemic and celebrates its continued commitment to nurturing emerging creative talent through open calls. Unfolding across eight rooms at Gujral Hous",
-      "url": "https://luma.com/mxixxwfb",
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "why": "Join us for a community run that's all about movement, connection, and coffee. Whether you're a seasoned runner or just looking to enjoy an easy-paced run with like-minded people, everyone is welcome. Post run head to Blue Tokai cafe to unwind over freshly brewed coffee and good conversations. Come for the run, stay fo",
+      "url": "https://luma.com/a6eb2hji",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-11-01",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtKJKncdiRmskvqEt",
-      "title": "Deploy & Discover 🏴‍☠️",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "greater-noida",
-      "area": "Bennett University, Plot Nos 8 11, TechZone 2, Greater Noida, Uttar Pradesh 2013",
-      "coords": [
-        28.450277399999997,
-        77.584425
-      ],
-      "start": "2026-11-02",
-      "end": "2026-11-02",
-      "why": "Treasure Hunt – Follow the Clues, Find the Treasure! 🏴‍☠️ Get ready for an exciting adventure filled with mind-bending clues, hidden secrets, and thrilling challenges! Team up with your friends, test your problem-solving skills, and race against time to uncover the hidden treasure. Think smart, work together, and let ",
-      "url": "https://luma.com/yuycwngh",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-11-01",
+      "lastVerified": "2026-11-03",
       "quality": 3,
       "uniqueness": 3
     }

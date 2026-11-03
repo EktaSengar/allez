@@ -1,81 +1,35 @@
 {
-  "generated": "2026-11-01",
+  "generated": "2026-11-03",
   "window": {
-    "from": "2026-11-01",
-    "to": "2026-12-31"
+    "from": "2026-11-03",
+    "to": "2027-01-02"
   },
   "source": "Luma — Bengaluru",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 8
+    "luma": 6
   },
   "items": [
     {
-      "id": "luma-evtzKOZV3ndlRAdqk2",
-      "title": "An Evening of Books & Conversations",
+      "id": "luma-evt6amNU4zC57qAkeD",
+      "title": "🚶Curious Walking Club - Bengaluru 🇮🇳 · Friends of Screate Labs",
       "emoji": "🫂",
       "type": "event",
       "categories": [
         "community"
       ],
-      "zone": "koramangala",
-      "area": "Big Bean Cafe, 28, 80 Feet Rd, S.T. Bed, 4th Block, Koramangala, Bengaluru, Karn",
+      "zone": "vasanth-nagar",
+      "area": "National Gallery of Modern Art (Bengaluru), GF, Manikyavelu Mansion, 49, Palace ",
       "coords": [
-        12.931739199999999,
-        77.6325968
+        12.989411599999999,
+        77.5880553
       ],
-      "start": "2026-11-01",
-      "end": "2026-11-01",
-      "why": "📚 Koramangala Book Club An Evening of Books & Conversations Join us for a relaxed Sunday evening of reading, conversations, and good company at The Big Bean Cafe, Koramangala. Bring your current read, an old favorite, or that book you've been meaning to finish. This isn't a traditional book club with assigned reading ",
-      "url": "https://luma.com/zqp0m8m2",
+      "start": "2026-11-12",
+      "end": "2026-11-12",
+      "why": "For people who make things happen all week. Founders, engineers, designers, marketers, ops co-founders, and anyone with a side project. Every other Thursday, close the laptop, walk 5K+, and leave with an idea, an intro, or someone to build with. Arrive 6:00, we walk 6:30 sharp. You won't know who you'll meet. You'll kn",
+      "url": "https://luma.com/5i4vln8n",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-11-01",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtC3SwBJfHFwRQDPJ",
-      "title": "Indie Sambar Listening Sessions #7: The Scene (2015)",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "halasuru",
-      "area": "Rainbow Bridge, 140, Gangadhar Chetty Rd, Halasuru, Yellappa Chetty Layout, Siva",
-      "coords": [
-        12.9767716,
-        77.6194649
-      ],
-      "start": "2026-11-01",
-      "end": "2026-11-01",
-      "why": "The times had a changed in 2015 since Thermal and a Quarter's early landmark work (including Jupiter Cafe and Plan B) that cemented and gave utterance to \"Bangalore rock\" and its scene. It was the heydey of social media, electronic dance music, the accelerating pace of taste and the proliferation of subcultures. What d",
-      "url": "https://luma.com/f64z6iyi",
-      "source": "Luma — Bengaluru",
-      "lastVerified": "2026-11-01",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evt47GchrJzGm92JoA",
-      "title": "ChatGPT 101: Build a Multiplayer Game x ASCII",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "challaghatta",
-      "area": "CHRIST (Deemed to be University) Bangalore Kengeri Campus, Mysore Rd, Kanmanike,",
-      "coords": [
-        12.8631289,
-        77.43789509999999
-      ],
-      "start": "2026-11-03",
-      "end": "2026-11-03",
-      "why": "Build a game your friends can join from their own phones, in one hour, no coding needed. In this hands-on workshop you'll team up in groups of 2–3 and use ChatGPT Work to turn an idea into a working multiplayer game: a hostel arcade race, a study battle for your next exam, movie trivia, whatever your group is into. We'",
-      "url": "https://luma.com/y5ulj09e",
-      "source": "Luma — Bengaluru",
-      "lastVerified": "2026-11-01",
+      "lastVerified": "2026-11-03",
       "quality": 3,
       "uniqueness": 3
     },
@@ -98,7 +52,7 @@
       "why": "Get ready for a paw-some day at the \"Adopt, Don't Shop 2.0\" event series on November 13th, 2026, starting at 10:00 AM! Join us at WeWork Galaxy for a heartwarming celebration of pets and pet lovers. Enjoy adorable pet adoption drives, engaging workshops, and pet care masterclasses. Plus, shop for the best pet products ",
       "url": "https://luma.com/5tfvw26u",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-11-01",
+      "lastVerified": "2026-11-03",
       "quality": 3,
       "uniqueness": 3
     },
@@ -121,7 +75,7 @@
       "why": "Forty years later, the feeling he was describing is just daily life. Your phone knows where you slept last night. Your browser knows what you almost bought and changed your mind about. Your keyboard knows what you typed and then deleted. None of this is a secret anymore, it's just something most of us have stopped noti",
       "url": "https://luma.com/guz9u3ic",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-11-01",
+      "lastVerified": "2026-11-03",
       "quality": 3,
       "uniqueness": 3
     },
@@ -144,7 +98,7 @@
       "why": "Get started with quantum programming through a practical, beginner-friendly workshop using Qiskit and IBM Quantum Platform. This event is exclusively for students and is open to participants from all academic institutions. About the Event Ready to move beyond theory and start building with quantum computers? Join the Q",
       "url": "https://luma.com/79i0vamg",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-11-01",
+      "lastVerified": "2026-11-03",
       "quality": 3,
       "uniqueness": 3
     },
@@ -167,7 +121,7 @@
       "why": "First Drop Theatre presents 'When I Met Myself' - A Playback Theatre Performance on Mental Health About the Show: Our inner worlds hold countless stories - of feeling overwhelmed and finding our footing, of hiding behind a smile, of struggling to be understood, of moments of doubt, courage, vulnerability, and self-disc",
       "url": "https://luma.com/manotsava-fip9",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-11-01",
+      "lastVerified": "2026-11-03",
       "quality": 3,
       "uniqueness": 3
     },
@@ -190,7 +144,7 @@
       "why": "Product Managers Connect is a relaxed, high value networking meetup created exclusively for product managers. The goal is simple: connect, exchange experiences, and build professional relationships with peers in the product community. What to expect A casual, conversation driven environment. Dedicated space to meet fel",
       "url": "https://luma.com/232qy3xn",
       "source": "Luma — Bengaluru",
-      "lastVerified": "2026-11-01",
+      "lastVerified": "2026-11-03",
       "quality": 3,
       "uniqueness": 3
     }
