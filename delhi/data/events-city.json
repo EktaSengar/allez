@@ -1,15 +1,38 @@
 {
-  "generated": "2026-11-03",
+  "generated": "2026-11-04",
   "window": {
-    "from": "2026-11-03",
-    "to": "2027-01-02"
+    "from": "2026-11-04",
+    "to": "2027-01-03"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 1
+    "luma": 2
   },
   "items": [
+    {
+      "id": "luma-evtpVmtBJPL6fXqaQV",
+      "title": "Wednesday 8K Run",
+      "emoji": "🏃",
+      "type": "event",
+      "categories": [
+        "sport"
+      ],
+      "zone": "chanakyapuri",
+      "area": "Nehru Park--Gate 3, Nehru Park, Niti Marg, Chanakyapuri, New Delhi, Delhi 110021",
+      "coords": [
+        28.5882009,
+        77.19027229999999
+      ],
+      "start": "2026-11-04",
+      "end": "2026-11-04",
+      "why": "We shall be running a 8K. If you can manage a 5K and want to push your limits, this event is for you. Hosted by DelhiRunCollective",
+      "url": "https://luma.com/95lre7e0",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-11-04",
+      "quality": 3,
+      "uniqueness": 3
+    },
     {
       "id": "luma-evtzgYlrpkpbFKd1jK",
       "title": "Community Run with Kartikeya (Delhi)",
@@ -29,7 +52,7 @@
       "why": "Join us for a community run that's all about movement, connection, and coffee. Whether you're a seasoned runner or just looking to enjoy an easy-paced run with like-minded people, everyone is welcome. Post run head to Blue Tokai cafe to unwind over freshly brewed coffee and good conversations. Come for the run, stay fo",
       "url": "https://luma.com/a6eb2hji",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-11-03",
+      "lastVerified": "2026-11-04",
       "quality": 3,
       "uniqueness": 3
     }
