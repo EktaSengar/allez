@@ -1,15 +1,15 @@
 {
-  "generated": "2026-11-05",
+  "generated": "2026-11-06",
   "window": {
-    "from": "2026-11-05",
-    "to": "2027-01-04"
+    "from": "2026-11-06",
+    "to": "2027-01-05"
   },
   "source": "Stanford Events (events.stanford.edu) · Our415 (data.sfgov.org) · Luma — San Francisco · Luma — Bay Area Founders Club · Luma — Open Source for AI · Luma — Bay Area AI",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "stanford": 76,
-    "our415": 39,
-    "luma": 28
+    "stanford": 68,
+    "our415": 41,
+    "luma": 31
   },
   "items": [
     {
@@ -31,7 +31,33 @@
       "why": "Join a free tour of Denning House and explore its treehouse-inspired architecture and art collection. Built in 2018 specifically to house Knight-Hennessy Scholars, Denning House provides an inspiring venue for scholars, staff, and visitors, and a magnificent setting for art. A gift from Roberta Bowman Denning, '75, MBA",
       "url": "https://events.stanford.edu/event/copy-of-fulltour-denning-house-home-to-knight-hennessy-scholars",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
+      "indoor": false,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-52825333175903",
+      "title": "Tour Denning House, home to Knight-Hennessy Scholars",
+      "emoji": "🚶",
+      "type": "event",
+      "categories": [
+        "walk"
+      ],
+      "zone": "palo-alto",
+      "area": "Denning House",
+      "coords": [
+        37.423558,
+        -122.173774
+      ],
+      "start": "2026-06-25",
+      "end": "2026-12-10",
+      "why": "Join a free tour of Denning House and explore its treehouse-inspired architecture and art collection. Built in 2018 specifically to house Knight-Hennessy Scholars, Denning House provides an inspiring venue for scholars, staff, and visitors, and a magnificent setting for art. A gift from Roberta Bowman Denning, '75, MBA",
+      "url": "https://events.stanford.edu/event/copy-of-fulltour-denning-house-home-to-knight-hennessy-scholars-8294",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
       "indoor": false,
       "quality": 3,
       "uniqueness": 3,
@@ -57,7 +83,7 @@
       "why": "Carolyn Lazard: Long Take is a multimedia exhibition that begins with a score for a performance and unfolds as a series of interventions that engage accessibility as an artistic material. Made in collaboration with dancer Jerron Herman and poet and artist Joselia Rebekah Hughes, the central work, Leans, Reverses (2022)",
       "url": "https://events.stanford.edu/event/carolyn-lazard-long-take",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -83,7 +109,7 @@
       "why": "In Focus: Asian American Art from the Collection showcases recent acquisitions made through the Cantor’s Asian American Art Initiative (AAAI), offering a glimpse into one of the fastest-growing areas of the museum’s collection. Many of the works on view are being presented for the first time. Founded in 2018 by Stanfor",
       "url": "https://events.stanford.edu/event/in-focus-asian-american-art-from-the-collection",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -109,7 +135,7 @@
       "why": "In 2026 the David Rumsey Map Center celebrates its tenth year—a moment to reflect on how the Center has added value to scholarship on campus and around the world. Our collections are vast and not bounded by geography, spanning the 15th century to the present. Yet over the last decade, certain materials have repeatedly ",
       "url": "https://events.stanford.edu/event/emergent-properties",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -135,7 +161,7 @@
       "why": "Event Details: In surfacing, Patty Chang engages the ocean as a physical, geopolitical, and symbolic space, inviting you to consider the work of collection and recollection. Chang’s multimedia sculptural practice brings together archaeological remains from Point Alones Chinese Fishing Village (now the site of Stanford’",
       "url": "https://events.stanford.edu/event/patty-chang-surfacing",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -161,7 +187,7 @@
       "why": "Branner Earth Sciences Library & Map Collection Exhibit: Water in the West Our Fall 2026 exhibition highlights the water resources in California & the Western United States to shed light on the issues that affect our waterways. The exhibit features maps and the Layperson’s guides series published by the Water Education",
       "url": "https://events.stanford.edu/event/branner-library-book-map-exhibit-water",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -187,7 +213,7 @@
       "why": "Electric Contrasts: The Art of the Detail brings together photobooks and magazines to show how the revolution of photography in the late 19th and early 20th century changed the history of art. Electric Contrasts takes Kenneth Clark’s landmark 1938 book One Hundred Details from Pictures in the National Gallery as a star",
       "url": "https://events.stanford.edu/event/electric-contrasts-the-art-of-the-detail-7315",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -213,7 +239,7 @@
       "why": "Stanford University Libraries presents A Vision of Paris: the Roxane Debuisson Collection at Stanford, on view in the Peterson Gallery and Munger Rotunda of the Cecil H. Green Library from September 22, 2026 to January 24, 2027. Roxane Debuisson (1927–2018) dedicated sixty years to documenting the transformation of the",
       "url": "https://events.stanford.edu/event/a-vision-of-paris-the-roxane-debuisson-collection-at-stanford",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -239,7 +265,7 @@
       "why": "The East Asia Library at Stanford University will host a print exhibition by Kim Bong-Jun, a leading figure in Korean Minjung (People’s) Art, from September 29 to December 11, 2026. Active since the 1980s, Kim has developed a distinctive visual language that combines traditional Korean folk art and popular expression w",
       "url": "https://events.stanford.edu/event/korean-indigenous-futures",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -265,7 +291,7 @@
       "why": "Digital objects are often seen as alien to craft, as though no hands had shaped them. They can be copied endlessly and exactly, bereft of the maker’s touch. Yet weaving and printmaking are among our oldest technologies of reproduction, fixing patterns so they can be repeated and circulated. The printing press and the J",
       "url": "https://events.stanford.edu/event/tangling-the-digital-weaving-printmaking-computing",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -291,401 +317,11 @@
       "why": "Presented by the Department of Art & Art History, the 12th Annual Undergraduate Juried Exhibition, Touch Me Not, showcases a campus-wide selection of artwork by twenty-two Stanford undergraduate students. Touch Me Not: 12th Annual Undergraduate Juried Exhibition On View: October 7 – December 4, 2026 Stanford Art Galler",
       "url": "https://events.stanford.edu/event/touch-me-not-12th-annual-undergraduate-juried-exhibition",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "c/ce/Asia-Society-Gallery.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-54180690948196",
-      "title": "The Body as Monument",
-      "emoji": "🎤",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "palo-alto",
-      "area": "El Centro Chicano",
-      "coords": [
-        37.425339,
-        -122.169746
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "Chicana/o-Latina/o Studies and El Centro are thrilled to welcome Jess Sabogal, a cuir Colombian - American muralistx and printmaker from San Francisco whose large-scale public artworks attempt to document and disrupt. In this artist talk, Jess Sabogal maps a two-decade creative evolution, expanding from the monumental ",
-      "url": "https://events.stanford.edu/event/the-body-as-monument",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-53691925115268",
-      "title": "Documentary Objectives: Filming Africa from Colonialism to Independence - Rachel Gabara",
-      "emoji": "🎤",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "palo-alto",
-      "area": "Encina Commons",
-      "coords": [
-        37.426792,
-        -122.164842
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "Session Description: For well over a century, filmmakers have been shooting documentaries in West and Central Africa, a region that included the colonies of French West and Equatorial Africa and now encompasses fourteen nations and nearly 200 million people. These films played a crucial role in the development of both ",
-      "url": "https://events.stanford.edu/event/documentary-objectives-filming-africa-from-colonialism-to-independence-rachel-gabara",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-54364328703901",
-      "title": "Critical Carceral Studies | Special Collections & Coffee",
-      "emoji": "🖼️",
-      "type": "event",
-      "categories": [
-        "art"
-      ],
-      "zone": "palo-alto",
-      "area": "Green Library, Bing Wing",
-      "coords": [
-        37.426984,
-        -122.167998
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "Please join us and archivist Benjamin Stone for a viewing of various items in the Stanford Special Collections. We have requested an array of materials, including items from these collections: Dr. Huey P. Newton Foundation Inc. collection, 1968-1994 Stanford University, Black Community Services Center, records, 1973-20",
-      "url": "https://events.stanford.edu/event/critical-carceral-studies-special-collections-coffee",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-54259976400895",
-      "title": "Energy, Materials, and Water Use in Semiconductor Manufacturing: Challenges and Opportunities for Supply Chain Resilienc",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech",
-        "learn"
-      ],
-      "zone": "palo-alto",
-      "area": "Bishop Auditorium",
-      "coords": [
-        37.429468,
-        -122.167272
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "Semiconductors are essential to today’s digital economy, powering everything from everyday electronics to artificial intelligence. Yet their production depends on complex supply chains and significant amounts of critical materials, water, and energy. Dr. Sadasivan (Sadas) Shankar, Research Technology Manager at SLAC Na",
-      "url": "https://events.stanford.edu/event/energy-materials-and-water-use-in-semiconductor-manufacturing-challenges-and-opportunities-for-supply-chain-resiliency",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-54011243976882",
-      "title": "No Ideas But in Things",
-      "emoji": "🎬",
-      "type": "event",
-      "categories": [
-        "film"
-      ],
-      "zone": "palo-alto",
-      "area": "Clark Center",
-      "coords": [
-        37.431462,
-        -122.174561
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "No Ideas But in Things Filmed and Directed by Lan A. Li Produced by Peter N. Miller Short Film Screening, followed by a discussion with the filmmakers \"No Ideas But in Things\" is an art film that asks what can only be known through touch, making, and the body. Drawing on footage from the Material Intelligence seminar a",
-      "url": "https://events.stanford.edu/event/no-ideas-but-in-things",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-53977038028894",
-      "title": "The Fate of the Social in Modern Life: American Social Scientists and Japan as Archive",
-      "emoji": "🎤",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "palo-alto",
-      "area": "Lathrop Library",
-      "coords": [
-        37.429468,
-        -122.167272
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "In the decades following World War II, American social scientists turned to the study of Japanese society as an emerging ally and fellow capitalist democracy. At a time when influential theories of modernization predicted the decline of kinship, community, hierarchy, and collective obligation, Japan presented a puzzle.",
-      "url": "https://events.stanford.edu/event/the-fate-of-the-social-in-modern-life-american-social-scientists-and-japan-as-archive",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "c/c9/Lathrop_Library_2.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-54347981524777",
-      "title": "Day of the Dead Celebrations | Lecture by Rubí Tsanda Huerta",
-      "emoji": "🎤",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "palo-alto",
-      "area": "Native American Cultural Center, Clubhouse",
-      "coords": [
-        37.424927,
-        -122.170123
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "Day of the Dead Celebrations | Lecture by Rubí Tsanda Huerta Rubí is an internationally recognized writer, poet, historian, Indigenous interpreter, and emerging actress from the P’urhépecha community of Santo Tomás in the municipality of Chilchota, Michoacán. She is the author of three bilingual poetry collections in S",
-      "url": "https://events.stanford.edu/event/day-of-the-dead-celebrations-day-3",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-54054961139336",
-      "title": "What Do We Owe Each Other in the Age of AI?",
-      "emoji": "🤖",
-      "type": "event",
-      "categories": [
-        "tech",
-        "learn"
-      ],
-      "zone": "palo-alto",
-      "area": "Paul Brest Hall",
-      "coords": [
-        37.422836,
-        -122.167936
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "Please note that this event is in-person only, and RSVPs are requested to attend. Walk-ins are welcome. Register now! The 2026-27 Arrow Lecture features Betsey Stevenson discussing transformative AI, policy, and a vision for shared societal progress. Artificial intelligence promises to make us richer. But will it make ",
-      "url": "https://events.stanford.edu/event/what-do-we-owe-each-other-in-the-age-of-ai",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-53871308386123",
-      "title": "36th Annual Jonathan J. King Lecture: Dr. Bryant Lin & Dr. Shoshana Ungerleider",
-      "emoji": "🎤",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "palo-alto",
-      "area": "Cedar Room, Stanford Faculty Club",
-      "coords": [
-        37.423942,
-        -122.171919
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "The Girand Center for Biomedical Ethics is pleased to announce this year’s speaker, Dr. Bryant Lin, in conversation with Dr. Shoshana Ungerleider, for the 36th Annual Jonathan J. King Lecture. We invite you to join us on Thursday, November 5 at 5:30pm PT in the Cedar Room at the Stanford Faculty Club or via livestream ",
-      "url": "https://events.stanford.edu/event/36th-annual-jonathan-j-king-lecture",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-54177973515462",
-      "title": "The Queer Thing about Sin | Harry Tanner",
-      "emoji": "🎤",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "palo-alto",
-      "area": "Humanities Center",
-      "coords": [
-        37.424631,
-        -122.172061
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "In The Queer Thing About Sin (Bloomsbury 2025), Harry Tanner reveals the ancient origins of homophobia. By the end of the 5th century BCE, Greek plays were being staged which ridiculed homosexuality, by the end of the next century Athenians were being tried for homosexuality and Plato had explicitly condemned it in his",
-      "url": "https://events.stanford.edu/event/the-queer-thing-about-sin-harry-tanner",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "our415-166655_sfpl",
-      "title": "Fall Lanterns",
-      "emoji": "🎨",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "cow-hollow",
-      "area": "Golden Gate Valley",
-      "coords": [
-        37.796850000001,
-        -122.429047500002
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Decorate a glass jar using Mod Podge, tissue paper, book pages and other fall-themed materials to create a candle holder or vase. ",
-      "url": "https://sfpl.org/events/2026/11/05/activity-fall-lanterns",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "luma-evtMNib3No1AZHUdUC",
-      "title": "Founder Poker Night 5 | With Slash and Pump",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "rincon-hill",
-      "area": "420 Bryant St, San Francisco, CA 94107, USA",
-      "coords": [
-        37.7828113,
-        -122.3943829
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "Join us at Slash for a casual night of poker, pizza, and beer. Come win some money, or just swing by to hang out and meet some cool people. Pizza and beer are on us, and doors open at 5:30. Hosted by Julian Fainzaig, Paul Russo & Patrick Kealy",
-      "url": "https://luma.com/wc0ta88t",
-      "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8c/Waterfront,_San_Francisco,_USA,_including_One_Rincon_Hill_and_Bay_Bridge.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "luma-evtCz7iJYdRHVtbmPL",
-      "title": "🍜 Ramen pop-up // PlanetScale x Depot",
-      "emoji": "🛍️",
-      "type": "event",
-      "categories": [
-        "market"
-      ],
-      "zone": "south-of-market",
-      "area": "PlanetScale, 108 Natoma St, San Francisco, CA 94105, USA",
-      "coords": [
-        37.7871285,
-        -122.39898659999999
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "🍜 Ramen pop-up // PlanetScale x Depot Join PlanetScale and Depot for ramen and drinks on November 5. The Depot team is in SF, and we’re teaming up to turn the PlanetScale office into a ramen pop-up for the night. 🍜 Build your own bowl Kawashima’s Kitchen is serving ramen with tonkotsu and vegetarian shoyu broths, cha",
-      "url": "https://luma.com/jvrl5pcb",
-      "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "6/65/South_of_Market,_San_Francisco.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "luma-evtZrPO9dZxn9evQbI",
-      "title": "GTM Series #03: Stevie Case (x-CRO Vanta)",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "south-of-market",
-      "area": null,
-      "coords": [
-        37.78173539587643,
-        -122.40469130346992
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "Next up in our GTM Series where we bring in the best GTM leaders to chat with Granola's VP of Sales, Bardia Shahali! Joining us for our third chat will be Stevie Case. Stevie until recently was the Chief Revenue Officer at Vanta, the Cloud 100 ranked security compliance company, where she led all go to market efforts i",
-      "url": "https://luma.com/gtmseries_stevie",
-      "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "6/65/South_of_Market,_San_Francisco.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "luma-evtQQJiH5j7AtbEIVv",
-      "title": "Meditation & Creative Mini Retreat: Escape the Everyday",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "menlo-park",
-      "area": "Gallery House, 826 Santa Cruz Ave, Menlo Park, CA 94025, USA",
-      "coords": [
-        37.45082,
-        -122.1855913
-      ],
-      "start": "2026-11-05",
-      "end": "2026-11-05",
-      "why": "Hosted by Molly Wang & 4 others",
-      "url": "https://luma.com/senet3fj",
-      "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-11-05",
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "9/9f/Downtown_Menlo_Park_California.jpg",
       "ik": "c"
     },
     {
@@ -709,7 +345,7 @@
       "why": "No scores, no charts, no pressure – just collaboration! Whether you are a seasoned musician, a shower singer, or someone who enjoys clapping on the off-beat – this space is for you! The Collab Lab is an open playground to create spontaneous sound. Come to listen, respond, noodle, experiment, and build a creative commun",
       "url": "https://events.stanford.edu/event/collab-lab-nov6",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -717,29 +353,31 @@
       "ik": "c"
     },
     {
-      "id": "stanford-45864827002631",
-      "title": "David Rumsey Map Center Guided Tour",
-      "emoji": "🚶",
+      "id": "stanford-54001166590136",
+      "title": "Noon Concert: Piano Students of Melinda Lee Masur",
+      "emoji": "🎵",
       "type": "event",
       "categories": [
-        "walk"
+        "music"
       ],
       "zone": "palo-alto",
-      "area": "David Rumsey Map Center (Green Library)",
+      "area": "Braun Music Center",
       "coords": [
-        37.426631,
-        -122.167086
+        37.423758,
+        -122.169296
       ],
       "start": "2026-11-06",
-      "end": "2026-11-13",
-      "why": "Explore the World of Maps at the David Rumsey Map Center Join us for a guided tour of the David Rumsey Map Center at Stanford Libraries. Upon arrival, you'll be greeted by one of our knowledgeable staff members for an immersive experience. 30-Minute Overview: Dive deep into the history, collections, and special exhibit",
-      "url": "https://events.stanford.edu/event/david-rumsey-map-center-tour",
+      "end": "2026-11-06",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Join us for our Noon Concert Series, where student musicians from a variety of instrumental and vocal studios take the stage. Each performance offers a vibrant showcase of emerging talent, celebrating music in a relaxed midday setting. Admission Information Free admissionParking permits are required for weekday campus ",
+      "url": "https://events.stanford.edu/event/noon-masur-fall26",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": false,
+      "lastVerified": "2026-11-06",
+      "indoor": true,
       "quality": 3,
       "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "i": "2/2f/StanfordBraunMusicCenter.jpg",
       "ik": "c"
     },
     {
@@ -761,7 +399,7 @@
       "why": "Drawing from his own experiences teaching Paradise Lost in New Jersey prisons, English scholar Orlando Reade deftly investigates how the poem was read by people embedded in struggles against tyranny, slavery, colonialism, gender inequality, and capitalist exploitation. It is experimental nonfiction at its finest; rich ",
       "url": "https://events.stanford.edu/event/sle-salon-orlando-reade-explores-how-paradise-lost-has-influenced-political-struggles-and-revolutionary-movements-over-the-past-400-years",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -789,7 +427,7 @@
       "why": "Meet a therapy pet provided by the SFSPCA to provide comfort and relieve stress. ",
       "url": "https://sfpl.org/events/2026/11/06/social-therapy-pets-library",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -815,7 +453,7 @@
       "why": "This event is for anyone involved in GIS, Geospatial Science, Satellite Systems, Cartography, Remote Sensing, Surveying, Geomatics, and ALL things mapping. Where: We will meet in the Peacock Meadow Picnic Area in Golden Gate Park, close to JFK Drive. When: Friday, November 6, at 4pm. Why: This is a social event where y",
       "url": "https://luma.com/binndri6",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "5/59/Tank_Hill,_San_Francisco.jpg",
@@ -840,7 +478,7 @@
       "why": "new office. new robots. new hires. still Dimensional. join us for a warehouse party at our new facility in Dogpatch. see some SOTA robots. meet some SOTA people. find a SOTA job. food & drinks provided, 6pm till the fire marshal shuts us down come test our new speaker + light system Hosted by stash pomichter",
       "url": "https://luma.com/dimens-uphr",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "6/6a/P9A4086-1.jpg",
@@ -865,10 +503,60 @@
       "why": "Visioning the Future: A Climate Action Collage Party to make friends, eat dinner, and reimagine San Francisco It’s 2050, and San Francisco is thriving. Our energy is abundant, reliable, and clean. Our green spaces are protected. We’ve built affordable housing and increased our transit density to accommodate our growing",
       "url": "https://luma.com/u9l1w54q",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "8/8f/Duboce-Triangle.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "luma-evtJKQzQhiwwjAsQqi",
+      "title": "The Executive Social: Topgolf for General Counsel",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "burlingame",
+      "area": null,
+      "coords": [
+        37.59176590805735,
+        -122.35081891065478
+      ],
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "why": "Hosted by Yvonne Newlands & Murray",
+      "url": "https://luma.com/s32pbcxz",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-11-06",
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "b/b1/BBB2.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "luma-evtCWkN1xwC8KLd4ea",
+      "title": "The Executive Social: Topgolf for CFOs",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "burlingame",
+      "area": null,
+      "coords": [
+        37.58975844545932,
+        -122.35349931595384
+      ],
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "why": "Hosted by Yvonne Newlands & Murray",
+      "url": "https://luma.com/d0f5fc54",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-11-06",
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "b/b1/BBB2.jpg",
       "ik": "c"
     },
     {
@@ -891,11 +579,121 @@
       "why": "The Stanford Philharmonia, conducted by Paul Phillips, presents their 2026 Fall Concert program from the main stage of Bing Concert Hall featuring guest composer Melody Eötvös. Program Claude Debussy – Petite Suite (arranged by Henri Büsser)Darius Milhaud – Stanford SérénadeCindy Liu ‘28, oboe soloistMelody Eötvös – Re",
       "url": "https://events.stanford.edu/event/philharmonia-fall26",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "c/c3/Bing_concert_hall_at_Stanford_University.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "our415-169064_sfpl",
+      "title": "Birding with Golden Gate Bird Alliance",
+      "emoji": "🎨",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "parkside",
+      "area": "Parkside",
+      "coords": [
+        37.743093000001,
+        -122.479407000002
+      ],
+      "start": "2026-11-07",
+      "end": "2026-11-07",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Improve your birding skills or get started in birdwatching with some friendly, expert help from Golden Gate Bird Alliance. Dress in layers and wear…",
+      "url": "https://sfpl.org/events/2026/11/07/activity-birding-golden-gate-bird-alliance",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "3/36/Taraval_-_Sunset,_San_Francisco.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-167904_sfpl",
+      "title": "Line Dancing",
+      "emoji": "🎨",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "potrero-terrace",
+      "area": "Potrero",
+      "coords": [
+        37.760067000001,
+        -122.397615000002
+      ],
+      "start": "2026-11-07",
+      "end": "2026-11-07",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Kickstart your autumn Saturday mornings with bi-weekly line dancing lessons. For Ages 9 – 99.Space limited. Seats available first…",
+      "url": "https://sfpl.org/events/2026/11/07/activity-line-dancing",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-150333_sfpl",
+      "title": "Bike Fix-It Clinic",
+      "emoji": "🛠️",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "north-beach",
+      "area": "North Beach",
+      "coords": [
+        37.802601000001,
+        -122.413284000002
+      ],
+      "start": "2026-11-07",
+      "end": "2026-11-07",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Keep your wheels rolling—free bike repairs available! Bring your bicycle for a free tune-up and basic repairs provided by BikeMobile. Expert bike…",
+      "url": "https://sfpl.org/events/2026/11/07/workshop-bike-fix-it-clinic",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "6/69/SF_Filbert_St_North_Beach_CA.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-157551_sfpl",
+      "title": "Main Library Tour",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "little-saigon",
+      "area": "Main Library",
+      "coords": [
+        37.779354000001,
+        -122.415871500002
+      ],
+      "start": "2026-11-07",
+      "end": "2026-11-07",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Explore the Main Library with San Francisco City Guides. It’s easy to admire the Main Library of San Francisco from afar, its stately rectangular…",
+      "url": "https://sfpl.org/events/2026/11/07/social-main-library-tour",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "e/e0/Tenderloin_Street_Chess,_SF,_CA,_jjron_26.03.2012.jpg",
       "ik": "c"
     },
     {
@@ -919,7 +717,7 @@
       "why": "Celebrate Diwali, the Festival of Lights, by making a colorful and fun rangoli craft—perfect for adding a touch of sparkle and tradition to your…",
       "url": "https://sfpl.org/events/2026/11/07/activity-rangoli-craft",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -945,7 +743,7 @@
       "why": "Consider the DJ as an archivist, selector, de/reconstructor and amplifier of music. How might a poet apply these approaches to words? Explore poems…",
       "url": "https://sfpl.org/events/2026/11/07/workshop-dj-poetics-david-maduli",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -953,31 +751,57 @@
       "ik": "c"
     },
     {
-      "id": "our415-169064_sfpl",
-      "title": "Birding with Golden Gate Bird Alliance",
+      "id": "our415-165378_sfpl",
+      "title": "Birdwatching in the Portola",
       "emoji": "🎨",
       "type": "event",
       "categories": [
         "learn"
       ],
-      "zone": "parkside",
-      "area": "Parkside",
+      "zone": "silver-terrace",
+      "area": "Portola",
       "coords": [
-        37.743093000001,
-        -122.479407000002
+        37.727118000001,
+        -122.406376500002
       ],
       "start": "2026-11-07",
       "end": "2026-11-07",
       "price": 0,
       "priceNote": "Free",
-      "why": "Improve your birding skills or get started in birdwatching with some friendly, expert help from Golden Gate Bird Alliance. Dress in layers and wear…",
-      "url": "https://sfpl.org/events/2026/11/07/activity-birding-golden-gate-bird-alliance",
+      "why": "Join an expert guide from Golden Gate Bird Alliance to learn about the basics of bird watching. Followed by a guided bird watching tour of the…",
+      "url": "https://sfpl.org/events/2026/11/07/activity-birdwatching-portola",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-162117_sfpl",
+      "title": "The Sampaguitas",
+      "emoji": "🎵",
+      "type": "event",
+      "categories": [
+        "music"
+      ],
+      "zone": "south-beach",
+      "area": "Mission Bay",
+      "coords": [
+        37.775376000001,
+        -122.393110500002
+      ],
+      "start": "2026-11-07",
+      "end": "2026-11-07",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Based in the San Francisco Bay Area,…",
+      "url": "https://sfpl.org/events/2026/11/07/performance-sampaguitas",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
-      "i": "3/36/Taraval_-_Sunset,_San_Francisco.jpg",
+      "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
       "ik": "c"
     },
     {
@@ -1001,35 +825,7 @@
       "why": "Discover the colorful world of Filipino weaving. Learn about the stories and traditions behind different weaving styles, explore weaving samples, and…",
       "url": "https://sfpl.org/events/2026/11/07/workshop-ilocano-weaving-rachel-lozada",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "6/69/SF_Filbert_St_North_Beach_CA.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "our415-150333_sfpl",
-      "title": "Bike Fix-It Clinic",
-      "emoji": "🛠️",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "north-beach",
-      "area": "North Beach",
-      "coords": [
-        37.802601000001,
-        -122.413284000002
-      ],
-      "start": "2026-11-07",
-      "end": "2026-11-07",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Keep your wheels rolling—free bike repairs available! Bring your bicycle for a free tune-up and basic repairs provided by BikeMobile. Expert bike…",
-      "url": "https://sfpl.org/events/2026/11/07/workshop-bike-fix-it-clinic",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1057,120 +853,12 @@
       "why": "A series of beginner-friendly sessions exploring the artists, histories, and ideas at the heart of the RM x SFMOMA exhibit. These…",
       "url": "https://sfpl.org/events/2026/11/07/presentation-art-skool-sturdy-bridge",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "d/d2/Western-Addition.jpg",
       "ik": "c"
-    },
-    {
-      "id": "our415-162117_sfpl",
-      "title": "The Sampaguitas",
-      "emoji": "🎵",
-      "type": "event",
-      "categories": [
-        "music"
-      ],
-      "zone": "south-beach",
-      "area": "Mission Bay",
-      "coords": [
-        37.775376000001,
-        -122.393110500002
-      ],
-      "start": "2026-11-07",
-      "end": "2026-11-07",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Based in the San Francisco Bay Area,…",
-      "url": "https://sfpl.org/events/2026/11/07/performance-sampaguitas",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "our415-167904_sfpl",
-      "title": "Line Dancing",
-      "emoji": "🎨",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "potrero-terrace",
-      "area": "Potrero",
-      "coords": [
-        37.760067000001,
-        -122.397615000002
-      ],
-      "start": "2026-11-07",
-      "end": "2026-11-07",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Kickstart your autumn Saturday mornings with bi-weekly line dancing lessons. For Ages 9 – 99.Space limited. Seats available first…",
-      "url": "https://sfpl.org/events/2026/11/07/activity-line-dancing",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "our415-157551_sfpl",
-      "title": "Main Library Tour",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "little-saigon",
-      "area": "Main Library",
-      "coords": [
-        37.779354000001,
-        -122.415871500002
-      ],
-      "start": "2026-11-07",
-      "end": "2026-11-07",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Explore the Main Library with San Francisco City Guides. It’s easy to admire the Main Library of San Francisco from afar, its stately rectangular…",
-      "url": "https://sfpl.org/events/2026/11/07/social-main-library-tour",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "e/e0/Tenderloin_Street_Chess,_SF,_CA,_jjron_26.03.2012.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "our415-165378_sfpl",
-      "title": "Birdwatching in the Portola",
-      "emoji": "🎨",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "silver-terrace",
-      "area": "Portola",
-      "coords": [
-        37.727118000001,
-        -122.406376500002
-      ],
-      "start": "2026-11-07",
-      "end": "2026-11-07",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Join an expert guide from Golden Gate Bird Alliance to learn about the basics of bird watching. Followed by a guided bird watching tour of the…",
-      "url": "https://sfpl.org/events/2026/11/07/activity-birdwatching-portola",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
     },
     {
       "id": "luma-evtAenOjxTQyPuM089",
@@ -1191,7 +879,7 @@
       "why": "Come build or rebuild your personal website! You’ve been meaning to redo your site for ages. Today’s the day. Forget boring templates. We’ll show you the coolest personal sites out there, and you can make or remake your site, alongside other wonderful people. No coding or design experience needed. Really. We actually p",
       "url": "https://luma.com/1upb4xld",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "f/f0/MCB-san-mateo-aerial_(cropped).jpg",
@@ -1205,77 +893,21 @@
       "categories": [
         "food"
       ],
-      "zone": "menlo-park",
+      "zone": "atherton",
       "area": null,
       "coords": [
-        37.45421251150947,
-        -122.18194272970379
+        37.42036210133059,
+        -122.21475432492713
       ],
       "start": "2026-11-07",
       "end": "2026-11-07",
       "why": "Hosted by Dr. Paul Fang",
       "url": "https://luma.com/y9c3tlhw",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
-      "i": "9/9f/Downtown_Menlo_Park_California.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "our415-166825_sfpl",
-      "title": "Groundworks",
-      "emoji": "🎬",
-      "type": "event",
-      "categories": [
-        "film"
-      ],
-      "zone": "sunnyside",
-      "area": "Glen Park",
-      "coords": [
-        37.733940000001,
-        -122.433903000002
-      ],
-      "start": "2026-11-08",
-      "end": "2026-11-08",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Four California Native artists (three of them young adults) share traditional knowledge and creative expression to strengthen connections to their…",
-      "url": "https://sfpl.org/events/2026/11/08/film-groundworks",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "d/d8/On_Diamond_Street_by_Bosworth,_looking_North,_Glen_Park,_SF.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "our415-162670_sfpl",
-      "title": "Kulintang Dialect",
-      "emoji": "🎵",
-      "type": "event",
-      "categories": [
-        "music"
-      ],
-      "zone": "lower-pacific-heights",
-      "area": "Western Addition",
-      "coords": [
-        37.784151000001,
-        -122.437750500002
-      ],
-      "start": "2026-11-08",
-      "end": "2026-11-08",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Listen to Kulintang Dialect perform the traditional kulintang music passed down by the late Master Danongan Kalanduyan with fidelity. The band also…",
-      "url": "https://sfpl.org/events/2026/11/08/performance-kulintang-dialect",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "d/d2/Western-Addition.jpg",
+      "i": "0/09/Holbrook-Palmer_Park_Atherton_California.jpg",
       "ik": "c"
     },
     {
@@ -1299,11 +931,67 @@
       "why": "Based in the San Francisco Bay Area, The Sampaguitas sing Filipino folk songs and inspired originals in three-part harmony. Drawing influences from…",
       "url": "https://sfpl.org/events/2026/11/08/performance-sampaguitas",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "f/ff/Sfrichmonddistrict_ggbridge.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-162670_sfpl",
+      "title": "Kulintang Dialect",
+      "emoji": "🎵",
+      "type": "event",
+      "categories": [
+        "music"
+      ],
+      "zone": "lower-pacific-heights",
+      "area": "Western Addition",
+      "coords": [
+        37.784151000001,
+        -122.437750500002
+      ],
+      "start": "2026-11-08",
+      "end": "2026-11-08",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Listen to Kulintang Dialect perform the traditional kulintang music passed down by the late Master Danongan Kalanduyan with fidelity. The band also…",
+      "url": "https://sfpl.org/events/2026/11/08/performance-kulintang-dialect",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "d/d2/Western-Addition.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-166825_sfpl",
+      "title": "Groundworks",
+      "emoji": "🎬",
+      "type": "event",
+      "categories": [
+        "film"
+      ],
+      "zone": "sunnyside",
+      "area": "Glen Park",
+      "coords": [
+        37.733940000001,
+        -122.433903000002
+      ],
+      "start": "2026-11-08",
+      "end": "2026-11-08",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Four California Native artists (three of them young adults) share traditional knowledge and creative expression to strengthen connections to their…",
+      "url": "https://sfpl.org/events/2026/11/08/film-groundworks",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "d/d8/On_Diamond_Street_by_Bosworth,_looking_North,_Glen_Park,_SF.jpg",
       "ik": "c"
     },
     {
@@ -1325,7 +1013,7 @@
       "why": "join us for a sunday afternoon of lightning talks on design, narrative, and world-building with creatives who've spent time sharing their work online from shaping launch films, creative technology projects, viral substack essays and more! hosted by our design friends at design eng club at osmo studios, sponsored by tra",
       "url": "https://luma.com/703bbpl8",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "d/d0/Mission_High_School_(cropped).jpg",
@@ -1350,7 +1038,7 @@
       "why": "Hosted by CIBA Startups Team",
       "url": "https://luma.com/5h2ckb0s",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "d/dc/Historic_Murphy_Avenue,_Sunnyvale_(May_2025)_(cropped).jpg",
@@ -1377,7 +1065,7 @@
       "why": "Join the Asian American Research Center at Stanford (AARCS) for this free public event to launch a new book, \"For the Next Generation\". This new edited volume brings together the latest scholarship on mental health among Asian American, Native Hawaiian, and Pacific Islander (AANHPI) youth and addresses how research can",
       "url": "https://events.stanford.edu/event/for-the-next-generation-mental-health-in-asian-american-native-hawaiian-and-pacific-islander-youth",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1403,7 +1091,7 @@
       "why": "This presentation will examine the kinds of issues and conflicts that surround freedom of inquiry within the medical profession as well as academic freedom within medical and other schools within universities. Included will be an exploration of the influences that can inhibit physicians from speaking up in their teachi",
       "url": "https://events.stanford.edu/event/tim-bakken-professor-of-law-us-military-academy-west-point-the-costs-and-benefits-of-speaking-up-for-academic-freedom-in-medical-schools-a-legal-and-practical-perspective",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1430,7 +1118,7 @@
       "why": "This in-person event is open to current Stanford faculty, students, and staff. ID will be required at check in. Other guests are invited to join the webinar. The companies building artificial intelligence have promised to transform the world. But who gets to decide what that transformation looks like and what happens w",
       "url": "https://events.stanford.edu/event/hai-ai-governance-lab-a-conversation-with-jacob-coxon-rob-reich",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1456,7 +1144,7 @@
       "why": "Rocks may seem ordinary and ubiquitous, but they are the foundation of the geomaterials that underpin modern society—from cement in our built environment to the critical minerals in our smartphones and energy technologies. As the energy transition accelerates and demand for physical infrastructure grows, demand for mat",
       "url": "https://events.stanford.edu/event/stanford-energy-seminar-11092026",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1482,7 +1170,7 @@
       "why": "This presentation will describe Mr. Bakken’s personal experience as well as a broader overview of the dynamics within universities when students, staff, faculty, and members of other institutions express dissenting opinions, and, as a result, experience adverse treatment (e.g., out casting). It is posited that supporte",
       "url": "https://events.stanford.edu/event/tim-bakken-professor-of-law-us-military-academy-west-point-the-consequences-of-silence-when-academic-freedom-and-expression-are-at-risk-learning-to-speak-and-act-according-to-your-conscience",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1508,7 +1196,35 @@
       "why": "In this panel conversation, Negar Mottahedeh and Salar Mameni discuss themes of war, loss, sanctions and the possibility of love and intimacy with Iranians from the position of exile in the diaspora. Negar Mottahedeh will read a text titled “How My Instagram Hacker Changed My Life,” a tale that begins with the theft of",
       "url": "https://events.stanford.edu/event/war-sanctions-and-the-intimacy-of-everyday-life",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-53604059426372",
+      "title": "Biosecurity in an Age of AI: Frontier Safety, Anticipatory Governance, and Defensive Innovation",
+      "emoji": "🎤",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": "Encina Hall",
+      "coords": [
+        37.427319,
+        -122.164625
+      ],
+      "start": "2026-11-10",
+      "end": "2026-11-10",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "About the event: This talk will discuss recent advancements in AI for biology, and relevant security and oversight considerations. It will also discuss how policy can be used to incentivize and shape technology development for defensive purposes, clarifying how the colloquial \"defensive acceleration\" or d/acc concept i",
+      "url": "https://events.stanford.edu/event/biosecurity-in-an-age-of-ai-frontier-safety-anticipatory-governance-and-defensive-innovation-jassi-pannu",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1534,7 +1250,7 @@
       "why": "During the Cold War, the ideological struggle to win the hearts and minds of the Chinese took place on the pages of literary texts. A battle of the books between Washington D.C. and Beijing mobilized entire networks of U.S. Foreign Service posts, book publishers, and higher education institutions to take sides in propa",
       "url": "https://events.stanford.edu/event/l-maria-bo-writing-on-water-cold-war-literary-translations-and-the-chinese-diaspora",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1561,7 +1277,61 @@
       "why": "Join the Tech Impact and Policy Center on November 10th from 12PM–1PM Pacific for a seminar with Isabelle Hau. Stanford affiliates are invited to join us at 11:40 AM for lunch, prior to the seminar. The Fall Seminar Series continues through December; see our Fall Seminar Series page for speakers and topics. Sign up for",
       "url": "https://events.stanford.edu/event/relational-intelligence-rq-building-relational-futures-in-the-age-of-ai",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-53879814094096",
+      "title": "Special, Unique, and Rare: CITIES",
+      "emoji": "🖼️",
+      "type": "event",
+      "categories": [
+        "art"
+      ],
+      "zone": "palo-alto",
+      "area": "Green Library, Bing Wing",
+      "coords": [
+        37.426984,
+        -122.167998
+      ],
+      "start": "2026-11-10",
+      "end": "2026-11-10",
+      "why": "Drop by Hohbach 123 (Silicon Valley Archive classroom, Green Library) any time between 2-4 PM on Tuesday, November 10th, to view items selected by curators from Humanities and Area Studies that fascinate and provoke in unique and special forms to say something about CITIES.",
+      "url": "https://events.stanford.edu/event/special-unique-and-rare-cities",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-54348710964216",
+      "title": "Science, Statecraft, and National Resilience: Rethinking Governance in the Philippines",
+      "emoji": "🎤",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": "Encina Hall",
+      "coords": [
+        37.427319,
+        -122.164625
+      ],
+      "start": "2026-11-10",
+      "end": "2026-11-10",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "According to the World Risk Report 2026, the Philippines remained the world's most disaster-prone country among 193 United Nations member states. This is evident in the recent severe, frequent flooding that threatened lives, infrastructure, and economic stability. Climate change, rapid urban growth, deforestation, and ",
+      "url": "https://events.stanford.edu/event/science-statecraft-and-national-resilience-rethinking-governance-in-the-philippines",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1587,7 +1357,7 @@
       "why": "Start AIE Code Summit week with a morning of climbing @ Benchmark. Come by for bouldering with coaches. Or if you'd rather stay on the ground, come by the smoothie + matcha bar. No experience needed. Shoes and chalk are provided. Hosted by Cognition, DeepMind, Judgment Labs. Hosted by Cognition, Judgment Labs & Google ",
       "url": "https://luma.com/climbingbenchmark",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "3/35/AnNeoplanOnThe19InSanFrancisco.jpg",
@@ -1612,7 +1382,7 @@
       "why": "Part workshop, part co-build, all practical. Notion 101 for Small Businesses is a hands-on session for operators who want one place to run the business. You'll learn the fundamentals, see workflows built for businesses like yours, then build your own Business OS in the room with a Notion expert at your table. You leave",
       "url": "https://luma.com/notion101-sf-nov",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "0/04/San_Francisco_Union_Square.jpg",
@@ -1637,7 +1407,7 @@
       "why": "🌱 Why is deciding whether to have children so hard, and why did no one ever teach us how? For most of history, parenthood simply arrived as an expectation. Then reliable contraception, later marriage, and changing careers turned it into a choice, and most of us never learned how to make one. Join Meghan Brown, a pre-d",
       "url": "https://luma.com/oybmw0hr",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "0/04/San_Francisco_Union_Square.jpg",
@@ -1662,7 +1432,7 @@
       "why": "Hosted by Apify, Jan Curn & Petros Hong",
       "url": "https://luma.com/run-by-apify",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "6/6a/P9A4086-1.jpg",
@@ -1687,7 +1457,7 @@
       "why": "Lunch Club provides affiliates of the Stanford Archaeology Center with a community-oriented forum for engagement with current issues in archaeology. On Nov 11, 2026, we will host Dr.Paul Goldstein from University of California, San Diego. Abstract: Research on Tiwanaku ceramic iconography, including eclipse imagery and",
       "url": "https://events.stanford.edu/event/lunch-club-series-beneath-tiahuanacus-streets-ceramic-iconography-and-ancient-heritage-in-an-aymara-town",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1714,7 +1484,7 @@
       "why": "Lauren Kolodny is co-founder and managing partner of Acrew Capital, where she invests in companies transforming financial services through AI and technology. Her investment focus spans fintech, consumer technology, and enterprise software. Kolodny led Chime’s Series A in 2016 and supported the company at the board thro",
       "url": "https://events.stanford.edu/event/lauren-kolodny-entrepreneurial-thought-leaders-speaker-series-etl",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1742,7 +1512,7 @@
       "why": "Join us for the inaugural Center for Just Environmental Futures Distinguished Lecture Featuring - ‘Aulani Wilhelm, CEO of Nia Tero Reception following program from 6:00-6:30pm. About our speaker: ‘Aulani Wilhelm is Kanaka ‘Ōiwi (Native Hawaiian), born and raised in Hawaiʻi. ʻAulani is the Chief Executive Officer at Nia",
       "url": "https://events.stanford.edu/event/center-for-just-environmental-futures-inaugural-distinguished-lecture-series-featuring-aulani-wilhelm-ceo-of-nia-tero",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1768,7 +1538,33 @@
       "why": "The Department of African and African American Studies (DAAAS) in collaboration with the Center for South Asia (CSA) cordially invite the Stanford Community for a special book launch! We are excited to celebrate the publication of a new book by our visiting postdoctoral scholar, Danny Shanhan, Ph.D titled, Literature a",
       "url": "https://events.stanford.edu/event/book-launch-literature-and-emergency-law-in-kashmir-and-northern-ireland",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-54294462056439",
+      "title": "Medical Humanites: Lean poetry, disappearing bodies, transcendent self—the poetics of Anorexia Nervosa in Louise Gluck",
+      "emoji": "🎤",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": "Humanities Center",
+      "coords": [
+        37.424631,
+        -122.172061
+      ],
+      "start": "2026-11-11",
+      "end": "2026-11-11",
+      "why": "With Speaker James Lock, MD Erick Rothenberg, MD Professor of Child Psychiatry and Pediatrics Stanford University The Medical Humanities Research Workshop Series is made possible through the support of: Stanford School of Medicine, Stanford Humanities Center, Stanford’s Division of Literatures, Cultures & Languages, St",
+      "url": "https://events.stanford.edu/event/medical-humanites-lean-poetry-disappearing-bodies-transcendent-selfthe-poetics-of-anorexia-nervosa-in-louise-gluck",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1794,7 +1590,7 @@
       "why": "Meet and cowork with Stripe experts and the founder community Join the Stripe founder community for a day of hands-on building and coworking with the Stripe team. Whether you’re looking for a chance to connect with other founders, 1:1 guidance from the Stripe team, or just a change of scenery amidst the week, we’d love",
       "url": "https://luma.com/r1d48cpq",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "f/f7/Brisbane,_CA_-_Visitacion_Avenue.jpg",
@@ -1819,7 +1615,7 @@
       "why": "Hosted by Mendel Liu & The SF Commons",
       "url": "https://luma.com/thoughtexperiments",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "c/c1/View_of_Hayes_Street_West_from_near_Octavia.jpg",
@@ -1844,7 +1640,7 @@
       "why": "Hosted by Tom Charman, Dom Kennedy & Bobby Glasco",
       "url": "https://luma.com/seldon-3yvu",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "8/8c/Waterfront,_San_Francisco,_USA,_including_One_Rincon_Hill_and_Bay_Bridge.JPG",
@@ -1869,7 +1665,7 @@
       "why": "Join Stanford Health Care's Diabetes Care Program and the Stanford Health Library in recognition of World Diabetes Day. Come explore health resources, interactive demonstrations, and information on diabetes management. Free screenings: Come by for complimentary blood glucose checks, blood pressure screenings, and diabe",
       "url": "https://events.stanford.edu/event/world-diabetes-day-wellness-fair",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1896,7 +1692,7 @@
       "why": "Join this thought-provoking showcase on the practical implementation of ethics developed by the 2026 Ethics and Technology Practitioner Fellows. The Ethics and Technology Practitioner Fellows have dedicated the past year to exploring and addressing critical issues at the intersection of technology and ethics through in",
       "url": "https://events.stanford.edu/event/unsettling-the-new-ai-status-quo",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1922,11 +1718,37 @@
       "why": "In 2025, Americans spent more than 400 billion hours inside work organizations. Nir Halevy's argument is that what happens in those hours, how people are ranked, rewarded, promoted, and treated, is one of the most consequential ways corporations shape society, even when it never reaches the headlines. Drawing on his ne",
       "url": "https://events.stanford.edu/event/how-to-fix-a-broken-hierarchy",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-54112511033941",
+      "title": "Making Letters: Typography Across Hand, Screen, and Loom",
+      "emoji": "🎤",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": "Lathrop Library",
+      "coords": [
+        37.429468,
+        -122.167272
+      ],
+      "start": "2026-11-12",
+      "end": "2026-11-12",
+      "why": "RSVP Link: HTTPS://TINYURL.COM/STSAMY26 How do the tools used to create letterforms shape the way those forms are imagined, constructed, and understood? In this presentation, graphic designer, educator, type designer, and fiber artist Amy Copeland traces her evolving relationship with typography across analog, digital,",
+      "url": "https://events.stanford.edu/event/making-letters-typography-across-hand-screen-and-loom",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "c/c9/Lathrop_Library_2.jpg",
       "ik": "c"
     },
     {
@@ -1948,7 +1770,7 @@
       "why": "A quarter century after 9/11, advances in surveillance and technology have transformed how the United States protects its security, and raised enduring questions about privacy, government power, and democratic accountability. Former FBI Director Christopher Wray and former Deputy National Security Advisor for Cyber and",
       "url": "https://events.stanford.edu/event/the-idea-that-made-us-dialogues-on-freedom-25-years-after-911-the-history-of-surveillance-technology-and-democracy",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -1974,7 +1796,7 @@
       "why": "Please join us for the autumn event of the Stanford Public Humanities flagship speaker series, What Is a Public Intellectual Today, which will feature journalist Alexis Madrigal. He will be in conversation with Adrian Daub on craft, career, and culture in the Bay Area and beyond. Book signing and selling to follow for ",
       "url": "https://events.stanford.edu/event/what-is-a-public-intellectual-today-alexis-madrigal",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2000,7 +1822,7 @@
       "why": "If planning to attend, please submit an RSVP here. The Stanford Mathematics Research Center presents Surprises from rubbing the wrong way, a lecture given by Tadashi Tokieda, Professor of Mathematics at Stanford University, as part of the MRC Public Lecture series. Friction, stickiness, jamming . . . Don’t we frown on ",
       "url": "https://events.stanford.edu/event/mrc-public-lecture-tadashi-tokieda",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2028,7 +1850,7 @@
       "why": "Honor the extraordinary legacy of WWII Nisei heroes with a special afternoon of film, music, community, and remembrance. Be among the…",
       "url": "https://sfpl.org/events/2026/11/12/film-100th-seeds-aloha",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2056,7 +1878,7 @@
       "why": "Lumos Maxima and his person, Melissa, are back to help you destress. Come share time with Lumos the Great Pyranees! Take a break to spend a few…",
       "url": "https://sfpl.org/events/2026/11/12/social-pet-therapy-library",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2082,7 +1904,7 @@
       "why": "You're invited to the official Opening Party of MONO Music Conference! We're bringing together three communities: MONO, an important music and technology conference in San Francisco; We Make Noise, a community of emerging and established industry professionals supporting gender equity in the music industry; and EMPIRE,",
       "url": "https://luma.com/v77l4llj",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3
     },
@@ -2105,7 +1927,7 @@
       "why": "Hosted by Yvonne Newlands & 4 others",
       "url": "https://luma.com/t78wr0y2",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
@@ -2130,7 +1952,7 @@
       "why": "Hosted by DigitalOcean & 4 others",
       "url": "https://luma.com/digita-uj0i",
       "source": "Luma — Open Source for AI",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
@@ -2156,8 +1978,34 @@
       "why": "The government has maintained crucial data infrastructure that allow jobseekers to find jobs, employers to hire, and researchers to predict the future of work. This infrastructure is tested by rapid changes brought about by AI, and at the same time, is empowered by the use of AI. Phil Lewis from the National Center for",
       "url": "https://events.stanford.edu/event/special-seminar-and-fireside-chat-understanding-work-using-ai",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-45864827002631",
+      "title": "David Rumsey Map Center Guided Tour",
+      "emoji": "🚶",
+      "type": "event",
+      "categories": [
+        "walk"
+      ],
+      "zone": "palo-alto",
+      "area": "David Rumsey Map Center (Green Library)",
+      "coords": [
+        37.426631,
+        -122.167086
+      ],
+      "start": "2026-11-13",
+      "end": "2026-12-04",
+      "why": "Explore the World of Maps at the David Rumsey Map Center Join us for a guided tour of the David Rumsey Map Center at Stanford Libraries. Upon arrival, you'll be greeted by one of our knowledgeable staff members for an immersive experience. 30-Minute Overview: Dive deep into the history, collections, and special exhibit",
+      "url": "https://events.stanford.edu/event/david-rumsey-map-center-tour",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
+      "indoor": false,
       "quality": 3,
       "uniqueness": 3,
       "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
@@ -2183,7 +2031,7 @@
       "why": "The Stanford Jazz Orchestra, under the direction of Michael Galisatus, performs their 2026 Fall Concert from the main stage of Dinkelspiel Auditorium. Admission Information General – $32 | Seniors (65+) and Non-Stanford Students – $27 Price shown reflects total cost including $4 online/phone per-ticket fee.FREE admissi",
       "url": "https://events.stanford.edu/event/jazz-orchestra-fall26",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2210,11 +2058,39 @@
       "why": "The Stanford Symphony Orchestra, conducted by Paul Phillips, presents their 2026 Fall Concert program from the main stage of Bing Concert Hall. Program Wang Lu – SurgeCalifornia premiereFranz Liszt – Orpheus (Symphonic Poem No. 4)Sean Tan ‘27, conductorPaul Phillips – Concordia MundiWorld premiereGustav Mahler – Sympho",
       "url": "https://events.stanford.edu/event/symphony-orchestra-fall26-1",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "c/c3/Bing_concert_hall_at_Stanford_University.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "our415-157375_sfpl",
+      "title": "BTS & ARMY Creative Lounge",
+      "emoji": "🎨",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "little-saigon",
+      "area": "Main Library",
+      "coords": [
+        37.779354000001,
+        -122.415871500002
+      ],
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Drop in for a BTS ‑themed crafting session at the library!Create fun, fandom‑inspired…",
+      "url": "https://sfpl.org/events/2026/11/13/activity-bts-army-creative-lounge",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "e/e0/Tenderloin_Street_Chess,_SF,_CA,_jjron_26.03.2012.jpg",
       "ik": "c"
     },
     {
@@ -2238,38 +2114,10 @@
       "why": "Get ready for the colder weather and pick up a new puzzle. Please bring good quality puzzles to donate. If you cannot attend the program but would…",
       "url": "https://sfpl.org/events/2026/11/13/social-neighborhood-puzzle-swap",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
-    },
-    {
-      "id": "our415-157375_sfpl",
-      "title": "BTS & ARMY Creative Lounge",
-      "emoji": "🎨",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "little-saigon",
-      "area": "Main Library",
-      "coords": [
-        37.779354000001,
-        -122.415871500002
-      ],
-      "start": "2026-11-13",
-      "end": "2026-11-13",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Drop in for a BTS ‑themed crafting session at the library!Create fun, fandom‑inspired…",
-      "url": "https://sfpl.org/events/2026/11/13/activity-bts-army-creative-lounge",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "e/e0/Tenderloin_Street_Chess,_SF,_CA,_jjron_26.03.2012.jpg",
-      "ik": "c"
     },
     {
       "id": "luma-evtyI7iUkFB3SQpKvD",
@@ -2290,11 +2138,34 @@
       "why": "An Exclusive Conversation with Vinod Khosla Some of the most consequential companies begin with ideas the world isn’t ready to believe in. Stanford ASES welcomes Vinod Khosla, founder of Khosla Ventures, co-founder of Sun Microsystems, and one of Silicon Valley’s most influential technology investors, for an exclusive ",
       "url": "https://luma.com/k9qjjzrg",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
       "ik": "c"
+    },
+    {
+      "id": "luma-evt4hzasZQgaFu9EPU",
+      "title": "California Dirt in San Francisco",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "golden-gate-heights",
+      "area": "1288 15th Ave, San Francisco, CA 94122, USA",
+      "coords": [
+        37.7640515,
+        -122.4726967
+      ],
+      "start": "2026-11-13",
+      "end": "2026-11-16",
+      "why": "San Francisco, we’re coming back up your way for our annual holiday pop-up 🐋 Come by on Friday for opening night and wine by @broccellars We’ll be open all day Saturday and Sunday for jewelry, one-of-one ceramics, and Cali Dirt flash tattoos inked by @pretty_heavy_ Hosted by the very best @problemlibrary Can’t wait to",
+      "url": "https://luma.com/dvcfs748",
+      "source": "Luma — San Francisco",
+      "lastVerified": "2026-11-06",
+      "quality": 3,
+      "uniqueness": 3
     },
     {
       "id": "luma-evtrh95BN3RH3znP4z",
@@ -2315,7 +2186,7 @@
       "why": "Box is a sapphic party for lesbians & those who date them <3 tix $22 online / $25 doors ITS HOMOCOMING. need we say more??? It's time live the gay ass homecoming we didn't get to experience (or re-live it for those of us who were lucky enough to figure things out ~earlier in life~) we expect proposals. corsages (I thin",
       "url": "https://luma.com/ixmd374a",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "7/7a/740,_736,_730_&_724_Leavenworth_St.,_Lower_Nob_Hill_Apartment_Hotel_District,_San_Francisco,_CA_9-3-2012_4-03-29_PM.JPG",
@@ -2340,7 +2211,35 @@
       "why": "Leading cancer researcher Bryant Lin, MD, distills the lessons for living that he’s learned as a physician and as a patient, after being diagnosed with his own terminal illness. He will be joinined by Latha Palaniappan, MD, MS, co-director, Center for Asian Health and Education at Stanford University. Light lunch provi",
       "url": "https://events.stanford.edu/event/sunshine-bryant-lin-in-conversation-with-latha-palaniappan",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-54029201020422",
+      "title": "Tracing What Remains: Memory, Place, and Chinese American Histories",
+      "emoji": "🎬",
+      "type": "event",
+      "categories": [
+        "film"
+      ],
+      "zone": "palo-alto",
+      "area": "Anderson Collection",
+      "coords": [
+        37.433768,
+        -122.170791
+      ],
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Presented in conjunction with Patty Chang's surfacing, Tracing What Remains: Memory, Place, and Chinese American Histories brings together films that examine the histories of Chinese communities across Northern California through landscape, memory, and acts of remembrance. Moving between documentary, historical narrati",
+      "url": "https://events.stanford.edu/event/tracing-what-remains-memory-place-and-chinese-american-histories",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2367,7 +2266,7 @@
       "why": "The acclaimed Stanford Afro-Latin Jazz Ensemble, directed by Murray Low, presents their first performance of the academic year! We are exciting to playing for you again. As usual, the group have a complete new set of music prepared covering all aspects of the idiom - classic and modern salsa, boleros, samba, rumba, Lat",
       "url": "https://events.stanford.edu/event/salje-fall26",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2394,39 +2293,11 @@
       "why": "Experience not only the enveloping aural phenomenon of echoes in Stanford’s stunning Memorial Church, but the memories evoked by the poetry and musical organization of sound in a broad panoply of choral repertoire from Chant through newly-composed works. Join us for an evening of Chant, Palestrina, Garrett, Ketting, Sc",
       "url": "https://events.stanford.edu/event/chamber-chorale-fall26",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "our415-161583_sfpl",
-      "title": "Cow Hollow Walking Tour",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "cow-hollow",
-      "area": "Golden Gate Valley",
-      "coords": [
-        37.796850000001,
-        -122.429047500002
-      ],
-      "start": "2026-11-14",
-      "end": "2026-11-14",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Take a tour with San Francisco City Guides around the Cow Hollow neighborhood. Spared destruction from the 1906 disaster, Cow Hollow contains…",
-      "url": "https://sfpl.org/events/2026/11/14/social-cow-hollow-walking-tour",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
       "ik": "c"
     },
     {
@@ -2450,11 +2321,65 @@
       "why": "The Mission Branch Library is reopening, and we’re kicking things off with a special celebration — and you're invited! The celebration will include:…",
       "url": "https://sfpl.org/events/2026/11/14/celebration-mission-branch-library-grand-reopening",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "d/d0/Mission_High_School_(cropped).jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-171346_sfpl",
+      "title": "Make Art with the Museum of Craft and Design",
+      "emoji": "🛠️",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "potrero-terrace",
+      "area": "Potrero",
+      "coords": [
+        37.760067000001,
+        -122.397615000002
+      ],
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Create vibrant wire sculptures through guided MakeArt instruction with the Museum of Craft and Design. Art projects connect directly with the most…",
+      "url": "https://sfpl.org/events/2026/11/14/workshop-make-art-museum-craft-and-design",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "our415-165574_sfpl",
+      "title": "Echoes of the Seasons",
+      "emoji": "🎤",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "little-saigon",
+      "area": "Main Library",
+      "coords": [
+        37.779354000001,
+        -122.415871500002
+      ],
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Explore how Eastern and Western composers interpret the seasons across different musical traditions. Western selections express vivid natural imagery…",
+      "url": "https://sfpl.org/events/2026/11/14/presentation-echoes-seasons",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "e/e0/Tenderloin_Street_Chess,_SF,_CA,_jjron_26.03.2012.jpg",
       "ik": "c"
     },
     {
@@ -2478,7 +2403,7 @@
       "why": "Enjoy a relaxing afternoon of self-guided practice in Chinese calligraphy, Chess, Chinese checkers, and Go.從書法自習, 西洋棋, 象棋, 波子棋,及圍棋遊戲的樂趣中來享受一個輕鬆的下午吧。",
       "url": "https://sfpl.org/events/2026/11/14/activity-chinese-calligraphy-and-chess-games",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2506,67 +2431,11 @@
       "why": "Find the place where everyone fits - The Puzzle Swap Society - and participate in a free jigsaw puzzle swap. Bring puzzles you've finished and trade…",
       "url": "https://sfpl.org/events/2026/11/14/social-puzzle-swap",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
-      "ik": "c"
-    },
-    {
-      "id": "our415-161218_sfpl",
-      "title": "Crying Uncle Bluegrass Band",
-      "emoji": "🎵",
-      "type": "event",
-      "categories": [
-        "music"
-      ],
-      "zone": "cole-valley",
-      "area": "Park",
-      "coords": [
-        37.770273000001,
-        -122.451052500002
-      ],
-      "start": "2026-11-14",
-      "end": "2026-11-14",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Enjoy a live performance from Bay Beats artists Crying Uncle Bluegrass Band. Widely recognized as one of the most exciting young bands in acoustic…",
-      "url": "https://sfpl.org/events/2026/11/14/performance-crying-uncle-bluegrass-band",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "d/d3/Halleyparknovember_b_(cropped).jpg",
-      "ik": "c"
-    },
-    {
-      "id": "our415-154385_sfpl",
-      "title": "Drawn Together—A Drawing Club for Everyone",
-      "emoji": "🎨",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "little-saigon",
-      "area": "Main Library",
-      "coords": [
-        37.779354000001,
-        -122.415871500002
-      ],
-      "start": "2026-11-14",
-      "end": "2026-11-14",
-      "price": 0,
-      "priceNote": "Free",
-      "why": "Draw in a calm and supportive community space for all levels (including you!). Doodle, practice, experiment with new materials, or finish that…",
-      "url": "https://sfpl.org/events/2026/11/14/activity-drawn-together-drawing-club-everyone",
-      "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "e/e0/Tenderloin_Street_Chess,_SF,_CA,_jjron_26.03.2012.jpg",
       "ik": "c"
     },
     {
@@ -2590,7 +2459,7 @@
       "why": "Celebrate 117 years of service to the neighborhood with Park Branch Library.  Create your own holiday card at our drop-in craft table, get an…",
       "url": "https://sfpl.org/events/2026/11/14/celebration-park-branch-open-house",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2598,9 +2467,65 @@
       "ik": "c"
     },
     {
-      "id": "our415-165574_sfpl",
-      "title": "Echoes of the Seasons",
-      "emoji": "🎤",
+      "id": "our415-161218_sfpl",
+      "title": "Crying Uncle Bluegrass Band",
+      "emoji": "🎵",
+      "type": "event",
+      "categories": [
+        "music"
+      ],
+      "zone": "cole-valley",
+      "area": "Park",
+      "coords": [
+        37.770273000001,
+        -122.451052500002
+      ],
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Enjoy a live performance from Bay Beats artists Crying Uncle Bluegrass Band. Widely recognized as one of the most exciting young bands in acoustic…",
+      "url": "https://sfpl.org/events/2026/11/14/performance-crying-uncle-bluegrass-band",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "d/d3/Halleyparknovember_b_(cropped).jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-161583_sfpl",
+      "title": "Cow Hollow Walking Tour",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "cow-hollow",
+      "area": "Golden Gate Valley",
+      "coords": [
+        37.796850000001,
+        -122.429047500002
+      ],
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Take a tour with San Francisco City Guides around the Cow Hollow neighborhood. Spared destruction from the 1906 disaster, Cow Hollow contains…",
+      "url": "https://sfpl.org/events/2026/11/14/social-cow-hollow-walking-tour",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-154385_sfpl",
+      "title": "Drawn Together—A Drawing Club for Everyone",
+      "emoji": "🎨",
       "type": "event",
       "categories": [
         "learn"
@@ -2615,10 +2540,10 @@
       "end": "2026-11-14",
       "price": 0,
       "priceNote": "Free",
-      "why": "Explore how Eastern and Western composers interpret the seasons across different musical traditions. Western selections express vivid natural imagery…",
-      "url": "https://sfpl.org/events/2026/11/14/presentation-echoes-seasons",
+      "why": "Draw in a calm and supportive community space for all levels (including you!). Doodle, practice, experiment with new materials, or finish that…",
+      "url": "https://sfpl.org/events/2026/11/14/activity-drawn-together-drawing-club-everyone",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2644,35 +2569,35 @@
       "why": "Greptile at Sohn Cafe. Join us in Dogpatch on Saturday, November 14th, for coffee, matcha, co-working, and hanging out with the Greptile team. We’re taking over the cafe with a custom Greptile matcha on the menu and free War on Bugs tees. Bring your laptop and settle in for a few hours of building alongside other devel",
       "url": "https://luma.com/greptile-tgrv",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "6/6a/P9A4086-1.jpg",
       "ik": "c"
     },
     {
-      "id": "luma-evtKXXjzExZ5O1UouU",
-      "title": "NEW CAFE OPENING! Corgi Cafe Church Street Opening Celebration 🎉",
+      "id": "luma-evt3MLU9rASTB9q6ra",
+      "title": "NEORT: Cities as Nodes",
       "emoji": "🫂",
       "type": "event",
       "categories": [
         "community"
       ],
-      "zone": "duboce-triangle",
-      "area": "260 Church St, San Francisco, CA 94114, USA",
+      "zone": "palo-alto",
+      "area": "NODE, 180 University Ave, Palo Alto, CA 94301, USA",
       "coords": [
-        37.766464299999996,
-        -122.4291031
+        37.4444693,
+        -122.1627873
       ],
       "start": "2026-11-14",
       "end": "2026-11-14",
-      "why": "Join us Saturday, November 14 to celebrate the opening of the newest Corgi Cafe location on Church Street! Stop by anytime between 2pm and 5pm to meet your neighbors, enjoy the vibe and music, and snap a Polaroid to take home. 📸 ✨ Free drinks for the first 50 people through the door! ☕️ Everyone is welcome 🧡 Beyond t",
-      "url": "https://luma.com/usecorgi-vz3q",
+      "why": "Joining us from Tokyo, Noriaki Nakata, Director of NEORT, will deliver a keynote bridging Tokyo and Palo Alto communities and what becomes possible when places connect. He will share insights from his curatorial practice and discuss his work bringing digital art into public spaces. Alongside the keynote, Nakata will pr",
+      "url": "https://luma.com/node-neort",
       "source": "Luma — San Francisco",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
-      "i": "8/8f/Duboce-Triangle.jpg",
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
       "ik": "c"
     },
     {
@@ -2696,11 +2621,61 @@
       "why": "Celebrate the tapestry of Native Californian food in a conversation with cookbook author Sara Calvosa Olson (Karuk). Calvosa Olson, a talented food…",
       "url": "https://sfpl.org/events/2026/11/15/author-talk-native-california-ingredients-sara-calvosa-olson",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "f/ff/Noe_Valley.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "luma-evtlTxiCjVB9CE03KF",
+      "title": "Fairway Social at Baylands: Beginner + Intermediate Golf Clinic & Social 🍂",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "east-palo-alto",
+      "area": "Baylands Golf Links, 1875 Embarcadero Rd, Palo Alto, CA 94303, USA",
+      "coords": [
+        37.453680299999995,
+        -122.11600159999999
+      ],
+      "start": "2026-11-15",
+      "end": "2026-11-15",
+      "why": "Golf, girls, and good vibes. We're heading to Baylands. 💗 You asked for more Fairway Social golf clinics, and we're delivering. Join The Fairway Social Club for a women's Beginner + Intermediate Golf Clinic at Baylands Golf Links in Palo Alto on Sunday, November 15. Whether you've never held a club or you're working o",
+      "url": "https://luma.com/o3misl6z",
+      "source": "Luma — San Francisco",
+      "lastVerified": "2026-11-06",
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "0/02/Welcome_To_East_Palo_Alto_Sign.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "luma-evtgvUGFeqO4DBSmBt",
+      "title": "Stanford vs Berkeley · The Big Hack Game · Boba tea & up to $10,000 in cash prizes",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "hayes-valley",
+      "area": null,
+      "coords": [
+        37.773224381166266,
+        -122.42036293422723
+      ],
+      "start": "2026-11-15",
+      "end": "2026-11-21",
+      "why": "Hosted by HarnessRouter & 6 others",
+      "url": "https://luma.com/t2598jt6",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-11-06",
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "c/c1/View_of_Hayes_Street_West_from_near_Octavia.jpg",
       "ik": "c"
     },
     {
@@ -2722,7 +2697,7 @@
       "why": "Branner Earth Sciences Library & Map Collection Pop-up Map Exhibit: Fire in the West Join us during Geography Awareness Week for a pop-up exhibition on the Branner mezzanine (map floor) highlighting maps about fire in California & the Western United States! The exhibit is available for viewing Monday November 16 throug",
       "url": "https://events.stanford.edu/event/branner-popup-exhibit-fire-in-the-west",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2731,7 +2706,7 @@
     },
     {
       "id": "stanford-54196035364530",
-      "title": "Race and Gender in the Global Hispanophone: Heidi Tinsman (University of California, Irvine)",
+      "title": "Race and Gender in the Global Hispanophone: Bound Brothers Chinese Labor, Masculinity, and Nation in Nineteenth-Century ",
       "emoji": "🎤",
       "type": "event",
       "categories": [
@@ -2748,7 +2723,7 @@
       "why": "The Race and Gender in the Global Hispanophone (RGGH) Research Group serves as a dynamic platform within the DLCL to foster critical dialogue within emerging scholarship on Ibero-American cultures, with a dedicated focus on race and gender. Join us as we embark on this journey of scholarly exploration through identity,",
       "url": "https://events.stanford.edu/event/race-and-gender-in-the-global-hispanophone-7911",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2757,7 +2732,7 @@
     },
     {
       "id": "stanford-53552413163789",
-      "title": "Stanford Energy Seminar | Jonathan Fan, Stanford University",
+      "title": "Stanford Energy Seminar | Electrified metamaterial reactors for process intensified thermochemistry | Jonathan Fan, Stan",
       "emoji": "🎤",
       "type": "event",
       "categories": [
@@ -2771,10 +2746,10 @@
       ],
       "start": "2026-11-16",
       "end": "2026-11-16",
-      "why": "The Stanford Energy Seminar has been a mainstay of energy engagement at Stanford for nearly 20 years and is one of the flagship programs of the Precourt Institute for Energy. We aim to bring a wide variety of perspectives to the Stanford community – academics, entrepreneurs, utilities, non-profits, and more. About the ",
+      "why": "The electrification of thermochemical processes with clean electricity has great potential as both an immediate and long-term solution towards the scalable decarbonization of chemical production. In this talk, I will discuss new paradigms in electrified thermochemical reactors based on high frequency electromagnetic fi",
       "url": "https://events.stanford.edu/event/stanford-energy-seminar-11162026",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2800,33 +2775,7 @@
       "why": "The French and Italian Department and French Speaking Worlds: Here and Now present: A Book talk on D’abord ils sont venus chercher les mots [First They Came for Words], les Arènes, 2026, by Prof. Cécile Alduy, in conversation with Prof. Joshua Landy. An Author Caught Up by Her Subject A professor of literature at Stanf",
       "url": "https://events.stanford.edu/event/book-talk-prof-cecile-alduy-in-conversation-with-prof-josh-landy",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
-      "ik": "c"
-    },
-    {
-      "id": "stanford-54187926399673",
-      "title": "Estonia at the Front Line: Security, Resilience, and Technology: A Discussion with the Prime Minister of Estonia Kristen",
-      "emoji": "🎤",
-      "type": "event",
-      "categories": [
-        "learn"
-      ],
-      "zone": "palo-alto",
-      "area": "Hohbach Hall",
-      "coords": [
-        37.426631,
-        -122.167086
-      ],
-      "start": "2026-11-17",
-      "end": "2026-11-17",
-      "why": "Join us for an engaging discussion with Prime Minister of the Republic of Estonia Kristen Michal on: Estonia at the Front Line: Security, Resilience, and Technology: Security, Europe, and Technology Estonia sits at the intersection of some of the defining challenges of our time. Bordering Russia and on NATO’s eastern f",
-      "url": "https://events.stanford.edu/event/prime-minister-estonia-2026",
-      "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2852,7 +2801,7 @@
       "why": "Join the Tech Impact and Policy Center on November 17th from 12PM–1PM Pacific for a seminar with Robin Nabi. Stanford affiliates are invited to join us at 11:40 AM for lunch, prior to the seminar. The Fall Seminar Series continues through December; see our Fall Seminar Series page for speakers and topics. Sign up for o",
       "url": "https://events.stanford.edu/event/the-dangers-of-focusing-on-the-danger-of-digital-media-use-1377",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2875,10 +2824,10 @@
       ],
       "start": "2026-11-17",
       "end": "2026-11-17",
-      "why": "This event is a collaboration between the Consulate General of Brazil in San Francisco and Stanford University, through its Program on International and Cross-Cultural Education, Global Studies Division, Language Center, Abbasi Program in Islamic Studies, Center for African Studies, Department of Iberian and Latin Amer",
+      "why": "This event is a collaboration between the Consulate General of Brazil in San Francisco and Stanford University, through its Portuguese Language Program, Global Studies Division, Abbasi Program in Islamic Studies, Center for African Studies, Department of Iberian and Latin American Cultures, Program on International and",
       "url": "https://events.stanford.edu/event/males-film-screening-and-conversation",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2906,7 +2855,7 @@
       "why": "Please join us at 7 p.m. (PST) on Tuesday, November 17, as we launch our fifteenth season of the Another Look book club. Our discussion will feature Stanford Prof. Tobias Wolff’s novel Old School, published in 2003. The renowned author is a master of the short story and the memoir, and a celebrated teacher of creative ",
       "url": "https://events.stanford.edu/event/another-look-presents-tobias-wolffs-old-school",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2932,7 +2881,7 @@
       "why": "An evening of new music for stringed traditional East Asian instruments. Featuring Katherine Whatley (koto and voice), Southeast of Rain (pipa, voice, electronics), and Stella Da Yun Song (haegeum). About the performers and pieces: Katherine Whatley Katherine Whatley is a koto musician, composer, and PhD Candidate in E",
       "url": "https://events.stanford.edu/event/sound-voice-strings-compositions-for-traditional-east-asian-instruments",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2960,7 +2909,7 @@
       "why": "Learn to crochet or teach some of your skills to others. All ages and all skill levels welcome. Some supplies provided, but you are welcome to bring…",
       "url": "https://sfpl.org/events/2026/11/17/social-crochet-club",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -2983,10 +2932,10 @@
       ],
       "start": "2026-11-17",
       "end": "2026-11-17",
-      "why": "Hosted by Funding Breakthrough Lab & 4 others",
+      "why": "Hosted by Funding Breakthrough Lab & 5 others",
       "url": "https://luma.com/fblgtm",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "8/8c/Waterfront,_San_Francisco,_USA,_including_One_Rincon_Hill_and_Bay_Bridge.JPG",
@@ -3011,7 +2960,7 @@
       "why": "Hosted by Yvonne Newlands & 3 others",
       "url": "https://luma.com/tech-6mxi",
       "source": "Luma — Bay Area Founders Club",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "4/48/San_Francisco_from_Presidio_1966.jpg",
@@ -3036,7 +2985,7 @@
       "why": "Hosted by tokens& & 5 others",
       "url": "https://luma.com/backprop",
       "source": "Luma — Open Source for AI",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3,
       "i": "8/8c/Waterfront,_San_Francisco,_USA,_including_One_Rincon_Hill_and_Bay_Bridge.JPG",
@@ -3062,7 +3011,33 @@
       "why": "AI Goes Mainstream: The Scaling Era and the Rise of Generative AI Michael Wooldridge, Ashall Professor of the Foundations of Artificial Intelligence, University of Oxford Moderated by: Russ Altman, Kenneth Fong Professor and Professor of Bioengineering, of Genetics, of Medicine, of Biomedical Data Science, Senior Fello",
       "url": "https://events.stanford.edu/event/hai-seminar-with-mike-wooldridge-the-ai-100",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-54124995975177",
+      "title": "The Greek and Arabic Reception of Ptolemy's Almagest between the 7th and 9th Centuries | Maria Mavroudi",
+      "emoji": "🎤",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": "Encina Commons",
+      "coords": [
+        37.426792,
+        -122.164842
+      ],
+      "start": "2026-11-18",
+      "end": "2026-11-18",
+      "why": "The period between the seventh and the ninth centuries has frequently been portrayed in scholarship as “dark”, especially because its intellectual production appears low. Overall, it is deemed as an empty interval between the end of the intellectual efflorescence of antiquity and the presumed renaissance of philosophy ",
+      "url": "https://events.stanford.edu/event/ptolemys-almagest",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -3089,7 +3064,33 @@
       "why": "Demi Guo is the Co-Founder and CEO of Pika, a generative AI video platform she founded in 2023. She holds bachelor’s and master’s degrees in Computer Science from Harvard and later pursued a PhD in AI at Stanford before leaving the program to build Pika. This appearance by Demi Guo is part of the Entrepreneurial Though",
       "url": "https://events.stanford.edu/event/demi-guo-entrepreneurial-thought-leaders-speaker-series-etl",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-54439619609305",
+      "title": "Uncommon Knowledge: The Intellectual Odyssey of James Burnham",
+      "emoji": "🎤",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": "Traitel Building",
+      "coords": [
+        37.427563,
+        -122.167691
+      ],
+      "start": "2026-11-18",
+      "end": "2026-11-18",
+      "why": "In 1941, James Burnham published The Managerial Revolution, the book that made him famous. It introduced a theoretical framework that is enjoying a renaissance today among analysts across the political spectrum. Join us for a discussion of this pioneering work and James Burnham’s enduring influence on American politics",
+      "url": "https://events.stanford.edu/event/uncommon-knowledge-the-intellectual-odyssey-of-james-burnham",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -3115,7 +3116,7 @@
       "why": "Graduate students of the Mechanical Engineering department will showcase team projects made for the ME218a class, Smart Product Design Fundamentals. The presentations are an interactive mechatronic system showcase meeting design challenges and quantitative goals.",
       "url": "https://events.stanford.edu/event/me218a-smart-product-design-fundamentals-project-presentations-327",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -3141,7 +3142,7 @@
       "why": "The Creative Writing Program is pleased to announce the next event in the Lane Lecture Series: A Reading with Martín Espada. This event is open to Stanford affiliates and the general public. Registration is encouraged but not required. Register here ____ Martín Espada has published more than twenty books as a poet, edi",
       "url": "https://events.stanford.edu/event/reading-with-martin-espada-part-of-the-lane-lecture-series",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -3168,7 +3169,7 @@
       "why": "The Stanford University Singers, under the direction of Robert Huw Morgan, invite you to join them for their 2026 Fall Concert in Memorial Church. Admission Information General – $32 | Seniors (65+) and Non-Stanford Students – $27 Price shown reflects total cost including $4 online/phone per-ticket fee.FREE admission f",
       "url": "https://events.stanford.edu/event/university-singers-fall26",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -3196,7 +3197,7 @@
       "why": "Select from a range of crochet projects or bring your own project. Instruction will be provided, if needed. Crocheters of all experience levels,…",
       "url": "https://sfpl.org/events/2026/11/18/activity-crochet-club-autumn-theme",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -3222,10 +3223,35 @@
       "why": "Meet a therapy pet provided by the San Francisco Society for the Prevention of Cruelty to Animals (SF SPCA) to provide comfort and…",
       "url": "https://sfpl.org/events/2026/11/18/activity-therapy-pets-library",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
+    },
+    {
+      "id": "luma-evtMZEU0AFfITAU23q",
+      "title": "GTM Workflows in Practice: Roundtable Discussion & Dinner",
+      "emoji": "☕",
+      "type": "event",
+      "categories": [
+        "food"
+      ],
+      "zone": "union-square",
+      "area": null,
+      "coords": [
+        37.78821524513466,
+        -122.40096770595594
+      ],
+      "start": "2026-11-18",
+      "end": "2026-11-18",
+      "why": "Hosted by Scarlett & 3 others",
+      "url": "https://luma.com/29i0mwzf",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-11-06",
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "0/04/San_Francisco_Union_Square.jpg",
+      "ik": "c"
     },
     {
       "id": "stanford-53950377018749",
@@ -3248,7 +3274,7 @@
       "why": "Between 1890 and 1914, tens of thousands of Jews from Galicia—the easternmost crownland of the Habsburg Empire—made New York City their new home. Yet their distinct experience has often been overshadowed by national narratives centered on migration from the Russian Empire. Oskar Czendze (University of Toronto) will exp",
       "url": "https://events.stanford.edu/event/galicias-promised-city-with-oskar-czendze",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -3256,31 +3282,31 @@
       "ik": "c"
     },
     {
-      "id": "our415-170627_sfpl",
-      "title": "Free Press Performance",
-      "emoji": "🎵",
+      "id": "our415-168136_sfpl",
+      "title": "Craft Club in American Sign Language (ASL)",
+      "emoji": "🎨",
       "type": "event",
       "categories": [
-        "music"
+        "learn"
       ],
-      "zone": "sunnyside",
-      "area": "Glen Park",
+      "zone": "little-saigon",
+      "area": "Main Library",
       "coords": [
-        37.733940000001,
-        -122.433903000002
+        37.779354000001,
+        -122.415871500002
       ],
       "start": "2026-11-21",
       "end": "2026-11-21",
       "price": 0,
       "priceNote": "Free",
-      "why": "Free Press Music is a Filipina-led ensemble whose sound was largely developed in San Francisco, in the Western Addition and Tenderloin; specifically…",
-      "url": "https://sfpl.org/events/2026/11/21/performance-free-press-performance",
+      "why": "Explore your creativity in this intergenerational craft session in American Sign Language (ASL) with BlackDeaf educator and storyteller…",
+      "url": "https://sfpl.org/events/2026/11/21/activity-craft-club-american-sign-language-asl",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
-      "i": "d/d8/On_Diamond_Street_by_Bosworth,_looking_North,_Glen_Park,_SF.jpg",
+      "i": "e/e0/Tenderloin_Street_Chess,_SF,_CA,_jjron_26.03.2012.jpg",
       "ik": "c"
     },
     {
@@ -3304,37 +3330,37 @@
       "why": "Kickstart your autumn Saturday mornings with bi-weekly line dancing lessons. For Ages 9-99.Space limited. Seats available first come, first…",
       "url": "https://sfpl.org/events/2026/11/21/activity-line-dancing",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
     },
     {
-      "id": "our415-168136_sfpl",
-      "title": "Craft Club in American Sign Language (ASL)",
-      "emoji": "🎨",
+      "id": "our415-170627_sfpl",
+      "title": "Free Press Performance",
+      "emoji": "🎵",
       "type": "event",
       "categories": [
-        "learn"
+        "music"
       ],
-      "zone": "little-saigon",
-      "area": "Main Library",
+      "zone": "sunnyside",
+      "area": "Glen Park",
       "coords": [
-        37.779354000001,
-        -122.415871500002
+        37.733940000001,
+        -122.433903000002
       ],
       "start": "2026-11-21",
       "end": "2026-11-21",
       "price": 0,
       "priceNote": "Free",
-      "why": "Explore your creativity in this intergenerational craft session in American Sign Language (ASL) with BlackDeaf educator and storyteller…",
-      "url": "https://sfpl.org/events/2026/11/21/activity-craft-club-american-sign-language-asl",
+      "why": "Free Press Music is a Filipina-led ensemble whose sound was largely developed in San Francisco, in the Western Addition and Tenderloin; specifically…",
+      "url": "https://sfpl.org/events/2026/11/21/performance-free-press-performance",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
-      "i": "e/e0/Tenderloin_Street_Chess,_SF,_CA,_jjron_26.03.2012.jpg",
+      "i": "d/d8/On_Diamond_Street_by_Bosworth,_looking_North,_Glen_Park,_SF.jpg",
       "ik": "c"
     },
     {
@@ -3358,7 +3384,7 @@
       "why": "Bring your seedlings, cuttings, and surplus plants or plants in need of a new home to swap with other plant lovers. All types of plants are welcome.…",
       "url": "https://sfpl.org/events/2026/11/22/social-plant-swap",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -3386,7 +3412,7 @@
       "why": "Create tiny miniature Thanksgiving foods in this workshop with polymer clay. We will watch videos from our favorite creators online together and then…",
       "url": "https://sfpl.org/events/2026/11/25/workshop-miniature-thanksgiving-foods",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -3412,7 +3438,7 @@
       "why": "Hang out with other knitters and crocheters in a fun and friendly atmosphere. The library has limited supplies of yarn along with knitting needles…",
       "url": "https://sfpl.org/events/2026/11/25/social-knitting-circle",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -3440,11 +3466,37 @@
       "why": "Bring your own knitting, crochet, weaving or other portable craft project to share and work on in a fun and friendly drop-in setting every first…",
       "url": "https://sfpl.org/events/2026/12/01/activity-crafting-circle",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
       "i": "4/45/Visitacion_Valley_San_Francisco.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-54435335460209",
+      "title": "BOOK TALK | A Conversation about the Art of Edmonia Lewis",
+      "emoji": "🎤",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": "Roble Gym",
+      "coords": [
+        37.426008,
+        -122.174909
+      ],
+      "start": "2026-12-03",
+      "end": "2026-12-03",
+      "why": "Art Historian Dr. Kirsten Pai Buick, author of Child of the Fire—the first major study of the famed​​ Afro-Native neo-classical sculptor Edmonia Lewis (1844-1907)—discusses the artist with TAPS Professor Jennifer DeVere Brody, whose recent book Moving Stones also centers the work of this remarkable figure whose interna",
+      "url": "https://events.stanford.edu/event/the-art-of-edmonia-lewis",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
       "ik": "c"
     },
     {
@@ -3466,7 +3518,33 @@
       "why": "Yuri Herrera is a Mexican author, political scientist, and professor of Spanish and Portuguese at Tulane University in New Orleans. He has written several short novels, three of which have been translated into English by Lisa Dillman: Transmigration of Bodies (La transmigración de los Cuerpos), Signs Preceding the End ",
       "url": "https://events.stanford.edu/event/sle-salon-yuri-herrera-discusses-his-book-the-transmigration-of-bodies",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-54179620187918",
+      "title": "Film Screening of the Latvian submission for the Academy Awards – Ulya",
+      "emoji": "🎬",
+      "type": "event",
+      "categories": [
+        "film"
+      ],
+      "zone": "palo-alto",
+      "area": "Bishop Auditorium",
+      "coords": [
+        37.429468,
+        -122.167272
+      ],
+      "start": "2026-12-03",
+      "end": "2026-12-03",
+      "why": "Join us for a film screening of Latvia's submission for the Academy Awards and commentary from Dr. Karla Oeler, Director of the Center for Russian, Eastern European, and Eurasian Studies and Associate Professor of Film and Media Studies in the Department of Art & Art History. Ulya (2026) is a true story about Uljana Se",
+      "url": "https://events.stanford.edu/event/film-screening-of-ulya",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,
@@ -3494,10 +3572,118 @@
       "why": "Listen and learn about director Alfred Hitchcock's special fondness for Northern California, from lifelong cinephile and a retired SFPL librarian,…",
       "url": "https://sfpl.org/events/2026/12/03/presentation-hollywood-north-alfred-hitchcock-san-francisco-bay-area",
       "source": "Our415 — SF Public Library, data.sfgov.org",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
+    },
+    {
+      "id": "our415-132773_sfpl",
+      "title": "Knitting Circle",
+      "emoji": "🎨",
+      "type": "event",
+      "categories": [
+        "learn"
+      ],
+      "zone": "seacliff",
+      "area": "Anza",
+      "coords": [
+        37.778535000001,
+        -122.497231500002
+      ],
+      "start": "2026-12-04",
+      "end": "2026-12-04",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Bring your own knitting, crochet, weaving or other fiber-art project to share and work on in a fun and friendly atmosphere. This is an inclusive…",
+      "url": "https://sfpl.org/events/2026/12/04/activity-knitting-circle",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "6/63/Seacliff_District_SF.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "our415-136855_sfpl",
+      "title": "Therapy Pets at the Library",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "bayshore",
+      "area": "Visitacion Valley",
+      "coords": [
+        37.712520000001,
+        -122.407780500002
+      ],
+      "start": "2026-12-04",
+      "end": "2026-12-04",
+      "price": 0,
+      "priceNote": "Free",
+      "why": "Meet a therapy pet provided by the SFSPCA to provide comfort and relieve stress. ",
+      "url": "https://sfpl.org/events/2026/12/04/social-therapy-pets-library",
+      "source": "Our415 — SF Public Library, data.sfgov.org",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "4/45/Visitacion_Valley_San_Francisco.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "luma-evtO2BvjCU4ldN075R",
+      "title": "Innovation Summit: Women Pushing Innovation",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "north-fair-oaks",
+      "area": "Snowflake, 125 Constitution Dr, Menlo Park, CA 94025, USA",
+      "coords": [
+        37.4853181,
+        -122.17727540000001
+      ],
+      "start": "2026-12-08",
+      "end": "2026-12-08",
+      "why": "Hosted by Funding Breakthrough Lab & 4 others",
+      "url": "https://luma.com/fblhersuccess",
+      "source": "Luma — Bay Area Founders Club",
+      "lastVerified": "2026-11-06",
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "a/ad/North_Fair_Oaks_metal_entry_sign.jpg",
+      "ik": "c"
+    },
+    {
+      "id": "stanford-53861598502049",
+      "title": "HAI Seminar with Angèle Christin in Conversation with Hannah Zeavin",
+      "emoji": "🤖",
+      "type": "event",
+      "categories": [
+        "tech",
+        "learn"
+      ],
+      "zone": "palo-alto",
+      "area": "Gates Computer Science Building",
+      "coords": [
+        37.429987,
+        -122.17333
+      ],
+      "start": "2026-12-09",
+      "end": "2026-12-09",
+      "why": "Book Launch: “Gurus, Hucksters, Entertainers: How Influencers Reshaped Social Media” HAI Seminar with Angèle Christin in Conversation with Hannah Zeavin Visit our website to learn more about the event agenda, speakers, and other details Please join us for an illuminating investigation of the complex work of social medi",
+      "url": "https://events.stanford.edu/event/hai-seminar-with-angele-christin-in-conversation-with-hannah-zeavin",
+      "source": "Stanford Events — events.stanford.edu",
+      "lastVerified": "2026-11-06",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3,
+      "i": "8/8b/Ramona_Street_Architectural_District,_261_Hamilton_St.,_Palo_Alto,_CA_5-27-2012_2-20-25_PM.JPG",
+      "ik": "c"
     },
     {
       "id": "stanford-54249250966768",
@@ -3518,7 +3704,7 @@
       "why": "Come meet our brilliant STUDENT MAKERS from the Product Realization Lab who will present their AMAZING Autumn quarter projects! Products include innovations in sports equipment, consumer goods, education and health devices, agricultural tools, and MORE!",
       "url": "https://events.stanford.edu/event/AY27AUT-meet-the-makers",
       "source": "Stanford Events — events.stanford.edu",
-      "lastVerified": "2026-11-04",
+      "lastVerified": "2026-11-06",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3,

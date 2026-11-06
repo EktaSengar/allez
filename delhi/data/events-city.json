@@ -1,15 +1,38 @@
 {
-  "generated": "2026-11-05",
+  "generated": "2026-11-06",
   "window": {
-    "from": "2026-11-05",
-    "to": "2027-01-04"
+    "from": "2026-11-06",
+    "to": "2027-01-05"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 1
+    "luma": 2
   },
   "items": [
+    {
+      "id": "luma-evtLvwAmQd5Amt7hRE",
+      "title": "Fataaka Pickleball & Run",
+      "emoji": "🏃",
+      "type": "event",
+      "categories": [
+        "sport"
+      ],
+      "zone": "faridabad",
+      "area": "Sportsense, Mustkil no 42, near nayara Petrol Pump, Sector 79, Faridabad, Haryan",
+      "coords": [
+        28.3814724,
+        77.36215779999999
+      ],
+      "start": "2026-11-08",
+      "end": "2026-11-08",
+      "why": "FARIDABAD, WE’RE ABOUT TO GO FATAAAKA! 🪩🏃‍♂️🏓 3K run, pickleball, festive chaos & immaculate vibes. 💥 📅 Sun, 8th Nov 📍 Sportsense, Sec 79 🏃 Beginners Friendly | Open for All Pull up with your gang, bring the energy & if you have green crackers, BRING THOSE TOO 😂💚 LET’S MAKE SOME NOISE (THE ECO-FRIENDLY KIND)! ",
+      "url": "https://luma.com/e3ritjvn",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-11-06",
+      "quality": 3,
+      "uniqueness": 3
+    },
     {
       "id": "luma-evtzgYlrpkpbFKd1jK",
       "title": "Community Run with Kartikeya (Delhi)",
@@ -29,7 +52,7 @@
       "why": "Join us for a community run that's all about movement, connection, and coffee. Whether you're a seasoned runner or just looking to enjoy an easy-paced run with like-minded people, everyone is welcome. Post run head to Blue Tokai cafe to unwind over freshly brewed coffee and good conversations. Come for the run, stay fo",
       "url": "https://luma.com/a6eb2hji",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-11-05",
+      "lastVerified": "2026-11-06",
       "quality": 3,
       "uniqueness": 3
     }
