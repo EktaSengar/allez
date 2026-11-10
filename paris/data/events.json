@@ -1,54 +1,11 @@
 {
-  "generated": "2026-11-08",
+  "generated": "2026-11-10",
   "window": {
     "from": "2026-08-13",
     "to": "2027-01-06"
   },
   "note": "Time-sensitive entries. Anything past its `end` date is pruned automatically by scripts/refresh.mjs. Verify prices and times at the official URL before travelling.",
   "items": [
-    {
-      "id": "rolex-paris-masters-2026",
-      "title": "Rolex Paris Masters",
-      "emoji": "🎾",
-      "type": "event",
-      "categories": [
-        "sport",
-        "tennis"
-      ],
-      "zone": null,
-      "area": "Paris La Défense Arena, Nanterre",
-      "price": 55,
-      "priceNote": "From ~€30 early rounds",
-      "start": "2026-10-31",
-      "end": "2026-11-08",
-      "times": "Nine days, day and night sessions",
-      "durationMin": 300,
-      "minutesFromHome": 45,
-      "transit": "RER A to Nanterre-Préfecture",
-      "why": "The last Masters 1000 of the season, and its 40th edition — effectively every top-ten player in one indoor arena before the season ends. The trick is the first three days: cheap tickets, and a ground pass gets you several matches on the same day instead of one. The finals weekend costs four times as much for less tennis.",
-      "goodFor": [
-        "couple",
-        "sport",
-        "weekend"
-      ],
-      "indoor": true,
-      "bookAhead": true,
-      "labels": [
-        "dontmiss",
-        "couple",
-        "bookahead",
-        "indoor"
-      ],
-      "uniqueness": 5,
-      "quality": 5,
-      "source": "FFT / Paris La Défense",
-      "url": "https://www.rolexparismasters.com/",
-      "lastVerified": "2026-08-15",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/La_D%C3%A9fense_Juin_2025.jpg/500px-La_D%C3%A9fense_Juin_2025.jpg",
-      "imageSubject": "La Défense",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons"
-    },
     {
       "type": "event",
       "provenance": "editorial",
@@ -278,51 +235,6 @@
         2.3363
       ],
       "coordsFrom": "arr-centroid"
-    },
-    {
-      "id": "peur-sur-le-parc-asterix-2026",
-      "title": "Peur sur le Parc — Parc Astérix",
-      "emoji": "👻",
-      "categories": [
-        "festival",
-        "halloween",
-        "daytrip"
-      ],
-      "indoor": false,
-      "weatherSensitive": true,
-      "goodFor": [
-        "friends",
-        "weekend",
-        "evening"
-      ],
-      "coords": [
-        49.1343,
-        2.5711
-      ],
-      "coordsFrom": "hand-placed at the venue",
-      "area": "Plailly, 35 km north (shuttle from Paris)",
-      "start": "2026-10-03",
-      "end": "2026-11-08",
-      "durationMin": 420,
-      "times": "Days 10am–7pm or 9am–6pm. Night openings 7pm–1am on 10, 16, 17, 21–24 and 28–31 Oct, and 7 Nov (all now sold out)",
-      "priceNote": "Dated day ticket from €49; night ticket €53 online",
-      "priceLevel": 3,
-      "booking": "https://www.parcasterix.fr/evenements/peur-sur-le-parc",
-      "bookAhead": true,
-      "quality": 4,
-      "uniqueness": 4,
-      "labels": [],
-      "why": "France’s own theme park runs haunted houses and scare zones for five weeks. Every night opening is now sold out, so go by day: the haunted houses and scare zones run in daylight too, until 8 Nov.",
-      "source": "Parc Astérix",
-      "url": "https://www.parcasterix.fr/evenements/peur-sur-le-parc",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Oziris_tunnel.png/500px-Oziris_tunnel.png",
-      "imageSubject": "Parc Astérix",
-      "type": "event",
-      "provenance": "editorial",
-      "lastVerified": "2026-10-29",
-      "festival": "halloween",
-      "imageKind": "subject",
-      "imageCredit": "Wikimedia Commons"
     },
     {
       "id": "grand-palais-des-glaces-2026",
@@ -888,92 +800,6 @@
       "imageSubject": "Saint-Germain-des-Prés church",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
-    },
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "lastVerified": "2026-10-29",
-      "festival": "diwali",
-      "labels": [],
-      "indoor": true,
-      "bookAhead": true,
-      "id": "bollywood-in-paris-diwali-party-2026",
-      "title": "Diwali Party — Bollywood in Paris at Le Saint Merri",
-      "emoji": "💃",
-      "categories": [
-        "diwali",
-        "nightlife",
-        "dance"
-      ],
-      "goodFor": [
-        "friends",
-        "night",
-        "weekend"
-      ],
-      "coords": [
-        48.859,
-        2.351
-      ],
-      "coordsFrom": "hand-placed at the venue",
-      "zone": 4,
-      "area": "Le Saint Merri, 14 rue Saint-Merri, 4e (Châtelet)",
-      "start": "2026-11-07",
-      "end": "2026-11-08",
-      "startTime": "23:00",
-      "durationMin": 360,
-      "times": "Sat 7 Nov, 11pm–5am",
-      "priceLevel": 2,
-      "booking": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "why": "The city’s biggest yearly Diwali club night, with DJs Thai and Exist playing Bollywood and desi hits until five, the night before Diwali itself. It sells out most years, so buy early. Tickets are sold through the organiser’s Instagram.",
-      "source": "Bollywood in Paris (organiser’s Instagram)",
-      "url": "https://www.instagram.com/bollywoodinparis/",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Iglesia_de_Saint-Merri%2C_Par%C3%ADs%2C_Francia%2C_2022-10-31%2C_DD_157-159_HDR.jpg/500px-Iglesia_de_Saint-Merri%2C_Par%C3%ADs%2C_Francia%2C_2022-10-31%2C_DD_157-159_HDR.jpg",
-      "imageSubject": "Église Saint-Merri, on the same street",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons",
-      "vibe": "Bollywood bangers until five"
-    },
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "lastVerified": "2026-10-29",
-      "festival": "diwali",
-      "labels": [],
-      "indoor": true,
-      "bookAhead": true,
-      "id": "swadesi-night-diwali-2026",
-      "title": "Swadesi Night — Diwali edition",
-      "emoji": "🪔",
-      "categories": [
-        "diwali",
-        "music",
-        "food"
-      ],
-      "goodFor": [
-        "friends",
-        "evening",
-        "weekend"
-      ],
-      "area": "Paris; venue sent with your invite",
-      "start": "2026-11-08",
-      "end": "2026-11-08",
-      "startTime": "18:00",
-      "durationMin": 300,
-      "times": "Sun 8 Nov, from 6pm",
-      "priceLevel": 2,
-      "booking": true,
-      "quality": 3,
-      "uniqueness": 3,
-      "why": "A Diwali-night party on the festival itself, from the Mehfil Paris crowd: live singing, a DJ, Diwali games and festive food. Wear your best desi outfit. The venue is only revealed with your invite.",
-      "source": "The Mehfil Paris (organiser’s Instagram)",
-      "url": "https://www.instagram.com/themehfilparis/",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Diwali_Diyas.jpg/500px-Diwali_Diyas.jpg",
-      "imageSubject": "Diwali diyas",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons",
-      "vibe": "Live singing, desi fits, Diwali games"
     },
     {
       "type": "event",
