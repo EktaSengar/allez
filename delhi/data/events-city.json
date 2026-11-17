@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-15",
+  "generated": "2026-11-17",
   "window": {
-    "from": "2026-11-15",
-    "to": "2027-01-14"
+    "from": "2026-11-17",
+    "to": "2027-01-16"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
@@ -10,29 +10,6 @@
     "luma": 2
   },
   "items": [
-    {
-      "id": "luma-evtHbvu24hi28OjrKW",
-      "title": "Miles & melody - A Sundowner Experience",
-      "emoji": "🫂",
-      "type": "event",
-      "categories": [
-        "community"
-      ],
-      "zone": "vasant-kunj",
-      "area": "Cafe Casa Dunes, Bypass Road, Aerocity, Mahipalpur Extension, Vasant Kunj, New D",
-      "coords": [
-        28.544405299999998,
-        77.13304289999999
-      ],
-      "start": "2026-11-15",
-      "end": "2026-11-15",
-      "why": "MILES & MELODY The Full Set by The Gym Collective Get ready for an evening where fitness meets music, movement meets community, and the energy doesn’t stop. The Gym Collective brings you Miles & Melody — a one-of-a-kind fitness and music experience at Cafe Casa Dunes. We’re kicking things off with a Silent DJ Run, wher",
-      "url": "https://luma.com/w7ewq1cb",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-11-15",
-      "quality": 3,
-      "uniqueness": 3
-    },
     {
       "id": "luma-evtgPiTBCXpPRG2Aa0",
       "title": "Dub Theory",
@@ -52,7 +29,30 @@
       "why": "Dub Theory is coming for your neck muscles, expect heavy bass wubs, hard hitting UKG drums and new school trap that makes your head bop. You'll know it's working when the stank face shows up.😮‍💨 Come ready to bop, scrunch, and make questionable faces in the name of low end frequencies.🎛️ Stretch your neck beforehand",
       "url": "https://luma.com/dk5zmvyv",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-11-15",
+      "lastVerified": "2026-11-17",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtlwShiPrg3KS6TLX",
+      "title": "The IPO Trap | Gurugram Launch at Masters Union",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "sector-19",
+      "area": "CDS Corporate Tower, 390, Shankar Chowk Rd, Udyog Vihar Phase 3 Rd, Phase II, Ud",
+      "coords": [
+        28.504989199999997,
+        77.0879082
+      ],
+      "start": "2026-11-23",
+      "end": "2026-11-23",
+      "why": "Before you hit \"Apply\" on the next IPO, spend a morning with the man who read the fine print. 📖 🗓 Monday, 23 November 2026 | 11 AM to 2 PM 📍 Masters Union, Udyog Vihar Phase 3, Gurugram India is living through its biggest IPO wave ever. Grey-market buzz, oversubscription headlines, listing-day pops. And yet, months ",
+      "url": "https://luma.com/flh94uuz",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-11-17",
       "quality": 3,
       "uniqueness": 3
     }

@@ -1,55 +1,11 @@
 {
-  "generated": "2026-11-15",
+  "generated": "2026-11-17",
   "window": {
     "from": "2026-08-13",
     "to": "2027-01-06"
   },
   "note": "Time-sensitive entries. Anything past its `end` date is pruned automatically by scripts/refresh.mjs. Verify prices and times at the official URL before travelling.",
   "items": [
-    {
-      "type": "event",
-      "provenance": "editorial",
-      "lastVerified": "2026-10-01",
-      "quality": 4,
-      "uniqueness": 5,
-      "id": "paris-photo-2026",
-      "title": "Paris Photo",
-      "emoji": "📷",
-      "categories": [
-        "photography",
-        "art",
-        "festival"
-      ],
-      "indoor": true,
-      "weatherSensitive": false,
-      "goodFor": [
-        "couple",
-        "weekend",
-        "afternoon"
-      ],
-      "coords": [
-        48.8661,
-        2.3125
-      ],
-      "coordsFrom": "hand-placed at the venue",
-      "area": "Grand Palais, 8e",
-      "start": "2026-11-12",
-      "end": "2026-11-15",
-      "priceNote": "Tickets from Paris Photo",
-      "priceLevel": 3,
-      "why": "The world's biggest photography fair, in the year photography turns two hundred. More than 220 galleries; the book publishers' section upstairs is where the bargains are.",
-      "source": "Paris Photo",
-      "url": "https://www.parisphoto.com/en-gb/info/next-edition.html",
-      "booking": "https://www.parisphoto.com/en-gb/info/tickets.html",
-      "zone": 8,
-      "times": "1pm to 8pm; Sunday until 7pm",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Grande_verri%C3%A8re_du_Grand_Palais_lors_de_l%27op%C3%A9ration_La_nef_est_%C3%A0_vous%2C_juin_2018_%2810%29.jpg/1280px-Grande_verri%C3%A8re_du_Grand_Palais_lors_de_l%27op%C3%A9ration_La_nef_est_%C3%A0_vous%2C_juin_2018_%2810%29.jpg",
-      "imageSubject": "Grand Palais",
-      "imageKind": "context",
-      "imageCredit": "Wikimedia Commons",
-      "startTime": "13:00",
-      "durationMin": 180
-    },
     {
       "type": "event",
       "provenance": "editorial",
