@@ -1,15 +1,83 @@
 {
-  "generated": "2026-11-20",
+  "generated": "2026-11-21",
   "window": {
-    "from": "2026-11-20",
-    "to": "2027-02-18"
+    "from": "2026-11-21",
+    "to": "2027-02-19"
   },
   "source": "Que Faire à Paris · opendata.paris.fr (ODbL) · Luma",
   "note": "Things you take up rather than attend — `mode: \"do\"`. The city feed already carries the repetition in its `occurrences` field and shows it as a date; this reads it as a rhythm, which is the whole point of the file. English lines are assembled from each record's own fields, never translated. Luma covers the tech and AI evenings the city has none of. These are `sourced` records and rank below anything hand-written. The gate lives in scripts/practices.mjs; pruned daily by scripts/refresh.mjs.",
   "items": [
     {
-      "id": "prac-91705",
-      "title": "Apéro littéraire",
+      "id": "prac-94478",
+      "title": "DANSEZ ! — Ateliers avec Núria Rovira Salat",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "dance",
+        "learn"
+      ],
+      "zone": 18,
+      "area": "Le 360 Paris Music Factory",
+      "coords": [
+        48.8871900126744,
+        2.35371200477411
+      ],
+      "start": "2026-11-08",
+      "end": "2027-02-14",
+      "days": [
+        0
+      ],
+      "times": "Le dimanche 14 février 2027 de 10h00 à 14h00 Le dimanche 24 janvier 2027 de 10h00 à 14h00 Le dimanche 06 décembre 2026 de 10h00 à 14h00",
+      "why": "Dance class · 3 dates, Dec–Feb",
+      "priceNote": "De 55 à 65 euros.",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/dansez-ateliers-avec-nuria-rovira-salat-126833",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-88342",
+      "title": "Ateliers cirque aérien adultes",
+      "emoji": "🎪",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "circus",
+        "learn"
+      ],
+      "zone": 13,
+      "area": "RueWATT",
+      "coords": [
+        48.827530014714,
+        2.38098001218447
+      ],
+      "start": "2026-10-03",
+      "end": "2027-07-03",
+      "days": [
+        6
+      ],
+      "times": "Le samedi 03 juillet 2027 de 15h00 à 17h00 Le samedi 19 juin 2027 de 15h00 à 17h00 Le samedi 22 mai 2027 de 15h00 à 17h00 Le samedi 24 avril",
+      "why": "Circus class · monthly, Dec–Jul",
+      "priceNote": "• 1 atelier : 28 euros • Pass 3 séances : 70&nbsp;euros.",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/ateliers-cirque-aerien-adultes-115192",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-4175",
+      "title": "Atelier Écriture-Collage",
       "emoji": "📝",
       "type": "class",
       "mode": "do",
@@ -17,28 +85,60 @@
         "books",
         "learn"
       ],
-      "zone": 11,
-      "area": "MPAA/Breguet",
+      "zone": 12,
+      "area": "L'Atelier sous les toits",
       "coords": [
-        48.8576039899409,
-        2.37363000510896
+        48.848590007447,
+        2.37546698300889
       ],
-      "start": "2026-12-11",
-      "end": "2027-04-30",
+      "start": "2026-10-17",
+      "end": "2027-06-05",
       "days": [
-        5
+        6
       ],
-      "times": "Le vendredi 30 avril 2027 de 19h30 à 21h30 Le vendredi 11 décembre 2026 de 19h30 à 21h30",
-      "why": "Writing and reading workshop · 2 dates, Dec–Apr",
-      "price": 0,
-      "priceNote": "Free",
+      "times": "Le samedi 21 novembre 2026 de 14h00 à 18h30 Le samedi 05 décembre 2026 de 14h00 à 18h30 Le samedi 30 janvier 2027 de 14h00 à 18h30 Le samedi",
+      "why": "Writing and reading workshop · 6 dates, Nov–Jun",
+      "priceNote": "60 euros / atelier 330 euros / forfait annuel 6 ateliers.",
       "labels": [
-        "free",
         "learn"
       ],
-      "url": "https://www.paris.fr/evenements/apero-litteraire-123870",
+      "url": "https://www.paris.fr/evenements/atelier-ecriture-collage-10912",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-91701",
+      "title": "Défiez-vous !",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "dance",
+        "learn"
+      ],
+      "zone": 14,
+      "area": "MPAA/Broussais - Maison des Pratiques Artistiques Amateurs",
+      "coords": [
+        48.827999,
+        2.315748
+      ],
+      "start": "2026-11-21",
+      "end": "2027-04-03",
+      "days": [
+        6
+      ],
+      "times": "Le samedi 03 avril 2027 de 14h00 à 19h30 Le samedi 27 mars 2027 de 14h00 à 17h00 Le samedi 20 mars 2027 de 14h00 à 17h00 Le samedi 05 décemb",
+      "why": "Dance class · weekly, Nov–Apr",
+      "priceNote": "Gratuit, sur inscription",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/defiez-vous-123866",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -72,144 +172,41 @@
       ],
       "url": "https://www.paris.fr/evenements/brunch-creatif-112067",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
     },
     {
-      "id": "prac-91112",
-      "title": "Atelier d'écriture",
-      "emoji": "📝",
+      "id": "prac-94926",
+      "title": "Deux ateliers pour cuisiner avec une Cheffe !",
+      "emoji": "🍽️",
       "type": "class",
       "mode": "do",
       "categories": [
-        "books",
+        "food",
         "learn"
       ],
-      "zone": 14,
-      "area": "La Roche",
+      "zone": 19,
+      "area": "Tendance 19",
       "coords": [
-        48.8323680073174,
-        2.33106502440342
-      ],
-      "start": "2026-10-08",
-      "end": "2026-12-17",
-      "days": [
-        4
-      ],
-      "times": "Le jeudi 17 décembre 2026 de 19h00 à 21h00 Le jeudi 10 décembre 2026 de 19h00 à 21h00 Le jeudi 03 décembre 2026 de 19h00 à 21h00 Le jeudi 26",
-      "why": "Writing and reading workshop · weekly, Nov–Dec",
-      "priceNote": "Paid",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-123201",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-94197",
-      "title": "Bootcamp bachata pour débutants : danser en un mois",
-      "emoji": "💃",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "dance",
-        "learn"
-      ],
-      "zone": 16,
-      "area": "Académie Internationale de la Danse",
-      "coords": [
-        48.8683360949477,
-        2.28892467091276
-      ],
-      "start": "2026-11-18",
-      "end": "2026-12-16",
-      "days": [
-        3
-      ],
-      "times": "Le mercredi 16 décembre 2026 de 19h00 à 20h30 Le mercredi 09 décembre 2026 de 19h00 à 20h30 Le mercredi 02 décembre 2026 de 19h00 à 20h30 Le",
-      "why": "Dance class · weekly, Nov–Dec",
-      "priceNote": "129 euros les 5 cours de 1h30, La Casa incluse (l'espace en ",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/bootcamp-bachata-pour-debutants-danser-en-un-mois-126543",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-94210",
-      "title": "2 ateliers artistiques à tester en novembre quand il fait froid à Paris",
-      "emoji": "🎨",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "art",
-        "learn"
-      ],
-      "zone": 4,
-      "area": "Galerie Joseph",
-      "coords": [
-        48.8584299845893,
-        2.35471699496486
+        48.8870189799401,
+        2.38083601108792
       ],
       "start": "2026-11-21",
-      "end": "2026-11-22",
+      "end": "2026-11-28",
       "days": [
-        0,
         6
       ],
-      "times": "Le dimanche 22 novembre 2026 de 10h00 à 12h00 Le samedi 21 novembre 2026 de 15h00 à 17h00",
-      "why": "Painting workshop · most days, Nov",
-      "priceNote": "45 euros par personne.",
+      "times": "Le samedi 28 novembre 2026 de 10h00 à 13h00 Le samedi 21 novembre 2026 de 10h00 à 13h00",
+      "why": "Cooking workshop · weekly, Nov",
+      "priceNote": "Gratuit mais Adhésion solidaire demandée pour participer aux",
       "labels": [
         "learn"
       ],
-      "url": "https://www.paris.fr/evenements/2-ateliers-artistiques-a-tester-en-novembre-quand-il-fait-froid-a-paris-126556",
+      "url": "https://www.paris.fr/evenements/deux-ateliers-pour-cuisiner-avec-une-cheffe-127285",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-94478",
-      "title": "DANSEZ ! — Ateliers avec Núria Rovira Salat",
-      "emoji": "💃",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "dance",
-        "learn"
-      ],
-      "zone": 18,
-      "area": "Le 360 Paris Music Factory",
-      "coords": [
-        48.8871900126744,
-        2.35371200477411
-      ],
-      "start": "2026-11-08",
-      "end": "2027-02-14",
-      "days": [
-        0
-      ],
-      "times": "Le dimanche 14 février 2027 de 10h00 à 14h00 Le dimanche 24 janvier 2027 de 10h00 à 14h00 Le dimanche 06 décembre 2026 de 10h00 à 14h00",
-      "why": "Dance class · 3 dates, Dec–Feb",
-      "priceNote": "De 55 à 65 euros.",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/dansez-ateliers-avec-nuria-rovira-salat-126833",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -245,82 +242,14 @@
       ],
       "url": "https://www.paris.fr/evenements/rencontre-des-bedeistes-anonymes-avec-studio-phantomime-127695",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
     },
     {
-      "id": "prac-92540",
-      "title": "Stage d'oenologie",
-      "emoji": "🍽️",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "food",
-        "learn"
-      ],
-      "zone": 14,
-      "area": "Centre Paris Anim' Marc Sangnier",
-      "coords": [
-        48.825786,
-        2.307201
-      ],
-      "start": "2026-11-10",
-      "end": "2027-06-29",
-      "days": [
-        2
-      ],
-      "times": "Le mardi 29 juin 2027 de 19h30 à 21h30 Le mardi 01 juin 2027 de 19h30 à 21h30 Le mardi 18 mai 2027 de 19h30 à 21h30 Le mardi 30 mars 2027 de",
-      "why": "Cooking workshop · monthly, Dec–Jun",
-      "priceNote": "Selon QF&nbsp; + 108€ de participation aux frais",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/stage-d-oenologie-124777",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-91712",
-      "title": "Danse orientale",
-      "emoji": "💃",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "dance",
-        "learn"
-      ],
-      "zone": 11,
-      "area": "MPAA/Breguet - Maison des Pratiques Artistiques Amateurs",
-      "coords": [
-        48.857711,
-        2.373654
-      ],
-      "start": "2027-01-09",
-      "end": "2027-01-16",
-      "days": [
-        6
-      ],
-      "times": "Le samedi 09 janvier 2027 de 14h00 à 17h00 Le samedi 16 janvier 2027 de 14h00 à 17h00",
-      "why": "Dance class · weekly, Jan",
-      "priceNote": "Tarif plein : 20€ - Tarif réduit : 10€",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/danse-orientale-123877",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-30098",
-      "title": "Atelier d'écriture Papillon",
+      "id": "prac-5005",
+      "title": "Atelier d'écriture petits papiers",
       "emoji": "📝",
       "type": "class",
       "mode": "do",
@@ -334,327 +263,20 @@
         48.848590007447,
         2.37546698300889
       ],
-      "start": "2026-09-13",
-      "end": "2027-06-20",
-      "days": [
-        0
-      ],
-      "times": "Le dimanche 28 février 2027 de 15h00 à 18h00 Le dimanche 24 janvier 2027 de 15h00 à 18h00 Le dimanche 13 décembre 2026 de 15h00 à 18h00 Le d",
-      "why": "Writing and reading workshop · 7 dates, Dec–Jun",
-      "priceNote": "32 euros / atelier Forfait 9 ateliers ou plus : 29 euros / a",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-papillon-38986",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-4175",
-      "title": "Atelier Écriture-Collage",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 12,
-      "area": "L'Atelier sous les toits",
-      "coords": [
-        48.848590007447,
-        2.37546698300889
-      ],
-      "start": "2026-10-17",
-      "end": "2027-06-05",
+      "start": "2026-09-26",
+      "end": "2027-05-01",
       "days": [
         6
       ],
-      "times": "Le samedi 21 novembre 2026 de 14h00 à 18h30 Le samedi 05 décembre 2026 de 14h00 à 18h30 Le samedi 30 janvier 2027 de 14h00 à 18h30 Le samedi",
-      "why": "Writing and reading workshop · 6 dates, Nov–Jun",
-      "priceNote": "60 euros / atelier 330 euros / forfait annuel 6 ateliers.",
+      "times": "Le samedi 28 novembre 2026 de 14h00 à 18h30 Le samedi 09 janvier 2027 de 14h00 à 18h30 Le samedi 06 mars 2027 de 14h00 à 18h30 Le samedi 01 ",
+      "why": "Writing and reading workshop · 4 dates, Nov–May",
+      "priceNote": "50 euros / atelier ou forfait annuel : 225 euros",
       "labels": [
         "learn"
       ],
-      "url": "https://www.paris.fr/evenements/atelier-ecriture-collage-10912",
+      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-petits-papiers-11737",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-88342",
-      "title": "Ateliers cirque aérien adultes",
-      "emoji": "🎪",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "circus",
-        "learn"
-      ],
-      "zone": 13,
-      "area": "RueWATT",
-      "coords": [
-        48.827530014714,
-        2.38098001218447
-      ],
-      "start": "2026-10-03",
-      "end": "2027-07-03",
-      "days": [
-        6
-      ],
-      "times": "Le samedi 03 juillet 2027 de 15h00 à 17h00 Le samedi 19 juin 2027 de 15h00 à 17h00 Le samedi 22 mai 2027 de 15h00 à 17h00 Le samedi 24 avril",
-      "why": "Circus class · monthly, Dec–Jul",
-      "priceNote": "• 1 atelier : 28 euros • Pass 3 séances : 70&nbsp;euros.",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/ateliers-cirque-aerien-adultes-115192",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-89348",
-      "title": "Le colporteur est un passeur",
-      "emoji": "🎨",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "art",
-        "learn"
-      ],
-      "zone": 4,
-      "area": "Mémorial de la Shoah",
-      "coords": [
-        48.8548509957524,
-        2.35631399897687
-      ],
-      "start": "2026-11-29",
-      "end": "2026-11-29",
-      "days": [
-        0
-      ],
-      "times": "Le dimanche 29 novembre 2026 de 15h30 à 17h30 Le dimanche 29 novembre 2026 de 11h30 à 13h30",
-      "why": "Painting workshop · most days, Nov",
-      "priceNote": "Tarif: 12€",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/le-colporteur-est-un-passeur-116689",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-94926",
-      "title": "Deux ateliers pour cuisiner avec une Cheffe !",
-      "emoji": "🍽️",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "food",
-        "learn"
-      ],
-      "zone": 19,
-      "area": "Tendance 19",
-      "coords": [
-        48.8870189799401,
-        2.38083601108792
-      ],
-      "start": "2026-11-21",
-      "end": "2026-11-28",
-      "days": [
-        6
-      ],
-      "times": "Le samedi 28 novembre 2026 de 10h00 à 13h00 Le samedi 21 novembre 2026 de 10h00 à 13h00",
-      "why": "Cooking workshop · weekly, Nov",
-      "priceNote": "Gratuit mais Adhésion solidaire demandée pour participer aux",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/deux-ateliers-pour-cuisiner-avec-une-cheffe-127285",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-86996",
-      "title": "Ateliers d'écriture à Paris « Écrire en liberté »",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 20,
-      "area": "Couleurs Brazil",
-      "coords": [
-        48.8728000032123,
-        2.39984097070985
-      ],
-      "start": "2026-10-02",
-      "end": "2027-06-06",
-      "times": "Du dimanche 04 octobre 2026 au dimanche 06 juin 2027 : dimanche de 10h00 à 12h30 Du dimanche 04 octobre 2026 au dimanche 06 juin 2027 : dima",
-      "why": "Writing and reading workshop · most days, Oct–Jun",
-      "priceNote": "390 euros / Cycle annuel (un atelier de 3 heures mensuel).",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/ateliers-d-ecriture-a-paris-ecrire-en-liberte-113600",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-26216",
-      "title": "Stage de calligraphie et de peinture chinoises",
-      "emoji": "🎨",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "art",
-        "learn"
-      ],
-      "zone": 1,
-      "area": "Feibai Institute",
-      "coords": [
-        48.8661979971762,
-        2.33567599315927
-      ],
-      "start": "2027-02-13",
-      "end": "2027-04-18",
-      "days": [
-        0,
-        6
-      ],
-      "times": "Du samedi 10 avril 2027 au dimanche 11 avril 2027 : samedi, dimanche de 10h30 à 16h00 Du samedi 20 février 2027 au dimanche 21 février 2027 ",
-      "why": "Painting workshop · most days, Feb–Apr",
-      "priceNote": "180 euros / 2 jours Matériel compris.",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/stage-ado-adulte-ecrire-l-eternite-initiation-a-la-calligraphie-chinoise-34801",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-31390",
-      "title": "Copier, Créer : atelier de modelage pour adultes et adolescents",
-      "emoji": "🖼️",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "art",
-        "learn"
-      ],
-      "zone": 15,
-      "area": "Musée Bourdelle",
-      "coords": [
-        48.842975,
-        2.318588
-      ],
-      "start": "2026-09-16",
-      "end": "2026-12-12",
-      "days": [
-        3,
-        6
-      ],
-      "times": "Le samedi 12 décembre 2026 de 10h00 à 14h00 Le mercredi 25 novembre 2026 de 10h00 à 14h00",
-      "why": "Art workshop · 2 dates, Nov–Dec",
-      "priceNote": "Plein tarif :&nbsp;20 €&nbsp; Tarif réduit : 16 €",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/copier-creer-atelier-de-modelage-pour-adultes-et-adolescents-40855",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-88205",
-      "title": "Atelier tissu Cirque & Danse",
-      "emoji": "🎪",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "circus",
-        "learn"
-      ],
-      "zone": 13,
-      "area": "RueWATT fabrique artistique",
-      "coords": [
-        48.827530014714,
-        2.38098001218447
-      ],
-      "start": "2026-01-16",
-      "end": "2026-12-12",
-      "days": [
-        6
-      ],
-      "times": "Le samedi 12 décembre 2026 de 14h00 à 16h00 Le samedi 21 novembre 2026 de 14h00 à 16h00",
-      "why": "Circus class · 2 dates, Nov–Dec",
-      "priceNote": "28 euros.",
-      "labels": [
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/atelier-tissu-cirque-danse-115007",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "prac-94444",
-      "title": "Club de lecture en français langue étrangère",
-      "emoji": "📝",
-      "type": "class",
-      "mode": "do",
-      "categories": [
-        "books",
-        "learn"
-      ],
-      "zone": 13,
-      "area": "Médiathèque Jean-Pierre Melville",
-      "coords": [
-        48.826787,
-        2.36644
-      ],
-      "start": "2027-01-15",
-      "end": "2027-06-11",
-      "days": [
-        5
-      ],
-      "times": "Le vendredi 11 juin 2027 de 10h00 à 11h30 Le vendredi 19 mars 2027 de 10h00 à 11h30 Le vendredi 15 janvier 2027 de 10h00 à 11h30",
-      "why": "Writing and reading workshop · 3 dates, Jan–Jun",
-      "price": 0,
-      "priceNote": "Free",
-      "labels": [
-        "free",
-        "learn"
-      ],
-      "url": "https://www.paris.fr/evenements/club-de-lecture-en-francais-langue-etrangere-126799",
-      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -688,41 +310,38 @@
       ],
       "url": "https://www.paris.fr/evenements/cours-de-danses-de-bal-avec-paribal-123245",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
     },
     {
-      "id": "prac-91701",
-      "title": "Défiez-vous !",
-      "emoji": "💃",
+      "id": "prac-86996",
+      "title": "Ateliers d'écriture à Paris « Écrire en liberté »",
+      "emoji": "📝",
       "type": "class",
       "mode": "do",
       "categories": [
-        "dance",
+        "books",
         "learn"
       ],
-      "zone": 14,
-      "area": "MPAA/Broussais - Maison des Pratiques Artistiques Amateurs",
+      "zone": 20,
+      "area": "Couleurs Brazil",
       "coords": [
-        48.827999,
-        2.315748
+        48.8728000032123,
+        2.39984097070985
       ],
-      "start": "2026-11-21",
-      "end": "2027-04-03",
-      "days": [
-        6
-      ],
-      "times": "Le samedi 03 avril 2027 de 14h00 à 19h30 Le samedi 27 mars 2027 de 14h00 à 17h00 Le samedi 20 mars 2027 de 14h00 à 17h00 Le samedi 05 décemb",
-      "why": "Dance class · weekly, Nov–Apr",
-      "priceNote": "Gratuit, sur inscription",
+      "start": "2026-10-02",
+      "end": "2027-06-06",
+      "times": "Du dimanche 04 octobre 2026 au dimanche 06 juin 2027 : dimanche de 10h00 à 12h30 Du dimanche 04 octobre 2026 au dimanche 06 juin 2027 : dima",
+      "why": "Writing and reading workshop · most days, Oct–Jun",
+      "priceNote": "390 euros / Cycle annuel (un atelier de 3 heures mensuel).",
       "labels": [
         "learn"
       ],
-      "url": "https://www.paris.fr/evenements/defiez-vous-123866",
+      "url": "https://www.paris.fr/evenements/ateliers-d-ecriture-a-paris-ecrire-en-liberte-113600",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -758,7 +377,249 @@
       ],
       "url": "https://www.paris.fr/evenements/atelier-art-therapie-se-decouvrir-et-s-exprimer-explorer-son-monde-interieur-127509",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-89348",
+      "title": "Le colporteur est un passeur",
+      "emoji": "🎨",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "art",
+        "learn"
+      ],
+      "zone": 4,
+      "area": "Mémorial de la Shoah",
+      "coords": [
+        48.8548509957524,
+        2.35631399897687
+      ],
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "days": [
+        0
+      ],
+      "times": "Le dimanche 29 novembre 2026 de 15h30 à 17h30 Le dimanche 29 novembre 2026 de 11h30 à 13h30",
+      "why": "Painting workshop · most days, Nov",
+      "priceNote": "Tarif: 12€",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/le-colporteur-est-un-passeur-116689",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-94210",
+      "title": "2 ateliers artistiques à tester en novembre quand il fait froid à Paris",
+      "emoji": "🎨",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "art",
+        "learn"
+      ],
+      "zone": 4,
+      "area": "Galerie Joseph",
+      "coords": [
+        48.8584299845893,
+        2.35471699496486
+      ],
+      "start": "2026-11-21",
+      "end": "2026-11-22",
+      "days": [
+        0,
+        6
+      ],
+      "times": "Le dimanche 22 novembre 2026 de 10h00 à 12h00 Le samedi 21 novembre 2026 de 15h00 à 17h00",
+      "why": "Painting workshop · most days, Nov",
+      "priceNote": "45 euros par personne.",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/2-ateliers-artistiques-a-tester-en-novembre-quand-il-fait-froid-a-paris-126556",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-91112",
+      "title": "Atelier d'écriture",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 14,
+      "area": "La Roche",
+      "coords": [
+        48.8323680073174,
+        2.33106502440342
+      ],
+      "start": "2026-10-08",
+      "end": "2026-12-17",
+      "days": [
+        4
+      ],
+      "times": "Le jeudi 17 décembre 2026 de 19h00 à 21h00 Le jeudi 10 décembre 2026 de 19h00 à 21h00 Le jeudi 03 décembre 2026 de 19h00 à 21h00 Le jeudi 26",
+      "why": "Writing and reading workshop · weekly, Nov–Dec",
+      "priceNote": "Paid",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/atelier-d-ecriture-123201",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-88205",
+      "title": "Atelier tissu Cirque & Danse",
+      "emoji": "🎪",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "circus",
+        "learn"
+      ],
+      "zone": 13,
+      "area": "RueWATT fabrique artistique",
+      "coords": [
+        48.827530014714,
+        2.38098001218447
+      ],
+      "start": "2026-01-16",
+      "end": "2026-12-12",
+      "days": [
+        6
+      ],
+      "times": "Le samedi 12 décembre 2026 de 14h00 à 16h00 Le samedi 21 novembre 2026 de 14h00 à 16h00",
+      "why": "Circus class · 2 dates, Nov–Dec",
+      "priceNote": "28 euros.",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/atelier-tissu-cirque-danse-115007",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-31390",
+      "title": "Copier, Créer : atelier de modelage pour adultes et adolescents",
+      "emoji": "🖼️",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "art",
+        "learn"
+      ],
+      "zone": 15,
+      "area": "Musée Bourdelle",
+      "coords": [
+        48.842975,
+        2.318588
+      ],
+      "start": "2026-09-16",
+      "end": "2026-12-12",
+      "days": [
+        3,
+        6
+      ],
+      "times": "Le samedi 12 décembre 2026 de 10h00 à 14h00 Le mercredi 25 novembre 2026 de 10h00 à 14h00",
+      "why": "Art workshop · 2 dates, Nov–Dec",
+      "priceNote": "Plein tarif :&nbsp;20 €&nbsp; Tarif réduit : 16 €",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/copier-creer-atelier-de-modelage-pour-adultes-et-adolescents-40855",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-92540",
+      "title": "Stage d'oenologie",
+      "emoji": "🍽️",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "food",
+        "learn"
+      ],
+      "zone": 14,
+      "area": "Centre Paris Anim' Marc Sangnier",
+      "coords": [
+        48.825786,
+        2.307201
+      ],
+      "start": "2026-11-10",
+      "end": "2027-06-29",
+      "days": [
+        2
+      ],
+      "times": "Le mardi 29 juin 2027 de 19h30 à 21h30 Le mardi 01 juin 2027 de 19h30 à 21h30 Le mardi 18 mai 2027 de 19h30 à 21h30 Le mardi 30 mars 2027 de",
+      "why": "Cooking workshop · monthly, Dec–Jun",
+      "priceNote": "Selon QF&nbsp; + 108€ de participation aux frais",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/stage-d-oenologie-124777",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-91705",
+      "title": "Apéro littéraire",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 11,
+      "area": "MPAA/Breguet",
+      "coords": [
+        48.8576039899409,
+        2.37363000510896
+      ],
+      "start": "2026-12-11",
+      "end": "2027-04-30",
+      "days": [
+        5
+      ],
+      "times": "Le vendredi 30 avril 2027 de 19h30 à 21h30 Le vendredi 11 décembre 2026 de 19h30 à 21h30",
+      "why": "Writing and reading workshop · 2 dates, Dec–Apr",
+      "price": 0,
+      "priceNote": "Free",
+      "labels": [
+        "free",
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/apero-litteraire-123870",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -792,7 +653,146 @@
       ],
       "url": "https://www.paris.fr/evenements/initiation-au-buto-126344",
       "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-26216",
+      "title": "Stage de calligraphie et de peinture chinoises",
+      "emoji": "🎨",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "art",
+        "learn"
+      ],
+      "zone": 1,
+      "area": "Feibai Institute",
+      "coords": [
+        48.8661979971762,
+        2.33567599315927
+      ],
+      "start": "2027-02-13",
+      "end": "2027-04-18",
+      "days": [
+        0,
+        6
+      ],
+      "times": "Du samedi 10 avril 2027 au dimanche 11 avril 2027 : samedi, dimanche de 10h30 à 16h00 Du samedi 20 février 2027 au dimanche 21 février 2027 ",
+      "why": "Painting workshop · most days, Feb–Apr",
+      "priceNote": "180 euros / 2 jours Matériel compris.",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/stage-ado-adulte-ecrire-l-eternite-initiation-a-la-calligraphie-chinoise-34801",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-94444",
+      "title": "Club de lecture en français langue étrangère",
+      "emoji": "📝",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "books",
+        "learn"
+      ],
+      "zone": 13,
+      "area": "Médiathèque Jean-Pierre Melville",
+      "coords": [
+        48.826787,
+        2.36644
+      ],
+      "start": "2027-01-15",
+      "end": "2027-06-11",
+      "days": [
+        5
+      ],
+      "times": "Le vendredi 11 juin 2027 de 10h00 à 11h30 Le vendredi 19 mars 2027 de 10h00 à 11h30 Le vendredi 15 janvier 2027 de 10h00 à 11h30",
+      "why": "Writing and reading workshop · 3 dates, Jan–Jun",
+      "price": 0,
+      "priceNote": "Free",
+      "labels": [
+        "free",
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/club-de-lecture-en-francais-langue-etrangere-126799",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-94197",
+      "title": "Bootcamp bachata pour débutants : danser en un mois",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "dance",
+        "learn"
+      ],
+      "zone": 16,
+      "area": "Académie Internationale de la Danse",
+      "coords": [
+        48.8683360949477,
+        2.28892467091276
+      ],
+      "start": "2026-11-18",
+      "end": "2026-12-16",
+      "days": [
+        3
+      ],
+      "times": "Le mercredi 16 décembre 2026 de 19h00 à 20h30 Le mercredi 09 décembre 2026 de 19h00 à 20h30 Le mercredi 02 décembre 2026 de 19h00 à 20h30 Le",
+      "why": "Dance class · weekly, Nov–Dec",
+      "priceNote": "129 euros les 5 cours de 1h30, La Casa incluse (l'espace en ",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/bootcamp-bachata-pour-debutants-danser-en-un-mois-126543",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "prac-91712",
+      "title": "Danse orientale",
+      "emoji": "💃",
+      "type": "class",
+      "mode": "do",
+      "categories": [
+        "dance",
+        "learn"
+      ],
+      "zone": 11,
+      "area": "MPAA/Breguet - Maison des Pratiques Artistiques Amateurs",
+      "coords": [
+        48.857711,
+        2.373654
+      ],
+      "start": "2027-01-09",
+      "end": "2027-01-16",
+      "days": [
+        6
+      ],
+      "times": "Le samedi 09 janvier 2027 de 14h00 à 17h00 Le samedi 16 janvier 2027 de 14h00 à 17h00",
+      "why": "Dance class · weekly, Jan",
+      "priceNote": "Tarif plein : 20€ - Tarif réduit : 10€",
+      "labels": [
+        "learn"
+      ],
+      "url": "https://www.paris.fr/evenements/danse-orientale-123877",
+      "source": "Que Faire à Paris — opendata.paris.fr · ODbL",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "quality": 3,
       "uniqueness": 3
@@ -818,7 +818,7 @@
       "why": "🗣 « Ce n'est pas l'accord qui fait société, mais notre capacité à vivre avec nos désaccords. » – Patrick Viveret 🌿 \"Tous artistes avec l'IA ?\" Une question éclairée avec attention par Romain Astouric, créateur, enseignant et fondateur du media Futur Antérieur dédié aux arts numériques et Sandra Encaoua, artiste plast",
       "url": "https://luma.com/reppeu2t",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -848,7 +848,7 @@
       "why": "You have an idea for a side hustle. Sunday afternoon is when you start building it. Join us at La Felicità, Station F, for an afternoon of building with people who want the same thing. Program 12:00: lunch together (optional, everyone pays for their own) 13:00: intro and speed dating. Meet 3 strangers, pitch your idea,",
       "url": "https://luma.com/dc3ynvnx",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -878,7 +878,7 @@
       "why": "Nouveau lieu Après 4 ans au 28 avenue George V, le Forum change de lieu pour Le 3 Mazarium, au cœur de Saint-Germain-des-Prés, un cadre plus prestigieux et plus moderne pour cette 5ᵉ édition. Le thème 2026 « Dépendances, disruptions, décisions » : le marketing et la publicité digitale à la croisée de l'IA. Souveraineté",
       "url": "https://luma.com/wew0g4qi",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -908,7 +908,7 @@
       "why": "Le contenu : Tu veux accélérer avec l’IA ton quotidien de Product voire ton orga entière ? Découvre les cas d’usage réels présentés lors de la 2e édition de la Product Builder Night, organisée avec Converteo le mardi 24 novembre. Au programme : des démos, des démos, des démos ! Les infos pratiques : 📅 Mardi 24 novembr",
       "url": "https://luma.com/cl94iv50",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -938,37 +938,7 @@
       "why": "There’s no shortage of go-to-market tools or AI hype promising instant revenue & results. But at the same time, generating revenue in B2B feels as hard as it’s ever been, if not harder. So what’s actually working, and what’s just noise on LinkedIn? The revenue teams pulling ahead aren’t chasing tactics. They’re going b",
       "url": "https://luma.com/bpzlmboh",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
-      "indoor": true,
-      "labels": [
-        "learn",
-        "afterwork"
-      ],
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtNg5NeLbIRri3tbX",
-      "title": "Vernissage expo photo : les Alpes à pied, 2 000 km · 25/11",
-      "emoji": "💻",
-      "type": "event",
-      "mode": "do",
-      "categories": [
-        "tech",
-        "learn"
-      ],
-      "zone": 9,
-      "area": "Studio Falour, entrée boutique sur rue, 42 Rue du Faubourg Montmartre, 75009 Par",
-      "coords": [
-        48.8745116,
-        2.3418302
-      ],
-      "start": "2026-11-25",
-      "end": "2026-11-25",
-      "why": "Cet été, j’ai traversé les Alpes à pied, de Trieste à Monaco : 88 jours sur la Via Alpina, à travers huit pays. J’en ramène une série de photographies que j’expose pour la première fois en solo, au Studio Falour, du 19 novembre au 2 décembre. Pour le vernissage, il y a deux créneaux d’arrivée, pour que tout le monde pr",
-      "url": "https://luma.com/eu0evy54",
-      "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -998,7 +968,7 @@
       "why": "New Health rassemble les fondateurs et les acteurs qui construisent la santé de demain. Ils créent des parcours de santé personnalisés pour les millions de personnes qui vivent avec des troubles du quotidien (sommeil, digestion, peau, hormones, énergie, humeur). Monter une start-up sur ces sujets pose des questions que",
       "url": "https://luma.com/hexa-llu2",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1028,7 +998,7 @@
       "why": "Notion Meetup Paris 🥐 Les Ambassadeurs Notion de toute la France se retrouvent à Paris pour une soirée avec la communauté Notion parisienne. Que tu débutes sur Notion ou que tu l'utilises à fond tous les jours, tu es le bienvenu ! Au programme 19h00 : accueil 19h30 : mot de bienvenue 19h35 : panels et démo liveNotion ",
       "url": "https://luma.com/notion-h9qo",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1058,7 +1028,7 @@
       "why": "Tout le monde construit des agents. Les bonnes pratiques, elles, sont encore en train de s’écrire. datacraft lance un meetup pensé pour celles et ceux qui conçoivent, testent ou mettent en production des systèmes agentiques. Pas de keynote ni de recette toute faite : on compare nos approches, nos résultats et nos erreu",
       "url": "https://luma.com/meetup-agents-ia-choix-d-architecture-et-retours-d",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1088,7 +1058,7 @@
       "why": "Join 70 of the sharpest builders from Paris and beyond for a Saturday of building AI products that help people stay healthy. What to expect On Saturday 28 November, we’re bringing together 70 builders for 12 hours in one room, to ship AI products for health. There’s one main health track, plus side challenges. At the e",
       "url": "https://luma.com/o1eopuwy",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1118,7 +1088,7 @@
       "why": "This is the day you Launch. Let’s build together in the startup heart of Paris. Bring your business or start one. Use Codex to build fast, integrate payments, cook up launch video's & share what you've built with the world! We’ll cheer on each other’s launches. The strongest teams pitch on stage with a chance to win cr",
       "url": "https://luma.com/fg1lny5k",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1148,7 +1118,7 @@
       "why": "The next generation of medicines will be shaped by AI, and the biological data it's trained on. From biodiversity and ecosystems to human populations, tissues and patients, the quality, diversity and provenance of these datasets will help determine what we can discover. Join us for a panel discussion and networking wit",
       "url": "https://luma.com/xpowbqmg",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1178,7 +1148,7 @@
       "why": "Join a Claude Community Event, organized by local enthusiasts for everyone who loves building with Claude Code! This event will be centered on compound engineering and agentic loops. Program: A demo of the latest Claude Code advancements Multiple demos on real use cases by Doctolib Demo by Arthur Magne, CPO of Packmind",
       "url": "https://luma.com/dhroozcr",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1208,7 +1178,7 @@
       "why": "Build what's next in finance. Finance is changing. And the people driving that change aren't necessarily engineers. They're CFOs, FP&A leads, controllers and treasury professionals who have started building their own tools, automating workflows and putting AI to work on real finance problems. On 2 December, OpenAI, iBa",
       "url": "https://luma.com/umg16123",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1238,7 +1208,7 @@
       "why": "J’ai le plaisir de vous inviter au vernissage de mon exposition personnelle Outside the Threshold, qui se tiendra le 2 décembre 2026 à partir de 18h, à L Gallery, Paris. Outside the Threshold est un projet photographique qui explore les états de transition, la mémoire et les relations entre le corps et l’espace. À trav",
       "url": "https://luma.com/72r6pg00",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1268,7 +1238,7 @@
       "why": "Run & Talk with Kotcha The running coaching app co-founded by Eliud Kipchoge and Kilian Jornet. AI-powered personalized training plans for road and trail runners. 📍 Kafé Martel :: le QG Pitch in Motion Paris 🕖 19h :: rendez-vous chez Kafé 🏃 19h15 :: départ du run 🤝 À partir de 20h :: Talk sur la personnalisation de",
       "url": "https://luma.com/7nyhq1eu",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1298,7 +1268,7 @@
       "why": "1 year after the first Paris Hardware Meetup, we’re back with a new Robotics edition! 🤖 Paris is buzzing with new Physical AI companies. Come meet the builders, see what they’re working on, and discover what’s hot in robotics! Hardware Meetups bring together founders, engineers, and innovators in 50+ cities around the",
       "url": "https://luma.com/psoxd0ql",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1328,7 +1298,7 @@
       "why": "Avec l’IA, on peut presque tout construire en interne : son propre flow de traduction, son moteur de glossaire, et même son propre CMS. La vraie question devient donc : qu’est-ce qu’une équipe marketing doit construire, qu’est-ce qu’elle doit acheter, et qu’est-ce qu’elle doit tout simplement ne pas faire ? Pour cette ",
       "url": "https://luma.com/ifryicgz",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1358,7 +1328,7 @@
       "why": "AHEAD OF TIME Mistral and ClickHouse are teaming up for a weekend of building agents that see what’s coming. Forecast it, then decide what to do about it. Come build with us! 200 spots, approval-based. We review applications in two rounds, on Nov 20 and Nov 27, so apply early! 🔮 The Challenge Most data is history, and",
       "url": "https://luma.com/clickh-mistral-hack-paris",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1388,7 +1358,37 @@
       "why": "Day two of NeurIPS. Come debrief over cocktails 🍸🍹 We’re taking over the bar at Maison Revka, inside the Renaissance Paris Nobel near Place Victor Hugo, where Alfred Nobel once kept his lab and orchid greenhouse. A short ride from the Palais des Congrès. There'll be cocktails, champagne and canapés (because we're in ",
       "url": "https://luma.com/ehy8iwul",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
+      "indoor": true,
+      "labels": [
+        "learn",
+        "afterwork"
+      ],
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtl76dEYptgZryPqJ",
+      "title": "Advanced Machine Intelligence (AMI Labs): NeurIPS Paris 2026 Mixer",
+      "emoji": "💻",
+      "type": "event",
+      "mode": "do",
+      "categories": [
+        "tech",
+        "learn"
+      ],
+      "zone": 16,
+      "area": null,
+      "coords": [
+        48.87874771715647,
+        2.2877349334032466
+      ],
+      "start": "2026-12-10",
+      "end": "2026-12-10",
+      "why": "Advanced Machine Intelligence (AMI Labs) invites you to a networking mixer in Paris! Connect with various members of our technical staff at our upcoming networking mixer. Learn more about our pursuit in developing the next generation of intelligent AI systems and explore potential career opportunities. We are actively ",
+      "url": "https://luma.com/aw4xfgtp",
+      "source": "Luma — What‘s Happening in Paris",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
@@ -1418,7 +1418,7 @@
       "why": "Join us for Physical AI Night, a relaxed evening for engineers and researchers working on computer vision, VLMs and robotics, during NeurIPS week in Paris. Hosted by Almetra (Berlin), the team turning live factory video into real production data, and now bringing AI onto the shop floor with robotics. What to expect: Go",
       "url": "https://luma.com/2vub4eep",
       "source": "Luma — What‘s Happening in Paris",
-      "lastVerified": "2026-11-20",
+      "lastVerified": "2026-11-21",
       "indoor": true,
       "labels": [
         "learn",
