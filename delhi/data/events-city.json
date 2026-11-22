@@ -1,61 +1,15 @@
 {
-  "generated": "2026-11-21",
+  "generated": "2026-11-22",
   "window": {
-    "from": "2026-11-21",
-    "to": "2027-01-20"
+    "from": "2026-11-22",
+    "to": "2027-01-21"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 4
+    "luma": 3
   },
   "items": [
-    {
-      "id": "luma-evtpFfwnEGLDJbFzgG",
-      "title": "MALL RUN | ZHOR X UNDERARMOUR",
-      "emoji": "🏃",
-      "type": "event",
-      "categories": [
-        "sport"
-      ],
-      "zone": "cyber-city",
-      "area": "Under Armour, Shop No G19, Ambience Mall, nearby Gate 2, Ambience Island, DLF Ph",
-      "coords": [
-        28.5041433,
-        77.0974439
-      ],
-      "start": "2026-11-22",
-      "end": "2026-11-22",
-      "why": "🏃‍♂️ MALL RUN | ZHOR x UNDER ARMOUR We're taking over Ambience Mall, Gurgaon for a morning of movement, music and community! Join ZHOR for a refreshing 3K community run, followed by an energetic post-run experience featuring a DJ on Wheelsto keep the vibes going. Whether you're here to run, connect or simply soak in t",
-      "url": "https://luma.com/b3kneiko",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-11-21",
-      "quality": 3,
-      "uniqueness": 3
-    },
-    {
-      "id": "luma-evtCkWmh8Nf9LKh6UX",
-      "title": "Run and coffee",
-      "emoji": "🏃",
-      "type": "event",
-      "categories": [
-        "sport"
-      ],
-      "zone": "ghaziabad",
-      "area": "Gandhi bagh, Gandhi Rd, Meerut Cantt, Meerut, Uttar Pradesh 250001, India",
-      "coords": [
-        29.007339499999997,
-        77.7027737
-      ],
-      "start": "2026-11-22",
-      "end": "2026-11-22",
-      "why": "This Sunday, we're kicking off the morning with a fun community run! 🏃☀️ But it's not just about running. We've got exciting icebreakers, interactive games and fun challenges lined up to help you meet new people, break the awkwardness and make some new friends. And of course, there are some exciting rewards for the ga",
-      "url": "https://luma.com/10ck9tpg",
-      "source": "Luma — Delhi",
-      "lastVerified": "2026-11-21",
-      "quality": 3,
-      "uniqueness": 3
-    },
     {
       "id": "luma-evtlwShiPrg3KS6TLX",
       "title": "The IPO Trap | Gurugram Launch at Masters Union",
@@ -75,7 +29,7 @@
       "why": "Before you hit \"Apply\" on the next IPO, spend a morning with the man who read the fine print. 📖 🗓 Monday, 23 November 2026 | 11 AM to 2 PM 📍 Masters Union, Udyog Vihar Phase 3, Gurugram India is living through its biggest IPO wave ever. Grey-market buzz, oversubscription headlines, listing-day pops. And yet, months ",
       "url": "https://luma.com/flh94uuz",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-11-21",
+      "lastVerified": "2026-11-22",
       "quality": 3,
       "uniqueness": 3
     },
@@ -98,7 +52,30 @@
       "why": "If you are registering & not showing up, you are blacklisted for the next three events The Big Aaaaart Club is back again! 🎨 Join us on Sunday, 29th November for an evening of art, conversations, and community as we bring together people who simply love making, discovering, and experiencing art. Think of it as your ex",
       "url": "https://luma.com/vkvi441n",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-11-21",
+      "lastVerified": "2026-11-22",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtelm7t825E9ef7gC",
+      "title": "North Side Networking",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "noida",
+      "area": "WeWork Berger Delhi One, Floor 19, C-001/A2, Sector 16B, Noida, Uttar Pradesh 20",
+      "coords": [
+        28.5741187,
+        77.3136442
+      ],
+      "start": "2026-12-03",
+      "end": "2026-12-03",
+      "why": "North Side Networking is designed to bring together founders, CXOs, functional leaders and business decision-makers from across the WeWork community to exchange experiences, solve challenges and discover opportunities to learn from one another. This is a space to ask questions, share what’s worked (and what hasn’t), an",
+      "url": "https://luma.com/27b6oyjz",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-11-22",
       "quality": 3,
       "uniqueness": 3
     }
