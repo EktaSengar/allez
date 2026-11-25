@@ -610,3 +610,58 @@ write the verdict, with a 90-day ping so the Regulars tab stops decaying.
 Neither adds a tier: a Local's pick is ★ with a credit, an organiser's record
 is ◆ labelled *from the organiser · not yet visited*. It starts on the website
 what APP.md's Locals' Bench does in the app.
+
+---
+
+## Winter 2026–27  ·  *written 25 November 2026*
+
+A health check before the holidays, and what comes after it.
+
+### Where it stands
+
+| city | hand events | city feed (last date) | curated layer last touched |
+|---|---|---|---|
+| Paris | 16 | 558 (to 2028) | 15 Oct |
+| Bay Area | 16 | 121 (to Mar 2027) | 28 Oct |
+| New York | 12 | 72 (to **22 Dec**) | **19 Sep** |
+| Delhi | 6 | **4** (to 20 Dec) | 15 Oct |
+| Bengaluru | 5 | **5** (to 12 Dec) | 15 Oct |
+
+The daily job is healthy. **The weekly one has not landed since 26 October.**
+2 and 9 November failed on a single editorial record (Café Joyeux, 8e — its
+Champs-Élysées node is gone from OpenStreetMap; a 17e branch remains), and
+16 and 23 November were cancelled at GitHub's 6-hour ceiling because
+Overpass throttling makes five cities in one job take longer than that.
+Either way the commit step never ran, so every city lost the month.
+Fixed by moving discovery into `discover.yml`: one job per city, each
+committing before its checks run.
+
+### Now — December
+
+1. **Ship the discovery fix and run it by hand** so the month's gap closes
+   before Christmas traffic.
+2. ~~**Café Joyeux.**~~ Moved to the Rue Saint-Augustin branch (2e), which
+   OpenStreetMap does carry. *Done 25 November 2026.*
+3. **Delhi and Bengaluru event depth.** Their city feeds run dry by
+   mid-December. Find open sources (see `event-source licences`); failing
+   that, a monthly hand-picked batch of 10–15 per city.
+4. **New York's January.** The city feed stops at 22 December — check
+   whether the source is seasonal or broken.
+5. **Regulars past 90 days** — Paris, Delhi and New York last touched
+   28 September. The organiser ping in LOCALS.md is due.
+
+### Next — January to March
+
+6. **New York curated pass.** Untouched since September; the thinnest
+   judged layer relative to its index.
+7. **A link checker that follows redirects** and reads what comes back
+   (hijacked domains answer 200 — see above).
+8. **Locals pilot**: first two named contributors live, one city each.
+9. **Agent channel**: the MCP surface reads the same gated set as the page,
+   with `lastVerified` and provenance on every answer.
+10. Housekeeping: Actions still pin Node 20, which GitHub has deprecated.
+
+### Later
+
+The native app (APP.md) — deck and gestures wait for it; web work stays on
+data, the taste engine and the agent surface.

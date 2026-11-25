@@ -1,0 +1,102 @@
+name: Weekly discovery index
+
+# OpenStreetMap, Wikidata and the civic portals, rebuilt once a week.
+#
+# This used to be one Monday-only step inside refresh.yml, running all five
+# cities back to back in a single job. Overpass throttles hard enough that
+# Paris alone took ~4.5 hours, so the job hit GitHub's 6-hour ceiling and was
+# cancelled (16 and 23 November 2026) — and because the commit step comes
+# last, a cancelled job threw away every city that *had* finished. Before
+# that, 2 and 9 November failed on one editorial record whose café vanished
+# from OpenStreetMap, which likewise discarded the whole week.
+#
+# Now: one job per city, one at a time (Overpass is kinder to a single
+# client), each committing its own city as soon as it is done. A slow or
+# failed city costs that city's week, not everybody's. The checks still run
+# and still fail loudly — but after the data is saved, not instead of it.
+
+on:
+  schedule:
+    - cron: '30 1 * * 1'      # 01:30 UTC Monday, clear of the daily refresh
+  workflow_dispatch:
+    inputs:
+      city:
+        description: 'One city only (blank = all five)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discover
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        # A hand run can name one city; the schedule always gets all five.
+        city: ${{ fromJSON(inputs.city != '' && format('["{0}"]', inputs.city) || '["paris","bay-area","delhi","bengaluru","new-york"]') }}
+    env:
+      HOMEGROUND_CITY: ${{ matrix.city }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Discover from OpenStreetMap
+        run: node scripts/discover.mjs || echo "${{ matrix.city }} discovery skipped — Overpass unavailable"
+
+      - name: Paris-only layers (geocode, civic, invaders)
+        if: matrix.city == 'paris'
+        run: |
+          node scripts/geocode.mjs  || echo "geocoding skipped"
+          node scripts/civic.mjs    || echo "civic data skipped — opendata.paris.fr unavailable"
+          node scripts/invaders.mjs || echo "invaders skipped — Overpass unavailable"
+
+      - name: Bay Area civic layer
+        if: matrix.city == 'bay-area'
+        run: node scripts/civic-bay.mjs || echo "bay civic skipped — data.sfgov.org unavailable"
+
+      - name: Notable places from Wikidata
+        run: node scripts/notable.mjs || echo "${{ matrix.city }} notable skipped — Wikidata unavailable"
+
+      # Rebuilt files are written from scratch, so pictures must be
+      # restamped before committing or the page loses them until tomorrow.
+      - name: Resolve photographs
+        run: node scripts/photos.mjs || echo "${{ matrix.city }} photos skipped — Wikimedia unavailable"
+
+      - name: Stamp asset URLs
+        run: node scripts/version.mjs --all
+
+      - name: Commit this city
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing changed for ${{ matrix.city }}."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: weekly discovery index — ${{ matrix.city }} ($(date -u +%Y-%m-%d))"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -X theirs && git push && exit 0
+            sleep $((i * 20))
+          done
+          exit 1
+
+      # After the commit on purpose: these exist to flag rot, and a flag is
+      # worth more than throwing away a week of data to raise it.
+      - name: Check the hand-written records still resolve
+        if: matrix.city == 'paris'
+        run: node scripts/editorial.mjs --check
+
+      - name: Check that location changes the recommendations
+        run: node scripts/check-location.mjs

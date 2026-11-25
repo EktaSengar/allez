@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-23",
+ "generated": "2026-11-25",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -77,17 +77,17 @@
    "ik": "c"
   },
   {
-   "id": "osm-cafe-joyeux-97746-4597",
+   "id": "osm-joyeux-97737-4672",
    "title": "Café Joyeux",
    "type": "cafe",
-   "zone": 8,
+   "zone": 2,
    "coords": [
-    48.87306,
-    2.29844
+    48.86883,
+    2.33595
    ],
-   "area": "Avenue des Champs-Élysées",
-   "url": null,
-   "hours": "Mo-Su 08:00-20:00",
+   "area": "Rue Saint-Augustin",
+   "url": "http://www.joyeux.fr/",
+   "hours": "Mo 10:00-17:00; Tu-Sa 10:00-18:00",
    "hoursFrom": "openstreetmap",
    "cuisine": "coffee_shop",
    "categories": [
@@ -95,10 +95,10 @@
    ],
    "match": {
     "name": "Café Joyeux",
-    "zone": 8,
+    "zone": 2,
     "type": "cafe"
    },
-   "why": "A social-enterprise café staffed by people with intellectual disabilities and autism, on the Champs-Élysées of all places. The coffee is good; the reason to go is that it exists and works.",
+   "why": "A social-enterprise café staffed by people with intellectual disabilities and autism, a few steps from Opéra. The coffee is good; the reason to go is that it exists, and works.",
    "quality": 4,
    "uniqueness": 4,
    "goodFor": [
@@ -108,9 +108,7 @@
     "hiddengem"
    ],
    "source": "Published coverage; existence and address confirmed against OpenStreetMap",
-   "lastVerified": "2026-08-18",
-   "i": "7/72/Avenue_des_Champs-Élysées,_Paris_3_October_2010.jpg",
-   "ik": "c"
+   "lastVerified": "2026-11-25"
   },
   {
    "id": "osm-siempre-97700-4600",
@@ -221,8 +219,6 @@
    ],
    "area": "Place du Docteur Félix Lobligeois",
    "url": "http://https//dose.paris",
-   "hours": "Mo-Fr 08:00-18:30; Sa-Su 08:30-18:30",
-   "hoursFrom": "openstreetmap",
    "cuisine": "breakfast",
    "categories": [
     "food"
@@ -232,6 +228,8 @@
     "zone": 17,
     "type": "cafe"
    },
+   "hours": "Mo-Fr 08:00-18:30; Sa-Su 08:30-18:30",
+   "hoursFrom": "openstreetmap",
    "why": "Dose does espresso properly and does not make a performance of it. The Batignolles room is small and busy at nine.",
    "quality": 4,
    "uniqueness": 3,

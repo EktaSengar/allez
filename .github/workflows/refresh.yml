@@ -128,25 +128,9 @@ jobs:
             HOMEGROUND_CITY=$city node scripts/refresh.mjs
           done
 
-      # OpenStreetMap does not change fast enough to justify a daily crawl,
-      # and Overpass throttles hard. Mondays only.
-      - name: Refresh the discovery index (weekly)
-        if: github.event_name == 'schedule'
-        run: |
-          if [ "$(date -u +%u)" = "1" ]; then
-            node scripts/discover.mjs || echo "discovery skipped — Overpass unavailable"
-            node scripts/geocode.mjs  || echo "geocoding skipped"
-            node scripts/civic.mjs    || echo "civic data skipped — opendata.paris.fr unavailable"
-            node scripts/notable.mjs  || echo "notable layer skipped — Wikidata unavailable"
-            node scripts/invaders.mjs || echo "invaders skipped — Overpass unavailable"
-            HOMEGROUND_CITY=bay-area node scripts/civic-bay.mjs || echo "bay civic skipped — data.sfgov.org unavailable"
-            for city in bay-area delhi bengaluru new-york; do
-              HOMEGROUND_CITY=$city node scripts/discover.mjs || echo "$city discovery skipped — Overpass unavailable"
-              HOMEGROUND_CITY=$city node scripts/notable.mjs  || echo "$city notable skipped — Wikidata unavailable"
-            done
-          else
-            echo "not Monday — discovery index left alone"
-          fi
+      # The weekly discovery index (OpenStreetMap, Wikidata, civic portals)
+      # lives in discover.yml now — one job per city, so a slow Overpass
+      # week cannot run this daily job into GitHub's 6-hour ceiling.
 
       # Photographs for the generated tiers. Runs after the rebuilds above,
       # because those files are written from scratch and would otherwise
