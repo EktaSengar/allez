@@ -46,7 +46,8 @@
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons",
       "startTime": "10:00",
-      "durationMin": 300
+      "durationMin": 300,
+      "festival": "christmas"
     },
     {
       "type": "event",
@@ -214,7 +215,8 @@
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons",
       "startTime": "19:30",
-      "durationMin": 130
+      "durationMin": 130,
+      "festival": "christmas"
     },
     {
       "type": "event",
@@ -314,6 +316,433 @@
       "provisional": true,
       "festival": "fleet-week",
       "hoursNote": "Air show afternoons over the long weekend; ship tours in the daytime earlier in the week"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "festival": "christmas",
+      "id": "union-square-ice-rink-2026",
+      "title": "Holiday ice rink in Union Square",
+      "emoji": "⛸️",
+      "categories": [
+        "festival",
+        "holiday",
+        "skating",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "friends",
+        "family"
+      ],
+      "coords": [
+        37.788,
+        -122.4075
+      ],
+      "coordsFrom": "hand-placed at the square",
+      "area": "Union Square, 333 Post Street, San Francisco",
+      "start": "2026-11-04",
+      "end": "2027-01-18",
+      "durationMin": 90,
+      "times": "Daily; one-hour sessions, a new one every 90 minutes",
+      "price": 22,
+      "priceNote": "$22, or $17 for children of 8 and under; skate hire included",
+      "priceLevel": 2,
+      "booking": "https://fareharbor.com/embeds/book/unionsquareicerink/?full-items=yes",
+      "quality": 4,
+      "uniqueness": 3,
+      "why": "An open-air rink in the middle of Union Square, under the big tree and the department-store windows. Sessions last an hour and the price includes skates, so it fits neatly before dinner downtown.",
+      "source": "Union Square Ice Rink",
+      "url": "https://unionsquareicerink.com/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/San_Francisco_Union_Square.jpg/1280px-San_Francisco_Union_Square.jpg",
+      "imageSubject": "Union Square, San Francisco",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons",
+      "hoursNote": "The rink’s site gives no daily opening hours; session times are on its booking page."
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "festival": "christmas",
+      "id": "christmas-in-the-park-2026",
+      "title": "Christmas in the Park, San José",
+      "emoji": "🎄",
+      "categories": [
+        "festival",
+        "christmas",
+        "free",
+        "family",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "family",
+        "friends",
+        "couple"
+      ],
+      "coords": [
+        37.3327,
+        -121.8899
+      ],
+      "coordsFrom": "hand-placed at the plaza",
+      "area": "Plaza de César Chávez, downtown San José",
+      "start": "2026-11-27",
+      "end": "2027-01-03",
+      "startTime": "12:00",
+      "durationMin": 90,
+      "times": "Daily, noon to 10pm, Christmas Day and New Year’s Day included; opening night is Fri 27 Nov at 6pm",
+      "price": 0,
+      "priceNote": "Free; donations welcome",
+      "priceLevel": 0,
+      "booking": false,
+      "quality": 4,
+      "uniqueness": 4,
+      "why": "Downtown San José’s plaza fills with more than forty animated displays, a forest of decorated trees, and one very tall tree in the middle. It is free, there is live music every night, and it is best after dark. The drive-through version is not running this year.",
+      "source": "Christmas in the Park",
+      "url": "https://christmasinthepark.com/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Christmas_in_the_Park_exhibit_1.JPG/1280px-Christmas_in_the_Park_exhibit_1.JPG",
+      "imageSubject": "A display at Christmas in the Park",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [
+        "bookahead"
+      ],
+      "festival": "christmas",
+      "id": "filoli-holidays-2026",
+      "title": "Holidays at Filoli",
+      "emoji": "✨",
+      "categories": [
+        "festival",
+        "christmas",
+        "garden",
+        "walk"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "bookAhead": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "family",
+        "afternoon"
+      ],
+      "coords": [
+        37.4703,
+        -122.3107
+      ],
+      "coordsFrom": "hand-placed at the house",
+      "area": "Filoli, 86 Cañada Road, Woodside",
+      "start": "2026-11-14",
+      "end": "2027-01-10",
+      "startTime": "10:00",
+      "durationMin": 120,
+      "times": "Daytime 10am to 3.30pm (last entry 1.30pm); Holiday Lights 4pm to 10pm (last entry 8pm)",
+      "price": 45,
+      "priceNote": "Daytime from $40; Holiday Lights from $45. Timed entry, booked ahead",
+      "priceLevel": 3,
+      "booking": "https://filoli.org/holidays/",
+      "quality": 5,
+      "uniqueness": 4,
+      "why": "The country house in Woodside is dressed for Christmas room by room, and after four o’clock the garden is lit with 350,000 lights. Day and evening are separate tickets; the evening is the one to book. Choose an early slot and you see the garden in the last daylight, then lit.",
+      "source": "Filoli",
+      "url": "https://filoli.org/holidays/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Filoli_Main_House_Entrance.jpg/1280px-Filoli_Main_House_Entrance.jpg",
+      "imageSubject": "The house at Filoli",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "festival": "christmas",
+      "id": "glowfari-2026",
+      "title": "Glowfari at Oakland Zoo",
+      "emoji": "🏮",
+      "categories": [
+        "festival",
+        "holiday",
+        "family",
+        "walk",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "bookAhead": true,
+      "goodFor": [
+        "evening",
+        "family",
+        "friends"
+      ],
+      "coords": [
+        37.749,
+        -122.1466
+      ],
+      "coordsFrom": "hand-placed at the zoo entrance",
+      "area": "Oakland Zoo, 9777 Golf Links Road, Oakland",
+      "start": "2026-11-06",
+      "end": "2027-01-31",
+      "startTime": "16:30",
+      "durationMin": 150,
+      "times": "Entry 4.30pm to 6.30pm, out by 9pm. Closed on some Mondays and Tuesdays, Thanksgiving, Christmas Eve and Christmas Day",
+      "priceNote": "Timed tickets, on sale 28 days ahead; cheaper booked early",
+      "priceLevel": 2,
+      "booking": "https://www.oaklandzoo.org/programs-and-events/glowfari",
+      "quality": 4,
+      "uniqueness": 4,
+      "why": "Hundreds of glowing animal lanterns along the zoo’s paths, in its seventh winter. This year’s sets run from California forests and the Bay to the Everglades and Hawaii, and the gondola runs until 8.30pm. It is all outdoors on a hillside, so dress for cold and damp.",
+      "source": "Oakland Zoo",
+      "url": "https://www.oaklandzoo.org/programs-and-events/glowfari",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Oakland_Zoo_entrance.jpg/1280px-Oakland_Zoo_entrance.jpg",
+      "imageSubject": "The entrance to Oakland Zoo",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "festival": "christmas",
+      "id": "lets-glow-sf-2026",
+      "title": "Let’s Glow SF",
+      "emoji": "💡",
+      "categories": [
+        "festival",
+        "holiday",
+        "free",
+        "art",
+        "walk",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "friends",
+        "family"
+      ],
+      "coords": [
+        37.7955,
+        -122.3937
+      ],
+      "coordsFrom": "hand-placed at the Ferry Building",
+      "area": "Ferry Building to Salesforce Tower, downtown San Francisco",
+      "start": "2026-12-04",
+      "end": "2026-12-13",
+      "startTime": "17:30",
+      "durationMin": 90,
+      "times": "Nightly 5.30pm to 10pm; opening night, Fri 4 Dec, from 7pm",
+      "price": 0,
+      "priceNote": "Free",
+      "priceLevel": 0,
+      "booking": false,
+      "quality": 4,
+      "uniqueness": 4,
+      "why": "For ten nights, artists project light shows onto downtown’s buildings: the Ferry Building, 101 California, the Pacific Exchange, the Hobart Building, Yerba Buena Lane and the top of Salesforce Tower. It is free, and the sites are a walk apart along Market Street. Start at Harry Bridges Plaza, facing the Ferry Building.",
+      "source": "Downtown SF Partnership",
+      "url": "https://downtownsf.org/do/lets-glow-sf",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Ferry_Building_San_Francisco_from_Hyatt_Regency_with_R-Evolution_and_Bay_Bridge_2026_dllu.jpg/1280px-Ferry_Building_San_Francisco_from_Hyatt_Regency_with_R-Evolution_and_Bay_Bridge_2026_dllu.jpg",
+      "imageSubject": "The Ferry Building, one of the six sites",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "id": "rm-x-sfmoma-2026",
+      "title": "RM x SFMOMA: Between You and Me",
+      "emoji": "🖼️",
+      "categories": [
+        "art",
+        "exhibition",
+        "indoor"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "rainyDayPick": true,
+      "goodFor": [
+        "afternoon",
+        "couple",
+        "friends",
+        "solo"
+      ],
+      "coords": [
+        37.7857,
+        -122.4011
+      ],
+      "coordsFrom": "hand-placed at the museum",
+      "area": "SFMOMA, 151 Third Street, San Francisco (Floor 7)",
+      "start": "2026-10-03",
+      "end": "2027-02-07",
+      "durationMin": 90,
+      "hoursNote": "Open during the museum’s hours; check SFMOMA’s site for the day you go.",
+      "priceNote": "Museum admission plus a surcharge: $10 on weekdays, $12 at weekends and holidays",
+      "priceLevel": 2,
+      "booking": "https://www.sfmoma.org/exhibition/rm-x-sfmoma/",
+      "quality": 5,
+      "uniqueness": 5,
+      "why": "RM of BTS shows his own collection beside the museum’s: modern and contemporary Korean painters such as Yun Hyong-keun, Park Rehyun and Chang Ucchin, and Korean art going back to the fifth century. Many of the works have not been shown in the US before. From 21 November, Sarah Sze’s new installation fills the ground-floor atrium, which is free to enter.",
+      "source": "SFMOMA",
+      "url": "https://www.sfmoma.org/exhibition/rm-x-sfmoma/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/2017_SFMOMA_from_Yerba_Buena_Gardens.jpg/1280px-2017_SFMOMA_from_Yerba_Buena_Gardens.jpg",
+      "imageSubject": "SFMOMA from Yerba Buena Gardens",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [
+        "bookahead"
+      ],
+      "id": "sf-sketchfest-2027",
+      "title": "SF Sketchfest",
+      "emoji": "🎤",
+      "categories": [
+        "comedy",
+        "festival",
+        "theatre",
+        "indoor"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "bookAhead": true,
+      "goodFor": [
+        "evening",
+        "friends",
+        "couple",
+        "night"
+      ],
+      "coords": [
+        37.7749,
+        -122.4194
+      ],
+      "coordsFrom": "hand-placed at the city centre; venues vary",
+      "area": "More than 15 venues across San Francisco",
+      "start": "2027-01-14",
+      "end": "2027-01-31",
+      "durationMin": 120,
+      "hoursNote": "Show times vary; each one is on the festival’s line-up page.",
+      "priceNote": "Each show is ticketed separately",
+      "priceLevel": 2,
+      "booking": "https://sfsketchfest.com/",
+      "quality": 5,
+      "uniqueness": 4,
+      "why": "Eighteen days of comedy in January: more than 230 shows in over 15 venues, with some 700 performers. Every show is its own ticket, and tickets are on sale now. The full line-up is on the festival’s site.",
+      "source": "SF Sketchfest",
+      "url": "https://sfsketchfest.com/"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [
+        "dontmiss"
+      ],
+      "festival": "lunar-new-year",
+      "id": "sf-chinese-new-year-parade-2027",
+      "title": "Chinese New Year Parade",
+      "emoji": "🐉",
+      "categories": [
+        "festival",
+        "parade",
+        "outdoor",
+        "family"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "family",
+        "friends",
+        "couple"
+      ],
+      "coords": [
+        37.7941,
+        -122.4078
+      ],
+      "coordsFrom": "hand-placed in Chinatown",
+      "area": "Downtown and Chinatown, San Francisco",
+      "start": "2027-02-20",
+      "end": "2027-02-20",
+      "durationMin": 150,
+      "hoursNote": "The organisers have not yet published the start time or the route.",
+      "priceNote": "Bleacher seats are sold on the parade’s site",
+      "priceLevel": 2,
+      "booking": "https://chineseparade.com/tickets/",
+      "quality": 5,
+      "uniqueness": 5,
+      "why": "San Francisco’s Chinese New Year Parade welcomes the Year of the Ram on Saturday 20 February. The same festival has a flower market fair, a community street fair and a Chinatown run on other days. Bleacher seats are on sale; the start time and the route are still to come.",
+      "source": "Chinese Chamber of Commerce of San Francisco",
+      "url": "https://chineseparade.com/",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Year_of_Ox_Chinese_New_Year_Parade_San_Francisco_2009.jpg/500px-Year_of_Ox_Chinese_New_Year_Parade_San_Francisco_2009.jpg",
+      "imageSubject": "The parade in 2009",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "festival": "christmas",
+      "id": "warriors-nuggets-christmas-2026",
+      "title": "Warriors v Nuggets on Christmas Day",
+      "emoji": "🏀",
+      "categories": [
+        "sport",
+        "basketball"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "bookAhead": true,
+      "goodFor": [
+        "sport",
+        "evening"
+      ],
+      "coords": [
+        37.768,
+        -122.3877
+      ],
+      "coordsFrom": "hand-placed at the venue",
+      "area": "Chase Center, Mission Bay",
+      "start": "2026-12-25",
+      "end": "2026-12-25",
+      "startTime": "19:30",
+      "durationMin": 180,
+      "times": "7.30pm tip-off",
+      "priceNote": "NBA prices",
+      "priceLevel": 4,
+      "booking": "https://www.nba.com/warriors/schedule",
+      "quality": 4,
+      "uniqueness": 4,
+      "why": "Christmas night at Chase Center: the Warriors host the Denver Nuggets at 7.30pm, the last of the NBA’s five games that day and on national television.",
+      "source": "NBA 2026–27 schedule, as reported by NBC Sports Bay Area",
+      "url": "https://www.nba.com/warriors/schedule",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Chase_Center.jpg/1280px-Chase_Center.jpg",
+      "imageSubject": "Chase Center",
+      "imageKind": "subject",
+      "imageCredit": "Wikimedia Commons"
     }
   ]
 }

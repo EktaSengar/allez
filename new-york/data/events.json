@@ -42,7 +42,8 @@
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons",
       "startTime": "19:00",
-      "durationMin": 90
+      "durationMin": 90,
+      "festival": "christmas"
     },
     {
       "type": "event",
@@ -131,7 +132,8 @@
       "imageKind": "context",
       "imageCredit": "Wikimedia Commons",
       "startTime": "19:00",
-      "durationMin": 120
+      "durationMin": 120,
+      "festival": "christmas"
     },
     {
       "type": "event",
@@ -174,7 +176,8 @@
       "imageSubject": "Rockefeller Center Christmas Tree",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons",
-      "durationMin": 180
+      "durationMin": 180,
+      "festival": "christmas"
     },
     {
       "type": "event",
@@ -216,6 +219,334 @@
       "imageCredit": "Wikimedia Commons",
       "startTime": "20:00",
       "durationMin": 150
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "festival": "christmas",
+      "id": "bryant-park-winter-village-2026",
+      "title": "Winter Village at Bryant Park",
+      "emoji": "⛸️",
+      "categories": [
+        "festival",
+        "holiday",
+        "market",
+        "skating",
+        "free",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "friends",
+        "family",
+        "afternoon"
+      ],
+      "coords": [
+        40.7536,
+        -73.9832
+      ],
+      "coordsFrom": "hand-placed at the park",
+      "area": "Bryant Park, Midtown",
+      "start": "2026-10-28",
+      "end": "2027-02-28",
+      "startTime": "08:00",
+      "durationMin": 120,
+      "times": "Rink daily 8am to 10pm, to midnight from 19 Nov to 3 Jan. Holiday shops until 3 Jan: weekdays 11am to 8pm, weekends from 10am",
+      "price": 0,
+      "priceNote": "Free entry and free skating with your own skates; skate hire is paid",
+      "priceLevel": 0,
+      "booking": "https://bryantpark.org/activities/the-rink",
+      "quality": 4,
+      "uniqueness": 3,
+      "why": "The only rink in the city with free admission, ringed by a holiday market and a bar-and-food hall called The Lodge. Skating slots are booked ahead, and free tickets for people with their own skates are released a week before. The park’s tree is lit on Tue 1 Dec at 5.30pm.",
+      "source": "Bryant Park",
+      "url": "https://bryantpark.org/activities/bank-of-america-winter-village-at-bryant-park",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/New-York_-_Bryant_Park.jpg/1280px-New-York_-_Bryant_Park.jpg",
+      "imageSubject": "Bryant Park",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [
+        "bookahead"
+      ],
+      "festival": "christmas",
+      "id": "nybg-holiday-train-show-2026",
+      "title": "Holiday Train Show at the New York Botanical Garden",
+      "emoji": "🚂",
+      "categories": [
+        "festival",
+        "holiday",
+        "family",
+        "garden",
+        "indoor"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "bookAhead": true,
+      "goodFor": [
+        "afternoon",
+        "family",
+        "couple",
+        "weekend"
+      ],
+      "coords": [
+        40.864,
+        -73.8822
+      ],
+      "coordsFrom": "hand-placed at the conservatory",
+      "area": "Enid A. Haupt Conservatory, New York Botanical Garden, the Bronx",
+      "start": "2026-11-14",
+      "end": "2027-01-10",
+      "durationMin": 120,
+      "times": "Open to 8pm on selected evenings, last entry 7.15pm",
+      "priceNote": "Timed tickets at weekends and from 21 Dec to 4 Jan; untimed on most weekdays",
+      "priceLevel": 3,
+      "booking": "https://www.nybg.org/event/holiday-train-show-2026/",
+      "quality": 5,
+      "uniqueness": 5,
+      "why": "Model trains run through the glasshouse past New York landmarks built from bark, leaves and seeds. Weekends and the two weeks around Christmas are timed and sell out; a weekday needs no slot. On selected evenings it stays open until 8pm.",
+      "source": "New York Botanical Garden",
+      "url": "https://www.nybg.org/event/holiday-train-show-2026/",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Haupt_Conservatory%2C_Mar_2019.jpg/1280px-Haupt_Conservatory%2C_Mar_2019.jpg",
+      "imageSubject": "The Haupt Conservatory, where the show runs",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "festival": "christmas",
+      "id": "bbg-lightscape-2026",
+      "title": "Lightscape at Brooklyn Botanic Garden",
+      "emoji": "✨",
+      "categories": [
+        "festival",
+        "holiday",
+        "walk",
+        "art",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "bookAhead": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "friends",
+        "family"
+      ],
+      "coords": [
+        40.6694,
+        -73.9624
+      ],
+      "coordsFrom": "hand-placed at the Visitor Center",
+      "area": "Brooklyn Botanic Garden, 990 Washington Avenue, Brooklyn",
+      "start": "2026-11-20",
+      "end": "2027-01-03",
+      "durationMin": 90,
+      "times": "Evenings, after the garden closes at 3.30pm; entry in 15-minute windows",
+      "price": 29,
+      "priceNote": "Adults $29 to $44 by night, children 3–11 $15 to $28, under-3s free",
+      "priceLevel": 2,
+      "booking": "https://www.bbg.org/lightscape",
+      "quality": 4,
+      "uniqueness": 4,
+      "why": "A lit trail through the garden after dark: large light sculptures, coloured trees and water, and music written for the route. It starts and ends at the Visitor Center and the paths are step-free. The cheapest tickets are the value nights; peak nights cost half as much again.",
+      "source": "Brooklyn Botanic Garden",
+      "url": "https://www.bbg.org/lightscape",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Brooklyn_botanic_garden_fragrance_garden_gate.jpg/500px-Brooklyn_botanic_garden_fragrance_garden_gate.jpg",
+      "imageSubject": "A gate in Brooklyn Botanic Garden",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "id": "met-krasner-pollock-2026",
+      "title": "Krasner and Pollock: Past Continuous, at the Met",
+      "emoji": "🖼️",
+      "categories": [
+        "art",
+        "exhibition",
+        "indoor"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "rainyDayPick": true,
+      "goodFor": [
+        "afternoon",
+        "couple",
+        "solo",
+        "friends"
+      ],
+      "coords": [
+        40.7794,
+        -73.9632
+      ],
+      "coordsFrom": "hand-placed at the museum",
+      "area": "The Metropolitan Museum of Art, 1000 Fifth Avenue",
+      "start": "2026-10-04",
+      "end": "2027-01-31",
+      "durationMin": 90,
+      "times": "During the museum’s opening hours",
+      "priceNote": "With museum admission",
+      "priceLevel": 2,
+      "booking": false,
+      "quality": 5,
+      "uniqueness": 4,
+      "why": "The Met follows Lee Krasner and Jackson Pollock side by side, two painters whose lives ran in parallel. It closes on 31 January. From 24 November the museum’s Christmas tree is up as well, so one visit covers both.",
+      "source": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/exhibitions",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/1280px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg",
+      "imageSubject": "The Met, on Fifth Avenue",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "festival": "christmas",
+      "id": "met-christmas-tree-2026",
+      "title": "Christmas tree and Neapolitan crèche at the Met",
+      "emoji": "🎄",
+      "categories": [
+        "christmas",
+        "holiday",
+        "art",
+        "indoor"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "rainyDayPick": true,
+      "goodFor": [
+        "afternoon",
+        "family",
+        "couple",
+        "solo"
+      ],
+      "coords": [
+        40.7794,
+        -73.9632
+      ],
+      "coordsFrom": "hand-placed at the museum",
+      "area": "Gallery 305, The Metropolitan Museum of Art",
+      "start": "2026-11-24",
+      "end": "2027-01-06",
+      "durationMin": 45,
+      "times": "During the museum’s opening hours",
+      "priceNote": "With museum admission",
+      "priceLevel": 2,
+      "booking": false,
+      "quality": 4,
+      "uniqueness": 4,
+      "why": "The Met’s Christmas tree goes up in Gallery 305 with its Neapolitan Baroque crèche around the base. Uptown at The Cloisters, the medieval Christmas decorations run from 3 December to 5 January.",
+      "source": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/hubs/holidays-at-the-met",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/1280px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg",
+      "imageSubject": "The Met, on Fifth Avenue",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [
+        "bookahead"
+      ],
+      "id": "broadway-week-winter-2027",
+      "title": "NYC Broadway Week: two-for-one tickets",
+      "emoji": "🎭",
+      "categories": [
+        "theatre",
+        "musical",
+        "indoor"
+      ],
+      "indoor": true,
+      "weatherSensitive": false,
+      "bookAhead": true,
+      "goodFor": [
+        "evening",
+        "couple",
+        "friends"
+      ],
+      "coords": [
+        40.758,
+        -73.9855
+      ],
+      "coordsFrom": "hand-placed in the Theater District",
+      "area": "Broadway theatres, Midtown",
+      "start": "2027-01-19",
+      "end": "2027-02-11",
+      "durationMin": 150,
+      "times": "Booking opens on Wed 6 Jan at 10am",
+      "priceNote": "Half price on every ticket when you buy two or more",
+      "priceLevel": 3,
+      "booking": "https://www.nyctourism.com/broadway-week/",
+      "quality": 4,
+      "uniqueness": 3,
+      "why": "For three and a half weeks, Broadway tickets are half price as long as you buy at least two, fees included. The list of shows and the code appear on 6 January at 10am, when booking opens.",
+      "source": "New York City Tourism + Conventions",
+      "url": "https://www.nyctourism.com/broadway-week/"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-25",
+      "labels": [],
+      "festival": "christmas",
+      "id": "union-square-holiday-market-2026",
+      "title": "Union Square Holiday Market",
+      "emoji": "🎁",
+      "categories": [
+        "festival",
+        "christmas",
+        "market",
+        "free",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "afternoon",
+        "evening",
+        "friends",
+        "couple"
+      ],
+      "coords": [
+        40.7359,
+        -73.9911
+      ],
+      "coordsFrom": "hand-placed at the park",
+      "area": "Union Square Park, University Place and East 14th Street",
+      "start": "2026-11-12",
+      "end": "2026-12-24",
+      "durationMin": 60,
+      "hoursNote": "NYC Tourism does not list the market’s hours for 2026.",
+      "price": 0,
+      "priceNote": "Free entry",
+      "priceLevel": 0,
+      "booking": false,
+      "quality": 4,
+      "uniqueness": 3,
+      "why": "More than a hundred booths fill Union Square Park from mid-November until Christmas Eve, and entry is free. It closes on the 24th, so it is a market for the weeks before Christmas rather than the days after.",
+      "source": "New York City Tourism + Conventions",
+      "url": "https://www.nyctourism.com/places/union-square-holiday-market"
     }
   ]
 }

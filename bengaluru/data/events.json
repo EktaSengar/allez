@@ -84,6 +84,138 @@
       "imageSubject": "Fred Again",
       "imageKind": "subject",
       "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [
+        "dontmiss"
+      ],
+      "id": "bangalore-literature-festival-2026",
+      "title": "Bangalore Literature Festival",
+      "emoji": "📚",
+      "categories": [
+        "books",
+        "festival",
+        "talk",
+        "free",
+        "outdoor"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "goodFor": [
+        "weekend",
+        "afternoon",
+        "friends",
+        "solo"
+      ],
+      "zone": "gandhinagar",
+      "coords": [
+        12.9779,
+        77.5822
+      ],
+      "coordsFrom": "hand-placed at the park",
+      "area": "Freedom Park, Seshadri Road",
+      "start": "2026-12-11",
+      "end": "2026-12-13",
+      "durationMin": 180,
+      "times": "Fri 11 to Sun 13 Dec; the schedule is on the festival’s site",
+      "price": 0,
+      "priceNote": "Free, with registration",
+      "priceLevel": 0,
+      "booking": "https://blrlit.cc/register",
+      "quality": 5,
+      "uniqueness": 4,
+      "why": "The city’s own literature festival, in its fifteenth year, takes over the old jail grounds at Freedom Park for three days. This year’s speakers include Ramachandra Guha, Geoff Dyer, Devdutt Pattanaik, Tahmima Anam and Peter Frankopan. It is free, but you need to register first.",
+      "source": "Bangalore Literature Festival",
+      "url": "https://bangaloreliteraturefestival.org",
+      "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Freedom_Park_Entrance.jpeg/1280px-Freedom_Park_Entrance.jpeg",
+      "imageSubject": "The entrance to Freedom Park",
+      "imageKind": "context",
+      "imageCredit": "Wikimedia Commons"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [],
+      "id": "khalid-bengaluru-2026-12-15",
+      "title": "Khalid at Bhartiya Mall",
+      "emoji": "🎤",
+      "categories": [
+        "music",
+        "concert",
+        "rnb"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "bookAhead": true,
+      "goodFor": [
+        "evening",
+        "friends",
+        "couple"
+      ],
+      "coords": [
+        13.0827,
+        77.642
+      ],
+      "coordsFrom": "hand-placed, approximate",
+      "area": "Bhartiya Mall of Bengaluru, Thanisandra Main Road",
+      "start": "2026-12-15",
+      "end": "2026-12-15",
+      "durationMin": 210,
+      "times": "Tue 15 Dec; gate times on the ticket",
+      "priceNote": "Tickets through SkillBox",
+      "priceLevel": 3,
+      "booking": true,
+      "quality": 4,
+      "uniqueness": 4,
+      "why": "The American R&B singer’s Bengaluru night, the middle stop of a three-city India tour. It is a Tuesday in the north of the city, so leave early for the traffic on Thanisandra Road.",
+      "source": "Variety India",
+      "url": "https://varietyindia.com/american-singer-songwriter-khalid-3-stop-india-tour-december/"
+    },
+    {
+      "type": "event",
+      "provenance": "editorial",
+      "lastVerified": "2026-11-16",
+      "labels": [
+        "dontmiss"
+      ],
+      "id": "gorillaz-bengaluru-2027-01-23",
+      "title": "Gorillaz — their first India tour",
+      "emoji": "🎸",
+      "categories": [
+        "music",
+        "concert",
+        "rock"
+      ],
+      "indoor": false,
+      "weatherSensitive": true,
+      "bookAhead": true,
+      "goodFor": [
+        "evening",
+        "friends",
+        "night"
+      ],
+      "coords": [
+        13.17271,
+        77.59337
+      ],
+      "coordsFrom": "Nominatim, approximate (beside Embassy International Riding School)",
+      "area": "District Arena @ Terraform, Yelahanka",
+      "start": "2027-01-23",
+      "end": "2027-01-23",
+      "durationMin": 240,
+      "times": "Sat 23 Jan; gate times on the ticket",
+      "priceNote": "On general sale since April",
+      "priceLevel": 4,
+      "booking": true,
+      "quality": 5,
+      "uniqueness": 5,
+      "why": "Gorillaz play India for the first time, in two cities, and Bengaluru is one of them. The arena is out past Yelahanka on the airport side.",
+      "source": "Variety India",
+      "url": "https://varietyindia.com/gorillaz-keeps-promise-to-india-announce-two-city-tour-in-2027/"
     }
   ]
 }
