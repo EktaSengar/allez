@@ -1,15 +1,38 @@
 {
-  "generated": "2026-11-24",
+  "generated": "2026-11-25",
   "window": {
-    "from": "2026-11-24",
-    "to": "2027-01-23"
+    "from": "2026-11-25",
+    "to": "2027-01-24"
   },
   "source": "Luma — Delhi",
   "note": "What the sources that publish say is on. Facts with a source and no opinion — these land in the \"sourced\" tier, below anything a person wrote. Which halves ran is what the pack declares in `City.events` and `City.luma`; the tech and AI evenings go to practices.json instead, and LUMA_TECH in scripts/ics.mjs is the one line that decides which file an evening lands in.",
   "counts": {
-    "luma": 1
+    "luma": 4
   },
   "items": [
+    {
+      "id": "luma-evtfjuqU2OiFC8BRnw",
+      "title": "RTJ Singles Mixer",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "sector-53",
+      "area": "Beanly Coffee, Two Horizon Centre, GF2/T2, Golf Course Rd, Horizon Colony, DLF P",
+      "coords": [
+        28.451404,
+        77.09658499999999
+      ],
+      "start": "2026-11-28",
+      "end": "2026-11-28",
+      "why": "Single and running? You're in the right place. RTJ is throwing its own take on a singles mixer, and the dress code is being single. This run is for people who have figured out that being single is a power move, not a waiting room. No pressure to pair off, no awkward speed-dating questions. Just show up, run, and meet o",
+      "url": "https://luma.com/cf7tp2ju",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-11-25",
+      "quality": 3,
+      "uniqueness": 3
+    },
     {
       "id": "luma-evtlVVMeEHe98l7BqY",
       "title": "The Big Aaaaart Club",
@@ -29,7 +52,53 @@
       "why": "If you are registering & not showing up, you are blacklisted for the next three events The Big Aaaaart Club is back again! 🎨 Join us on Sunday, 29th November for an evening of art, conversations, and community as we bring together people who simply love making, discovering, and experiencing art. Think of it as your ex",
       "url": "https://luma.com/vkvi441n",
       "source": "Luma — Delhi",
-      "lastVerified": "2026-11-24",
+      "lastVerified": "2026-11-25",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtXsaB8387fdiZEU2",
+      "title": "PACE AND POWER",
+      "emoji": "🫂",
+      "type": "event",
+      "categories": [
+        "community"
+      ],
+      "zone": "sector-57",
+      "area": "FitClass - Sector 57 Gurugram, Ameya Sapphire Mall, Block H, Sector 57, Gurugram",
+      "coords": [
+        28.4287555,
+        77.0752983
+      ],
+      "start": "2026-11-29",
+      "end": "2026-11-29",
+      "why": "THE ULTIMATE FITNESS SHOWDOWN IS HERE! It’s time to test your PACE, POWER & STRENGTH. Get ready for an adrenaline-packed day of running, fitness challenges and fierce competition. No limits. No excuses. Just pure performance! 📅 29th November 📍 The Fit Class, Sector 57, Gurgaon ⏰ 2:30 PM onwards Hosted by SNS",
+      "url": "https://luma.com/k7fopub2",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-11-25",
+      "quality": 3,
+      "uniqueness": 3
+    },
+    {
+      "id": "luma-evtVOjpJpWYk8Y1Gw3",
+      "title": "Run a Little, Connect a Lot",
+      "emoji": "🏃",
+      "type": "event",
+      "categories": [
+        "sport"
+      ],
+      "zone": "sector-29",
+      "area": "Leisure Valley Park, 287, NH 8, Sector 29, Gurugram, Haryana 122009, India",
+      "coords": [
+        28.4697441,
+        77.06617419999999
+      ],
+      "start": "2026-12-20",
+      "end": "2026-12-20",
+      "why": "You don't need to be a professional runner to join a running community. You don't need to know everyone to feel part of one. You just need to show up! Run a Little, Connect a Lot is a beginner-friendly fitness and social meetup that brings people together for a morning of movement, fresh air and new connections. Whethe",
+      "url": "https://luma.com/44cybb1r",
+      "source": "Luma — Delhi",
+      "lastVerified": "2026-11-25",
       "quality": 3,
       "uniqueness": 3
     }
