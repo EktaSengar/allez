@@ -14,6 +14,15 @@
    dropped rather than shipped, which makes inventing a café impossible
    by construction.
 
+   A record that matched before and has now vanished is a different
+   thing: the writing was checked once, and the place may have closed or
+   simply been re-tagged in OpenStreetMap. That is a question for a
+   person, not a reason to stop a city's whole refresh — Café Joyeux and
+   Andaaz each failed every job for weeks that way. So it is parked:
+   moved to `doc.parked` (never shipped, never lost) with the date it
+   went missing, and listed as a warning. Restore it by fixing its
+   `match` and moving it back into `items`.
+
    Run it after editing editorial.json. It rewrites the file in place,
    keeping every hand-written field exactly as written.
 
@@ -85,7 +94,8 @@ async function run() {
   const disc = await readDiscovered();
   const pool = disc.items || [];
 
-  const missed = [];
+  const missed = [], vanished = [];
+  const today = new Date().toISOString().slice(0, 10);
   let resolved = 0;
 
   const items = doc.items.map(rec => {
@@ -98,7 +108,10 @@ async function run() {
     if (!hit) {
       const where = [rec.match.zone == null ? null : City.zone.label(rec.match.zone),
                      rec.match.type].filter(Boolean).join(' ');
-      missed.push(where ? `${rec.match.name} (${where})` : rec.match.name);
+      const label = where ? `${rec.match.name} (${where})` : rec.match.name;
+      /* id and coords are only ever written by a previous resolve. */
+      if (rec.id && rec.coords) vanished.push({ rec, label });
+      else missed.push(label);
       return null;
     }
     resolved++;
@@ -148,10 +161,22 @@ async function run() {
     console.log('  every record matched a real place\n');
   }
 
+  if (vanished.length) {
+    console.log(`\n  ${vanished.length} matched before and have vanished from the index — parked, not failed:`);
+    vanished.forEach(v => {
+      console.log('    ⚠ ' + v.label);
+      if (process.env.GITHUB_ACTIONS)
+        console.log(`::warning title=Vanished editorial record::${v.label} in ${City.id} is gone from OpenStreetMap — closed, or re-tagged? Check it and fix its match.`);
+    });
+    console.log('  Each one is a liveness question for a person: closed, moved, or re-tagged?\n');
+  }
+
   if (CHECK) { process.exit(missed.length ? 1 : 0); }
 
-  doc.generated = new Date().toISOString().slice(0, 10);
+  doc.generated = today;
   doc.items = items;
+  if (vanished.length || doc.parked?.length)
+    doc.parked = [...(doc.parked || []), ...vanished.map(v => ({ ...v.rec, parked: today, parkedWhy: 'vanished from OpenStreetMap' }))];
   await fs.writeFile(path.join(DATA, 'editorial.json'), JSON.stringify(doc, null, 1) + '\n', 'utf8');
   console.log('  wrote data/editorial.json\n');
 }
