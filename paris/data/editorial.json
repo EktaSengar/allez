@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25",
+ "generated": "2026-11-28",
  "note": "Researched recommendations, written in the site's voice but by somebody who has not been. Opinionated on purpose — a list of facts is not a guide — but every card says plainly that it was researched rather than visited, and a handwritten note in notes.json overrules any of it.",
  "rules": [
   "Every record needs a source and a lastVerified date. If it cannot be checked, it does not go in.",
@@ -221,6 +221,8 @@
    ],
    "area": "Place du Docteur Félix Lobligeois",
    "url": "http://https//dose.paris",
+   "hours": "Mo-Fr 08:00-18:30; Sa-Su 08:30-18:30",
+   "hoursFrom": "openstreetmap",
    "cuisine": "breakfast",
    "categories": [
     "food"
@@ -230,8 +232,6 @@
     "zone": 17,
     "type": "cafe"
    },
-   "hours": "Mo-Fr 08:00-18:30; Sa-Su 08:30-18:30",
-   "hoursFrom": "openstreetmap",
    "why": "Dose does espresso properly and does not make a performance of it. The Batignolles room is small and busy at nine.",
    "quality": 4,
    "uniqueness": 3,
@@ -1452,7 +1452,9 @@
    "lastVerified": "2026-08-18",
    "i": "c/c4/Rue_de_Belleville_June_2010.jpg",
    "ik": "c"
-  },
+  }
+ ],
+ "parked": [
   {
    "id": "osm-andaaz-2641095646",
    "title": "Andaaz",
@@ -1485,7 +1487,9 @@
    "source": "the venue's own website; position from OpenStreetMap",
    "lastVerified": "2026-10-12",
    "i": "f/f2/ND_559_-_PARIS_-_La_Place_Péreire_et_l'Avenue_de_Villiers.JPG",
-   "ik": "c"
+   "ik": "c",
+   "parked": "2026-11-28",
+   "parkedWhy": "vanished from OpenStreetMap"
   }
  ]
 }
